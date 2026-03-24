@@ -1,0 +1,35 @@
+{
+  "slug": "bytedance",
+  "status": "active",
+  "categories": ["china", "multimodal"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://www.volcengine.com/product/ark",
+  "officialSiteUrl": "https://www.doubao.com/",
+  "officialDocsUrl": "https://www.volcengine.com/docs/82379",
+  "name": {
+    "en": "ByteDance Doubao",
+    "zh": "字节跳动豆包"
+  },
+  "summary": {
+    "en": "ByteDance's AI model with strong short video and content understanding capabilities.",
+    "zh": "字节跳动的 AI 模型，具备强大的短视频和内容理解能力。"
+  },
+  "models": {
+    "en": ["Doubao Pro", "Doubao Lite", "Doubao-Vision", "Doubao-Audio"],
+    "zh": ["豆包专业版", "豆包轻量版", "豆包视觉版", "豆包音频版"]
+  },
+  "tags": ["chinese", "short-video", "content", "multimodal"],
+  "searchAliases": ["字节跳动", "豆包", "doubao", "volcengine"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "ByteDance Doubao API Key - Short Video AI Models | Get Model Key",
+      "zh": "字节跳动豆包 API Key - 短视频 AI 模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get ByteDance Doubao API key for AI models. Access Doubao series with strong short video understanding.",
+      "zh": "获取字节跳动豆包 API Key，访问 AI 模型。使用豆包系列，具备强大的短视频理解能力。"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "deepseek",
+  "status": "active",
+  "categories": ["top-picks", "china"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://platform.deepseek.com/api_keys",
+  "officialSiteUrl": "https://www.deepseek.com/",
+  "officialDocsUrl": "https://platform.deepseek.com/api-docs/",
+  "name": {
+    "en": "DeepSeek",
+    "zh": "深度求索"
+  },
+  "summary": {
+    "en": "Strong coding and reasoning, cost-effective, good Chinese support.",
+    "zh": "代码和推理能力强，性价比高，中文支持好。"
+  },
+  "models": {
+    "en": ["DeepSeek-V3", "DeepSeek-Coder", "DeepSeek-R1"],
+    "zh": ["DeepSeek-V3", "DeepSeek-Coder", "DeepSeek-R1"]
+  },
+  "tags": ["coding", "reasoning", "chinese", "cost-effective"],
+  "searchAliases": ["deep seek", "深度求索"],
+  "lastVerified": "2026-03-23",
+  "seo": {
+    "title": {
+      "en": "DeepSeek API Key - Official Access for DeepSeek Models | Get Model Key",
+      "zh": "DeepSeek API Key - 深度求索模型官方入口 | Get Model Key"
+    },
+    "description": {
+      "en": "Get official DeepSeek API key for DeepSeek-V3, Coder, and R1 models. Strong coding and reasoning capabilities.",
+      "zh": "获取 DeepSeek-V3、Coder 和 R1 模型的官方 API Key。强大的代码和推理能力。"
+    }
+  }
+}

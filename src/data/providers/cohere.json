@@ -1,0 +1,35 @@
+{
+  "slug": "cohere",
+  "status": "active",
+  "categories": ["global", "enterprise"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://dashboard.cohere.com/api-keys",
+  "officialSiteUrl": "https://cohere.com/",
+  "officialDocsUrl": "https://docs.cohere.com/",
+  "name": {
+    "en": "Cohere",
+    "zh": "Cohere"
+  },
+  "summary": {
+    "en": "Enterprise-focused LLMs with strong retrieval and RAG capabilities.",
+    "zh": "专注于企业的 LLM，具备强大的检索和 RAG 能力。"
+  },
+  "models": {
+    "en": ["Command R", "Command R+", "Embed", "Rerank"],
+    "zh": ["Command R", "Command R+", "Embed", "Rerank"]
+  },
+  "tags": ["enterprise", "retrieval", "rag", "embedding"],
+  "searchAliases": ["cohere ai", "command r", "embedding models"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Cohere API Key - Enterprise LLMs with RAG | Get Model Key",
+      "zh": "Cohere API Key - 具备 RAG 能力的企业级 LLM | Get Model Key"
+    },
+    "description": {
+      "en": "Get Cohere API key for enterprise LLMs. Access Command R, embedding models and RAG capabilities.",
+      "zh": "获取 Cohere API Key，访问企业级 LLM。使用 Command R、嵌入模型和 RAG 能力。"
+    }
+  }
+}

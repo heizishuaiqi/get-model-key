@@ -1,0 +1,35 @@
+{
+  "slug": "zhipu",
+  "status": "active",
+  "categories": ["top-picks", "china"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://open.bigmodel.cn/usercenter/apikeys",
+  "officialSiteUrl": "https://www.zhipuai.cn/",
+  "officialDocsUrl": "https://open.bigmodel.cn/dev/api",
+  "name": {
+    "en": "Zhipu AI",
+    "zh": "智谱AI"
+  },
+  "summary": {
+    "en": "Leading Chinese AI company with GLM series models and strong academic background.",
+    "zh": "领先的中国 AI 公司，提供 GLM 系列模型，具备强大的学术背景。"
+  },
+  "models": {
+    "en": ["GLM-4", "GLM-4V", "GLM-3-Turbo", "CodeGeeX"],
+    "zh": ["GLM-4", "GLM-4V", "GLM-3-Turbo", "CodeGeeX"]
+  },
+  "tags": ["chinese", "academic", "multimodal", "coding"],
+  "searchAliases": ["智谱", "glm", "zhipu ai", "big model"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Zhipu AI API Key - GLM Series Chinese Models | Get Model Key",
+      "zh": "智谱AI API Key - GLM 系列中国模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Zhipu AI API key for GLM series models. Access GLM-4, GLM-4V and CodeGeeX with strong Chinese capabilities.",
+      "zh": "获取智谱AI API Key，访问 GLM 系列模型。使用 GLM-4、GLM-4V 和 CodeGeeX，具备强大的中文能力。"
+    }
+  }
+}

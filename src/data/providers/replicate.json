@@ -1,0 +1,35 @@
+{
+  "slug": "replicate",
+  "status": "active",
+  "categories": ["model-hosting", "global"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://replicate.com/account/api-tokens",
+  "officialSiteUrl": "https://replicate.com/",
+  "officialDocsUrl": "https://replicate.com/docs",
+  "name": {
+    "en": "Replicate",
+    "zh": "Replicate"
+  },
+  "summary": {
+    "en": "Platform for running machine learning models with simple API and pay-per-use pricing.",
+    "zh": "运行机器学习模型的平台，提供简单的 API 和按使用付费的定价。"
+  },
+  "models": {
+    "en": ["Thousands of community models"],
+    "zh": ["数千个社区模型"]
+  },
+  "tags": ["model-hosting", "pay-per-use", "simple-api", "community"],
+  "searchAliases": ["replicate", "model hosting", "ml platform"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Replicate API Key - Machine Learning Model Platform | Get Model Key",
+      "zh": "Replicate API Key - 机器学习模型平台 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Replicate API key for machine learning models. Run thousands of community models with simple API.",
+      "zh": "获取 Replicate API Key，访问机器学习模型。使用简单的 API 运行数千个社区模型。"
+    }
+  }
+}

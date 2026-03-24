@@ -1,0 +1,35 @@
+{
+  "slug": "anthropic",
+  "status": "active",
+  "categories": ["top-picks", "global"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://console.anthropic.com/account/keys",
+  "officialSiteUrl": "https://www.anthropic.com/",
+  "officialDocsUrl": "https://docs.anthropic.com/",
+  "name": {
+    "en": "Anthropic",
+    "zh": "Anthropic"
+  },
+  "summary": {
+    "en": "Strong reasoning, safety-focused, good for complex tasks.",
+    "zh": "推理能力强，注重安全性，适合复杂任务。"
+  },
+  "models": {
+    "en": ["Claude 3.5 Sonnet", "Claude 3 Opus", "Claude 3 Haiku"],
+    "zh": ["Claude 3.5 Sonnet", "Claude 3 Opus", "Claude 3 Haiku"]
+  },
+  "tags": ["reasoning", "safety", "complex-tasks"],
+  "searchAliases": ["claude", "anthropic ai"],
+  "lastVerified": "2026-03-23",
+  "seo": {
+    "title": {
+      "en": "Anthropic API Key - Official Claude API Access | Get Model Key",
+      "zh": "Anthropic API Key - 官方 Claude API 入口 | Get Model Key"
+    },
+    "description": {
+      "en": "Get official Anthropic API key for Claude models. Browse Claude 3.5 Sonnet, Opus, and Haiku models.",
+      "zh": "获取 Anthropic Claude 模型的官方 API Key。浏览 Claude 3.5 Sonnet、Opus 和 Haiku 模型。"
+    }
+  }
+}

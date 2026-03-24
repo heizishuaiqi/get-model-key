@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "title": "Find Official API Key Pages for Major AI Model Providers",
+    "subtitle": "Browse major AI model providers, compare common models, and go straight to the right official entry."
+  },
+  "search": {
+    "placeholder": "Search providers or models"
+  },
+  "sections": ["top-picks", "global", "china", "aggregators", "cloud-platforms"]
+}

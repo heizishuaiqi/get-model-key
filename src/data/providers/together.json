@@ -1,0 +1,35 @@
+{
+  "slug": "together",
+  "status": "active",
+  "categories": ["open-source", "cloud"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://api.together.xyz/settings/api-keys",
+  "officialSiteUrl": "https://www.together.ai/",
+  "officialDocsUrl": "https://docs.together.ai/",
+  "name": {
+    "en": "Together AI",
+    "zh": "Together AI"
+  },
+  "summary": {
+    "en": "Cloud platform for running open-source models with competitive pricing.",
+    "zh": "运行开源模型的云平台，提供有竞争力的价格。"
+  },
+  "models": {
+    "en": ["Llama 3", "Mixtral", "CodeLlama", "Stable Diffusion"],
+    "zh": ["Llama 3", "Mixtral", "CodeLlama", "Stable Diffusion"]
+  },
+  "tags": ["open-source", "cloud", "cost-effective", "model-hosting"],
+  "searchAliases": ["together ai", "open source cloud", "model hosting"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Together AI API Key - Open Source Model Cloud | Get Model Key",
+      "zh": "Together AI API Key - 开源模型云平台 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Together AI API key for open-source model cloud. Run Llama, Mixtral and other models with competitive pricing.",
+      "zh": "获取 Together AI API Key，访问开源模型云平台。以有竞争力的价格运行 Llama、Mixtral 等模型。"
+    }
+  }
+}

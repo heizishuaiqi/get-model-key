@@ -1,0 +1,35 @@
+{
+  "slug": "alibaba",
+  "status": "active",
+  "categories": ["china", "cloud"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://dashscope.console.aliyun.com/apiKey",
+  "officialSiteUrl": "https://tongyi.aliyun.com/",
+  "officialDocsUrl": "https://help.aliyun.com/zh/dashscope/",
+  "name": {
+    "en": "Alibaba Qwen",
+    "zh": "阿里通义"
+  },
+  "summary": {
+    "en": "Alibaba's AI models with strong multimodal capabilities and Alibaba Cloud integration.",
+    "zh": "阿里的 AI 模型，具备强大的多模态能力和阿里云集成。"
+  },
+  "models": {
+    "en": ["Qwen2.5", "Qwen2-VL", "Qwen2-Audio", "Qwen2-Coder"],
+    "zh": ["通义千问2.5", "通义千问2-VL", "通义千问2-Audio", "通义千问2-Coder"]
+  },
+  "tags": ["chinese", "multimodal", "alibaba", "cloud"],
+  "searchAliases": ["阿里", "通义", "qwen", "tongyi"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Alibaba Qwen API Key - Multimodal AI on Alibaba Cloud | Get Model Key",
+      "zh": "阿里通义 API Key - 阿里云上的多模态 AI | Get Model Key"
+    },
+    "description": {
+      "en": "Get Alibaba Qwen API key for multimodal AI models. Access Qwen series on Alibaba Cloud.",
+      "zh": "获取阿里通义 API Key，访问多模态 AI 模型。在阿里云上使用通义系列模型。"
+    }
+  }
+}

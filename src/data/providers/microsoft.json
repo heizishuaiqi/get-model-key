@@ -1,0 +1,35 @@
+{
+  "slug": "microsoft",
+  "status": "active",
+  "categories": ["enterprise", "cloud"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://portal.azure.com/#create/Microsoft.CognitiveServicesOpenAI",
+  "officialSiteUrl": "https://azure.microsoft.com/en-us/products/ai-services/openai-service",
+  "officialDocsUrl": "https://learn.microsoft.com/en-us/azure/ai-services/openai/",
+  "name": {
+    "en": "Microsoft Azure AI",
+    "zh": "Microsoft Azure AI"
+  },
+  "summary": {
+    "en": "Enterprise-grade AI services on Azure with OpenAI integration and Azure ecosystem.",
+    "zh": "Azure 上的企业级 AI 服务，集成 OpenAI 和 Azure 生态系统。"
+  },
+  "models": {
+    "en": ["GPT-4o", "GPT-4 Turbo", "GPT-3.5 Turbo", "DALL-E 3", "Whisper"],
+    "zh": ["GPT-4o", "GPT-4 Turbo", "GPT-3.5 Turbo", "DALL-E 3", "Whisper"]
+  },
+  "tags": ["enterprise", "azure", "openai", "cloud"],
+  "searchAliases": ["azure ai", "microsoft ai", "azure openai", "cognitive services"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Microsoft Azure AI API Key - Enterprise AI Services | Get Model Key",
+      "zh": "Microsoft Azure AI API Key - 企业级 AI 服务 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Microsoft Azure AI API key for enterprise AI services. Access OpenAI models on Azure with enterprise-grade security.",
+      "zh": "获取 Microsoft Azure AI API Key，访问企业级 AI 服务。在 Azure 上使用 OpenAI 模型，享受企业级安全。"
+    }
+  }
+}

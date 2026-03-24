@@ -1,0 +1,35 @@
+{
+  "slug": "huggingface",
+  "status": "active",
+  "categories": ["open-source", "aggregator"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://huggingface.co/settings/tokens",
+  "officialSiteUrl": "https://huggingface.co/",
+  "officialDocsUrl": "https://huggingface.co/docs",
+  "name": {
+    "en": "Hugging Face",
+    "zh": "Hugging Face"
+  },
+  "summary": {
+    "en": "Platform for sharing and deploying open-source AI models with large community.",
+    "zh": "分享和部署开源 AI 模型的平台，拥有庞大的社区。"
+  },
+  "models": {
+    "en": ["Thousands of community models"],
+    "zh": ["数千个社区模型"]
+  },
+  "tags": ["open-source", "community", "model-hub", "inference"],
+  "searchAliases": ["hugging face", "transformers", "model hub"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Hugging Face API Key - Open Source Model Platform | Get Model Key",
+      "zh": "Hugging Face API Key - 开源模型平台 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Hugging Face API key for open-source AI models. Access thousands of community models and inference endpoints.",
+      "zh": "获取 Hugging Face API Key，访问开源 AI 模型。使用数千个社区模型和推理端点。"
+    }
+  }
+}

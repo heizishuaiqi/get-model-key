@@ -1,0 +1,10 @@
+{
+  "siteName": "Get Model Key",
+  "alternateSiteName": ["GetModelKey", "getmodelkey.com"],
+  "domain": "https://getmodelkey.com",
+  "defaultLocale": "en",
+  "supportedLocales": ["en", "zh"],
+  "contactEmail": "hello@getmodelkey.com",
+  "socialImage": "https://getmodelkey.com/og/default.png",
+  "favicon": "/favicon.ico"
+}

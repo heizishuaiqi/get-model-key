@@ -1,0 +1,35 @@
+{
+  "slug": "meta",
+  "status": "active",
+  "categories": ["open-source", "global"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://www.llama.com/api",
+  "officialSiteUrl": "https://www.llama.com/",
+  "officialDocsUrl": "https://llama.meta.com/docs",
+  "name": {
+    "en": "Meta Llama",
+    "zh": "Meta Llama"
+  },
+  "summary": {
+    "en": "Open-source LLMs from Meta, widely adopted with strong community support.",
+    "zh": "Meta 的开源大语言模型，广泛采用，社区支持强大。"
+  },
+  "models": {
+    "en": ["Llama 3.3", "Llama 3.2", "Llama 3.1", "Llama 3", "Code Llama"],
+    "zh": ["Llama 3.3", "Llama 3.2", "Llama 3.1", "Llama 3", "Code Llama"]
+  },
+  "tags": ["open-source", "community", "coding", "multilingual"],
+  "searchAliases": ["llama", "meta ai", "facebook ai", "code llama"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Meta Llama API Key - Official Llama Models Access | Get Model Key",
+      "zh": "Meta Llama API Key - Llama 模型官方入口 | Get Model Key"
+    },
+    "description": {
+      "en": "Get official Meta Llama API key for Llama models. Access open-source Llama 3 series and Code Llama.",
+      "zh": "获取 Meta Llama 模型的官方 API Key。访问开源的 Llama 3 系列和 Code Llama。"
+    }
+  }
+}

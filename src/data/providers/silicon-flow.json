@@ -1,0 +1,35 @@
+{
+  "slug": "silicon-flow",
+  "status": "active",
+  "categories": ["china", "coding"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://siliconflow.cn/console/apikey",
+  "officialSiteUrl": "https://siliconflow.cn/",
+  "officialDocsUrl": "https://docs.siliconflow.cn/",
+  "name": {
+    "en": "Silicon Flow",
+    "zh": "硅基流动"
+  },
+  "summary": {
+    "en": "Chinese AI company focusing on coding and reasoning models with cost-effective solutions.",
+    "zh": "中国 AI 公司，专注于代码和推理模型，提供高性价比解决方案。"
+  },
+  "models": {
+    "en": ["CogAgent", "CodeGeeX", "ChatGLM", "VisualGLM"],
+    "zh": ["CogAgent", "CodeGeeX", "ChatGLM", "VisualGLM"]
+  },
+  "tags": ["coding", "chinese", "cost-effective", "reasoning"],
+  "searchAliases": ["硅基流动", "siliconflow", "cogagent", "codegeex"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Silicon Flow API Key - Chinese Coding AI Models | Get Model Key",
+      "zh": "硅基流动 API Key - 中国代码 AI 模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Silicon Flow API key for Chinese coding AI models. Access CogAgent, CodeGeeX and other coding-focused models.",
+      "zh": "获取硅基流动 API Key，访问中国代码 AI 模型。使用 CogAgent、CodeGeeX 等专注于代码的模型。"
+    }
+  }
+}

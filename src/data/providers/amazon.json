@@ -1,0 +1,35 @@
+{
+  "slug": "amazon",
+  "status": "active",
+  "categories": ["enterprise", "cloud"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://us-east-1.console.aws.amazon.com/bedrock/home",
+  "officialSiteUrl": "https://aws.amazon.com/bedrock/",
+  "officialDocsUrl": "https://docs.aws.amazon.com/bedrock/",
+  "name": {
+    "en": "Amazon Bedrock",
+    "zh": "Amazon Bedrock"
+  },
+  "summary": {
+    "en": "AWS managed service for foundation models with enterprise security and scalability.",
+    "zh": "AWS 托管的基础模型服务，具备企业级安全性和可扩展性。"
+  },
+  "models": {
+    "en": ["Claude 3", "Llama 3", "Titan", "Jurassic-2", "Command", "Stable Diffusion"],
+    "zh": ["Claude 3", "Llama 3", "Titan", "Jurassic-2", "Command", "Stable Diffusion"]
+  },
+  "tags": ["aws", "enterprise", "cloud", "multiple-models"],
+  "searchAliases": ["aws bedrock", "amazon ai", "bedrock api", "aws ai"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Amazon Bedrock API Key - AWS Foundation Models | Get Model Key",
+      "zh": "Amazon Bedrock API Key - AWS 基础模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Amazon Bedrock API key for AWS foundation models. Access Claude, Llama, Titan and more on AWS.",
+      "zh": "获取 Amazon Bedrock API Key，访问 AWS 基础模型。在 AWS 上使用 Claude、Llama、Titan 等模型。"
+    }
+  }
+}

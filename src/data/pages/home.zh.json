@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "title": "查找主流 AI 模型平台的官方 API Key 入口",
+    "subtitle": "浏览主流模型平台，查看常用模型，并直接进入正确的官方入口。"
+  },
+  "search": {
+    "placeholder": "搜索提供商或模型"
+  },
+  "sections": ["top-picks", "global", "china", "aggregator", "cloud"]
+}

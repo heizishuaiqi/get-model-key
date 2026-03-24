@@ -1,0 +1,35 @@
+{
+  "slug": "baidu",
+  "status": "active",
+  "categories": ["china", "enterprise"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://console.bce.baidu.com/ai/#/ai/ernie/overview",
+  "officialSiteUrl": "https://yiyan.baidu.com/",
+  "officialDocsUrl": "https://cloud.baidu.com/doc/ERNIE/s/",
+  "name": {
+    "en": "Baidu ERNIE",
+    "zh": "百度文心"
+  },
+  "summary": {
+    "en": "Baidu's AI model with strong Chinese understanding and search integration.",
+    "zh": "百度的 AI 模型，具备强大的中文理解和搜索集成能力。"
+  },
+  "models": {
+    "en": ["ERNIE 4.0", "ERNIE 3.5", "ERNIE Speed", "ERNIE Lite"],
+    "zh": ["文心 4.0", "文心 3.5", "文心 Speed", "文心 Lite"]
+  },
+  "tags": ["chinese", "search", "baidu", "enterprise"],
+  "searchAliases": ["百度", "文心", "ernie", "yiyan"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Baidu ERNIE API Key - Chinese AI with Search Integration | Get Model Key",
+      "zh": "百度文心 API Key - 集成搜索的中文 AI | Get Model Key"
+    },
+    "description": {
+      "en": "Get Baidu ERNIE API key for Chinese AI models. Access ERNIE series with Baidu search integration.",
+      "zh": "获取百度文心 API Key，访问中文 AI 模型。使用文心系列，集成百度搜索能力。"
+    }
+  }
+}

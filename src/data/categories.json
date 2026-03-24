@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "top-picks",
+    "name": {
+      "en": "Top Picks",
+      "zh": "热门推荐"
+    },
+    "order": 1
+  },
+  {
+    "slug": "global",
+    "name": {
+      "en": "Global Providers",
+      "zh": "国际模型平台"
+    },
+    "order": 2
+  },
+  {
+    "slug": "china",
+    "name": {
+      "en": "China Providers",
+      "zh": "中国模型平台"
+    },
+    "order": 3
+  },
+  {
+    "slug": "aggregator",
+    "name": {
+      "en": "Aggregators",
+      "zh": "聚合平台"
+    },
+    "order": 4
+  },
+  {
+    "slug": "cloud",
+    "name": {
+      "en": "Cloud Platforms",
+      "zh": "云平台"
+    },
+    "order": 5
+  }
+]

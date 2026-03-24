@@ -1,0 +1,35 @@
+{
+  "slug": "stability",
+  "status": "active",
+  "categories": ["image", "global"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://platform.stability.ai/account/keys",
+  "officialSiteUrl": "https://stability.ai/",
+  "officialDocsUrl": "https://platform.stability.ai/docs",
+  "name": {
+    "en": "Stability AI",
+    "zh": "Stability AI"
+  },
+  "summary": {
+    "en": "Open-source image generation models including Stable Diffusion series.",
+    "zh": "开源图像生成模型，包括 Stable Diffusion 系列。"
+  },
+  "models": {
+    "en": ["Stable Diffusion 3", "Stable Video", "Stable Audio", "Stable Code"],
+    "zh": ["Stable Diffusion 3", "Stable Video", "Stable Audio", "Stable Code"]
+  },
+  "tags": ["image-generation", "open-source", "stable-diffusion", "creative"],
+  "searchAliases": ["stability ai", "stable diffusion", "image ai"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Stability AI API Key - Stable Diffusion Image Models | Get Model Key",
+      "zh": "Stability AI API Key - Stable Diffusion 图像模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Stability AI API key for image generation models. Access Stable Diffusion series and other creative AI tools.",
+      "zh": "获取 Stability AI API Key，访问图像生成模型。使用 Stable Diffusion 系列和其他创意 AI 工具。"
+    }
+  }
+}

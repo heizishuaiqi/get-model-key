@@ -1,0 +1,35 @@
+{
+  "slug": "tencent",
+  "status": "active",
+  "categories": ["china", "enterprise"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://cloud.tencent.com/product/hunyuan",
+  "officialSiteUrl": "https://hunyuan.tencent.com/",
+  "officialDocsUrl": "https://cloud.tencent.com/document/product/1729",
+  "name": {
+    "en": "Tencent Hunyuan",
+    "zh": "腾讯混元"
+  },
+  "summary": {
+    "en": "Tencent's AI model with strong Chinese capabilities and Tencent ecosystem integration.",
+    "zh": "腾讯的 AI 模型，具备强大的中文能力和腾讯生态集成。"
+  },
+  "models": {
+    "en": ["Hunyuan Standard", "Hunyuan Pro", "Hunyuan Turbo", "Hunyuan-Vision"],
+    "zh": ["混元标准版", "混元专业版", "混元极速版", "混元视觉版"]
+  },
+  "tags": ["chinese", "tencent", "ecosystem", "enterprise"],
+  "searchAliases": ["腾讯", "混元", "hunyuan", "tencent ai"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "Tencent Hunyuan API Key - Tencent Ecosystem AI | Get Model Key",
+      "zh": "腾讯混元 API Key - 腾讯生态 AI | Get Model Key"
+    },
+    "description": {
+      "en": "Get Tencent Hunyuan API key for Chinese AI models. Access Hunyuan series with Tencent ecosystem integration.",
+      "zh": "获取腾讯混元 API Key，访问中文 AI 模型。使用混元系列，集成腾讯生态能力。"
+    }
+  }
+}

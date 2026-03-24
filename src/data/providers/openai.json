@@ -1,0 +1,35 @@
+{
+  "slug": "openai",
+  "status": "active",
+  "categories": ["top-picks", "global"],
+  "region": "global",
+  "featured": true,
+  "officialKeyUrl": "https://platform.openai.com/api-keys",
+  "officialSiteUrl": "https://openai.com/",
+  "officialDocsUrl": "https://platform.openai.com/docs/overview",
+  "name": {
+    "en": "OpenAI",
+    "zh": "OpenAI"
+  },
+  "summary": {
+    "en": "General purpose, strong ecosystem, good default choice.",
+    "zh": "通用能力强，生态完善，默认选择友好。"
+  },
+  "models": {
+    "en": ["GPT-4.1", "GPT-4o", "o3"],
+    "zh": ["GPT-4.1", "GPT-4o", "o3"]
+  },
+  "tags": ["general", "coding", "ecosystem"],
+  "searchAliases": ["gpt", "open ai", "chatgpt api"],
+  "lastVerified": "2026-03-23",
+  "seo": {
+    "title": {
+      "en": "OpenAI API Key - Official Access, Models & Quick Overview | Get Model Key",
+      "zh": "OpenAI API Key - 官方入口、模型与快速概览 | Get Model Key"
+    },
+    "description": {
+      "en": "Find the official OpenAI API key page, browse common OpenAI models, and see what OpenAI is best for.",
+      "zh": "查看 OpenAI 官方 API Key 入口、常用模型和适用场景。"
+    }
+  }
+}

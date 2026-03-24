@@ -1,0 +1,35 @@
+{
+  "slug": "zero-one",
+  "status": "active",
+  "categories": ["china", "open-source"],
+  "region": "china",
+  "featured": true,
+  "officialKeyUrl": "https://platform.01.ai/console/apikey",
+  "officialSiteUrl": "https://www.01.ai/",
+  "officialDocsUrl": "https://docs.01.ai/",
+  "name": {
+    "en": "01.AI",
+    "zh": "零一万物"
+  },
+  "summary": {
+    "en": "Chinese AI company founded by Kai-Fu Lee, focusing on Yi series open-source models.",
+    "zh": "李开复创立的中国 AI 公司，专注于 Yi 系列开源模型。"
+  },
+  "models": {
+    "en": ["Yi-34B", "Yi-6B", "Yi-VL", "Yi-Coder"],
+    "zh": ["Yi-34B", "Yi-6B", "Yi-VL", "Yi-Coder"]
+  },
+  "tags": ["chinese", "open-source", "yi-series", "coding"],
+  "searchAliases": ["零一万物", "01.ai", "yi model", "kai-fu lee"],
+  "lastVerified": "2026-03-24",
+  "seo": {
+    "title": {
+      "en": "01.AI API Key - Yi Series Open Source Models | Get Model Key",
+      "zh": "零一万物 API Key - Yi 系列开源模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get 01.AI API key for Yi series open-source models. Access Yi-34B, Yi-VL and Yi-Coder models.",
+      "zh": "获取零一万物 API Key，访问 Yi 系列开源模型。使用 Yi-34B、Yi-VL 和 Yi-Coder 模型。"
+    }
+  }
+}
