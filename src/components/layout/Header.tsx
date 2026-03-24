@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
@@ -47,6 +48,14 @@ export default function Header({ lang }: HeaderProps) {
       <nav className="container-custom flex h-full items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href={lang === 'en' ? '/' : '/zh'} className="flex items-center gap-2">
+            <Image
+              src="/favicon-32x32.png"
+              alt="Get Model Key logo"
+              width={48}
+              height={48}
+              className="h-12 w-12 rounded-sm"
+              priority
+            />
             <span className="text-xl font-bold text-text-primary">Get Model Key</span>
           </Link>
 

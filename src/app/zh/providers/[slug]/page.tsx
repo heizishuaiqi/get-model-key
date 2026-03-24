@@ -66,16 +66,16 @@ export default async function ZhProviderPage({ params }: Props) {
           </div>
 
           <div className="flex w-full max-w-sm flex-col gap-3">
-            <PrimaryInverseButton href={provider.officialKeyUrl} className="w-full">
+            <PrimaryInverseButton href={provider.officialKeyUrl} newTab className="w-full">
               {'\u83b7\u53d6 API Key'}
             </PrimaryInverseButton>
             {provider.officialSiteUrl && (
-              <PillButton href={provider.officialSiteUrl} variant="ghost" size="lg" className="w-full">
+              <PillButton href={provider.officialSiteUrl} newTab variant="ghost" size="lg" className="w-full">
                 {'\u8bbf\u95ee\u5b98\u7f51'}
               </PillButton>
             )}
             {provider.officialDocsUrl && (
-              <PillButton href={provider.officialDocsUrl} variant="neutral" size="lg" className="w-full">
+              <PillButton href={provider.officialDocsUrl} newTab variant="neutral" size="lg" className="w-full">
                 {'\u67e5\u770b\u6587\u6863'}
               </PillButton>
             )}
@@ -140,6 +140,8 @@ export default async function ZhProviderPage({ params }: Props) {
               <div className="space-y-3">
                 <a
                   href={provider.officialKeyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                 >
                   {'API Key \u9875\u9762'}
@@ -147,6 +149,8 @@ export default async function ZhProviderPage({ params }: Props) {
                 {provider.officialSiteUrl && (
                   <a
                     href={provider.officialSiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
                     {'\u5b98\u7f51'}
@@ -155,6 +159,8 @@ export default async function ZhProviderPage({ params }: Props) {
                 {provider.officialDocsUrl && (
                   <a
                     href={provider.officialDocsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
                     {'\u6587\u6863'}

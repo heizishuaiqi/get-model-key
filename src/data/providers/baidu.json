@@ -16,8 +16,8 @@
     "zh": "百度的 AI 模型，具备强大的中文理解和搜索集成能力。"
   },
   "models": {
-    "en": ["ERNIE 4.0", "ERNIE 3.5", "ERNIE Speed", "ERNIE Lite"],
-    "zh": ["文心 4.0", "文心 3.5", "文心 Speed", "文心 Lite"]
+    "en": ["ERNIE 5.0 Thinking", "ERNIE 4.5", "ERNIE 4.0", "ERNIE 3.5", "ERNIE Speed", "ERNIE Lite"],
+    "zh": ["文心 5.0 Thinking", "文心 4.5", "文心 4.0", "文心 3.5", "文心 Speed", "文心 Lite"]
   },
   "tags": ["chinese", "search", "baidu", "enterprise"],
   "searchAliases": ["百度", "文心", "ernie", "yiyan"],

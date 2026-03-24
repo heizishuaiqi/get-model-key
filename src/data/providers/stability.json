@@ -16,8 +16,8 @@
     "zh": "开源图像生成模型，包括 Stable Diffusion 系列。"
   },
   "models": {
-    "en": ["Stable Diffusion 3", "Stable Video", "Stable Audio", "Stable Code"],
-    "zh": ["Stable Diffusion 3", "Stable Video", "Stable Audio", "Stable Code"]
+    "en": ["Stable Diffusion 4", "Stable Diffusion 3.5", "Stable Video 3.0", "Stable Audio 2.0", "Stable Image 3.0", "Stable Code"],
+    "zh": ["Stable Diffusion 4", "Stable Diffusion 3.5", "Stable Video 3.0", "Stable Audio 2.0", "Stable Image 3.0", "Stable Code"]
   },
   "tags": ["image-generation", "open-source", "stable-diffusion", "creative"],
   "searchAliases": ["stability ai", "stable diffusion", "image ai"],

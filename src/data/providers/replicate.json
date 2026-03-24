@@ -16,8 +16,8 @@
     "zh": "运行机器学习模型的平台，提供简单的 API 和按使用付费的定价。"
   },
   "models": {
-    "en": ["Thousands of community models"],
-    "zh": ["数千个社区模型"]
+    "en": ["black-forest-labs/flux-schnell", "stability-ai/stable-diffusion", "meta-llama/llama-3", "google/gemini", "openai/gpt-4"],
+    "zh": ["black-forest-labs/flux-schnell", "stability-ai/stable-diffusion", "meta-llama/llama-3", "google/gemini", "openai/gpt-4"]
   },
   "tags": ["model-hosting", "pay-per-use", "simple-api", "community"],
   "searchAliases": ["replicate", "model hosting", "ml platform"],

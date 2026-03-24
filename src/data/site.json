@@ -1,10 +1,10 @@
 {
   "siteName": "Get Model Key",
   "alternateSiteName": ["GetModelKey", "getmodelkey.com"],
-  "domain": "https://getmodelkey.com",
+  "domain": "https://www.getmodelkey.com",
   "defaultLocale": "en",
   "supportedLocales": ["en", "zh"],
   "contactEmail": "hello@getmodelkey.com",
-  "socialImage": "https://getmodelkey.com/og/default.png",
-  "favicon": "/favicon.ico"
+  "socialImage": "https://www.getmodelkey.com/android-chrome-512x512.png",
+  "favicon": "/favicon-32x32.png"
 }

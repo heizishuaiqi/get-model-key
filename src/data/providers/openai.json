@@ -16,12 +16,12 @@
     "zh": "通用能力强，生态完善，默认选择友好。"
   },
   "models": {
-    "en": ["GPT-4.1", "GPT-4o", "o3"],
-    "zh": ["GPT-4.1", "GPT-4o", "o3"]
+    "en": ["GPT-5.4", "GPT-4o", "o4-mini", "o3", "o1"],
+    "zh": ["GPT-5.4", "GPT-4o", "o4-mini", "o3", "o1"]
   },
   "tags": ["general", "coding", "ecosystem"],
   "searchAliases": ["gpt", "open ai", "chatgpt api"],
-  "lastVerified": "2026-03-23",
+  "lastVerified": "2026-03-24",
   "seo": {
     "title": {
       "en": "OpenAI API Key - Official Access, Models & Quick Overview | Get Model Key",

@@ -16,8 +16,8 @@
     "zh": "分享和部署开源 AI 模型的平台，拥有庞大的社区。"
   },
   "models": {
-    "en": ["Thousands of community models"],
-    "zh": ["数千个社区模型"]
+    "en": ["Qwen3-Coder-Next-NVFP4", "MiniMax-M2.5", "Ministral-3-3B-Instruct", "Devstral-Small-2-24B-Instruct", "Phi-4-mini-instruct-FP8"],
+    "zh": ["Qwen3-Coder-Next-NVFP4", "MiniMax-M2.5", "Ministral-3-3B-Instruct", "Devstral-Small-2-24B-Instruct", "Phi-4-mini-instruct-FP8"]
   },
   "tags": ["open-source", "community", "model-hub", "inference"],
   "searchAliases": ["hugging face", "transformers", "model hub"],

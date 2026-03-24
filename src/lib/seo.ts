@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { getSiteConfig } from './providers';
 
 export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
@@ -35,9 +35,10 @@ export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Met
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title: titles[lang],
       description: descriptions[lang],
+      images: [siteConfig.socialImage],
     },
   };
 }
@@ -91,9 +92,10 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title,
       description,
+      images: [siteConfig.socialImage],
     },
   };
 }

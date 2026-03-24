@@ -4,6 +4,7 @@ interface PillButtonProps {
   children: ReactNode;
   onClick?: () => void;
   href?: string;
+  newTab?: boolean;
   className?: string;
   variant?: 'ghost' | 'brand' | 'neutral';
   size?: 'sm' | 'md' | 'lg';
@@ -14,6 +15,7 @@ export default function PillButton({
   children,
   onClick,
   href,
+  newTab = false,
   className = '',
   variant = 'ghost',
   size = 'md',
@@ -40,6 +42,8 @@ export default function PillButton({
         href={href}
         className={combinedClasses}
         onClick={onClick}
+        target={newTab ? '_blank' : undefined}
+        rel={newTab ? 'noopener noreferrer' : undefined}
       >
         {children}
       </a>

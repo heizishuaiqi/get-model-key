@@ -66,16 +66,16 @@ export default async function ProviderPage({ params }: Props) {
           </div>
 
           <div className="flex w-full max-w-sm flex-col gap-3">
-            <PrimaryInverseButton href={provider.officialKeyUrl} className="w-full">
+            <PrimaryInverseButton href={provider.officialKeyUrl} newTab className="w-full">
               Get API Key
             </PrimaryInverseButton>
             {provider.officialSiteUrl && (
-              <PillButton href={provider.officialSiteUrl} variant="ghost" size="lg" className="w-full">
+              <PillButton href={provider.officialSiteUrl} newTab variant="ghost" size="lg" className="w-full">
                 Visit Website
               </PillButton>
             )}
             {provider.officialDocsUrl && (
-              <PillButton href={provider.officialDocsUrl} variant="neutral" size="lg" className="w-full">
+              <PillButton href={provider.officialDocsUrl} newTab variant="neutral" size="lg" className="w-full">
                 View Docs
               </PillButton>
             )}
@@ -140,6 +140,8 @@ export default async function ProviderPage({ params }: Props) {
               <div className="space-y-3">
                 <a
                   href={provider.officialKeyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                 >
                   API Key Page
@@ -147,6 +149,8 @@ export default async function ProviderPage({ params }: Props) {
                 {provider.officialSiteUrl && (
                   <a
                     href={provider.officialSiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
                     Official Website
@@ -155,6 +159,8 @@ export default async function ProviderPage({ params }: Props) {
                 {provider.officialDocsUrl && (
                   <a
                     href={provider.officialDocsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
                     Documentation

@@ -16,8 +16,8 @@
     "zh": "法国 AI 公司，提供高效的开源模型和强大的多语言支持。"
   },
   "models": {
-    "en": ["Mistral Large", "Mixtral 8x22B", "Mixtral 8x7B", "Codestral"],
-    "zh": ["Mistral Large", "Mixtral 8x22B", "Mixtral 8x7B", "Codestral"]
+    "en": ["mistral-small-2506", "mistral-medium-latest", "mistral-large-latest", "Codestral-2501", "Ministral-3B", "Ministral-8B", "Pixtral-12B", "Magistral-Medium", "Magistral-Small", "Devstral-Small"],
+    "zh": ["mistral-small-2506", "mistral-medium-latest", "mistral-large-latest", "Codestral-2501", "Ministral-3B", "Ministral-8B", "Pixtral-12B", "Magistral-Medium", "Magistral-Small", "Devstral-Small"]
   },
   "tags": ["open-source", "multilingual", "efficient", "french"],
   "searchAliases": ["mistral ai", "mixtral", "codestral", "french ai"],

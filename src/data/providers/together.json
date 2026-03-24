@@ -16,8 +16,8 @@
     "zh": "运行开源模型的云平台，提供有竞争力的价格。"
   },
   "models": {
-    "en": ["Llama 3", "Mixtral", "CodeLlama", "Stable Diffusion"],
-    "zh": ["Llama 3", "Mixtral", "CodeLlama", "Stable Diffusion"]
+    "en": ["MiniMax-M2.5", "Qwen/Qwen3.5-9B", "Mxbai-Rerank-Large-V2", "Kimi-K2-Thinking", "Llama-3.2-3B-Instruct-Turbo", "Kimi-K2-Instruct-0905"],
+    "zh": ["MiniMax-M2.5", "Qwen/千问3.5-9B", "Mxbai-Rerank-Large-V2", "Kimi-K2-Thinking", "Llama-3.2-3B-Instruct-Turbo", "Kimi-K2-Instruct-0905"]
   },
   "tags": ["open-source", "cloud", "cost-effective", "model-hosting"],
   "searchAliases": ["together ai", "open source cloud", "model hosting"],

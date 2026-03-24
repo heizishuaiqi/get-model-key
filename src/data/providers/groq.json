@@ -16,8 +16,8 @@
     "zh": "高速 AI 推理，采用 LPU 架构，提供超快的模型响应。"
   },
   "models": {
-    "en": ["Llama 3.1 70B", "Mixtral 8x7B", "Gemma 7B"],
-    "zh": ["Llama 3.1 70B", "Mixtral 8x7B", "Gemma 7B"]
+    "en": ["Llama 3.3 70B Versatile", "OpenAI GPT OSS 120B", "OpenAI GPT OSS 20B", "MetaLlama 4 Scout 17B", "Whisper Large V3 Turbo"],
+    "zh": ["Llama 3.3 70B Versatile", "OpenAI GPT OSS 120B", "OpenAI GPT OSS 20B", "MetaLlama 4 Scout 17B", "Whisper Large V3 Turbo"]
   },
   "tags": ["fast-inference", "lpu", "low-latency", "hardware"],
   "searchAliases": ["groq ai", "fast inference", "lpu architecture"],

@@ -11,7 +11,7 @@
     "slug": "global",
     "name": {
       "en": "Global Providers",
-      "zh": "国际模型平台"
+      "zh": "国际模型"
     },
     "order": 2
   },
@@ -19,7 +19,7 @@
     "slug": "china",
     "name": {
       "en": "China Providers",
-      "zh": "中国模型平台"
+      "zh": "国内模型"
     },
     "order": 3
   },

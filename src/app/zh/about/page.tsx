@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Card from '@/components/ui/Card';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
@@ -126,7 +126,7 @@ export default function ZhAboutPage() {
                 </div>
                 <div>
                   <h3 className="mb-2 text-body font-semibold text-text-primary">不替代官方平台</h3>
-                  <p className="text-body-sm text-text-secondary">账号注册、计费和权限管理都以官方平台为准。</p>
+                  <p className="text-body-sm text-text-secondary">账户注册、计费和权限管理都以官方平台为准。</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -152,7 +152,7 @@ export default function ZhAboutPage() {
                 </div>
                 <div>
                   <h3 className="mb-2 text-body font-semibold text-text-primary">不强制用户登录</h3>
-                  <p className="text-body-sm text-text-secondary">浏览目录不需要注册账号。</p>
+                  <p className="text-body-sm text-text-secondary">浏览目录不需要注册账户。</p>
                 </div>
               </div>
             </div>

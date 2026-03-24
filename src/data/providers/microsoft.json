@@ -16,8 +16,8 @@
     "zh": "Azure 上的企业级 AI 服务，集成 OpenAI 和 Azure 生态系统。"
   },
   "models": {
-    "en": ["GPT-4o", "GPT-4 Turbo", "GPT-3.5 Turbo", "DALL-E 3", "Whisper"],
-    "zh": ["GPT-4o", "GPT-4 Turbo", "GPT-3.5 Turbo", "DALL-E 3", "Whisper"]
+    "en": ["GPT-4.1", "GPT-4.1 Mini", "GPT-4.1 Nano", "o4-mini", "o3", "GPT-Realtime-1.5", "GPT-Audio-1.5", "GPT-image-1", "GPT-4o-mini-tts", "DALL-E 3", "Whisper"],
+    "zh": ["GPT-4.1", "GPT-4.1 Mini", "GPT-4.1 Nano", "o4-mini", "o3", "GPT-Realtime-1.5", "GPT-Audio-1.5", "GPT-image-1", "GPT-4o-mini-tts", "DALL-E 3", "Whisper"]
   },
   "tags": ["enterprise", "azure", "openai", "cloud"],
   "searchAliases": ["azure ai", "microsoft ai", "azure openai", "cognitive services"],

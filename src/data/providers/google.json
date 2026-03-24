@@ -16,8 +16,8 @@
     "zh": "Google 的 Gemini 模型，具备强大的多模态能力和 Google 生态集成。"
   },
   "models": {
-    "en": ["Gemini 2.0 Flash", "Gemini 2.0 Pro", "Gemini 1.5 Pro", "Gemini 1.5 Flash"],
-    "zh": ["Gemini 2.0 Flash", "Gemini 2.0 Pro", "Gemini 1.5 Pro", "Gemini 1.5 Flash"]
+    "en": ["Gemini 3.1 Pro", "Gemini 3 Flash", "Gemini 3.1 Flash-Lite", "Nano Banana 2", "Nano Banana Pro", "Gemini 2.5 Flash", "Imagen 4", "Lyria Experimental", "Gemini Deep Research Preview"],
+    "zh": ["Gemini 3.1 Pro", "Gemini 3 Flash", "Gemini 3.1 Flash-Lite", "Nano Banana 2", "Nano Banana Pro", "Gemini 2.5 Flash", "Imagen 4", "Lyria Experimental", "Gemini Deep Research Preview"]
   },
   "tags": ["multimodal", "vision", "google-ecosystem", "search"],
   "searchAliases": ["gemini", "google ai", "bard", "google gemini"],

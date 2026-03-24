@@ -16,8 +16,8 @@
     "zh": "领先的中国 AI 公司，提供 GLM 系列模型，具备强大的学术背景。"
   },
   "models": {
-    "en": ["GLM-4", "GLM-4V", "GLM-3-Turbo", "CodeGeeX"],
-    "zh": ["GLM-4", "GLM-4V", "GLM-3-Turbo", "CodeGeeX"]
+    "en": ["GLM-5", "GLM-4.6", "GLM-4V", "GLM-3-Turbo", "CodeGeeX", "GLM-4.6-Air"],
+    "zh": ["GLM-5", "GLM-4.6", "GLM-4V", "GLM-3-Turbo", "CodeGeeX", "GLM-4.6-Air"]
   },
   "tags": ["chinese", "academic", "multimodal", "coding"],
   "searchAliases": ["智谱", "glm", "zhipu ai", "big model"],

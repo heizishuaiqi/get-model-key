@@ -16,8 +16,8 @@
     "zh": "中国 AI 公司，专注于多模态和创意 AI 应用。"
   },
   "models": {
-    "en": ["SkyWork", "SkyChat", "SkyImage", "SkyVideo"],
-    "zh": ["天工模型", "天工对话", "天工图像", "天工视频"]
+    "en": ["SkyWork 3.0", "SkyChat 3.0", "SkyImage 3.0", "SkyVideo 3.0", "SkyMusic"],
+    "zh": ["天工模型3.0", "天工对话3.0", "天工图像3.0", "天工视频3.0", "天工音乐"]
   },
   "tags": ["chinese", "multimodal", "creative", "ai-apps"],
   "searchAliases": ["昆仑万维", "天工", "tiangong", "skywork"],

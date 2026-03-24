@@ -16,8 +16,8 @@
     "zh": "中国 AI 初创公司，具备强大的长上下文和推理能力。"
   },
   "models": {
-    "en": ["Kimi", "Moonshot-v1", "Moonshot-v1-128k"],
-    "zh": ["Kimi", "Moonshot-v1", "Moonshot-v1-128k"]
+    "en": ["kimi-k2.5", "kimi-k2-0711-preview", "Moonshot-v1", "Moonshot-v1-128k"],
+    "zh": ["kimi-k2.5", "kimi-k2-0711-preview", "Moonshot-v1", "Moonshot-v1-128k"]
   },
   "tags": ["chinese", "long-context", "reasoning", "startup"],
   "searchAliases": ["月之暗面", "kimi", "moonshot ai", "长上下文"],
