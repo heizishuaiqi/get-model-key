@@ -1,7 +1,10 @@
 {
   "slug": "alibaba",
   "status": "active",
-  "categories": ["china", "cloud"],
+  "categories": [
+    "china",
+    "cloud"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://dashscope.console.aliyun.com/apiKey",
@@ -16,11 +19,39 @@
     "zh": "阿里的 AI 模型，具备强大的多模态能力和阿里云集成。"
   },
   "models": {
-    "en": ["Qwen3.5-Plus", "Qwen3-Coder-Plus", "Qwen3-Coder-Next", "Qwen3-Max", "Qwen2.5", "Qwen2-VL", "Qwen2-Audio", "Qwen2-Coder"],
-    "zh": ["通义千问3.5-Plus", "通义千问3-Coder-Plus", "通义千问3-Coder-Next", "通义千问3-Max", "通义千问2.5", "通义千问2-VL", "通义千问2-Audio", "通义千问2-Coder"]
+    "en": [
+      "Qwen3.5-Plus",
+      "Qwen3-Coder-Plus",
+      "Qwen3-Coder-Next",
+      "Qwen3-Max",
+      "Qwen2.5",
+      "Qwen2-VL",
+      "Qwen2-Audio",
+      "Qwen2-Coder"
+    ],
+    "zh": [
+      "通义千问3.5-Plus",
+      "通义千问3-Coder-Plus",
+      "通义千问3-Coder-Next",
+      "通义千问3-Max",
+      "通义千问2.5",
+      "通义千问2-VL",
+      "通义千问2-Audio",
+      "通义千问2-Coder"
+    ]
   },
-  "tags": ["chinese", "multimodal", "alibaba", "cloud"],
-  "searchAliases": ["阿里", "通义", "qwen", "tongyi"],
+  "tags": [
+    "chinese",
+    "multimodal",
+    "alibaba",
+    "cloud"
+  ],
+  "searchAliases": [
+    "阿里",
+    "通义",
+    "qwen",
+    "tongyi"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

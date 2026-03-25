@@ -1,7 +1,10 @@
 {
   "slug": "zero-one",
   "status": "active",
-  "categories": ["china", "open-source"],
+  "categories": [
+    "china",
+    "open-source"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://platform.01.ai/console/apikey",
@@ -16,11 +19,35 @@
     "zh": "李开复创立的中国 AI 公司，专注于 Yi 系列开源模型。"
   },
   "models": {
-    "en": ["Yi-34B", "Yi-6B", "Yi-VL 2.0", "Yi-Coder 2.0", "Yi-34B-Q4", "Yi-6B-Chat-GGUF"],
-    "zh": ["Yi-34B", "Yi-6B", "Yi-VL 2.0", "Yi-Coder 2.0", "Yi-34B-Q4", "Yi-6B-Chat-GGUF"]
+    "en": [
+      "Yi-34B",
+      "Yi-6B",
+      "Yi-VL 2.0",
+      "Yi-Coder 2.0",
+      "Yi-34B-Q4",
+      "Yi-6B-Chat-GGUF"
+    ],
+    "zh": [
+      "Yi-34B",
+      "Yi-6B",
+      "Yi-VL 2.0",
+      "Yi-Coder 2.0",
+      "Yi-34B-Q4",
+      "Yi-6B-Chat-GGUF"
+    ]
   },
-  "tags": ["chinese", "open-source", "yi-series", "coding"],
-  "searchAliases": ["零一万物", "01.ai", "yi model", "kai-fu lee"],
+  "tags": [
+    "chinese",
+    "open-source",
+    "yi-series",
+    "coding"
+  ],
+  "searchAliases": [
+    "零一万物",
+    "01.ai",
+    "yi model",
+    "kai-fu lee"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

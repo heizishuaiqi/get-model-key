@@ -1,7 +1,10 @@
 {
   "slug": "silicon-flow",
   "status": "active",
-  "categories": ["china", "coding"],
+  "categories": [
+    "china",
+    "coding"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://siliconflow.cn/console/apikey",
@@ -16,11 +19,41 @@
     "zh": "中国 AI 公司，专注于代码和推理模型，提供高性价比解决方案。"
   },
   "models": {
-    "en": ["MiniMax-M2.5", "Step 3.5 Flash", "GLM-5", "Qwen3", "Llama3.3", "CogAgent", "CodeGeeX", "ChatGLM", "VisualGLM"],
-    "zh": ["MiniMax-M2.5", "Step 3.5 Flash", "GLM-5", "Qwen3", "Llama3.3", "CogAgent", "CodeGeeX", "ChatGLM", "VisualGLM"]
+    "en": [
+      "MiniMax-M2.5",
+      "Step 3.5 Flash",
+      "GLM-5",
+      "Qwen3",
+      "Llama3.3",
+      "CogAgent",
+      "CodeGeeX",
+      "ChatGLM",
+      "VisualGLM"
+    ],
+    "zh": [
+      "MiniMax-M2.5",
+      "Step 3.5 Flash",
+      "GLM-5",
+      "Qwen3",
+      "Llama3.3",
+      "CogAgent",
+      "CodeGeeX",
+      "ChatGLM",
+      "VisualGLM"
+    ]
   },
-  "tags": ["coding", "chinese", "cost-effective", "reasoning"],
-  "searchAliases": ["硅基流动", "siliconflow", "cogagent", "codegeex"],
+  "tags": [
+    "coding",
+    "chinese",
+    "cost-effective",
+    "reasoning"
+  ],
+  "searchAliases": [
+    "硅基流动",
+    "siliconflow",
+    "cogagent",
+    "codegeex"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

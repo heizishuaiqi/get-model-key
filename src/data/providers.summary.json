@@ -1,22 +1,53 @@
 [
   {
+    "slug": "ai21",
+    "region": "global",
+    "officialKeyUrl": "https://studio.ai21.com/account/api-key",
+    "officialSiteUrl": "https://www.ai21.com/",
+    "officialDocsUrl": "https://docs.ai21.com/",
+    "name": {
+      "en": "AI21 Labs",
+      "zh": "AI21实验室"
+    },
+    "models": {
+      "en": [
+        "Jurassic-J2-Ultra",
+        "Jurassic-J2-Mid",
+        "Jurassic-J2-Fast"
+      ],
+      "zh": [
+        "Jurassic-J2-Ultra",
+        "Jurassic-J2-Mid",
+        "Jurassic-J2-Fast"
+      ]
+    }
+  },
+  {
     "slug": "alibaba",
     "region": "china",
     "officialKeyUrl": "https://dashscope.console.aliyun.com/apiKey",
     "officialSiteUrl": "https://tongyi.aliyun.com/",
-    "officialDocsUrl": "https://help.aliyun.com/zh/model-studio/what-is-model-studio?spm=a2c4g.11174283.0.i0",
+    "officialDocsUrl": "https://help.aliyun.com/zh/dashscope/",
     "name": {
       "en": "Alibaba Qwen",
       "zh": "阿里通义"
     },
     "models": {
       "en": [
+        "Qwen3.5-Plus",
+        "Qwen3-Coder-Plus",
+        "Qwen3-Coder-Next",
+        "Qwen3-Max",
         "Qwen2.5",
         "Qwen2-VL",
         "Qwen2-Audio",
         "Qwen2-Coder"
       ],
       "zh": [
+        "通义千问3.5-Plus",
+        "通义千问3-Coder-Plus",
+        "通义千问3-Coder-Next",
+        "通义千问3-Max",
         "通义千问2.5",
         "通义千问2-VL",
         "通义千问2-Audio",
@@ -36,7 +67,16 @@
     },
     "models": {
       "en": [
-        "Claude 3",
+        "Nova 2",
+        "Claude Opus 4.6",
+        "Claude Sonnet 4.6",
+        "Deepseek 3.2",
+        "Kimi K2.5",
+        "MiniMax M2.1",
+        "GPT-OSS-20B",
+        "GLM 4.7",
+        "GLM 4.7 Flash",
+        "Qwen3 Coder Next",
         "Llama 3",
         "Titan",
         "Jurassic-2",
@@ -44,7 +84,16 @@
         "Stable Diffusion"
       ],
       "zh": [
-        "Claude 3",
+        "Nova 2",
+        "Claude Opus 4.6",
+        "Claude Sonnet 4.6",
+        "Deepseek 3.2",
+        "Kimi K2.5",
+        "MiniMax M2.1",
+        "GPT-OSS-20B",
+        "GLM 4.7",
+        "GLM 4.7 Flash",
+        "Qwen3 Coder Next",
         "Llama 3",
         "Titan",
         "Jurassic-2",
@@ -65,11 +114,17 @@
     },
     "models": {
       "en": [
+        "Claude Sonnet 4.6",
+        "Claude Opus 4.6",
+        "Claude Haiku 3.5",
         "Claude 3.5 Sonnet",
         "Claude 3 Opus",
         "Claude 3 Haiku"
       ],
       "zh": [
+        "Claude Sonnet 4.6",
+        "Claude Opus 4.6",
+        "Claude Haiku 3.5",
         "Claude 3.5 Sonnet",
         "Claude 3 Opus",
         "Claude 3 Haiku"
@@ -88,12 +143,16 @@
     },
     "models": {
       "en": [
+        "ERNIE 5.0 Thinking",
+        "ERNIE 4.5",
         "ERNIE 4.0",
         "ERNIE 3.5",
         "ERNIE Speed",
         "ERNIE Lite"
       ],
       "zh": [
+        "文心 5.0 Thinking",
+        "文心 4.5",
         "文心 4.0",
         "文心 3.5",
         "文心 Speed",
@@ -138,14 +197,18 @@
     },
     "models": {
       "en": [
-        "Command R",
-        "Command R+",
+        "Command A 07-2025",
+        "Command A Vision 07-2025",
+        "Command R 08-2024",
+        "Command R Plus 08-2024",
         "Embed",
         "Rerank"
       ],
       "zh": [
-        "Command R",
-        "Command R+",
+        "Command A 07-2025",
+        "Command A Vision 07-2025",
+        "Command R 08-2024",
+        "Command R Plus 08-2024",
         "Embed",
         "Rerank"
       ]
@@ -163,14 +226,39 @@
     },
     "models": {
       "en": [
-        "DeepSeek-V3",
-        "DeepSeek-Coder",
-        "DeepSeek-R1"
+        "DeepSeek-V3.2",
+        "DeepSeek-Coder-V3",
+        "DeepSeek-R1",
+        "DeepSeek-Reasoner"
       ],
       "zh": [
-        "DeepSeek-V3",
-        "DeepSeek-Coder",
-        "DeepSeek-R1"
+        "DeepSeek-V3.2",
+        "DeepSeek-Coder-V3",
+        "DeepSeek-R1",
+        "DeepSeek-Reasoner"
+      ]
+    }
+  },
+  {
+    "slug": "elevenlabs",
+    "region": "global",
+    "officialKeyUrl": "https://elevenlabs.io/subscription",
+    "officialSiteUrl": "https://elevenlabs.io/",
+    "officialDocsUrl": "https://elevenlabs.io/docs/api-reference/introduction",
+    "name": {
+      "en": "ElevenLabs",
+      "zh": "ElevenLabs"
+    },
+    "models": {
+      "en": [
+        "ElevenTTS V2",
+        "ElevenTTS V1",
+        "Voice Cloning"
+      ],
+      "zh": [
+        "ElevenTTS V2",
+        "ElevenTTS V1",
+        "语音克隆"
       ]
     }
   },
@@ -186,16 +274,26 @@
     },
     "models": {
       "en": [
-        "Gemini 2.0 Flash",
-        "Gemini 2.0 Pro",
-        "Gemini 1.5 Pro",
-        "Gemini 1.5 Flash"
+        "Gemini 3.1 Pro",
+        "Gemini 3 Flash",
+        "Gemini 3.1 Flash-Lite",
+        "Nano Banana 2",
+        "Nano Banana Pro",
+        "Gemini 2.5 Flash",
+        "Imagen 4",
+        "Lyria Experimental",
+        "Gemini Deep Research Preview"
       ],
       "zh": [
-        "Gemini 2.0 Flash",
-        "Gemini 2.0 Pro",
-        "Gemini 1.5 Pro",
-        "Gemini 1.5 Flash"
+        "Gemini 3.1 Pro",
+        "Gemini 3 Flash",
+        "Gemini 3.1 Flash-Lite",
+        "Nano Banana 2",
+        "Nano Banana Pro",
+        "Gemini 2.5 Flash",
+        "Imagen 4",
+        "Lyria Experimental",
+        "Gemini Deep Research Preview"
       ]
     }
   },
@@ -211,14 +309,43 @@
     },
     "models": {
       "en": [
-        "Llama 3.1 70B",
-        "Mixtral 8x7B",
-        "Gemma 7B"
+        "Llama 3.3 70B Versatile",
+        "OpenAI GPT OSS 120B",
+        "OpenAI GPT OSS 20B",
+        "MetaLlama 4 Scout 17B",
+        "Whisper Large V3 Turbo"
       ],
       "zh": [
-        "Llama 3.1 70B",
-        "Mixtral 8x7B",
-        "Gemma 7B"
+        "Llama 3.3 70B Versatile",
+        "OpenAI GPT OSS 120B",
+        "OpenAI GPT OSS 20B",
+        "MetaLlama 4 Scout 17B",
+        "Whisper Large V3 Turbo"
+      ]
+    }
+  },
+  {
+    "slug": "huawei",
+    "region": "china",
+    "officialKeyUrl": "https://console.huaweicloud.com/console/#/pangu/modelarts",
+    "officialSiteUrl": "https://www.huaweicloud.com/product/pangu.html",
+    "officialDocsUrl": "https://support.huaweicloud.com/intl/en-us/productdesc-pangu/pangu_01_0001.html",
+    "name": {
+      "en": "Huawei Cloud Pangu",
+      "zh": "华为云盘古"
+    },
+    "models": {
+      "en": [
+        "Pangu LLM",
+        "Pangu CV",
+        "Pangu Audio",
+        "Pangu Multi-Modal"
+      ],
+      "zh": [
+        "盘古大语言模型",
+        "盘古计算机视觉模型",
+        "盘古语音模型",
+        "盘古多模态模型"
       ]
     }
   },
@@ -234,10 +361,66 @@
     },
     "models": {
       "en": [
-        "Thousands of community models"
+        "Qwen3-Coder-Next-NVFP4",
+        "MiniMax-M2.5",
+        "Ministral-3-3B-Instruct",
+        "Devstral-Small-2-24B-Instruct",
+        "Phi-4-mini-instruct-FP8"
       ],
       "zh": [
-        "数千个社区模型"
+        "Qwen3-Coder-Next-NVFP4",
+        "MiniMax-M2.5",
+        "Ministral-3-3B-Instruct",
+        "Devstral-Small-2-24B-Instruct",
+        "Phi-4-mini-instruct-FP8"
+      ]
+    }
+  },
+  {
+    "slug": "iflytek",
+    "region": "china",
+    "officialKeyUrl": "https://console.xfyun.cn/services/bm",
+    "officialSiteUrl": "https://www.iflytek.com/",
+    "officialDocsUrl": "https://www.xfyun.cn/doc/spark/",
+    "name": {
+      "en": "iFlytek Spark",
+      "zh": "科大讯飞星火"
+    },
+    "models": {
+      "en": [
+        "Spark V4.0",
+        "Spark V3.5",
+        "Spark V3.0",
+        "Spark V2.0"
+      ],
+      "zh": [
+        "星火V4.0",
+        "星火V3.5",
+        "星火V3.0",
+        "星火V2.0"
+      ]
+    }
+  },
+  {
+    "slug": "indatalabs",
+    "region": "global",
+    "officialKeyUrl": "https://indatalabs.com/contact",
+    "officialSiteUrl": "https://indatalabs.com/",
+    "officialDocsUrl": "https://indatalabs.com/blog",
+    "name": {
+      "en": "InData Labs",
+      "zh": "InData Labs"
+    },
+    "models": {
+      "en": [
+        "Custom Enterprise LLM",
+        "RAG-optimized Models",
+        "Multilingual LLMs"
+      ],
+      "zh": [
+        "自定义企业LLM",
+        "RAG优化模型",
+        "多模态LLM"
       ]
     }
   },
@@ -255,14 +438,18 @@
       "en": [
         "Llama 3.3",
         "Llama 3.2",
-        "Llama 3.1",
+        "Llama 3.1 405B",
+        "Llama 3.1 70B",
+        "Llama 3.1 8B",
         "Llama 3",
         "Code Llama"
       ],
       "zh": [
         "Llama 3.3",
         "Llama 3.2",
-        "Llama 3.1",
+        "Llama 3.1 405B",
+        "Llama 3.1 70B",
+        "Llama 3.1 8B",
         "Llama 3",
         "Code Llama"
       ]
@@ -280,18 +467,75 @@
     },
     "models": {
       "en": [
-        "GPT-4o",
-        "GPT-4 Turbo",
-        "GPT-3.5 Turbo",
+        "GPT-4.1",
+        "GPT-4.1 Mini",
+        "GPT-4.1 Nano",
+        "o4-mini",
+        "o3",
+        "GPT-Realtime-1.5",
+        "GPT-Audio-1.5",
+        "GPT-image-1",
+        "GPT-4o-mini-tts",
         "DALL-E 3",
         "Whisper"
       ],
       "zh": [
-        "GPT-4o",
-        "GPT-4 Turbo",
-        "GPT-3.5 Turbo",
+        "GPT-4.1",
+        "GPT-4.1 Mini",
+        "GPT-4.1 Nano",
+        "o4-mini",
+        "o3",
+        "GPT-Realtime-1.5",
+        "GPT-Audio-1.5",
+        "GPT-image-1",
+        "GPT-4o-mini-tts",
         "DALL-E 3",
         "Whisper"
+      ]
+    }
+  },
+  {
+    "slug": "minimax",
+    "region": "china",
+    "officialKeyUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
+    "officialSiteUrl": "https://www.minimaxi.com/",
+    "officialDocsUrl": "https://platform.minimaxi.com/docs/guides/models-intro",
+    "name": {
+      "en": "MiniMax AI",
+      "zh": "MiniMax"
+    },
+    "models": {
+      "en": [
+        "M2.7",
+        "M2.5",
+        "M2-Her",
+        "M2.1",
+        "M2",
+        "Speech 2.6",
+        "Speech 2.5",
+        "Hailuo 2.3",
+        "Hailuo 02",
+        "Music 2.5+",
+        "Music 2.5",
+        "Music 2.0",
+        "Music 1.5",
+        "Agent"
+      ],
+      "zh": [
+        "M2.7",
+        "M2.5",
+        "M2-Her",
+        "M2.1",
+        "M2",
+        "语音2.6",
+        "语音2.5",
+        "海螺2.3",
+        "海螺02",
+        "音乐2.5+",
+        "音乐2.5",
+        "音乐2.0",
+        "音乐1.5",
+        "智能体"
       ]
     }
   },
@@ -307,16 +551,28 @@
     },
     "models": {
       "en": [
-        "Mistral Large",
-        "Mixtral 8x22B",
-        "Mixtral 8x7B",
-        "Codestral"
+        "mistral-small-2506",
+        "mistral-medium-latest",
+        "mistral-large-latest",
+        "Codestral-2501",
+        "Ministral-3B",
+        "Ministral-8B",
+        "Pixtral-12B",
+        "Magistral-Medium",
+        "Magistral-Small",
+        "Devstral-Small"
       ],
       "zh": [
-        "Mistral Large",
-        "Mixtral 8x22B",
-        "Mixtral 8x7B",
-        "Codestral"
+        "mistral-small-2506",
+        "mistral-medium-latest",
+        "mistral-large-latest",
+        "Codestral-2501",
+        "Ministral-3B",
+        "Ministral-8B",
+        "Pixtral-12B",
+        "Magistral-Medium",
+        "Magistral-Small",
+        "Devstral-Small"
       ]
     }
   },
@@ -332,14 +588,41 @@
     },
     "models": {
       "en": [
-        "Kimi",
+        "kimi-k2.5",
+        "kimi-k2-0711-preview",
         "Moonshot-v1",
         "Moonshot-v1-128k"
       ],
       "zh": [
-        "Kimi",
+        "kimi-k2.5",
+        "kimi-k2-0711-preview",
         "Moonshot-v1",
         "Moonshot-v1-128k"
+      ]
+    }
+  },
+  {
+    "slug": "nvidia",
+    "region": "global",
+    "officialKeyUrl": "https://catalog.ngc.nvidia.com/",
+    "officialSiteUrl": "https://www.nvidia.com/en-us/ai/",
+    "officialDocsUrl": "https://docs.nvidia.com/nemo-framework/",
+    "name": {
+      "en": "NVIDIA AI",
+      "zh": "NVIDIA AI"
+    },
+    "models": {
+      "en": [
+        "Megatron",
+        "NeMo LLM",
+        "GPT-4o Competitor",
+        "Custom Fine-tuned Models"
+      ],
+      "zh": [
+        "Megatron",
+        "NeMo LLM",
+        "GPT-4o竞品",
+        "自定义微调模型"
       ]
     }
   },
@@ -355,14 +638,18 @@
     },
     "models": {
       "en": [
-        "GPT-4.1",
+        "GPT-5.4",
         "GPT-4o",
-        "o3"
+        "o4-mini",
+        "o3",
+        "o1"
       ],
       "zh": [
-        "GPT-4.1",
+        "GPT-5.4",
         "GPT-4o",
-        "o3"
+        "o4-mini",
+        "o3",
+        "o1"
       ]
     }
   },
@@ -378,14 +665,20 @@
     },
     "models": {
       "en": [
-        "Perplexity Online",
-        "Perplexity Sonar",
-        "Perplexity Experimental"
+        "sonar-pro",
+        "sonar-medium-online",
+        "pplx-70b-online",
+        "openai/gpt-5.4",
+        "google/gemini-3.1-pro",
+        "anthropic/claude-opus-4.6"
       ],
       "zh": [
-        "Perplexity Online",
-        "Perplexity Sonar",
-        "Perplexity Experimental"
+        "sonar-pro",
+        "sonar-medium-online",
+        "pplx-70b-online",
+        "openai/gpt-5.4",
+        "google/gemini-3.1-pro",
+        "anthropic/claude-opus-4.6"
       ]
     }
   },
@@ -401,10 +694,18 @@
     },
     "models": {
       "en": [
-        "Thousands of community models"
+        "black-forest-labs/flux-schnell",
+        "stability-ai/stable-diffusion",
+        "meta-llama/llama-3",
+        "google/gemini",
+        "openai/gpt-4"
       ],
       "zh": [
-        "数千个社区模型"
+        "black-forest-labs/flux-schnell",
+        "stability-ai/stable-diffusion",
+        "meta-llama/llama-3",
+        "google/gemini",
+        "openai/gpt-4"
       ]
     }
   },
@@ -420,16 +721,41 @@
     },
     "models": {
       "en": [
-        "Gen-3",
-        "Image Generation",
-        "Video Editing",
-        "Motion Brush"
+        "Gen 4.5",
+        "Gen-4 Aleph",
+        "Gen-4 Image",
+        "Text to Speech",
+        "Characters API"
       ],
       "zh": [
-        "Gen-3",
-        "图像生成",
-        "视频编辑",
-        "动态笔刷"
+        "Gen 4.5",
+        "Gen-4 Aleph",
+        "Gen-4 Image",
+        "文本转语音",
+        "角色API"
+      ]
+    }
+  },
+  {
+    "slug": "sensetime",
+    "region": "china",
+    "officialKeyUrl": "https://platform.sensetime.com/console/api",
+    "officialSiteUrl": "https://www.sensetime.com/",
+    "officialDocsUrl": "https://platform.sensetime.com/docs",
+    "name": {
+      "en": "SenseTime SenseNova",
+      "zh": "商汤科技SenseNova"
+    },
+    "models": {
+      "en": [
+        "SenseNova LLM",
+        "SenseNova CV",
+        "SenseNova Generative AI"
+      ],
+      "zh": [
+        "SenseNova大语言模型",
+        "SenseNova计算机视觉模型",
+        "SenseNova生成式AI模型"
       ]
     }
   },
@@ -445,12 +771,22 @@
     },
     "models": {
       "en": [
+        "MiniMax-M2.5",
+        "Step 3.5 Flash",
+        "GLM-5",
+        "Qwen3",
+        "Llama3.3",
         "CogAgent",
         "CodeGeeX",
         "ChatGLM",
         "VisualGLM"
       ],
       "zh": [
+        "MiniMax-M2.5",
+        "Step 3.5 Flash",
+        "GLM-5",
+        "Qwen3",
+        "Llama3.3",
         "CogAgent",
         "CodeGeeX",
         "ChatGLM",
@@ -470,15 +806,19 @@
     },
     "models": {
       "en": [
-        "Stable Diffusion 3",
-        "Stable Video",
-        "Stable Audio",
+        "Stable Diffusion 4",
+        "Stable Diffusion 3.5",
+        "Stable Video 3.0",
+        "Stable Audio 2.0",
+        "Stable Image 3.0",
         "Stable Code"
       ],
       "zh": [
-        "Stable Diffusion 3",
-        "Stable Video",
-        "Stable Audio",
+        "Stable Diffusion 4",
+        "Stable Diffusion 3.5",
+        "Stable Video 3.0",
+        "Stable Audio 2.0",
+        "Stable Image 3.0",
         "Stable Code"
       ]
     }
@@ -495,12 +835,16 @@
     },
     "models": {
       "en": [
+        "Hunyuan Image 3.0",
+        "Hunyuan 3D Model API",
         "Hunyuan Standard",
         "Hunyuan Pro",
         "Hunyuan Turbo",
         "Hunyuan-Vision"
       ],
       "zh": [
+        "混元图像3.0",
+        "混元3D模型API",
         "混元标准版",
         "混元专业版",
         "混元极速版",
@@ -520,16 +864,18 @@
     },
     "models": {
       "en": [
-        "SkyWork",
-        "SkyChat",
-        "SkyImage",
-        "SkyVideo"
+        "SkyWork 3.0",
+        "SkyChat 3.0",
+        "SkyImage 3.0",
+        "SkyVideo 3.0",
+        "SkyMusic"
       ],
       "zh": [
-        "天工模型",
-        "天工对话",
-        "天工图像",
-        "天工视频"
+        "天工模型3.0",
+        "天工对话3.0",
+        "天工图像3.0",
+        "天工视频3.0",
+        "天工音乐"
       ]
     }
   },
@@ -545,16 +891,64 @@
     },
     "models": {
       "en": [
-        "Llama 3",
-        "Mixtral",
-        "CodeLlama",
-        "Stable Diffusion"
+        "MiniMax-M2.5",
+        "Qwen/Qwen3.5-9B",
+        "Mxbai-Rerank-Large-V2",
+        "Kimi-K2-Thinking",
+        "Llama-3.2-3B-Instruct-Turbo",
+        "Kimi-K2-Instruct-0905"
       ],
       "zh": [
-        "Llama 3",
-        "Mixtral",
-        "CodeLlama",
-        "Stable Diffusion"
+        "MiniMax-M2.5",
+        "Qwen/千问3.5-9B",
+        "Mxbai-Rerank-Large-V2",
+        "Kimi-K2-Thinking",
+        "Llama-3.2-3B-Instruct-Turbo",
+        "Kimi-K2-Instruct-0905"
+      ]
+    }
+  },
+  {
+    "slug": "xai",
+    "region": "global",
+    "officialKeyUrl": "https://x.ai/api",
+    "officialSiteUrl": "https://x.ai/",
+    "officialDocsUrl": "https://docs.x.ai/",
+    "name": {
+      "en": "xAI",
+      "zh": "xAI"
+    },
+    "models": {
+      "en": [
+        "Grok-4",
+        "Grok-3",
+        "Grok-3-mini"
+      ],
+      "zh": [
+        "Grok-4",
+        "Grok-3",
+        "Grok-3-mini"
+      ]
+    }
+  },
+  {
+    "slug": "xiaomi-ai",
+    "region": "china",
+    "officialKeyUrl": "https://open.mi.com/",
+    "officialSiteUrl": "https://www.mi.com/",
+    "officialDocsUrl": "https://open.mi.com/docs",
+    "name": {
+      "en": "Xiaomi AI",
+      "zh": "小米AI"
+    },
+    "models": {
+      "en": [
+        "Xiaomi AI LLM",
+        "Xiao Wen Tong"
+      ],
+      "zh": [
+        "小米AI大语言模型",
+        "小语种通"
       ]
     }
   },
@@ -572,14 +966,18 @@
       "en": [
         "Yi-34B",
         "Yi-6B",
-        "Yi-VL",
-        "Yi-Coder"
+        "Yi-VL 2.0",
+        "Yi-Coder 2.0",
+        "Yi-34B-Q4",
+        "Yi-6B-Chat-GGUF"
       ],
       "zh": [
         "Yi-34B",
         "Yi-6B",
-        "Yi-VL",
-        "Yi-Coder"
+        "Yi-VL 2.0",
+        "Yi-Coder 2.0",
+        "Yi-34B-Q4",
+        "Yi-6B-Chat-GGUF"
       ]
     }
   },
@@ -595,16 +993,20 @@
     },
     "models": {
       "en": [
-        "GLM-4",
+        "GLM-5",
+        "GLM-4.6",
         "GLM-4V",
         "GLM-3-Turbo",
-        "CodeGeeX"
+        "CodeGeeX",
+        "GLM-4.6-Air"
       ],
       "zh": [
-        "GLM-4",
+        "GLM-5",
+        "GLM-4.6",
         "GLM-4V",
         "GLM-3-Turbo",
-        "CodeGeeX"
+        "CodeGeeX",
+        "GLM-4.6-Air"
       ]
     }
   }

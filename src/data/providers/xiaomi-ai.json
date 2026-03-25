@@ -1,0 +1,56 @@
+{
+  "slug": "xiaomi-ai",
+  "status": "active",
+  "categories": [
+    "china",
+    "multimodal",
+    "llm",
+    "speech"
+  ],
+  "region": "china",
+  "featured": false,
+  "officialKeyUrl": "https://open.mi.com/",
+  "officialSiteUrl": "https://www.mi.com/",
+  "officialDocsUrl": "https://open.mi.com/docs",
+  "name": {
+    "en": "Xiaomi AI",
+    "zh": "小米AI"
+  },
+  "summary": {
+    "en": "Xiaomi's AI platform providing large language models and voice assistant capabilities.",
+    "zh": "小米的AI平台，提供大语言模型和语音助手功能。"
+  },
+  "models": {
+    "en": [
+      "Xiaomi AI LLM",
+      "Xiao Wen Tong"
+    ],
+    "zh": [
+      "小米AI大语言模型",
+      "小语种通"
+    ]
+  },
+  "tags": [
+    "chinese",
+    "xiaomi",
+    "llm",
+    "speech"
+  ],
+  "searchAliases": [
+    "小米",
+    "小爱同学",
+    "xiaomi",
+    "xiaoai"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "Xiaomi AI API Key - Large Language Models | Get Model Key",
+      "zh": "小米AI API Key - 大语言模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Xiaomi AI API key for access to their large language models and voice assistant capabilities.",
+      "zh": "获取小米AI API Key，访问其大语言模型和语音助手功能。"
+    }
+  }
+}

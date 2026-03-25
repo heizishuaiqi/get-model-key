@@ -1,0 +1,61 @@
+{
+  "slug": "huawei",
+  "status": "active",
+  "categories": [
+    "china",
+    "cloud",
+    "multimodal",
+    "llm"
+  ],
+  "region": "china",
+  "featured": false,
+  "officialKeyUrl": "https://console.huaweicloud.com/console/#/pangu/modelarts",
+  "officialSiteUrl": "https://www.huaweicloud.com/product/pangu.html",
+  "officialDocsUrl": "https://support.huaweicloud.com/intl/en-us/productdesc-pangu/pangu_01_0001.html",
+  "name": {
+    "en": "Huawei Cloud Pangu",
+    "zh": "华为云盘古"
+  },
+  "summary": {
+    "en": "Huawei's enterprise-level large model platform providing Pangu series models for various scenarios.",
+    "zh": "华为的企业级大模型平台，提供盘古系列模型，适用于各种场景。"
+  },
+  "models": {
+    "en": [
+      "Pangu LLM",
+      "Pangu CV",
+      "Pangu Audio",
+      "Pangu Multi-Modal"
+    ],
+    "zh": [
+      "盘古大语言模型",
+      "盘古计算机视觉模型",
+      "盘古语音模型",
+      "盘古多模态模型"
+    ]
+  },
+  "tags": [
+    "chinese",
+    "cloud",
+    "llm",
+    "multimodal",
+    "huawei"
+  ],
+  "searchAliases": [
+    "华为",
+    "盘古",
+    "huawei",
+    "pangu"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "Huawei Cloud Pangu API Key - Enterprise AI Models | Get Model Key",
+      "zh": "华为云盘古 API Key - 企业级AI模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get Huawei Cloud Pangu API key for access to enterprise-level large language models.",
+      "zh": "获取华为云盘古 API Key，访问企业级大语言模型。"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "slug": "minimax",
+  "status": "active",
+  "categories": [
+    "china",
+    "multimodal",
+    "llm",
+    "agent"
+  ],
+  "region": "china",
+  "featured": false,
+  "officialKeyUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
+  "officialSiteUrl": "https://www.minimaxi.com/",
+  "officialDocsUrl": "https://platform.minimaxi.com/docs/guides/models-intro",
+  "name": {
+    "en": "MiniMax AI",
+    "zh": "MiniMax"
+  },
+  "summary": {
+    "en": "A leading AI model provider with multimodal capabilities, including text, speech, music and intelligent agent tools.",
+    "zh": "领先的AI模型提供商，具备文本、语音、音乐和智能体工具等多模态能力。"
+  },
+  "models": {
+    "en": [
+      "M2.7",
+      "M2.5",
+      "M2-Her",
+      "M2.1",
+      "M2",
+      "Speech 2.6",
+      "Speech 2.5",
+      "Hailuo 2.3",
+      "Hailuo 02",
+      "Music 2.5+",
+      "Music 2.5",
+      "Music 2.0",
+      "Music 1.5",
+      "Agent"
+    ],
+    "zh": [
+      "M2.7",
+      "M2.5",
+      "M2-Her",
+      "M2.1",
+      "M2",
+      "语音2.6",
+      "语音2.5",
+      "海螺2.3",
+      "海螺02",
+      "音乐2.5+",
+      "音乐2.5",
+      "音乐2.0",
+      "音乐1.5",
+      "智能体"
+    ]
+  },
+  "tags": [
+    "chinese",
+    "multimodal",
+    "llm",
+    "agent",
+    "speech",
+    "music"
+  ],
+  "searchAliases": [
+    "minimax",
+    "mini max",
+    "海螺",
+    "hailuo"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "MiniMax AI API Key - Multimodal AI Models | Get Model Key",
+      "zh": "MiniMax AI API Key - 多模态AI模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get MiniMax AI API key for access to their full suite of multimodal AI models including text, speech, music and agent tools.",
+      "zh": "获取MiniMax AI API Key，访问其全系列多模态AI模型，包括文本、语音、音乐和智能体工具。"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "iflytek",
+  "status": "active",
+  "categories": [
+    "china",
+    "multimodal",
+    "llm",
+    "speech"
+  ],
+  "region": "china",
+  "featured": false,
+  "officialKeyUrl": "https://console.xfyun.cn/services/bm",
+  "officialSiteUrl": "https://www.iflytek.com/",
+  "officialDocsUrl": "https://www.xfyun.cn/doc/spark/",
+  "name": {
+    "en": "iFlytek Spark",
+    "zh": "科大讯飞星火"
+  },
+  "summary": {
+    "en": "China's leading AI company with strong speech recognition and large language model capabilities, offering Spark series models.",
+    "zh": "中国领先的AI企业，具备强大的语音识别和大语言模型能力，提供星火系列模型。"
+  },
+  "models": {
+    "en": [
+      "Spark V4.0",
+      "Spark V3.5",
+      "Spark V3.0",
+      "Spark V2.0"
+    ],
+    "zh": [
+      "星火V4.0",
+      "星火V3.5",
+      "星火V3.0",
+      "星火V2.0"
+    ]
+  },
+  "tags": [
+    "chinese",
+    "speech",
+    "llm",
+    "multimodal",
+    "iflytek"
+  ],
+  "searchAliases": [
+    "讯飞",
+    "星火",
+    "iflytek",
+    "spark"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "iFlytek Spark API Key - Large Language Models | Get Model Key",
+      "zh": "科大讯飞星火 API Key - 大语言模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get iFlytek Spark API key for access to Spark series large language models.",
+      "zh": "获取科大讯飞星火 API Key，访问星火系列大语言模型。"
+    }
+  }
+}

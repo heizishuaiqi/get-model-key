@@ -1,7 +1,10 @@
 {
   "slug": "deepseek",
   "status": "active",
-  "categories": ["top-picks", "china"],
+  "categories": [
+    "top-picks",
+    "china"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://platform.deepseek.com/api_keys",
@@ -16,11 +19,29 @@
     "zh": "代码和推理能力强，性价比高，中文支持好。"
   },
   "models": {
-    "en": ["DeepSeek-V3.2", "DeepSeek-Coder-V3", "DeepSeek-R1", "DeepSeek-Reasoner"],
-    "zh": ["DeepSeek-V3.2", "DeepSeek-Coder-V3", "DeepSeek-R1", "DeepSeek-Reasoner"]
+    "en": [
+      "DeepSeek-V3.2",
+      "DeepSeek-Coder-V3",
+      "DeepSeek-R1",
+      "DeepSeek-Reasoner"
+    ],
+    "zh": [
+      "DeepSeek-V3.2",
+      "DeepSeek-Coder-V3",
+      "DeepSeek-R1",
+      "DeepSeek-Reasoner"
+    ]
   },
-  "tags": ["coding", "reasoning", "chinese", "cost-effective"],
-  "searchAliases": ["deep seek", "深度求索"],
+  "tags": [
+    "coding",
+    "reasoning",
+    "chinese",
+    "cost-effective"
+  ],
+  "searchAliases": [
+    "deep seek",
+    "深度求索"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

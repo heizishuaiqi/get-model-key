@@ -1,7 +1,10 @@
 {
   "slug": "bytedance",
   "status": "active",
-  "categories": ["china", "multimodal"],
+  "categories": [
+    "china",
+    "multimodal"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://www.volcengine.com/product/ark",
@@ -16,11 +19,31 @@
     "zh": "字节跳动的 AI 模型，具备强大的短视频和内容理解能力。"
   },
   "models": {
-    "en": ["Doubao Pro", "Doubao Lite", "Doubao-Vision", "Doubao-Audio"],
-    "zh": ["豆包专业版", "豆包轻量版", "豆包视觉版", "豆包音频版"]
+    "en": [
+      "Doubao Pro",
+      "Doubao Lite",
+      "Doubao-Vision",
+      "Doubao-Audio"
+    ],
+    "zh": [
+      "豆包专业版",
+      "豆包轻量版",
+      "豆包视觉版",
+      "豆包音频版"
+    ]
   },
-  "tags": ["chinese", "short-video", "content", "multimodal"],
-  "searchAliases": ["字节跳动", "豆包", "doubao", "volcengine"],
+  "tags": [
+    "chinese",
+    "short-video",
+    "content",
+    "multimodal"
+  ],
+  "searchAliases": [
+    "字节跳动",
+    "豆包",
+    "doubao",
+    "volcengine"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

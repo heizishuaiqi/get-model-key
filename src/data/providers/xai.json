@@ -1,0 +1,56 @@
+{
+  "slug": "xai",
+  "status": "active",
+  "categories": [
+    "global",
+    "llm",
+    "research"
+  ],
+  "region": "global",
+  "featured": false,
+  "officialKeyUrl": "https://x.ai/api",
+  "officialSiteUrl": "https://x.ai/",
+  "officialDocsUrl": "https://docs.x.ai/",
+  "name": {
+    "en": "xAI",
+    "zh": "xAI"
+  },
+  "summary": {
+    "en": "AI research company founded by Elon Musk, developing Grok series of large language models with advanced reasoning capabilities.",
+    "zh": "由埃隆·马斯克创立的AI研究公司，开发Grok系列大型语言模型，具备先进的推理能力。"
+  },
+  "models": {
+    "en": [
+      "Grok-4",
+      "Grok-3",
+      "Grok-3-mini"
+    ],
+    "zh": [
+      "Grok-4",
+      "Grok-3",
+      "Grok-3-mini"
+    ]
+  },
+  "tags": [
+    "global",
+    "llm",
+    "grok",
+    "reasoning"
+  ],
+  "searchAliases": [
+    "xai",
+    "grok",
+    "埃隆马斯克"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "xAI Grok API Key - Access Grok Series LLMs | Get Model Key",
+      "zh": "xAI Grok API Key - 访问Grok系列大模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get xAI API key for access to Grok series large language models with advanced reasoning capabilities.",
+      "zh": "获取xAI API Key，访问具备先进推理能力的Grok系列大型语言模型。"
+    }
+  }
+}

@@ -49,11 +49,11 @@ export default function Header({ lang }: HeaderProps) {
         <div className="flex items-center gap-8">
           <Link href={lang === 'en' ? '/' : '/zh'} className="flex items-center gap-2">
             <Image
-              src="/favicon-32x32.png"
+              src="/logo.png"
               alt="Get Model Key logo"
               width={48}
               height={48}
-              className="h-12 w-12 rounded-sm"
+              className="h-12 w-12 rounded-sm object-contain"
               priority
             />
             <span className="text-xl font-bold text-text-primary">Get Model Key</span>

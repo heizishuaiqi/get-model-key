@@ -1,7 +1,10 @@
 {
   "slug": "anthropic",
   "status": "active",
-  "categories": ["top-picks", "global"],
+  "categories": [
+    "top-picks",
+    "global"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://console.anthropic.com/account/keys",
@@ -16,11 +19,32 @@
     "zh": "推理能力强，注重安全性，适合复杂任务。"
   },
   "models": {
-    "en": ["Claude Sonnet 4.6", "Claude Opus 4.6", "Claude Haiku 3.5", "Claude 3.5 Sonnet", "Claude 3 Opus", "Claude 3 Haiku"],
-    "zh": ["Claude Sonnet 4.6", "Claude Opus 4.6", "Claude Haiku 3.5", "Claude 3.5 Sonnet", "Claude 3 Opus", "Claude 3 Haiku"]
+    "en": [
+      "Claude Sonnet 4.6",
+      "Claude Opus 4.6",
+      "Claude Haiku 3.5",
+      "Claude 3.5 Sonnet",
+      "Claude 3 Opus",
+      "Claude 3 Haiku"
+    ],
+    "zh": [
+      "Claude Sonnet 4.6",
+      "Claude Opus 4.6",
+      "Claude Haiku 3.5",
+      "Claude 3.5 Sonnet",
+      "Claude 3 Opus",
+      "Claude 3 Haiku"
+    ]
   },
-  "tags": ["reasoning", "safety", "complex-tasks"],
-  "searchAliases": ["claude", "anthropic ai"],
+  "tags": [
+    "reasoning",
+    "safety",
+    "complex-tasks"
+  ],
+  "searchAliases": [
+    "claude",
+    "anthropic ai"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

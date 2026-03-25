@@ -1,0 +1,60 @@
+{
+  "slug": "nvidia",
+  "status": "active",
+  "categories": [
+    "global",
+    "cloud",
+    "framework"
+  ],
+  "region": "global",
+  "featured": false,
+  "officialKeyUrl": "https://catalog.ngc.nvidia.com/",
+  "officialSiteUrl": "https://www.nvidia.com/en-us/ai/",
+  "officialDocsUrl": "https://docs.nvidia.com/nemo-framework/",
+  "name": {
+    "en": "NVIDIA AI",
+    "zh": "NVIDIA AI"
+  },
+  "summary": {
+    "en": "Leading AI hardware and framework provider, offering NeMo framework and pre-trained Megatron large language models.",
+    "zh": "领先的AI硬件和框架提供商，提供NeMo框架和预训练的Megatron大型语言模型。"
+  },
+  "models": {
+    "en": [
+      "Megatron",
+      "NeMo LLM",
+      "GPT-4o Competitor",
+      "Custom Fine-tuned Models"
+    ],
+    "zh": [
+      "Megatron",
+      "NeMo LLM",
+      "GPT-4o竞品",
+      "自定义微调模型"
+    ]
+  },
+  "tags": [
+    "global",
+    "nvidia",
+    "megatron",
+    "nemo",
+    "framework"
+  ],
+  "searchAliases": [
+    "nvidia",
+    "英伟达",
+    "megatron",
+    "nemo"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "NVIDIA AI Models - NeMo Framework & Megatron LLMs | Get Model Key",
+      "zh": "NVIDIA AI模型 - NeMo框架和Megatron大模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Access NVIDIA's NeMo framework and pre-trained Megatron large language models for enterprise AI solutions.",
+      "zh": "访问NVIDIA的NeMo框架和预训练Megatron大型语言模型，用于企业AI解决方案。"
+    }
+  }
+}

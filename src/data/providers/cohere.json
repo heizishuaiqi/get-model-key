@@ -1,7 +1,10 @@
 {
   "slug": "cohere",
   "status": "active",
-  "categories": ["global", "enterprise"],
+  "categories": [
+    "global",
+    "enterprise"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://dashboard.cohere.com/api-keys",
@@ -16,11 +19,34 @@
     "zh": "专注于企业的 LLM，具备强大的检索和 RAG 能力。"
   },
   "models": {
-    "en": ["Command A 07-2025", "Command A Vision 07-2025", "Command R 08-2024", "Command R Plus 08-2024", "Embed", "Rerank"],
-    "zh": ["Command A 07-2025", "Command A Vision 07-2025", "Command R 08-2024", "Command R Plus 08-2024", "Embed", "Rerank"]
+    "en": [
+      "Command A 07-2025",
+      "Command A Vision 07-2025",
+      "Command R 08-2024",
+      "Command R Plus 08-2024",
+      "Embed",
+      "Rerank"
+    ],
+    "zh": [
+      "Command A 07-2025",
+      "Command A Vision 07-2025",
+      "Command R 08-2024",
+      "Command R Plus 08-2024",
+      "Embed",
+      "Rerank"
+    ]
   },
-  "tags": ["enterprise", "retrieval", "rag", "embedding"],
-  "searchAliases": ["cohere ai", "command r", "embedding models"],
+  "tags": [
+    "enterprise",
+    "retrieval",
+    "rag",
+    "embedding"
+  ],
+  "searchAliases": [
+    "cohere ai",
+    "command r",
+    "embedding models"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

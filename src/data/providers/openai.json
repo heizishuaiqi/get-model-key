@@ -1,7 +1,10 @@
 {
   "slug": "openai",
   "status": "active",
-  "categories": ["top-picks", "global"],
+  "categories": [
+    "top-picks",
+    "global"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://platform.openai.com/api-keys",
@@ -16,11 +19,31 @@
     "zh": "通用能力强，生态完善，默认选择友好。"
   },
   "models": {
-    "en": ["GPT-5.4", "GPT-4o", "o4-mini", "o3", "o1"],
-    "zh": ["GPT-5.4", "GPT-4o", "o4-mini", "o3", "o1"]
+    "en": [
+      "GPT-5.4",
+      "GPT-4o",
+      "o4-mini",
+      "o3",
+      "o1"
+    ],
+    "zh": [
+      "GPT-5.4",
+      "GPT-4o",
+      "o4-mini",
+      "o3",
+      "o1"
+    ]
   },
-  "tags": ["general", "coding", "ecosystem"],
-  "searchAliases": ["gpt", "open ai", "chatgpt api"],
+  "tags": [
+    "general",
+    "coding",
+    "ecosystem"
+  ],
+  "searchAliases": [
+    "gpt",
+    "open ai",
+    "chatgpt api"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

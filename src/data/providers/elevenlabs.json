@@ -1,0 +1,56 @@
+{
+  "slug": "elevenlabs",
+  "status": "active",
+  "categories": [
+    "global",
+    "speech",
+    "multimodal"
+  ],
+  "region": "global",
+  "featured": false,
+  "officialKeyUrl": "https://elevenlabs.io/subscription",
+  "officialSiteUrl": "https://elevenlabs.io/",
+  "officialDocsUrl": "https://elevenlabs.io/docs/api-reference/introduction",
+  "name": {
+    "en": "ElevenLabs",
+    "zh": "ElevenLabs"
+  },
+  "summary": {
+    "en": "Leading AI speech synthesis platform providing realistic text-to-speech and voice cloning capabilities.",
+    "zh": "领先的AI语音合成平台，提供逼真的文本转语音和语音克隆功能。"
+  },
+  "models": {
+    "en": [
+      "ElevenTTS V2",
+      "ElevenTTS V1",
+      "Voice Cloning"
+    ],
+    "zh": [
+      "ElevenTTS V2",
+      "ElevenTTS V1",
+      "语音克隆"
+    ]
+  },
+  "tags": [
+    "global",
+    "speech",
+    "tts",
+    "elevenlabs"
+  ],
+  "searchAliases": [
+    "elevenlabs",
+    "tts",
+    "语音合成"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "ElevenLabs API Key - AI Text-to-Speech | Get Model Key",
+      "zh": "ElevenLabs API Key - AI文本转语音 | Get Model Key"
+    },
+    "description": {
+      "en": "Get ElevenLabs API key for realistic text-to-speech and voice cloning.",
+      "zh": "获取ElevenLabs API Key，实现逼真的文本转语音和语音克隆。"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "sensetime",
+  "status": "active",
+  "categories": [
+    "china",
+    "multimodal",
+    "llm",
+    "cv"
+  ],
+  "region": "china",
+  "featured": false,
+  "officialKeyUrl": "https://platform.sensetime.com/console/api",
+  "officialSiteUrl": "https://www.sensetime.com/",
+  "officialDocsUrl": "https://platform.sensetime.com/docs",
+  "name": {
+    "en": "SenseTime SenseNova",
+    "zh": "商汤科技SenseNova"
+  },
+  "summary": {
+    "en": "Global AI leader providing multimodal models including large language, computer vision and generative AI models.",
+    "zh": "全球AI领军企业，提供多模态模型，包括大语言模型、计算机视觉和生成式AI模型。"
+  },
+  "models": {
+    "en": [
+      "SenseNova LLM",
+      "SenseNova CV",
+      "SenseNova Generative AI"
+    ],
+    "zh": [
+      "SenseNova大语言模型",
+      "SenseNova计算机视觉模型",
+      "SenseNova生成式AI模型"
+    ]
+  },
+  "tags": [
+    "chinese",
+    "multimodal",
+    "llm",
+    "cv",
+    "sensetime"
+  ],
+  "searchAliases": [
+    "商汤",
+    "sensetime",
+    "sensenova"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "SenseTime SenseNova API Key - Multimodal AI Models | Get Model Key",
+      "zh": "商汤科技SenseNova API Key - 多模态AI模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get SenseTime SenseNova API key for access to multimodal AI models.",
+      "zh": "获取商汤科技SenseNova API Key，访问多模态AI模型。"
+    }
+  }
+}

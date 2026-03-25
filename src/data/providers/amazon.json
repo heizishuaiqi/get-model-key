@@ -1,7 +1,10 @@
 {
   "slug": "amazon",
   "status": "active",
-  "categories": ["enterprise", "cloud"],
+  "categories": [
+    "enterprise",
+    "cloud"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://us-east-1.console.aws.amazon.com/bedrock/home",
@@ -16,11 +19,53 @@
     "zh": "AWS 托管的基础模型服务，具备企业级安全性和可扩展性。"
   },
   "models": {
-    "en": ["Nova 2", "Claude Opus 4.6", "Claude Sonnet 4.6", "Deepseek 3.2", "Kimi K2.5", "MiniMax M2.1", "GPT-OSS-20B", "GLM 4.7", "GLM 4.7 Flash", "Qwen3 Coder Next", "Llama 3", "Titan", "Jurassic-2", "Command", "Stable Diffusion"],
-    "zh": ["Nova 2", "Claude Opus 4.6", "Claude Sonnet 4.6", "Deepseek 3.2", "Kimi K2.5", "MiniMax M2.1", "GPT-OSS-20B", "GLM 4.7", "GLM 4.7 Flash", "Qwen3 Coder Next", "Llama 3", "Titan", "Jurassic-2", "Command", "Stable Diffusion"]
+    "en": [
+      "Nova 2",
+      "Claude Opus 4.6",
+      "Claude Sonnet 4.6",
+      "Deepseek 3.2",
+      "Kimi K2.5",
+      "MiniMax M2.1",
+      "GPT-OSS-20B",
+      "GLM 4.7",
+      "GLM 4.7 Flash",
+      "Qwen3 Coder Next",
+      "Llama 3",
+      "Titan",
+      "Jurassic-2",
+      "Command",
+      "Stable Diffusion"
+    ],
+    "zh": [
+      "Nova 2",
+      "Claude Opus 4.6",
+      "Claude Sonnet 4.6",
+      "Deepseek 3.2",
+      "Kimi K2.5",
+      "MiniMax M2.1",
+      "GPT-OSS-20B",
+      "GLM 4.7",
+      "GLM 4.7 Flash",
+      "Qwen3 Coder Next",
+      "Llama 3",
+      "Titan",
+      "Jurassic-2",
+      "Command",
+      "Stable Diffusion"
+    ]
   },
-  "tags": ["aws", "enterprise", "cloud", "multiple-models"],
-  "searchAliases": ["aws bedrock", "amazon ai", "bedrock api", "aws ai"],
+  "tags": [
+    "aws",
+    "enterprise",
+    "cloud",
+    "multiple-models"
+  ],
+  "searchAliases": [
+    "aws bedrock",
+    "amazon ai",
+    "bedrock api",
+    "aws ai"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

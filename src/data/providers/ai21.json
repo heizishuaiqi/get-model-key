@@ -1,0 +1,56 @@
+{
+  "slug": "ai21",
+  "status": "active",
+  "categories": [
+    "global",
+    "llm",
+    "text"
+  ],
+  "region": "global",
+  "featured": false,
+  "officialKeyUrl": "https://studio.ai21.com/account/api-key",
+  "officialSiteUrl": "https://www.ai21.com/",
+  "officialDocsUrl": "https://docs.ai21.com/",
+  "name": {
+    "en": "AI21 Labs",
+    "zh": "AI21实验室"
+  },
+  "summary": {
+    "en": "Israeli AI company providing state-of-the-art large language models like Jurassic J2 series.",
+    "zh": "以色列AI公司，提供先进的大语言模型，如Jurassic J2系列。"
+  },
+  "models": {
+    "en": [
+      "Jurassic-J2-Ultra",
+      "Jurassic-J2-Mid",
+      "Jurassic-J2-Fast"
+    ],
+    "zh": [
+      "Jurassic-J2-Ultra",
+      "Jurassic-J2-Mid",
+      "Jurassic-J2-Fast"
+    ]
+  },
+  "tags": [
+    "global",
+    "llm",
+    "text",
+    "ai21"
+  ],
+  "searchAliases": [
+    "ai21",
+    "jurassic",
+    "j2"
+  ],
+  "lastVerified": "2026-03-25",
+  "seo": {
+    "title": {
+      "en": "AI21 Labs API Key - Jurassic Large Language Models | Get Model Key",
+      "zh": "AI21实验室 API Key - Jurassic大语言模型 | Get Model Key"
+    },
+    "description": {
+      "en": "Get AI21 Labs API key for access to Jurassic series large language models.",
+      "zh": "获取AI21实验室 API Key，访问Jurassic系列大语言模型。"
+    }
+  }
+}

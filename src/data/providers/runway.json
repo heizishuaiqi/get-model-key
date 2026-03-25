@@ -1,7 +1,10 @@
 {
   "slug": "runway",
   "status": "active",
-  "categories": ["creative", "global"],
+  "categories": [
+    "creative",
+    "global"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://app.runwayml.com/account/api",
@@ -16,11 +19,33 @@
     "zh": "创意 AI 平台，用于视频、图像和多媒体生成。"
   },
   "models": {
-    "en": ["Gen 4.5", "Gen-4 Aleph", "Gen-4 Image", "Text to Speech", "Characters API"],
-    "zh": ["Gen 4.5", "Gen-4 Aleph", "Gen-4 Image", "文本转语音", "角色API"]
+    "en": [
+      "Gen 4.5",
+      "Gen-4 Aleph",
+      "Gen-4 Image",
+      "Text to Speech",
+      "Characters API"
+    ],
+    "zh": [
+      "Gen 4.5",
+      "Gen-4 Aleph",
+      "Gen-4 Image",
+      "文本转语音",
+      "角色API"
+    ]
   },
-  "tags": ["creative", "video", "image", "multimedia"],
-  "searchAliases": ["runway ml", "creative ai", "video ai", "gen-3"],
+  "tags": [
+    "creative",
+    "video",
+    "image",
+    "multimedia"
+  ],
+  "searchAliases": [
+    "runway ml",
+    "creative ai",
+    "video ai",
+    "gen-3"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

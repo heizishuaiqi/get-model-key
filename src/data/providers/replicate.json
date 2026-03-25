@@ -1,7 +1,10 @@
 {
   "slug": "replicate",
   "status": "active",
-  "categories": ["model-hosting", "global"],
+  "categories": [
+    "model-hosting",
+    "global"
+  ],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://replicate.com/account/api-tokens",
@@ -16,11 +19,32 @@
     "zh": "运行机器学习模型的平台，提供简单的 API 和按使用付费的定价。"
   },
   "models": {
-    "en": ["black-forest-labs/flux-schnell", "stability-ai/stable-diffusion", "meta-llama/llama-3", "google/gemini", "openai/gpt-4"],
-    "zh": ["black-forest-labs/flux-schnell", "stability-ai/stable-diffusion", "meta-llama/llama-3", "google/gemini", "openai/gpt-4"]
+    "en": [
+      "black-forest-labs/flux-schnell",
+      "stability-ai/stable-diffusion",
+      "meta-llama/llama-3",
+      "google/gemini",
+      "openai/gpt-4"
+    ],
+    "zh": [
+      "black-forest-labs/flux-schnell",
+      "stability-ai/stable-diffusion",
+      "meta-llama/llama-3",
+      "google/gemini",
+      "openai/gpt-4"
+    ]
   },
-  "tags": ["model-hosting", "pay-per-use", "simple-api", "community"],
-  "searchAliases": ["replicate", "model hosting", "ml platform"],
+  "tags": [
+    "model-hosting",
+    "pay-per-use",
+    "simple-api",
+    "community"
+  ],
+  "searchAliases": [
+    "replicate",
+    "model hosting",
+    "ml platform"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {

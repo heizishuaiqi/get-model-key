@@ -1,7 +1,10 @@
 {
   "slug": "tencent",
   "status": "active",
-  "categories": ["china", "enterprise"],
+  "categories": [
+    "china",
+    "enterprise"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://cloud.tencent.com/product/hunyuan",
@@ -16,11 +19,35 @@
     "zh": "腾讯的 AI 模型，具备强大的中文能力和腾讯生态集成。"
   },
   "models": {
-    "en": ["Hunyuan Image 3.0", "Hunyuan 3D Model API", "Hunyuan Standard", "Hunyuan Pro", "Hunyuan Turbo", "Hunyuan-Vision"],
-    "zh": ["混元图像3.0", "混元3D模型API", "混元标准版", "混元专业版", "混元极速版", "混元视觉版"]
+    "en": [
+      "Hunyuan Image 3.0",
+      "Hunyuan 3D Model API",
+      "Hunyuan Standard",
+      "Hunyuan Pro",
+      "Hunyuan Turbo",
+      "Hunyuan-Vision"
+    ],
+    "zh": [
+      "混元图像3.0",
+      "混元3D模型API",
+      "混元标准版",
+      "混元专业版",
+      "混元极速版",
+      "混元视觉版"
+    ]
   },
-  "tags": ["chinese", "tencent", "ecosystem", "enterprise"],
-  "searchAliases": ["腾讯", "混元", "hunyuan", "tencent ai"],
+  "tags": [
+    "chinese",
+    "tencent",
+    "ecosystem",
+    "enterprise"
+  ],
+  "searchAliases": [
+    "腾讯",
+    "混元",
+    "hunyuan",
+    "tencent ai"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
