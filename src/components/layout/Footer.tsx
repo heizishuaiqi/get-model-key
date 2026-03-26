@@ -7,12 +7,14 @@ interface FooterProps {
 export default function Footer({ lang }: FooterProps) {
   const footerLinks = {
     en: [
+      { name: 'Offers', href: '/offers/' },
       { name: 'About', href: '/about/' },
       { name: 'Privacy', href: '/privacy/' },
       { name: 'Terms', href: '/terms/' },
       { name: 'Contact', href: '/contact/' },
     ],
     zh: [
+      { name: '福利专题', href: '/zh/offers/' },
       { name: '关于', href: '/zh/about/' },
       { name: '隐私政策', href: '/zh/privacy/' },
       { name: '服务条款', href: '/zh/terms/' },

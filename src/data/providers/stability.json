@@ -57,5 +57,6 @@
       "en": "Get Stability AI API key for image generation models. Access Stable Diffusion series and other creative AI tools.",
       "zh": "获取 Stability AI API Key，访问图像生成模型。使用 Stable Diffusion 系列和其他创意 AI 工具。"
     }
-  }
+  },
+  "img": ""
 }

@@ -379,25 +379,25 @@
   {
     "slug": "iflytek",
     "region": "china",
-    "officialKeyUrl": "https://console.xfyun.cn/services/bm",
-    "officialSiteUrl": "https://www.iflytek.com/",
+    "officialKeyUrl": "https://console.xfyun.cn/services/bmx1",
+    "officialSiteUrl": "https://xinghuo.xfyun.cn/",
     "officialDocsUrl": "https://www.xfyun.cn/doc/spark/",
     "name": {
-      "en": "iFlytek Spark",
-      "zh": "科大讯飞星火"
+      "en": "iFLYTEK Spark",
+      "zh": "讯飞星火"
     },
     "models": {
       "en": [
-        "Spark V4.0",
-        "Spark V3.5",
-        "Spark V3.0",
-        "Spark V2.0"
+        "Spark X2",
+        "Spark X1",
+        "Spark Max",
+        "Spark Pro"
       ],
       "zh": [
-        "星火V4.0",
-        "星火V3.5",
-        "星火V3.0",
-        "星火V2.0"
+        "星火X2",
+        "星火X1",
+        "星火Max",
+        "星火Pro"
       ]
     }
   },
@@ -573,6 +573,33 @@
         "Magistral-Medium",
         "Magistral-Small",
         "Devstral-Small"
+      ]
+    }
+  },
+  {
+    "slug": "molili",
+    "region": "aggregator",
+    "officialKeyUrl": "https://www.molili.com.cn/",
+    "officialSiteUrl": "https://www.molili.com.cn/",
+    "officialDocsUrl": "https://hub.cocoloop.cn/",
+    "name": {
+      "en": "Molili",
+      "zh": "Molili（莫哩哩）"
+    },
+    "models": {
+      "en": [
+        "DeepSeek",
+        "MiniMax",
+        "Qwen",
+        "Kimi",
+        "GLM"
+      ],
+      "zh": [
+        "DeepSeek",
+        "MiniMax",
+        "通义千问",
+        "Kimi",
+        "GLM"
       ]
     }
   },

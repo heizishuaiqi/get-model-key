@@ -2,60 +2,80 @@
   "slug": "iflytek",
   "status": "active",
   "categories": [
-    "china",
-    "multimodal",
-    "llm",
-    "speech"
+    "china"
   ],
   "region": "china",
   "featured": false,
-  "officialKeyUrl": "https://console.xfyun.cn/services/bm",
-  "officialSiteUrl": "https://www.iflytek.com/",
+  "officialKeyUrl": "https://console.xfyun.cn/services/bmx1",
+  "officialSiteUrl": "https://xinghuo.xfyun.cn/",
   "officialDocsUrl": "https://www.xfyun.cn/doc/spark/",
   "name": {
-    "en": "iFlytek Spark",
-    "zh": "科大讯飞星火"
+    "en": "iFLYTEK Spark",
+    "zh": "讯飞星火"
   },
   "summary": {
-    "en": "China's leading AI company with strong speech recognition and large language model capabilities, offering Spark series models.",
-    "zh": "中国领先的AI企业，具备强大的语音识别和大语言模型能力，提供星火系列模型。"
+    "en": "iFLYTEK's Spark model platform for Chinese-first LLM and multimodal capabilities.",
+    "zh": "讯飞星火面向中文场景，提供大模型与多模态能力，支持开发者通过开放平台接入。"
   },
   "models": {
     "en": [
-      "Spark V4.0",
-      "Spark V3.5",
-      "Spark V3.0",
-      "Spark V2.0"
+      "Spark X2",
+      "Spark X1",
+      "Spark Max",
+      "Spark Pro"
     ],
     "zh": [
-      "星火V4.0",
-      "星火V3.5",
-      "星火V3.0",
-      "星火V2.0"
+      "星火X2",
+      "星火X1",
+      "星火Max",
+      "星火Pro"
     ]
   },
   "tags": [
     "chinese",
-    "speech",
+    "spark",
     "llm",
     "multimodal",
     "iflytek"
   ],
   "searchAliases": [
-    "讯飞",
-    "星火",
+    "讯飞星火",
+    "科大讯飞",
     "iflytek",
-    "spark"
+    "spark",
+    "星火大模型"
   ],
-  "lastVerified": "2026-03-25",
+  "lastVerified": "2026-03-26",
   "seo": {
     "title": {
-      "en": "iFlytek Spark API Key - Large Language Models | Get Model Key",
-      "zh": "科大讯飞星火 API Key - 大语言模型 | Get Model Key"
+      "en": "iFLYTEK Spark API Key - Official Access | Get Model Key",
+      "zh": "讯飞星火 API Key - 官方入口 | Get Model Key"
     },
     "description": {
-      "en": "Get iFlytek Spark API key for access to Spark series large language models.",
-      "zh": "获取科大讯飞星火 API Key，访问星火系列大语言模型。"
+      "en": "Get the official iFLYTEK Spark API key entry and docs for developer access.",
+      "zh": "查看讯飞星火官方 API Key 申请入口与开发文档，快速完成接入。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-spark-tokens",
+      "status": "active",
+      "type": "signup_tokens",
+      "title": {
+        "en": "Spark token starter pack",
+        "zh": "星火新用户 Token 福利"
+      },
+      "benefit": {
+        "en": "New users can usually get around 5M tokens; real-name verification is often required (subject to official policy).",
+        "zh": "新用户通常可获得约 500 万 Token；一般需要完成实名（具体以官方规则为准）。"
+      },
+      "notes": {
+        "en": "Strong Chinese context handling, making it suitable for content creation and complex multi-turn conversations.",
+        "zh": "中文语义理解和上下文把握能力强，适合内容创作与复杂多轮对话。"
+      },
+      "sourceUrl": "https://console.xfyun.cn/services/bmx1",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/upload/image_cloud/202508/1755505196574944_%E8%AE%AF%E9%A3%9E%E6%98%9F%E7%81%AB%E5%A4%A7%E6%A8%A1%E5%9E%8B.webp"
 }

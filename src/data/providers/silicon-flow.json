@@ -64,5 +64,27 @@
       "en": "Get Silicon Flow API key for Chinese coding AI models. Access CogAgent, CodeGeeX and other coding-focused models.",
       "zh": "获取硅基流动 API Key，访问中国代码 AI 模型。使用 CogAgent、CodeGeeX 等专注于代码的模型。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-platform-credit",
+      "status": "active",
+      "type": "platform_credit",
+      "title": {
+        "en": "Universal platform credit",
+        "zh": "平台通用额度"
+      },
+      "benefit": {
+        "en": "The platform often provides around CNY 16 in universal voucher credit (subject to official policy).",
+        "zh": "平台常见提供约 16 元通用代金券（以官方规则为准）。"
+      },
+      "notes": {
+        "en": "As an aggregator, one key can invoke multiple mainstream open-source models, reducing the need to register across many separate platforms.",
+        "zh": "聚合平台形态下，一个 Key 即可调用多种主流开源模型，能明显减少多平台分别注册的成本。"
+      },
+      "sourceUrl": "https://siliconflow.cn/console/apikey",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773863557988656_siliconflow.webp"
 }

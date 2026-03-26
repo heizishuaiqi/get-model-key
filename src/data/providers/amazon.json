@@ -76,5 +76,6 @@
       "en": "Get Amazon Bedrock API key for AWS foundation models. Access Claude, Llama, Titan and more on AWS.",
       "zh": "获取 Amazon Bedrock API Key，访问 AWS 基础模型。在 AWS 上使用 Claude、Llama、Titan 等模型。"
     }
-  }
+  },
+  "img": ""
 }

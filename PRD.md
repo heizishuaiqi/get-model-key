@@ -13,6 +13,7 @@
 | categories | string[] | 是 | 分类标签数组，必须包含标准分类slug，可附加自定义业务标签 |
 | region | string | 是 | 地区属性，枚举值：`global`/`china`/`aggregator`/`cloud` |
 | featured | boolean | 是 | 是否为精选推荐供应商，控制首页展示权重 |
+| img | string | 是 | 供应商Logo图片地址，允许先留空字符串，后续补充URL |
 | officialKeyUrl | string | 是 | 官方API Key获取页面地址 |
 | officialSiteUrl | string | 否 | 供应商官方网站地址 |
 | officialDocsUrl | string | 否 | 供应商官方API文档地址 |
@@ -23,6 +24,7 @@
 | searchAliases | string[] | 否 | 搜索别名数组，用于扩展搜索匹配 |
 | lastVerified | string | 否 | 最后校验日期，格式：`YYYY-MM-DD` |
 | seo | Object | 否 | SEO优化配置，包含`title`和`description`的多语言对象 |
+| offers | Object[] | 否 | 供应商活动/福利数组，建议字段：`id`、`status`、`type`、`title`、`benefit`、`notes`、`sourceUrl`、`verifiedAt`、`expiresAt` |
 
 ## 4. 枚举值规范
 ### 4.1 region枚举值
@@ -87,6 +89,7 @@
 3.  **枚举值校验**：`region`字段必须为指定枚举值之一
 4.  **标签校验**：分类标签和搜索标签中不得包含非标准地区标签（如`usa`/`cyprus`等），需替换为`global`或`china`
 5.  **多语言校验**：`name`/`summary`/`models`等多语言字段必须同时包含`en`和`zh`两个语言版本
+6.  **活动字段校验**：若存在`offers`，每个活动至少应包含`id`、`status`、`type`、`title`、`benefit`、`verifiedAt`，且`title`/`benefit`必须包含`en`和`zh`
 
 ## 7. 维护流程
 1.  新增供应商时必须遵循本规范

@@ -5,7 +5,8 @@ import Badge from '@/components/ui/Badge';
 import Card from '@/components/ui/Card';
 import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
-import { getAllProviders, getProviderBySlug } from '@/lib/providers';
+import ProviderLogo from '@/components/providers/ProviderLogo';
+import { getActiveOffers, getAllProviders, getProviderBySlug } from '@/lib/providers';
 import { getProviderMetadata } from '@/lib/seo';
 
 type Props = {
@@ -37,6 +38,8 @@ export default async function ZhProviderPage({ params }: Props) {
     notFound();
   }
 
+  const activeOffers = getActiveOffers(provider);
+
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
@@ -61,7 +64,10 @@ export default async function ZhProviderPage({ params }: Props) {
                 </Badge>
               ))}
             </div>
-            <h1 className="mb-4 text-h1 text-text-primary">{provider.name.zh}</h1>
+            <div className="mb-4 flex items-center gap-3">
+              <ProviderLogo provider={provider} lang="zh" size="lg" />
+              <h1 className="text-h1 text-text-primary">{provider.name.zh}</h1>
+            </div>
             <p className="text-body text-text-secondary">{provider.summary.zh}</p>
           </div>
 
@@ -97,6 +103,38 @@ export default async function ZhProviderPage({ params }: Props) {
                 ))}
               </div>
             </Card>
+
+            {activeOffers.length > 0 && (
+              <Card variant="standard">
+                <h2 className="mb-4 text-h2 text-text-primary">{'\u5f53\u524d\u798f\u5229'}</h2>
+                <div className="space-y-4">
+                  {activeOffers.map((offer) => (
+                    <div key={offer.id} className="rounded-xl border border-white-06 bg-surface-1 p-4">
+                      <h3 className="mb-2 text-body font-semibold text-text-primary">
+                        {offer.title.zh}
+                      </h3>
+                      <p className="mb-2 text-body-sm text-text-secondary">{offer.benefit.zh}</p>
+                      {offer.notes?.zh && (
+                        <p className="mb-2 text-caption text-text-tertiary">{offer.notes.zh}</p>
+                      )}
+                      <div className="flex flex-wrap gap-3 text-caption text-text-muted">
+                        <span>{'\u6838\u9a8c\u65f6\u95f4'}: {offer.verifiedAt}</span>
+                        {offer.sourceUrl && (
+                          <a
+                            href={offer.sourceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-brand-300 transition-colors hover:text-brand-400"
+                          >
+                            {'\u6d3b\u52a8\u5165\u53e3'}
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            )}
 
             {provider.tags.length > 0 && (
               <Card variant="standard">

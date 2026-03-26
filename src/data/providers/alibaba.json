@@ -62,5 +62,27 @@
       "en": "Get Alibaba Qwen API key for multimodal AI models. Access Qwen series on Alibaba Cloud.",
       "zh": "获取阿里通义 API Key，访问多模态 AI 模型。在阿里云上使用通义系列模型。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-model-quota",
+      "status": "active",
+      "type": "model_trial_quota",
+      "title": {
+        "en": "Per-model free quota",
+        "zh": "各模型免费额度"
+      },
+      "benefit": {
+        "en": "Many models provide around 1M tokens of trial quota, commonly with a 90-day window (subject to official policy).",
+        "zh": "多数模型提供约 100 万 Token 体验额度，常见有效期约 90 天（以官方规则为准）。"
+      },
+      "notes": {
+        "en": "A broad model ecosystem, including popular options like Qwen and DeepSeek, which makes it useful as a versatile fallback pool for OpenClaw.",
+        "zh": "模型池覆盖面广（含 Qwen、DeepSeek 等热门模型），适合作为 OpenClaw 的通用备用与兜底选项。"
+      },
+      "sourceUrl": "https://dashscope.console.aliyun.com/apiKey",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/image_cloud/202303/1679294613467_%E9%98%BF%E9%87%8C%E4%BA%91.jpg"
 }

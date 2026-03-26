@@ -58,5 +58,27 @@
       "en": "Get Tencent Hunyuan API key for Chinese AI models. Access Hunyuan series with Tencent ecosystem integration.",
       "zh": "获取腾讯混元 API Key，访问中文 AI 模型。使用混元系列，集成腾讯生态能力。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-hunyuan-tokens",
+      "status": "active",
+      "type": "signup_tokens",
+      "title": {
+        "en": "Hunyuan token benefit",
+        "zh": "混元 Token 福利"
+      },
+      "benefit": {
+        "en": "Hunyuan-related offers can reach around 1M tokens, with common validity up to about 1 year (subject to official policy).",
+        "zh": "混元相关活动通常可到约 100 万 Token，常见有效期约 1 年（以官方规则为准）。"
+      },
+      "notes": {
+        "en": "The longer validity window is attractive, and everyday Chinese understanding plus dialogue stability is generally solid.",
+        "zh": "可用周期相对更长，中文理解与日常对话的稳定性表现不错。"
+      },
+      "sourceUrl": "https://cloud.tencent.com/product/hunyuan",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/image_cloud/202303/1679294670308_%E8%85%BE%E8%AE%AF%E4%BA%91.jpg"
 }

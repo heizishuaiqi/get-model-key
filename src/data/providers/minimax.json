@@ -78,5 +78,27 @@
       "en": "Get MiniMax AI API key for access to their full suite of multimodal AI models including text, speech, music and agent tools.",
       "zh": "获取MiniMax AI API Key，访问其全系列多模态AI模型，包括文本、语音、音乐和智能体工具。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-trial-credit",
+      "status": "active",
+      "type": "signup_credit",
+      "title": {
+        "en": "New user trial credit",
+        "zh": "新用户试用额度"
+      },
+      "benefit": {
+        "en": "New users can generally claim about CNY 15 in trial credit, often with real-name verification required (subject to official policy).",
+        "zh": "新用户一般可领取约 15 元试用额度，通常需实名（具体以官方规则为准）。"
+      },
+      "notes": {
+        "en": "Its concise output style helps control token cost and works well for lightweight daily tasks plus multi-step command chaining in OpenClaw.",
+        "zh": "输出风格精炼、Token 开销可控，适合 OpenClaw 的日常轻任务与多轮指令串联。"
+      },
+      "sourceUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773302663477298_minimax.webp"
 }

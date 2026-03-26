@@ -58,5 +58,27 @@
       "en": "Get Zhipu AI API key for GLM series models. Access GLM-4, GLM-4V and CodeGeeX with strong Chinese capabilities.",
       "zh": "获取智谱AI API Key，访问 GLM 系列模型。使用 GLM-4、GLM-4V 和 CodeGeeX，具备强大的中文能力。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-signup-token",
+      "status": "active",
+      "type": "signup_tokens",
+      "title": {
+        "en": "Large signup token bonus",
+        "zh": "新用户大额 Token"
+      },
+      "benefit": {
+        "en": "New users may receive around 20M tokens, typically valid for about 3 months (subject to official policy).",
+        "zh": "新用户可获约 2000 万 Token（约 3 个月有效，具体以官方规则为准）。"
+      },
+      "notes": {
+        "en": "Backed by a strong academic background and generous onboarding incentives; GLM-4 models fit coding and bug-fixing workflows well.",
+        "zh": "团队学术背景扎实，活动力度较大；GLM-4 系列在代码编写和缺陷排查场景表现突出。"
+      },
+      "sourceUrl": "https://open.bigmodel.cn/usercenter/apikeys",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773390617568290_bigmodel.webp"
 }

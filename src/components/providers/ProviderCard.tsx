@@ -4,6 +4,7 @@ import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
+import ProviderLogo from '@/components/providers/ProviderLogo';
 
 interface ProviderCardProps {
   provider: Provider;
@@ -49,7 +50,10 @@ export default function ProviderCard({
         />
         <div className="pointer-events-none relative z-20 flex h-full min-h-[220px] flex-col">
           <div className="mb-5">
-            <h3 className="mb-3 text-h4 text-text-primary">{provider.name[lang]}</h3>
+            <div className="mb-3 flex items-center gap-3">
+              <ProviderLogo provider={provider} lang={lang} size="sm" />
+              <h3 className="text-h4 text-text-primary">{provider.name[lang]}</h3>
+            </div>
             <p className="line-clamp-3 text-body-sm text-text-secondary">{provider.summary[lang]}</p>
           </div>
           <div className="pointer-events-auto relative z-30 mt-auto">
@@ -83,7 +87,10 @@ export default function ProviderCard({
         <div className="flex-1">
           <div className="mb-4 flex items-start justify-between">
             <div>
-              <h3 className="mb-2 text-h4 text-text-primary">{provider.name[lang]}</h3>
+              <div className="mb-2 flex items-center gap-3">
+                <ProviderLogo provider={provider} lang={lang} size="sm" />
+                <h3 className="text-h4 text-text-primary">{provider.name[lang]}</h3>
+              </div>
               <div className="mb-3 flex items-center gap-2">
                 <Badge variant="brand">{regionLabels[provider.region]}</Badge>
                 {provider.featured && (

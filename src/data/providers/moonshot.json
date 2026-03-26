@@ -54,5 +54,27 @@
       "en": "Get Moonshot AI API key for Kimi models. Access long-context AI with strong reasoning capabilities.",
       "zh": "获取月之暗面 API Key，访问 Kimi 模型。使用具备强大推理能力的长上下文 AI。"
     }
-  }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-kimi-credit",
+      "status": "active",
+      "type": "signup_credit",
+      "title": {
+        "en": "Kimi starter credit",
+        "zh": "Kimi 新用户额度"
+      },
+      "benefit": {
+        "en": "New users can usually receive about CNY 15 in starter credit, often with real-name verification required (subject to official policy).",
+        "zh": "新用户通常可获得约 15 元体验额度，一般需实名（具体以官方规则为准）。"
+      },
+      "notes": {
+        "en": "Excellent long-context handling, making it a strong option for long-document reading and webpage summarization in OpenClaw workflows.",
+        "zh": "长文本处理能力突出；在 OpenClaw 中做长文档阅读、网页总结这类任务时，Kimi 通常是稳妥选择。"
+      },
+      "sourceUrl": "https://platform.moonshot.cn/console/api-keys",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773278888123419_kimilogo.webp"
 }

@@ -57,5 +57,6 @@
       "en": "Get Cohere API key for enterprise LLMs. Access Command R, embedding models and RAG capabilities.",
       "zh": "获取 Cohere API Key，访问企业级 LLM。使用 Command R、嵌入模型和 RAG 能力。"
     }
-  }
+  },
+  "img": ""
 }

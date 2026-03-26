@@ -48,6 +48,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/',
       zh: '/zh/',
+      'x-default': '/',
     },
   },
   openGraph: {

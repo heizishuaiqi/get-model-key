@@ -1,9 +1,27 @@
+export interface ProviderOffer {
+  id: string;
+  status: 'active' | 'paused' | 'expired';
+  type:
+    | 'daily_free_quota'
+    | 'signup_tokens'
+    | 'signup_credit'
+    | 'model_trial_quota'
+    | 'platform_credit';
+  title: Record<'en' | 'zh', string>;
+  benefit: Record<'en' | 'zh', string>;
+  notes?: Record<'en' | 'zh', string>;
+  sourceUrl?: string;
+  verifiedAt: string;
+  expiresAt?: string;
+}
+
 export interface Provider {
   slug: string;
   status: 'active' | 'hidden' | 'draft';
   categories: string[];
   region: 'global' | 'china' | 'aggregator' | 'cloud';
   featured: boolean;
+  img: string;
   officialKeyUrl: string;
   officialSiteUrl?: string;
   officialDocsUrl?: string;
@@ -13,6 +31,7 @@ export interface Provider {
   tags: string[];
   searchAliases: string[];
   lastVerified?: string;
+  offers?: ProviderOffer[];
   seo?: {
     title: Record<'en' | 'zh', string>;
     description: Record<'en' | 'zh', string>;

@@ -1,0 +1,82 @@
+{
+  "slug": "molili",
+  "status": "active",
+  "categories": [
+    "aggregator",
+    "china"
+  ],
+  "region": "aggregator",
+  "featured": false,
+  "officialKeyUrl": "https://www.molili.com.cn/",
+  "officialSiteUrl": "https://www.molili.com.cn/",
+  "officialDocsUrl": "https://hub.cocoloop.cn/",
+  "name": {
+    "en": "Molili",
+    "zh": "Molili（莫哩哩）"
+  },
+  "summary": {
+    "en": "A Chinese AI agent platform in the OpenClaw ecosystem, focused on desktop automation and local workflow execution.",
+    "zh": "OpenClaw 生态中的中文 AI 智能体平台，主打桌面自动化与本地工作流执行。"
+  },
+  "models": {
+    "en": [
+      "DeepSeek",
+      "MiniMax",
+      "Qwen",
+      "Kimi",
+      "GLM"
+    ],
+    "zh": [
+      "DeepSeek",
+      "MiniMax",
+      "通义千问",
+      "Kimi",
+      "GLM"
+    ]
+  },
+  "tags": [
+    "agent",
+    "openclaw-ecosystem",
+    "china",
+    "desktop-automation"
+  ],
+  "searchAliases": [
+    "molili",
+    "莫哩哩",
+    "openclaw中文版",
+    "当贝molili"
+  ],
+  "lastVerified": "2026-03-26",
+  "seo": {
+    "title": {
+      "en": "Molili - OpenClaw Ecosystem AI Agent Platform | Get Model Key",
+      "zh": "Molili（莫哩哩）- OpenClaw 生态智能体平台 | Get Model Key"
+    },
+    "description": {
+      "en": "View Molili official site and platform entry in the OpenClaw ecosystem.",
+      "zh": "查看 Molili 官方站点与平台入口，快速了解 OpenClaw 生态中的中文智能体方案。"
+    }
+  },
+  "offers": [
+    {
+      "id": "openclaw-2026-daily-free",
+      "status": "active",
+      "type": "daily_free_quota",
+      "title": {
+        "en": "Daily free quota",
+        "zh": "每日免费额度"
+      },
+      "benefit": {
+        "en": "Around 2,000 free points are available daily, with token usage often about 30%-50% lower than the original setup (subject to official policy).",
+        "zh": "每日可领取约 2000 积分，且 Token 消耗相较原版大约降低 30%-50%（以官方规则为准）。"
+      },
+      "notes": {
+        "en": "Strong OpenClaw compatibility with built-in domestic models, one-click no-code setup, and WeChat/DingTalk remote commands for lightweight workflows.",
+        "zh": "对 OpenClaw 能力链路支持完整，内置国产模型，可一键完成零代码安装，并支持微信/钉钉远程下发指令；日常轻量任务基本够用。"
+      },
+      "sourceUrl": "https://www.molili.com.cn/",
+      "verifiedAt": "2026-03-26"
+    }
+  ],
+  "img": ""
+}

@@ -1,8 +1,19 @@
 import fs from 'fs/promises';
 import path from 'path';
-import type { Provider, Category } from '@/types/provider';
+import type { Provider, Category, ProviderOffer } from '@/types/provider';
 
 const dataDir = path.join(process.cwd(), 'src/data');
+
+function isOfferExpired(offer: ProviderOffer, now: Date): boolean {
+  if (!offer.expiresAt) return false;
+  return new Date(`${offer.expiresAt}T23:59:59.999Z`) < now;
+}
+
+export function getActiveOffers(provider: Provider, now: Date = new Date()): ProviderOffer[] {
+  return (provider.offers ?? []).filter(
+    (offer) => offer.status === 'active' && !isOfferExpired(offer, now)
+  );
+}
 
 export async function getAllProviders(): Promise<Provider[]> {
   const providersDir = path.join(dataDir, 'providers');
@@ -37,6 +48,28 @@ export async function getProvidersByCategory(categorySlug: string): Promise<Prov
 export async function getFeaturedProviders(): Promise<Provider[]> {
   const providers = await getAllProviders();
   return providers.filter(p => p.featured);
+}
+
+export async function getProvidersWithActiveOffers(now: Date = new Date()): Promise<Provider[]> {
+  const providers = await getAllProviders();
+  const providersWithOffers: Provider[] = [];
+
+  providers.forEach((provider) => {
+    const activeOffers = getActiveOffers(provider, now);
+    if (activeOffers.length > 0) {
+      providersWithOffers.push({
+        ...provider,
+        offers: activeOffers,
+      });
+    }
+  });
+
+  return providersWithOffers.sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    const aDate = a.offers?.[0]?.verifiedAt || '';
+    const bDate = b.offers?.[0]?.verifiedAt || '';
+    return bDate.localeCompare(aDate);
+  });
 }
 
 export async function getCategories(): Promise<Category[]> {
