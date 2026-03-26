@@ -10,7 +10,6 @@ export interface ProviderOffer {
   title: Record<'en' | 'zh', string>;
   benefit: Record<'en' | 'zh', string>;
   notes?: Record<'en' | 'zh', string>;
-  sourceUrl?: string;
   verifiedAt: string;
   expiresAt?: string;
 }

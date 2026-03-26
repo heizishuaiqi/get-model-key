@@ -24,6 +24,7 @@ export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Met
       languages: {
         en: `${siteConfig.domain}/`,
         zh: `${siteConfig.domain}/zh/`,
+        'x-default': `${siteConfig.domain}/`,
       },
     },
     openGraph: {
@@ -81,6 +82,7 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
       languages: {
         en: `${siteConfig.domain}/providers/${slug}/`,
         zh: `${siteConfig.domain}/zh/providers/${slug}/`,
+        'x-default': `${siteConfig.domain}/providers/${slug}/`,
       },
     },
     openGraph: {

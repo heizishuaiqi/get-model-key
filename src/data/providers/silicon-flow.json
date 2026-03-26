@@ -1,10 +1,7 @@
 {
   "slug": "silicon-flow",
   "status": "active",
-  "categories": [
-    "china",
-    "coding"
-  ],
+  "categories": ["china", "coding"],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://siliconflow.cn/console/apikey",
@@ -42,18 +39,8 @@
       "VisualGLM"
     ]
   },
-  "tags": [
-    "coding",
-    "chinese",
-    "cost-effective",
-    "reasoning"
-  ],
-  "searchAliases": [
-    "硅基流动",
-    "siliconflow",
-    "cogagent",
-    "codegeex"
-  ],
+  "tags": ["coding", "chinese", "cost-effective", "reasoning"],
+  "searchAliases": ["硅基流动", "siliconflow", "cogagent", "codegeex"],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -82,7 +69,6 @@
         "en": "As an aggregator, one key can invoke multiple mainstream open-source models, reducing the need to register across many separate platforms.",
         "zh": "聚合平台形态下，一个 Key 即可调用多种主流开源模型，能明显减少多平台分别注册的成本。"
       },
-      "sourceUrl": "https://siliconflow.cn/console/apikey",
       "verifiedAt": "2026-03-26"
     }
   ],

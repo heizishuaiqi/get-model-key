@@ -119,16 +119,6 @@ export default async function ProviderPage({ params }: Props) {
                       )}
                       <div className="flex flex-wrap gap-3 text-caption text-text-muted">
                         <span>Verified: {offer.verifiedAt}</span>
-                        {offer.sourceUrl && (
-                          <a
-                            href={offer.sourceUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-brand-300 transition-colors hover:text-brand-400"
-                          >
-                            Offer Source
-                          </a>
-                        )}
                       </div>
                     </div>
                   ))}

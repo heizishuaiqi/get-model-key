@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/privacy/',
       zh: '/zh/privacy/',
+      'x-default': '/privacy/',
     },
   },
 };

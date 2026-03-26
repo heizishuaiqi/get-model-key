@@ -19,7 +19,17 @@ export default async function ZhHomePage() {
     getHomepageContent('zh'),
   ]);
 
-  const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
+  const sectionOrder = new Map<string, number>();
+  for (const [index, slug] of (homepageContent.sections ?? []).entries()) {
+    if (typeof slug === 'string') {
+      sectionOrder.set(slug, index);
+    }
+  }
+  const sortedCategories = [...categories].sort((a, b) => {
+    const orderA = sectionOrder.get(a.slug) ?? Number.MAX_SAFE_INTEGER + a.order;
+    const orderB = sectionOrder.get(b.slug) ?? Number.MAX_SAFE_INTEGER + b.order;
+    return orderA - orderB;
+  });
 
   return (
     <>

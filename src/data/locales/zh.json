@@ -2,6 +2,6 @@
   "code": "zh",
   "label": "简体中文",
   "urlPrefix": "/zh/",
-  "enabled": false,
+  "enabled": true,
   "htmlLang": "zh-CN"
 }

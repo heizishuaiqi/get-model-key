@@ -1,12 +1,7 @@
 {
   "slug": "minimax",
   "status": "active",
-  "categories": [
-    "china",
-    "multimodal",
-    "llm",
-    "agent"
-  ],
+  "categories": ["china", "multimodal", "llm", "agent"],
   "region": "china",
   "featured": false,
   "officialKeyUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
@@ -54,20 +49,8 @@
       "智能体"
     ]
   },
-  "tags": [
-    "chinese",
-    "multimodal",
-    "llm",
-    "agent",
-    "speech",
-    "music"
-  ],
-  "searchAliases": [
-    "minimax",
-    "mini max",
-    "海螺",
-    "hailuo"
-  ],
+  "tags": ["chinese", "multimodal", "llm", "agent", "speech", "music"],
+  "searchAliases": ["minimax", "mini max", "海螺", "hailuo"],
   "lastVerified": "2026-03-25",
   "seo": {
     "title": {
@@ -96,7 +79,6 @@
         "en": "Its concise output style helps control token cost and works well for lightweight daily tasks plus multi-step command chaining in OpenClaw.",
         "zh": "输出风格精炼、Token 开销可控，适合 OpenClaw 的日常轻任务与多轮指令串联。"
       },
-      "sourceUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
       "verifiedAt": "2026-03-26"
     }
   ],

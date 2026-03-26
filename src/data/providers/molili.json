@@ -1,10 +1,7 @@
 {
   "slug": "molili",
   "status": "active",
-  "categories": [
-    "aggregator",
-    "china"
-  ],
+  "categories": ["aggregator", "china"],
   "region": "aggregator",
   "featured": false,
   "officialKeyUrl": "https://www.molili.com.cn/",
@@ -19,33 +16,11 @@
     "zh": "OpenClaw 生态中的中文 AI 智能体平台，主打桌面自动化与本地工作流执行。"
   },
   "models": {
-    "en": [
-      "DeepSeek",
-      "MiniMax",
-      "Qwen",
-      "Kimi",
-      "GLM"
-    ],
-    "zh": [
-      "DeepSeek",
-      "MiniMax",
-      "通义千问",
-      "Kimi",
-      "GLM"
-    ]
+    "en": ["DeepSeek", "MiniMax", "Qwen", "Kimi", "GLM"],
+    "zh": ["DeepSeek", "MiniMax", "通义千问", "Kimi", "GLM"]
   },
-  "tags": [
-    "agent",
-    "openclaw-ecosystem",
-    "china",
-    "desktop-automation"
-  ],
-  "searchAliases": [
-    "molili",
-    "莫哩哩",
-    "openclaw中文版",
-    "当贝molili"
-  ],
+  "tags": ["agent", "openclaw-ecosystem", "china", "desktop-automation"],
+  "searchAliases": ["molili", "莫哩哩", "openclaw中文版", "当贝molili"],
   "lastVerified": "2026-03-26",
   "seo": {
     "title": {
@@ -74,9 +49,8 @@
         "en": "Strong OpenClaw compatibility with built-in domestic models, one-click no-code setup, and WeChat/DingTalk remote commands for lightweight workflows.",
         "zh": "对 OpenClaw 能力链路支持完整，内置国产模型，可一键完成零代码安装，并支持微信/钉钉远程下发指令；日常轻量任务基本够用。"
       },
-      "sourceUrl": "https://www.molili.com.cn/",
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": ""
+  "img": "https://www.molili.com.cn/img/logo.png"
 }

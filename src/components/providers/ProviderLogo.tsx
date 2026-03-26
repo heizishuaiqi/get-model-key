@@ -24,8 +24,7 @@ export default function ProviderLogo({
   className = '',
 }: ProviderLogoProps) {
   const providerName = provider.name[lang];
-  const logoAlt =
-    lang === 'en' ? `${providerName} logo` : `${providerName} Logo`;
+  const logoAlt = lang === 'en' ? `${providerName} logo` : `${providerName} 标志`;
   const logoUrl = useMemo(() => getProviderLogoUrl(provider), [provider]);
   const [loadFailed, setLoadFailed] = useState(false);
 
@@ -35,14 +34,16 @@ export default function ProviderLogo({
 
   if (!logoSrc) {
     return (
-      <div className={shellClass} aria-hidden="true">
-        <span className="text-xs font-semibold text-text-tertiary">{initials}</span>
+      <div className={shellClass} role="img" aria-label={logoAlt}>
+        <span className="text-xs font-semibold text-text-tertiary" aria-hidden="true">
+          {initials}
+        </span>
       </div>
     );
   }
 
   return (
-    <div className={shellClass} aria-hidden="true">
+    <div className={shellClass}>
       <img
         src={logoSrc}
         alt={logoAlt}

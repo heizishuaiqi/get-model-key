@@ -1,9 +1,7 @@
 {
   "slug": "iflytek",
   "status": "active",
-  "categories": [
-    "china"
-  ],
+  "categories": ["china"],
   "region": "china",
   "featured": false,
   "officialKeyUrl": "https://console.xfyun.cn/services/bmx1",
@@ -18,33 +16,11 @@
     "zh": "讯飞星火面向中文场景，提供大模型与多模态能力，支持开发者通过开放平台接入。"
   },
   "models": {
-    "en": [
-      "Spark X2",
-      "Spark X1",
-      "Spark Max",
-      "Spark Pro"
-    ],
-    "zh": [
-      "星火X2",
-      "星火X1",
-      "星火Max",
-      "星火Pro"
-    ]
+    "en": ["Spark X2", "Spark X1", "Spark Max", "Spark Pro"],
+    "zh": ["星火X2", "星火X1", "星火Max", "星火Pro"]
   },
-  "tags": [
-    "chinese",
-    "spark",
-    "llm",
-    "multimodal",
-    "iflytek"
-  ],
-  "searchAliases": [
-    "讯飞星火",
-    "科大讯飞",
-    "iflytek",
-    "spark",
-    "星火大模型"
-  ],
+  "tags": ["chinese", "spark", "llm", "multimodal", "iflytek"],
+  "searchAliases": ["讯飞星火", "科大讯飞", "iflytek", "spark", "星火大模型"],
   "lastVerified": "2026-03-26",
   "seo": {
     "title": {
@@ -73,7 +49,6 @@
         "en": "Strong Chinese context handling, making it suitable for content creation and complex multi-turn conversations.",
         "zh": "中文语义理解和上下文把握能力强，适合内容创作与复杂多轮对话。"
       },
-      "sourceUrl": "https://console.xfyun.cn/services/bmx1",
       "verifiedAt": "2026-03-26"
     }
   ],

@@ -1,10 +1,7 @@
 {
   "slug": "moonshot",
   "status": "active",
-  "categories": [
-    "china",
-    "reasoning"
-  ],
+  "categories": ["china", "reasoning"],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://platform.moonshot.cn/console/api-keys",
@@ -32,18 +29,8 @@
       "Moonshot-v1-128k"
     ]
   },
-  "tags": [
-    "chinese",
-    "long-context",
-    "reasoning",
-    "startup"
-  ],
-  "searchAliases": [
-    "月之暗面",
-    "kimi",
-    "moonshot ai",
-    "长上下文"
-  ],
+  "tags": ["chinese", "long-context", "reasoning", "startup"],
+  "searchAliases": ["月之暗面", "kimi", "moonshot ai", "长上下文"],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -72,7 +59,6 @@
         "en": "Excellent long-context handling, making it a strong option for long-document reading and webpage summarization in OpenClaw workflows.",
         "zh": "长文本处理能力突出；在 OpenClaw 中做长文档阅读、网页总结这类任务时，Kimi 通常是稳妥选择。"
       },
-      "sourceUrl": "https://platform.moonshot.cn/console/api-keys",
       "verifiedAt": "2026-03-26"
     }
   ],

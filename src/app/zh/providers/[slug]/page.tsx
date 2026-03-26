@@ -119,16 +119,6 @@ export default async function ZhProviderPage({ params }: Props) {
                       )}
                       <div className="flex flex-wrap gap-3 text-caption text-text-muted">
                         <span>{'\u6838\u9a8c\u65f6\u95f4'}: {offer.verifiedAt}</span>
-                        {offer.sourceUrl && (
-                          <a
-                            href={offer.sourceUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-brand-300 transition-colors hover:text-brand-400"
-                          >
-                            {'\u6d3b\u52a8\u5165\u53e3'}
-                          </a>
-                        )}
                       </div>
                     </div>
                   ))}

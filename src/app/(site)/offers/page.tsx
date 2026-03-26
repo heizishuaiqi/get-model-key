@@ -67,7 +67,7 @@ export default async function OffersPage() {
             <div className="space-y-3 text-body-sm text-text-secondary">
               <p>
                 We only list offers tied to providers already in our directory. Each item points to
-                the provider&apos;s official API key or activity page.
+                the provider&apos;s official API key page.
               </p>
               <p>
                 Offer values can change quickly. We record verification dates, but final eligibility,

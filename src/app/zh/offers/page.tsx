@@ -64,7 +64,7 @@ export default async function ZhOffersPage() {
             <h2 className="mb-4 text-h3 text-text-primary">页面说明</h2>
             <div className="space-y-3 text-body-sm text-text-secondary">
               <p>
-                本页面仅整理已收录供应商中的当前福利信息，并统一跳转到官方 API Key 或活动入口。
+                本页面仅整理已收录供应商中的当前福利信息，并统一跳转到官方 API Key 页面。
               </p>
               <p>
                 活动额度、有效期和参与门槛可能随时变化。我们会标注核验时间，但最终以供应商官方规则为准。

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/terms/',
       zh: '/zh/terms/',
+      'x-default': '/terms/',
     },
   },
 };

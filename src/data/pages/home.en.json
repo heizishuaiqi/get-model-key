@@ -6,5 +6,5 @@
   "search": {
     "placeholder": "Search providers or models"
   },
-  "sections": ["top-picks", "global", "china", "aggregators", "cloud-platforms"]
+  "sections": ["top-picks", "global", "china", "aggregator", "cloud"]
 }

@@ -6,6 +6,7 @@ type Lang = 'en' | 'zh';
 
 interface ContactMessageFormProps {
   lang: Lang;
+  contactEmail: string;
 }
 
 interface FormValues {
@@ -50,7 +51,7 @@ const COPY = {
     submit: 'Send Message',
     submitting: 'Sending...',
     reset: 'Clear Form',
-    success: 'Message sent successfully.',
+    success: 'Your email client has been opened. Please send the prefilled draft to complete submission.',
   },
   zh: {
     labels: {
@@ -81,7 +82,7 @@ const COPY = {
     submit: '发送留言',
     submitting: '提交中...',
     reset: '清空',
-    success: '留言提交成功',
+    success: '已为你打开邮箱草稿，请发送后完成提交。',
   },
 } as const;
 
@@ -92,7 +93,7 @@ const INITIAL_VALUES: FormValues = {
   message: '',
 };
 
-export default function ContactMessageForm({ lang }: ContactMessageFormProps) {
+export default function ContactMessageForm({ lang, contactEmail }: ContactMessageFormProps) {
   const text = COPY[lang];
   const [values, setValues] = useState<FormValues>(INITIAL_VALUES);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -131,7 +132,7 @@ export default function ContactMessageForm({ lang }: ContactMessageFormProps) {
     }
   };
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
@@ -142,14 +143,25 @@ export default function ContactMessageForm({ lang }: ContactMessageFormProps) {
 
     setIsSubmitting(true);
     setShowSuccess(false);
+    const selectedSubject = text.subjects.find((subject) => subject.value === values.subject);
+    const subjectLabel = selectedSubject?.label ?? values.subject;
+    const subject = `[Get Model Key] ${subjectLabel} - ${values.name.trim()}`;
+    const messageBody = [
+      `Name: ${values.name.trim()}`,
+      `Email: ${values.email.trim()}`,
+      `Subject: ${subjectLabel}`,
+      '',
+      'Message:',
+      values.message.trim(),
+    ].join('\n');
 
-    await new Promise((resolve) => setTimeout(resolve, 1200));
+    const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
+    window.location.href = mailtoUrl;
 
     setIsSubmitting(false);
     setShowSuccess(true);
     setValues(INITIAL_VALUES);
-
-    setTimeout(() => setShowSuccess(false), 2800);
+    setTimeout(() => setShowSuccess(false), 3000);
   };
 
   const handleReset = () => {

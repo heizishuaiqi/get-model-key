@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import Link from 'next/link';
 
 interface LanguageSwitcherProps {
   currentLang: 'en' | 'zh';
@@ -10,16 +9,15 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname() || '/';
   const router = useRouter();
-  
-  // Remove language prefix from pathname
-  const pathWithoutLang = pathname.replace(/^\/(en|zh)\//, '/');
+
+  const pathWithoutLang = pathname.replace(/^\/(en|zh)(?=\/|$)/, '');
   const cleanPath = pathWithoutLang === '' ? '/' : pathWithoutLang;
-  
+
   const languages = [
     { code: 'en', label: 'English', path: cleanPath },
-    { code: 'zh', label: '简体中文', path: `/zh${cleanPath}` },
+    { code: 'zh', label: '简体中文', path: cleanPath === '/' ? '/zh' : `/zh${cleanPath}` },
   ];
 
   const handleLanguageClick = (langPath: string) => {
@@ -37,16 +35,16 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
         <span className="text-sm font-semibold text-text-secondary">
           {currentLang === 'en' ? 'English' : '简体中文'}
         </span>
-        <svg 
-          className={`h-4 w-4 text-text-tertiary transition-transform ${isOpen ? 'rotate-180' : ''}`} 
-          fill="none" 
-          viewBox="0 0 24 24" 
+        <svg
+          className={`h-4 w-4 text-text-tertiary transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
-      
+
       {isOpen && (
         <div className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-white-08 bg-surface-1/95 backdrop-blur-xl py-2 shadow-float animate-fade-in">
           {languages.map((lang) => (

@@ -1,10 +1,7 @@
 {
   "slug": "tencent",
   "status": "active",
-  "categories": [
-    "china",
-    "enterprise"
-  ],
+  "categories": ["china", "enterprise"],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://cloud.tencent.com/product/hunyuan",
@@ -36,18 +33,8 @@
       "混元视觉版"
     ]
   },
-  "tags": [
-    "chinese",
-    "tencent",
-    "ecosystem",
-    "enterprise"
-  ],
-  "searchAliases": [
-    "腾讯",
-    "混元",
-    "hunyuan",
-    "tencent ai"
-  ],
+  "tags": ["chinese", "tencent", "ecosystem", "enterprise"],
+  "searchAliases": ["腾讯", "混元", "hunyuan", "tencent ai"],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -76,7 +63,6 @@
         "en": "The longer validity window is attractive, and everyday Chinese understanding plus dialogue stability is generally solid.",
         "zh": "可用周期相对更长，中文理解与日常对话的稳定性表现不错。"
       },
-      "sourceUrl": "https://cloud.tencent.com/product/hunyuan",
       "verifiedAt": "2026-03-26"
     }
   ],

@@ -4,6 +4,7 @@ import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
 import ContactMessageForm from '@/components/forms/ContactMessageForm';
 import Link from 'next/link';
+import { getSiteConfig } from '@/lib/providers';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get Model Key',
@@ -13,11 +14,14 @@ export const metadata: Metadata = {
     languages: {
       en: '/contact/',
       zh: '/zh/contact/',
+      'x-default': '/contact/',
     },
   },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const siteConfig = await getSiteConfig();
+
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
@@ -43,7 +47,7 @@ export default function ContactPage() {
               </p>
             </div>
             
-            <ContactMessageForm lang="en" />
+            <ContactMessageForm lang="en" contactEmail={siteConfig.contactEmail} />
           </Card>
           
           {/* Contact Information */}
@@ -64,10 +68,10 @@ export default function ContactPage() {
                     Prefer to send an email directly? Use the address below.
                   </p>
                   <a
-                    href="mailto:heizishuaiqi@gmail.com"
+                    href={`mailto:${siteConfig.contactEmail}`}
                     className="inline-flex items-center gap-2 text-h4 text-brand-300 hover:text-brand-400 transition-colors"
                   >
-                    heizishuaiqi@gmail.com
+                    {siteConfig.contactEmail}
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>

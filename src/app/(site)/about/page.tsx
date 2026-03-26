@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import Card from '@/components/ui/Card';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
@@ -12,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/about/',
       zh: '/zh/about/',
+      'x-default': '/about/',
     },
   },
 };

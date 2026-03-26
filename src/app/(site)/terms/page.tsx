@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Card from '@/components/ui/Card';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service - Get Model Key',
@@ -10,6 +9,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/terms/',
       zh: '/zh/terms/',
+      'x-default': '/terms/',
     },
   },
 };

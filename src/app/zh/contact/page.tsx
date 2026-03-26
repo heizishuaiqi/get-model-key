@@ -4,6 +4,7 @@ import Card from '@/components/ui/Card';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
 import ContactMessageForm from '@/components/forms/ContactMessageForm';
+import { getSiteConfig } from '@/lib/providers';
 
 export const metadata: Metadata = {
   title: '联系我们 - Get Model Key',
@@ -13,11 +14,14 @@ export const metadata: Metadata = {
     languages: {
       en: '/contact/',
       zh: '/zh/contact/',
+      'x-default': '/contact/',
     },
   },
 };
 
-export default function ZhContactPage() {
+export default async function ZhContactPage() {
+  const siteConfig = await getSiteConfig();
+
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
@@ -37,7 +41,7 @@ export default function ZhContactPage() {
               </p>
             </div>
 
-            <ContactMessageForm lang="zh" />
+            <ContactMessageForm lang="zh" contactEmail={siteConfig.contactEmail} />
           </Card>
 
           <div className="space-y-8">
@@ -54,10 +58,10 @@ export default function ZhContactPage() {
                   <h3 className="mb-3 text-h3 text-text-primary">直接发送邮件</h3>
                   <p className="mb-4 text-body text-text-secondary">如果你习惯邮件沟通，可直接发送到下方邮箱。</p>
                   <a
-                    href="mailto:heizishuaiqi@gmail.com"
+                    href={`mailto:${siteConfig.contactEmail}`}
                     className="inline-flex items-center gap-2 text-h4 text-brand-300 transition-colors hover:text-brand-400"
                   >
-                    heizishuaiqi@gmail.com
+                    {siteConfig.contactEmail}
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>

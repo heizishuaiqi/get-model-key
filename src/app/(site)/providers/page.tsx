@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     languages: {
       en: '/providers/',
       zh: '/zh/providers/',
+      'x-default': '/providers/',
     },
   },
 };
