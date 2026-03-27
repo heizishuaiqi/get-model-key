@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface LanguageSwitcherProps {
@@ -9,6 +9,8 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const switcherRef = useRef<HTMLDivElement>(null);
+  const menuId = useId();
   const pathname = usePathname() || '/';
   const router = useRouter();
 
@@ -25,11 +27,38 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
     router.push(langPath);
   };
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (!switcherRef.current) return;
+      if (switcherRef.current.contains(event.target as Node)) return;
+      setIsOpen(false);
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutsideClick);
+    document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative inline-block">
+    <div ref={switcherRef} className="relative inline-block">
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        aria-controls={menuId}
         className="flex items-center gap-2 rounded-full border border-white-06 bg-white-04 px-4 py-2 hover:bg-white-06 hover:border-white-08 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:ring-offset-2 focus:ring-offset-bg-app backdrop-blur-sm transition-all duration-200"
       >
         <span className="text-sm font-semibold text-text-secondary">
@@ -46,11 +75,18 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-white-08 bg-surface-1/95 backdrop-blur-xl py-2 shadow-float animate-fade-in">
+        <div
+          id={menuId}
+          role="menu"
+          aria-label={currentLang === 'en' ? 'Language options' : '语言选项'}
+          className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-white-08 bg-surface-1/95 py-2 shadow-float backdrop-blur-xl animate-fade-in"
+        >
           {languages.map((lang) => (
             <button
               key={lang.code}
               type="button"
+              role="menuitemradio"
+              aria-checked={currentLang === lang.code}
               onClick={() => handleLanguageClick(lang.path)}
               className={`block w-full px-4 py-2.5 text-left text-sm transition-all duration-200 ${
                 currentLang === lang.code

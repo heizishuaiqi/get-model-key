@@ -20,9 +20,9 @@ export default function ZhLayout({
       <body className={`${inter.className} bg-bg-app text-text-primary`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4GRH9GT3V1"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="beforeInteractive">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

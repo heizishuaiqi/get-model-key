@@ -84,20 +84,8 @@
 @layer components {
   /* Container */
   .container-custom {
-    @apply mx-auto max-w-7xl px-8;
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
-
-  /* Spacing system (4pt grid) */
-  .space-1 { padding: 4px; }
-  .space-2 { padding: 8px; }
-  .space-3 { padding: 12px; }
-  .space-4 { padding: 16px; }
-  .space-5 { padding: 20px; }
-  .space-6 { padding: 24px; }
-  .space-8 { padding: 32px; }
-  .space-10 { padding: 40px; }
-  .space-12 { padding: 48px; }
-  .space-16 { padding: 64px; }
 
   /* Buttons */
   .btn-primary-inverse {
@@ -117,26 +105,26 @@
 
   /* Cards */
   .card-standard {
-    @apply rounded-2xl border border-[var(--white-06)] bg-[var(--surface-1)] p-6;
+    @apply rounded-2xl border border-[var(--white-06)] bg-[var(--surface-1)];
     box-shadow: var(--shadow-card);
   }
 
   .card-emphasis {
-    @apply rounded-2xl border border-[var(--white-06)] bg-[var(--surface-2)] p-6;
+    @apply rounded-2xl border border-[var(--white-06)] bg-[var(--surface-2)];
     box-shadow: var(--shadow-float);
   }
 
   .card-green {
-    @apply rounded-2xl border border-[var(--white-04)] bg-gradient-to-b from-[#2E3F38] to-[#24312C] p-6;
+    @apply rounded-2xl border border-[var(--white-04)] bg-gradient-to-b from-[#2E3F38] to-[#24312C];
   }
 
   .card-offer {
-    @apply rounded-2xl border border-[var(--white-04)] bg-gradient-to-b from-[#2E3F38] to-[#24312C] p-6;
+    @apply rounded-2xl border border-[var(--white-04)] bg-gradient-to-b from-[#2E3F38] to-[#24312C];
     background: var(--gradient-surface-soft);
   }
 
   .card-featured {
-    @apply rounded-2xl border border-[rgba(68,201,138,0.16)] bg-[var(--surface-green-2)] p-6;
+    @apply rounded-2xl border border-[rgba(68,201,138,0.16)] bg-[var(--surface-green-2)];
     box-shadow: 
       0 12px 28px rgba(0,0,0,0.36),
       0 0 24px rgba(47,163,95,0.08);
