@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find E:/Personal/ProvidersHub/getModelKey/src -type f -name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx -o -name *.json)",
+      "WebFetch(domain:www.getmodelkey.com)",
+      "mcp__MiniMax__web_search"
+    ]
+  }
+}

@@ -80,7 +80,7 @@ export function getRootMetadata(lang: 'en' | 'zh'): Metadata {
       ],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: titles[lang],
       description: descriptions[lang],
       images: ['/android-chrome-512x512.png'],

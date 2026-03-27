@@ -36,7 +36,7 @@ export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Met
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: titles[lang],
       description: descriptions[lang],
       images: [siteConfig.socialImage],
@@ -94,7 +94,7 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title,
       description,
       images: [siteConfig.socialImage],
