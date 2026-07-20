@@ -8,7 +8,7 @@
   ],
   "region": "global",
   "featured": false,
-  "officialKeyUrl": "https://x.ai/api",
+  "officialKeyUrl": "https://console.x.ai/",
   "officialSiteUrl": "https://x.ai/",
   "officialDocsUrl": "https://docs.x.ai/",
   "name": {
@@ -16,16 +16,18 @@
     "zh": "xAI"
   },
   "summary": {
-    "en": "AI research company founded by Elon Musk, developing Grok series of large language models with advanced reasoning capabilities.",
-    "zh": "由埃隆·马斯克创立的AI研究公司，开发Grok系列大型语言模型，具备先进的推理能力。"
+    "en": "AI research company founded by Elon Musk, developing Grok series of large language models. Latest Grok 4.5 offers 2x token efficiency over rivals at $2/M input tokens.",
+    "zh": "由埃隆·马斯克创立的AI研究公司，开发Grok系列大型语言模型。最新发布的 Grok 4.5 编程效率是同类模型两倍，输入仅 $2/M Tokens。"
   },
   "models": {
     "en": [
+      "Grok-4.5",
       "Grok-4",
       "Grok-3",
       "Grok-3-mini"
     ],
     "zh": [
+      "Grok-4.5",
       "Grok-4",
       "Grok-3",
       "Grok-3-mini"
@@ -42,15 +44,15 @@
     "grok",
     "埃隆马斯克"
   ],
-  "lastVerified": "2026-03-25",
+  "lastVerified": "2026-07-21",
   "seo": {
     "title": {
-      "en": "xAI Grok API Key - Access Grok Series LLMs | Get Model Key",
-      "zh": "xAI Grok API Key - 访问Grok系列大模型 | Get Model Key"
+      "en": "xAI Grok API Key - Get Grok 4.5 Access (July 2026) | Get Model Key",
+      "zh": "xAI Grok API Key - 获取 Grok 4.5 访问权限（2026年7月）| Get Model Key"
     },
     "description": {
-      "en": "Get xAI API key for access to Grok series large language models with advanced reasoning capabilities.",
-      "zh": "获取xAI API Key，访问具备先进推理能力的Grok系列大型语言模型。"
+      "en": "Get xAI API key for Grok 4.5 — the latest model with 2x token efficiency, ideal for coding and agent tasks. $2/M input tokens.",
+      "zh": "获取 xAI API Key，使用最新发布的 Grok 4.5，编程效率是竞品两倍，输入仅 $2/M Tokens，适合编程与 Agent 任务。"
     }
   },
   "img": "http://www.w3.org/2000/svg"

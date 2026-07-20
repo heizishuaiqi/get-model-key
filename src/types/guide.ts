@@ -5,11 +5,18 @@ export interface GuideSource {
   checkedAt: string;
 }
 
+export interface GuideCodeBlock {
+  language: string;
+  code: string;
+  caption?: Record<'en' | 'zh', string>;
+}
+
 export interface GuideSection {
   id: string;
   heading: Record<'en' | 'zh', string>;
   paragraphs: Record<'en' | 'zh', string[]>;
   bullets?: Record<'en' | 'zh', string[]>;
+  codeBlocks?: GuideCodeBlock[];
 }
 
 export interface GuideFaqItem {

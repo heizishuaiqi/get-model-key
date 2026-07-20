@@ -240,29 +240,6 @@
     }
   },
   {
-    "slug": "elevenlabs",
-    "region": "global",
-    "officialKeyUrl": "https://elevenlabs.io/subscription",
-    "officialSiteUrl": "https://elevenlabs.io/",
-    "officialDocsUrl": "https://elevenlabs.io/docs/api-reference/introduction",
-    "name": {
-      "en": "ElevenLabs",
-      "zh": "ElevenLabs"
-    },
-    "models": {
-      "en": [
-        "ElevenTTS V2",
-        "ElevenTTS V1",
-        "Voice Cloning"
-      ],
-      "zh": [
-        "ElevenTTS V2",
-        "ElevenTTS V1",
-        "语音克隆"
-      ]
-    }
-  },
-  {
     "slug": "google",
     "region": "global",
     "officialKeyUrl": "https://aistudio.google.com/app/apikey",
@@ -398,29 +375,6 @@
         "星火X1",
         "星火Max",
         "星火Pro"
-      ]
-    }
-  },
-  {
-    "slug": "indatalabs",
-    "region": "global",
-    "officialKeyUrl": "https://indatalabs.com/contact",
-    "officialSiteUrl": "https://indatalabs.com/",
-    "officialDocsUrl": "https://indatalabs.com/blog",
-    "name": {
-      "en": "InData Labs",
-      "zh": "InData Labs"
-    },
-    "models": {
-      "en": [
-        "Custom Enterprise LLM",
-        "RAG-optimized Models",
-        "Multilingual LLMs"
-      ],
-      "zh": [
-        "自定义企业LLM",
-        "RAG优化模型",
-        "多模态LLM"
       ]
     }
   },
@@ -615,15 +569,15 @@
     },
     "models": {
       "en": [
+        "Kimi K3",
         "kimi-k2.5",
         "kimi-k2-0711-preview",
-        "Moonshot-v1",
         "Moonshot-v1-128k"
       ],
       "zh": [
+        "Kimi K3",
         "kimi-k2.5",
         "kimi-k2-0711-preview",
-        "Moonshot-v1",
         "Moonshot-v1-128k"
       ]
     }
@@ -677,35 +631,6 @@
         "o4-mini",
         "o3",
         "o1"
-      ]
-    }
-  },
-  {
-    "slug": "perplexity",
-    "region": "global",
-    "officialKeyUrl": "https://www.perplexity.ai/settings/api",
-    "officialSiteUrl": "https://www.perplexity.ai/",
-    "officialDocsUrl": "https://docs.perplexity.ai/",
-    "name": {
-      "en": "Perplexity AI",
-      "zh": "Perplexity AI"
-    },
-    "models": {
-      "en": [
-        "sonar-pro",
-        "sonar-medium-online",
-        "pplx-70b-online",
-        "openai/gpt-5.4",
-        "google/gemini-3.1-pro",
-        "anthropic/claude-opus-4.6"
-      ],
-      "zh": [
-        "sonar-pro",
-        "sonar-medium-online",
-        "pplx-70b-online",
-        "openai/gpt-5.4",
-        "google/gemini-3.1-pro",
-        "anthropic/claude-opus-4.6"
       ]
     }
   },
@@ -880,33 +805,6 @@
     }
   },
   {
-    "slug": "tiangong",
-    "region": "china",
-    "officialKeyUrl": "https://sky-api.singularity-ai.com/",
-    "officialSiteUrl": "https://www.tiangong.cn/",
-    "officialDocsUrl": "https://docs.tiangong.cn/",
-    "name": {
-      "en": "Tiangong AI",
-      "zh": "天工AI"
-    },
-    "models": {
-      "en": [
-        "SkyWork 3.0",
-        "SkyChat 3.0",
-        "SkyImage 3.0",
-        "SkyVideo 3.0",
-        "SkyMusic"
-      ],
-      "zh": [
-        "天工模型3.0",
-        "天工对话3.0",
-        "天工图像3.0",
-        "天工视频3.0",
-        "天工音乐"
-      ]
-    }
-  },
-  {
     "slug": "together",
     "region": "global",
     "officialKeyUrl": "https://api.together.xyz/settings/api-keys",
@@ -938,7 +836,7 @@
   {
     "slug": "xai",
     "region": "global",
-    "officialKeyUrl": "https://x.ai/api",
+    "officialKeyUrl": "https://console.x.ai/",
     "officialSiteUrl": "https://x.ai/",
     "officialDocsUrl": "https://docs.x.ai/",
     "name": {
@@ -947,11 +845,13 @@
     },
     "models": {
       "en": [
+        "Grok-4.5",
         "Grok-4",
         "Grok-3",
         "Grok-3-mini"
       ],
       "zh": [
+        "Grok-4.5",
         "Grok-4",
         "Grok-3",
         "Grok-3-mini"

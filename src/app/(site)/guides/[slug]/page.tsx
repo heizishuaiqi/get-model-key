@@ -137,6 +137,23 @@ export default async function GuideDetailPage({ params }: Props) {
                     ))}
                   </ul>
                 )}
+                {section.codeBlocks && section.codeBlocks.length > 0 && (
+                  <div className="mt-4 space-y-3">
+                    {section.codeBlocks.map((block, i) => (
+                      <div key={i}>
+                        <div className="flex items-center gap-2 rounded-t-lg border border-b-0 border-white-06 bg-surface-2 px-4 py-2">
+                          <span className="text-caption font-mono text-text-muted">{block.language}</span>
+                        </div>
+                        <pre className="overflow-x-auto rounded-b-lg border border-white-06 bg-[#1a1d1b] p-4 text-body-sm leading-relaxed">
+                          <code className="font-mono text-text-secondary">{block.code}</code>
+                        </pre>
+                        {block.caption?.en && (
+                          <p className="mt-1 text-caption text-text-muted">{block.caption.en}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </Card>
             ))}
           </div>

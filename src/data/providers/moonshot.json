@@ -12,34 +12,34 @@
     "zh": "月之暗面"
   },
   "summary": {
-    "en": "Chinese AI startup with strong long-context and reasoning capabilities.",
-    "zh": "中国 AI 初创公司，具备强大的长上下文和推理能力。"
+    "en": "Chinese AI startup known for long-context and reasoning. Latest Kimi K3 (2.8T params, 1M context) rivals Claude Opus — now open source.",
+    "zh": "中国 AI 初创公司，擅长长上下文与推理。最新 Kimi K3（2.8万亿参数，100万上下文）性能对标 Claude Opus，已开源。"
   },
   "models": {
     "en": [
+      "Kimi K3",
       "kimi-k2.5",
       "kimi-k2-0711-preview",
-      "Moonshot-v1",
       "Moonshot-v1-128k"
     ],
     "zh": [
+      "Kimi K3",
       "kimi-k2.5",
       "kimi-k2-0711-preview",
-      "Moonshot-v1",
       "Moonshot-v1-128k"
     ]
   },
   "tags": ["chinese", "long-context", "reasoning", "startup"],
   "searchAliases": ["月之暗面", "kimi", "moonshot ai", "长上下文"],
-  "lastVerified": "2026-03-24",
+  "lastVerified": "2026-07-21",
   "seo": {
     "title": {
-      "en": "Moonshot AI API Key - Kimi Long Context Models | Get Model Key",
-      "zh": "月之暗面 API Key - Kimi 长上下文模型 | Get Model Key"
+      "en": "Moonshot AI API Key - Kimi K3 (2.8T Open Source, July 2026) | Get Model Key",
+      "zh": "月之暗面 API Key - Kimi K3 开源旗舰（2026年7月）| Get Model Key"
     },
     "description": {
-      "en": "Get Moonshot AI API key for Kimi models. Access long-context AI with strong reasoning capabilities.",
-      "zh": "获取月之暗面 API Key，访问 Kimi 模型。使用具备强大推理能力的长上下文 AI。"
+      "en": "Get Moonshot AI API key for Kimi K3 — 2.8 trillion parameter open-source model with 1M context, rivaling Claude Opus.",
+      "zh": "获取月之暗面 API Key，使用 Kimi K3：2.8万亿参数开源旗舰，100万上下文，性能对标 Claude Opus。"
     }
   },
   "offers": [
