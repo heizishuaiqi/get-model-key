@@ -1,0 +1,180 @@
+{
+  "slug": "claude-api-key-getting-started-2026",
+  "status": "published",
+  "topic": "api-key-setup",
+  "publishedAt": "2026-03-31",
+  "updatedAt": "2026-03-31",
+  "readingMinutes": 8,
+  "title": {
+    "en": "Claude API Key Setup Guide for New Teams",
+    "zh": "Claude API Key 开通与团队接入指南"
+  },
+  "excerpt": {
+    "en": "Set up Anthropic API access, verify request headers, and prepare rate-limit-aware integration from day one.",
+    "zh": "完成 Anthropic API 接入、请求头校验与限流预案，让团队从第一天就按生产标准使用 Claude。"
+  },
+  "tags": [
+    "anthropic",
+    "claude",
+    "api key",
+    "rate limits"
+  ],
+  "providerSlugs": [
+    "anthropic"
+  ],
+  "sections": [
+    {
+      "id": "account-setup",
+      "heading": {
+        "en": "1) Prepare organization-level access",
+        "zh": "1）先按组织维度准备访问"
+      },
+      "paragraphs": {
+        "en": [
+          "Before coding, define who owns Anthropic billing, who manages API keys, and which environments will use Claude. This avoids ad-hoc key sharing later.",
+          "For production, keep a clear owner for key rotation and incident response."
+        ],
+        "zh": [
+          "接入前先明确 Anthropic 账单归属、密钥管理员和各环境使用边界，避免后期临时共享密钥。",
+          "生产环境建议指定固定负责人，统一处理轮换与安全事件。"
+        ]
+      }
+    },
+    {
+      "id": "request-headers",
+      "heading": {
+        "en": "2) Verify required request headers",
+        "zh": "2）校验必填请求头"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic API requests require x-api-key and anthropic-version headers. If either is missing or incorrect, your first integration tests may fail even when the key is valid.",
+          "Start from the official curl example and only then port into SDK or framework wrappers."
+        ],
+        "zh": [
+          "Anthropic API 请求需要 x-api-key 和 anthropic-version 头。即使 Key 正确，只要头信息缺失或错误，也会导致接入失败。",
+          "建议先用官方 curl 示例打通，再迁移到 SDK 或框架封装。"
+        ]
+      }
+    },
+    {
+      "id": "sdk-integration",
+      "heading": {
+        "en": "3) Integrate SDK with server-side secrets",
+        "zh": "3）在服务端通过 SDK 接入"
+      },
+      "paragraphs": {
+        "en": [
+          "Install Anthropic SDKs in your backend service and load API keys from server environment variables. Avoid direct browser usage in production workflows.",
+          "Keep environment-level key separation so staging tests cannot drain production quotas."
+        ],
+        "zh": [
+          "在后端服务中安装 Anthropic SDK，并从服务端环境变量读取 Key。生产流程避免浏览器端直接持有密钥。",
+          "建议按环境隔离密钥，避免测试流量误耗生产额度。"
+        ]
+      }
+    },
+    {
+      "id": "rate-limits",
+      "heading": {
+        "en": "4) Design for rate limits from the start",
+        "zh": "4）从一开始就按限流模型设计"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic documents token-bucket rate limiting and recommends monitoring usage in Claude Console. Build retry logic with backoff and keep request bursts under control.",
+          "When you receive 429, check whether traffic spikes, per-model limits, or shared org usage caused the bottleneck."
+        ],
+        "zh": [
+          "Anthropic 文档说明其限流基于 token bucket，并建议在 Claude Console 监控使用情况。你需要实现带退避的重试并控制突发流量。",
+          "出现 429 时，要优先判断是瞬时突发、模型限额，还是组织内共享额度被占满。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Implement exponential backoff for retriable failures",
+          "Track 429 rate per model",
+          "Review Usage charts in Claude Console"
+        ],
+        "zh": [
+          "对可重试错误使用指数退避",
+          "按模型维度统计 429 比例",
+          "在 Claude Console 使用量图表中持续复盘"
+        ]
+      }
+    },
+    {
+      "id": "launch-checklist",
+      "heading": {
+        "en": "5) Pre-launch checklist",
+        "zh": "5）上线前检查清单"
+      },
+      "paragraphs": {
+        "en": [
+          "Before launch, verify key scope, logging, timeout strategy, and fallback behavior. This reduces firefighting during early traffic growth.",
+          "Treat model integration as an SRE concern: observability and key hygiene are as important as prompt quality."
+        ],
+        "zh": [
+          "上线前要核对密钥范围、日志字段、超时策略和降级策略，避免流量初期频繁救火。",
+          "模型接入不仅是 Prompt 工程，也属于稳定性工程：可观测性与密钥治理同样重要。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Why do I get errors even though my key looks valid?",
+        "zh": "为什么 Key 看起来正确，但请求还是报错？"
+      },
+      "answer": {
+        "en": "Check required headers first. Missing anthropic-version or malformed x-api-key headers are common setup issues.",
+        "zh": "先检查必填请求头。anthropic-version 缺失或 x-api-key 格式错误是高频原因。"
+      }
+    },
+    {
+      "question": {
+        "en": "How should I handle 429 responses?",
+        "zh": "遇到 429 应该怎么处理？"
+      },
+      "answer": {
+        "en": "Add exponential backoff with jitter, reduce burstiness, and monitor org/model-level usage in Claude Console.",
+        "zh": "实现带抖动的指数退避，降低突发请求，并在 Claude Console 查看组织与模型维度使用情况。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can staging and production share the same key?",
+        "zh": "测试环境和生产环境可以共用 Key 吗？"
+      },
+      "answer": {
+        "en": "Not recommended. Separate keys improve isolation, budget control, and incident recovery speed.",
+        "zh": "不建议。分离 Key 能提升隔离性、预算控制和故障恢复效率。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Anthropic API Getting Started",
+      "url": "https://docs.anthropic.com/en/api/getting-started",
+      "site": "Anthropic Docs",
+      "checkedAt": "2026-03-31"
+    },
+    {
+      "label": "Anthropic API Rate Limits",
+      "url": "https://platform.claude.com/docs/en/api/rate-limits",
+      "site": "Claude API Docs",
+      "checkedAt": "2026-03-31"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Claude API Key Setup Guide (2026) | Get Model Key",
+      "zh": "Claude API Key 接入指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn how to configure Claude API keys, required headers, and rate-limit-safe integration patterns.",
+      "zh": "了解 Claude API Key 配置、必填请求头和限流安全的接入实践。"
+    }
+  }
+}

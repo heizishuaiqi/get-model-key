@@ -32,12 +32,14 @@ export default function Header({ lang }: HeaderProps) {
     en: [
       { name: 'Home', href: '/' },
       { name: 'Providers', href: '/providers' },
+      { name: 'Guides', href: '/guides' },
       { name: 'Offers', href: '/offers' },
       { name: 'About', href: '/about' },
     ],
     zh: [
       { name: '\u9996\u9875', href: '/zh' },
       { name: '\u4f9b\u5e94\u5546', href: '/zh/providers' },
+      { name: '\u6307\u5357', href: '/zh/guides' },
       { name: '\u798f\u5229\u4e13\u9898', href: '/zh/offers' },
       { name: '\u5173\u4e8e', href: '/zh/about' },
     ],

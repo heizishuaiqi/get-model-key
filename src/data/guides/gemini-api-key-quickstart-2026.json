@@ -1,0 +1,180 @@
+{
+  "slug": "gemini-api-key-quickstart-2026",
+  "status": "published",
+  "topic": "api-key-setup",
+  "publishedAt": "2026-03-31",
+  "updatedAt": "2026-03-31",
+  "readingMinutes": 7,
+  "title": {
+    "en": "Gemini API Key Quickstart: From AI Studio to First Call",
+    "zh": "Gemini API Key 快速入门：从 AI Studio 到首个请求"
+  },
+  "excerpt": {
+    "en": "Set up a Gemini API key in Google AI Studio, secure it correctly, and verify your first request with minimal friction.",
+    "zh": "在 Google AI Studio 创建 Gemini API Key，完成安全配置，并快速验证首个请求。"
+  },
+  "tags": [
+    "gemini",
+    "google",
+    "api key",
+    "quickstart"
+  ],
+  "providerSlugs": [
+    "google"
+  ],
+  "sections": [
+    {
+      "id": "create-key",
+      "heading": {
+        "en": "1) Create your key in Google AI Studio",
+        "zh": "1）在 Google AI Studio 创建密钥"
+      },
+      "paragraphs": {
+        "en": [
+          "Google's Gemini API key is created in Google AI Studio. Start there, create a key, and map it to the right Google Cloud project if your team uses multiple projects.",
+          "For team operations, align project ownership early so billing and quota management stay predictable."
+        ],
+        "zh": [
+          "Gemini API 的密钥在 Google AI Studio 创建。建议先确认所属的 Google Cloud 项目，避免多项目环境下后续计费和配额混乱。",
+          "团队协作场景下，尽早明确项目归属和权限边界，会显著降低后续运维成本。"
+        ]
+      }
+    },
+    {
+      "id": "security-basics",
+      "heading": {
+        "en": "2) Apply key security basics",
+        "zh": "2）落实密钥安全基线"
+      },
+      "paragraphs": {
+        "en": [
+          "Google documentation emphasizes keeping API keys secure. Treat the key as a secret and avoid exposing it in client code or public repos.",
+          "Use environment variables and separate keys for dev/staging/production to reduce accidental misuse."
+        ],
+        "zh": [
+          "Google 文档明确强调 API key 的安全管理。把 Key 当作敏感凭据，不要出现在前端代码或公开仓库。",
+          "建议按开发、测试、生产环境拆分密钥，并统一走环境变量或密钥管理系统。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Keep keys server-side",
+          "Rotate keys on schedule",
+          "Avoid sharing one key across unrelated apps"
+        ],
+        "zh": [
+          "密钥仅服务端可见",
+          "建立周期轮换机制",
+          "不要让无关应用共用同一个密钥"
+        ]
+      }
+    },
+    {
+      "id": "env-setup",
+      "heading": {
+        "en": "3) Configure GEMINI_API_KEY in your environment",
+        "zh": "3）使用环境变量配置 GEMINI_API_KEY"
+      },
+      "paragraphs": {
+        "en": [
+          "The quickstart examples use GEMINI_API_KEY as the standard environment variable. Keep naming consistent across local and production environments to simplify deployment scripts.",
+          "If your stack supports secret scopes (e.g., per-service secrets), scope keys per service and revoke quickly when needed."
+        ],
+        "zh": [
+          "Gemini 快速开始示例使用 GEMINI_API_KEY 作为环境变量名。建议在本地和生产统一命名，减少部署脚本分支。",
+          "如果你的平台支持按服务隔离密钥，优先做服务级隔离，便于按需撤销。"
+        ]
+      }
+    },
+    {
+      "id": "first-call",
+      "heading": {
+        "en": "4) Run a minimal first call",
+        "zh": "4）执行最小化首轮调用"
+      },
+      "paragraphs": {
+        "en": [
+          "Use the official quickstart pattern to verify the key before integrating business prompts. This helps isolate setup issues from application logic.",
+          "Record latency and status code on this first call so your monitoring baseline starts early."
+        ],
+        "zh": [
+          "建议先用官方 quickstart 的最小请求验证密钥，再接入业务 Prompt，这样更容易区分“配置问题”和“业务逻辑问题”。",
+          "首次调用就记录耗时与状态码，有助于后续性能和稳定性基线对比。"
+        ]
+      }
+    },
+    {
+      "id": "ops",
+      "heading": {
+        "en": "5) Build quota and failure playbooks",
+        "zh": "5）建立配额与故障处理预案"
+      },
+      "paragraphs": {
+        "en": [
+          "Add alerting on unusual error spikes and quota usage so your team can respond before users are affected.",
+          "Document fallback behavior (for example, degraded mode or backup provider) for production reliability."
+        ],
+        "zh": [
+          "对异常错误峰值和配额消耗建立告警，尽量在用户感知前完成处置。",
+          "建议提前写好降级策略（如降级模型或备用供应商），保证生产可用性。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Can I call Gemini API directly from browser frontend?",
+        "zh": "Gemini API 可以直接在浏览器前端调用吗？"
+      },
+      "answer": {
+        "en": "For security, production systems should call Gemini from backend services and keep the API key server-side.",
+        "zh": "生产环境不建议前端直连，应由后端服务调用并在服务端保存密钥。"
+      }
+    },
+    {
+      "question": {
+        "en": "Should one key be shared by all environments?",
+        "zh": "开发、测试、生产可以共用一个 Key 吗？"
+      },
+      "answer": {
+        "en": "No. Use separate keys per environment to reduce risk and simplify incident response.",
+        "zh": "不建议。分环境使用不同 Key 才便于审计和风险隔离。"
+      }
+    },
+    {
+      "question": {
+        "en": "What should I monitor after launch?",
+        "zh": "上线后优先监控什么？"
+      },
+      "answer": {
+        "en": "Monitor error rates, latency, and quota usage together. Single metrics are often misleading.",
+        "zh": "建议联合监控错误率、响应时延和配额消耗，单一指标容易误判。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Gemini API Key Documentation",
+      "url": "https://ai.google.dev/gemini-api/docs/api-key",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-03-31"
+    },
+    {
+      "label": "Gemini API Quickstart",
+      "url": "https://ai.google.dev/gemini-api/docs/quickstart",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-03-31"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Gemini API Key Quickstart (2026) | Get Model Key",
+      "zh": "Gemini API Key 快速入门（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Create and secure your Gemini API key in Google AI Studio, then verify your first API call.",
+      "zh": "在 Google AI Studio 创建并安全配置 Gemini API Key，快速完成首个请求验证。"
+    }
+  }
+}

@@ -17,6 +17,13 @@ export default function ZhLayout({
 }>) {
   return (
     <html lang="zh-CN">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2107142319611832"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${inter.className} bg-bg-app text-text-primary`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4GRH9GT3V1"

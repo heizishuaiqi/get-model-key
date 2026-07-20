@@ -7,6 +7,7 @@ import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
 import { getActiveOffers, getAllProviders, getProviderBySlug } from '@/lib/providers';
+import { getGuidesByProviderSlug } from '@/lib/guides';
 import { getProviderMetadata } from '@/lib/seo';
 
 type Props = {
@@ -39,6 +40,7 @@ export default async function ZhProviderPage({ params }: Props) {
   }
 
   const activeOffers = getActiveOffers(provider);
+  const relatedGuides = await getGuidesByProviderSlug(provider.slug);
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
@@ -134,6 +136,24 @@ export default async function ZhProviderPage({ params }: Props) {
                     <Badge key={tag} variant="neutral">
                       {tag}
                     </Badge>
+                  ))}
+                </div>
+              </Card>
+            )}
+
+            {relatedGuides.length > 0 && (
+              <Card variant="standard">
+                <h2 className="mb-4 text-h2 text-text-primary">{'\u76f8\u5173\u6307\u5357'}</h2>
+                <div className="space-y-3">
+                  {relatedGuides.slice(0, 4).map((guide) => (
+                    <Link
+                      key={guide.slug}
+                      href={`/zh/guides/${guide.slug}`}
+                      className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 transition-colors hover:bg-surface-2"
+                    >
+                      <div className="text-body font-semibold text-text-primary">{guide.title.zh}</div>
+                      <div className="mt-1 text-body-sm text-text-secondary">{guide.excerpt.zh}</div>
+                    </Link>
                   ))}
                 </div>
               </Card>

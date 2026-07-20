@@ -1,11 +1,15 @@
 ﻿import { MetadataRoute } from 'next';
 import { getAllProviders, getSiteConfig } from '@/lib/providers';
+import { getPublishedGuides } from '@/lib/guides';
 
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteConfig = await getSiteConfig();
-  const providers = await getAllProviders();
+  const [siteConfig, providers, guides] = await Promise.all([
+    getSiteConfig(),
+    getAllProviders(),
+    getPublishedGuides(),
+  ]);
 
   const baseUrl = siteConfig.domain;
 
@@ -24,6 +28,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/offers/`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/guides/`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.85,
@@ -61,6 +71,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
+  const guidePages = guides.map((guide) => ({
+    url: `${baseUrl}/guides/${guide.slug}/`,
+    lastModified: new Date(guide.updatedAt),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
   const chinesePages = [
     {
       url: `${baseUrl}/zh/`,
@@ -76,6 +93,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/zh/offers/`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/zh/guides/`,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
       priority: 0.75,
@@ -113,5 +136,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...routes, ...providerPages, ...chinesePages, ...chineseProviderPages];
+  const chineseGuidePages = guides.map((guide) => ({
+    url: `${baseUrl}/zh/guides/${guide.slug}/`,
+    lastModified: new Date(guide.updatedAt),
+    changeFrequency: 'weekly' as const,
+    priority: 0.75,
+  }));
+
+  return [
+    ...routes,
+    ...providerPages,
+    ...guidePages,
+    ...chinesePages,
+    ...chineseProviderPages,
+    ...chineseGuidePages,
+  ];
 }

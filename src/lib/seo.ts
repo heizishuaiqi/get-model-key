@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import { getSiteConfig } from './providers';
+import { getGuideBySlug } from './guides';
 
 export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
@@ -87,6 +88,94 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
     },
     openGraph: {
       type: 'website',
+      url,
+      title,
+      description,
+      siteName: siteConfig.siteName,
+      locale: lang === 'en' ? 'en_US' : 'zh_CN',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [siteConfig.socialImage],
+    },
+  };
+}
+
+export async function getGuidesIndexMetadata(lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+  const siteConfig = await getSiteConfig();
+  const url = lang === 'en' ? `${siteConfig.domain}/guides/` : `${siteConfig.domain}/zh/guides/`;
+
+  const titles = {
+    en: `AI API Guides - Setup, Troubleshooting, and Best Practices | ${siteConfig.siteName}`,
+    zh: `AI API 指南 - 开通、排错与实践建议 | ${siteConfig.siteName}`,
+  };
+
+  const descriptions = {
+    en: 'Read practical guides for getting API keys, fixing common API errors, and choosing the right AI model provider.',
+    zh: '阅读实用 AI API 指南：快速开通 Key、排查常见错误，并选择合适的模型供应商。',
+  };
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    alternates: {
+      canonical: url,
+      languages: {
+        en: `${siteConfig.domain}/guides/`,
+        zh: `${siteConfig.domain}/zh/guides/`,
+        'x-default': `${siteConfig.domain}/guides/`,
+      },
+    },
+    openGraph: {
+      type: 'article',
+      url,
+      title: titles[lang],
+      description: descriptions[lang],
+      siteName: siteConfig.siteName,
+      locale: lang === 'en' ? 'en_US' : 'zh_CN',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[lang],
+      description: descriptions[lang],
+      images: [siteConfig.socialImage],
+    },
+  };
+}
+
+export async function getGuideMetadata(slug: string, lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+  const siteConfig = await getSiteConfig();
+  const guide = await getGuideBySlug(slug);
+
+  if (!guide || guide.status !== 'published') {
+    return {
+      title: 'Guide Not Found',
+      description: 'The requested guide was not found.',
+    };
+  }
+
+  const title = guide.seo?.title?.[lang] || guide.title[lang];
+  const description = guide.seo?.description?.[lang] || guide.excerpt[lang];
+  const url =
+    lang === 'en'
+      ? `${siteConfig.domain}/guides/${slug}/`
+      : `${siteConfig.domain}/zh/guides/${slug}/`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        en: `${siteConfig.domain}/guides/${slug}/`,
+        zh: `${siteConfig.domain}/zh/guides/${slug}/`,
+        'x-default': `${siteConfig.domain}/guides/${slug}/`,
+      },
+    },
+    openGraph: {
+      type: 'article',
       url,
       title,
       description,

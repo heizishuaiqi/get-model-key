@@ -1,0 +1,186 @@
+{
+  "slug": "openai-api-key-setup-2026",
+  "status": "published",
+  "topic": "api-key-setup",
+  "publishedAt": "2026-03-31",
+  "updatedAt": "2026-03-31",
+  "readingMinutes": 8,
+  "title": {
+    "en": "How to Create and Safely Use an OpenAI API Key (2026)",
+    "zh": "OpenAI API Key 开通与安全使用指南（2026）"
+  },
+  "excerpt": {
+    "en": "A practical walkthrough for creating an OpenAI API key, setting permissions, and avoiding common security mistakes.",
+    "zh": "从创建 OpenAI API Key 到权限设置与安全实践的完整步骤，帮助你快速上线并避免常见风险。"
+  },
+  "tags": [
+    "openai",
+    "api key",
+    "security",
+    "setup"
+  ],
+  "providerSlugs": [
+    "openai"
+  ],
+  "sections": [
+    {
+      "id": "where-to-create",
+      "heading": {
+        "en": "1) Create the key in the official dashboard",
+        "zh": "1）在官方后台创建 Key"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI keys are created in the API Keys page of the developer platform. Use your organization account instead of personal throwaway accounts when this key is for production.",
+          "After creation, store the secret immediately in a secure vault. Do not paste it into chat tools, tickets, or public docs."
+        ],
+        "zh": [
+          "OpenAI 的 Key 在开发者平台的 API Keys 页面创建。若用于生产环境，建议使用团队组织账号，不要使用临时个人账号。",
+          "创建后请立即保存到安全位置（例如密码管理器或密钥系统），不要把 Key 贴到聊天群、工单系统或公开文档。"
+        ]
+      }
+    },
+    {
+      "id": "permissions",
+      "heading": {
+        "en": "2) Set least-privilege permissions",
+        "zh": "2）按最小权限原则配置"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI supports key-level permission modes such as All, Restricted, and Read Only. For production apps, prefer Restricted and enable only the endpoints your service actually needs.",
+          "If multiple internal services use OpenAI, create separate keys per service. This limits blast radius and makes auditing easier."
+        ],
+        "zh": [
+          "OpenAI 支持 Key 级权限（如 All、Restricted、Read Only）。生产环境建议优先使用 Restricted，仅开放业务实际需要的接口。",
+          "如果多个内部服务都会调用 OpenAI，建议为每个服务单独创建 Key，既便于审计，也能降低单点泄露影响。"
+        ]
+      }
+    },
+    {
+      "id": "server-only",
+      "heading": {
+        "en": "3) Use server-side secrets only",
+        "zh": "3）只在服务端使用密钥"
+      },
+      "paragraphs": {
+        "en": [
+          "Never expose OPENAI_API_KEY in frontend JavaScript. Keep it in server environment variables and call OpenAI from your backend.",
+          "Use separate keys for development, staging, and production. Rotate keys periodically and immediately after team offboarding or suspected leakage."
+        ],
+        "zh": [
+          "不要把 OPENAI_API_KEY 暴露在前端代码中。正确做法是将 Key 放在服务端环境变量里，通过后端请求 OpenAI。",
+          "开发、测试、生产环境建议使用不同 Key。团队成员离职或疑似泄露时，要立刻轮换密钥。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Store keys in env vars or a secret manager",
+          "Never commit keys to Git",
+          "Rotate keys on a schedule"
+        ],
+        "zh": [
+          "使用环境变量或密钥管理系统保存 Key",
+          "禁止把 Key 提交到 Git 仓库",
+          "建立固定轮换机制"
+        ]
+      }
+    },
+    {
+      "id": "first-request",
+      "heading": {
+        "en": "4) Validate with a minimal request",
+        "zh": "4）用最小请求完成首轮验证"
+      },
+      "paragraphs": {
+        "en": [
+          "Before integrating business logic, send a minimal test call with your server key. This confirms that network policy, project settings, and permissions are all correct.",
+          "Log request IDs and response status codes for troubleshooting. Add alerting for repeated 401 and 429 errors."
+        ],
+        "zh": [
+          "在接业务逻辑之前，先用服务端 Key 发一个最小化测试请求，确认网络策略、项目配置和权限都正常。",
+          "建议记录请求 ID 与状态码，便于排查问题；同时对连续 401/429 建立告警。"
+        ]
+      }
+    },
+    {
+      "id": "operations",
+      "heading": {
+        "en": "5) Add operational guardrails",
+        "zh": "5）补齐运维防线"
+      },
+      "paragraphs": {
+        "en": [
+          "Set project budgets and monitor usage so quota issues are detected early. If your workload spikes, review rate-limit guidance and add retry with exponential backoff.",
+          "Treat key management as part of production readiness, not a one-time setup step."
+        ],
+        "zh": [
+          "给项目设置预算并持续监控用量，尽早发现额度问题。流量上升时要结合速率限制策略，并实现指数退避重试。",
+          "密钥管理不是一次性动作，而是生产可用性的长期工作。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Should I use one OpenAI key for all services?",
+        "zh": "所有服务共用一个 OpenAI Key 可以吗？"
+      },
+      "answer": {
+        "en": "It is safer to use separate keys per service or environment. Isolation makes incident response and auditing much easier.",
+        "zh": "不建议。按服务或环境拆分 Key 更安全，出问题时也更容易定位和止损。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I put OPENAI_API_KEY in client-side code?",
+        "zh": "能把 OPENAI_API_KEY 放在前端代码里吗？"
+      },
+      "answer": {
+        "en": "No. Client-side exposure can leak your key and allow unauthorized usage.",
+        "zh": "不能。前端暴露会导致 Key 泄露并产生未授权调用风险。"
+      }
+    },
+    {
+      "question": {
+        "en": "What should I do after a suspected key leak?",
+        "zh": "怀疑密钥泄露后应该怎么做？"
+      },
+      "answer": {
+        "en": "Immediately rotate the key, audit recent usage, and tighten permissions before restoring traffic.",
+        "zh": "第一时间轮换密钥，审计最近调用记录，并在恢复流量前收紧权限。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Assign API Key Permissions (OpenAI Help)",
+      "url": "https://help.openai.com/en/articles/8867743-assign-api-key-permissions",
+      "site": "OpenAI Help Center",
+      "checkedAt": "2026-03-31"
+    },
+    {
+      "label": "OpenAI API Rate Limits Guide",
+      "url": "https://developers.openai.com/api/docs/guides/rate-limits",
+      "site": "OpenAI Developers",
+      "checkedAt": "2026-03-31"
+    },
+    {
+      "label": "OpenAI API Error Codes",
+      "url": "https://developers.openai.com/api/docs/guides/error-codes",
+      "site": "OpenAI Developers",
+      "checkedAt": "2026-03-31"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "OpenAI API Key Setup Guide (2026) | Get Model Key",
+      "zh": "OpenAI API Key 开通指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn how to create, permission, and secure an OpenAI API key for production use.",
+      "zh": "了解 OpenAI API Key 的创建、权限配置与安全实践，适合生产环境快速落地。"
+    }
+  }
+}
