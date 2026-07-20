@@ -18,6 +18,7 @@ export default function ZhLayout({
   return (
     <html lang="zh-CN">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-2107142319611832" />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2107142319611832"
