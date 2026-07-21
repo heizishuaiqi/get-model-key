@@ -29,8 +29,8 @@
           "Fable 5 is designed specifically for long-running, autonomous, multi-step tasks — the kind that previously required frequent human check-ins. It features native adaptive thinking (always-on, not a toggle), a 1 million token context window, and multimodal vision support. On Cursor's internal CursorBench for real-world software engineering, Fable 5 scores higher than every other available model."
         ],
         "zh": [
-          "2026 年 6 月 9 日，Anthropic 同时发布了 Claude Fable 5 和 Claude Mythos 5。两款模型共享相同的底层架构（内部代号"Capybara"），但 Mythos 5 仅定向开放给政府和安全机构；Fable 5 是 Anthropic 向公众开放的最强模型。",
-          "Fable 5 属于全新的 Mythos 级别——比原旗舰 Opus 级别高一档。命名寓意鲜明：Fable（拉丁语 fabula，意为"被讲述的故事"）是 Mythos 基座的公开、安全版本，在保留 Mythos 全部推理和能力的基础上，叠加了商业部署所需的安全分类器。",
+          "2026 年 6 月 9 日，Anthropic 同时发布了 Claude Fable 5 和 Claude Mythos 5。两款模型共享相同的底层架构（内部代号 Capybara），但 Mythos 5 仅定向开放给政府和安全机构；Fable 5 是 Anthropic 向公众开放的最强模型。",
+          "Fable 5 属于全新的 Mythos 级别——比原旗舰 Opus 级别高一档。命名寓意鲜明：Fable（拉丁语 fabula，意为「被讲述的故事」）是 Mythos 基座的公开、安全版本，在保留 Mythos 全部推理和能力的基础上，叠加了商业部署所需的安全分类器。",
           "Fable 5 专为长时间运行、自主、多步骤的任务而设计——这类任务此前往往需要频繁的人工介入。它具备原生自适应思考（始终开启，无需手动切换）、100 万 Token 上下文窗口，以及多模态视觉理解能力。在 Cursor 针对真实软件工程场景的 CursorBench 基准中，Fable 5 得分高于所有其他可用模型。"
         ]
       }
@@ -278,7 +278,7 @@
         ],
         "zh": [
           "Fable 5 和 Mythos 5 共享完全相同的模型权重——它们是同一个神经网络。区别完全在于安全层。Fable 5 叠加了 Anthropic 标准的多层安全分类器，会拦截高风险类别的请求（特定网络安全、生物医学、武器相关话题），要么拒绝，要么回退到 Opus 4.8。",
-          "Mythos 5 没有公开安全护栏，仅通过 Anthropic 的"Project Glasswing"计划，向经过审核的政府网络防御承包商、关键基础设施运营商和合规生物医学研究机构定向开放，无法通过标准 API 购买。",
+          "Mythos 5 没有公开安全护栏，仅通过 Anthropic 的「Project Glasswing」计划，向经过审核的政府网络防御承包商、关键基础设施运营商和合规生物医学研究机构定向开放，无法通过标准 API 购买。",
           "对绝大多数开发者来说，Fable 5 在功能上与 Mythos 5 完全一致——安全分类器只影响合规商业应用不会触及的边界情况。如果遇到意外的 Opus 4.8 回退，几乎可以确定是特定的提示词模式触发了分类器，而非模型本身能力不足。"
         ]
       }
@@ -292,7 +292,7 @@
       },
       "answer": {
         "en": "They share the same underlying model weights ('Capybara' architecture). The difference is the safety layer: Fable 5 has standard commercial safety classifiers and is publicly available; Mythos 5 has no public guardrails and is restricted to vetted government and security institutions only.",
-        "zh": "两者共享相同的底层模型权重（"Capybara"架构）。区别在于安全层：Fable 5 具有标准商业安全分类器，面向公众开放；Mythos 5 没有公开安全护栏，仅面向经审核的政府和安全机构。"
+        "zh": "两者共享相同的底层模型权重（Capybara 架构）。区别在于安全层：Fable 5 具有标准商业安全分类器，面向公众开放；Mythos 5 没有公开安全护栏，仅面向经审核的政府和安全机构。"
       }
     },
     {
