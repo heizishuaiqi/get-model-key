@@ -113,6 +113,7 @@ export default async function GuideDetailPage({ params }: Props) {
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <Badge variant="brand">{TOPIC_LABELS[guide.topic]}</Badge>
               <span className="text-caption text-text-muted">{guide.readingMinutes} min read</span>
+              <span className="text-caption text-text-muted">Published: {guide.publishedAt}</span>
               <span className="text-caption text-text-muted">Updated: {guide.updatedAt}</span>
             </div>
             <h1 className="mb-4 text-h1 text-text-primary">{guide.title.en}</h1>

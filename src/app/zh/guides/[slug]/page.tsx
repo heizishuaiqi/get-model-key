@@ -113,6 +113,7 @@ export default async function ZhGuideDetailPage({ params }: Props) {
             <div className="mb-4 flex flex-wrap items-center gap-2">
               <Badge variant="brand">{TOPIC_LABELS[guide.topic]}</Badge>
               <span className="text-caption text-text-muted">{guide.readingMinutes} 分钟阅读</span>
+              <span className="text-caption text-text-muted">发布于：{guide.publishedAt}</span>
               <span className="text-caption text-text-muted">更新于：{guide.updatedAt}</span>
             </div>
             <h1 className="mb-4 text-h1 text-text-primary">{guide.title.zh}</h1>
