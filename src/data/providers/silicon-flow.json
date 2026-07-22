@@ -2,10 +2,10 @@
   "slug": "silicon-flow",
   "status": "active",
   "categories": [
-    "china",
-    "coding"
+    "aggregator",
+    "china"
   ],
-  "region": "china",
+  "region": "aggregator",
   "featured": true,
   "officialKeyUrl": "https://siliconflow.cn/console/apikey",
   "officialSiteUrl": "https://siliconflow.cn/",
@@ -15,8 +15,8 @@
     "zh": "硅基流动"
   },
   "summary": {
-    "en": "Chinese AI company focusing on coding and reasoning models with cost-effective solutions.",
-    "zh": "中国 AI 公司，专注于代码和推理模型，提供高性价比解决方案。"
+    "en": "China-based AI inference aggregator: one API key for many open-source and Chinese models (coding, chat, multimodal).",
+    "zh": "国内 AI 推理聚合平台：一把 API Key 可调用多款开源与中文模型（代码、对话、多模态）。"
   },
   "models": {
     "en": [
