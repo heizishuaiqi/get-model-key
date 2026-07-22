@@ -795,7 +795,7 @@
   {
     "slug": "silicon-flow",
     "region": "china",
-    "officialKeyUrl": "https://siliconflow.cn/console/apikey",
+    "officialKeyUrl": "https://cloud.siliconflow.cn/me/account/ak",
     "officialSiteUrl": "https://siliconflow.cn/",
     "officialDocsUrl": "https://docs.siliconflow.cn/",
     "name": {

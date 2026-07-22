@@ -7,7 +7,7 @@
   ],
   "region": "aggregator",
   "featured": true,
-  "officialKeyUrl": "https://siliconflow.cn/console/apikey",
+  "officialKeyUrl": "https://cloud.siliconflow.cn/me/account/ak",
   "officialSiteUrl": "https://siliconflow.cn/",
   "officialDocsUrl": "https://docs.siliconflow.cn/",
   "name": {
@@ -100,13 +100,13 @@
   },
   "howToGetKey": {
     "en": [
-      "Open the official Silicon Flow API key console at siliconflow.cn/console/apikey and sign in or register.",
+      "Open the official Silicon Flow API key page at cloud.siliconflow.cn/me/account/ak and sign in or register.",
       "Create a new API key in the console, then copy and store it securely—keys are usually shown only once.",
       "Call Silicon Flow’s documented API base URL with the key as a Bearer token, following their OpenAI-compatible or platform-specific examples.",
       "Keep the key in server-side environment variables; rotate it immediately if it is exposed."
     ],
     "zh": [
-      "打开硅基流动官方 API Key 控制台 siliconflow.cn/console/apikey，登录或注册账号。",
+      "打开硅基流动官方 API Key 页面 cloud.siliconflow.cn/me/account/ak，登录或注册账号。",
       "在控制台新建 API Key，并立即复制保存（密钥通常只显示一次）。",
       "按官方文档中的 API 地址，以 Bearer Token 方式调用（含 OpenAI 兼容或平台自有示例）。",
       "将 Key 放在服务端环境变量中；一旦泄露请立即在控制台轮换或作废。"
