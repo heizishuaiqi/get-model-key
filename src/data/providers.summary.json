@@ -1,28 +1,5 @@
 [
   {
-    "slug": "ai21",
-    "region": "global",
-    "officialKeyUrl": "https://studio.ai21.com/account/api-key",
-    "officialSiteUrl": "https://www.ai21.com/",
-    "officialDocsUrl": "https://docs.ai21.com/",
-    "name": {
-      "en": "AI21 Labs",
-      "zh": "AI21实验室"
-    },
-    "models": {
-      "en": [
-        "Jurassic-J2-Ultra",
-        "Jurassic-J2-Mid",
-        "Jurassic-J2-Fast"
-      ],
-      "zh": [
-        "Jurassic-J2-Ultra",
-        "Jurassic-J2-Mid",
-        "Jurassic-J2-Fast"
-      ]
-    }
-  },
-  {
     "slug": "alibaba",
     "region": "china",
     "officialKeyUrl": "https://dashscope.console.aliyun.com/apiKey",
@@ -794,7 +771,7 @@
   },
   {
     "slug": "silicon-flow",
-    "region": "china",
+    "region": "aggregator",
     "officialKeyUrl": "https://cloud.siliconflow.cn/me/account/ak",
     "officialSiteUrl": "https://siliconflow.cn/",
     "officialDocsUrl": "https://docs.siliconflow.cn/",
