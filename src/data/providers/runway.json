@@ -57,5 +57,63 @@
       "zh": "获取 Runway ML API Key，访问创意 AI。使用视频、图像和多媒体生成工具。"
     }
   },
-  "img": ""
+  "img": "",
+  "overview": {
+    "en": [
+      "Runway ML is a creative AI platform focused on video, image, and multimedia generation, with APIs for Gen-series models and related tools.",
+      "Teams use Runway for text-to-video, image workflows, and other production creative pipelines documented at docs.runwayml.com.",
+      "getModelKey only links the official Runway account API page. We do not sell Runway API access."
+    ],
+    "zh": [
+      "Runway ML 是面向视频、图像与多媒体生成的创意 AI 平台，提供 Gen 系列等模型及相关工具 API。",
+      "团队常用其做文生视频、图像工作流等生产创意链路，文档见 docs.runwayml.com。",
+      "getModelKey 只链到 Runway 官方账号 API 页面，不出售 Runway API 访问权限。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open https://app.runwayml.com/account/api and sign in to your Runway account.",
+      "Create or view API credentials in account settings as shown in the product.",
+      "Follow docs.runwayml.com to authenticate and call video/image endpoints.",
+      "Rotate credentials in the same account UI if they are exposed."
+    ],
+    "zh": [
+      "打开 https://app.runwayml.com/account/api 并登录 Runway 账号。",
+      "按产品界面在账号设置中创建或查看 API 凭证。",
+      "参照 docs.runwayml.com 完成鉴权并调用视频/图像接口。",
+      "若凭证泄露，请在同一账号界面轮换。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Runway mainly for video?",
+        "zh": "Runway 主要做视频吗？"
+      },
+      "answer": {
+        "en": "Video generation is a core focus, alongside image and other creative multimedia tools.",
+        "zh": "视频生成是核心能力之一，同时覆盖图像等其他创意多媒体工具。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I confirm plan limits?",
+        "zh": "套餐额度去哪确认？"
+      },
+      "answer": {
+        "en": "Only in Runway’s official app billing/account pages and docs—not on getModelKey.",
+        "zh": "请只在 Runway 官方应用账单/账号页与文档中确认，不以本站为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey sell Runway keys?",
+        "zh": "getModelKey 卖 Runway Key 吗？"
+      },
+      "answer": {
+        "en": "No. Obtain API access exclusively through Runway’s official account API page.",
+        "zh": "不卖。请只通过 Runway 官方账号 API 页获取访问权限。"
+      }
+    }
+  ]
 }

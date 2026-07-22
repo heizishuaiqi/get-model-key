@@ -58,5 +58,63 @@
       "zh": "获取 Cohere API Key，访问企业级 LLM。使用 Command R、嵌入模型和 RAG 能力。"
     }
   },
-  "img": "https://cohere.com/logo.svg"
+  "img": "https://cohere.com/logo.svg",
+  "overview": {
+    "en": [
+      "Cohere builds enterprise-oriented Command models plus Embed and Rerank, aimed at retrieval-augmented generation and production RAG stacks.",
+      "Teams choose Cohere when search quality, grounding, and enterprise deployment patterns matter as much as raw chat generation.",
+      "Cohere is an official model company, not a multi-vendor aggregator. Get Model Key only links to dashboard.cohere.com; we do not sell API keys."
+    ],
+    "zh": [
+      "Cohere 面向企业提供 Command 系列，以及 Embed、Rerank，侧重检索增强生成（RAG）与生产级检索链路。",
+      "当检索质量、内容 grounding 与企业部署方式与对话生成同样重要时，团队常会选择 Cohere。",
+      "Cohere 是官方模型公司，不是多厂商聚合站。Get Model Key 仅跳转 dashboard.cohere.com，不售卖 API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in at dashboard.cohere.com.",
+      "Open API Keys (dashboard.cohere.com/api-keys) and create a production or trial key as offered.",
+      "Store the key in your secret manager; rotate it if it is ever exposed.",
+      "Call Command, Embed, or Rerank endpoints with Authorization: Bearer <key> per docs.cohere.com."
+    ],
+    "zh": [
+      "登录 dashboard.cohere.com。",
+      "打开 API Keys（dashboard.cohere.com/api-keys），按控制台选项创建正式或试用密钥。",
+      "将密钥存入密钥管理系统；一旦泄露应立即轮换。",
+      "按 docs.cohere.com，使用 Authorization: Bearer <key> 调用 Command、Embed 或 Rerank。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Cohere mainly for chat or for RAG?",
+        "zh": "Cohere 更偏聊天还是 RAG？"
+      },
+      "answer": {
+        "en": "Cohere offers chat-capable Command models, but its enterprise positioning strongly emphasizes Embed, Rerank, and RAG workflows.",
+        "zh": "Cohere 提供可对话的 Command 模型，但其企业定位更强调 Embed、Rerank 与 RAG 工作流。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I create a Cohere API key?",
+        "zh": "在哪里创建 Cohere API Key？"
+      },
+      "answer": {
+        "en": "Create and manage keys at https://dashboard.cohere.com/api-keys. API reference is at https://docs.cohere.com/.",
+        "zh": "在 https://dashboard.cohere.com/api-keys 创建与管理密钥。接口说明见 https://docs.cohere.com/。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell Cohere credits?",
+        "zh": "Get Model Key 会售卖 Cohere 额度吗？"
+      },
+      "answer": {
+        "en": "No. This site only links to Cohere’s official dashboard. All purchases stay with Cohere.",
+        "zh": "不会。本站只链接 Cohere 官方控制台，一切购买与计费均在 Cohere 完成。"
+      }
+    }
+  ]
 }

@@ -56,5 +56,63 @@
       "zh": "获取 Anthropic Claude Fable 5 及全系列模型的官方 API Key。Fable 5：Mythos 级前沿模型，SWE-bench 95%，百万 Token 上下文。"
     }
   },
-  "img": "https://img.amz123.com/upload/image_cloud/202407/1721118005719027_Claude.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202407/1721118005719027_Claude.webp",
+  "overview": {
+    "en": [
+      "Anthropic builds the Claude family, including Claude Fable 5 (Mythos-class, public access), plus Sonnet, Opus, and Haiku lines for agents and coding.",
+      "Use the Anthropic Console when you want first-party Claude APIs with long context and adaptive thinking, without an AWS or third-party middle layer.",
+      "Anthropic is an official frontier-model provider. Get Model Key only links to console.anthropic.com; we do not sell Claude API keys."
+    ],
+    "zh": [
+      "Anthropic 打造 Claude 家族，包括对公众开放的 Mythos 级 Claude Fable 5，以及 Sonnet、Opus、Haiku 等，面向 Agent 与高要求编程。",
+      "若希望直连官方 Claude API、使用长上下文与自适应思考，而不经过 AWS 或第三方中间层，请使用 Anthropic Console。",
+      "Anthropic 是官方前沿模型提供方。Get Model Key 仅跳转 console.anthropic.com，不售卖 Claude API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign up or log in at console.anthropic.com.",
+      "Open Account → API Keys (console.anthropic.com/account/keys) and create a key.",
+      "Copy the secret immediately; Anthropic shows full key material only at creation time.",
+      "Call the Messages API with x-api-key (or SDK auth) using docs.anthropic.com guidance."
+    ],
+    "zh": [
+      "在 console.anthropic.com 注册或登录。",
+      "进入 Account → API Keys（console.anthropic.com/account/keys）创建密钥。",
+      "创建时立即复制完整密钥，之后通常无法再次查看明文。",
+      "按 docs.anthropic.com 说明，用 x-api-key 或官方 SDK 调用 Messages API。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Can one Anthropic key call Claude Fable 5 and older Claude models?",
+        "zh": "一把 Anthropic Key 能否同时调用 Fable 5 与其他 Claude？"
+      },
+      "answer": {
+        "en": "Keys issued in the Anthropic Console are used across Claude models your workspace is allowed to call; confirm Fable 5 availability in the console.",
+        "zh": "Console 签发的 Key 可用于工作区已开通的 Claude 模型；Fable 5 是否可用请在控制台确认。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I read Claude API docs?",
+        "zh": "Claude API 文档在哪里？"
+      },
+      "answer": {
+        "en": "Official docs are at https://docs.anthropic.com/. Keys are managed at https://console.anthropic.com/account/keys.",
+        "zh": "官方文档：https://docs.anthropic.com/。密钥管理：https://console.anthropic.com/account/keys。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key resell Anthropic credits?",
+        "zh": "Get Model Key 会转售 Anthropic 额度吗？"
+      },
+      "answer": {
+        "en": "No. This directory only points to Anthropic’s official console. Purchases happen on Anthropic.",
+        "zh": "不会。本目录只指向 Anthropic 官方控制台，充值与计费均在 Anthropic 完成。"
+      }
+    }
+  ]
 }

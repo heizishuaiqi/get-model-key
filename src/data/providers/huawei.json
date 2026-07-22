@@ -58,5 +58,63 @@
       "zh": "获取华为云盘古 API Key，访问企业级大语言模型。"
     }
   },
-  "img": "https://img.amz123.com/image_cloud/202303/1679294754434_%E5%8D%8E%E4%B8%BA%E4%BA%91.png"
+  "img": "https://img.amz123.com/image_cloud/202303/1679294754434_%E5%8D%8E%E4%B8%BA%E4%BA%91.png",
+  "overview": {
+    "en": [
+      "Huawei Cloud Pangu / ModelArts targets China enterprise scenarios with Pangu LLM, vision, audio, and multimodal offerings.",
+      "Access is typically managed through Huawei Cloud console resources rather than a consumer-style single-key marketplace.",
+      "Get Model Key only links the official console entry. We do not sell Huawei Cloud credentials or enterprise contracts."
+    ],
+    "zh": [
+      "华为云盘古 / ModelArts 面向中国企业场景，提供盘古大语言、视觉、语音与多模态等能力。",
+      "接入通常通过华为云控制台资源与企业账号体系完成，而非个人消费级“一键买 Key”模式。",
+      "Get Model Key 仅提供官方控制台入口。本站不销售华为云凭证，也不代理企业合同。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in to Huawei Cloud and open the Pangu / ModelArts console entry linked from this directory.",
+      "Enable the required AI services and complete any enterprise or real-name steps required by Huawei Cloud.",
+      "Create credentials or API access for your project following Huawei Cloud’s official documentation.",
+      "Store secrets in your cloud vault or server env; rotate them if leaked and monitor quotas in the console."
+    ],
+    "zh": [
+      "登录华为云，打开本站收录的盘古 / ModelArts 控制台入口。",
+      "开通所需 AI 服务，并按华为云要求完成企业认证或实名等步骤。",
+      "按官方文档为项目创建调用凭证或 API 访问方式。",
+      "密钥放入密钥托管或服务端环境变量；泄露即轮换，并在控制台关注配额。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Pangu aimed at individual hobbyists?",
+        "zh": "盘古主要面向个人开发者吗？"
+      },
+      "answer": {
+        "en": "It is positioned as an enterprise cloud offering. Availability and onboarding can differ by account type and region.",
+        "zh": "定位为企业级云服务。可用性与开通流程会因账号类型与区域而异。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where should I confirm models and pricing?",
+        "zh": "模型和价格以哪里为准？"
+      },
+      "answer": {
+        "en": "Always use Huawei Cloud’s product pages and docs. This site does not list prices.",
+        "zh": "请以华为云产品页与文档为准。本站不提供价格信息。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key provide Huawei API keys?",
+        "zh": "Get Model Key 能提供华为 API Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link the official console. Keys and billing are handled inside Huawei Cloud.",
+        "zh": "不能。本站只链接官方控制台，密钥与计费均在华为云内完成。"
+      }
+    }
+  ]
 }

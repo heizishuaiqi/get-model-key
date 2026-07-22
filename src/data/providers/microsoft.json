@@ -69,5 +69,63 @@
       "zh": "获取 Microsoft Azure AI API Key，访问企业级 AI 服务。在 Azure 上使用 OpenAI 模型，享受企业级安全。"
     }
   },
-  "img": "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png"
+  "img": "https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png",
+  "overview": {
+    "en": [
+      "Microsoft Azure OpenAI brings OpenAI models into Azure with enterprise identity, networking, and compliance controls.",
+      "You provision an Azure OpenAI (Cognitive Services) resource in the Azure portal, then use resource keys or Entra ID auth per Microsoft Learn docs.",
+      "Get Model Key links the Azure create blade only. We do not sell Azure subscriptions or OpenAI resource keys."
+    ],
+    "zh": [
+      "Microsoft Azure OpenAI 把 OpenAI 模型放到 Azure 上，配套企业身份、网络与合规能力。",
+      "在 Azure 门户创建 Azure OpenAI（Cognitive Services）资源后，按 Microsoft Learn 使用资源密钥或 Entra ID 鉴权。",
+      "Get Model Key 仅链接 Azure 创建页。本站不销售 Azure 订阅或资源密钥。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in to the Azure portal and open the Cognitive Services OpenAI create experience linked here.",
+      "Create an Azure OpenAI resource in an allowed region and wait until it is ready.",
+      "In the resource, copy keys or configure Microsoft Entra ID authentication as documented.",
+      "Deploy a model and call the Azure endpoint using the base URL and credentials from Microsoft Learn."
+    ],
+    "zh": [
+      "登录 Azure 门户，打开本站链接的 Cognitive Services OpenAI 创建流程。",
+      "在允许的区域创建 Azure OpenAI 资源并等待就绪。",
+      "在资源中复制密钥，或按文档配置 Microsoft Entra ID 鉴权。",
+      "部署模型后，使用 Microsoft Learn 中的 endpoint 与凭证发起调用。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "How is Azure OpenAI different from platform.openai.com?",
+        "zh": "Azure OpenAI 和 platform.openai.com 有何不同？"
+      },
+      "answer": {
+        "en": "Azure OpenAI runs under your Azure subscription with Azure IAM, networking, and regional controls. OpenAI.com is a separate product path.",
+        "zh": "Azure OpenAI 跑在你的 Azure 订阅下，具备 IAM、网络与区域管控；OpenAI.com 是另一条产品路径。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I see pricing?",
+        "zh": "价格在哪里看？"
+      },
+      "answer": {
+        "en": "Check Azure pricing and your subscription meters. This directory does not publish prices.",
+        "zh": "请查看 Azure 定价与订阅计量。本目录不公布价格。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key provide Azure keys?",
+        "zh": "Get Model Key 提供 Azure Key 吗？"
+      },
+      "answer": {
+        "en": "No. Keys are created inside your Azure resource after you provision the service officially.",
+        "zh": "不提供。你需在官方开通资源后，于自己的 Azure 资源中创建密钥。"
+      }
+    }
+  ]
 }

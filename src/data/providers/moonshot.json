@@ -1,7 +1,10 @@
 {
   "slug": "moonshot",
   "status": "active",
-  "categories": ["china", "reasoning"],
+  "categories": [
+    "china",
+    "reasoning"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://platform.moonshot.cn/console/api-keys",
@@ -29,8 +32,18 @@
       "Moonshot-v1-128k"
     ]
   },
-  "tags": ["chinese", "long-context", "reasoning", "startup"],
-  "searchAliases": ["月之暗面", "kimi", "moonshot ai", "长上下文"],
+  "tags": [
+    "chinese",
+    "long-context",
+    "reasoning",
+    "startup"
+  ],
+  "searchAliases": [
+    "月之暗面",
+    "kimi",
+    "moonshot ai",
+    "长上下文"
+  ],
   "lastVerified": "2026-07-21",
   "seo": {
     "title": {
@@ -62,5 +75,63 @@
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773278888123419_kimilogo.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773278888123419_kimilogo.webp",
+  "overview": {
+    "en": [
+      "Moonshot AI (月之暗面) builds the Kimi family of models, known for long-context reasoning. Recent materials highlight Kimi K3 with very large parameter scale and up to about 1M context, described as open source.",
+      "The Open Platform at platform.moonshot.cn provides API keys and docs for integrating Kimi into apps and agent workflows.",
+      "getModelKey only points to Moonshot’s official key console. We do not sell or redistribute Moonshot API keys."
+    ],
+    "zh": [
+      "月之暗面（Moonshot AI）打造 Kimi 系列模型，擅长长上下文与推理。近期资料提到 Kimi K3 参数规模极大、上下文约可达百万级，并已开源（以官网为准）。",
+      "开放平台 platform.moonshot.cn 提供 API Key 与文档，便于把 Kimi 接入应用与智能体工作流。",
+      "getModelKey 只跳转到月之暗面官方 Key 控制台，不出售、不转发 API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Go to https://platform.moonshot.cn/console/api-keys and sign in with a Moonshot account.",
+      "Create an API key in the console and save it offline immediately.",
+      "Use the key with Moonshot’s documented API base URL and model IDs.",
+      "Manage billing, quotas, and key rotation only inside the official platform."
+    ],
+    "zh": [
+      "打开 https://platform.moonshot.cn/console/api-keys ，使用月之暗面账号登录。",
+      "在控制台创建 API Key，并立即离线保存。",
+      "按官方文档的 API 地址与模型 ID 调用该 Key。",
+      "账单、额度与 Key 轮换请只在官方平台操作。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What is Kimi K3?",
+        "zh": "Kimi K3 是什么？"
+      },
+      "answer": {
+        "en": "A recent Moonshot flagship in the Kimi line, highlighted for long context and open-source release. Details change—check moonshot.cn and the platform docs.",
+        "zh": "Kimi 系列近期旗舰，强调长上下文与开源发布。细节以 moonshot.cn 与平台文档为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is new-user credit guaranteed?",
+        "zh": "新用户额度一定有吗？"
+      },
+      "answer": {
+        "en": "Any starter credit depends on Moonshot’s current policy (often after real-name checks). Confirm in the official console—getModelKey does not quote live prices.",
+        "zh": "体验额度以月之暗面当时政策为准（常需实名）。请在官方控制台确认；本站不提供实时报价。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey provide Moonshot keys?",
+        "zh": "getModelKey 会提供月之暗面 Key 吗？"
+      },
+      "answer": {
+        "en": "No. Use only the official API keys page linked from this directory.",
+        "zh": "不会。请只通过本站链到的官方 API Keys 页面自行创建。"
+      }
+    }
+  ]
 }

@@ -67,5 +67,63 @@
       "zh": "获取 Mistral AI API Key，访问高效的开源模型。使用 Mistral Large、Mixtral 和 Codestral。"
     }
   },
-  "img": "https://mistral.ai/_next/image?url=%2Fimg%2Fmistral-ai-logo.svg&w=256&q=75&dpl=9756fc778d0854fe8f6078b5c9f0f06b65f989c6e0e6b684a69c422e781e46a4363963303165363437303663356230303038373166373764"
+  "img": "https://mistral.ai/_next/image?url=%2Fimg%2Fmistral-ai-logo.svg&w=256&q=75&dpl=9756fc778d0854fe8f6078b5c9f0f06b65f989c6e0e6b684a69c422e781e46a4363963303165363437303663356230303038373166373764",
+  "overview": {
+    "en": [
+      "Mistral AI is a French AI lab known for efficient open-weight and commercial models with strong multilingual performance, including Mistral Large, Codestral, and vision models like Pixtral.",
+      "Developers use the Mistral API for chat, coding, and multimodal workloads through an OpenAI-compatible style interface documented at docs.mistral.ai.",
+      "getModelKey only links the official Mistral console and docs. We do not sell, generate, or broker API keys."
+    ],
+    "zh": [
+      "Mistral AI 是法国 AI 实验室，以高效开源权重与商用模型见长，多语言表现突出，产品线包括 Mistral Large、Codestral 以及 Pixtral 等视觉模型。",
+      "开发者可通过 Mistral API 做对话、编程与多模态任务，接口风格接近 OpenAI，文档见 docs.mistral.ai。",
+      "getModelKey 只提供官方控制台与文档入口，不出售、不代生成、不中转 API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open https://console.mistral.ai/api-keys and sign in or create a Mistral account.",
+      "Create a new API key in the console and copy it once; store it securely.",
+      "Call the official Mistral API base URL with your key as described in the docs.",
+      "Rotate or revoke the key in the same console if it is leaked or unused."
+    ],
+    "zh": [
+      "打开 https://console.mistral.ai/api-keys ，登录或注册 Mistral 账号。",
+      "在控制台创建新的 API Key，复制后妥善保存（通常只展示一次）。",
+      "按官方文档使用该 Key 调用 Mistral API 地址。",
+      "若 Key 泄露或不再使用，请在同一控制台轮换或吊销。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Where do I create a Mistral API key?",
+        "zh": "在哪里创建 Mistral API Key？"
+      },
+      "answer": {
+        "en": "Only on the official console at console.mistral.ai/api-keys. getModelKey does not issue keys.",
+        "zh": "请到官方控制台 console.mistral.ai/api-keys 创建。getModelKey 不发放 Key。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are Mistral models open source?",
+        "zh": "Mistral 模型都是开源的吗？"
+      },
+      "answer": {
+        "en": "Mistral offers both open-weight releases and hosted API models. Check the official site for the license of each model.",
+        "zh": "Mistral 同时提供开源权重与托管 API 模型，具体许可以官网对各模型的说明为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey sell Mistral keys?",
+        "zh": "getModelKey 卖 Mistral Key 吗？"
+      },
+      "answer": {
+        "en": "No. This site only links official pages so you can apply for keys yourself.",
+        "zh": "不卖。本站只链到官方页面，需自行在官网申请。"
+      }
+    }
+  ]
 }

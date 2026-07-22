@@ -1,7 +1,12 @@
 {
   "slug": "minimax",
   "status": "active",
-  "categories": ["china", "multimodal", "llm", "agent"],
+  "categories": [
+    "china",
+    "multimodal",
+    "llm",
+    "agent"
+  ],
   "region": "china",
   "featured": false,
   "officialKeyUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
@@ -49,8 +54,20 @@
       "智能体"
     ]
   },
-  "tags": ["chinese", "multimodal", "llm", "agent", "speech", "music"],
-  "searchAliases": ["minimax", "mini max", "海螺", "hailuo"],
+  "tags": [
+    "chinese",
+    "multimodal",
+    "llm",
+    "agent",
+    "speech",
+    "music"
+  ],
+  "searchAliases": [
+    "minimax",
+    "mini max",
+    "海螺",
+    "hailuo"
+  ],
   "lastVerified": "2026-03-25",
   "seo": {
     "title": {
@@ -82,5 +99,63 @@
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773302663477298_minimax.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773302663477298_minimax.webp",
+  "overview": {
+    "en": [
+      "MiniMax is a China multimodal AI platform covering text LLMs, speech, music, video (Hailuo), and agent-oriented tools.",
+      "API access is managed in the MiniMax open platform; interface keys live under the user-center key page.",
+      "Get Model Key only links https://platform.minimaxi.com/user-center/basic-information/interface-key. We do not sell MiniMax keys."
+    ],
+    "zh": [
+      "MiniMax 是中国多模态 AI 平台，覆盖文本大模型、语音、音乐、视频（海螺）与智能体相关能力。",
+      "API 在 MiniMax 开放平台管理；接口密钥位于用户中心的 interface-key 页面。",
+      "Get Model Key 仅链接 https://platform.minimaxi.com/user-center/basic-information/interface-key。本站不销售 MiniMax Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Register or sign in at platform.minimaxi.com.",
+      "Open User Center → basic information → interface-key (official key page).",
+      "Create an interface key and copy it into a secure server-side secret store.",
+      "Read https://platform.minimaxi.com/docs/guides/models-intro for model IDs and calling conventions."
+    ],
+    "zh": [
+      "在 platform.minimaxi.com 注册或登录。",
+      "进入用户中心 → 基本信息 → interface-key（官方密钥页）。",
+      "创建接口密钥，并保存到安全的服务端密钥存储。",
+      "阅读 https://platform.minimaxi.com/docs/guides/models-intro 确认模型 ID 与调用方式。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What modalities does MiniMax cover?",
+        "zh": "MiniMax 覆盖哪些模态？"
+      },
+      "answer": {
+        "en": "Text, speech, music, video/agent-related models appear in its catalog—confirm the live list in official docs.",
+        "zh": "文本、语音、音乐、视频/智能体等相关模型都在其产品线中，具体以官方文档实时目录为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are trial credits guaranteed?",
+        "zh": "试用额度一定有吗？"
+      },
+      "answer": {
+        "en": "Promotions vary and may require real-name verification. Rely on the official platform rules, not third-party claims.",
+        "zh": "活动会变化，且可能需实名。请以官方平台规则为准，勿轻信第三方承诺。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell MiniMax interface keys?",
+        "zh": "Get Model Key 出售 MiniMax 接口密钥吗？"
+      },
+      "answer": {
+        "en": "No. We only link the official interface-key page; billing stays on MiniMax.",
+        "zh": "不出售。本站只链接官方 interface-key 页，充值与计费在 MiniMax 完成。"
+      }
+    }
+  ]
 }

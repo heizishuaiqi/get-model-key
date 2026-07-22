@@ -56,5 +56,63 @@
       "zh": "获取 Replicate API Key，访问机器学习模型。使用简单的 API 运行数千个社区模型。"
     }
   },
-  "img": ""
+  "img": "",
+  "overview": {
+    "en": [
+      "Replicate hosts and runs machine learning models through a simple HTTP API, covering image, language, and other community and vendor models.",
+      "Billing is generally usage-based (pay for what you run). Exact rates belong on Replicate’s official pricing pages.",
+      "getModelKey links replicate.com account token settings only and does not sell Replicate API tokens."
+    ],
+    "zh": [
+      "Replicate 通过简洁的 HTTP API 托管并运行机器学习模型，覆盖图像、语言等社区与厂商模型。",
+      "计费通常按实际运行用量；具体费率以 Replicate 官方定价页为准。",
+      "getModelKey 只链到 replicate.com 账号 Token 设置，不出售 Replicate API Token。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in at https://replicate.com/account/api-tokens (create an account if needed).",
+      "Generate a new API token and copy it to a secure secret store.",
+      "Authenticate requests with the token per replicate.com/docs.",
+      "Delete unused tokens from the same account page to reduce risk."
+    ],
+    "zh": [
+      "登录 https://replicate.com/account/api-tokens （如无账号请先注册）。",
+      "生成新的 API Token，并保存到安全的密钥存储。",
+      "按 replicate.com/docs 用该 Token 鉴权发起请求。",
+      "在同一账号页删除闲置 Token，降低泄露风险。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What is Replicate best for?",
+        "zh": "Replicate 适合做什么？"
+      },
+      "answer": {
+        "en": "Running hosted ML models via API without managing your own GPU stack—especially image and community models.",
+        "zh": "适合通过 API 运行托管 ML 模型、免自建 GPU，尤其是图像与社区模型场景。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do you list Replicate prices here?",
+        "zh": "这里有 Replicate 报价吗？"
+      },
+      "answer": {
+        "en": "No. Check Replicate’s official pricing; we avoid quoting fees that may change.",
+        "zh": "没有。请查看 Replicate 官方定价；本站不引用易变费用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can getModelKey give me a Replicate token?",
+        "zh": "getModelKey 能给我 Replicate Token 吗？"
+      },
+      "answer": {
+        "en": "No. Create tokens only on the official account API tokens page.",
+        "zh": "不能。请只在官方账号 API Tokens 页面创建。"
+      }
+    }
+  ]
 }

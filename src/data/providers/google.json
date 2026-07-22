@@ -65,5 +65,63 @@
       "zh": "获取 Google AI Gemini 模型的官方 API Key。访问 Gemini Pro、Ultra 和 Flash，具备强大的多模态能力。"
     }
   },
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773304463226234_gemini.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773304463226234_gemini.webp",
+  "overview": {
+    "en": [
+      "Google AI (Gemini) delivers multimodal models for text, images, audio, and code, with deep ties to Google Cloud and AI Studio tooling.",
+      "Developers typically start in Google AI Studio to prototype prompts, then move the same API key into production SDKs against ai.google.dev endpoints.",
+      "Get Model Key only links the official AI Studio API key page. Keys are created and billed on Google’s side—this directory does not sell or proxy keys."
+    ],
+    "zh": [
+      "Google AI（Gemini）提供覆盖文本、图像、音频与代码的多模态模型，并与 Google Cloud、AI Studio 工具链深度集成。",
+      "开发者通常先在 Google AI Studio 调试提示词，再用同一把 API Key 通过 ai.google.dev 文档中的 SDK/接口接入生产环境。",
+      "Get Model Key 仅跳转到官方 AI Studio API Key 页面。密钥在 Google 侧创建与计费，本站不销售、不代发 Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open https://aistudio.google.com/app/apikey and sign in with a Google account.",
+      "Create an API key in AI Studio and restrict it to the projects or APIs you need when available.",
+      "Copy the key into a server-side environment variable; never embed it in client-side code.",
+      "Follow https://ai.google.dev/docs for base URLs, model IDs, and quota details before shipping."
+    ],
+    "zh": [
+      "打开 https://aistudio.google.com/app/apikey ，使用 Google 账号登录。",
+      "在 AI Studio 创建 API Key，并在可用选项中按项目或接口做权限限制。",
+      "将 Key 写入服务端环境变量，切勿硬编码到前端代码中。",
+      "接入前查阅 https://ai.google.dev/docs ，确认 base URL、模型 ID 与配额说明。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Where do I create a Gemini API key?",
+        "zh": "Gemini API Key 在哪里创建？"
+      },
+      "answer": {
+        "en": "Use Google AI Studio’s official key page: https://aistudio.google.com/app/apikey. Get Model Key only links that page.",
+        "zh": "请在 Google AI Studio 官方密钥页创建：https://aistudio.google.com/app/apikey。本站只提供该入口链接。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is AI Studio the same as Vertex AI?",
+        "zh": "AI Studio 和 Vertex AI 是一回事吗？"
+      },
+      "answer": {
+        "en": "They both access Google models but differ in console, enterprise controls, and billing. Confirm the product you need in Google’s docs.",
+        "zh": "二者都能调用 Google 模型，但控制台、企业管控与计费路径不同。请以 Google 官方文档确认你要使用的产品。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell Google AI keys?",
+        "zh": "Get Model Key 会售卖 Google AI Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only list the official key URL. Account, quotas, and payment are handled by Google.",
+        "zh": "不会。本站只收录官方 Key 入口；账号、配额与付费均在 Google 完成。"
+      }
+    }
+  ]
 }

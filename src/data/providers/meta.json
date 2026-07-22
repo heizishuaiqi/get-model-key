@@ -61,5 +61,63 @@
       "zh": "获取 Meta Llama 模型的官方 API Key。访问开源的 Llama 3 系列和 Code Llama。"
     }
   },
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773626305718364_meta.svg"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773626305718364_meta.svg",
+  "overview": {
+    "en": [
+      "Meta Llama is a widely used open-weight LLM family. Many teams self-host weights; Meta also documents API access paths on llama.com.",
+      "Official API access may involve an access or request flow rather than an instant consumer key—follow Meta’s current llama.com/api process.",
+      "Get Model Key only links https://www.llama.com/api. We do not distribute Llama weights licenses or sell Meta API keys."
+    ],
+    "zh": [
+      "Meta Llama 是广泛使用的开源权重大模型系列。许多团队自托管权重；Meta 也在 llama.com 提供 API 接入说明。",
+      "官方 API 可能走申请/开通流程，而非即时消费级发 Key——请以 llama.com/api 当前流程为准。",
+      "Get Model Key 仅链接 https://www.llama.com/api。本站不发放权重许可，也不出售 Meta API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Visit https://www.llama.com/api and review Meta’s current access instructions.",
+      "Complete any account, agreement, or access-request steps required on the official site.",
+      "If an API key or credential is issued, store it server-side and never commit it to git.",
+      "Use https://llama.meta.com/docs for model cards, usage terms, and integration details."
+    ],
+    "zh": [
+      "访问 https://www.llama.com/api ，阅读 Meta 当前的接入说明。",
+      "按官网要求完成账号、协议或访问申请等步骤。",
+      "若获发 API Key/凭证，仅存服务端，切勿提交到代码仓库。",
+      "查阅 https://llama.meta.com/docs 了解模型说明、使用条款与集成细节。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Do I need Meta’s API to use Llama?",
+        "zh": "使用 Llama 必须走 Meta API 吗？"
+      },
+      "answer": {
+        "en": "No. You can often self-host open weights under Meta’s license, or call Llama via third-party hosts. Official API is one option.",
+        "zh": "不必。可在许可范围内自托管开源权重，或通过第三方托管调用。官方 API 只是选项之一。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is key issuance always instant?",
+        "zh": "Key 一定是即时发放吗？"
+      },
+      "answer": {
+        "en": "Not necessarily. Meta’s API page may require access requests or eligibility checks—follow the live official flow.",
+        "zh": "不一定。官方 API 页可能需要申请或资格审核，请以当时官网流程为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does this site sell Meta Llama keys?",
+        "zh": "本站出售 Meta Llama Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link Meta’s official API page. All access decisions happen on Meta’s side.",
+        "zh": "不出售。本站只链接 Meta 官方 API 页，开通与否由 Meta 侧决定。"
+      }
+    }
+  ]
 }

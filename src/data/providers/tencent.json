@@ -1,7 +1,10 @@
 {
   "slug": "tencent",
   "status": "active",
-  "categories": ["china", "enterprise"],
+  "categories": [
+    "china",
+    "enterprise"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://cloud.tencent.com/product/hunyuan",
@@ -33,8 +36,18 @@
       "混元视觉版"
     ]
   },
-  "tags": ["chinese", "tencent", "ecosystem", "enterprise"],
-  "searchAliases": ["腾讯", "混元", "hunyuan", "tencent ai"],
+  "tags": [
+    "chinese",
+    "tencent",
+    "ecosystem",
+    "enterprise"
+  ],
+  "searchAliases": [
+    "腾讯",
+    "混元",
+    "hunyuan",
+    "tencent ai"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -66,5 +79,63 @@
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": "https://img.amz123.com/image_cloud/202303/1679294670308_%E8%85%BE%E8%AE%AF%E4%BA%91.jpg"
+  "img": "https://img.amz123.com/image_cloud/202303/1679294670308_%E8%85%BE%E8%AE%AF%E4%BA%91.jpg",
+  "overview": {
+    "en": [
+      "Tencent Hunyuan is Tencent’s large model family, with strong Chinese-language capability and ties into the Tencent Cloud ecosystem.",
+      "It is commonly used for Chinese chat, content generation, vision, and enterprise apps that already run on Tencent Cloud.",
+      "getModelKey only links Tencent’s official Hunyuan product pages. We do not sell API keys or cloud credentials."
+    ],
+    "zh": [
+      "腾讯混元是腾讯大模型系列，中文能力突出，并可与腾讯云生态协同。",
+      "常见于中文对话、内容生成、视觉能力，以及已部署在腾讯云上的企业应用。",
+      "getModelKey 仅链接腾讯混元官方产品页，不出售 API Key 或云账号凭证。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open the official Hunyuan product page on Tencent Cloud (cloud.tencent.com/product/hunyuan) and sign in with a Tencent Cloud account.",
+      "Enable the Hunyuan / related AI services in the console as required by Tencent’s onboarding flow.",
+      "Create API credentials or keys according to Tencent Cloud’s Hunyuan documentation (CAM, secret keys, or service-specific keys as applicable).",
+      "Store credentials in secure server config; never embed them in client apps or public repos."
+    ],
+    "zh": [
+      "打开腾讯云混元官方产品页 cloud.tencent.com/product/hunyuan，使用腾讯云账号登录。",
+      "按腾讯云开通流程在控制台启用混元及相关 AI 服务。",
+      "依照混元文档创建 API 凭证（可能涉及 CAM、密钥或产品专用 Key，以官方说明为准）。",
+      "将凭证保存在安全的服务端配置中，勿写入客户端或公开仓库。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Do I need a Tencent Cloud account for Hunyuan API access?",
+        "zh": "调用混元 API 需要腾讯云账号吗？"
+      },
+      "answer": {
+        "en": "Yes. Hunyuan API access is typically provisioned through Tencent Cloud. Follow the official product and docs pages.",
+        "zh": "通常需要。混元 API 一般通过腾讯云开通与管理，请按官方产品页与文档操作。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I buy a Hunyuan key on getModelKey?",
+        "zh": "能在 getModelKey 上购买混元 Key 吗？"
+      },
+      "answer": {
+        "en": "No. This directory only links official Tencent pages. Keys and billing stay on Tencent Cloud.",
+        "zh": "不能。本目录只链接腾讯官方页面；密钥与计费均在腾讯云完成。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where are quotas and pricing published?",
+        "zh": "额度与价格在哪里查看？"
+      },
+      "answer": {
+        "en": "On Tencent Cloud’s Hunyuan product, billing, and documentation pages. We do not quote fixed prices.",
+        "zh": "请以腾讯云混元产品、计费与文档页面为准。本站不提供固定报价。"
+      }
+    }
+  ]
 }

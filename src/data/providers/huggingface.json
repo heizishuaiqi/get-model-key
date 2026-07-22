@@ -56,5 +56,63 @@
       "zh": "获取 Hugging Face API Key，访问开源 AI 模型。使用数千个社区模型和推理端点。"
     }
   },
-  "img": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+  "img": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+  "overview": {
+    "en": [
+      "Hugging Face is the hub for open-source models, datasets, and Spaces, with tokens used for Hub access and Inference APIs.",
+      "A user access token from Settings → Tokens authenticates downloads, private repos, and many inference endpoints.",
+      "Get Model Key links https://huggingface.co/settings/tokens only. We never sell Hugging Face tokens."
+    ],
+    "zh": [
+      "Hugging Face 是开源模型、数据集与 Spaces 的集散地，Access Token 用于 Hub 访问与推理接口鉴权。",
+      "在 Settings → Tokens 创建的用户令牌，可用于下载、私有仓库及多种 Inference 端点。",
+      "Get Model Key 仅链接 https://huggingface.co/settings/tokens。本站从不出售 Hugging Face Token。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Log in at huggingface.co and open https://huggingface.co/settings/tokens.",
+      "Create a fine-grained or classic token with the minimum scopes you need.",
+      "Copy the token once shown and store it as HF_TOKEN or an equivalent secret.",
+      "Use it with the Hub client or Inference API as described at https://huggingface.co/docs."
+    ],
+    "zh": [
+      "登录 huggingface.co，打开 https://huggingface.co/settings/tokens。",
+      "按最小权限原则创建细粒度或经典 Token。",
+      "令牌展示后立即复制，保存为 HF_TOKEN 或等价密钥。",
+      "按 https://huggingface.co/docs 说明用于 Hub 客户端或 Inference API。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What is a Hugging Face token used for?",
+        "zh": "Hugging Face Token 有什么用？"
+      },
+      "answer": {
+        "en": "It authenticates Hub operations and many inference calls. Scope permissions carefully for each use case.",
+        "zh": "用于 Hub 操作与多种推理调用鉴权。请按场景精简授权范围。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Hugging Face only for downloading weights?",
+        "zh": "Hugging Face 只能下载权重吗？"
+      },
+      "answer": {
+        "en": "No. Besides the model hub, it also offers inference and deployment paths documented on the official site.",
+        "zh": "不是。除模型仓库外，官网还提供推理与部署相关能力，详见官方文档。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does this directory sell HF tokens?",
+        "zh": "本站出售 HF Token 吗？"
+      },
+      "answer": {
+        "en": "No. Create tokens only on Hugging Face’s official settings page via our link.",
+        "zh": "不出售。请通过本站链接在 Hugging Face 官方设置页自行创建。"
+      }
+    }
+  ]
 }

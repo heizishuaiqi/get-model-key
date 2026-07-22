@@ -59,5 +59,63 @@
       "zh": "获取零一万物 API Key，访问 Yi 系列开源模型。使用 Yi-34B、Yi-VL 和 Yi-Coder 模型。"
     }
   },
-  "img": "https://user-assets.sxlcdn.com/images/987821/Fm0n5qabe3QXeklo_mDhTy8pkp97.png?imageMogr2/strip/auto-orient/thumbnail/300x300%3E/quality/100!/format/png"
+  "img": "https://user-assets.sxlcdn.com/images/987821/Fm0n5qabe3QXeklo_mDhTy8pkp97.png?imageMogr2/strip/auto-orient/thumbnail/300x300%3E/quality/100!/format/png",
+  "overview": {
+    "en": [
+      "01.AI (零一万物), founded by Kai-Fu Lee, develops the Yi series of models with a focus on open-source and Chinese-capable LLMs.",
+      "The platform API lets developers call Yi chat, vision, and coding-oriented models for applications that need bilingual or Chinese-first behavior.",
+      "getModelKey only links platform.01.ai’s official API key console. We do not sell 01.AI keys."
+    ],
+    "zh": [
+      "零一万物（01.AI）由李开复创立，以 Yi 系列模型著称，侧重开源与中文能力。",
+      "开发者可通过平台 API 调用 Yi 对话、视觉与代码相关模型，适合需要中英双语或中文优先的应用。",
+      "getModelKey 仅链接 platform.01.ai 官方 API Key 控制台，不出售零一万物密钥。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open platform.01.ai/console/apikey and sign in or create a 01.AI platform account.",
+      "Generate an API key in the console and copy it immediately to a secure store.",
+      "Use the key with the base URL and request format described in 01.AI’s official docs.",
+      "Do not share keys in client apps; rotate them if they appear in logs or Git history."
+    ],
+    "zh": [
+      "打开 platform.01.ai/console/apikey，登录或注册零一万物平台账号。",
+      "在控制台生成 API Key，并立即复制到安全存储。",
+      "按 01.AI 官方文档中的 Base URL 与请求格式使用该 Key。",
+      "勿在客户端暴露密钥；若出现在日志或 Git 历史中请立即轮换。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Are Yi weights and the 01.AI API the same thing?",
+        "zh": "Yi 开源权重和 01.AI API 是一回事吗？"
+      },
+      "answer": {
+        "en": "No. Open weights can be self-hosted; the platform API is a hosted service with its own keys, quotas, and terms.",
+        "zh": "不是。开源权重可自托管；平台 API 是托管服务，有独立的密钥、额度与条款。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can getModelKey create a 01.AI key for me?",
+        "zh": "getModelKey 能代开零一万物 Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link the official console. You must create the key yourself on platform.01.ai.",
+        "zh": "不能。我们只链接官方控制台，密钥需在 platform.01.ai 自行创建。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where is billing information published?",
+        "zh": "计费信息在哪里公布？"
+      },
+      "answer": {
+        "en": "On 01.AI’s official platform and documentation. We do not list fixed prices on getModelKey.",
+        "zh": "请查看零一万物官方平台与文档。getModelKey 不列出固定价格。"
+      }
+    }
+  ]
 }

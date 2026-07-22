@@ -53,5 +53,63 @@
       "zh": "获取小米AI API Key，访问其大语言模型和语音助手功能。"
     }
   },
-  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773866034487264_xiaomi.webp"
+  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773866034487264_xiaomi.webp",
+  "overview": {
+    "en": [
+      "Xiaomi AI capabilities are exposed mainly through Xiaomi’s open platform (open.mi.com), which is broader than a single “LLM API key” console.",
+      "Depending on the product, you may work with open-platform apps, voice/assistant integrations, or other AI-related services—not only a chat completions endpoint.",
+      "getModelKey links the official open.mi.com entry. We do not sell Xiaomi credentials or API keys."
+    ],
+    "zh": [
+      "小米 AI 相关能力主要经由小米开放平台（open.mi.com）对外提供，形态往往比单一「大模型 API Key 控制台」更广。",
+      "按具体产品不同，可能涉及开放平台应用、语音/助手接入或其他 AI 服务，而不只是聊天补全接口。",
+      "getModelKey 链接至 open.mi.com 官方入口，不出售小米凭证或 API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Go to open.mi.com, register or sign in as a Xiaomi Open Platform developer.",
+      "Create or select an application/project for the Xiaomi AI or related capability you need.",
+      "Generate credentials (AppId, keys, or tokens) as shown in that product’s open-platform docs—not all products use a single “API key” field.",
+      "Configure callbacks and permissions per the docs, and keep secrets only on trusted servers."
+    ],
+    "zh": [
+      "访问 open.mi.com，注册或登录小米开放平台开发者账号。",
+      "为所需的小米 AI 或相关能力创建/选择应用或项目。",
+      "按该产品开放文档生成凭证（AppId、密钥或 Token 等；并非所有产品都只有单一 API Key 字段）。",
+      "按文档配置回调与权限，密钥仅保存在可信服务端。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is open.mi.com only for LLM API keys?",
+        "zh": "open.mi.com 只提供大模型 API Key 吗？"
+      },
+      "answer": {
+        "en": "No. It is Xiaomi’s broader open platform. AI LLM access may be one of several product paths—check the docs for the service you need.",
+        "zh": "不是。它是更广义的小米开放平台。大模型只是可能路径之一，请按目标服务查阅对应文档。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey issue Xiaomi AI keys?",
+        "zh": "getModelKey 会发放小米 AI 密钥吗？"
+      },
+      "answer": {
+        "en": "No. We only link official pages. All credentials are created inside Xiaomi’s open platform.",
+        "zh": "不会。我们只链接官方页面；所有凭证需在小米开放平台内创建。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I confirm which AI APIs are available?",
+        "zh": "如何确认有哪些 AI 接口可用？"
+      },
+      "answer": {
+        "en": "Use open.mi.com documentation and product listings. Availability and naming can change; treat official docs as source of truth.",
+        "zh": "以 open.mi.com 文档与产品目录为准。可用性与命名会变化，请以官方文档为唯一依据。"
+      }
+    }
+  ]
 }

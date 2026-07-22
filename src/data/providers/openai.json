@@ -55,5 +55,63 @@
       "zh": "查看 OpenAI 官方 API Key 入口、常用模型和适用场景。"
     }
   },
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773381100778523_ChatGPT-Logo.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773381100778523_ChatGPT-Logo.webp",
+  "overview": {
+    "en": [
+      "OpenAI provides widely used GPT and reasoning models via the Platform API, with a mature SDK ecosystem and extensive documentation.",
+      "Typical use cases include chat, coding assistants, tool calling, and multimodal apps through platform.openai.com.",
+      "getModelKey is a directory: we link the official API keys page and do not sell, mint, or share OpenAI keys."
+    ],
+    "zh": [
+      "OpenAI 通过 Platform API 提供广泛使用的 GPT 与推理模型，SDK 生态成熟、文档完善。",
+      "常见场景包括对话、编程助手、工具调用与多模态应用，入口在 platform.openai.com。",
+      "getModelKey 是目录站：只链到官方 API Keys 页面，不出售、不代开、不分享 OpenAI Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Visit https://platform.openai.com/api-keys and sign in to your OpenAI account.",
+      "Click create new secret key, name it, and copy the value before leaving the page.",
+      "Set usage limits in the Platform billing/settings area as needed, then call the official API with the key.",
+      "If the key leaks, revoke it immediately and create a replacement in the same UI."
+    ],
+    "zh": [
+      "访问 https://platform.openai.com/api-keys 并登录 OpenAI 账号。",
+      "创建新的 secret key，命名后离开页面前务必复制保存。",
+      "按需在 Platform 账单/设置中配置用量限制，再用该 Key 调用官方 API。",
+      "若泄露，请立即在同一界面吊销并重新创建。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is a ChatGPT Plus subscription the same as an API key?",
+        "zh": "ChatGPT Plus 订阅等于 API Key 吗？"
+      },
+      "answer": {
+        "en": "No. ChatGPT product plans and Platform API billing are separate. Create keys only on platform.openai.com.",
+        "zh": "不是。ChatGPT 产品订阅与 Platform API 计费相互独立，请在 platform.openai.com 创建 Key。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where should I read model and pricing details?",
+        "zh": "模型和价格看哪里？"
+      },
+      "answer": {
+        "en": "Always use OpenAI’s official docs and pricing pages. getModelKey does not publish live prices.",
+        "zh": "请以 OpenAI 官方文档与定价页为准。getModelKey 不公布实时价格。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does this site sell OpenAI keys?",
+        "zh": "本站卖 OpenAI Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link official OpenAI pages so you can create keys yourself.",
+        "zh": "不卖。我们只提供官方链接，请自行创建。"
+      }
+    }
+  ]
 }

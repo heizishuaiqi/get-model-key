@@ -59,5 +59,63 @@
       "zh": "获取百度文心 API Key，访问中文 AI 模型。使用文心系列，集成百度搜索能力。"
     }
   },
-  "img": "https://img.amz123.com/upload/image_cloud/202603/1773309669906093_%E6%96%87%E5%BF%83.webp"
+  "img": "https://img.amz123.com/upload/image_cloud/202603/1773309669906093_%E6%96%87%E5%BF%83.webp",
+  "overview": {
+    "en": [
+      "Baidu ERNIE (Wenxin) focuses on Chinese language understanding, with model tiers from reasoning-oriented ERNIE 5.0 Thinking down to Speed and Lite variants.",
+      "It is a common choice for China-region products that want Baidu Cloud integration and search-related strengths in Chinese NLP.",
+      "ERNIE APIs are issued through Baidu AI Cloud’s official console, not an aggregator. Get Model Key only links there and does not sell keys."
+    ],
+    "zh": [
+      "百度文心（ERNIE）侧重中文理解，覆盖从偏推理的文心 5.0 Thinking 到 Speed、Lite 等不同档位。",
+      "适合需要接入百度智能云、并希望在中文 NLP 场景发挥搜索相关优势的国内产品。",
+      "文心 API 由百度智能云官方控制台签发，并非聚合平台。Get Model Key 仅提供官方入口，不售卖密钥。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Log in to Baidu AI Cloud and open the ERNIE product overview in the console.",
+      "From console.bce.baidu.com AI → ERNIE, complete application/activation for the models you need.",
+      "Create application credentials (API Key / Secret Key) as shown in the Baidu console for your ERNIE app.",
+      "Call ERNIE endpoints with those credentials following cloud.baidu.com ERNIE documentation."
+    ],
+    "zh": [
+      "登录百度智能云，打开控制台中的文心（ERNIE）产品概览。",
+      "在 console.bce.baidu.com 的 AI → 文心 路径下，完成所需模型的开通/申请。",
+      "按控制台指引为文心应用创建 API Key / Secret Key 等凭证。",
+      "依照百度云文心文档，用上述凭证调用接口。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Wenxin the same as ERNIE for API access?",
+        "zh": "文心和大模型 API 里的 ERNIE 是一回事吗？"
+      },
+      "answer": {
+        "en": "Yes—Wenxin is the Chinese product name; API docs commonly use ERNIE. Use the Baidu AI Cloud console for keys.",
+        "zh": "是。文心是产品中文名，接口文档常写作 ERNIE。密钥请在百度智能云控制台申请。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where is the official Baidu ERNIE entry?",
+        "zh": "百度文心官方入口在哪里？"
+      },
+      "answer": {
+        "en": "Start at the ERNIE overview in Baidu AI Cloud: console.bce.baidu.com under AI → ERNIE. Docs are on cloud.baidu.com.",
+        "zh": "从百度智能云 AI → 文心概览页进入（console.bce.baidu.com）。文档见 cloud.baidu.com。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell Baidu API keys?",
+        "zh": "Get Model Key 会售卖百度 API Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link to Baidu’s official console. Key creation and billing remain on Baidu Cloud.",
+        "zh": "不会。本站只链接百度官方控制台，创建密钥与计费都在百度智能云完成。"
+      }
+    }
+  ]
 }

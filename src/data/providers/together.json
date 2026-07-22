@@ -58,5 +58,63 @@
       "zh": "获取 Together AI API Key，访问开源模型云平台。以有竞争力的价格运行 Llama、Mixtral 等模型。"
     }
   },
-  "img": "http://www.w3.org/2000/svg"
+  "img": "http://www.w3.org/2000/svg",
+  "overview": {
+    "en": [
+      "Together AI is a cloud platform for running and serving open-source models—chat, code, rerank, and more—via a unified developer API.",
+      "It fits teams that want hosted open-source inference without managing their own GPU clusters, with OpenAI-style integration patterns in many cases.",
+      "getModelKey only links Together’s official API keys settings. We do not sell or host Together keys."
+    ],
+    "zh": [
+      "Together AI 是托管运行开源模型的云平台，可通过统一开发者 API 调用对话、代码、重排序等能力。",
+      "适合希望使用托管开源推理、又不愿自建 GPU 集群的团队；许多接入方式接近 OpenAI 风格。",
+      "getModelKey 仅链接 Together 官方 API Keys 设置页，不出售、不托管 Together 密钥。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Visit api.together.xyz/settings/api-keys (or the Together console API keys section) and sign in.",
+      "Create a new API key, copy it once, and save it in a password manager or secrets store.",
+      "Send requests to Together’s documented API base URL using the key for authentication.",
+      "Rotate keys periodically and keep them out of frontend code and public repositories."
+    ],
+    "zh": [
+      "打开 api.together.xyz/settings/api-keys（或控制台 API Keys 区域）并登录。",
+      "创建新的 API Key，复制一次后保存到密码管理器或密钥库。",
+      "按官方文档的 API 地址发起请求，并使用该 Key 完成鉴权。",
+      "定期轮换密钥，勿放入前端代码或公开仓库。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Together AI the same as downloading open-source weights locally?",
+        "zh": "Together AI 等于本地下载开源权重吗？"
+      },
+      "answer": {
+        "en": "No. Together hosts models in the cloud. You call their API; local self-hosting is a separate path via open weights elsewhere.",
+        "zh": "不是。Together 在云端托管模型，你调用其 API；本地自托管需另寻开源权重部署。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey sell Together API keys?",
+        "zh": "getModelKey 出售 Together API Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link the official keys page. Create keys directly in Together’s console.",
+        "zh": "不出售。我们只链接官方密钥页，请在 Together 控制台自行创建。"
+      }
+    },
+    {
+      "question": {
+        "en": "How do I verify model list and pricing?",
+        "zh": "如何确认模型列表与价格？"
+      },
+      "answer": {
+        "en": "Use Together’s official website and docs. Catalog and billing change over time; we do not invent prices.",
+        "zh": "请查阅 Together 官网与文档。目录与计费会变化，本站不编造价格。"
+      }
+    }
+  ]
 }

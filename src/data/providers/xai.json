@@ -55,5 +55,63 @@
       "zh": "获取 xAI API Key，使用最新发布的 Grok 4.5，编程效率是竞品两倍，输入仅 $2/M Tokens，适合编程与 Agent 任务。"
     }
   },
-  "img": "http://www.w3.org/2000/svg"
+  "img": "http://www.w3.org/2000/svg",
+  "overview": {
+    "en": [
+      "xAI is the lab behind the Grok model family, including newer Grok generations such as Grok 4.5 for chat, coding, and agent-style tasks.",
+      "API access is managed through xAI’s developer console, where you create keys and review model availability for your account.",
+      "getModelKey only links to console.x.ai and official docs. We do not sell Grok keys or resell xAI access."
+    ],
+    "zh": [
+      "xAI 是 Grok 系列模型的研发方，包括较新的 Grok 代际（如 Grok 4.5），可用于对话、编程与 Agent 类任务。",
+      "API 访问通过 xAI 开发者控制台管理，可在其中创建密钥并查看账号可用的模型。",
+      "getModelKey 仅链接 console.x.ai 与官方文档，不出售 Grok Key，也不转售 xAI 访问权限。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open console.x.ai and sign in with an eligible xAI developer account.",
+      "Create an API key in the console, then copy and store it securely.",
+      "Call xAI’s documented API endpoints with the key as required by their auth scheme.",
+      "Keep keys server-side only; revoke and recreate them if compromised."
+    ],
+    "zh": [
+      "打开 console.x.ai，使用符合条件的 xAI 开发者账号登录。",
+      "在控制台创建 API Key，复制后妥善保存。",
+      "按官方文档的鉴权方式调用 xAI API 端点。",
+      "仅在服务端使用密钥；若泄露请立即吊销并重建。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Does an xAI API key unlock every Grok version?",
+        "zh": "一把 xAI API Key 能用所有 Grok 版本吗？"
+      },
+      "answer": {
+        "en": "Availability depends on your account and xAI’s current catalog. Confirm models and limits in the official console and docs.",
+        "zh": "取决于账号权限与 xAI 当前目录。请在官方控制台与文档中确认可用模型与限额。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I purchase a Grok key from getModelKey?",
+        "zh": "能从 getModelKey 购买 Grok Key 吗？"
+      },
+      "answer": {
+        "en": "No. This site only links the official xAI console. Keys are created and billed by xAI.",
+        "zh": "不能。本站只链接 xAI 官方控制台；密钥由 xAI 创建并计费。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where should I look for Grok pricing?",
+        "zh": "Grok 价格应在哪里查看？"
+      },
+      "answer": {
+        "en": "Only on xAI’s official pricing or console materials. Published rates change; we do not hard-code prices here.",
+        "zh": "仅以 xAI 官方定价或控制台信息为准。公开费率会变动，本站不写死价格。"
+      }
+    }
+  ]
 }

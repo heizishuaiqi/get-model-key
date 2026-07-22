@@ -58,5 +58,63 @@
       "zh": "获取 Stability AI API Key，访问图像生成模型。使用 Stable Diffusion 系列和其他创意 AI 工具。"
     }
   },
-  "img": ""
+  "img": "",
+  "overview": {
+    "en": [
+      "Stability AI builds generative models for images, video, audio, and related creative workflows, best known for the Stable Diffusion family.",
+      "Developers use the Stability platform API to generate and edit media programmatically—product visuals, video clips, and other creative pipelines.",
+      "getModelKey only links to Stability’s official account keys page. We do not sell or issue Stability API keys."
+    ],
+    "zh": [
+      "Stability AI 提供图像、视频、音频等生成式创意模型，以 Stable Diffusion 系列最为人知。",
+      "开发者可通过 Stability 平台 API 以编程方式生成与编辑媒体内容，用于产品图、短视频等创意链路。",
+      "getModelKey 仅链接至 Stability 官方密钥页面，不出售、不代发 Stability API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Go to platform.stability.ai/account/keys and sign in with your Stability AI account.",
+      "Create an API key in Account → Keys, then copy it and store it somewhere safe.",
+      "Authenticate requests with the key as described in Stability’s platform docs (headers and endpoints may differ by API version).",
+      "Restrict key usage to backend services and revoke or rotate keys if they leak."
+    ],
+    "zh": [
+      "访问 platform.stability.ai/account/keys，使用 Stability AI 账号登录。",
+      "在 Account → Keys 中创建 API Key，复制后妥善保存。",
+      "按官方平台文档完成鉴权（不同 API 版本的 Header 与端点可能不同）。",
+      "仅在服务端使用 Key；泄露后请立即吊销或轮换。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What is Stability AI mainly used for via API?",
+        "zh": "通过 API 使用 Stability AI 主要用于什么？"
+      },
+      "answer": {
+        "en": "Primarily image and video generation (and related creative APIs). Check the official docs for current model and endpoint coverage.",
+        "zh": "主要用于图像与视频生成及相关创意接口。具体模型与端点以官方文档为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does getModelKey provide Stability credits or keys?",
+        "zh": "getModelKey 提供 Stability 额度或密钥吗？"
+      },
+      "answer": {
+        "en": "No. We only point you to the official keys page. Billing and credits are managed entirely on Stability’s platform.",
+        "zh": "不提供。我们只指向官方密钥页；计费与额度完全在 Stability 平台管理。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I find current pricing?",
+        "zh": "如何查看当前价格？"
+      },
+      "answer": {
+        "en": "Use Stability’s official pricing and platform pages. Rates and plans change; we do not list fixed prices.",
+        "zh": "请查看 Stability 官方定价与平台页面。费率与套餐会变化，本站不列出固定价格。"
+      }
+    }
+  ]
 }

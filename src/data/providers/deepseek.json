@@ -53,5 +53,63 @@
       "zh": "获取 DeepSeek-V3、Coder 和 R1 模型的官方 API Key。强大的代码和推理能力。"
     }
   },
-  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773806237995049_deepseek.webp"
+  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773806237995049_deepseek.webp",
+  "overview": {
+    "en": [
+      "DeepSeek provides coding- and reasoning-strong models such as DeepSeek-V3.2, Coder, R1, and Reasoner via its own platform APIs.",
+      "Developers often pick DeepSeek for cost-effective Chinese-friendly coding agents and long reasoning traces without hosting the weights themselves.",
+      "DeepSeek Platform is the official first-party API, not an aggregator. Get Model Key only links to platform.deepseek.com; we do not sell keys."
+    ],
+    "zh": [
+      "DeepSeek（深度求索）通过自有平台提供偏代码与推理的模型，如 DeepSeek-V3.2、Coder、R1、Reasoner。",
+      "开发者常因高性价比、中文友好与较强编程/推理能力而选择 DeepSeek，无需自托管权重。",
+      "DeepSeek Platform 是官方直连 API，并非聚合平台。Get Model Key 仅跳转 platform.deepseek.com，不售卖密钥。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Register or sign in at platform.deepseek.com.",
+      "Open API Keys at https://platform.deepseek.com/api_keys and create a new key.",
+      "Copy the key when it is displayed and keep it out of public repos.",
+      "Call DeepSeek’s OpenAI-compatible chat APIs with that key using platform.deepseek.com API docs."
+    ],
+    "zh": [
+      "在 platform.deepseek.com 注册或登录。",
+      "打开 https://platform.deepseek.com/api_keys 并创建新密钥。",
+      "在展示时复制保存，勿提交到公开代码仓库。",
+      "按平台 API 文档，用该 Key 调用 DeepSeek 兼容 OpenAI 的对话接口。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Are DeepSeek APIs OpenAI-compatible?",
+        "zh": "DeepSeek API 是否兼容 OpenAI？"
+      },
+      "answer": {
+        "en": "Yes. The platform documents OpenAI-compatible endpoints; use your DeepSeek key and the official base URL.",
+        "zh": "是。平台文档提供兼容 OpenAI 的接口；使用 DeepSeek Key 与官方 base URL 即可。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which DeepSeek models need a platform key?",
+        "zh": "哪些 DeepSeek 模型需要平台 Key？"
+      },
+      "answer": {
+        "en": "Official cloud access to V3.2, Coder, R1, and Reasoner lines is via platform API keys. Check the console for current model IDs.",
+        "zh": "V3.2、Coder、R1、Reasoner 等云端调用通过平台 API Key。当前模型 ID 以控制台为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell DeepSeek API keys?",
+        "zh": "Get Model Key 会售卖 DeepSeek API Key 吗？"
+      },
+      "answer": {
+        "en": "No. We only link to https://platform.deepseek.com/api_keys. Keys and billing are handled by DeepSeek.",
+        "zh": "不会。本站只链接 https://platform.deepseek.com/api_keys，密钥与计费均由 DeepSeek 处理。"
+      }
+    }
+  ]
 }

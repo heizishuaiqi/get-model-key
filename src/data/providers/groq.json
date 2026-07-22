@@ -56,5 +56,63 @@
       "zh": "获取 Groq API Key，访问高速 AI 推理。使用 LPU 架构获得超快的模型响应。"
     }
   },
-  "img": ""
+  "img": "",
+  "overview": {
+    "en": [
+      "Groq focuses on ultra-fast inference using its LPU hardware stack, which is popular for low-latency chat, agents, and batch workloads.",
+      "The console exposes API keys and OpenAI-compatible style endpoints so many existing clients can switch base URL with minimal code changes.",
+      "Get Model Key links console.groq.com/keys only. We do not issue Groq keys or resell inference credit."
+    ],
+    "zh": [
+      "Groq 依托 LPU 硬件做超低延迟推理，适合对响应速度敏感的对话、Agent 与批处理场景。",
+      "控制台提供 API Key，并常见 OpenAI 兼容风格接口，许多现有客户端只需改 base URL 即可接入。",
+      "Get Model Key 仅链接 console.groq.com/keys。本站不发放 Groq Key，也不转售推理额度。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in at https://console.groq.com/keys (create a Groq account if needed).",
+      "Generate a new API key and store it securely—treat it like a password.",
+      "Point your client at Groq’s documented API base URL and send Authorization: Bearer <key>.",
+      "Check https://console.groq.com/docs for model names, rate limits, and usage dashboards."
+    ],
+    "zh": [
+      "打开 https://console.groq.com/keys 登录（如无账号先注册）。",
+      "生成新的 API Key，并妥善保存，视同密码管理。",
+      "将客户端指向文档中的 Groq API 地址，使用 Authorization: Bearer <key> 调用。",
+      "查阅 https://console.groq.com/docs 确认模型名、限流与用量面板。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Why choose Groq over other hosts?",
+        "zh": "为什么选择 Groq？"
+      },
+      "answer": {
+        "en": "Teams often pick Groq for LPU-backed speed and simple key-based API access. Compare latency and model coverage against your workload.",
+        "zh": "许多团队看重其 LPU 加速与简单的 Key 接入方式。请结合自身负载对比延迟与模型覆盖。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I reuse an OpenAI SDK with Groq?",
+        "zh": "Groq 能用 OpenAI SDK 吗？"
+      },
+      "answer": {
+        "en": "Often yes if you set Groq’s documented base URL and your Groq API key. Verify request fields per Groq docs.",
+        "zh": "通常可以：配置文档中的 base URL 与 Groq API Key。具体字段以 Groq 文档为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does this site sell Groq API keys?",
+        "zh": "本站出售 Groq API Key 吗？"
+      },
+      "answer": {
+        "en": "No. Get Model Key only points to the official keys console. Billing stays on Groq.",
+        "zh": "不出售。Get Model Key 只指向官方 Keys 控制台，计费在 Groq 完成。"
+      }
+    }
+  ]
 }

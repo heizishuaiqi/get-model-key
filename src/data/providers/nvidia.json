@@ -57,5 +57,63 @@
       "zh": "访问NVIDIA的NeMo框架和预训练Megatron大型语言模型，用于企业AI解决方案。"
     }
   },
-  "img": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/NVIDIA-AI-Enterprise/nvidia-ai-enterprise-logo.svg"
+  "img": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/NVIDIA-AI-Enterprise/nvidia-ai-enterprise-logo.svg",
+  "overview": {
+    "en": [
+      "NVIDIA AI spans GPUs, NGC catalog assets, and software stacks such as the NeMo framework and Megatron-style large language model tooling for training and deployment.",
+      "Developers typically discover models, containers, and enterprise AI resources via catalog.ngc.nvidia.com and NVIDIA’s AI documentation portals.",
+      "getModelKey links official NVIDIA AI / NGC entry points only. We do not sell NGC keys, API tokens, or enterprise licenses."
+    ],
+    "zh": [
+      "NVIDIA AI 覆盖 GPU、NGC 目录资源，以及 NeMo 框架、Megatron 类大模型工具链等训练与部署软件栈。",
+      "开发者通常通过 catalog.ngc.nvidia.com 与 NVIDIA AI 文档门户发现模型、容器与企业 AI 资源。",
+      "getModelKey 仅链到 NVIDIA AI / NGC 官方入口，不出售 NGC Key、API Token 或企业许可。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open https://catalog.ngc.nvidia.com/ and sign in with an NVIDIA NGC / developer account.",
+      "Accept catalog terms and generate or copy the NGC API key / token from your NGC account settings as shown officially.",
+      "Use that credential with NGC CLI, containers, or documented NVIDIA AI endpoints.",
+      "Revoke compromised keys in the NGC account UI and never commit them to public repos."
+    ],
+    "zh": [
+      "打开 https://catalog.ngc.nvidia.com/ ，使用 NVIDIA NGC / 开发者账号登录。",
+      "按官方指引接受目录条款，并在 NGC 账号设置中生成或复制 API Key / Token。",
+      "将该凭证用于 NGC CLI、容器拉取或文档中的 NVIDIA AI 接口。",
+      "泄露后请在 NGC 账号中吊销，切勿提交到公开仓库。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is NGC the same as ChatGPT-style API keys?",
+        "zh": "NGC Key 和 ChatGPT 那种 API Key 一样吗？"
+      },
+      "answer": {
+        "en": "NGC credentials mainly unlock NVIDIA’s catalog, containers, and related AI tooling—not a generic third-party chat reseller key.",
+        "zh": "NGC 凭证主要用于 NVIDIA 目录、容器及相关 AI 工具链，不是第三方聊天 Key 转售。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where are NeMo docs?",
+        "zh": "NeMo 文档在哪？"
+      },
+      "answer": {
+        "en": "See NVIDIA’s NeMo documentation at docs.nvidia.com/nemo-framework/ and related AI portals.",
+        "zh": "见 docs.nvidia.com/nemo-framework/ 及相关 NVIDIA AI 文档站点。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can getModelKey sell NVIDIA AI access?",
+        "zh": "getModelKey 能卖 NVIDIA AI 访问权限吗？"
+      },
+      "answer": {
+        "en": "No. Register and obtain credentials only through official NVIDIA / NGC pages.",
+        "zh": "不能。请只通过 NVIDIA / NGC 官方页面注册并获取凭证。"
+      }
+    }
+  ]
 }

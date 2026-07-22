@@ -1,7 +1,10 @@
 {
   "slug": "silicon-flow",
   "status": "active",
-  "categories": ["china", "coding"],
+  "categories": [
+    "china",
+    "coding"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://siliconflow.cn/console/apikey",
@@ -39,8 +42,18 @@
       "VisualGLM"
     ]
   },
-  "tags": ["coding", "chinese", "cost-effective", "reasoning"],
-  "searchAliases": ["硅基流动", "siliconflow", "cogagent", "codegeex"],
+  "tags": [
+    "coding",
+    "chinese",
+    "cost-effective",
+    "reasoning"
+  ],
+  "searchAliases": [
+    "硅基流动",
+    "siliconflow",
+    "cogagent",
+    "codegeex"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -72,5 +85,63 @@
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773863557988656_siliconflow.webp"
+  "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773863557988656_siliconflow.webp",
+  "overview": {
+    "en": [
+      "Silicon Flow (硅基流动) is a China-based AI inference platform that aggregates many coding and reasoning models behind one API, including open-source and Chinese-language options.",
+      "It suits teams that want a single key for multiple models—code assistants, chat, and multimodal workloads—without registering separately with every upstream vendor.",
+      "getModelKey only links to Silicon Flow’s official console and docs. We do not sell, mint, or proxy API keys; create and manage keys on siliconflow.cn."
+    ],
+    "zh": [
+      "硅基流动（Silicon Flow）是面向中国开发者的 AI 推理与模型聚合平台，一个接口可调用多种代码与推理相关模型。",
+      "适合希望用一把 Key 试用多款开源/中文模型、减少多平台分别注册的团队，常见场景包括代码助手、对话与多模态调用。",
+      "getModelKey 仅引导至硅基流动官方控制台与文档，不出售、不代开、不转发 API Key；请在 siliconflow.cn 自行创建与管理。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open the official Silicon Flow API key console at siliconflow.cn/console/apikey and sign in or register.",
+      "Create a new API key in the console, then copy and store it securely—keys are usually shown only once.",
+      "Call Silicon Flow’s documented API base URL with the key as a Bearer token, following their OpenAI-compatible or platform-specific examples.",
+      "Keep the key in server-side environment variables; rotate it immediately if it is exposed."
+    ],
+    "zh": [
+      "打开硅基流动官方 API Key 控制台 siliconflow.cn/console/apikey，登录或注册账号。",
+      "在控制台新建 API Key，并立即复制保存（密钥通常只显示一次）。",
+      "按官方文档中的 API 地址，以 Bearer Token 方式调用（含 OpenAI 兼容或平台自有示例）。",
+      "将 Key 放在服务端环境变量中；一旦泄露请立即在控制台轮换或作废。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is Silicon Flow an official console for every model it lists?",
+        "zh": "硅基流动是其列表中每个模型的官方控制台吗？"
+      },
+      "answer": {
+        "en": "No. It is an aggregator/inference platform. Billing, quotas, and availability follow Silicon Flow’s policies and may differ from each model’s original vendor.",
+        "zh": "不是。它是聚合/推理平台。计费、额度与可用性以硅基流动规则为准，可能与原厂商控制台不同。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can getModelKey create a Silicon Flow key for me?",
+        "zh": "getModelKey 能帮我创建硅基流动 Key 吗？"
+      },
+      "answer": {
+        "en": "No. This site only links the official key page. You must create the key in Silicon Flow’s own console.",
+        "zh": "不能。本站只提供官方 Key 页面链接，密钥需在硅基流动控制台自行创建。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where should I check pricing and free credits?",
+        "zh": "价格与免费额度以哪里为准？"
+      },
+      "answer": {
+        "en": "Always check Silicon Flow’s official site and docs. Offers and rates change; we do not publish fixed prices here.",
+        "zh": "请以硅基流动官网与文档为准。活动与费率会变动，本站不公布固定价格。"
+      }
+    }
+  ]
 }

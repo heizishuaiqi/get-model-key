@@ -1,7 +1,10 @@
 {
   "slug": "alibaba",
   "status": "active",
-  "categories": ["china", "cloud"],
+  "categories": [
+    "china",
+    "cloud"
+  ],
   "region": "china",
   "featured": true,
   "officialKeyUrl": "https://dashscope.console.aliyun.com/apiKey",
@@ -37,8 +40,18 @@
       "通义千问2-Coder"
     ]
   },
-  "tags": ["chinese", "multimodal", "alibaba", "cloud"],
-  "searchAliases": ["阿里", "通义", "qwen", "tongyi"],
+  "tags": [
+    "chinese",
+    "multimodal",
+    "alibaba",
+    "cloud"
+  ],
+  "searchAliases": [
+    "阿里",
+    "通义",
+    "qwen",
+    "tongyi"
+  ],
   "lastVerified": "2026-03-24",
   "seo": {
     "title": {
@@ -70,5 +83,63 @@
       "verifiedAt": "2026-03-26"
     }
   ],
-  "img": "https://img.amz123.com/image_cloud/202303/1679294613467_%E9%98%BF%E9%87%8C%E4%BA%91.jpg"
+  "img": "https://img.amz123.com/image_cloud/202303/1679294613467_%E9%98%BF%E9%87%8C%E4%BA%91.jpg",
+  "overview": {
+    "en": [
+      "Alibaba’s Qwen (Tongyi) models run on DashScope, covering text, vision, audio, and coding variants with tight Alibaba Cloud integration.",
+      "Choose DashScope when you need Chinese-first multimodal models or want Qwen inside the same cloud account as other Alibaba services.",
+      "DashScope is Alibaba Cloud’s official model gateway, not a third-party aggregator. Get Model Key only links to the DashScope console; we do not sell keys."
+    ],
+    "zh": [
+      "阿里通义千问（Qwen）通过百炼/DashScope 提供服务，覆盖文本、视觉、音频与代码等能力，并与阿里云深度集成。",
+      "若需要中文优先的多模态模型，或希望与其他阿里云产品共用同一账号体系，可选择 DashScope。",
+      "DashScope 是阿里云官方模型网关，不是第三方聚合站。Get Model Key 仅跳转官方控制台，不售卖 API Key。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in to Alibaba Cloud and open the DashScope console.",
+      "Go to https://dashscope.console.aliyun.com/apiKey and create an API key.",
+      "Copy the key once shown and store it outside shared chat logs.",
+      "Enable needed Qwen models and call DashScope APIs with the key per Alibaba docs."
+    ],
+    "zh": [
+      "登录阿里云并进入 DashScope（百炼）控制台。",
+      "打开 https://dashscope.console.aliyun.com/apiKey 创建 API Key。",
+      "密钥展示后立即复制，勿粘贴到公开聊天或代码仓库。",
+      "按需开通通义模型，并依阿里云文档用该 Key 调用 DashScope 接口。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is DashScope the right place for Qwen API keys?",
+        "zh": "通义 API Key 是否在 DashScope 申请？"
+      },
+      "answer": {
+        "en": "Yes. Qwen API access is managed in the DashScope console under apiKey, not on a third-party marketplace.",
+        "zh": "是。通义 API 访问权限在 DashScope 控制台的 apiKey 页管理，不在第三方市场购买。"
+      }
+    },
+    {
+      "question": {
+        "en": "What model families does Alibaba expose here?",
+        "zh": "这里能用到哪些通义模型？"
+      },
+      "answer": {
+        "en": "The directory lists Qwen text, coder, vision, and audio lines. Availability and quotas depend on your DashScope account.",
+        "zh": "目录收录通义文本、代码、视觉、音频等系列；实际可调用型号与额度以你的 DashScope 账号为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does this site sell Alibaba Cloud credits?",
+        "zh": "本站会售卖阿里云额度吗？"
+      },
+      "answer": {
+        "en": "No. Get Model Key only links to dashscope.console.aliyun.com. Purchase and billing stay on Alibaba Cloud.",
+        "zh": "不会。Get Model Key 只链接 dashscope.console.aliyun.com，充值与计费均在阿里云完成。"
+      }
+    }
+  ]
 }
