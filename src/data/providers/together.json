@@ -62,13 +62,11 @@
   "overview": {
     "en": [
       "Together AI is a cloud platform for running and serving open-source models—chat, code, rerank, and more—via a unified developer API.",
-      "It fits teams that want hosted open-source inference without managing their own GPU clusters, with OpenAI-style integration patterns in many cases.",
-      "getModelKey only links Together’s official API keys settings. We do not sell or host Together keys."
+      "It fits teams that want hosted open-source inference without managing their own GPU clusters, with OpenAI-style integration patterns in many cases."
     ],
     "zh": [
       "Together AI 是托管运行开源模型的云平台，可通过统一开发者 API 调用对话、代码、重排序等能力。",
-      "适合希望使用托管开源推理、又不愿自建 GPU 集群的团队；许多接入方式接近 OpenAI 风格。",
-      "getModelKey 仅链接 Together 官方 API Keys 设置页，不出售、不托管 Together 密钥。"
+      "适合希望使用托管开源推理、又不愿自建 GPU 集群的团队；许多接入方式接近 OpenAI 风格。"
     ]
   },
   "howToGetKey": {
@@ -94,16 +92,6 @@
       "answer": {
         "en": "No. Together hosts models in the cloud. You call their API; local self-hosting is a separate path via open weights elsewhere.",
         "zh": "不是。Together 在云端托管模型，你调用其 API；本地自托管需另寻开源权重部署。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does getModelKey sell Together API keys?",
-        "zh": "getModelKey 出售 Together API Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link the official keys page. Create keys directly in Together’s console.",
-        "zh": "不出售。我们只链接官方密钥页，请在 Together 控制台自行创建。"
       }
     },
     {

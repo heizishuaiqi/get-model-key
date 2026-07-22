@@ -81,13 +81,11 @@
   "overview": {
     "en": [
       "Amazon Bedrock is AWS’s managed foundation-model service, exposing multiple providers’ models behind AWS IAM, VPC, and regional controls.",
-      "It fits teams that already run on AWS and need enterprise governance, model choice, and pay-as-you-go inference without self-managing GPUs.",
-      "Bedrock is a cloud managed platform (multi-model gateway on AWS), not a single-lab API site. Get Model Key only links to the AWS Bedrock console; we do not sell keys."
+      "It fits teams that already run on AWS and need enterprise governance, model choice, and pay-as-you-go inference without self-managing GPUs."
     ],
     "zh": [
       "Amazon Bedrock 是 AWS 托管的基础模型服务，在 IAM、VPC 与区域管控下接入多家模型。",
-      "适合已在 AWS 上运行、需要企业治理与多模型选择、又不想自建 GPU 的团队。",
-      "Bedrock 属于云托管多模型平台，不是单一实验室直连站。Get Model Key 仅跳转 AWS Bedrock 控制台，不售卖密钥。"
+      "适合已在 AWS 上运行、需要企业治理与多模型选择、又不想自建 GPU 的团队。"
     ]
   },
   "howToGetKey": {
@@ -123,16 +121,6 @@
       "answer": {
         "en": "Bedrock aggregates foundation models such as AWS Nova, Anthropic Claude, Llama, Titan, and others; the live list depends on region and access status.",
         "zh": "Bedrock 聚合 AWS Nova、Anthropic Claude、Llama、Titan 等基础模型；可用列表因区域与开通状态而异。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell AWS Bedrock access?",
-        "zh": "Get Model Key 会售卖 Bedrock 访问权限吗？"
-      },
-      "answer": {
-        "en": "No. We only link to the official AWS Bedrock console. All billing stays on your AWS account.",
-        "zh": "不会。本站只提供官方 Bedrock 控制台入口，费用记在你的 AWS 账号。"
       }
     }
   ]

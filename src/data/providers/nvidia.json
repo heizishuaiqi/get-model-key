@@ -61,13 +61,11 @@
   "overview": {
     "en": [
       "NVIDIA AI spans GPUs, NGC catalog assets, and software stacks such as the NeMo framework and Megatron-style large language model tooling for training and deployment.",
-      "Developers typically discover models, containers, and enterprise AI resources via catalog.ngc.nvidia.com and NVIDIA’s AI documentation portals.",
-      "getModelKey links official NVIDIA AI / NGC entry points only. We do not sell NGC keys, API tokens, or enterprise licenses."
+      "Developers typically discover models, containers, and enterprise AI resources via catalog.ngc.nvidia.com and NVIDIA’s AI documentation portals."
     ],
     "zh": [
       "NVIDIA AI 覆盖 GPU、NGC 目录资源，以及 NeMo 框架、Megatron 类大模型工具链等训练与部署软件栈。",
-      "开发者通常通过 catalog.ngc.nvidia.com 与 NVIDIA AI 文档门户发现模型、容器与企业 AI 资源。",
-      "getModelKey 仅链到 NVIDIA AI / NGC 官方入口，不出售 NGC Key、API Token 或企业许可。"
+      "开发者通常通过 catalog.ngc.nvidia.com 与 NVIDIA AI 文档门户发现模型、容器与企业 AI 资源。"
     ]
   },
   "howToGetKey": {
@@ -103,16 +101,6 @@
       "answer": {
         "en": "See NVIDIA’s NeMo documentation at docs.nvidia.com/nemo-framework/ and related AI portals.",
         "zh": "见 docs.nvidia.com/nemo-framework/ 及相关 NVIDIA AI 文档站点。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can getModelKey sell NVIDIA AI access?",
-        "zh": "getModelKey 能卖 NVIDIA AI 访问权限吗？"
-      },
-      "answer": {
-        "en": "No. Register and obtain credentials only through official NVIDIA / NGC pages.",
-        "zh": "不能。请只通过 NVIDIA / NGC 官方页面注册并获取凭证。"
       }
     }
   ]

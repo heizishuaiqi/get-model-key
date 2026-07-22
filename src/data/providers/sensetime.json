@@ -59,13 +59,11 @@
   "overview": {
     "en": [
       "SenseTime SenseNova is the multimodal AI platform from SenseTime, covering large language, computer vision, and generative AI capabilities for enterprise and developer use in China and beyond.",
-      "API access is managed through platform.sensetime.com, with documentation for integrating SenseNova models into applications.",
-      "getModelKey links the official SenseTime platform console only. We do not sell SenseNova API keys."
+      "API access is managed through platform.sensetime.com, with documentation for integrating SenseNova models into applications."
     ],
     "zh": [
       "商汤科技 SenseNova 是商汤的多模态 AI 平台，覆盖大语言、计算机视觉与生成式 AI，面向企业与开发者。",
-      "API 在 platform.sensetime.com 管理，文档说明如何将 SenseNova 模型接入应用。",
-      "getModelKey 只链到商汤官方平台控制台，不出售 SenseNova API Key。"
+      "API 在 platform.sensetime.com 管理，文档说明如何将 SenseNova 模型接入应用。"
     ]
   },
   "howToGetKey": {
@@ -101,16 +99,6 @@
       "answer": {
         "en": "SenseTime’s SenseNova platform is widely used in China enterprise scenarios; account rules follow official SenseTime policy.",
         "zh": "SenseNova 在国内企业场景使用广泛，开户与合规要求以商汤官方政策为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can I purchase a SenseNova key here?",
-        "zh": "能在这里购买 SenseNova Key 吗？"
-      },
-      "answer": {
-        "en": "No. getModelKey only links platform.sensetime.com for self-service official access.",
-        "zh": "不能。getModelKey 只链到 platform.sensetime.com，请自行在官方开通。"
       }
     }
   ]

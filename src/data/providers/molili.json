@@ -81,13 +81,11 @@
   "overview": {
     "en": [
       "Molili (莫哩哩) is a Chinese AI agent platform in the OpenClaw ecosystem, focused on desktop automation and local workflow execution.",
-      "It aggregates access to domestic models such as DeepSeek, MiniMax, Qwen, Kimi, and GLM for agent-style tasks, with WeChat/DingTalk remote command options noted in platform materials.",
-      "getModelKey lists Molili as a directory entry to the official site. We do not sell keys or run Molili accounts for you."
+      "It aggregates access to domestic models such as DeepSeek, MiniMax, Qwen, Kimi, and GLM for agent-style tasks, with WeChat/DingTalk remote command options noted in platform materials."
     ],
     "zh": [
       "Molili（莫哩哩）是 OpenClaw 生态中的中文 AI 智能体平台，侧重桌面自动化与本地工作流执行。",
-      "平台聚合 DeepSeek、MiniMax、通义千问、Kimi、GLM 等国产模型能力，并支持微信/钉钉等远程指令场景（以官方说明为准）。",
-      "getModelKey 仅作目录指引链到官网，不出售 Key，也不代管 Molili 账号。"
+      "平台聚合 DeepSeek、MiniMax、通义千问、Kimi、GLM 等国产模型能力，并支持微信/钉钉等远程指令场景（以官方说明为准）。"
     ]
   },
   "howToGetKey": {
@@ -123,16 +121,6 @@
       "answer": {
         "en": "Platform materials highlight DeepSeek, MiniMax, Qwen, Kimi, and GLM. Confirm the live catalog on the official site.",
         "zh": "平台资料常见 DeepSeek、MiniMax、通义千问、Kimi、GLM；以官网当前目录为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can I buy a Molili key on getModelKey?",
-        "zh": "能在 getModelKey 买到 Molili Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link molili.com.cn; obtain access through official channels.",
-        "zh": "不能。我们只链到 molili.com.cn，请通过官方渠道开通。"
       }
     }
   ]

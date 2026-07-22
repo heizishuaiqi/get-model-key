@@ -65,13 +65,11 @@
   "overview": {
     "en": [
       "Meta Llama is a widely used open-weight LLM family. Many teams self-host weights; Meta also documents API access paths on llama.com.",
-      "Official API access may involve an access or request flow rather than an instant consumer key—follow Meta’s current llama.com/api process.",
-      "Get Model Key only links https://www.llama.com/api. We do not distribute Llama weights licenses or sell Meta API keys."
+      "Official API access may involve an access or request flow rather than an instant consumer key—follow Meta’s current llama.com/api process."
     ],
     "zh": [
       "Meta Llama 是广泛使用的开源权重大模型系列。许多团队自托管权重；Meta 也在 llama.com 提供 API 接入说明。",
-      "官方 API 可能走申请/开通流程，而非即时消费级发 Key——请以 llama.com/api 当前流程为准。",
-      "Get Model Key 仅链接 https://www.llama.com/api。本站不发放权重许可，也不出售 Meta API Key。"
+      "官方 API 可能走申请/开通流程，而非即时消费级发 Key——请以 llama.com/api 当前流程为准。"
     ]
   },
   "howToGetKey": {
@@ -107,16 +105,6 @@
       "answer": {
         "en": "Not necessarily. Meta’s API page may require access requests or eligibility checks—follow the live official flow.",
         "zh": "不一定。官方 API 页可能需要申请或资格审核，请以当时官网流程为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does this site sell Meta Llama keys?",
-        "zh": "本站出售 Meta Llama Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link Meta’s official API page. All access decisions happen on Meta’s side.",
-        "zh": "不出售。本站只链接 Meta 官方 API 页，开通与否由 Meta 侧决定。"
       }
     }
   ]

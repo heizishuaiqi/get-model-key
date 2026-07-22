@@ -57,13 +57,11 @@
   "overview": {
     "en": [
       "Xiaomi AI capabilities are exposed mainly through Xiaomi’s open platform (open.mi.com), which is broader than a single “LLM API key” console.",
-      "Depending on the product, you may work with open-platform apps, voice/assistant integrations, or other AI-related services—not only a chat completions endpoint.",
-      "getModelKey links the official open.mi.com entry. We do not sell Xiaomi credentials or API keys."
+      "Depending on the product, you may work with open-platform apps, voice/assistant integrations, or other AI-related services—not only a chat completions endpoint."
     ],
     "zh": [
       "小米 AI 相关能力主要经由小米开放平台（open.mi.com）对外提供，形态往往比单一「大模型 API Key 控制台」更广。",
-      "按具体产品不同，可能涉及开放平台应用、语音/助手接入或其他 AI 服务，而不只是聊天补全接口。",
-      "getModelKey 链接至 open.mi.com 官方入口，不出售小米凭证或 API Key。"
+      "按具体产品不同，可能涉及开放平台应用、语音/助手接入或其他 AI 服务，而不只是聊天补全接口。"
     ]
   },
   "howToGetKey": {

@@ -83,13 +83,11 @@
   "overview": {
     "en": [
       "Zhipu AI (智谱) offers the GLM model family via bigmodel.cn / open.bigmodel.cn, with strong Chinese language and multimodal capabilities.",
-      "Developers use Zhipu’s Open Platform for chat, vision, and coding-oriented models such as GLM and CodeGeeX-related offerings.",
-      "getModelKey only links open.bigmodel.cn’s official API keys center. We do not sell Zhipu keys."
+      "Developers use Zhipu’s Open Platform for chat, vision, and coding-oriented models such as GLM and CodeGeeX-related offerings."
     ],
     "zh": [
       "智谱 AI 通过 bigmodel.cn / open.bigmodel.cn 提供 GLM 系列模型，中文与多模态能力突出。",
-      "开发者可在智谱开放平台调用对话、视觉及代码相关模型（如 GLM、CodeGeeX 相关能力）。",
-      "getModelKey 仅链接 open.bigmodel.cn 官方 API Key 中心，不出售智谱密钥。"
+      "开发者可在智谱开放平台调用对话、视觉及代码相关模型（如 GLM、CodeGeeX 相关能力）。"
     ]
   },
   "howToGetKey": {
@@ -115,16 +113,6 @@
       "answer": {
         "en": "Yes. open.bigmodel.cn is Zhipu’s open platform for API keys and developer docs for GLM and related services.",
         "zh": "是。open.bigmodel.cn 是智谱开放平台，用于管理 API Key 与查阅 GLM 等相关开发文档。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does getModelKey sell Zhipu / GLM API keys?",
-        "zh": "getModelKey 出售智谱 / GLM API Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link the official API keys page. Keys are created and billed on Zhipu’s platform.",
-        "zh": "不出售。我们只链接官方密钥页；密钥在智谱平台创建并计费。"
       }
     },
     {

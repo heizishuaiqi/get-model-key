@@ -59,13 +59,11 @@
   "overview": {
     "en": [
       "xAI is the lab behind the Grok model family, including newer Grok generations such as Grok 4.5 for chat, coding, and agent-style tasks.",
-      "API access is managed through xAI’s developer console, where you create keys and review model availability for your account.",
-      "getModelKey only links to console.x.ai and official docs. We do not sell Grok keys or resell xAI access."
+      "API access is managed through xAI’s developer console, where you create keys and review model availability for your account."
     ],
     "zh": [
       "xAI 是 Grok 系列模型的研发方，包括较新的 Grok 代际（如 Grok 4.5），可用于对话、编程与 Agent 类任务。",
-      "API 访问通过 xAI 开发者控制台管理，可在其中创建密钥并查看账号可用的模型。",
-      "getModelKey 仅链接 console.x.ai 与官方文档，不出售 Grok Key，也不转售 xAI 访问权限。"
+      "API 访问通过 xAI 开发者控制台管理，可在其中创建密钥并查看账号可用的模型。"
     ]
   },
   "howToGetKey": {
@@ -91,16 +89,6 @@
       "answer": {
         "en": "Availability depends on your account and xAI’s current catalog. Confirm models and limits in the official console and docs.",
         "zh": "取决于账号权限与 xAI 当前目录。请在官方控制台与文档中确认可用模型与限额。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can I purchase a Grok key from getModelKey?",
-        "zh": "能从 getModelKey 购买 Grok Key 吗？"
-      },
-      "answer": {
-        "en": "No. This site only links the official xAI console. Keys are created and billed by xAI.",
-        "zh": "不能。本站只链接 xAI 官方控制台；密钥由 xAI 创建并计费。"
       }
     },
     {

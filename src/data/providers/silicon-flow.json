@@ -108,13 +108,11 @@
   "overview": {
     "en": [
       "Silicon Flow (硅基流动) is a China-based AI inference platform that aggregates many coding and reasoning models behind one API, including open-source and Chinese-language options.",
-      "It suits teams that want a single key for multiple models—code assistants, chat, and multimodal workloads—without registering separately with every upstream vendor.",
-      "getModelKey only links to Silicon Flow’s official console and docs. We do not sell, mint, or proxy API keys; create and manage keys on siliconflow.cn."
+      "It suits teams that want a single key for multiple models—code assistants, chat, and multimodal workloads—without registering separately with every upstream vendor."
     ],
     "zh": [
       "硅基流动（Silicon Flow）是面向中国开发者的 AI 推理与模型聚合平台，一个接口可调用多种代码与推理相关模型。",
-      "适合希望用一把 Key 试用多款开源/中文模型、减少多平台分别注册的团队，常见场景包括代码助手、对话与多模态调用。",
-      "getModelKey 仅引导至硅基流动官方控制台与文档，不出售、不代开、不转发 API Key；请在 siliconflow.cn 自行创建与管理。"
+      "适合希望用一把 Key 试用多款开源/中文模型、减少多平台分别注册的团队，常见场景包括代码助手、对话与多模态调用。"
     ]
   },
   "howToGetKey": {

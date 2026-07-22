@@ -63,13 +63,11 @@
   "overview": {
     "en": [
       "01.AI (零一万物), founded by Kai-Fu Lee, develops the Yi series of models with a focus on open-source and Chinese-capable LLMs.",
-      "The platform API lets developers call Yi chat, vision, and coding-oriented models for applications that need bilingual or Chinese-first behavior.",
-      "getModelKey only links platform.01.ai’s official API key console. We do not sell 01.AI keys."
+      "The platform API lets developers call Yi chat, vision, and coding-oriented models for applications that need bilingual or Chinese-first behavior."
     ],
     "zh": [
       "零一万物（01.AI）由李开复创立，以 Yi 系列模型著称，侧重开源与中文能力。",
-      "开发者可通过平台 API 调用 Yi 对话、视觉与代码相关模型，适合需要中英双语或中文优先的应用。",
-      "getModelKey 仅链接 platform.01.ai 官方 API Key 控制台，不出售零一万物密钥。"
+      "开发者可通过平台 API 调用 Yi 对话、视觉与代码相关模型，适合需要中英双语或中文优先的应用。"
     ]
   },
   "howToGetKey": {
@@ -95,16 +93,6 @@
       "answer": {
         "en": "No. Open weights can be self-hosted; the platform API is a hosted service with its own keys, quotas, and terms.",
         "zh": "不是。开源权重可自托管；平台 API 是托管服务，有独立的密钥、额度与条款。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can getModelKey create a 01.AI key for me?",
-        "zh": "getModelKey 能代开零一万物 Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link the official console. You must create the key yourself on platform.01.ai.",
-        "zh": "不能。我们只链接官方控制台，密钥需在 platform.01.ai 自行创建。"
       }
     },
     {

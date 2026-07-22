@@ -103,16 +103,6 @@
         "en": "Often yes if you set Groq’s documented base URL and your Groq API key. Verify request fields per Groq docs.",
         "zh": "通常可以：配置文档中的 base URL 与 Groq API Key。具体字段以 Groq 文档为准。"
       }
-    },
-    {
-      "question": {
-        "en": "Does this site sell Groq API keys?",
-        "zh": "本站出售 Groq API Key 吗？"
-      },
-      "answer": {
-        "en": "No. Get Model Key only points to the official keys console. Billing stays on Groq.",
-        "zh": "不出售。Get Model Key 只指向官方 Keys 控制台，计费在 Groq 完成。"
-      }
     }
   ]
 }

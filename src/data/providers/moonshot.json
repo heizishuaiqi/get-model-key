@@ -79,13 +79,11 @@
   "overview": {
     "en": [
       "Moonshot AI (月之暗面) builds the Kimi family of models, known for long-context reasoning. Recent materials highlight Kimi K3 with very large parameter scale and up to about 1M context, described as open source.",
-      "The Open Platform at platform.moonshot.cn provides API keys and docs for integrating Kimi into apps and agent workflows.",
-      "getModelKey only points to Moonshot’s official key console. We do not sell or redistribute Moonshot API keys."
+      "The Open Platform at platform.moonshot.cn provides API keys and docs for integrating Kimi into apps and agent workflows."
     ],
     "zh": [
       "月之暗面（Moonshot AI）打造 Kimi 系列模型，擅长长上下文与推理。近期资料提到 Kimi K3 参数规模极大、上下文约可达百万级，并已开源（以官网为准）。",
-      "开放平台 platform.moonshot.cn 提供 API Key 与文档，便于把 Kimi 接入应用与智能体工作流。",
-      "getModelKey 只跳转到月之暗面官方 Key 控制台，不出售、不转发 API Key。"
+      "开放平台 platform.moonshot.cn 提供 API Key 与文档，便于把 Kimi 接入应用与智能体工作流。"
     ]
   },
   "howToGetKey": {

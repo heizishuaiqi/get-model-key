@@ -60,13 +60,11 @@
   "overview": {
     "en": [
       "Replicate hosts and runs machine learning models through a simple HTTP API, covering image, language, and other community and vendor models.",
-      "Billing is generally usage-based (pay for what you run). Exact rates belong on Replicate’s official pricing pages.",
-      "getModelKey links replicate.com account token settings only and does not sell Replicate API tokens."
+      "Billing is generally usage-based (pay for what you run). Exact rates belong on Replicate’s official pricing pages."
     ],
     "zh": [
       "Replicate 通过简洁的 HTTP API 托管并运行机器学习模型，覆盖图像、语言等社区与厂商模型。",
-      "计费通常按实际运行用量；具体费率以 Replicate 官方定价页为准。",
-      "getModelKey 只链到 replicate.com 账号 Token 设置，不出售 Replicate API Token。"
+      "计费通常按实际运行用量；具体费率以 Replicate 官方定价页为准。"
     ]
   },
   "howToGetKey": {

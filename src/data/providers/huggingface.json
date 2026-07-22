@@ -65,8 +65,7 @@
     ],
     "zh": [
       "Hugging Face 是开源模型、数据集与 Spaces 的集散地，Access Token 用于 Hub 访问与推理接口鉴权。",
-      "在 Settings → Tokens 创建的用户令牌，可用于下载、私有仓库及多种 Inference 端点。",
-      "Get Model Key 仅链接 https://huggingface.co/settings/tokens。本站从不出售 Hugging Face Token。"
+      "在 Settings → Tokens 创建的用户令牌，可用于下载、私有仓库及多种 Inference 端点。"
     ]
   },
   "howToGetKey": {
@@ -102,16 +101,6 @@
       "answer": {
         "en": "No. Besides the model hub, it also offers inference and deployment paths documented on the official site.",
         "zh": "不是。除模型仓库外，官网还提供推理与部署相关能力，详见官方文档。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does this directory sell HF tokens?",
-        "zh": "本站出售 HF Token 吗？"
-      },
-      "answer": {
-        "en": "No. Create tokens only on Hugging Face’s official settings page via our link.",
-        "zh": "不出售。请通过本站链接在 Hugging Face 官方设置页自行创建。"
       }
     }
   ]

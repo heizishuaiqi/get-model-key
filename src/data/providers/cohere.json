@@ -62,13 +62,11 @@
   "overview": {
     "en": [
       "Cohere builds enterprise-oriented Command models plus Embed and Rerank, aimed at retrieval-augmented generation and production RAG stacks.",
-      "Teams choose Cohere when search quality, grounding, and enterprise deployment patterns matter as much as raw chat generation.",
-      "Cohere is an official model company, not a multi-vendor aggregator. Get Model Key only links to dashboard.cohere.com; we do not sell API keys."
+      "Teams choose Cohere when search quality, grounding, and enterprise deployment patterns matter as much as raw chat generation."
     ],
     "zh": [
       "Cohere 面向企业提供 Command 系列，以及 Embed、Rerank，侧重检索增强生成（RAG）与生产级检索链路。",
-      "当检索质量、内容 grounding 与企业部署方式与对话生成同样重要时，团队常会选择 Cohere。",
-      "Cohere 是官方模型公司，不是多厂商聚合站。Get Model Key 仅跳转 dashboard.cohere.com，不售卖 API Key。"
+      "当检索质量、内容 grounding 与企业部署方式与对话生成同样重要时，团队常会选择 Cohere。"
     ]
   },
   "howToGetKey": {
@@ -104,16 +102,6 @@
       "answer": {
         "en": "Create and manage keys at https://dashboard.cohere.com/api-keys. API reference is at https://docs.cohere.com/.",
         "zh": "在 https://dashboard.cohere.com/api-keys 创建与管理密钥。接口说明见 https://docs.cohere.com/。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell Cohere credits?",
-        "zh": "Get Model Key 会售卖 Cohere 额度吗？"
-      },
-      "answer": {
-        "en": "No. This site only links to Cohere’s official dashboard. All purchases stay with Cohere.",
-        "zh": "不会。本站只链接 Cohere 官方控制台，一切购买与计费均在 Cohere 完成。"
       }
     }
   ]

@@ -113,6 +113,10 @@ export default async function ProviderPage({ params }: Props) {
           </div>
         </div>
 
+        <p className="mb-8 rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body-sm text-text-tertiary">
+          getModelKey links official API key pages only. We do not sell, generate, or broker API keys.
+        </p>
+
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-8">
             <ProviderContentSections

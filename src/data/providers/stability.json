@@ -62,13 +62,11 @@
   "overview": {
     "en": [
       "Stability AI builds generative models for images, video, audio, and related creative workflows, best known for the Stable Diffusion family.",
-      "Developers use the Stability platform API to generate and edit media programmatically—product visuals, video clips, and other creative pipelines.",
-      "getModelKey only links to Stability’s official account keys page. We do not sell or issue Stability API keys."
+      "Developers use the Stability platform API to generate and edit media programmatically—product visuals, video clips, and other creative pipelines."
     ],
     "zh": [
       "Stability AI 提供图像、视频、音频等生成式创意模型，以 Stable Diffusion 系列最为人知。",
-      "开发者可通过 Stability 平台 API 以编程方式生成与编辑媒体内容，用于产品图、短视频等创意链路。",
-      "getModelKey 仅链接至 Stability 官方密钥页面，不出售、不代发 Stability API Key。"
+      "开发者可通过 Stability 平台 API 以编程方式生成与编辑媒体内容，用于产品图、短视频等创意链路。"
     ]
   },
   "howToGetKey": {

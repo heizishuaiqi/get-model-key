@@ -103,13 +103,11 @@
   "overview": {
     "en": [
       "MiniMax is a China multimodal AI platform covering text LLMs, speech, music, video (Hailuo), and agent-oriented tools.",
-      "API access is managed in the MiniMax open platform; interface keys live under the user-center key page.",
-      "Get Model Key only links https://platform.minimaxi.com/user-center/basic-information/interface-key. We do not sell MiniMax keys."
+      "API access is managed in the MiniMax open platform; interface keys live under the user-center key page."
     ],
     "zh": [
       "MiniMax 是中国多模态 AI 平台，覆盖文本大模型、语音、音乐、视频（海螺）与智能体相关能力。",
-      "API 在 MiniMax 开放平台管理；接口密钥位于用户中心的 interface-key 页面。",
-      "Get Model Key 仅链接 https://platform.minimaxi.com/user-center/basic-information/interface-key。本站不销售 MiniMax Key。"
+      "API 在 MiniMax 开放平台管理；接口密钥位于用户中心的 interface-key 页面。"
     ]
   },
   "howToGetKey": {
@@ -145,16 +143,6 @@
       "answer": {
         "en": "Promotions vary and may require real-name verification. Rely on the official platform rules, not third-party claims.",
         "zh": "活动会变化，且可能需实名。请以官方平台规则为准，勿轻信第三方承诺。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell MiniMax interface keys?",
-        "zh": "Get Model Key 出售 MiniMax 接口密钥吗？"
-      },
-      "answer": {
-        "en": "No. We only link the official interface-key page; billing stays on MiniMax.",
-        "zh": "不出售。本站只链接官方 interface-key 页，充值与计费在 MiniMax 完成。"
       }
     }
   ]

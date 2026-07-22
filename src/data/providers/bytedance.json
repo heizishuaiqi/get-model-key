@@ -59,13 +59,11 @@
   "overview": {
     "en": [
       "ByteDance’s Doubao models are offered for developers via Volcengine Ark, spanning Pro/Lite text models plus vision and audio variants.",
-      "Pick Doubao on Ark when you need Chinese multimodal APIs with ByteDance/Volcengine cloud tooling for content and short-video style understanding.",
-      "Ark is Volcengine’s official model platform (cloud product), not a reseller directory. Get Model Key only links to Volcengine; we do not sell keys."
+      "Pick Doubao on Ark when you need Chinese multimodal APIs with ByteDance/Volcengine cloud tooling for content and short-video style understanding."
     ],
     "zh": [
       "字节跳动豆包模型通过火山引擎方舟（Ark）向开发者开放，涵盖专业版/轻量版文本以及视觉、音频等能力。",
-      "若需要中文多模态 API，并希望结合火山引擎云产品做内容与短视频理解类能力，可选择方舟上的豆包。",
-      "方舟是火山引擎官方模型平台（云产品），不是转售目录。Get Model Key 仅跳转火山引擎，不售卖 API Key。"
+      "若需要中文多模态 API，并希望结合火山引擎云产品做内容与短视频理解类能力，可选择方舟上的豆包。"
     ]
   },
   "howToGetKey": {
@@ -101,16 +99,6 @@
       "answer": {
         "en": "This directory references Doubao Pro, Lite, Vision, and Audio lines; confirm exact SKUs in the Ark console.",
         "zh": "本目录收录豆包专业版、轻量版、视觉版与音频版等；具体 SKU 以方舟控制台为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell Volcengine Ark keys?",
-        "zh": "Get Model Key 会售卖方舟 Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link to official Volcengine Ark pages. Billing is handled by Volcengine.",
-        "zh": "不会。本站只链接火山引擎方舟官方页面，计费由火山引擎处理。"
       }
     }
   ]

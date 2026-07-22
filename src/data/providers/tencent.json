@@ -83,13 +83,11 @@
   "overview": {
     "en": [
       "Tencent Hunyuan is Tencent’s large model family, with strong Chinese-language capability and ties into the Tencent Cloud ecosystem.",
-      "It is commonly used for Chinese chat, content generation, vision, and enterprise apps that already run on Tencent Cloud.",
-      "getModelKey only links Tencent’s official Hunyuan product pages. We do not sell API keys or cloud credentials."
+      "It is commonly used for Chinese chat, content generation, vision, and enterprise apps that already run on Tencent Cloud."
     ],
     "zh": [
       "腾讯混元是腾讯大模型系列，中文能力突出，并可与腾讯云生态协同。",
-      "常见于中文对话、内容生成、视觉能力，以及已部署在腾讯云上的企业应用。",
-      "getModelKey 仅链接腾讯混元官方产品页，不出售 API Key 或云账号凭证。"
+      "常见于中文对话、内容生成、视觉能力，以及已部署在腾讯云上的企业应用。"
     ]
   },
   "howToGetKey": {
@@ -115,16 +113,6 @@
       "answer": {
         "en": "Yes. Hunyuan API access is typically provisioned through Tencent Cloud. Follow the official product and docs pages.",
         "zh": "通常需要。混元 API 一般通过腾讯云开通与管理，请按官方产品页与文档操作。"
-      }
-    },
-    {
-      "question": {
-        "en": "Can I buy a Hunyuan key on getModelKey?",
-        "zh": "能在 getModelKey 上购买混元 Key 吗？"
-      },
-      "answer": {
-        "en": "No. This directory only links official Tencent pages. Keys and billing stay on Tencent Cloud.",
-        "zh": "不能。本目录只链接腾讯官方页面；密钥与计费均在腾讯云完成。"
       }
     },
     {

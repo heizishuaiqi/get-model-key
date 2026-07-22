@@ -61,13 +61,11 @@
   "overview": {
     "en": [
       "Runway ML is a creative AI platform focused on video, image, and multimedia generation, with APIs for Gen-series models and related tools.",
-      "Teams use Runway for text-to-video, image workflows, and other production creative pipelines documented at docs.runwayml.com.",
-      "getModelKey only links the official Runway account API page. We do not sell Runway API access."
+      "Teams use Runway for text-to-video, image workflows, and other production creative pipelines documented at docs.runwayml.com."
     ],
     "zh": [
       "Runway ML 是面向视频、图像与多媒体生成的创意 AI 平台，提供 Gen 系列等模型及相关工具 API。",
-      "团队常用其做文生视频、图像工作流等生产创意链路，文档见 docs.runwayml.com。",
-      "getModelKey 只链到 Runway 官方账号 API 页面，不出售 Runway API 访问权限。"
+      "团队常用其做文生视频、图像工作流等生产创意链路，文档见 docs.runwayml.com。"
     ]
   },
   "howToGetKey": {
@@ -103,16 +101,6 @@
       "answer": {
         "en": "Only in Runway’s official app billing/account pages and docs—not on getModelKey.",
         "zh": "请只在 Runway 官方应用账单/账号页与文档中确认，不以本站为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does getModelKey sell Runway keys?",
-        "zh": "getModelKey 卖 Runway Key 吗？"
-      },
-      "answer": {
-        "en": "No. Obtain API access exclusively through Runway’s official account API page.",
-        "zh": "不卖。请只通过 Runway 官方账号 API 页获取访问权限。"
       }
     }
   ]

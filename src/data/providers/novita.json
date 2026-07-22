@@ -1,7 +1,10 @@
 {
   "slug": "novita",
   "status": "active",
-  "categories": ["aggregator", "global"],
+  "categories": [
+    "aggregator",
+    "global"
+  ],
   "region": "aggregator",
   "featured": true,
   "img": "",
@@ -62,16 +65,6 @@
         "en": "Yes. Use Novita's documented OpenAI-compatible base URL and your Novita API key.",
         "zh": "兼容。使用文档中的 OpenAI 兼容 base URL，并填入 Novita API Key 即可。"
       }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell Novita credits?",
-        "zh": "Get Model Key 会售卖 Novita 额度吗？"
-      },
-      "answer": {
-        "en": "No. This site only links to the official key management page. Billing happens on Novita.",
-        "zh": "不会。本站只提供官方 Key 管理页入口，充值与计费都在 Novita 完成。"
-      }
     }
   ],
   "models": {
@@ -90,8 +83,17 @@
       "mistralai/mistral-large"
     ]
   },
-  "tags": ["aggregator", "open-source", "openai-compatible", "cloud"],
-  "searchAliases": ["novita ai", "novita.ai", "诺维塔"],
+  "tags": [
+    "aggregator",
+    "open-source",
+    "openai-compatible",
+    "cloud"
+  ],
+  "searchAliases": [
+    "novita ai",
+    "novita.ai",
+    "诺维塔"
+  ],
   "lastVerified": "2026-07-22",
   "seo": {
     "title": {

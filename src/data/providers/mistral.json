@@ -71,13 +71,11 @@
   "overview": {
     "en": [
       "Mistral AI is a French AI lab known for efficient open-weight and commercial models with strong multilingual performance, including Mistral Large, Codestral, and vision models like Pixtral.",
-      "Developers use the Mistral API for chat, coding, and multimodal workloads through an OpenAI-compatible style interface documented at docs.mistral.ai.",
-      "getModelKey only links the official Mistral console and docs. We do not sell, generate, or broker API keys."
+      "Developers use the Mistral API for chat, coding, and multimodal workloads through an OpenAI-compatible style interface documented at docs.mistral.ai."
     ],
     "zh": [
       "Mistral AI 是法国 AI 实验室，以高效开源权重与商用模型见长，多语言表现突出，产品线包括 Mistral Large、Codestral 以及 Pixtral 等视觉模型。",
-      "开发者可通过 Mistral API 做对话、编程与多模态任务，接口风格接近 OpenAI，文档见 docs.mistral.ai。",
-      "getModelKey 只提供官方控制台与文档入口，不出售、不代生成、不中转 API Key。"
+      "开发者可通过 Mistral API 做对话、编程与多模态任务，接口风格接近 OpenAI，文档见 docs.mistral.ai。"
     ]
   },
   "howToGetKey": {
@@ -113,16 +111,6 @@
       "answer": {
         "en": "Mistral offers both open-weight releases and hosted API models. Check the official site for the license of each model.",
         "zh": "Mistral 同时提供开源权重与托管 API 模型，具体许可以官网对各模型的说明为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does getModelKey sell Mistral keys?",
-        "zh": "getModelKey 卖 Mistral Key 吗？"
-      },
-      "answer": {
-        "en": "No. This site only links official pages so you can apply for keys yourself.",
-        "zh": "不卖。本站只链到官方页面，需自行在官网申请。"
       }
     }
   ]

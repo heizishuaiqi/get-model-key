@@ -69,13 +69,11 @@
   "overview": {
     "en": [
       "Google AI (Gemini) delivers multimodal models for text, images, audio, and code, with deep ties to Google Cloud and AI Studio tooling.",
-      "Developers typically start in Google AI Studio to prototype prompts, then move the same API key into production SDKs against ai.google.dev endpoints.",
-      "Get Model Key only links the official AI Studio API key page. Keys are created and billed on Google’s side—this directory does not sell or proxy keys."
+      "Developers typically start in Google AI Studio to prototype prompts, then move the same API key into production SDKs against ai.google.dev endpoints."
     ],
     "zh": [
       "Google AI（Gemini）提供覆盖文本、图像、音频与代码的多模态模型，并与 Google Cloud、AI Studio 工具链深度集成。",
-      "开发者通常先在 Google AI Studio 调试提示词，再用同一把 API Key 通过 ai.google.dev 文档中的 SDK/接口接入生产环境。",
-      "Get Model Key 仅跳转到官方 AI Studio API Key 页面。密钥在 Google 侧创建与计费，本站不销售、不代发 Key。"
+      "开发者通常先在 Google AI Studio 调试提示词，再用同一把 API Key 通过 ai.google.dev 文档中的 SDK/接口接入生产环境。"
     ]
   },
   "howToGetKey": {
@@ -111,16 +109,6 @@
       "answer": {
         "en": "They both access Google models but differ in console, enterprise controls, and billing. Confirm the product you need in Google’s docs.",
         "zh": "二者都能调用 Google 模型，但控制台、企业管控与计费路径不同。请以 Google 官方文档确认你要使用的产品。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell Google AI keys?",
-        "zh": "Get Model Key 会售卖 Google AI Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only list the official key URL. Account, quotas, and payment are handled by Google.",
-        "zh": "不会。本站只收录官方 Key 入口；账号、配额与付费均在 Google 完成。"
       }
     }
   ]

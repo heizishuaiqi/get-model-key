@@ -62,13 +62,11 @@
   "overview": {
     "en": [
       "Huawei Cloud Pangu / ModelArts targets China enterprise scenarios with Pangu LLM, vision, audio, and multimodal offerings.",
-      "Access is typically managed through Huawei Cloud console resources rather than a consumer-style single-key marketplace.",
-      "Get Model Key only links the official console entry. We do not sell Huawei Cloud credentials or enterprise contracts."
+      "Access is typically managed through Huawei Cloud console resources rather than a consumer-style single-key marketplace."
     ],
     "zh": [
       "华为云盘古 / ModelArts 面向中国企业场景，提供盘古大语言、视觉、语音与多模态等能力。",
-      "接入通常通过华为云控制台资源与企业账号体系完成，而非个人消费级“一键买 Key”模式。",
-      "Get Model Key 仅提供官方控制台入口。本站不销售华为云凭证，也不代理企业合同。"
+      "接入通常通过华为云控制台资源与企业账号体系完成，而非个人消费级“一键买 Key”模式。"
     ]
   },
   "howToGetKey": {

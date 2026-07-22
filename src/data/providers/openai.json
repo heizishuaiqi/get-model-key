@@ -59,13 +59,11 @@
   "overview": {
     "en": [
       "OpenAI provides widely used GPT and reasoning models via the Platform API, with a mature SDK ecosystem and extensive documentation.",
-      "Typical use cases include chat, coding assistants, tool calling, and multimodal apps through platform.openai.com.",
-      "getModelKey is a directory: we link the official API keys page and do not sell, mint, or share OpenAI keys."
+      "Typical use cases include chat, coding assistants, tool calling, and multimodal apps through platform.openai.com."
     ],
     "zh": [
       "OpenAI 通过 Platform API 提供广泛使用的 GPT 与推理模型，SDK 生态成熟、文档完善。",
-      "常见场景包括对话、编程助手、工具调用与多模态应用，入口在 platform.openai.com。",
-      "getModelKey 是目录站：只链到官方 API Keys 页面，不出售、不代开、不分享 OpenAI Key。"
+      "常见场景包括对话、编程助手、工具调用与多模态应用，入口在 platform.openai.com。"
     ]
   },
   "howToGetKey": {
@@ -101,16 +99,6 @@
       "answer": {
         "en": "Always use OpenAI’s official docs and pricing pages. getModelKey does not publish live prices.",
         "zh": "请以 OpenAI 官方文档与定价页为准。getModelKey 不公布实时价格。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does this site sell OpenAI keys?",
-        "zh": "本站卖 OpenAI Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link official OpenAI pages so you can create keys yourself.",
-        "zh": "不卖。我们只提供官方链接，请自行创建。"
       }
     }
   ]

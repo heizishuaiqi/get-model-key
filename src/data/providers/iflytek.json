@@ -80,13 +80,11 @@
   "overview": {
     "en": [
       "iFLYTEK Spark (讯飞星火) is a China-focused LLM and multimodal platform strong in Chinese language tasks.",
-      "Developers obtain app credentials through the Xfyun open platform console (console.xfyun.cn) rather than third-party resellers.",
-      "Get Model Key only links official console/docs pages. We do not sell Spark keys or packages."
+      "Developers obtain app credentials through the Xfyun open platform console (console.xfyun.cn) rather than third-party resellers."
     ],
     "zh": [
       "讯飞星火面向中文场景，提供大模型与多模态能力，擅长中文理解与生成任务。",
-      "开发者应在讯飞开放平台控制台（console.xfyun.cn）申请应用凭证，勿经第三方倒卖渠道。",
-      "Get Model Key 只链接官方控制台与文档。本站不销售星火 Key 或套餐。"
+      "开发者应在讯飞开放平台控制台（console.xfyun.cn）申请应用凭证，勿经第三方倒卖渠道。"
     ]
   },
   "howToGetKey": {
@@ -122,16 +120,6 @@
       "answer": {
         "en": "Promotions can change. Check the official console policy; any trial notes on this site are informational only.",
         "zh": "活动会调整。请以官方控制台规则为准；本站如有试用说明仅作信息提示。"
-      }
-    },
-    {
-      "question": {
-        "en": "Does Get Model Key sell iFLYTEK keys?",
-        "zh": "Get Model Key 卖讯飞 Key 吗？"
-      },
-      "answer": {
-        "en": "No. We only link console.xfyun.cn and official docs. Credentials are created on Xfyun.",
-        "zh": "不卖。本站只链接 console.xfyun.cn 与官方文档，凭证在讯飞平台创建。"
       }
     }
   ]

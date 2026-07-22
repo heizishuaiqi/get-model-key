@@ -73,13 +73,11 @@
   "overview": {
     "en": [
       "Microsoft Azure OpenAI brings OpenAI models into Azure with enterprise identity, networking, and compliance controls.",
-      "You provision an Azure OpenAI (Cognitive Services) resource in the Azure portal, then use resource keys or Entra ID auth per Microsoft Learn docs.",
-      "Get Model Key links the Azure create blade only. We do not sell Azure subscriptions or OpenAI resource keys."
+      "You provision an Azure OpenAI (Cognitive Services) resource in the Azure portal, then use resource keys or Entra ID auth per Microsoft Learn docs."
     ],
     "zh": [
       "Microsoft Azure OpenAI 把 OpenAI 模型放到 Azure 上，配套企业身份、网络与合规能力。",
-      "在 Azure 门户创建 Azure OpenAI（Cognitive Services）资源后，按 Microsoft Learn 使用资源密钥或 Entra ID 鉴权。",
-      "Get Model Key 仅链接 Azure 创建页。本站不销售 Azure 订阅或资源密钥。"
+      "在 Azure 门户创建 Azure OpenAI（Cognitive Services）资源后，按 Microsoft Learn 使用资源密钥或 Entra ID 鉴权。"
     ]
   },
   "howToGetKey": {
