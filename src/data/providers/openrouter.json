@@ -1,0 +1,48 @@
+{
+  "slug": "openrouter",
+  "status": "active",
+  "categories": ["aggregator", "global"],
+  "region": "aggregator",
+  "featured": true,
+  "img": "",
+  "officialKeyUrl": "https://openrouter.ai/keys",
+  "officialSiteUrl": "https://openrouter.ai/",
+  "officialDocsUrl": "https://openrouter.ai/docs",
+  "name": {
+    "en": "OpenRouter",
+    "zh": "OpenRouter"
+  },
+  "summary": {
+    "en": "Unified API gateway for hundreds of models from many providers, with OpenAI-compatible endpoints and pay-as-you-go billing.",
+    "zh": "统一 API 网关，聚合数百个来自不同厂商的模型，兼容 OpenAI 接口，按量计费。"
+  },
+  "models": {
+    "en": [
+      "openai/gpt-4o",
+      "anthropic/claude-sonnet-4",
+      "google/gemini-2.5-pro",
+      "deepseek/deepseek-chat",
+      "meta-llama/llama-3.3-70b-instruct"
+    ],
+    "zh": [
+      "openai/gpt-4o",
+      "anthropic/claude-sonnet-4",
+      "google/gemini-2.5-pro",
+      "deepseek/deepseek-chat",
+      "meta-llama/llama-3.3-70b-instruct"
+    ]
+  },
+  "tags": ["aggregator", "gateway", "openai-compatible", "multi-model"],
+  "searchAliases": ["open router", "openrouter.ai", "统一模型网关"],
+  "lastVerified": "2026-07-22",
+  "seo": {
+    "title": {
+      "en": "OpenRouter API Key - Unified Multi-Model Gateway | Get Model Key",
+      "zh": "OpenRouter API Key - 统一多模型网关 | Get Model Key"
+    },
+    "description": {
+      "en": "Get an OpenRouter API key to call models from OpenAI, Anthropic, Google, DeepSeek and more through one OpenAI-compatible endpoint.",
+      "zh": "获取 OpenRouter API Key，通过一个兼容 OpenAI 的接口调用 OpenAI、Anthropic、Google、DeepSeek 等多家模型。"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "novita",
+  "status": "active",
+  "categories": ["aggregator", "global"],
+  "region": "aggregator",
+  "featured": true,
+  "img": "",
+  "officialKeyUrl": "https://novita.ai/settings/key-management",
+  "officialSiteUrl": "https://novita.ai/",
+  "officialDocsUrl": "https://novita.ai/docs",
+  "name": {
+    "en": "Novita AI",
+    "zh": "Novita AI"
+  },
+  "summary": {
+    "en": "Cloud aggregator for open-source LLMs with OpenAI-compatible APIs, covering DeepSeek, Llama, Qwen, Mistral and more.",
+    "zh": "面向开源大模型的云聚合平台，提供兼容 OpenAI 的 API，覆盖 DeepSeek、Llama、Qwen、Mistral 等。"
+  },
+  "models": {
+    "en": [
+      "deepseek/deepseek-r1",
+      "deepseek/deepseek-v3",
+      "meta-llama/llama-3.3-70b-instruct",
+      "qwen/qwen2.5-72b-instruct",
+      "mistralai/mistral-large"
+    ],
+    "zh": [
+      "deepseek/deepseek-r1",
+      "deepseek/deepseek-v3",
+      "meta-llama/llama-3.3-70b-instruct",
+      "qwen/qwen2.5-72b-instruct",
+      "mistralai/mistral-large"
+    ]
+  },
+  "tags": ["aggregator", "open-source", "openai-compatible", "cloud"],
+  "searchAliases": ["novita ai", "novita.ai", "诺维塔"],
+  "lastVerified": "2026-07-22",
+  "seo": {
+    "title": {
+      "en": "Novita AI API Key - Open-Source Model Aggregator | Get Model Key",
+      "zh": "Novita AI API Key - 开源模型聚合平台 | Get Model Key"
+    },
+    "description": {
+      "en": "Get a Novita AI API key for hosted open-source models with OpenAI-compatible endpoints.",
+      "zh": "获取 Novita AI API Key，通过兼容 OpenAI 的接口调用托管开源模型。"
+    }
+  }
+}
