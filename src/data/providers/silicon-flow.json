@@ -67,22 +67,41 @@
   },
   "offers": [
     {
-      "id": "openclaw-2026-platform-credit",
+      "id": "sf-2026-realname-auth-voucher",
+      "status": "active",
+      "type": "signup_credit",
+      "title": {
+        "en": "¥16 real-name authentication voucher",
+        "zh": "实名认证奖励券 ¥16"
+      },
+      "benefit": {
+        "en": "Users who complete first-time real-name authentication on the SiliconFlow China site (cloud.siliconflow.cn) can claim one ¥16 certification reward voucher—new and existing accounts included (one per user).",
+        "zh": "在硅基流动中国站（cloud.siliconflow.cn）完成首次实名认证的用户（含新老用户）可领取 1 张面值 ¥16 的认证奖励券，每用户限领一次。"
+      },
+      "notes": {
+        "en": "Campaign runs through 2026-12-31. Voucher is valid 180 days after claim; usable for API calls, batch inference, fine-tuning, and other billed usage on the China site. Previously authenticated users may still claim during the campaign. Always confirm rules on the official site.",
+        "zh": "活动有效期至 2026-12-31；代金券自领取起 180 天内有效，可用于中国站全模型 API、批量推理、微调等消费。活动前已实名用户也可在活动期内手动领取。细则与解释权以官方为准。"
+      },
+      "verifiedAt": "2026-07-22",
+      "expiresAt": "2026-12-31"
+    },
+    {
+      "id": "sf-2026-referral-officer-voucher",
       "status": "active",
       "type": "platform_credit",
       "title": {
-        "en": "Universal platform credit",
-        "zh": "平台通用额度"
+        "en": "Referral officer: ¥16 per successful invite",
+        "zh": "推荐官邀请奖励：每邀 1 人得 ¥16"
       },
       "benefit": {
-        "en": "The platform often provides around CNY 16 in universal voucher credit (subject to official policy).",
-        "zh": "平台常见提供约 16 元通用代金券（以官方规则为准）。"
+        "en": "Verified users can invite others via a personal link or code. When an invitee registers and completes real-name authentication, the inviter gets one ¥16 referral reward voucher.",
+        "zh": "已实名用户可作为「硅基流动推荐官」，通过专属邀请链接或邀请码邀请新人；被邀请人完成注册并实名后，邀请人可获得 1 张面值 ¥16 的推荐官奖励券。"
       },
       "notes": {
-        "en": "As an aggregator, one key can invoke multiple mainstream open-source models, reducing the need to register across many separate platforms.",
-        "zh": "聚合平台形态下，一个 Key 即可调用多种主流开源模型，能明显减少多平台分别注册的成本。"
+        "en": "No stated cap on invite count or rewards during the campaign. Vouchers are account-bound and non-transferable. Confirm eligibility and rules on the official SiliconFlow China site.",
+        "zh": "活动期内邀请人数与获奖次数官方未设上限。代金券不可转让、转售或提现。资格与规则请以硅基流动中国站官方说明为准。"
       },
-      "verifiedAt": "2026-03-26"
+      "verifiedAt": "2026-07-22"
     }
   ],
   "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773863557988656_siliconflow.webp",
