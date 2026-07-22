@@ -16,6 +16,64 @@
     "en": "Alibaba ModelScope community platform with API Inference access to many open-source models via SDK Token.",
     "zh": "阿里魔搭社区平台，通过 SDK Token 提供 API Inference，可调用大量开源模型。"
   },
+  "overview": {
+    "en": [
+      "ModelScope (魔搭) is Alibaba's open-source model community. Beyond browsing models and datasets, it also offers API Inference access through an SDK Token / access token.",
+      "It is a practical entry for developers who want Chinese open-source model coverage such as Qwen and DeepSeek, especially when starting from free or low-friction inference quotas.",
+      "ModelScope is a community and inference platform operated around Alibaba's ecosystem. Token permissions, free quotas, and supported model IDs can change, so always verify details on the official site."
+    ],
+    "zh": [
+      "魔搭 ModelScope 是阿里的开源模型社区。除了浏览模型和数据集，还可通过 SDK Token / 访问令牌使用 API Inference。",
+      "适合希望快速接入通义千问、DeepSeek 等中文开源模型的开发者，尤其适合从免费或低门槛推理额度起步。",
+      "魔搭属于阿里生态下的社区与推理平台。令牌权限、免费额度和支持的模型 ID 可能调整，请以官网最新说明为准。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Sign in at modelscope.cn (GitHub / Alipay login may be available).",
+      "Open the Access Token / My AccessToken page and create an SDK Token.",
+      "Save the token securely; treat it like an API key.",
+      "Use the token with ModelScope API Inference endpoints as described in the official docs."
+    ],
+    "zh": [
+      "登录 modelscope.cn（通常支持 GitHub / 支付宝等方式）。",
+      "打开访问令牌 / 我的 AccessToken 页面，创建 SDK Token。",
+      "妥善保存令牌，按 API Key 同等安全级别管理。",
+      "按官方文档，将令牌用于 ModelScope API Inference 接口调用。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is a ModelScope token the same as an Alibaba Cloud DashScope API key?",
+        "zh": "魔搭 Token 和阿里云百炼 DashScope API Key 是一回事吗？"
+      },
+      "answer": {
+        "en": "No. ModelScope access tokens and DashScope/Qwen console keys belong to different entry points. Use the official page that matches the product you are integrating.",
+        "zh": "不是。魔搭访问令牌与百炼/通义控制台 Key 属于不同入口，请按你实际接入的产品使用对应官方页面。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I call models with an OpenAI-compatible client?",
+        "zh": "可以用 OpenAI 兼容客户端调用吗？"
+      },
+      "answer": {
+        "en": "Yes for supported API Inference routes. Follow ModelScope's current base URL and authentication guidance in the docs.",
+        "zh": "在支持的 API Inference 路由上可以。请按文档中的 base URL 与鉴权方式配置。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are free quotas guaranteed forever?",
+        "zh": "免费额度会永久保证吗？"
+      },
+      "answer": {
+        "en": "No. Community free quotas and daily limits are policy-dependent and may change. Check the official limits page before production use.",
+        "zh": "不会。社区免费额度和日限额取决于平台政策，可能调整。上线前请先查看官方限额说明。"
+      }
+    }
+  ],
   "models": {
     "en": [
       "Qwen/Qwen2.5-72B-Instruct",

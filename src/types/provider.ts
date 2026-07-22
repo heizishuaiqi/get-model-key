@@ -14,6 +14,11 @@ export interface ProviderOffer {
   expiresAt?: string;
 }
 
+export interface ProviderFaqItem {
+  question: Record<'en' | 'zh', string>;
+  answer: Record<'en' | 'zh', string>;
+}
+
 export interface Provider {
   slug: string;
   status: 'active' | 'hidden' | 'draft';
@@ -26,6 +31,12 @@ export interface Provider {
   officialDocsUrl?: string;
   name: Record<'en' | 'zh', string>;
   summary: Record<'en' | 'zh', string>;
+  /** Longer intro paragraphs for the detail page. Optional for older providers. */
+  overview?: Record<'en' | 'zh', string[]>;
+  /** Step-by-step guidance for obtaining an API key. Optional for older providers. */
+  howToGetKey?: Record<'en' | 'zh', string[]>;
+  /** FAQ items shown on the detail page. Optional for older providers. */
+  faq?: ProviderFaqItem[];
   models: Record<'en' | 'zh', string[]>;
   tags: string[];
   searchAliases: string[];

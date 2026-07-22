@@ -118,6 +118,51 @@ fs.readdir(providersDir, (err, files) => {
           });
         }
       }
+
+      // Validate optional overview / howToGetKey / faq content blocks
+      ['overview', 'howToGetKey'].forEach((field) => {
+        if (provider[field] === undefined) return;
+        const value = provider[field];
+        if (
+          !value ||
+          typeof value !== 'object' ||
+          !Array.isArray(value.en) ||
+          !Array.isArray(value.zh) ||
+          value.en.some((item) => typeof item !== 'string') ||
+          value.zh.some((item) => typeof item !== 'string')
+        ) {
+          invalidProviders.push({
+            file,
+            issue: `Invalid ${field}: must include en/zh string arrays`,
+          });
+        }
+      });
+
+      if (provider.faq !== undefined) {
+        if (!Array.isArray(provider.faq)) {
+          invalidProviders.push({
+            file,
+            issue: 'Invalid faq: must be an array',
+          });
+        } else {
+          provider.faq.forEach((item, index) => {
+            const key = `${file} faq[${index}]`;
+            ['question', 'answer'].forEach((field) => {
+              if (
+                !item[field] ||
+                typeof item[field] !== 'object' ||
+                typeof item[field].en !== 'string' ||
+                typeof item[field].zh !== 'string'
+              ) {
+                invalidProviders.push({
+                  file,
+                  issue: `${key} invalid ${field}: must include en/zh strings`,
+                });
+              }
+            });
+          });
+        }
+      }
       
     } catch (e) {
       invalidProviders.push({

@@ -16,6 +16,64 @@
     "en": "Cloud aggregator for open-source LLMs with OpenAI-compatible APIs, covering DeepSeek, Llama, Qwen, Mistral and more.",
     "zh": "面向开源大模型的云聚合平台，提供兼容 OpenAI 的 API，覆盖 DeepSeek、Llama、Qwen、Mistral 等。"
   },
+  "overview": {
+    "en": [
+      "Novita AI provides hosted access to a wide range of open-source language models through a cloud API. You can browse its model library and call selected models with a single Novita API key.",
+      "It is useful for teams that want open-source model coverage without self-hosting GPUs, while still keeping an OpenAI-compatible request format.",
+      "Novita is an aggregator/hosting platform. Exact quotas, pricing, and available model IDs should always be confirmed in the official console and documentation."
+    ],
+    "zh": [
+      "Novita AI 通过云端 API 托管大量开源语言模型。你可以用一把 Novita API Key，在模型库中选择并调用所需模型。",
+      "适合希望覆盖开源模型、又不想自建 GPU，同时希望保持 OpenAI 兼容请求格式的团队。",
+      "Novita 属于聚合/托管平台。具体额度、价格和模型 ID 请始终以官方控制台与文档为准。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Register or sign in at novita.ai.",
+      "Open Settings → Key Management and create a new API key.",
+      "Copy the key immediately; it is typically shown only once.",
+      "Call Novita's OpenAI-compatible endpoint with Authorization: Bearer <API Key>."
+    ],
+    "zh": [
+      "在 novita.ai 注册或登录账号。",
+      "进入 Settings → Key Management，创建一把新的 API Key。",
+      "立刻复制保存；密钥通常只展示一次。",
+      "使用 Authorization: Bearer <API Key> 调用 Novita 的 OpenAI 兼容接口。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "What kinds of models does Novita focus on?",
+        "zh": "Novita 主要提供哪些模型？"
+      },
+      "answer": {
+        "en": "It focuses on hosted open-source LLMs such as DeepSeek, Llama, Qwen and Mistral families, with the live catalog defined in the official model library.",
+        "zh": "以托管开源大模型为主，例如 DeepSeek、Llama、Qwen、Mistral 等系列，具体以官方模型库为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Novita compatible with the OpenAI SDK?",
+        "zh": "Novita 兼容 OpenAI SDK 吗？"
+      },
+      "answer": {
+        "en": "Yes. Use Novita's documented OpenAI-compatible base URL and your Novita API key.",
+        "zh": "兼容。使用文档中的 OpenAI 兼容 base URL，并填入 Novita API Key 即可。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Get Model Key sell Novita credits?",
+        "zh": "Get Model Key 会售卖 Novita 额度吗？"
+      },
+      "answer": {
+        "en": "No. This site only links to the official key management page. Billing happens on Novita.",
+        "zh": "不会。本站只提供官方 Key 管理页入口，充值与计费都在 Novita 完成。"
+      }
+    }
+  ],
   "models": {
     "en": [
       "deepseek/deepseek-r1",

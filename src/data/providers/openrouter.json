@@ -16,6 +16,64 @@
     "en": "Unified API gateway for hundreds of models from many providers, with OpenAI-compatible endpoints and pay-as-you-go billing.",
     "zh": "统一 API 网关，聚合数百个来自不同厂商的模型，兼容 OpenAI 接口，按量计费。"
   },
+  "overview": {
+    "en": [
+      "OpenRouter is a multi-provider API gateway. One account and one API key can route requests to models from OpenAI, Anthropic, Google, DeepSeek, Meta and many other upstream providers.",
+      "It is a good fit when you want to experiment across vendors, keep a single OpenAI-compatible integration path, or switch models without rewriting your client code.",
+      "OpenRouter is a third-party aggregator, not the official console of each model vendor. Billing, rate limits, and model availability follow OpenRouter's own policies as well as upstream constraints."
+    ],
+    "zh": [
+      "OpenRouter 是一个多厂商 API 聚合网关。一个账号、一把 API Key，就可以把请求路由到 OpenAI、Anthropic、Google、DeepSeek、Meta 等上游模型。",
+      "适合希望跨厂商试用模型、统一走 OpenAI 兼容接口，或在不改客户端代码的情况下切换模型的开发者。",
+      "OpenRouter 是第三方聚合平台，不是各模型厂商的官方控制台。计费、限流和模型可用性会同时受 OpenRouter 规则与上游策略影响。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Open the official OpenRouter keys page and sign in or create an account.",
+      "Create a new API key, optionally set a credit limit, and copy the key immediately.",
+      "Use the key as a Bearer token against OpenRouter's OpenAI-compatible API base URL.",
+      "Keep the key in server-side environment variables; rotate it if it is ever exposed."
+    ],
+    "zh": [
+      "打开 OpenRouter 官方 Keys 页面，登录或注册账号。",
+      "创建一把新的 API Key，可按需设置额度上限，并立即复制保存。",
+      "以 Bearer Token 方式调用 OpenRouter 的 OpenAI 兼容 API 地址。",
+      "把 Key 放在服务端环境变量中；一旦泄露请立即轮换。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is OpenRouter an official OpenAI or Anthropic product?",
+        "zh": "OpenRouter 是 OpenAI 或 Anthropic 的官方产品吗？"
+      },
+      "answer": {
+        "en": "No. It is an independent aggregator that routes traffic to many providers through one API.",
+        "zh": "不是。它是独立的聚合平台，通过统一 API 把请求转发到多家上游厂商。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use the OpenAI SDK with OpenRouter?",
+        "zh": "可以用 OpenAI SDK 接入 OpenRouter 吗？"
+      },
+      "answer": {
+        "en": "Yes. Point the SDK base URL to OpenRouter's API endpoint and use your OpenRouter API key.",
+        "zh": "可以。把 SDK 的 base URL 指向 OpenRouter API，并填入你的 OpenRouter API Key。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where should I confirm pricing and model availability?",
+        "zh": "价格和模型可用性应以哪里为准？"
+      },
+      "answer": {
+        "en": "Always check OpenRouter's official site and docs. Catalog and pricing can change frequently.",
+        "zh": "请以 OpenRouter 官网和文档为准，模型目录与价格会经常变化。"
+      }
+    }
+  ],
   "models": {
     "en": [
       "openai/gpt-4o",

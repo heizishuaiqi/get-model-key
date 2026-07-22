@@ -6,6 +6,7 @@ import Card from '@/components/ui/Card';
 import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
+import ProviderContentSections from '@/components/providers/ProviderContentSections';
 import { getActiveOffers, getAllProviders, getProviderBySlug } from '@/lib/providers';
 import { getGuidesByProviderSlug } from '@/lib/guides';
 import { getProviderMetadata } from '@/lib/seo';
@@ -42,9 +43,31 @@ export default async function ProviderPage({ params }: Props) {
   const activeOffers = getActiveOffers(provider);
   const relatedGuides = await getGuidesByProviderSlug(provider.slug);
 
+  const faqStructuredData =
+    provider.faq && provider.faq.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: provider.faq.map((item) => ({
+            '@type': 'Question',
+            name: item.question.en,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer.en,
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
+        {faqStructuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+          />
+        )}
         <div className="mb-8">
           <Link
             href="/providers"
@@ -53,7 +76,7 @@ export default async function ProviderPage({ params }: Props) {
             <span aria-hidden="true">{'<'}</span>
             Back to Providers
           </Link>
-</div>
+        </div>
 
         <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-3xl">
@@ -92,6 +115,12 @@ export default async function ProviderPage({ params }: Props) {
 
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-8">
+            <ProviderContentSections
+              provider={provider}
+              lang="en"
+              include={['overview', 'howToGetKey']}
+            />
+
             <Card variant="emphasis">
               <h2 className="mb-4 text-h2 text-text-primary">Common Models</h2>
               <div className="flex flex-wrap gap-3">
@@ -127,6 +156,8 @@ export default async function ProviderPage({ params }: Props) {
                 </div>
               </Card>
             )}
+
+            <ProviderContentSections provider={provider} lang="en" include={['faq']} />
 
             {provider.tags.length > 0 && (
               <Card variant="standard">
