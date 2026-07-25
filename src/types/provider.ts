@@ -28,6 +28,7 @@ export interface Provider {
   img: string;
   officialKeyUrl: string;
   officialSiteUrl?: string;
+  officialSiteUrlGlobal?: string;
   officialDocsUrl?: string;
   name: Record<'en' | 'zh', string>;
   summary: Record<'en' | 'zh', string>;

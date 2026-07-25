@@ -46,11 +46,14 @@ export default async function ZhGuideDetailPage({ params }: Props) {
     (provider): provider is NonNullable<typeof provider> => Boolean(provider && provider.status === 'active')
   );
 
+  const coverImageUrl = guide.coverImage?.zh ?? siteConfig.socialImage;
+
   const articleStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: guide.title.zh,
     description: guide.excerpt.zh,
+    image: coverImageUrl,
     datePublished: guide.publishedAt,
     dateModified: guide.updatedAt,
     inLanguage: 'zh-CN',
@@ -58,15 +61,42 @@ export default async function ZhGuideDetailPage({ params }: Props) {
     author: {
       '@type': 'Organization',
       name: siteConfig.siteName,
+      url: siteConfig.domain,
     },
     publisher: {
       '@type': 'Organization',
       name: siteConfig.siteName,
+      url: siteConfig.domain,
       logo: {
         '@type': 'ImageObject',
         url: `${siteConfig.domain}/android-chrome-512x512.png`,
       },
     },
+  };
+
+  const breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '首页',
+        item: `${siteConfig.domain}/zh/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: '指南',
+        item: `${siteConfig.domain}/zh/guides/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: guide.title.zh,
+        item: `${siteConfig.domain}/zh/guides/${guide.slug}/`,
+      },
+    ],
   };
 
   const faqStructuredData = guide.faq
@@ -90,6 +120,10 @@ export default async function ZhGuideDetailPage({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
         />
         {faqStructuredData && (
           <script

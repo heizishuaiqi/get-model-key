@@ -158,6 +158,7 @@ export async function getGuideMetadata(slug: string, lang: 'en' | 'zh' = 'en'): 
 
   const title = guide.seo?.title?.[lang] || guide.title[lang];
   const description = guide.seo?.description?.[lang] || guide.excerpt[lang];
+  const coverImage = guide.coverImage?.[lang] ?? siteConfig.socialImage;
   const url =
     lang === 'en'
       ? `${siteConfig.domain}/guides/${slug}/`
@@ -181,12 +182,13 @@ export async function getGuideMetadata(slug: string, lang: 'en' | 'zh' = 'en'): 
       description,
       siteName: siteConfig.siteName,
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
+      images: [{ url: coverImage, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [siteConfig.socialImage],
+      images: [coverImage],
     },
   };
 }

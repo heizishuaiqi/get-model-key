@@ -102,7 +102,12 @@ export default async function ZhProviderPage({ params }: Props) {
             </PrimaryInverseButton>
             {provider.officialSiteUrl && (
               <PillButton href={provider.officialSiteUrl} newTab variant="ghost" size="lg" className="w-full">
-                {'\u8bbf\u95ee\u5b98\u7f51'}
+                {provider.officialSiteUrlGlobal ? '\u5b98\u7f51\uff08\u4e2d\u56fd\u7ad9\uff09' : '\u8bbf\u95ee\u5b98\u7f51'}
+              </PillButton>
+            )}
+            {provider.officialSiteUrlGlobal && (
+              <PillButton href={provider.officialSiteUrlGlobal} newTab variant="ghost" size="lg" className="w-full">
+                {provider.officialSiteUrl ? '\u5b98\u7f51\uff08\u56fd\u9645\u7ad9\uff09' : '\u8bbf\u95ee\u5b98\u7f51'}
               </PillButton>
             )}
             {provider.officialDocsUrl && (
@@ -236,7 +241,17 @@ export default async function ZhProviderPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
-                    {'\u5b98\u7f51'}
+                    {provider.officialSiteUrlGlobal ? '\u5b98\u7f51\uff08\u4e2d\u56fd\u7ad9\uff09' : '\u5b98\u7f51'}
+                  </a>
+                )}
+                {provider.officialSiteUrlGlobal && (
+                  <a
+                    href={provider.officialSiteUrlGlobal}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
+                  >
+                    {provider.officialSiteUrl ? '\u5b98\u7f51\uff08\u56fd\u9645\u7ad9\uff09' : '\u5b98\u7f51'}
                   </a>
                 )}
                 {provider.officialDocsUrl && (

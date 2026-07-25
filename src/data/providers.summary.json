@@ -508,6 +508,39 @@
     }
   },
   {
+    "slug": "mistral-ai",
+    "region": "global",
+    "officialKeyUrl": "https://console.mistral.ai/api-keys",
+    "officialSiteUrl": "https://mistral.ai/",
+    "officialDocsUrl": "https://docs.mistral.ai/",
+    "name": {
+      "en": "Mistral AI",
+      "zh": "Mistral AI"
+    },
+    "models": {
+      "en": [
+        "codestral-2508",
+        "devstral-2512",
+        "magistral-medium-2509",
+        "magistral-small-2509",
+        "ministral-3b-2512",
+        "ministral-8b-2512",
+        "ministral-14b-2512",
+        "codestral-embed"
+      ],
+      "zh": [
+        "codestral-2508",
+        "devstral-2512",
+        "magistral-medium-2509",
+        "magistral-small-2509",
+        "ministral-3b-2512",
+        "ministral-8b-2512",
+        "ministral-14b-2512",
+        "codestral-embed"
+      ]
+    }
+  },
+  {
     "slug": "modelscope",
     "region": "aggregator",
     "officialKeyUrl": "https://www.modelscope.cn/my/myaccesstoken",
@@ -773,7 +806,7 @@
     "slug": "silicon-flow",
     "region": "aggregator",
     "officialKeyUrl": "https://cloud.siliconflow.cn/me/account/ak",
-    "officialSiteUrl": "https://siliconflow.cn/",
+    "officialSiteUrl": "https://www.siliconflow.cn/",
     "officialDocsUrl": "https://docs.siliconflow.cn/",
     "name": {
       "en": "Silicon Flow",

@@ -31,6 +31,7 @@ export interface GuideArticle {
   publishedAt: string;
   updatedAt: string;
   readingMinutes: number;
+  coverImage?: Record<'en' | 'zh', string>;
   title: Record<'en' | 'zh', string>;
   excerpt: Record<'en' | 'zh', string>;
   tags: string[];

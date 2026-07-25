@@ -1,0 +1,300 @@
+{
+  "slug": "ai-api-token-price-comparison-2026",
+  "coverImage": {
+    "en": "/ai-api-token-price-comparison-2026-en.png",
+    "zh": "/ai-api-token-price-comparison-2026-zh.png"
+  },
+  "status": "published",
+  "topic": "comparison",
+  "publishedAt": "2026-07-25",
+  "updatedAt": "2026-07-25",
+  "readingMinutes": 10,
+  "title": {
+    "en": "AI API Token Price Comparison 2026: GPT-5.6, Claude Fable 5, Gemini 3.1, DeepSeek & More",
+    "zh": "2026 年 AI API Token 价格对比：GPT-5.6、Claude Fable 5、Gemini 3.1、DeepSeek 等主流模型"
+  },
+  "excerpt": {
+    "en": "A practical breakdown of input and output token prices per 1M tokens across the leading AI providers in 2026, with guidance on choosing the right model for your budget and use case.",
+    "zh": "2026 年主流 AI 供应商每百万 Token 输入/输出价格全面对比，帮助你根据预算和场景选择合适模型。"
+  },
+  "tags": [
+    "pricing",
+    "comparison",
+    "token cost",
+    "model selection",
+    "gpt-5.6",
+    "claude",
+    "gemini",
+    "deepseek"
+  ],
+  "providerSlugs": [
+    "anthropic",
+    "openai",
+    "google",
+    "deepseek",
+    "moonshot",
+    "zhipuai"
+  ],
+  "sections": [
+    {
+      "id": "price-table",
+      "heading": {
+        "en": "1) 2026 Token price comparison table",
+        "zh": "1）2026 年 Token 价格对比表"
+      },
+      "paragraphs": {
+        "en": [
+          "The table below lists standard API prices per 1 million tokens as of July 2026. International providers price in USD; Chinese providers price in CNY. Prices reflect standard (non-batch, non-cached) API calls — batch and prompt caching can reduce costs by 20–50%.",
+          "Note: prices change frequently. Always verify on the provider's official pricing page before making budget decisions."
+        ],
+        "zh": [
+          "下表为截至 2026 年 7 月的标准 API 每百万 Token 价格。国际供应商以美元计价，国内供应商以人民币计价。价格均指标准（非批量、非缓存）调用——批量推理和 Prompt 缓存通常可降低 20–50% 成本。",
+          "注意：价格随时可能变动，决策前请以各供应商官网定价页面为准。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Claude Fable 5 (Anthropic): Input $10.00 / Output $50.00 per 1M tokens — highest capability tier",
+          "GPT-5.6 Sol (OpenAI): Input $5.00 / Output $30.00 per 1M tokens — flagship reasoning",
+          "GPT-5.6 Terra (OpenAI): Input $2.50 / Output $15.00 per 1M tokens — balanced performance",
+          "Gemini 3.1 Pro (Google): Input $2.00 / Output $12.00 per 1M tokens — strong multimodal",
+          "GPT-5.6 Luna (OpenAI): Input $1.00 / Output $6.00 per 1M tokens — cost-efficient OpenAI",
+          "Gemini 3.1 Flash-Lite (Google): Input $0.25 / Output $1.50 per 1M tokens — ultra low cost",
+          "DeepSeek V4 Pro: Input ¥3.00 / Output ¥6.00 per 1M tokens",
+          "Kimi K3 (Moonshot): Input ¥20.00 / Output ¥100.00 per 1M tokens",
+          "GLM-5.2 (ZhipuAI): Input ¥8.00 / Output ¥28.00 per 1M tokens"
+        ],
+        "zh": [
+          "Claude Fable 5（Anthropic）：输入 $10.00 / 输出 $50.00 每百万 Token — 顶级能力档",
+          "GPT-5.6 Sol（OpenAI）：输入 $5.00 / 输出 $30.00 每百万 Token — 旗舰推理",
+          "GPT-5.6 Terra（OpenAI）：输入 $2.50 / 输出 $15.00 每百万 Token — 均衡性能",
+          "Gemini 3.1 Pro（Google）：输入 $2.00 / 输出 $12.00 每百万 Token — 多模态强",
+          "GPT-5.6 Luna（OpenAI）：输入 $1.00 / 输出 $6.00 每百万 Token — 性价比 OpenAI",
+          "Gemini 3.1 Flash-Lite（Google）：输入 $0.25 / 输出 $1.50 每百万 Token — 超低成本",
+          "DeepSeek V4 Pro：输入 ¥3.00 / 输出 ¥6.00 每百万 Token",
+          "Kimi K3（月之暗面）：输入 ¥20.00 / 输出 ¥100.00 每百万 Token",
+          "GLM-5.2（智谱 AI）：输入 ¥8.00 / 输出 ¥28.00 每百万 Token"
+        ]
+      }
+    },
+    {
+      "id": "why-prices-differ",
+      "heading": {
+        "en": "2) Why do token prices vary so much?",
+        "zh": "2）为什么各家 Token 价格差异这么大？"
+      },
+      "paragraphs": {
+        "en": [
+          "Model capability is the biggest driver. More powerful models require more compute per token — longer reasoning chains, larger activation sizes, and more inference steps all add cost. This is why Claude Fable 5 costs 40x more per output token than Gemini Flash-Lite.",
+          "Compute infrastructure matters too. Companies like Google own custom TPUs and large-scale data centers, which reduces their marginal cost per token. OpenAI and Anthropic rely more on third-party GPU clusters, which affects their floor pricing.",
+          "Market positioning is a deliberate choice. Anthropic targets enterprise customers who prioritize safety, accuracy, and long context. OpenAI spans the full market from consumer to enterprise. Chinese providers like DeepSeek compete aggressively on price to build market share in the domestic developer ecosystem.",
+          "Architecture differences — such as Mixture of Experts (MoE) versus dense transformers — also affect costs. MoE models activate only a subset of parameters per token, reducing compute. DeepSeek uses MoE which contributes to its low pricing."
+        ],
+        "zh": [
+          "模型能力是最大的定价驱动力。更强的模型每个 Token 需要更多算力——更长的推理链、更大的激活规模和更多推理步骤都会增加成本。这就是为什么 Claude Fable 5 的输出 Token 单价是 Gemini Flash-Lite 的 40 倍。",
+          "算力基础设施同样重要。谷歌拥有自研 TPU 和大规模数据中心，降低了边际 Token 成本；OpenAI 和 Anthropic 更多依赖第三方 GPU 集群，影响了定价下限。",
+          "市场定位是主动选择。Anthropic 主攻注重安全性、准确性和长上下文的企业客户；OpenAI 覆盖从消费者到企业的全市场；DeepSeek 等国内供应商以低价竞争，积极建立国内开发者生态。",
+          "架构差异（如 MoE 稀疏激活 vs 密集 Transformer）也影响成本。MoE 模型每个 Token 只激活部分参数，降低了算力消耗，DeepSeek 采用 MoE 架构是其低价的原因之一。"
+        ]
+      }
+    },
+    {
+      "id": "output-heavy-caveat",
+      "heading": {
+        "en": "3) Watch out: output tokens cost more than input",
+        "zh": "3）注意：输出 Token 比输入贵得多"
+      },
+      "paragraphs": {
+        "en": [
+          "For every model in this comparison, output tokens are 3–6x more expensive than input tokens. This matters a lot in practice: a task that generates 2,000 output tokens costs far more than a task that reads 2,000 input tokens.",
+          "Use cases like summarization, classification, and extraction are input-heavy and cheaper. Long-form content generation, code synthesis, and multi-step reasoning are output-heavy and expensive. When estimating costs, always model your expected output length, not just your prompt length.",
+          "Thinking or reasoning modes (like extended thinking in Claude or o-series in OpenAI) can generate very large output token counts through internal chain-of-thought. These modes are powerful but multiply your output costs — enable them only when accuracy gains justify the expense."
+        ],
+        "zh": [
+          "对比表中每款模型，输出 Token 的单价都是输入的 3–6 倍。这在实际中影响很大：生成 2,000 个输出 Token 的任务，成本远高于读取 2,000 个输入 Token。",
+          "摘要、分类、信息抽取等任务以输入为主，成本较低；长文生成、代码合成、多步推理等任务以输出为主，成本较高。估算费用时，务必对预期输出长度建模，而不仅仅是 Prompt 长度。",
+          "思考/推理模式（如 Claude 的 extended thinking 或 OpenAI 的 o 系列）会通过内部思维链生成大量输出 Token，这类模式效果强大但会成倍放大输出成本——只在精度提升值得付出的场景下开启。"
+        ]
+      }
+    },
+    {
+      "id": "model-selection-guide",
+      "heading": {
+        "en": "4) Which model should you use?",
+        "zh": "4）应该选哪个模型？"
+      },
+      "paragraphs": {
+        "en": [
+          "There is no single right answer — the best model depends on your task, quality requirements, volume, and budget. Here is a practical breakdown by use case.",
+          "For high-stakes tasks requiring maximum accuracy — legal analysis, medical research, complex code review, enterprise agents — Claude Fable 5 or GPT-5.6 Sol are the top choices despite their price. The cost is justified when errors are expensive.",
+          "For general-purpose application backends — customer support, document processing, RAG pipelines — GPT-5.6 Terra, Gemini 3.1 Pro, or GPT-5.6 Luna hit the best capability-to-cost ratio. These models handle most real-world tasks well at a fraction of flagship cost.",
+          "For high-volume, latency-sensitive workloads — content moderation, classification, lightweight summarization — Gemini 3.1 Flash-Lite at $0.25/$1.50 is hard to beat. Similarly, DeepSeek V4 Pro at ¥3/¥6 is the dominant choice for Chinese-language, cost-sensitive applications.",
+          "For Chinese-language applications with domestic infrastructure needs — RMB billing, low latency in China, local compliance — DeepSeek, Kimi K3, and GLM-5.2 are the practical choices. DeepSeek leads on price; Kimi K3 leads on reasoning and long context."
+        ],
+        "zh": [
+          "没有万能答案——最佳模型取决于你的任务、质量要求、调用量和预算。以下是按使用场景的实用分析。",
+          "高风险、要求最高准确性的任务——法律分析、医疗研究、复杂代码审查、企业 Agent——首选 Claude Fable 5 或 GPT-5.6 Sol。错误成本高时，溢价是值得的。",
+          "通用应用后端——客服、文档处理、RAG 管道——GPT-5.6 Terra、Gemini 3.1 Pro 或 GPT-5.6 Luna 的性价比最优。这些模型能处理大多数真实任务，成本仅为旗舰款的一小部分。",
+          "高并发、低延迟场景——内容审核、分类、轻量摘要——Gemini 3.1 Flash-Lite（$0.25/$1.50）几乎无可匹敌。中文低成本场景下，DeepSeek V4 Pro（¥3/¥6）是首选。",
+          "需要国内基础设施的中文应用——人民币计费、中国低延迟、本地合规——DeepSeek、Kimi K3 和 GLM-5.2 是实用选择。DeepSeek 价格最优；Kimi K3 在推理和长上下文上表现突出。"
+        ]
+      }
+    },
+    {
+      "id": "cost-reduction-tips",
+      "heading": {
+        "en": "5) Practical ways to reduce your API costs",
+        "zh": "5）降低 API 成本的实用方法"
+      },
+      "paragraphs": {
+        "en": [
+          "Batch inference cuts costs by 50% on most providers. If your tasks do not require real-time responses — offline document processing, nightly data enrichment, bulk classification — always use the batch API. The tradeoff is latency (results return within hours, not seconds).",
+          "Prompt caching reduces repeated input costs. If your prompts share a long system prompt or large context document, providers like Anthropic and OpenAI cache the prefix and charge a fraction of the normal input price for cache hits. This is particularly effective for RAG and agent systems.",
+          "Model routing saves money at scale. Use a cheap model (Gemini Flash-Lite, GPT-5.6 Luna) for simple sub-tasks and a premium model only when complexity demands it. Many production systems route 80% of queries to cheap models and 20% to expensive ones, cutting average cost by 60–70%.",
+          "Trim your prompts. Verbose system prompts, unnecessary examples, and repeated context all add input tokens. A 30% reduction in average prompt length means a 30% reduction in input costs. Use structured output (JSON mode) to minimize output verbosity."
+        ],
+        "zh": [
+          "批量推理可降低 50% 成本。如果任务不要求实时响应——离线文档处理、夜间数据增强、大批量分类——请务必使用 Batch API。代价是延迟（结果在数小时内返回，而非秒级）。",
+          "Prompt 缓存可降低重复输入成本。如果 Prompt 包含较长的系统提示或大型上下文文档，Anthropic、OpenAI 等供应商会缓存前缀，缓存命中时仅收取极低费用——对 RAG 和 Agent 系统尤为有效。",
+          "模型路由可在规模上节省成本。简单子任务使用廉价模型（Gemini Flash-Lite、GPT-5.6 Luna），复杂任务才调用高价模型。许多生产系统将 80% 请求路由至廉价模型，平均成本可降低 60–70%。",
+          "精简 Prompt。冗长的系统提示、多余示例和重复上下文都会增加输入 Token。平均 Prompt 长度缩减 30%，输入成本就降低 30%。使用结构化输出（JSON 模式）还能减少输出冗余。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Use batch APIs for non-real-time tasks (50% discount on most providers)",
+          "Enable prompt caching for long, repeated system prompts",
+          "Route cheap tasks to cheap models — only route complex tasks to premium models",
+          "Trim system prompts and avoid repeating context that is already in the model's window",
+          "Use JSON output mode to avoid verbose natural-language wrapping in responses"
+        ],
+        "zh": [
+          "非实时任务使用 Batch API（多数供应商打五折）",
+          "为长且重复的系统提示开启 Prompt 缓存",
+          "简单任务路由至廉价模型，复杂任务才调用高价模型",
+          "精简系统提示，避免重复传入已在上下文窗口中的内容",
+          "使用 JSON 输出模式，减少响应中的自然语言包装冗余"
+        ]
+      }
+    },
+    {
+      "id": "cny-usd-context",
+      "heading": {
+        "en": "6) Comparing domestic and international pricing",
+        "zh": "6）国内与国际定价横向对比"
+      },
+      "paragraphs": {
+        "en": [
+          "Direct price comparison between USD and CNY models requires a currency conversion. At roughly ¥7.2 per USD (mid-2026), DeepSeek V4 Pro's input price of ¥3/1M tokens converts to approximately $0.42/1M tokens — cheaper than even Gemini Flash-Lite's $0.25 input price only in CNY terms, but competitive when accounting for domestic infrastructure benefits.",
+          "However, international models are generally inaccessible directly from mainland China without a proxy. For teams operating in China, the real comparison is between domestic options: DeepSeek (lowest price), GLM-5.2 (mid-range), and Kimi K3 (premium reasoning). Each also includes domestic billing, support in Chinese, and compliance with domestic data regulations.",
+          "For teams with a global user base, international models are the default choice. The key question is whether to use a single premium model or mix tiers based on query complexity."
+        ],
+        "zh": [
+          "美元与人民币模型的直接价格比较需要货币换算。按 2026 年中期约 7.2 的汇率，DeepSeek V4 Pro 输入 ¥3/百万 Token 约合 $0.42，从人民币角度看比 Gemini Flash-Lite 的 $0.25 稍贵，但叠加国内基础设施优势后仍有竞争力。",
+          "然而，国际模型通常无法从中国大陆直接访问。对于在国内运营的团队，实际比较对象是国内选项之间：DeepSeek（价格最低）、GLM-5.2（中端）和 Kimi K3（高端推理）。这些供应商均提供人民币计费、中文支持和国内数据合规保障。",
+          "对于面向全球用户的团队，国际模型是默认选择。核心问题是使用单一高价模型，还是按查询复杂度混合使用不同价格档位。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Are these prices for input or output tokens?",
+        "zh": "这些价格是输入还是输出 Token 的价格？"
+      },
+      "answer": {
+        "en": "Both. Input and output tokens are priced separately, and output tokens are typically 3–6x more expensive than input tokens. The price table in section 1 lists both for each model.",
+        "zh": "两者都有。输入和输出 Token 分开计价，输出通常比输入贵 3–6 倍。第一节的价格表分别列出了每款模型的两种价格。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does using a cheaper model always save money?",
+        "zh": "使用更便宜的模型一定省钱吗？"
+      },
+      "answer": {
+        "en": "Not always. Cheaper models may produce lower quality outputs that require retries, human correction, or longer prompts to compensate. Calculate total cost including error rates, prompt length needed, and downstream correction effort — not just token price.",
+        "zh": "不一定。廉价模型可能输出质量较低，需要重试、人工修正或更长的 Prompt 来补偿。应计算包含错误率、所需 Prompt 长度和下游修正成本的总成本，而不仅仅是 Token 单价。"
+      }
+    },
+    {
+      "question": {
+        "en": "How often do AI API prices change?",
+        "zh": "AI API 价格多久变动一次？"
+      },
+      "answer": {
+        "en": "Frequently. Most providers have reduced prices multiple times in 2025–2026 as infrastructure costs fall. Always check the provider's official pricing page for current rates before budgeting.",
+        "zh": "频繁变动。随着基础设施成本下降，大多数供应商在 2025–2026 年多次降价。制定预算前务必查看供应商官网的最新定价页面。"
+      }
+    },
+    {
+      "question": {
+        "en": "What is the cheapest model for high-volume workloads?",
+        "zh": "大批量任务最便宜的模型是哪个？"
+      },
+      "answer": {
+        "en": "For international workloads, Gemini 3.1 Flash-Lite at $0.25/$1.50 per 1M tokens is currently the most cost-effective in the comparison. For domestic Chinese workloads, DeepSeek V4 Pro at ¥3/¥6 per 1M tokens leads on price.",
+        "zh": "国际任务中，Gemini 3.1 Flash-Lite（$0.25/$1.50 每百万 Token）当前最具性价比。国内任务中，DeepSeek V4 Pro（¥3/¥6 每百万 Token）价格最低。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do context window size and reasoning modes affect price?",
+        "zh": "上下文窗口大小和推理模式会影响价格吗？"
+      },
+      "answer": {
+        "en": "Yes. Longer context means more input tokens per request. Reasoning/thinking modes generate large hidden output token counts for chain-of-thought, which is billed at the standard output rate. Both significantly increase per-request cost compared to short, non-reasoning prompts.",
+        "zh": "是的。更长的上下文意味着每次请求更多的输入 Token。推理/思考模式会为思维链生成大量隐藏的输出 Token，按标准输出价格计费。两者相比短提示、无推理的场景都会显著提高单次请求成本。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Anthropic API Pricing",
+      "url": "https://www.anthropic.com/pricing",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-25"
+    },
+    {
+      "label": "OpenAI API Pricing",
+      "url": "https://openai.com/api/pricing/",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-25"
+    },
+    {
+      "label": "Google Gemini API Pricing",
+      "url": "https://ai.google.dev/pricing",
+      "site": "Google AI",
+      "checkedAt": "2026-07-25"
+    },
+    {
+      "label": "DeepSeek API Pricing",
+      "url": "https://platform.deepseek.com/api-docs/pricing",
+      "site": "DeepSeek",
+      "checkedAt": "2026-07-25"
+    },
+    {
+      "label": "Moonshot (Kimi) Pricing",
+      "url": "https://platform.moonshot.cn/docs/pricing/pricing",
+      "site": "Moonshot",
+      "checkedAt": "2026-07-25"
+    },
+    {
+      "label": "ZhipuAI GLM Pricing",
+      "url": "https://open.bigmodel.cn/pricing",
+      "site": "ZhipuAI",
+      "checkedAt": "2026-07-25"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "AI API Token Price Comparison 2026: GPT-5.6 vs Claude vs Gemini vs DeepSeek | Get Model Key",
+      "zh": "2026 AI API Token 价格对比：GPT-5.6 vs Claude vs Gemini vs DeepSeek | Get Model Key"
+    },
+    "description": {
+      "en": "Compare AI API token prices per 1M tokens in 2026 across GPT-5.6, Claude Fable 5, Gemini 3.1, DeepSeek, Kimi K3, and GLM-5.2. Includes model selection guidance and cost reduction tips.",
+      "zh": "对比 2026 年 GPT-5.6、Claude Fable 5、Gemini 3.1、DeepSeek、Kimi K3、GLM-5.2 等模型的每百万 Token 价格，含选型建议与降本技巧。"
+    }
+  }
+}

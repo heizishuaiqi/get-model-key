@@ -139,8 +139,13 @@ export default function ProviderCard({
               {lang === 'en' ? 'Get API Key' : '\u83b7\u53d6 API Key'}
             </PrimaryInverseButton>
 
-            {showSecondaryLink && provider.officialSiteUrl && (
-              <PillButton variant="ghost" size="md" href={provider.officialSiteUrl} className="w-full">
+            {showSecondaryLink && (provider.officialSiteUrl || provider.officialSiteUrlGlobal) && (
+              <PillButton
+                variant="ghost"
+                size="md"
+                href={lang === 'zh' ? (provider.officialSiteUrl ?? provider.officialSiteUrlGlobal!) : (provider.officialSiteUrlGlobal ?? provider.officialSiteUrl!)}
+                className="w-full"
+              >
                 {lang === 'en' ? 'Visit Site' : '\u8bbf\u95ee\u5b98\u7f51'}
               </PillButton>
             )}

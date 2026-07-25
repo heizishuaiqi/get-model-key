@@ -102,7 +102,12 @@ export default async function ProviderPage({ params }: Props) {
             </PrimaryInverseButton>
             {provider.officialSiteUrl && (
               <PillButton href={provider.officialSiteUrl} newTab variant="ghost" size="lg" className="w-full">
-                Visit Website
+                {provider.officialSiteUrlGlobal ? 'Official Website (China)' : 'Visit Website'}
+              </PillButton>
+            )}
+            {provider.officialSiteUrlGlobal && (
+              <PillButton href={provider.officialSiteUrlGlobal} newTab variant="ghost" size="lg" className="w-full">
+                {provider.officialSiteUrl ? 'Official Website (Global)' : 'Visit Website'}
               </PillButton>
             )}
             {provider.officialDocsUrl && (
@@ -236,7 +241,17 @@ export default async function ProviderPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
-                    Official Website
+                    {provider.officialSiteUrlGlobal ? 'Official Website (China)' : 'Official Website'}
+                  </a>
+                )}
+                {provider.officialSiteUrlGlobal && (
+                  <a
+                    href={provider.officialSiteUrlGlobal}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
+                  >
+                    {provider.officialSiteUrl ? 'Official Website (Global)' : 'Official Website'}
                   </a>
                 )}
                 {provider.officialDocsUrl && (

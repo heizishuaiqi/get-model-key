@@ -1,0 +1,132 @@
+{
+  "slug": "mistral-ai",
+  "status": "active",
+  "categories": ["open-source"],
+  "region": "global",
+  "featured": false,
+  "officialKeyUrl": "https://console.mistral.ai/api-keys",
+  "officialSiteUrl": "https://mistral.ai/",
+  "officialDocsUrl": "https://docs.mistral.ai/",
+  "img": "",
+  "name": {
+    "en": "Mistral AI",
+    "zh": "Mistral AI"
+  },
+  "summary": {
+    "en": "French AI lab offering frontier open-weight and proprietary models with strong reasoning, coding, and multimodal capabilities via a unified API.",
+    "zh": "法国 AI 实验室，提供开源权重与专有模型，涵盖推理、代码与多模态能力，通过统一 API 调用。"
+  },
+  "models": {
+    "en": [
+      "codestral-2508",
+      "devstral-2512",
+      "magistral-medium-2509",
+      "magistral-small-2509",
+      "ministral-3b-2512",
+      "ministral-8b-2512",
+      "ministral-14b-2512",
+      "codestral-embed"
+    ],
+    "zh": [
+      "codestral-2508",
+      "devstral-2512",
+      "magistral-medium-2509",
+      "magistral-small-2509",
+      "ministral-3b-2512",
+      "ministral-8b-2512",
+      "ministral-14b-2512",
+      "codestral-embed"
+    ]
+  },
+  "tags": ["reasoning", "coding", "open-source", "multimodal"],
+  "searchAliases": ["mistral", "mixtral", "codestral", "magistral", "devstral"],
+  "lastVerified": "2026-07-25",
+  "seo": {
+    "title": {
+      "en": "Mistral AI API Key - Official La Plateforme Access | Get Model Key",
+      "zh": "Mistral AI API Key - 官方 La Plateforme 入口 | Get Model Key"
+    },
+    "description": {
+      "en": "Get your Mistral AI API key from La Plateforme. Access Codestral, Magistral, Devstral and more with a free tier or pay-as-you-go plan.",
+      "zh": "从 Mistral La Plateforme 获取 API Key，可访问 Codestral、Magistral、Devstral 等模型，提供免费层及按需付费计划。"
+    }
+  },
+  "overview": {
+    "en": [
+      "Mistral AI is a French AI company founded in 2023 by former DeepMind and Meta researchers. It offers both open-weight models and proprietary frontier models through its La Plateforme API, covering text, code, and multimodal tasks.",
+      "Developers choose Mistral for its strong coding (Codestral, Devstral), reasoning (Magistral), and embedding model lineup, plus OpenAI-compatible endpoints and a free tier that requires no credit card to start."
+    ],
+    "zh": [
+      "Mistral AI 是 2023 年由前 DeepMind 和 Meta 研究员创立的法国 AI 公司，通过 La Plateforme API 提供开源权重模型及专有前沿模型，覆盖文本、代码与多模态任务。",
+      "开发者常因其代码（Codestral、Devstral）、推理（Magistral）与嵌入模型而选择 Mistral，平台提供兼容 OpenAI 的接口及无需绑卡的免费层。"
+    ]
+  },
+  "howToGetKey": {
+    "en": [
+      "Go to console.mistral.ai and sign up or sign in with your account.",
+      "In the left sidebar, navigate to 'API Keys', then click 'Create new key'.",
+      "Name your key, copy it immediately — it is shown only once.",
+      "To use the API beyond the free tier limits, go to 'Subscription' and enable Pay-as-you-go.",
+      "Use the key as a Bearer token against Mistral's OpenAI-compatible base URL: api.mistral.ai/v1."
+    ],
+    "zh": [
+      "前往 console.mistral.ai 注册或登录账号。",
+      "在左侧菜单点击「API Keys」，再点击「Create new key」。",
+      "为 Key 命名后立即复制保存，密钥仅展示一次。",
+      "如需超出免费层限制，前往「Subscription」页面开启 Pay-as-you-go。",
+      "以 Bearer Token 方式调用 api.mistral.ai/v1（兼容 OpenAI 接口）。"
+    ]
+  },
+  "faq": [
+    {
+      "question": {
+        "en": "Is there a free tier for the Mistral API?",
+        "zh": "Mistral API 有免费层吗？"
+      },
+      "answer": {
+        "en": "Yes. All accounts include limited API access for free. Pay-as-you-go must be explicitly enabled in the Subscription page to access higher rate limits.",
+        "zh": "有。所有账号默认包含有限的免费 API 访问额度。如需更高速率限制，需在 Subscription 页面手动开启 Pay-as-you-go。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are Mistral APIs OpenAI-compatible?",
+        "zh": "Mistral API 兼容 OpenAI 格式吗？"
+      },
+      "answer": {
+        "en": "Yes. La Plateforme exposes OpenAI-compatible endpoints at api.mistral.ai/v1. You can often swap the base URL and API key in existing OpenAI SDK code.",
+        "zh": "是。La Plateforme 在 api.mistral.ai/v1 提供兼容 OpenAI 的接口，通常只需替换 base URL 和 API Key 即可复用现有 OpenAI SDK 代码。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I access Mistral from China?",
+        "zh": "国内可以访问 Mistral API 吗？"
+      },
+      "answer": {
+        "en": "Mistral does not have a China-specific site or domestic mirror. Access from mainland China may require a proxy. Consider aggregator platforms like Silicon Flow that offer Mistral-equivalent models with domestic access.",
+        "zh": "Mistral 没有国内站或国内镜像，中国大陆直接访问可能需要代理。可考虑硅基流动等聚合平台，部分提供类似模型且国内可直连。"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "id": "mistral-2026-free-tier",
+      "status": "active",
+      "type": "daily_free_quota",
+      "title": {
+        "en": "Free tier — limited API access included",
+        "zh": "免费层：默认包含有限 API 访问"
+      },
+      "benefit": {
+        "en": "All accounts get limited API access for free with no credit card required. Rate limits vary by model — see the limits page at console.mistral.ai for details.",
+        "zh": "所有账号默认免费获得有限 API 访问权限，无需绑卡。各模型速率限制不同，详见 console.mistral.ai 的 limits 页面。"
+      },
+      "notes": {
+        "en": "Enable Pay-as-you-go in the Subscription page to unlock higher rate limits beyond the free tier.",
+        "zh": "在 Subscription 页面开启 Pay-as-you-go 可解锁更高速率限制。"
+      },
+      "verifiedAt": "2026-07-25"
+    }
+  ]
+}
