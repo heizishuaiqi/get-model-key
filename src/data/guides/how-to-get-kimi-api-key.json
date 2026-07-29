@@ -1,0 +1,265 @@
+{
+  "slug": "how-to-get-kimi-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "china-ai",
+  "pillarSlug": "china-ai-api-keys-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "How to Get a Kimi API Key (2026 Step-by-Step Guide)",
+    "zh": "如何获取 Kimi API Key（2026 逐步指南）"
+  },
+  "excerpt": {
+    "en": "Kimi K3 by Moonshot AI offers ultra-long context and strong reasoning. Learn how to register, get your API key, understand pricing, and make your first request with code examples.",
+    "zh": "月之暗面的 Kimi K3 提供超长上下文和强大推理能力。了解如何注册、获取 API Key、理解定价，并用代码示例发送第一个请求。"
+  },
+  "tags": ["kimi", "kimi k3", "moonshot", "api key", "china ai"],
+  "providerSlugs": ["moonshot"],
+  "sections": [
+    {
+      "id": "what-is-kimi",
+      "heading": {
+        "en": "What Is Kimi K3?",
+        "zh": "什么是 Kimi K3？"
+      },
+      "paragraphs": {
+        "en": [
+          "Kimi K3 is the flagship language model from Moonshot AI (月之暗面), one of China's leading AI startups. It is specifically designed for ultra-long context processing, supporting up to 256K tokens in a single request — enough to process an entire book or a large codebase in one call.",
+          "Kimi K3 excels at Chinese language understanding, long-document Q&A, and multi-turn conversations that require maintaining context over extended interactions. It also performs strongly on reasoning tasks and code generation, making it a versatile choice for developers building applications that need to process large amounts of text.",
+          "The Kimi API is OpenAI-compatible, which means you can use the standard OpenAI SDK with a different base URL. This makes migration from OpenAI or other compatible APIs straightforward."
+        ],
+        "zh": [
+          "Kimi K3 是月之暗面（Moonshot AI）的旗舰语言模型，月之暗面是中国领先的 AI 创业公司之一。Kimi K3 专为超长上下文处理设计，单次请求支持高达 256K token——足以在一次调用中处理整本书或大型代码库。",
+          "Kimi K3 在中文理解、长文档问答和需要长时间维持上下文的多轮对话方面表现出色。它在推理任务和代码生成方面也有很强的表现，是构建需要处理大量文本的应用的开发者的全能选择。",
+          "Kimi API 兼容 OpenAI 格式，意味着你可以使用标准 OpenAI SDK，只需更换 base URL。这使得从 OpenAI 或其他兼容 API 迁移变得简单。"
+        ]
+      }
+    },
+    {
+      "id": "register-moonshot",
+      "heading": {
+        "en": "Step 1: Register on the Moonshot AI Platform",
+        "zh": "第 1 步：注册 Moonshot AI 平台"
+      },
+      "paragraphs": {
+        "en": [
+          "To use the Kimi API, you need to register on the Moonshot AI developer platform at platform.moonshot.cn. The platform requires a phone number for verification — both Chinese and some international numbers are supported.",
+          "Click 'Register' on the platform homepage, enter your phone number, and complete the SMS verification. After verification, fill in your basic information to complete the registration. The entire process typically takes under two minutes.",
+          "If you are an international developer and encounter issues with phone verification, consider using a Chinese colleague's number or contacting Moonshot's support for alternative registration methods."
+        ],
+        "zh": [
+          "要使用 Kimi API，需要在 Moonshot AI 开发者平台 platform.moonshot.cn 注册。平台需要手机号验证——支持中国手机号和部分国际手机号。",
+          "点击平台首页的「注册」，输入手机号并完成短信验证。验证后填写基本信息即可完成注册。整个流程通常不到两分钟。",
+          "如果你是国际开发者且手机验证遇到问题，可以考虑使用中国同事的号码或联系 Moonshot 客服寻求替代注册方式。"
+        ]
+      }
+    },
+    {
+      "id": "generate-api-key",
+      "heading": {
+        "en": "Step 2: Generate Your Kimi API Key",
+        "zh": "第 2 步：生成 Kimi API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "After logging in to the Moonshot platform, navigate to the 'API Key Management' section in the dashboard. Click 'Create API Key', give it a descriptive name so you can identify it later, and the key will be generated.",
+          "Copy the API key immediately and store it securely. Like most API providers, Moonshot only displays the full key once at creation time. If you lose it, you will need to create a new one.",
+          "Store the key in an environment variable or a secrets management system. Never hardcode API keys in source files or commit them to version control."
+        ],
+        "zh": [
+          "登录 Moonshot 平台后，进入仪表盘中的「API Key 管理」页面。点击「创建 API Key」，给它起一个描述性的名字以便日后识别，Key 即会生成。",
+          "立即复制 API Key 并安全保存。和大多数 API 供应商一样，Moonshot 只在创建时显示一次完整 Key。如果遗失，需要重新创建。",
+          "将 Key 存储在环境变量或密钥管理系统中。永远不要将 API Key 硬编码在源文件中或提交到版本控制。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Log in to platform.moonshot.cn",
+          "Navigate to 'API Key Management' in the dashboard",
+          "Click 'Create API Key' and name it descriptively",
+          "Copy the key immediately (shown only once)",
+          "Store in an environment variable or secrets manager"
+        ],
+        "zh": [
+          "登录 platform.moonshot.cn",
+          "进入仪表盘中的「API Key 管理」",
+          "点击「创建 API Key」并起一个描述性名称",
+          "立即复制 Key（仅显示一次）",
+          "存储在环境变量或密钥管理器中"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Step 3: Understand Kimi API Pricing",
+        "zh": "第 3 步：了解 Kimi API 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "Moonshot uses a pay-per-token pricing model with separate rates for input and output tokens. The Kimi K3 model is competitively priced, especially considering its long-context capabilities — processing 256K tokens in a single call is more cost-effective than chunking and making multiple requests with shorter-context models.",
+          "New users may receive free trial credits upon registration, which is enough for initial testing. For continued usage, you need to add credits to your account. The platform supports Alipay and WeChat Pay for payments.",
+          "Moonshot also offers prompt caching discounts for repeated context, which can reduce costs significantly for applications that process the same long documents across multiple requests. Check the official pricing page for current rates."
+        ],
+        "zh": [
+          "Moonshot 采用按 token 付费模式，输入和输出 token 分别计价。Kimi K3 模型定价有竞争力，特别是考虑到其长上下文能力——单次调用处理 256K token 比用短上下文模型分块多次请求更经济。",
+          "新用户注册后可能会获得免费试用额度，足够用于初始测试。继续使用需要为账户充值。平台支持支付宝和微信支付。",
+          "Moonshot 还提供重复上下文的提示缓存折扣，对于跨多次请求处理相同长文档的应用可以显著降低成本。请查看官方定价页面获取最新价格。"
+        ]
+      }
+    },
+    {
+      "id": "first-request",
+      "heading": {
+        "en": "Step 4: Make Your First Kimi API Request",
+        "zh": "第 4 步：发送第一个 Kimi API 请求"
+      },
+      "paragraphs": {
+        "en": [
+          "The Kimi API is OpenAI-compatible, so you can use the OpenAI Python SDK with a different base URL. Here is a minimal example showing how to call the Kimi K3 model:"
+        ],
+        "zh": [
+          "Kimi API 兼容 OpenAI 格式，所以你可以使用 OpenAI Python SDK，只需更换 base URL。以下是调用 Kimi K3 模型的最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"your-kimi-api-key\",\n    base_url=\"https://api.moonshot.cn/v1\"\n)\n\nresponse = client.chat.completions.create(\n    model=\"kimi-k3-0905-preview\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"Hello, what can you do?\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Minimal Kimi API call using the OpenAI Python SDK",
+            "zh": "使用 OpenAI Python SDK 调用 Kimi API 的最小示例"
+          }
+        },
+        {
+          "language": "javascript",
+          "code": "import OpenAI from \"openai\";\n\nconst client = new OpenAI({\n  apiKey: process.env.KIMI_API_KEY,\n  baseURL: \"https://api.moonshot.cn/v1\",\n});\n\nconst response = await client.chat.completions.create({\n  model: \"kimi-k3-0905-preview\",\n  messages: [\n    { role: \"user\", content: \"Hello, what can you do?\" },\n  ],\n});\n\nconsole.log(response.choices[0].message.content);",
+          "caption": {
+            "en": "Minimal Kimi API call using the OpenAI JavaScript SDK",
+            "zh": "使用 OpenAI JavaScript SDK 调用 Kimi API 的最小示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kimi-k3-features",
+      "heading": {
+        "en": "Kimi K3 Key Features",
+        "zh": "Kimi K3 核心特点"
+      },
+      "paragraphs": {
+        "en": [
+          "Kimi K3 stands out in several areas that make it particularly suitable for certain use cases. Understanding these features helps you decide when to choose Kimi over other models.",
+          "The ultra-long context window is Kimi K3's defining feature. With 256K tokens, you can feed entire documents, codebases, or conversation histories into a single request without chunking or summarization. This is especially valuable for legal document analysis, code review, and research tasks.",
+          "Kimi K3 also features strong reasoning capabilities, performing well on mathematical and logical benchmarks. Its Chinese language understanding is among the best of all commercial LLMs, making it ideal for applications targeting Chinese-speaking users."
+        ],
+        "zh": [
+          "Kimi K3 在几个方面有突出表现，使其特别适合某些使用场景。了解这些特点有助于你决定何时选择 Kimi。",
+          "超长上下文窗口是 Kimi K3 的标志性特征。256K token 的上下文意味着你可以在单次请求中输入整篇文档、代码库或对话历史，无需分块或摘要。这对法律文档分析、代码审查和研究任务特别有价值。",
+          "Kimi K3 还具有强大的推理能力，在数学和逻辑基准测试上表现良好。其中文理解能力在商用 LLM 中名列前茅，非常适合面向中文用户的应用。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Ultra-long context: 256K token window for processing entire documents in a single call",
+          "Strong reasoning: competitive performance on math, logic, and code benchmarks",
+          "Chinese language excellence: top-tier Chinese understanding and generation",
+          "OpenAI-compatible: use standard OpenAI SDK with a different base URL",
+          "Prompt caching: discounts for repeated long-context inputs"
+        ],
+        "zh": [
+          "超长上下文：256K token 窗口，单次调用处理整篇文档",
+          "强大推理：在数学、逻辑和代码基准上表现有竞争力",
+          "中文能力优秀：顶级的中文理解和生成能力",
+          "OpenAI 兼容：使用标准 OpenAI SDK，只需更换 base URL",
+          "提示缓存：重复长上下文输入享受折扣"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is the Kimi API free?",
+        "zh": "Kimi API 是免费的吗？"
+      },
+      "answer": {
+        "en": "The Kimi API is not free, but new users may receive free trial credits upon registration. The paid pricing is competitive, especially for long-context tasks where Kimi's 256K token window reduces the need for multiple chunked requests.",
+        "zh": "Kimi API 不是免费的，但新用户注册后可能会获得免费试用额度。付费定价有竞争力，特别是对于长上下文任务，Kimi 的 256K token 窗口减少了分块多次请求的需要。"
+      }
+    },
+    {
+      "question": {
+        "en": "What is the context window size of Kimi K3?",
+        "zh": "Kimi K3 的上下文窗口有多大？"
+      },
+      "answer": {
+        "en": "Kimi K3 supports a 256K token context window, which is one of the largest among commercial LLM APIs. This allows you to process approximately 180,000 words — equivalent to a full-length novel or a large codebase — in a single API call.",
+        "zh": "Kimi K3 支持 256K token 的上下文窗口，是商用 LLM API 中最大的之一。这允许你在单次 API 调用中处理约 18 万字——相当于一整部长篇小说或大型代码库。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use the OpenAI SDK with the Kimi API?",
+        "zh": "可以用 OpenAI SDK 调用 Kimi API 吗？"
+      },
+      "answer": {
+        "en": "Yes. The Kimi API is fully OpenAI-compatible. Set the base URL to https://api.moonshot.cn/v1 and use your Kimi API key. All standard OpenAI SDK methods work without modification.",
+        "zh": "可以。Kimi API 完全兼容 OpenAI 格式。将 base URL 设置为 https://api.moonshot.cn/v1 并使用 Kimi API Key 即可。所有标准 OpenAI SDK 方法无需修改即可使用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can international developers use the Kimi API?",
+        "zh": "国际开发者可以使用 Kimi API 吗？"
+      },
+      "answer": {
+        "en": "Moonshot's platform supports some international phone numbers for registration. However, payment is primarily through Alipay and WeChat Pay. International developers may need assistance from a China-based partner for payment. The API itself is globally accessible once you have a valid key.",
+        "zh": "Moonshot 平台支持部分国际手机号注册。但支付主要通过支付宝和微信支付。国际开发者可能需要中国合作伙伴协助支付。一旦获得有效 Key，API 本身全球可访问。"
+      }
+    },
+    {
+      "question": {
+        "en": "How does Kimi K3 compare to DeepSeek?",
+        "zh": "Kimi K3 和 DeepSeek 相比如何？"
+      },
+      "answer": {
+        "en": "Kimi K3 has a larger context window (256K vs DeepSeek's 128K) and is stronger in Chinese language tasks and long-document processing. DeepSeek offers lower per-token pricing and strong reasoning with its R1 model. For a detailed comparison of Chinese AI platforms, see our complete China AI API guide.",
+        "zh": "Kimi K3 的上下文窗口更大（256K vs DeepSeek 的 128K），在中文任务和长文档处理方面更强。DeepSeek 的每 token 定价更低，且 R1 模型推理能力强。关于中国 AI 平台的详细对比，请参阅我们的中国 AI API 完全指南。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Moonshot AI Platform",
+      "url": "https://platform.moonshot.cn/",
+      "site": "Moonshot AI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Moonshot API Documentation",
+      "url": "https://platform.moonshot.cn/docs",
+      "site": "Moonshot AI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Moonshot API Pricing",
+      "url": "https://platform.moonshot.cn/docs/pricing",
+      "site": "Moonshot AI",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Get a Kimi API Key (2026 Guide) | Get Model Key",
+      "zh": "如何获取 Kimi API Key（2026 指南）| Get Model Key"
+    },
+    "description": {
+      "en": "Step-by-step guide to getting a Kimi API key from Moonshot AI. Covers registration, pricing, the 256K context window, and code examples in Python and JavaScript.",
+      "zh": "逐步指南：从 Moonshot AI 获取 Kimi API Key。涵盖注册、定价、256K 上下文窗口，以及 Python 和 JavaScript 代码示例。"
+    }
+  }
+}

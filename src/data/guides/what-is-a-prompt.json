@@ -1,0 +1,145 @@
+{
+  "slug": "what-is-a-prompt",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 5,
+  "title": {
+    "en": "What is a Prompt? AI Prompt Engineering Explained (2026)",
+    "zh": "什么是 Prompt？AI 提示工程入门（2026）"
+  },
+  "excerpt": {
+    "en": "A prompt is the text you give to an AI model to get a response. Learn what makes a good prompt, the key components, and how to write effective prompts for AI APIs.",
+    "zh": "Prompt 是你给 AI 模型的输入文本，用来获取回复。了解好的 Prompt 是什么、关键组成部分，以及如何为 AI API 编写有效的 Prompt。"
+  },
+  "tags": ["prompt", "basics", "beginner", "ai"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "definition",
+      "heading": {
+        "en": "What is a Prompt?",
+        "zh": "什么是 Prompt？"
+      },
+      "paragraphs": {
+        "en": [
+          "A prompt is the text input you give to an AI chatbot or language model to get a response. It's how you communicate with AI — you type a question, instruction, or piece of text, and the AI generates a relevant response.",
+          "Searches for 'what is a prompt' grew over 2100% in 2026, reflecting the massive influx of new users entering the AI space. Understanding prompts is the first step to effectively using any AI model."
+        ],
+        "zh": [
+          "Prompt 是你给 AI 聊天机器人或语言模型的文本输入，用来获取回复。这是你与 AI 交流的方式——你输入一个问题、指令或一段文本，AI 生成相关的回复。",
+          "「what is a prompt」的搜索量在 2026 年增长了 2100% 以上，反映了大量新用户涌入 AI 领域。理解 Prompt 是有效使用任何 AI 模型的第一步。"
+        ]
+      }
+    },
+    {
+      "id": "components",
+      "heading": {
+        "en": "The Three Main Components of a Good Prompt",
+        "zh": "好的 Prompt 的三个主要组成部分"
+      },
+      "paragraphs": {
+        "en": [
+          "An effective prompt typically contains three key elements: role, task, and context. Searches for 'what are the 3 main steps of a good prompt' increased 1100% in 2026, showing strong interest in structured prompt writing.",
+          "The role tells the AI who to act as (e.g., 'You are a Python expert'). The task describes what you want the AI to do (e.g., 'Write a function to sort a list'). The context provides background information the AI needs to give a good answer."
+        ],
+        "zh": [
+          "一个有效的 Prompt 通常包含三个关键要素：角色、任务和上下文。「what are the 3 main steps of a good prompt」的搜索量在 2026 年增长了 1100%，显示了对结构化 Prompt 写作的强烈兴趣。",
+          "角色告诉 AI 扮演什么身份（如「你是一个 Python 专家」）。任务描述你希望 AI 做什么（如「写一个排序列表的函数」）。上下文提供 AI 需要的背景信息来给出好答案。"
+        ]
+      }
+    },
+    {
+      "id": "examples",
+      "heading": {
+        "en": "Prompt Examples",
+        "zh": "Prompt 示例"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's how a good prompt looks in practice:"
+        ],
+        "zh": [
+          "以下是一个好的 Prompt 在实践中的样子："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "text",
+          "code": "Role: You are a technical writer experienced in API documentation.\n\nTask: Write a getting-started guide for the DeepSeek API.\n\nContext: The audience is developers who already know Python but are new to AI APIs. The guide should cover authentication, first request, and error handling. Keep it under 500 words.",
+          "caption": {
+            "en": "Example of a well-structured prompt with role, task, and context",
+            "zh": "包含角色、任务和上下文的良好结构 Prompt 示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tips",
+      "heading": {
+        "en": "Tips for Better Prompts",
+        "zh": "写出更好 Prompt 的技巧"
+      },
+      "paragraphs": {
+        "en": [
+          "Be specific rather than vague. Provide examples when possible. Break complex tasks into smaller steps. And iterate — if the AI's response isn't what you wanted, refine your prompt and try again.",
+          "When using AI through an API (rather than a chat interface), you can also set parameters like temperature (creativity) and max tokens (response length) to fine-tune the output."
+        ],
+        "zh": [
+          "要具体而非含糊。尽可能提供示例。将复杂任务拆分为更小的步骤。还要迭代——如果 AI 的回复不是你想要的，修改你的 Prompt 再试一次。",
+          "通过 API（而非聊天界面）使用 AI 时，你还可以设置温度（创意度）和最大 token 数（回复长度）等参数来微调输出。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "What is a prompt in AI?",
+        "zh": "AI 中的 Prompt 是什么？"
+      },
+      "answer": {
+        "en": "A prompt is the text you input to an AI chatbot or language model. It's your instruction or question that the AI uses to generate a response.",
+        "zh": "Prompt 是你输入给 AI 聊天机器人或语言模型的文本。它是你的指令或问题，AI 用它来生成回复。"
+      }
+    },
+    {
+      "question": {
+        "en": "What are the 3 main parts of a good prompt?",
+        "zh": "好的 Prompt 的三个主要部分是什么？"
+      },
+      "answer": {
+        "en": "The three main components are: role (who the AI should act as), task (what you want the AI to do), and context (background information). Some frameworks also add format (how the output should be structured).",
+        "zh": "三个主要组成部分是：角色（AI 应该扮演什么身份）、任务（你希望 AI 做什么）和上下文（背景信息）。有些框架还会加上格式（输出应该如何组织）。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Prompt Engineering Guide",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic Prompt Engineering",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "What is a Prompt? AI Prompt Engineering Explained (2026) | Get Model Key",
+      "zh": "什么是 Prompt？AI 提示工程入门（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn what a prompt is in AI, the three main components of a good prompt, examples, and tips for writing effective prompts for AI APIs.",
+      "zh": "了解 AI 中的 Prompt 是什么、好的 Prompt 的三个主要组成部分、示例，以及为 AI API 编写有效 Prompt 的技巧。"
+    }
+  }
+}

@@ -4,16 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
+import { normalizePath, type Lang } from '@/lib/shared';
 
 interface HeaderProps {
-  lang: 'en' | 'zh';
+  lang: Lang;
 }
 
-function normalizePath(path: string): string {
-  if (!path) return '/';
-  const trimmed = path.replace(/\/+$/, '');
-  return trimmed === '' ? '/' : trimmed;
-}
+const NAVIGATION = {
+  en: [
+    { name: 'Home', href: '/' },
+    { name: 'Providers', href: '/providers/' },
+    { name: 'Guides', href: '/guides/' },
+    { name: 'Offers', href: '/offers/' },
+    { name: 'About', href: '/about/' },
+  ],
+  zh: [
+    { name: '首页', href: '/zh/' },
+    { name: '供应商', href: '/zh/providers/' },
+    { name: '指南', href: '/zh/guides/' },
+    { name: '福利专题', href: '/zh/offers/' },
+    { name: '关于', href: '/zh/about/' },
+  ],
+} as const;
 
 function isActivePath(currentPath: string, navPath: string): boolean {
   const current = normalizePath(currentPath);
@@ -27,25 +39,7 @@ function isActivePath(currentPath: string, navPath: string): boolean {
 
 export default function Header({ lang }: HeaderProps) {
   const pathname = usePathname() || '/';
-
-  const navigation = {
-    en: [
-      { name: 'Home', href: '/' },
-      { name: 'Providers', href: '/providers' },
-      { name: 'Guides', href: '/guides' },
-      { name: 'Offers', href: '/offers' },
-      { name: 'About', href: '/about' },
-    ],
-    zh: [
-      { name: '\u9996\u9875', href: '/zh' },
-      { name: '\u4f9b\u5e94\u5546', href: '/zh/providers' },
-      { name: '\u6307\u5357', href: '/zh/guides' },
-      { name: '\u798f\u5229\u4e13\u9898', href: '/zh/offers' },
-      { name: '\u5173\u4e8e', href: '/zh/about' },
-    ],
-  };
-
-  const currentNav = navigation[lang];
+  const currentNav = NAVIGATION[lang];
 
   return (
     <header className="sticky top-0 z-50 h-20 border-b border-white-04 bg-bg-nav/80 backdrop-blur-xl supports-[backdrop-filter]:bg-bg-nav/60">
@@ -73,7 +67,8 @@ export default function Header({ lang }: HeaderProps) {
                   href={item.href}
                   aria-current={active ? 'page' : undefined}
                   className={[
-                    'inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none',
+                    'inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200',
+                    'focus:outline-none focus:ring-2 focus:ring-brand-300/40 focus:ring-offset-2 focus:ring-offset-bg-nav',
                     active
                       ? 'text-brand-300'
                       : 'text-text-primary hover:text-brand-300',

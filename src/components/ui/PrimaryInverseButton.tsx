@@ -19,17 +19,23 @@ export default function PrimaryInverseButton({
   type = 'button',
   disabled = false,
 }: PrimaryInverseButtonProps) {
-  const baseClasses = 'btn-primary-inverse';
-  const combinedClasses = `${baseClasses} ${className}`.trim();
+  const combinedClasses = [
+    'btn-primary-inverse',
+    disabled ? 'pointer-events-none opacity-60' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   if (href) {
     return (
       <a
-        href={href}
+        href={disabled ? undefined : href}
         className={combinedClasses}
-        onClick={onClick}
+        onClick={disabled ? undefined : onClick}
         target={newTab ? '_blank' : undefined}
         rel={newTab ? 'noopener noreferrer' : undefined}
+        aria-disabled={disabled || undefined}
       >
         {children}
       </a>

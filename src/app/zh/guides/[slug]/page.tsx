@@ -3,20 +3,15 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
-import { getPublishedGuides, getGuideBySlug, getRelatedGuides } from '@/lib/guides';
+import { getPublishedGuides, getGuideBySlug, getClusterSiblings, getCrossClusterGuides, getPillarForGuide } from '@/lib/guides';
 import { getProviderBySlug, getSiteConfig } from '@/lib/providers';
-import { getGuideMetadata } from '@/lib/seo';
+import { getGuideMetadata, buildFaqStructuredData } from '@/lib/seo';
+import { TOPIC_LABELS } from '@/lib/shared';
+import { renderParagraphWithLinks } from '@/lib/inline-links';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-const TOPIC_LABELS = {
-  'api-key-setup': 'Key 开通',
-  troubleshooting: '问题排查',
-  comparison: '选型对比',
-  offers: '活动解读',
-} as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -36,10 +31,12 @@ export default async function ZhGuideDetailPage({ params }: Props) {
     notFound();
   }
 
-  const [siteConfig, relatedGuides, relatedProviders] = await Promise.all([
+  const [siteConfig, crossClusterGuides, relatedProviders, clusterSiblings, pillarGuide] = await Promise.all([
     getSiteConfig(),
-    getRelatedGuides(guide.slug, 3),
+    getCrossClusterGuides(guide.slug, 3),
     Promise.all(guide.providerSlugs.map((providerSlug) => getProviderBySlug(providerSlug))),
+    getClusterSiblings(guide.slug, 4),
+    getPillarForGuide(guide.slug),
   ]);
 
   const providers = relatedProviders.filter(
@@ -99,20 +96,7 @@ export default async function ZhGuideDetailPage({ params }: Props) {
     ],
   };
 
-  const faqStructuredData = guide.faq
-    ? {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: guide.faq.map((item) => ({
-        '@type': 'Question',
-        name: item.question.zh,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.answer.zh,
-        },
-      })),
-    }
-    : null;
+  const faqStructuredData = buildFaqStructuredData(guide.faq, 'zh');
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
@@ -134,7 +118,7 @@ export default async function ZhGuideDetailPage({ params }: Props) {
 
         <div className="mb-8">
           <Link
-            href="/zh/guides"
+            href="/zh/guides/"
             className="inline-flex items-center gap-2 text-body-sm text-brand-300 transition-colors hover:text-brand-400"
           >
             <span aria-hidden="true">{'<'}</span>
@@ -142,10 +126,23 @@ export default async function ZhGuideDetailPage({ params }: Props) {
           </Link>
         </div>
 
+        {/* 支柱页回链 — 垂直层级链接 */}
+        {!guide.pillar && pillarGuide && (
+          <div className="mb-8 rounded-xl border border-white-06 bg-surface-1 px-5 py-4">
+            <span className="text-caption text-text-muted">本文属于： </span>
+            <Link
+              href={`/zh/guides/${pillarGuide.slug}/`}
+              className="text-body-sm font-semibold text-brand-300 transition-colors hover:text-brand-400"
+            >
+              {pillarGuide.title.zh}
+            </Link>
+          </div>
+        )}
+
         <article className="mx-auto max-w-4xl">
           <header className="mb-8">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <Badge variant="brand">{TOPIC_LABELS[guide.topic]}</Badge>
+              <Badge variant="brand">{TOPIC_LABELS.zh[guide.topic]}</Badge>
               <span className="text-caption text-text-muted">{guide.readingMinutes} 分钟阅读</span>
               <span className="text-caption text-text-muted">发布于：{guide.publishedAt}</span>
               <span className="text-caption text-text-muted">更新于：{guide.updatedAt}</span>
@@ -161,7 +158,7 @@ export default async function ZhGuideDetailPage({ params }: Props) {
                 <div className="space-y-3">
                   {section.paragraphs.zh.map((paragraph, index) => (
                     <p key={`${section.id}-paragraph-${index}`} className="text-body text-text-secondary">
-                      {paragraph}
+                      {renderParagraphWithLinks(paragraph, 'zh')}
                     </p>
                   ))}
                 </div>
@@ -209,6 +206,38 @@ export default async function ZhGuideDetailPage({ params }: Props) {
             </section>
           )}
 
+          {clusterSiblings.length > 0 && (
+            <section className="mt-10">
+              <Card variant="emphasis">
+                <h2 className="mb-4 text-h3 text-text-primary">
+                  {guide.pillar ? '本系列指南' : '本系列相关'}
+                </h2>
+                <div className="space-y-3">
+                  {clusterSiblings.map((item, index) => (
+                    <Link
+                      key={item.slug}
+                      href={`/zh/guides/${item.slug}/`}
+                      className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 transition-colors hover:bg-surface-2"
+                    >
+                      <div className="flex items-center gap-2">
+                        {item.pillar && (
+                          <Badge variant="success" size="sm">支柱页</Badge>
+                        )}
+                        {/* 多样化锚文本：支柱页用标题，其他用摘要首句 */}
+                        <div className="text-body font-semibold text-text-primary">
+                          {item.pillar ? item.title.zh : item.excerpt.zh.split('。')[0]}
+                        </div>
+                      </div>
+                      <div className="mt-1 text-body-sm text-text-secondary">
+                        {index + 1}. {item.title.zh}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </Card>
+            </section>
+          )}
+
           <section className="mt-10 grid gap-8 lg:grid-cols-2">
             <Card variant="standard">
               <h2 className="mb-4 text-h3 text-text-primary">相关供应商</h2>
@@ -250,18 +279,21 @@ export default async function ZhGuideDetailPage({ params }: Props) {
             </Card>
           </section>
 
-          {relatedGuides.length > 0 && (
+          {crossClusterGuides.length > 0 && (
             <section className="mt-10">
               <Card variant="standard">
-                <h2 className="mb-4 text-h3 text-text-primary">更多指南</h2>
+                <h2 className="mb-4 text-h3 text-text-primary">浏览其他主题</h2>
                 <div className="space-y-3">
-                  {relatedGuides.map((item) => (
+                  {crossClusterGuides.map((item) => (
                     <Link
                       key={item.slug}
-                      href={`/zh/guides/${item.slug}`}
+                      href={`/zh/guides/${item.slug}/`}
                       className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 transition-colors hover:bg-surface-2"
                     >
-                      <div className="text-body font-semibold text-text-primary">{item.title.zh}</div>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="neutral" size="sm">{TOPIC_LABELS.zh[item.topic]}</Badge>
+                        <div className="text-body font-semibold text-text-primary">{item.title.zh}</div>
+                      </div>
                       <div className="mt-1 text-body-sm text-text-secondary">{item.excerpt.zh}</div>
                     </Link>
                   ))}

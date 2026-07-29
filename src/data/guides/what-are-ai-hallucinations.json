@@ -1,0 +1,136 @@
+{
+  "slug": "what-are-ai-hallucinations",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 5,
+  "title": {
+    "en": "What are AI Hallucinations? Causes & How to Prevent Them (2026)",
+    "zh": "什么是 AI 幻觉？成因与预防方法（2026）"
+  },
+  "excerpt": {
+    "en": "AI hallucinations are when models generate false or misleading information. Learn why they happen, how to recognize them, and best practices to minimize hallucinations.",
+    "zh": "AI 幻觉是指模型生成虚假或误导性信息。了解为什么会发生、如何识别，以及减少幻觉的最佳实践。"
+  },
+  "tags": ["hallucinations", "basics", "ai", "safety"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "definition",
+      "heading": {
+        "en": "What are AI Hallucinations?",
+        "zh": "什么是 AI 幻觉？"
+      },
+      "paragraphs": {
+        "en": [
+          "AI hallucinations occur when a language model generates information that is false, fabricated, or unsupported by its training data — but presents it confidently as if it were true. The model is not 'lying' intentionally; it's predicting the next most likely token based on patterns, which can sometimes produce plausible-sounding but incorrect output.",
+          "Searches for 'what are hallucinations' in the AI context grew 1150% in 2026, reflecting growing awareness of this important issue among AI users."
+        ],
+        "zh": [
+          "AI 幻觉是指语言模型生成虚假、编造或不受训练数据支持的信息，但却自信地将其呈现为真实。模型不是在故意「撒谎」——它是在根据模式预测下一个最可能的 token，有时会产生听起来合理但不正确的输出。",
+          "在 AI 语境下，「what are hallucinations」的搜索量在 2026 年增长了 1150%，反映了 AI 用户对这个重要问题的日益关注。"
+        ]
+      }
+    },
+    {
+      "id": "why-happen",
+      "heading": {
+        "en": "Why Do Hallucinations Happen?",
+        "zh": "为什么会发生幻觉？"
+      },
+      "paragraphs": {
+        "en": [
+          "Language models don't 'know' facts the way databases do. They learn statistical patterns from training data and generate responses by predicting likely sequences of tokens. When a model encounters a topic it has limited training data on, or when a prompt is ambiguous, it may fill gaps with plausible-sounding but incorrect information.",
+          "Hallucinations are more common when asking about very recent events, obscure topics, or requesting specific citations and URLs that the model may construct from patterns rather than recall from memory."
+        ],
+        "zh": [
+          "语言模型不像数据库那样「记住」事实。它从训练数据中学习统计模式，通过预测可能的 token 序列来生成回复。当模型遇到训练数据有限的话题，或 Prompt 含糊时，它可能用听起来合理但不正确的信息来填补空白。",
+          "当你询问非常新近的事件、冷门话题，或要求具体的引用和 URL 时，幻觉更容易发生——模型可能是根据模式构造而非从记忆中回忆。"
+        ]
+      }
+    },
+    {
+      "id": "prevent",
+      "heading": {
+        "en": "How to Minimize Hallucinations",
+        "zh": "如何减少幻觉"
+      },
+      "paragraphs": {
+        "en": [
+          "While you can't eliminate hallucinations entirely, you can significantly reduce them with good practices:"
+        ],
+        "zh": [
+          "虽然无法完全消除幻觉，但通过好的实践可以显著减少："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Ask the model to admit uncertainty ('If you're not sure, say you don't know')",
+          "Provide reference context in your prompt (RAG - Retrieval Augmented Generation)",
+          "Ask for sources and citations, then verify them independently",
+          "Break complex questions into smaller, verifiable steps",
+          "Use lower temperature settings for factual queries",
+          "Cross-check critical information with authoritative sources"
+        ],
+        "zh": [
+          "要求模型承认不确定性（「如果不确定，就说不知道」）",
+          "在 Prompt 中提供参考上下文（RAG — 检索增强生成）",
+          "要求提供来源和引用，然后独立验证",
+          "将复杂问题拆分为更小的可验证步骤",
+          "事实性查询使用较低的温度设置",
+          "用权威来源交叉验证关键信息"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "What are hallucinations in AI?",
+        "zh": "AI 中的幻觉是什么？"
+      },
+      "answer": {
+        "en": "AI hallucinations are when a language model generates false or fabricated information but presents it as true. The model predicts likely text based on patterns, which can sometimes produce incorrect but plausible-sounding output.",
+        "zh": "AI 幻觉是指语言模型生成虚假或编造的信息，但将其呈现为真实。模型根据模式预测可能的文本，有时会产生不正确但听起来合理的输出。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can AI hallucinations be completely eliminated?",
+        "zh": "AI 幻觉可以完全消除吗？"
+      },
+      "answer": {
+        "en": "No. Hallucinations are an inherent characteristic of how language models work. However, they can be significantly reduced through techniques like providing context, using lower temperature settings, and cross-checking outputs with authoritative sources.",
+        "zh": "不能。幻觉是语言模型工作方式的固有特征。但可以通过提供上下文、使用较低温度设置、用权威来源交叉验证等技术来显著减少。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Research on Hallucinations",
+      "url": "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic Responsible AI",
+      "url": "https://www.anthropic.com/responsible-ai",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "What are AI Hallucinations? Causes & Prevention (2026) | Get Model Key",
+      "zh": "什么是 AI 幻觉？成因与预防（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn what AI hallucinations are, why they happen, and practical strategies to minimize them when using AI model APIs.",
+      "zh": "了解什么是 AI 幻觉、为什么会发生，以及使用 AI 模型 API 时减少幻觉的实用策略。"
+    }
+  }
+}

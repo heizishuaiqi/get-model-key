@@ -5,6 +5,6 @@
   "defaultLocale": "en",
   "supportedLocales": ["en", "zh"],
   "contactEmail": "hello@getmodelkey.com",
-  "socialImage": "https://www.getmodelkey.com/android-chrome-512x512.png",
+  "socialImage": "https://www.getmodelkey.com/og-image.png",
   "favicon": "/favicon-32x32.png"
 }

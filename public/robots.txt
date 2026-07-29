@@ -1,9 +1,0 @@
-# Get Model Key - robots.txt
-# https://www.getmodelkey.com
-
-User-agent: *
-Allow: /
-Disallow: /api/
-
-# Sitemap
-Sitemap: https://www.getmodelkey.com/sitemap.xml

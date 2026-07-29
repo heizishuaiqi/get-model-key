@@ -1,28 +1,71 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllProviders } from '@/lib/providers';
+import { getAllProviders, getSiteConfig } from '@/lib/providers';
 import Card from '@/components/ui/Card';
 import ProviderCard from '@/components/providers/ProviderCard';
 
-export const metadata: Metadata = {
-  title: 'AI 模型提供商 - Get Model Key',
-  description: '浏览全部 AI 模型提供商，并直接跳转到官方 API Key 申请页面。',
-  alternates: {
-    canonical: '/zh/providers/',
-    languages: {
-      en: '/providers/',
-      zh: '/zh/providers/',
-      'x-default': '/providers/',
+export async function generateMetadata(): Promise<Metadata> {
+  const siteConfig = await getSiteConfig();
+  const title = 'AI 模型提供商 - Get Model Key';
+  const description = '浏览全部 AI 模型提供商，并直接跳转到官方 API Key 申请页面。';
+  const url = `${siteConfig.domain}/zh/providers/`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: '/zh/providers/',
+      languages: {
+        en: '/providers/',
+        zh: '/zh/providers/',
+        'x-default': '/providers/',
+      },
     },
-  },
-};
+    openGraph: {
+      type: 'website',
+      url,
+      title,
+      description,
+      siteName: siteConfig.siteName,
+      locale: 'zh_CN',
+      images: [{ url: siteConfig.socialImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [siteConfig.socialImage],
+    },
+  };
+}
 
 export default async function ZhProvidersPage() {
-  const providers = await getAllProviders();
+  const [providers, siteConfig] = await Promise.all([
+    getAllProviders(),
+    getSiteConfig(),
+  ]);
+
+  const itemListStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AI 模型提供商',
+    itemListElement: providers.map((provider, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: provider.name.zh,
+      url: `${siteConfig.domain}/zh/providers/${provider.slug}/`,
+      description: provider.summary.zh,
+    })),
+  };
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListStructuredData) }}
+        />
+
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-h1 text-text-primary">AI 模型提供商</h1>
         </div>
@@ -46,7 +89,7 @@ export default async function ZhProvidersPage() {
             如果你发现某个重要平台尚未收录，欢迎告诉我们，我们会持续完善目录。
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/zh/contact" className="btn-primary-inverse">
+            <Link href="/zh/contact/" className="btn-primary-inverse">
               提交新增建议
             </Link>
             <Link href="/zh/" className="btn-secondary-ghost">

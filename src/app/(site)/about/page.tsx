@@ -1,7 +1,9 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Card from '@/components/ui/Card';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
+import { baseUrl } from '@/lib/root-metadata';
+import { buildWebPageStructuredData } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'About Get Model Key',
@@ -14,12 +16,35 @@ export const metadata: Metadata = {
       'x-default': '/about/',
     },
   },
+  openGraph: {
+    type: 'article',
+    url: `${baseUrl}/about/`,
+    title: 'About Get Model Key',
+    description: 'Learn about Get Model Key - helping users find official API key pages for AI model providers.',
+    siteName: 'Get Model Key',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Get Model Key',
+    description: 'Learn about Get Model Key - helping users find official API key pages for AI model providers.',
+  },
 };
 
 export default function AboutPage() {
+  const webPageStructuredData = buildWebPageStructuredData(
+    'About Get Model Key',
+    `${baseUrl}/about/`,
+    'en'
+  );
+
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageStructuredData) }}
+        />
         {/* Page header */}
         <div className="mb-12 text-center">
           <div className="mb-6">            <h1 className="text-h1 text-text-primary mb-4">
@@ -37,7 +62,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-start gap-6">
               <div className="flex-shrink-0">
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-12">
-                  <svg className="h-8 w-8 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-8 w-8 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
@@ -123,7 +148,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 mt-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-danger-500/10">
-                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
@@ -140,7 +165,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 mt-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-danger-500/10">
-                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
@@ -157,7 +182,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 mt-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-danger-500/10">
-                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
@@ -174,7 +199,7 @@ export default function AboutPage() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 mt-0.5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-danger-500/10">
-                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-danger-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
@@ -203,7 +228,7 @@ export default function AboutPage() {
           <div className="grid gap-8 sm:grid-cols-2">
             <Card variant="standard" hover padding="lg">
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -214,7 +239,7 @@ export default function AboutPage() {
             </Card>
             <Card variant="standard" hover padding="lg">
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                 </svg>
               </div>
@@ -225,7 +250,7 @@ export default function AboutPage() {
             </Card>
             <Card variant="standard" hover padding="lg">
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
@@ -237,7 +262,7 @@ export default function AboutPage() {
             </Card>
             <Card variant="standard" hover padding="lg">
               <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5 0a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                 </svg>
               </div>

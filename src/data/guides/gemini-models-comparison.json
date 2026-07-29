@@ -1,0 +1,257 @@
+{
+  "slug": "gemini-models-comparison",
+  "status": "published",
+  "topic": "comparison",
+  "pillar": false,
+  "cluster": "gemini",
+  "pillarSlug": "gemini-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 8,
+  "title": {
+    "en": "Gemini Models Comparison: 2.5 Pro vs Flash vs Flash-Lite (2026)",
+    "zh": "Gemini 模型对比：2.5 Pro vs Flash vs Flash-Lite（2026）"
+  },
+  "excerpt": {
+    "en": "Compare Gemini 2.5 Pro, Flash, and Flash-Lite models across context window, pricing, reasoning, vision, and code capabilities. Find the right Gemini model for your use case.",
+    "zh": "全面对比 Gemini 2.5 Pro、Flash 和 Flash-Lite 模型的上下文窗口、定价、推理、视觉和代码能力。找到适合你场景的 Gemini 模型。"
+  },
+  "tags": ["gemini", "models", "comparison", "google"],
+  "providerSlugs": ["google"],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": {
+        "en": "Gemini Model Family Overview",
+        "zh": "Gemini 模型家族概览"
+      },
+      "paragraphs": {
+        "en": [
+          "Google's Gemini model family includes three tiers designed for different use cases: Gemini 2.5 Pro for complex reasoning and high-quality output, Gemini 2.5 Flash for fast and cost-efficient general tasks, and Gemini 2.5 Flash-Lite for high-volume, latency-sensitive workloads.",
+          "All three models share the same API interface — you only need to change the model name in your request. They all support multimodal input (text, images, audio, video) and can be accessed through Google AI Studio or Vertex AI.",
+          "Choosing the right model depends on your priorities: if you need the best possible reasoning and output quality, Pro is the answer; if you need a balance of speed and cost, Flash is the sweet spot; if you are processing massive volumes where cost per token is critical, Flash-Lite delivers."
+        ],
+        "zh": [
+          "Google 的 Gemini 模型家族包括三个层次，针对不同使用场景设计：Gemini 2.5 Pro 用于复杂推理和高质量输出，Gemini 2.5 Flash 用于快速且高性价比的通用任务，Gemini 2.5 Flash-Lite 用于高并发、对延迟敏感的工作负载。",
+          "三个模型共享相同的 API 接口——你只需在请求中更改模型名称即可。它们都支持多模态输入（文本、图片、音频、视频），可通过 Google AI Studio 或 Vertex AI 访问。",
+          "选择合适的模型取决于你的优先级：如果需要最好的推理和输出质量，选 Pro；如果需要速度和成本的平衡，Flash 是最佳选择；如果处理大量数据且每个 token 的成本至关重要，Flash-Lite 最合适。"
+        ]
+      }
+    },
+    {
+      "id": "context-window",
+      "heading": {
+        "en": "Context Window Comparison",
+        "zh": "上下文窗口对比"
+      },
+      "paragraphs": {
+        "en": [
+          "Context window size determines how much text, code, or multimodal data you can include in a single request. All three Gemini 2.5 models support a 1 million token context window, which is among the largest available in any commercial LLM API.",
+          "A 1 million token context window means you can process approximately 700,000 words in a single call — enough for an entire novel, a large codebase, or hours of video content. This makes Gemini models particularly strong for document analysis, code understanding, and long-form content generation.",
+          "The full context window is available on both the free tier (with rate limits) and the paid tier of Google AI Studio."
+        ],
+        "zh": [
+          "上下文窗口大小决定了你可以在单次请求中包含多少文本、代码或多模态数据。三个 Gemini 2.5 模型都支持 100 万 token 的上下文窗口，是商用 LLM API 中最大的之一。",
+          "100 万 token 的上下文窗口意味着你可以在一次调用中处理约 70 万字——足以容纳一整部小说、大型代码库或数小时的视频内容。这使得 Gemini 模型在文档分析、代码理解和长内容生成方面特别有优势。",
+          "完整的上下文窗口在 Google AI Studio 的免费额度（有速率限制）和付费版中均可用。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Gemini 2.5 Pro: 1,000,000 tokens context window",
+          "Gemini 2.5 Flash: 1,000,000 tokens context window",
+          "Gemini 2.5 Flash-Lite: 1,000,000 tokens context window"
+        ],
+        "zh": [
+          "Gemini 2.5 Pro：1,000,000 token 上下文窗口",
+          "Gemini 2.5 Flash：1,000,000 token 上下文窗口",
+          "Gemini 2.5 Flash-Lite：1,000,000 token 上下文窗口"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Pricing Comparison",
+        "zh": "定价对比"
+      },
+      "paragraphs": {
+        "en": [
+          "Gemini model pricing is per million tokens, with separate rates for input and output. Flash-Lite is the most affordable, Flash offers a middle ground, and Pro commands a premium for its superior reasoning and output quality.",
+          "Prompt caching is available on all models and can significantly reduce costs for repetitive prompts. Cached input tokens are billed at a fraction of the standard input rate.",
+          "The free tier in Google AI Studio allows you to test all three models without cost, subject to rate limits. This lets you evaluate quality differences before committing to paid usage."
+        ],
+        "zh": [
+          "Gemini 模型按百万 token 定价，输入和输出分别计价。Flash-Lite 最经济实惠，Flash 提供中间价位，Pro 因其卓越的推理和输出质量定价最高。",
+          "所有模型都支持提示缓存，可以显著降低重复提示的成本。缓存的输入 token 按标准输入费率的一部分计费。",
+          "Google AI Studio 的免费额度允许你在速率限制内免费测试三个模型，方便在付费使用前评估质量差异。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Gemini 2.5 Pro: Highest price, best quality — for complex reasoning and high-stakes generation",
+          "Gemini 2.5 Flash: Mid-range price, balanced performance — for general-purpose applications",
+          "Gemini 2.5 Flash-Lite: Lowest price, fastest speed — for high-volume, cost-sensitive workloads",
+          "All models support prompt caching at a discounted rate for cached input tokens"
+        ],
+        "zh": [
+          "Gemini 2.5 Pro：最高价格，最佳质量——适合复杂推理和高要求生成",
+          "Gemini 2.5 Flash：中等价格，均衡性能——适合通用应用",
+          "Gemini 2.5 Flash-Lite：最低价格，最快速度——适合高并发、成本敏感的工作负载",
+          "所有模型支持提示缓存，缓存的输入 token 享受折扣价格"
+        ]
+      }
+    },
+    {
+      "id": "capability-differences",
+      "heading": {
+        "en": "Capability Differences: Reasoning, Vision, and Code",
+        "zh": "能力差异：推理、视觉与代码"
+      },
+      "paragraphs": {
+        "en": [
+          "While all three models support multimodal input and code generation, their capabilities differ significantly in depth and quality. Gemini 2.5 Pro features Google's most advanced reasoning, excelling at multi-step problem solving, mathematical proofs, and complex code architecture. It also produces the highest quality long-form text.",
+          "Gemini 2.5 Flash offers strong performance across all capabilities but may produce slightly less refined output on complex reasoning tasks compared to Pro. For most everyday applications — chatbots, summarization, basic code generation — Flash is more than sufficient.",
+          "Gemini 2.5 Flash-Lite is optimized for speed and cost. It handles straightforward tasks like classification, extraction, and simple Q&A efficiently, but may struggle with deeply multi-step reasoning or generating long, nuanced content.",
+          "All three models support vision (image understanding), audio processing, and video understanding. Pro and Flash also support function calling and code execution, while Flash-Lite focuses on text and multimodal input processing."
+        ],
+        "zh": [
+          "虽然三个模型都支持多模态输入和代码生成，但它们在深度和质量上有显著差异。Gemini 2.5 Pro 具备 Google 最先进的推理能力，在多步骤问题求解、数学证明和复杂代码架构方面表现出色，同时生成最高质量的长文本。",
+          "Gemini 2.5 Flash 在所有能力上都有不错的表现，但在复杂推理任务上可能比 Pro 稍逊一筹。对于大多数日常应用——聊天机器人、摘要、基础代码生成——Flash 绰绰有余。",
+          "Gemini 2.5 Flash-Lite 针对速度和成本进行了优化。它能高效处理分类、信息提取和简单问答等直接任务，但在深层次的多步推理或生成细腻的长内容方面可能有困难。",
+          "三个模型都支持视觉（图像理解）、音频处理和视频理解。Pro 和 Flash 还支持函数调用和代码执行，而 Flash-Lite 主要专注于文本和多模态输入处理。"
+        ]
+      }
+    },
+    {
+      "id": "use-case-recommendations",
+      "heading": {
+        "en": "Use Case Recommendations",
+        "zh": "适用场景推荐"
+      },
+      "paragraphs": {
+        "en": [
+          "Choosing the right Gemini model depends on your specific use case, performance requirements, and budget. Here are practical recommendations based on common scenarios:"
+        ],
+        "zh": [
+          "选择合适的 Gemini 模型取决于你的具体使用场景、性能需求和预算。以下是基于常见场景的实用建议："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Gemini 2.5 Pro — Complex reasoning, mathematical problem solving, advanced code generation, long-form content creation, multi-document analysis",
+          "Gemini 2.5 Flash — Chatbots, customer support, summarization, general code assistance, structured data extraction, multilingual translation",
+          "Gemini 2.5 Flash-Lite — High-volume classification, content moderation, simple Q&A, routing, tagging, batch processing of large datasets",
+          "Start with Flash for prototyping, then upgrade to Pro if quality is insufficient or downgrade to Flash-Lite if cost is the bottleneck"
+        ],
+        "zh": [
+          "Gemini 2.5 Pro — 复杂推理、数学问题求解、高级代码生成、长内容创作、多文档分析",
+          "Gemini 2.5 Flash — 聊天机器人、客户支持、摘要生成、通用代码辅助、结构化数据提取、多语言翻译",
+          "Gemini 2.5 Flash-Lite — 大规模分类、内容审核、简单问答、意图路由、标签生成、批量数据处理",
+          "建议先用 Flash 进行原型开发，如果质量不够再升级到 Pro，如果成本是瓶颈则降级到 Flash-Lite"
+        ]
+      }
+    },
+    {
+      "id": "benchmark-performance",
+      "heading": {
+        "en": "Benchmark Performance",
+        "zh": "性能基准测试"
+      },
+      "paragraphs": {
+        "en": [
+          "Google publishes benchmark scores for Gemini models on standard AI evaluation suites. Gemini 2.5 Pro consistently leads on reasoning benchmarks like MMLU, GSM8K, and HumanEval, while Flash and Flash-Lite trade some accuracy for significantly higher throughput and lower cost.",
+          "On the MMLU (Massive Multitask Language Understanding) benchmark, Pro scores above 85%, Flash around 80%, and Flash-Lite approximately 75%. On coding benchmarks like HumanEval, Pro leads with over 90% pass rate, followed by Flash at approximately 85%.",
+          "In practice, benchmark scores provide a rough guide but do not always reflect real-world performance on your specific tasks. We recommend testing all three models with your own prompts and evaluating the output quality, latency, and cost for your particular use case."
+        ],
+        "zh": [
+          "Google 在标准 AI 评估套件上发布了 Gemini 模型的基准测试分数。Gemini 2.5 Pro 在 MMLU、GSM8K 和 HumanEval 等推理基准上始终领先，而 Flash 和 Flash-Lite 以一定的精度损失换取了更高的吞吐量和更低的成本。",
+          "在 MMLU（大规模多任务语言理解）基准测试中，Pro 的得分超过 85%，Flash 约 80%，Flash-Lite 约 75%。在 HumanEval 等编程基准上，Pro 以超过 90% 的通过率领先，Flash 约为 85%。",
+          "实际应用中，基准测试分数只能提供粗略参考，不一定能反映你特定任务上的真实表现。我们建议用你自己的提示词测试三个模型，针对你的具体场景评估输出质量、延迟和成本。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Which Gemini model should I use?",
+        "zh": "我应该用哪个 Gemini 模型？"
+      },
+      "answer": {
+        "en": "For most developers, Gemini 2.5 Flash is the best starting point — it balances quality, speed, and cost. Use Pro when you need the best reasoning or output quality. Use Flash-Lite for high-volume, cost-sensitive tasks where speed matters more than deep reasoning.",
+        "zh": "对于大多数开发者，Gemini 2.5 Flash 是最佳起点——它在质量、速度和成本之间取得了平衡。需要最佳推理或输出质量时用 Pro。高并发、成本敏感且速度比深度推理更重要的场景用 Flash-Lite。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do all Gemini models have the same context window?",
+        "zh": "所有 Gemini 模型的上下文窗口一样吗？"
+      },
+      "answer": {
+        "en": "Yes. All three Gemini 2.5 models (Pro, Flash, and Flash-Lite) support a 1 million token context window. You can process the same amount of input data regardless of which model you choose.",
+        "zh": "是的。三个 Gemini 2.5 模型（Pro、Flash 和 Flash-Lite）都支持 100 万 token 的上下文窗口。无论选择哪个模型，都可以处理相同数量的输入数据。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I switch between Gemini models without changing my code?",
+        "zh": "可以不修改代码就切换 Gemini 模型吗？"
+      },
+      "answer": {
+        "en": "Yes. All Gemini models share the same API interface. You only need to change the model name parameter in your API request. This makes it easy to test different models and switch based on your needs.",
+        "zh": "可以。所有 Gemini 模型共享相同的 API 接口。你只需在 API 请求中更改模型名称参数即可。这使得测试不同模型和根据需求切换变得非常简单。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Gemini 2.5 Pro available on the free tier?",
+        "zh": "Gemini 2.5 Pro 在免费额度中可用吗？"
+      },
+      "answer": {
+        "en": "Yes. Google AI Studio's free tier includes access to all Gemini models, including Pro, subject to per-minute rate limits. The free tier is suitable for development and testing before committing to paid usage.",
+        "zh": "是的。Google AI Studio 的免费额度包含对所有 Gemini 模型的访问，包括 Pro，受每分钟速率限制。免费额度适合在付费使用前进行开发和测试。"
+      }
+    },
+    {
+      "question": {
+        "en": "How much cheaper is Flash-Lite compared to Pro?",
+        "zh": "Flash-Lite 比 Pro 便宜多少？"
+      },
+      "answer": {
+        "en": "Flash-Lite is significantly cheaper than Pro — typically costing a fraction of Pro's per-token price. The exact ratio varies, but Flash-Lite is designed for high-volume workloads where cost per token is the primary concern. Check the official pricing page for current rates.",
+        "zh": "Flash-Lite 比 Pro 便宜很多——通常只需 Pro 每 token 价格的一小部分。具体比例会有变化，但 Flash-Lite 专为每 token 成本是主要考虑因素的高并发工作负载设计。请查看官方定价页面获取最新价格。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Gemini API Documentation",
+      "url": "https://ai.google.dev/gemini-api/docs",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Gemini API Pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Gemini API Models",
+      "url": "https://ai.google.dev/gemini-api/docs/models",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Gemini Models Comparison: 2.5 Pro vs Flash vs Flash-Lite (2026) | Get Model Key",
+      "zh": "Gemini 模型对比：2.5 Pro vs Flash vs Flash-Lite（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Compare Gemini 2.5 Pro, Flash, and Flash-Lite on context window, pricing, reasoning, vision, and code capabilities. Find the right Gemini model for your project.",
+      "zh": "全面对比 Gemini 2.5 Pro、Flash 和 Flash-Lite 的上下文窗口、定价、推理、视觉和代码能力，找到适合你项目的 Gemini 模型。"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-﻿import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next';
 import { getAllProviders, getSiteConfig } from '@/lib/providers';
 import { getPublishedGuides } from '@/lib/guides';
 
@@ -13,52 +13,55 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const baseUrl = siteConfig.domain;
 
+  /** Fixed dates for static pages — avoids unreliable new Date() in lastmod signals */
+  const STATIC_DATE = '2026-07-29';
+
   const routes = [
     {
       url: `${baseUrl}/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/providers/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/offers/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/guides/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.85,
     },
     {
       url: `${baseUrl}/about/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/terms/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
@@ -81,49 +84,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const chinesePages = [
     {
       url: `${baseUrl}/zh/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/zh/providers/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/zh/offers/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.75,
     },
     {
       url: `${baseUrl}/zh/guides/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'daily' as const,
       priority: 0.75,
     },
     {
       url: `${baseUrl}/zh/about/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/zh/contact/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/zh/privacy/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },
     {
       url: `${baseUrl}/zh/terms/`,
-      lastModified: new Date(),
+      lastModified: new Date(STATIC_DATE),
       changeFrequency: 'yearly' as const,
       priority: 0.5,
     },

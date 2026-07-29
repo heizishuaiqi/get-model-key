@@ -7,20 +7,14 @@ import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
 import ProviderContentSections from '@/components/providers/ProviderContentSections';
-import { getActiveOffers, getAllProviders, getProviderBySlug } from '@/lib/providers';
+import { getActiveOffers, getAllProviders, getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuidesByProviderSlug } from '@/lib/guides';
-import { getProviderMetadata } from '@/lib/seo';
+import { getProviderMetadata, buildFaqStructuredData } from '@/lib/seo';
+import { REGION_LABELS } from '@/lib/shared';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-const regionLabels = {
-  global: 'Global',
-  china: 'China',
-  aggregator: 'Aggregator',
-  cloud: 'Cloud',
-} as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -42,22 +36,34 @@ export default async function ProviderPage({ params }: Props) {
 
   const activeOffers = getActiveOffers(provider);
   const relatedGuides = await getGuidesByProviderSlug(provider.slug);
+  const siteConfig = await getSiteConfig();
 
-  const faqStructuredData =
-    provider.faq && provider.faq.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: provider.faq.map((item) => ({
-            '@type': 'Question',
-            name: item.question.en,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer.en,
-            },
-          })),
-        }
-      : null;
+  const faqStructuredData = buildFaqStructuredData(provider.faq, 'en');
+
+  const breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: `${siteConfig.domain}/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Providers',
+        item: `${siteConfig.domain}/providers/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: provider.name.en,
+        item: `${siteConfig.domain}/providers/${provider.slug}/`,
+      },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
@@ -68,9 +74,13 @@ export default async function ProviderPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
           />
         )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
         <div className="mb-8">
           <Link
-            href="/providers"
+            href="/providers/"
             className="inline-flex items-center gap-2 text-body-sm text-brand-300 transition-colors hover:text-brand-400"
           >
             <span aria-hidden="true">{'<'}</span>
@@ -81,7 +91,7 @@ export default async function ProviderPage({ params }: Props) {
         <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-3xl">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <Badge variant="brand">{regionLabels[provider.region]}</Badge>
+              <Badge variant="brand">{REGION_LABELS.en[provider.region]}</Badge>
               {provider.featured && <Badge variant="success">Featured</Badge>}
               {provider.categories.map((category) => (
                 <Badge key={category} variant="neutral" size="sm">
@@ -185,16 +195,30 @@ export default async function ProviderPage({ params }: Props) {
               <Card variant="standard">
                 <h2 className="mb-4 text-h2 text-text-primary">Related Guides</h2>
                 <div className="space-y-3">
-                  {relatedGuides.slice(0, 4).map((guide) => (
+                  {[...relatedGuides]
+                    .sort((a, b) => (b.pillar ? 1 : 0) - (a.pillar ? 1 : 0))
+                    .slice(0, 6)
+                    .map((guide) => (
                     <Link
                       key={guide.slug}
-                      href={`/guides/${guide.slug}`}
+                      href={`/guides/${guide.slug}/`}
                       className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 transition-colors hover:bg-surface-2"
                     >
-                      <div className="text-body font-semibold text-text-primary">{guide.title.en}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="text-body font-semibold text-text-primary">{guide.title.en}</div>
+                        {guide.pillar && <Badge variant="brand" size="sm">Pillar</Badge>}
+                      </div>
                       <div className="mt-1 text-body-sm text-text-secondary">{guide.excerpt.en}</div>
                     </Link>
                   ))}
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/guides/"
+                    className="text-body-sm text-brand-300 transition-colors hover:text-brand-400"
+                  >
+                    View all guides →
+                  </Link>
                 </div>
               </Card>
             )}
@@ -206,13 +230,11 @@ export default async function ProviderPage({ params }: Props) {
               <div className="space-y-4">
                 <div>
                   <div className="mb-1 text-body-sm text-text-tertiary">Region</div>
-                  <div className="text-body text-text-primary">{regionLabels[provider.region]}</div>
+                  <div className="text-body text-text-primary">{REGION_LABELS.en[provider.region]}</div>
                 </div>
                 <div>
                   <div className="mb-1 text-body-sm text-text-tertiary">Status</div>
-                  <Badge variant={provider.status === 'active' ? 'success' : 'danger'}>
-                    {provider.status}
-                  </Badge>
+                  <Badge variant="success">active</Badge>
                 </div>
                 {provider.lastVerified && (
                   <div>

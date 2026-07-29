@@ -2,9 +2,10 @@
 
 import { useEffect, useId, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import type { Lang } from '@/lib/shared';
 
 interface LanguageSwitcherProps {
-  currentLang: 'en' | 'zh';
+  currentLang: Lang;
 }
 
 export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
@@ -69,6 +70,7 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>

@@ -4,7 +4,6 @@
     { "source": "/zh/providers/tiangong/", "destination": "/zh/providers/", "permanent": true },
     { "source": "/providers/perplexity/", "destination": "/providers/", "permanent": true },
     { "source": "/zh/providers/perplexity/", "destination": "/zh/providers/", "permanent": true },
-    { "source": "/providers/elevenlabs", "destination": "/providers/", "permanent": true },
     { "source": "/providers/elevenlabs/", "destination": "/providers/", "permanent": true }
   ]
 }

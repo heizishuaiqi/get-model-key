@@ -1,28 +1,72 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getAllProviders } from '@/lib/providers';
+import { getAllProviders, getSiteConfig } from '@/lib/providers';
+import { getHomepageMetadata } from '@/lib/seo';
 import Card from '@/components/ui/Card';
 import ProviderCard from '@/components/providers/ProviderCard';
 
-export const metadata: Metadata = {
-  title: 'AI Model Providers - Get Model Key',
-  description: 'Browse all AI model providers and jump to official API key pages.',
-  alternates: {
-    canonical: '/providers/',
-    languages: {
-      en: '/providers/',
-      zh: '/zh/providers/',
-      'x-default': '/providers/',
+export async function generateMetadata(): Promise<Metadata> {
+  const siteConfig = await getSiteConfig();
+  const title = 'AI Model Providers - Get Model Key';
+  const description = 'Browse all AI model providers and jump to official API key pages.';
+  const url = `${siteConfig.domain}/providers/`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: '/providers/',
+      languages: {
+        en: '/providers/',
+        zh: '/zh/providers/',
+        'x-default': '/providers/',
+      },
     },
-  },
-};
+    openGraph: {
+      type: 'website',
+      url,
+      title,
+      description,
+      siteName: siteConfig.siteName,
+      locale: 'en_US',
+      images: [{ url: siteConfig.socialImage }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [siteConfig.socialImage],
+    },
+  };
+}
 
 export default async function ProvidersPage() {
-  const providers = await getAllProviders();
+  const [providers, siteConfig] = await Promise.all([
+    getAllProviders(),
+    getSiteConfig(),
+  ]);
+
+  const itemListStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AI Model Providers',
+    itemListElement: providers.map((provider, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: provider.name.en,
+      url: `${siteConfig.domain}/providers/${provider.slug}/`,
+      description: provider.summary.en,
+    })),
+  };
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListStructuredData) }}
+        />
+
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-h1 text-text-primary">AI Model Providers</h1>
         </div>
@@ -45,7 +89,7 @@ export default async function ProvidersPage() {
             We keep the directory focused and practical. If an important provider is missing, send it over and we can add it.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/contact" className="btn-primary-inverse">
+            <Link href="/contact/" className="btn-primary-inverse">
               Suggest a Provider
             </Link>
             <Link href="/" className="btn-secondary-ghost">

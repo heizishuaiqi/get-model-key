@@ -1,0 +1,179 @@
+{
+  "slug": "chatgpt-api-key-vs-openai",
+  "status": "published",
+  "topic": "comparison",
+  "pillar": false,
+  "cluster": "openai",
+  "pillarSlug": "openai-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 5,
+  "title": {
+    "en": "ChatGPT API Key vs OpenAI API Key: What's the Difference? (2026)",
+    "zh": "ChatGPT API Key vs OpenAI API Key：有什么区别？（2026）"
+  },
+  "excerpt": {
+    "en": "There is no separate 'ChatGPT API Key' — ChatGPT is a product, OpenAI is the company. All API keys are managed on platform.openai.com. Here's what you need to know.",
+    "zh": "并没有独立的「ChatGPT API Key」——ChatGPT 是产品名，OpenAI 是公司名。所有 API Key 统一在 platform.openai.com 管理。这里是你需要了解的。"
+  },
+  "tags": ["chatgpt", "openai", "api key", "comparison"],
+  "providerSlugs": ["openai"],
+  "sections": [
+    {
+      "id": "no-separate-chatgpt-key",
+      "heading": {
+        "en": "Why There's No 'ChatGPT API Key'",
+        "zh": "为什么没有独立的「ChatGPT API Key」"
+      },
+      "paragraphs": {
+        "en": [
+          "ChatGPT is a product name — the chatbot interface you use at chat.openai.com. OpenAI is the company that builds both ChatGPT and the API platform. There is only one type of API key, issued by OpenAI, and it works for all OpenAI models including GPT-4o, GPT-4, and GPT-3.5.",
+          "Many beginners search for 'how to get a ChatGPT API key', but the correct question is 'how to get an OpenAI API key'. The key you create on platform.openai.com is what powers any ChatGPT model through the API."
+        ],
+        "zh": [
+          "ChatGPT 是产品名——你在 chat.openai.com 使用的聊天界面。OpenAI 是同时开发 ChatGPT 和 API 平台的公司。API Key 只有一种，由 OpenAI 签发，适用于所有 OpenAI 模型，包括 GPT-4o、GPT-4 和 GPT-3.5。",
+          "很多初学者搜索「how to get a ChatGPT API key」，但正确的问题应该是「how to get an OpenAI API key」。你在 platform.openai.com 上创建的 Key 就是通过 API 调用任何 ChatGPT 模型的凭证。"
+        ]
+      }
+    },
+    {
+      "id": "plus-subscription-vs-api",
+      "heading": {
+        "en": "ChatGPT Plus Subscription vs API Billing",
+        "zh": "ChatGPT Plus 订阅 vs API 付费"
+      },
+      "paragraphs": {
+        "en": [
+          "ChatGPT Plus is a $20/month subscription for the chat interface — it gives you priority access, higher message limits, and early features in the ChatGPT web app. It does NOT include API credits.",
+          "The API is billed separately, pay-as-you-go, based on token usage. You can use the API without a Plus subscription, and a Plus subscription doesn't give you any API access. They are two completely separate billing systems."
+        ],
+        "zh": [
+          "ChatGPT Plus 是每月 20 美元的订阅，针对聊天界面——它给你优先访问、更高的消息限制和 ChatGPT 网页版的早期功能。它不包含 API 额度。",
+          "API 采用单独的按量计费方式，按 token 使用量收费。你不需要订阅 Plus 就能使用 API，而 Plus 订阅也不会给你任何 API 访问权限。这是两套完全独立的计费系统。"
+        ]
+      }
+    },
+    {
+      "id": "use-key-with-chatgpt-models",
+      "heading": {
+        "en": "How to Use Your API Key to Call ChatGPT Models",
+        "zh": "如何用 API Key 调用 ChatGPT 模型"
+      },
+      "paragraphs": {
+        "en": [
+          "Once you have an OpenAI API key, you can call any ChatGPT model (like GPT-4o) through the API. Here's a minimal example:"
+        ],
+        "zh": [
+          "有了 OpenAI API Key 之后，你就可以通过 API 调用任何 ChatGPT 模型（如 GPT-4o）。以下是最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(api_key=\"your-openai-api-key\")\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4o\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"Hello! What can you do?\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Calling the GPT-4o (ChatGPT) model using the OpenAI Python SDK",
+            "zh": "使用 OpenAI Python SDK 调用 GPT-4o（ChatGPT）模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "summary-table",
+      "heading": {
+        "en": "Quick Comparison Table",
+        "zh": "快速对比表"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's a quick summary of the key differences between ChatGPT and the OpenAI API."
+        ],
+        "zh": [
+          "以下是 ChatGPT 与 OpenAI API 之间关键区别的快速总结。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "ChatGPT = product (chatbot interface); OpenAI = company that issues API keys",
+          "ChatGPT Plus = $20/mo subscription for the web app; API = pay-per-token, separate billing",
+          "API key is created at platform.openai.com → API Keys section",
+          "One API key works for all models (GPT-4o, GPT-4, GPT-3.5, etc.)",
+          "Plus subscription does NOT include API credits"
+        ],
+        "zh": [
+          "ChatGPT = 产品（聊天界面）；OpenAI = 签发 API Key 的公司",
+          "ChatGPT Plus = 每月 20 美元网页版订阅；API = 按 token 计费，独立结算",
+          "API Key 在 platform.openai.com → API Keys 页面创建",
+          "一个 API Key 适用于所有模型（GPT-4o、GPT-4、GPT-3.5 等）",
+          "Plus 订阅不包含 API 额度"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is there a separate ChatGPT API key?",
+        "zh": "有独立的 ChatGPT API Key 吗？"
+      },
+      "answer": {
+        "en": "No. There is only one OpenAI API key, created at platform.openai.com. It works for all ChatGPT models (GPT-4o, GPT-4, etc.) through the API.",
+        "zh": "没有。只有一种 OpenAI API Key，在 platform.openai.com 创建。它可以通过 API 调用所有 ChatGPT 模型（GPT-4o、GPT-4 等）。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does ChatGPT Plus include API access?",
+        "zh": "ChatGPT Plus 包含 API 访问吗？"
+      },
+      "answer": {
+        "en": "No. ChatGPT Plus is a $20/month subscription for the chat web app only. API usage is billed separately on a pay-as-you-go basis and requires adding credits to your API account.",
+        "zh": "不包含。ChatGPT Plus 是每月 20 美元的聊天网页版订阅。API 使用量单独按量计费，需要为 API 账户充值。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use the API without a ChatGPT Plus subscription?",
+        "zh": "不订阅 ChatGPT Plus 可以使用 API 吗？"
+      },
+      "answer": {
+        "en": "Yes. The API and ChatGPT Plus are completely independent. You only need an OpenAI account and API credits to use the API. No Plus subscription required.",
+        "zh": "可以。API 和 ChatGPT Plus 完全独立。你只需要 OpenAI 账户和 API 额度即可使用 API，不需要订阅 Plus。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where do I create an OpenAI API key?",
+        "zh": "在哪里创建 OpenAI API Key？"
+      },
+      "answer": {
+        "en": "Go to platform.openai.com, sign in, navigate to API Keys, and click 'Create new secret key'. Copy it immediately — it's only shown once.",
+        "zh": "前往 platform.openai.com，登录后进入 API Keys 页面，点击「Create new secret key」。立即复制保存——它只会显示一次。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Platform Documentation",
+      "url": "https://platform.openai.com/docs/overview",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI API Keys Page",
+      "url": "https://platform.openai.com/api-keys",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "ChatGPT API Key vs OpenAI API Key: Difference Explained (2026) | Get Model Key",
+      "zh": "ChatGPT API Key vs OpenAI API Key：区别详解（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Clear explanation of ChatGPT vs OpenAI API keys. Learn why there's no separate ChatGPT key, how Plus differs from API billing, and how to call ChatGPT models.",
+      "zh": "清晰解释 ChatGPT 与 OpenAI API Key 的区别。了解为什么没有独立的 ChatGPT Key、Plus 与 API 计费的区别，以及如何调用 ChatGPT 模型。"
+    }
+  }
+}

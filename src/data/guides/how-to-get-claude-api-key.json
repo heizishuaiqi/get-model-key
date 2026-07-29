@@ -1,0 +1,195 @@
+{
+  "slug": "how-to-get-claude-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "claude",
+  "pillarSlug": "claude-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "How to Get a Claude API Key (2026 Step-by-Step Guide)",
+    "zh": "如何获取 Claude API Key（2026 逐步指南）"
+  },
+  "excerpt": {
+    "en": "Claude by Anthropic is a top-tier AI model. Here's exactly how to create your Claude/Anthropic API key, understand pricing, and make your first API call.",
+    "zh": "Anthropic 的 Claude 是顶级 AI 模型。本文教你如何创建 Claude/Anthropic API Key、理解定价，并发送第一个 API 请求。"
+  },
+  "tags": ["claude", "anthropic", "api key", "setup"],
+  "providerSlugs": ["anthropic"],
+  "sections": [
+    {
+      "id": "claude-vs-anthropic",
+      "heading": {
+        "en": "Claude API Key vs Anthropic API Key",
+        "zh": "Claude API Key 和 Anthropic API Key 的区别"
+      },
+      "paragraphs": {
+        "en": [
+          "There is no separate 'Claude API key' — the key you need is an Anthropic API key. Claude is the model; Anthropic is the company that provides the API. When you search for 'how to get a Claude API key,' what you actually need is an Anthropic API key from the Anthropic Console.",
+          "The same key works for all Claude models, including Claude Sonnet, Claude Opus, and Claude Haiku."
+        ],
+        "zh": [
+          "不存在单独的「Claude API Key」——你需要的实际上是 Anthropic API Key。Claude 是模型名，Anthropic 是提供 API 的公司。当你搜索「如何获取 Claude API Key」时，实际需要的是从 Anthropic Console 获取的 Anthropic API Key。",
+          "同一个 Key 可以用于所有 Claude 模型，包括 Claude Sonnet、Claude Opus 和 Claude Haiku。"
+        ]
+      }
+    },
+    {
+      "id": "create-account",
+      "heading": {
+        "en": "Step 1: Create an Anthropic Account",
+        "zh": "第 1 步：注册 Anthropic 账号"
+      },
+      "paragraphs": {
+        "en": [
+          "Go to the Anthropic Console at console.anthropic.com and sign up. You'll need to verify your email and provide a phone number for verification.",
+          "Anthropic is available to developers in most countries. If you're in a region where Anthropic is not directly available, you may need to use a VPN or check availability in your region."
+        ],
+        "zh": [
+          "前往 Anthropic Console（console.anthropic.com）注册。需要验证邮箱并提供手机号进行验证。",
+          "Anthropic 对大多数国家的开发者开放。如果你所在的地区 Anthropic 暂不直接可用，可能需要使用 VPN 或确认你的地区是否支持。"
+        ]
+      }
+    },
+    {
+      "id": "generate-key",
+      "heading": {
+        "en": "Step 2: Generate Your API Key",
+        "zh": "第 2 步：生成 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "After logging in to the Anthropic Console, go to the API Keys section. Click 'Create Key,' give it a name that reflects its purpose (e.g., 'production-app' or 'testing'), and copy the key immediately.",
+          "Anthropic also supports workspace-level key management, which is useful for teams. You can create separate keys for different workspaces or environments."
+        ],
+        "zh": [
+          "登录 Anthropic Console 后，进入 API Keys 页面。点击「Create Key」，给 Key 起一个反映用途的名字（如「production-app」或「testing」），然后立即复制保存。",
+          "Anthropic 还支持工作区级别的 Key 管理，对团队很有用。你可以为不同的工作区或环境创建单独的 Key。"
+        ]
+      }
+    },
+    {
+      "id": "add-credits",
+      "heading": {
+        "en": "Step 3: Add Credits",
+        "zh": "第 3 步：充值"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic uses a prepaid billing model. Before making API calls, you need to add credits to your account. New accounts may receive a small amount of free credits for testing.",
+          "Go to the Billing section in the console, add your payment method, and purchase credits. You can also set spending limits to avoid unexpected charges."
+        ],
+        "zh": [
+          "Anthropic 采用预付费模式。在调用 API 之前需要先充值。新账号可能会获得少量免费测试额度。",
+          "进入控制台的 Billing 页面，添加支付方式并购买额度。你也可以设置消费上限以避免意外支出。"
+        ]
+      }
+    },
+    {
+      "id": "first-request",
+      "heading": {
+        "en": "Step 4: Make Your First Request",
+        "zh": "第 4 步：发送第一个请求"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic provides its own Python SDK. Here's a minimal example of calling Claude:"
+        ],
+        "zh": [
+          "Anthropic 提供自己的 Python SDK。以下是调用 Claude 的最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "import anthropic\n\nclient = anthropic.Anthropic(\n    api_key=\"your-anthropic-api-key\"\n)\n\nmessage = client.messages.create(\n    model=\"claude-sonnet-4-20250514\",\n    max_tokens=1024,\n    messages=[\n        {\"role\": \"user\", \"content\": \"Hello, what can you do?\"}\n    ]\n)\n\nprint(message.content[0].text)",
+          "caption": {
+            "en": "Minimal Claude API call using the Anthropic Python SDK",
+            "zh": "使用 Anthropic Python SDK 调用 Claude API 的最小示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Claude API Pricing",
+        "zh": "Claude API 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic charges per million tokens, with separate rates for input and output. Different Claude models have different price points — Claude Haiku is the most affordable, Claude Sonnet is mid-range, and Claude Opus is the premium tier.",
+          "Check the official Anthropic pricing page for current rates, as pricing may change when new models are released."
+        ],
+        "zh": [
+          "Anthropic 按百万 token 计费，输入和输出分别定价。不同 Claude 模型价格不同——Claude Haiku 最实惠，Claude Sonnet 中档，Claude Opus 是高端档。",
+          "建议查看 Anthropic 官方定价页面获取最新价格，因为新模型发布时定价可能会调整。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is the Claude API key the same as the Anthropic API key?",
+        "zh": "Claude API Key 和 Anthropic API Key 是同一个吗？"
+      },
+      "answer": {
+        "en": "Yes. There is no separate Claude API key. You create an Anthropic API key in the Anthropic Console, and it works for all Claude models.",
+        "zh": "是的。不存在单独的 Claude API Key。你在 Anthropic Console 创建的 Anthropic API Key 可以用于所有 Claude 模型。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Claude API have a free tier?",
+        "zh": "Claude API 有免费额度吗？"
+      },
+      "answer": {
+        "en": "New Anthropic accounts may receive a small amount of free credits for testing. For ongoing use, you need to purchase credits. There is no permanent free tier like Google AI Studio offers.",
+        "zh": "新注册的 Anthropic 账号可能会获得少量免费测试额度。持续使用需要购买额度。没有像 Google AI Studio 那样的永久免费层。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use Claude API with OpenAI SDK?",
+        "zh": "可以用 OpenAI SDK 调用 Claude API 吗？"
+      },
+      "answer": {
+        "en": "Not directly. Anthropic has its own SDK. However, some wrapper libraries and proxy services provide OpenAI-compatible interfaces for Claude. For best results, use the official Anthropic SDK.",
+        "zh": "不能直接使用。Anthropic 有自己的 SDK。不过一些封装库和代理服务提供了 Claude 的 OpenAI 兼容接口。最佳实践是使用官方 Anthropic SDK。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Anthropic Console",
+      "url": "https://console.anthropic.com/",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic API Documentation",
+      "url": "https://docs.anthropic.com/",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic API Pricing",
+      "url": "https://www.anthropic.com/pricing",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Get a Claude API Key (2026 Guide) | Get Model Key",
+      "zh": "如何获取 Claude API Key（2026 指南）| Get Model Key"
+    },
+    "description": {
+      "en": "Step-by-step guide to creating an Anthropic/Claude API key, adding credits, understanding pricing, and making your first Claude API call.",
+      "zh": "逐步指南：创建 Anthropic/Claude API Key、充值、理解定价，并发送第一个 Claude API 请求。"
+    }
+  }
+}

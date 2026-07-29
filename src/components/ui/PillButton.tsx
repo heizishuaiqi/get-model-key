@@ -24,7 +24,7 @@ export default function PillButton({
   const variantClasses = {
     ghost: 'btn-secondary-ghost',
     brand: 'btn-brand-gradient',
-    neutral: 'rounded-full border border-white-06 bg-white-04 px-4 py-2 text-sm font-semibold text-text-secondary hover:bg-white-06 hover:border-white-08 transition-all duration-200',
+    neutral: 'rounded-full border border-white-06 bg-white-04 font-semibold text-text-secondary hover:bg-white-06 hover:border-white-08 transition-all duration-200',
   };
 
   const sizeClasses = {
@@ -33,17 +33,24 @@ export default function PillButton({
     lg: 'px-6 py-3 text-base min-h-12',
   };
 
-  const baseClasses = `${variantClasses[variant]} ${sizeClasses[size]}`;
-  const combinedClasses = `${baseClasses} ${className}`.trim();
+  const combinedClasses = [
+    variantClasses[variant],
+    sizeClasses[size],
+    disabled ? 'pointer-events-none opacity-60' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   if (href) {
     return (
       <a
-        href={href}
+        href={disabled ? undefined : href}
         className={combinedClasses}
-        onClick={onClick}
+        onClick={disabled ? undefined : onClick}
         target={newTab ? '_blank' : undefined}
         rel={newTab ? 'noopener noreferrer' : undefined}
+        aria-disabled={disabled || undefined}
       >
         {children}
       </a>

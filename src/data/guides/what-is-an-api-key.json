@@ -1,0 +1,180 @@
+{
+  "slug": "what-is-an-api-key",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "What is an API Key? A Beginner's Guide (2026)",
+    "zh": "什么是 API Key？新手入门指南（2026）"
+  },
+  "excerpt": {
+    "en": "API keys are the foundation of accessing AI services. Learn what they are, how they work, why you need one, and how to get started with AI model APIs.",
+    "zh": "API Key 是访问 AI 服务的基础。了解它是什么、如何工作、为什么需要它，以及如何开始使用 AI 模型 API。"
+  },
+  "tags": ["api key", "basics", "beginner", "ai"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "definition",
+      "heading": {
+        "en": "What is an API Key?",
+        "zh": "什么是 API Key？"
+      },
+      "paragraphs": {
+        "en": [
+          "An API key is a unique string of characters that identifies and authenticates a developer or application when calling an API. Think of it as a username and password combined into one token — it tells the API provider who you are and whether you're authorized to access the service.",
+          "When you use an AI model like GPT-4o, Claude, or Gemini through code (not through a web interface), you need an API key to prove you have permission to make that call."
+        ],
+        "zh": [
+          "API Key 是一串唯一字符，用于在调用 API 时识别和验证开发者或应用程序。可以把它理解为用户名和密码合二为一的令牌——它告诉 API 供应商你是谁，以及你是否有权访问该服务。",
+          "当你通过代码（而非网页界面）使用 GPT-4o、Claude 或 Gemini 等 AI 模型时，你需要 API Key 来证明你有权限进行调用。"
+        ]
+      }
+    },
+    {
+      "id": "why-needed",
+      "heading": {
+        "en": "Why Do You Need an API Key?",
+        "zh": "为什么需要 API Key？"
+      },
+      "paragraphs": {
+        "en": [
+          "API keys serve three main purposes: authentication (proving who you are), authorization (determining what you can access), and billing (tracking your usage for payment).",
+          "Without an API key, AI providers cannot distinguish between legitimate users and abuse. The key ties your API requests to your account, allowing the provider to enforce rate limits, track usage, and charge appropriately."
+        ],
+        "zh": [
+          "API Key 有三个主要作用：认证（证明你是谁）、授权（决定你能访问什么）和计费（跟踪你的用量以收费）。",
+          "没有 API Key，AI 供应商无法区分合法用户和滥用行为。Key 将你的 API 请求与你的账户关联，让供应商可以执行速率限制、跟踪用量并合理收费。"
+        ]
+      }
+    },
+    {
+      "id": "how-it-works",
+      "heading": {
+        "en": "How API Keys Work",
+        "zh": "API Key 是如何工作的"
+      },
+      "paragraphs": {
+        "en": [
+          "When you make an API call, your API key is included in the request — typically in the Authorization header as a 'Bearer token.' The API server receives the request, validates the key, checks your account's permissions and balance, then processes the request.",
+          "If the key is invalid, expired, or lacks sufficient credits, the server returns an error (usually 401 Unauthorized or 403 Forbidden). If you exceed rate limits, you get a 429 Too Many Requests error."
+        ],
+        "zh": [
+          "当你发起 API 调用时，API Key 会包含在请求中——通常作为 Authorization 头中的「Bearer token」。API 服务器收到请求后，验证 Key、检查你的账户权限和余额，然后处理请求。",
+          "如果 Key 无效、过期或余额不足，服务器返回错误（通常是 401 Unauthorized 或 403 Forbidden）。如果超过速率限制，你会收到 429 Too Many Requests 错误。"
+        ]
+      }
+    },
+    {
+      "id": "where-to-get",
+      "heading": {
+        "en": "Where to Get an API Key",
+        "zh": "去哪里获取 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Each AI model provider has its own platform where you can create API keys. The most popular providers include:",
+          "You can find the official API key pages for all major AI providers on our providers page. We link directly to each provider's official key creation page."
+        ],
+        "zh": [
+          "每个 AI 模型供应商都有自己的平台来创建 API Key。最受欢迎的供应商包括：",
+          "你可以在我们的供应商页面找到所有主流 AI 供应商的官方 API Key 页面。我们直接链接到每个供应商的官方 Key 创建页面。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "OpenAI — platform.openai.com (GPT-4o, o-series models)",
+          "Anthropic — console.anthropic.com (Claude models)",
+          "Google — aistudio.google.com (Gemini models)",
+          "DeepSeek — platform.deepseek.com (DeepSeek-V3, R1)",
+          "OpenRouter — openrouter.ai (aggregated access to many models)"
+        ],
+        "zh": [
+          "OpenAI — platform.openai.com（GPT-4o、o 系列模型）",
+          "Anthropic — console.anthropic.com（Claude 模型）",
+          "Google — aistudio.google.com（Gemini 模型）",
+          "DeepSeek — platform.deepseek.com（DeepSeek-V3、R1）",
+          "OpenRouter — openrouter.ai（聚合访问多种模型）"
+        ]
+      }
+    },
+    {
+      "id": "security",
+      "heading": {
+        "en": "API Key Security Basics",
+        "zh": "API Key 安全基础"
+      },
+      "paragraphs": {
+        "en": [
+          "Treat your API key like a password. Never share it publicly, never commit it to a Git repository, and never expose it in frontend code. If someone else obtains your key, they can make API calls that you pay for.",
+          "Store keys in environment variables or a secret management system. Use different keys for development and production. Rotate keys periodically and immediately if you suspect they've been compromised."
+        ],
+        "zh": [
+          "把 API Key 当作密码来对待。不要公开分享、不要提交到 Git 仓库、不要暴露在前端代码中。如果别人拿到你的 Key，他们可以发起由你付费的 API 调用。",
+          "将 Key 存储在环境变量或密钥管理系统中。开发和生产使用不同 Key。定期轮换密钥，怀疑泄露时立即轮换。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is an API key the same as a password?",
+        "zh": "API Key 和密码是一回事吗？"
+      },
+      "answer": {
+        "en": "They serve a similar purpose (authentication) but are used differently. An API key is specifically designed for programmatic access and is included in API requests. A password is typically for human login to a web interface.",
+        "zh": "它们的作用类似（认证），但使用方式不同。API Key 专为编程访问设计，包含在 API 请求中。密码通常用于人类登录网页界面。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are API keys free to create?",
+        "zh": "创建 API Key 是免费的吗？"
+      },
+      "answer": {
+        "en": "Creating an API key is free on most platforms. However, using the API usually costs money based on your usage. Some providers like Google AI Studio offer free tiers for development.",
+        "zh": "在大多数平台上创建 API Key 是免费的。但使用 API 通常需要按用量付费。一些供应商如 Google AI Studio 提供开发用的免费额度。"
+      }
+    },
+    {
+      "question": {
+        "en": "What happens if someone steals my API key?",
+        "zh": "如果有人偷了我的 API Key 会怎样？"
+      },
+      "answer": {
+        "en": "They can make API calls charged to your account. If you suspect theft, immediately revoke the key in your provider's dashboard, create a new one, and audit your usage for unauthorized charges.",
+        "zh": "他们可以发起由你账户付费的 API 调用。如果怀疑被盗，立即在供应商后台撤销该 Key，创建新 Key，并审计用量是否有未授权消费。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google API Key Documentation",
+      "url": "https://cloud.google.com/docs/authentication/api-keys",
+      "site": "Google Cloud",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI API Authentication",
+      "url": "https://platform.openai.com/docs/api-reference/authentication",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "What is an API Key? Beginner's Guide (2026) | Get Model Key",
+      "zh": "什么是 API Key？新手入门指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn what API keys are, how they work, why you need one for AI APIs, where to get them, and essential security practices for beginners.",
+      "zh": "了解 API Key 是什么、如何工作、为什么需要它来访问 AI API、去哪里获取，以及新手必备的安全实践。"
+    }
+  }
+}

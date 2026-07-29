@@ -5,10 +5,15 @@ import Badge from '@/components/ui/Badge';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
+import { REGION_LABELS, getProviderDetailHref, type Lang } from '@/lib/shared';
+
+const MAX_VISIBLE_MODELS = 3;
+const MAX_VISIBLE_TAGS = 3;
+const TOP_PICK_CARD_MIN_HEIGHT = '220px';
 
 interface ProviderCardProps {
   provider: Provider;
-  lang: 'en' | 'zh';
+  lang: Lang;
   showSecondaryLink?: boolean;
   variant?: 'standard' | 'top-pick';
 }
@@ -19,23 +24,23 @@ export default function ProviderCard({
   showSecondaryLink = true,
   variant = 'standard',
 }: ProviderCardProps) {
-  const detailHref =
-    lang === 'en' ? `/providers/${provider.slug}` : `/zh/providers/${provider.slug}`;
+  const detailHref = getProviderDetailHref(provider.slug, lang);
   const detailAriaLabel =
     lang === 'en'
       ? `View details for ${provider.name[lang]}`
-      : `\u67e5\u770b ${provider.name[lang]} \u8be6\u60c5`;
+      : `查看 ${provider.name[lang]} 详情`;
 
-  const regionLabels = {
-    global: 'Global',
-    china: 'China',
-    aggregator: 'Aggregator',
-    cloud: 'Cloud',
-  };
+  const regionLabels = REGION_LABELS[lang];
+  const getApiKeyText = lang === 'en' ? 'Get API Key' : '获取 API Key';
+  const visitSiteText = lang === 'en' ? 'Visit Site' : '访问官网';
+  const featuredText = lang === 'en' ? 'Featured' : '精选';
+  const modelsLabel = lang === 'en' ? 'Common Models' : '常用模型';
+  const lastVerifiedLabel = lang === 'en' ? 'Last verified:' : '最后校验：';
+
+  // Safely resolve secondary site URL without non-null assertion
+  const secondarySiteUrl = provider.officialSiteUrl || provider.officialSiteUrlGlobal || undefined;
 
   if (variant === 'top-pick') {
-    const getApiKeyText = lang === 'en' ? 'Get API Key' : '\u83b7\u53d6 API Key';
-
     return (
       <Card
         variant="featured"
@@ -48,7 +53,7 @@ export default function ProviderCard({
           aria-label={detailAriaLabel}
           className="absolute inset-0 z-10 rounded-2xl"
         />
-        <div className="pointer-events-none relative z-20 flex h-full min-h-[220px] flex-col">
+        <div className="pointer-events-none relative z-20 flex h-full flex-col" style={{ minHeight: TOP_PICK_CARD_MIN_HEIGHT }}>
           <div className="mb-5">
             <div className="mb-3 flex items-center gap-3">
               <ProviderLogo provider={provider} lang={lang} size="sm" />
@@ -57,14 +62,9 @@ export default function ProviderCard({
             <p className="line-clamp-3 text-body-sm text-text-secondary">{provider.summary[lang]}</p>
           </div>
           <div className="pointer-events-auto relative z-30 mt-auto">
-            <a
-              href={provider.officialKeyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary-inverse w-full"
-            >
+            <PrimaryInverseButton href={provider.officialKeyUrl} newTab className="w-full">
               {getApiKeyText}
-            </a>
+            </PrimaryInverseButton>
           </div>
         </div>
       </Card>
@@ -89,14 +89,12 @@ export default function ProviderCard({
             <div>
               <div className="mb-2 flex items-center gap-3">
                 <ProviderLogo provider={provider} lang={lang} size="sm" />
-                <h3 className="text-h4 text-text-primary">{provider.name[lang]}</h3>
+                <h2 className="text-h4 text-text-primary">{provider.name[lang]}</h2>
               </div>
               <div className="mb-3 flex items-center gap-2">
                 <Badge variant="brand">{regionLabels[provider.region]}</Badge>
                 {provider.featured && (
-                  <Badge variant="success">
-                    {lang === 'en' ? 'Featured' : '\u7cbe\u9009'}
-                  </Badge>
+                  <Badge variant="success">{featuredText}</Badge>
                 )}
               </div>
             </div>
@@ -106,10 +104,10 @@ export default function ProviderCard({
 
           <div className="mb-6">
             <h4 className="mb-3 text-caption font-semibold uppercase tracking-wide text-text-tertiary">
-              {lang === 'en' ? 'Common Models' : '\u5e38\u7528\u6a21\u578b'}
+              {modelsLabel}
             </h4>
             <div className="flex flex-wrap gap-2">
-              {provider.models[lang].slice(0, 3).map((model) => (
+              {provider.models[lang].slice(0, MAX_VISIBLE_MODELS).map((model) => (
                 <span
                   key={model}
                   className="inline-flex items-center rounded-md border border-white-04 bg-surface-green px-3 py-1.5 text-xs font-medium text-text-secondary"
@@ -123,7 +121,7 @@ export default function ProviderCard({
           {provider.tags.length > 0 && (
             <div className="mb-6">
               <div className="flex flex-wrap gap-2">
-                {provider.tags.slice(0, 3).map((tag) => (
+                {provider.tags.slice(0, MAX_VISIBLE_TAGS).map((tag) => (
                   <Badge key={tag} variant="neutral" size="sm">
                     {tag}
                   </Badge>
@@ -136,24 +134,25 @@ export default function ProviderCard({
         <div className="pointer-events-auto relative z-30 mt-auto">
           <div className="flex flex-col gap-3">
             <PrimaryInverseButton href={provider.officialKeyUrl} newTab className="w-full">
-              {lang === 'en' ? 'Get API Key' : '\u83b7\u53d6 API Key'}
+              {getApiKeyText}
             </PrimaryInverseButton>
 
-            {showSecondaryLink && (provider.officialSiteUrl || provider.officialSiteUrlGlobal) && (
+            {showSecondaryLink && secondarySiteUrl && (
               <PillButton
                 variant="ghost"
                 size="md"
-                href={lang === 'zh' ? (provider.officialSiteUrl ?? provider.officialSiteUrlGlobal!) : (provider.officialSiteUrlGlobal ?? provider.officialSiteUrl!)}
+                href={secondarySiteUrl}
+                newTab
                 className="w-full"
               >
-                {lang === 'en' ? 'Visit Site' : '\u8bbf\u95ee\u5b98\u7f51'}
+                {visitSiteText}
               </PillButton>
             )}
           </div>
 
           {provider.lastVerified && (
             <div className="mt-4 text-caption text-text-muted">
-              {lang === 'en' ? 'Last verified:' : '\u6700\u540e\u6821\u9a8c\uff1a'} {provider.lastVerified}
+              {lastVerifiedLabel} {provider.lastVerified}
             </div>
           )}
         </div>

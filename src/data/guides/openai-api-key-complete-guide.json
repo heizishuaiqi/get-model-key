@@ -1,0 +1,245 @@
+{
+  "slug": "openai-api-key-complete-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": true,
+  "cluster": "openai",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 12,
+  "title": {
+    "en": "OpenAI API Key Complete Guide (2026): Setup, Pricing, Errors & Best Practices",
+    "zh": "OpenAI API Key 完全指南（2026）：开通、定价、排错与最佳实践"
+  },
+  "excerpt": {
+    "en": "Everything you need to know about OpenAI API keys: how to create one, set permissions, understand pricing, fix 401/429 errors, and follow security best practices.",
+    "zh": "关于 OpenAI API Key 你需要知道的一切：如何创建、配置权限、理解定价、排查 401/429 错误，以及安全最佳实践。"
+  },
+  "tags": ["openai", "api key", "chatgpt", "setup", "pricing", "troubleshooting"],
+  "providerSlugs": ["openai"],
+  "sections": [
+    {
+      "id": "what-is-openai-api",
+      "heading": {
+        "en": "What is the OpenAI API?",
+        "zh": "什么是 OpenAI API？"
+      },
+      "paragraphs": {
+        "en": [
+          "The OpenAI API gives developers programmatic access to OpenAI's language models, including GPT-4o, GPT-4 Turbo, o-series reasoning models, and DALL-E image generation. Instead of using the ChatGPT web interface, you integrate these models directly into your own applications, services, or workflows.",
+          "An API key is your credential for authenticating requests to the OpenAI API. Without a valid key, every request will be rejected with a 401 error. This guide walks you through the entire lifecycle: creation, configuration, usage, pricing, troubleshooting, and security."
+        ],
+        "zh": [
+          "OpenAI API 让开发者可以通过编程方式调用 OpenAI 的语言模型，包括 GPT-4o、GPT-4 Turbo、o 系列推理模型和 DALL-E 图像生成。你不需要使用 ChatGPT 网页版，而是直接将这些模型集成到自己的应用、服务或工作流中。",
+          "API Key 是你向 OpenAI API 发送请求时的身份凭证。没有有效的 Key，每个请求都会被拒绝并返回 401 错误。本指南覆盖 Key 的完整生命周期：创建、配置、使用、定价、排错和安全。"
+        ]
+      }
+    },
+    {
+      "id": "how-to-get-key",
+      "heading": {
+        "en": "How to Get an OpenAI API Key",
+        "zh": "如何获取 OpenAI API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Getting an OpenAI API key takes about five minutes. First, create an account at the OpenAI developer platform. After verifying your email and phone number, navigate to the API Keys section in your dashboard.",
+          "Click 'Create new secret key,' give it a recognizable name (e.g., 'production-server' or 'dev-testing'), and copy the key immediately. You will not be able to see it again after closing the dialog."
+        ],
+        "zh": [
+          "获取 OpenAI API Key 大约需要五分钟。首先在 OpenAI 开发者平台注册账号，完成邮箱和手机号验证后，进入后台的 API Keys 页面。",
+          "点击「Create new secret key」，给 Key 起一个可识别的名字（如「production-server」或「dev-testing」），然后立即复制保存。关闭弹窗后你将无法再次查看该 Key。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Step 1: Sign up at platform.openai.com",
+          "Step 2: Verify email and phone number",
+          "Step 3: Go to API Keys page in the dashboard",
+          "Step 4: Click 'Create new secret key'",
+          "Step 5: Copy and store the key securely"
+        ],
+        "zh": [
+          "第 1 步：在 platform.openai.com 注册",
+          "第 2 步：验证邮箱和手机号",
+          "第 3 步：进入后台 API Keys 页面",
+          "第 4 步：点击「Create new secret key」",
+          "第 5 步：立即复制并安全保存 Key"
+        ]
+      }
+    },
+    {
+      "id": "permissions",
+      "heading": {
+        "en": "Setting API Key Permissions",
+        "zh": "配置 API Key 权限"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI supports key-level permission modes: All, Restricted, and Read Only. For production applications, always use Restricted mode and enable only the endpoints your service needs.",
+          "If multiple internal services use OpenAI, create separate keys per service. This limits blast radius and makes auditing easier when something goes wrong."
+        ],
+        "zh": [
+          "OpenAI 支持 Key 级权限模式：All、Restricted 和 Read Only。生产环境建议始终使用 Restricted 模式，仅开放业务实际需要的接口。",
+          "如果多个内部服务都会调用 OpenAI，建议为每个服务单独创建 Key。这样出问题时更容易定位和止损，也便于审计。"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "OpenAI API Pricing Explained",
+        "zh": "OpenAI API 定价说明"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI charges per token, not per request. Input tokens (what you send) and output tokens (what the model generates) are priced separately. Different models have different rates — GPT-4o is more expensive than GPT-4o-mini, and o-series reasoning models carry a premium for their extended thinking.",
+          "You can set monthly spending limits in the dashboard to avoid surprise bills. New accounts sometimes receive free trial credits, but these are time-limited and should not be relied upon for production."
+        ],
+        "zh": [
+          "OpenAI 按 token 计费，不是按请求次数。输入 token（你发送的内容）和输出 token（模型生成的内容）分别计价。不同模型价格不同——GPT-4o 比 GPT-4o-mini 贵，o 系列推理模型因为扩展思考能力定价更高。",
+          "你可以在后台设置月度消费上限，避免意外账单。新账号有时会获得免费试用额度，但有有效期，不应依赖它跑生产。"
+        ]
+      }
+    },
+    {
+      "id": "troubleshooting",
+      "heading": {
+        "en": "Common Errors: 401 and 429",
+        "zh": "常见错误：401 和 429"
+      },
+      "paragraphs": {
+        "en": [
+          "A 401 error means authentication failed — your key is invalid, revoked, or not being sent correctly. Double-check that you're passing it in the Authorization header as a Bearer token.",
+          "A 429 error means rate limit exceeded. OpenAI enforces both per-request and per-minute limits. Implement exponential backoff retry, and consider upgrading your tier if you consistently hit limits."
+        ],
+        "zh": [
+          "401 错误表示认证失败——你的 Key 无效、已撤销或未正确发送。检查是否在 Authorization 头中以 Bearer token 方式传递。",
+          "429 错误表示超过速率限制。OpenAI 同时限制单次请求和每分钟请求数。建议实现指数退避重试，如果持续超限可以考虑升级账户等级。"
+        ]
+      }
+    },
+    {
+      "id": "security",
+      "heading": {
+        "en": "Security Best Practices",
+        "zh": "安全最佳实践"
+      },
+      "paragraphs": {
+        "en": [
+          "Never expose your OpenAI API key in frontend code, public repositories, or client-side environment variables. Always call the API from your backend server.",
+          "Rotate keys periodically and immediately after team member offboarding or suspected leakage. Use separate keys for development, staging, and production environments."
+        ],
+        "zh": [
+          "永远不要把 OpenAI API Key 暴露在前端代码、公开仓库或客户端环境变量中。始终从后端服务器调用 API。",
+          "定期轮换密钥，团队成员离职或疑似泄露时立即轮换。开发、测试、生产环境使用不同 Key。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Store keys in environment variables or a secret manager",
+          "Never commit keys to Git repositories",
+          "Use separate keys per environment (dev/staging/prod)",
+          "Set up spending alerts and monthly limits",
+          "Monitor usage for unexpected spikes"
+        ],
+        "zh": [
+          "使用环境变量或密钥管理系统保存 Key",
+          "禁止把 Key 提交到 Git 仓库",
+          "开发/测试/生产环境使用不同 Key",
+          "设置消费告警和月度上限",
+          "监控用量，关注异常波动"
+        ]
+      }
+    },
+    {
+      "id": "chatgpt-vs-openai",
+      "heading": {
+        "en": "ChatGPT API Key vs OpenAI API Key",
+        "zh": "ChatGPT API Key 和 OpenAI API Key 的区别"
+      },
+      "paragraphs": {
+        "en": [
+          "There is no separate 'ChatGPT API key.' ChatGPT is a product built on top of the OpenAI API. The key you create on the OpenAI developer platform is the same key used to access GPT models programmatically, whether you think of it as a 'ChatGPT API key' or an 'OpenAI API key.'",
+          "If you're searching for a 'ChatGPT API key,' what you actually need is an OpenAI API key from platform.openai.com."
+        ],
+        "zh": [
+          "不存在单独的「ChatGPT API Key」。ChatGPT 是基于 OpenAI API 构建的产品。你在 OpenAI 开发者平台创建的 Key 就是用来通过编程方式调用 GPT 模型的 Key，无论你叫它「ChatGPT API Key」还是「OpenAI API Key」。",
+          "如果你在找「ChatGPT API Key」，你实际需要的是从 platform.openai.com 获取的 OpenAI API Key。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is the OpenAI API key free?",
+        "zh": "OpenAI API Key 是免费的吗？"
+      },
+      "answer": {
+        "en": "Creating an API key is free, but using the API costs money based on token usage. New accounts may receive limited free trial credits.",
+        "zh": "创建 API Key 是免费的，但使用 API 需要按 token 用量付费。新账号可能会获得有限的免费试用额度。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use the same key for ChatGPT and the API?",
+        "zh": "ChatGPT 和 API 可以用同一个 Key 吗？"
+      },
+      "answer": {
+        "en": "ChatGPT Plus subscription and the OpenAI API are separate billing systems. A ChatGPT Plus subscription does not include API credits, and API keys cannot be used to access ChatGPT Plus features.",
+        "zh": "ChatGPT Plus 订阅和 OpenAI API 是两套独立的计费系统。ChatGPT Plus 订阅不包含 API 额度，API Key 也不能用于访问 ChatGPT Plus 功能。"
+      }
+    },
+    {
+      "question": {
+        "en": "What should I do if I get a 401 error?",
+        "zh": "遇到 401 错误怎么办？"
+      },
+      "answer": {
+        "en": "Check that your API key is valid, not revoked, and correctly passed as a Bearer token in the Authorization header. Also ensure there are no extra spaces or newlines in the key string.",
+        "zh": "检查 API Key 是否有效、未被撤销，并确保以 Bearer token 方式正确传递在 Authorization 头中。同时检查 Key 字符串中没有多余的空格或换行。"
+      }
+    },
+    {
+      "question": {
+        "en": "How do I check my OpenAI API usage?",
+        "zh": "如何查看 OpenAI API 用量？"
+      },
+      "answer": {
+        "en": "Log in to the OpenAI developer platform and check the Usage page. You can see daily token consumption, cost breakdown by model, and set up billing alerts.",
+        "zh": "登录 OpenAI 开发者平台，查看 Usage 页面。你可以看到每日 token 消耗、按模型的成本明细，并设置账单告警。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI API Keys Documentation",
+      "url": "https://platform.openai.com/docs/guides/production-best-practices",
+      "site": "OpenAI Platform",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI API Pricing",
+      "url": "https://openai.com/api/pricing/",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI API Rate Limits",
+      "url": "https://platform.openai.com/docs/guides/rate-limits",
+      "site": "OpenAI Platform",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "OpenAI API Key Complete Guide (2026) | Get Model Key",
+      "zh": "OpenAI API Key 完全指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to OpenAI API keys: setup, permissions, pricing, 401/429 troubleshooting, security best practices, and ChatGPT vs OpenAI key explained.",
+      "zh": "OpenAI API Key 完全指南：开通步骤、权限配置、定价说明、401/429 排错、安全最佳实践，以及 ChatGPT 与 OpenAI Key 的区别。"
+    }
+  }
+}

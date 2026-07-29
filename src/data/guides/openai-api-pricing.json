@@ -1,0 +1,264 @@
+{
+  "slug": "openai-api-pricing",
+  "status": "published",
+  "topic": "comparison",
+  "pillar": false,
+  "cluster": "openai",
+  "pillarSlug": "openai-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "OpenAI API Pricing Explained (2026 Guide)",
+    "zh": "OpenAI API 定价详解（2026 指南）"
+  },
+  "excerpt": {
+    "en": "Understand OpenAI API pricing: GPT-4o and o-series model rates, token-based billing, input vs output pricing, cached prompt discounts, Batch API savings, and how to estimate your costs.",
+    "zh": "全面理解 OpenAI API 定价：GPT-4o 和 o 系列模型价格、token 计费方式、输入/输出价格差异、缓存折扣、Batch API 节省，以及如何估算成本。"
+  },
+  "tags": ["openai", "pricing", "api", "cost"],
+  "providerSlugs": ["openai"],
+  "sections": [
+    {
+      "id": "how-pricing-works",
+      "heading": {
+        "en": "How OpenAI API Pricing Works",
+        "zh": "OpenAI API 定价机制"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI charges per token, not per request. A token is roughly 4 characters of English text, or about 3/4 of a word. A 1,000-word English article is approximately 1,300 tokens.",
+          "Every API call has two token counts: input tokens (the prompt you send) and output tokens (the model's response). These are billed at different rates — output tokens are typically 3-4x more expensive than input tokens.",
+          "Chinese text uses more tokens per character than English because tokenizers are optimized for Latin scripts. A Chinese character typically costs 1-2 tokens, so factor this in when estimating costs for Chinese-language applications."
+        ],
+        "zh": [
+          "OpenAI 按 token 计费，不是按请求次数。一个 token 大约相当于 4 个英文字符，或 3/4 个单词。一篇 1,000 词的英文文章大约是 1,300 个 token。",
+          "每次 API 调用有两个 token 计数：输入 token（你发送的提示词）和输出 token（模型的回复）。它们按不同价格计费——输出 token 通常比输入 token 贵 3-4 倍。",
+          "中文每个字符消耗的 token 比英文多，因为分词器是为拉丁语系优化的。一个中文字符通常消耗 1-2 个 token，在估算中文应用成本时需要考虑这一点。"
+        ]
+      }
+    },
+    {
+      "id": "gpt-4o-pricing",
+      "heading": {
+        "en": "GPT-4o & GPT-4o-mini Pricing",
+        "zh": "GPT-4o 和 GPT-4o-mini 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "GPT-4o is OpenAI's flagship multimodal model, supporting text, image, and audio inputs. GPT-4o-mini is the cost-optimized version, recommended for most general-purpose tasks."
+        ],
+        "zh": [
+          "GPT-4o 是 OpenAI 的旗舰多模态模型，支持文本、图像和音频输入。GPT-4o-mini 是成本优化版本，推荐用于大多数通用任务。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "GPT-4o: $2.50 / 1M input tokens, $10.00 / 1M output tokens",
+          "GPT-4o: $1.25 / 1M cached input tokens (50% discount)",
+          "GPT-4o-mini: $0.15 / 1M input tokens, $0.60 / 1M output tokens",
+          "GPT-4o-mini: $0.075 / 1M cached input tokens (50% discount)"
+        ],
+        "zh": [
+          "GPT-4o：$2.50 / 百万输入 token，$10.00 / 百万输出 token",
+          "GPT-4o：$1.25 / 百万缓存输入 token（50% 折扣）",
+          "GPT-4o-mini：$0.15 / 百万输入 token，$0.60 / 百万输出 token",
+          "GPT-4o-mini：$0.075 / 百万缓存输入 token（50% 折扣）"
+        ]
+      }
+    },
+    {
+      "id": "o-series-pricing",
+      "heading": {
+        "en": "o-Series Reasoning Model Pricing",
+        "zh": "o 系列推理模型定价"
+      },
+      "paragraphs": {
+        "en": [
+          "The o-series models (o1, o3, o4-mini) are designed for complex reasoning tasks like math, coding, and scientific analysis. They use internal 'thinking' tokens that are billed as output tokens, which makes them significantly more expensive per call than GPT-4o models.",
+          "Because reasoning models generate extensive internal chain-of-thought before producing the final answer, the actual output token count can be much higher than the visible response length. Always test with real workloads to understand the actual cost."
+        ],
+        "zh": [
+          "o 系列模型（o1、o3、o4-mini）专为数学、编程和科学分析等复杂推理任务设计。它们使用内部「思考」token，按输出 token 价格计费，因此每次调用的成本明显高于 GPT-4o 系列模型。",
+          "由于推理模型在生成最终答案之前会产生大量内部思维链，实际输出 token 数量可能远超可见回复的长度。务必用真实工作负载测试以了解实际成本。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "o3: $10.00 / 1M input tokens, $40.00 / 1M output tokens",
+          "o3-mini: $1.10 / 1M input tokens, $4.40 / 1M output tokens",
+          "o4-mini: $1.10 / 1M input tokens, $4.40 / 1M output tokens",
+          "o-series cached input: 75% discount (e.g., o3-mini at $0.275 / 1M)"
+        ],
+        "zh": [
+          "o3：$10.00 / 百万输入 token，$40.00 / 百万输出 token",
+          "o3-mini：$1.10 / 百万输入 token，$4.40 / 百万输出 token",
+          "o4-mini：$1.10 / 百万输入 token，$4.40 / 百万输出 token",
+          "o 系列缓存输入：75% 折扣（如 o3-mini 为 $0.275 / 百万）"
+        ]
+      }
+    },
+    {
+      "id": "cached-input-discount",
+      "heading": {
+        "en": "Cached Input Token Discount",
+        "zh": "缓存输入 token 折扣"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenAI offers prompt caching for repeated prefixes. If your API requests share the same leading prompt (e.g., system instructions, few-shot examples), the cached portion is billed at a 50% discount for GPT-4o models and 75% for o-series models.",
+          "Caching is automatic — you don't need to configure anything. The cache typically persists for 5-10 minutes of inactivity, and the minimum cacheable prefix is 1,024 tokens. For applications with long system prompts, caching can significantly reduce costs."
+        ],
+        "zh": [
+          "OpenAI 为重复前缀提供提示缓存。如果你的 API 请求共享相同的前缀提示（如系统指令、few-shot 示例），缓存部分按 GPT-4o 模型 50% 折扣、o 系列模型 75% 折扣计费。",
+          "缓存是自动的——无需任何配置。缓存在 5-10 分钟不活动后通常失效，最小可缓存前缀为 1,024 token。对于有长系统提示的应用，缓存可以显著降低成本。"
+        ]
+      }
+    },
+    {
+      "id": "batch-api-discount",
+      "heading": {
+        "en": "Batch API (50% Discount)",
+        "zh": "Batch API（50% 折扣）"
+      },
+      "paragraphs": {
+        "en": [
+          "If your use case doesn't require real-time responses, the Batch API offers a 50% discount on all models. You submit a batch of requests (up to 50,000 per file), and OpenAI processes them within 24 hours (typically much faster).",
+          "Batch API is ideal for bulk processing tasks like content classification, document summarization, data enrichment, and evaluation runs. The request format is identical to the standard API — you only need to wrap your requests in a JSONL file and submit it via the batch endpoint."
+        ],
+        "zh": [
+          "如果你的场景不需要实时响应，Batch API 在所有模型上提供 50% 折扣。你提交一批请求（每个文件最多 50,000 条），OpenAI 在 24 小时内处理完成（通常更快）。",
+          "Batch API 非常适合批量处理任务，如内容分类、文档摘要、数据富化和评估运行。请求格式与标准 API 完全相同——只需将请求包装在 JSONL 文件中，通过 batch 端点提交即可。"
+        ]
+      }
+    },
+    {
+      "id": "estimate-costs",
+      "heading": {
+        "en": "How to Estimate Your Costs",
+        "zh": "如何估算成本"
+      },
+      "paragraphs": {
+        "en": [
+          "To estimate your monthly API cost, multiply your expected input tokens per request by the input price, plus the expected output tokens by the output price, then multiply by the number of requests per month.",
+          "For example, using GPT-4o-mini with an average of 500 input tokens and 200 output tokens per call, at 10,000 calls per month: (500 × $0.15 + 200 × $0.60) / 1,000,000 × 10,000 = $1.95/month. This makes GPT-4o-mini extremely affordable for most applications.",
+          "For reasoning models, be extra careful with estimates. A complex coding question on o3 might generate 5,000+ hidden reasoning tokens, making a single call cost $0.20+ instead of the $0.01 you might expect from the visible output alone."
+        ],
+        "zh": [
+          "要估算月度 API 成本，将每次请求的预期输入 token 数乘以输入价格，加上预期输出 token 数乘以输出价格，再乘以每月请求次数。",
+          "例如，使用 GPT-4o-mini，平均每次调用 500 输入 token 和 200 输出 token，每月 10,000 次调用：(500 × $0.15 + 200 × $0.60) / 1,000,000 × 10,000 = $1.95/月。这使得 GPT-4o-mini 对大多数应用来说非常实惠。",
+          "对于推理模型，估算时要格外小心。o3 上一个复杂的编程问题可能生成 5,000+ 隐藏推理 token，使单次调用成本达到 $0.20+，而不是你仅从可见输出预期的 $0.01。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "# Cost estimation example for GPT-4o-mini\ninput_tokens_per_call = 500\noutput_tokens_per_call = 200\ncalls_per_month = 10_000\n\ninput_price = 0.15  # per 1M tokens\noutput_price = 0.60  # per 1M tokens\n\nmonthly_cost = (\n    input_tokens_per_call * input_price\n    + output_tokens_per_call * output_price\n) / 1_000_000 * calls_per_month\n\nprint(f\"Estimated monthly cost: ${monthly_cost:.2f}\")\n# Output: Estimated monthly cost: $1.95",
+          "caption": {
+            "en": "Python script to estimate monthly OpenAI API costs",
+            "zh": "估算 OpenAI API 月度成本的 Python 脚本"
+          }
+        }
+      ]
+    },
+    {
+      "id": "free-credits",
+      "heading": {
+        "en": "Free Credits & Trial",
+        "zh": "免费额度和试用"
+      },
+      "paragraphs": {
+        "en": [
+          "New OpenAI accounts may receive approximately $5 in trial credits. These credits expire a few months after account creation and are intended for testing the API before committing to paid usage.",
+          "There is no permanent free tier for the OpenAI API. Once trial credits are exhausted or expired, you must add funds to continue using the API. Set up billing alerts to avoid unexpected charges."
+        ],
+        "zh": [
+          "新注册的 OpenAI 账号可能会获得约 $5 的试用额度。这些额度在创建账号后几个月内过期，用于在正式付费前测试 API。",
+          "OpenAI API 没有永久免费层。试用额度用完或过期后，必须充值才能继续使用 API。建议设置计费提醒以避免意外支出。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Which OpenAI model is the cheapest?",
+        "zh": "哪个 OpenAI 模型最便宜？"
+      },
+      "answer": {
+        "en": "GPT-4o-mini is the most affordable model in OpenAI's lineup at $0.15/1M input and $0.60/1M output tokens. For even lower costs, use the Batch API to get an additional 50% discount, bringing it down to $0.075/1M input and $0.30/1M output.",
+        "zh": "GPT-4o-mini 是 OpenAI 产品线中最实惠的模型，输入 $0.15/百万、输出 $0.60/百万 token。要进一步降低成本，可以使用 Batch API 获得额外 50% 折扣，降至输入 $0.075/百万、输出 $0.30/百万。"
+      }
+    },
+    {
+      "question": {
+        "en": "Why are reasoning models (o-series) so expensive?",
+        "zh": "推理模型（o 系列）为什么这么贵？"
+      },
+      "answer": {
+        "en": "Reasoning models generate internal chain-of-thought tokens before producing the visible answer. These hidden tokens are billed as output tokens, which can be 5-20x the length of the final response. This is the cost of deeper reasoning — o-series models are designed for tasks where accuracy matters more than cost.",
+        "zh": "推理模型在生成可见答案之前会产生内部思维链 token。这些隐藏 token 按输出 token 价格计费，长度可能是最终回复的 5-20 倍。这是更深推理的代价——o 系列模型专为准确度比成本更重要的任务设计。"
+      }
+    },
+    {
+      "question": {
+        "en": "How can I reduce my OpenAI API costs?",
+        "zh": "如何降低 OpenAI API 成本？"
+      },
+      "answer": {
+        "en": "Use these strategies: (1) Switch to GPT-4o-mini for tasks that don't require GPT-4o-level intelligence. (2) Enable prompt caching by keeping system prompts consistent. (3) Use the Batch API for non-real-time workloads to get 50% off. (4) Set max_tokens limits to prevent runaway responses. (5) Cache API responses on your side for identical queries.",
+        "zh": "可以使用以下策略：(1) 不需要 GPT-4o 级别智能的任务切换到 GPT-4o-mini。(2) 保持系统提示一致以启用提示缓存。(3) 非实时任务使用 Batch API 获得 50% 折扣。(4) 设置 max_tokens 限制防止回复失控。(5) 对相同查询在应用侧缓存 API 响应。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are OpenAI API prices the same worldwide?",
+        "zh": "OpenAI API 全球定价一样吗？"
+      },
+      "answer": {
+        "en": "Yes, OpenAI API prices are the same globally and are charged in USD. However, your bank may charge foreign transaction fees or currency conversion fees depending on your card and country.",
+        "zh": "是的，OpenAI API 全球定价一致，以美元计费。但根据你的银行卡和所在国家，银行可能会收取跨境交易费或货币转换费。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does OpenAI charge for failed API requests?",
+        "zh": "OpenAI 会为失败的 API 请求收费吗？"
+      },
+      "answer": {
+        "en": "You are not charged for requests that fail due to server errors (5xx). However, you are charged for requests that fail due to client errors (4xx, like invalid parameters) if the model already processed the input tokens. Rate-limited requests (429) are not billed.",
+        "zh": "服务器错误（5xx）导致的失败请求不收费。但客户端错误（4xx，如参数无效）导致的失败，如果模型已处理了输入 token，则会收费。限流请求（429）不收费。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI API Pricing",
+      "url": "https://openai.com/api/pricing/",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI Tokenizer",
+      "url": "https://platform.openai.com/tokenizer",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI Batch API Documentation",
+      "url": "https://platform.openai.com/docs/guides/batch",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "OpenAI API Pricing Explained (2026 Guide) | Get Model Key",
+      "zh": "OpenAI API 定价详解（2026 指南）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to OpenAI API pricing: GPT-4o and o-series model rates, token billing, cached input discounts, Batch API savings, and cost estimation tips.",
+      "zh": "OpenAI API 定价完整指南：GPT-4o 和 o 系列模型价格、token 计费、缓存折扣、Batch API 节省及成本估算技巧。"
+    }
+  }
+}

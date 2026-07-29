@@ -1,5 +1,7 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Card from '@/components/ui/Card';
+import { getSiteConfig } from '@/lib/providers';
+import { baseUrl } from '@/lib/root-metadata';
 
 export const metadata: Metadata = {
   title: '服务条款',
@@ -12,9 +14,23 @@ export const metadata: Metadata = {
       'x-default': '/terms/',
     },
   },
+  openGraph: {
+    type: 'article',
+    url: `${baseUrl}/zh/terms/`,
+    title: '服务条款',
+    description: '阅读 Get Model Key 的服务条款，了解目录服务范围、免责声明与使用边界。',
+    siteName: 'Get Model Key',
+    locale: 'zh_CN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '服务条款',
+    description: '阅读 Get Model Key 的服务条款，了解目录服务范围、免责声明与使用边界。',
+  },
 };
 
-export default function ZhTermsPage() {
+export default async function ZhTermsPage() {
+  const siteConfig = await getSiteConfig();
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
       <main className="container-custom py-8 md:py-12 lg:py-16">
@@ -27,7 +43,7 @@ export default function ZhTermsPage() {
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-warning-500/10">
-                <svg className="h-6 w-6 text-warning-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-warning-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
@@ -109,8 +125,8 @@ export default function ZhTermsPage() {
           <ul>
             <li>
               邮箱：
-              <a href="mailto:heizishuaiqi@gmail.com" className="text-brand-300 hover:text-brand-400">
-                heizishuaiqi@gmail.com
+              <a href={`mailto:${siteConfig.contactEmail}`} className="text-brand-300 hover:text-brand-400">
+                {siteConfig.contactEmail}
               </a>
             </li>
             <li>
@@ -128,7 +144,7 @@ export default function ZhTermsPage() {
             <div className="grid gap-6 sm:grid-cols-3">
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
@@ -137,7 +153,7 @@ export default function ZhTermsPage() {
               </div>
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
@@ -146,7 +162,7 @@ export default function ZhTermsPage() {
               </div>
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>

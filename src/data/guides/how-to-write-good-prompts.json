@@ -1,0 +1,240 @@
+{
+  "slug": "how-to-write-good-prompts",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "How to Write Good Prompts: A Practical Guide (2026)",
+    "zh": "如何写出好的 Prompt：实用指南（2026）"
+  },
+  "excerpt": {
+    "en": "Learn the three key elements of a good prompt, see good vs bad examples, master advanced techniques like few-shot and chain-of-thought, and use ready-made prompt templates for writing, coding, analysis, and translation.",
+    "zh": "学习好 Prompt 的三个关键要素，看好坏对比示例，掌握少样本和思维链等高级技巧，并使用写作、编程、分析、翻译的现成 Prompt 模板。"
+  },
+  "tags": ["prompt engineering", "prompt", "tutorial", "basics"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "three-elements",
+      "heading": {
+        "en": "The Three Elements of a Good Prompt: Context, Role, Task",
+        "zh": "好 Prompt 的三要素：上下文、角色、任务"
+      },
+      "paragraphs": {
+        "en": [
+          "Every effective prompt contains three core elements: role, task, and context. Mastering these three is the difference between getting mediocre answers and getting exactly what you need.",
+          "Role tells the AI who to act as. This sets the perspective, expertise level, and tone. For example, \"You are a senior Python developer\" produces very different output than \"You are a beginner learning Python.\" The role primes the model to draw on relevant patterns from its training data.",
+          "Task describes what you want the AI to do. Be specific about the output format, length, and scope. \"Write a function\" is vague; \"Write a Python function that takes a list of integers and returns the median value, with error handling for empty lists\" is specific and actionable.",
+          "Context provides the background the AI needs. This includes your audience, constraints, prior work, and any reference material. Without context, the AI guesses — and it often guesses wrong. The more context you provide, the more accurate and useful the response."
+        ],
+        "zh": [
+          "每个有效的 Prompt 都包含三个核心要素：角色、任务和上下文。掌握这三点，是从获得平庸答案到获得精准所需结果的关键。",
+          "角色告诉 AI 扮演什么身份。这设定了视角、专业水平和语气。例如，「你是一位资深 Python 开发者」和「你是一个正在学 Python 的新手」会产生非常不同的输出。角色引导模型从训练数据中提取相关模式。",
+          "任务描述你希望 AI 做什么。要具体说明输出格式、长度和范围。「写一个函数」太含糊；「写一个 Python 函数，接收整数列表并返回中位数，包含空列表的错误处理」则具体且可操作。",
+          "上下文提供 AI 所需的背景信息。包括你的受众、约束条件、之前的工作和任何参考材料。没有上下文，AI 只能猜测——而且经常猜错。你提供的上下文越多，回复就越准确有用。"
+        ]
+      }
+    },
+    {
+      "id": "good-vs-bad",
+      "heading": {
+        "en": "Good Prompt vs Bad Prompt: Side-by-Side Examples",
+        "zh": "好 Prompt vs 坏 Prompt：对比示例"
+      },
+      "paragraphs": {
+        "en": [
+          "The best way to understand prompt quality is to see good and bad versions side by side. Here are three common scenarios:"
+        ],
+        "zh": [
+          "理解 Prompt 质量最好的方式是看好坏版本并排对比。以下是三个常见场景："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "text",
+          "code": "--- BAD ---\nWrite about AI.\n\n--- GOOD ---\nRole: You are a technology journalist writing for a general audience.\nTask: Write a 300-word article explaining how AI chatbots work, using a simple analogy.\nContext: The readers have no technical background. Avoid jargon. Use a restaurant analogy to explain how language models predict the next word.\n\n--- BAD ---\nFix my code.\n\n--- GOOD ---\nRole: You are a Python debugging expert.\nTask: Find and fix the bug in this function, then explain what was wrong.\nContext: This function should return the factorial of n, but it returns incorrect results for n > 5.\n\n```python\ndef factorial(n):\n    result = 1\n    for i in range(1, n):\n        result *= i\n    return result\n```\n\n--- BAD ---\nTranslate this.\n\n--- GOOD ---\nRole: You are a professional translator specializing in tech documentation.\nTask: Translate the following English text to Chinese, keeping technical terms in English where appropriate.\nContext: This is for a developer-facing API documentation page. The tone should be professional and concise.\n\nText: \"The API key must be included in the Authorization header as a Bearer token.\"",
+          "caption": {
+            "en": "Three pairs of bad vs good prompts showing how adding role, task, and context improves results",
+            "zh": "三组坏 vs 好 Prompt 对比，展示添加角色、任务和上下文如何改善结果"
+          }
+        }
+      ]
+    },
+    {
+      "id": "advanced-techniques",
+      "heading": {
+        "en": "Advanced Techniques: Few-Shot, Chain-of-Thought, Role-Playing",
+        "zh": "高级技巧：少样本、思维链、角色扮演"
+      },
+      "paragraphs": {
+        "en": [
+          "Once you've mastered the basics, these advanced techniques can dramatically improve results for complex tasks.",
+          "Few-shot prompting means giving the AI examples of the input-output pattern you want before asking it to perform the task. This is especially powerful for classification, formatting, or style-matching tasks. Instead of describing the format, you show it.",
+          "Chain-of-thought (CoT) prompting asks the AI to reason step by step before giving the final answer. This significantly improves performance on math, logic, and multi-step reasoning problems. Simply adding \"Let's think step by step\" can boost accuracy, but explicitly asking the AI to show its reasoning process works even better.",
+          "Role-playing extends the role element by giving the AI a persona with specific expertise, constraints, and even a conversational style. For example, \"You are a strict code reviewer who always points out potential security issues\" produces more thorough reviews than a generic prompt."
+        ],
+        "zh": [
+          "掌握了基础之后，这些高级技巧可以大幅提升复杂任务的效果。",
+          "少样本提示是指在让 AI 执行任务之前，先给它几个输入输出的示例模式。这对分类、格式化或风格匹配任务特别有效。你不是描述格式，而是直接展示。",
+          "思维链（CoT）提示要求 AI 在给出最终答案前逐步推理。这能显著提升数学、逻辑和多步推理问题的表现。仅仅加上「让我们一步一步思考」就能提高准确率，但明确要求 AI 展示推理过程效果更好。",
+          "角色扮演通过赋予 AI 一个具有特定专业能力、约束甚至对话风格的个人设定来扩展角色要素。例如，「你是一位严格的代码审查者，总是指出潜在的安全问题」比普通 Prompt 能产生更全面的审查。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "text",
+          "code": "--- FEW-SHOT EXAMPLE ---\nClassify the sentiment of each review:\n\nReview: \"This product is amazing!\" → Sentiment: Positive\nReview: \"Worst purchase ever.\" → Sentiment: Negative\nReview: \"It's okay, nothing special.\" → Sentiment: Neutral\n\nReview: \"Battery life is terrible but the screen is great.\" → Sentiment:\n\n--- CHAIN-OF-THOUGHT EXAMPLE ---\nQuestion: A store sells apples at $2 each. If you buy 5, you get 10% off your total. How much does buying 5 apples cost?\n\nLet's think step by step:\n1. Regular price for 5 apples: 5 × $2 = $10\n2. Discount: 10% of $10 = $1\n3. Final price: $10 - $1 = $9\n\nAnswer: $9",
+          "caption": {
+            "en": "Examples of few-shot prompting and chain-of-thought reasoning",
+            "zh": "少样本提示和思维链推理的示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "heading": {
+        "en": "Prompt Templates for Common Scenarios",
+        "zh": "常见场景的 Prompt 模板"
+      },
+      "paragraphs": {
+        "en": [
+          "Here are ready-to-use templates for four common tasks. Replace the bracketed placeholders with your specific content."
+        ],
+        "zh": [
+          "以下是四个常见任务的即用模板。将括号中的占位符替换为你的具体内容。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Writing: Role (professional writer) + Task (write [type] for [audience]) + Context (tone, length, key points to cover)",
+          "Coding: Role (expert [language] developer) + Task (write/debug/refactor [function description]) + Context (existing code, error messages, constraints)",
+          "Analysis: Role (data analyst) + Task (analyze [data/text] and provide insights) + Context (what you want to find, output format, audience)",
+          "Translation: Role (professional translator) + Task (translate [text] from [source] to [target]) + Context (domain, tone, terms to keep in original language)"
+        ],
+        "zh": [
+          "写作：角色（专业写手）+ 任务（为 [受众] 写 [类型]）+ 上下文（语气、长度、要覆盖的要点）",
+          "编程：角色（[语言] 专家级开发者）+ 任务（编写/调试/重构 [功能描述]）+ 上下文（现有代码、错误信息、约束条件）",
+          "分析：角色（数据分析师）+ 任务（分析 [数据/文本] 并提供洞察）+ 上下文（你想发现什么、输出格式、受众）",
+          "翻译：角色（专业翻译）+ 任务（将 [文本] 从 [源语言] 翻译为 [目标语言]）+ 上下文（领域、语气、需保留原文的术语）"
+        ]
+      }
+    },
+    {
+      "id": "common-mistakes",
+      "heading": {
+        "en": "Common Prompt Mistakes to Avoid",
+        "zh": "常见 Prompt 错误及如何避免"
+      },
+      "paragraphs": {
+        "en": [
+          "Even with the right framework, certain mistakes consistently produce poor results. Here are the most common ones:",
+          "Being too vague. \"Write something about AI\" gives the AI no direction. Always specify the format, length, audience, and angle. Vague prompts produce vague answers.",
+          "Overloading the prompt. Cramming multiple unrelated tasks into one prompt confuses the AI. If you need several things done, break them into separate prompts or use a multi-step approach where each step builds on the previous output.",
+          "Not iterating. Your first prompt rarely produces the perfect result. Treat prompt writing as a conversation — if the output isn't right, refine your prompt based on what went wrong and try again. The best prompt engineers iterate 3-5 times before settling on a final version.",
+          "Ignoring model differences. A prompt that works great with GPT-4o might perform poorly with a smaller model. Different models have different strengths — adjust your prompt complexity based on the model you're using."
+        ],
+        "zh": [
+          "即使有了正确的框架，某些错误仍会持续产生差的结果。以下是最常见的错误：",
+          "太含糊。「写点关于 AI 的东西」没有给 AI 任何方向。务必指定格式、长度、受众和角度。含糊的 Prompt 产生含糊的答案。",
+          "Prompt 过载。把多个不相关的任务塞进一个 Prompt 会让 AI 困惑。如果你需要做多件事，拆分成单独的 Prompt，或用多步骤方式让每步基于前一步的输出。",
+          "不迭代。你的第一个 Prompt 很少能产生完美结果。把 Prompt 写作当作对话——如果输出不对，根据问题修改 Prompt 再试。最好的 Prompt 工程师会迭代 3-5 次才确定最终版本。",
+          "忽视模型差异。在 GPT-4o 上效果很好的 Prompt 可能在较小模型上表现很差。不同模型有不同优势——根据你使用的模型调整 Prompt 的复杂度。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "What makes a good AI prompt?",
+        "zh": "什么是好的 AI Prompt？"
+      },
+      "answer": {
+        "en": "A good prompt has three elements: a clear role (who the AI should act as), a specific task (what to do, including format and length), and relevant context (audience, constraints, background). Being specific and providing examples always improves results.",
+        "zh": "好的 Prompt 有三个要素：清晰的角色（AI 应该扮演什么身份）、具体的任务（做什么，包括格式和长度）和相关的上下文（受众、约束、背景）。越具体、提供示例，效果越好。"
+      }
+    },
+    {
+      "question": {
+        "en": "How long should my prompt be?",
+        "zh": "Prompt 应该写多长？"
+      },
+      "answer": {
+        "en": "There's no fixed length — it depends on the task complexity. A simple question might need one sentence. A complex coding task might need several paragraphs of context. The key is including all necessary information without adding irrelevant details. Start concise and add detail if the output isn't what you want.",
+        "zh": "没有固定长度——取决于任务复杂度。简单问题可能只需一句话。复杂编程任务可能需要几段上下文。关键是包含所有必要信息，不加无关细节。先简洁开始，如果输出不符合预期再补充细节。"
+      }
+    },
+    {
+      "question": {
+        "en": "What is chain-of-thought prompting?",
+        "zh": "什么是思维链提示？"
+      },
+      "answer": {
+        "en": "Chain-of-thought (CoT) prompting asks the AI to reason through a problem step by step before giving the final answer. Instead of jumping to a conclusion, the AI shows its work. This significantly improves accuracy on math, logic, and multi-step reasoning tasks. You can trigger it by adding \"Let's think step by step\" or explicitly asking the AI to show its reasoning.",
+        "zh": "思维链（CoT）提示要求 AI 在给出最终答案前逐步推理。AI 不是直接跳到结论，而是展示推导过程。这能显著提升数学、逻辑和多步推理任务的准确率。你可以通过加「让我们一步一步思考」或明确要求 AI 展示推理来触发。"
+      }
+    },
+    {
+      "question": {
+        "en": "Should I use the same prompt for different AI models?",
+        "zh": "不同 AI 模型应该用同一个 Prompt 吗？"
+      },
+      "answer": {
+        "en": "Not always. While the core principles (role, task, context) apply to all models, different models respond differently to prompt styles. More capable models like GPT-4o and Claude can handle complex, multi-instruction prompts. Smaller models may need simpler, more focused prompts. Test your prompt on the specific model you plan to use and adjust as needed.",
+        "zh": "不一定。虽然核心原则（角色、任务、上下文）适用于所有模型，但不同模型对 Prompt 风格的响应不同。GPT-4o 和 Claude 等能力更强的模型可以处理复杂的多指令 Prompt。较小的模型可能需要更简单、更聚焦的 Prompt。在实际使用的模型上测试你的 Prompt，并按需调整。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I save and reuse prompts?",
+        "zh": "我可以保存和复用 Prompt 吗？"
+      },
+      "answer": {
+        "en": "Yes, and you should. Keeping a library of tested prompts for recurring tasks saves time and ensures consistent results. Many teams maintain shared prompt libraries. When reusing, adjust the context section for each specific use case while keeping the role and task structure intact.",
+        "zh": "可以，而且应该这样做。为重复任务维护一个经过测试的 Prompt 库可以节省时间并确保结果一致。很多团队会维护共享的 Prompt 库。复用时，为每个具体场景调整上下文部分，同时保持角色和任务结构不变。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI Prompt Engineering Guide",
+      "url": "https://platform.openai.com/docs/guides/prompt-engineering",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic Prompt Engineering Overview",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Google Gemini Prompting Strategies",
+      "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+      "site": "Google",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Chain-of-Thought Prompting Paper",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "site": "arXiv",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Write Good Prompts: A Practical Guide (2026) | Get Model Key",
+      "zh": "如何写出好的 Prompt：实用指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn how to write effective AI prompts: the three key elements, good vs bad examples, advanced techniques like few-shot and chain-of-thought, and templates for writing, coding, analysis, and translation.",
+      "zh": "学习如何编写有效的 AI Prompt：三个关键要素、好坏对比示例、少样本和思维链等高级技巧，以及写作、编程、分析、翻译的模板。"
+    }
+  }
+}

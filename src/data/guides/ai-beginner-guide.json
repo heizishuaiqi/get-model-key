@@ -1,0 +1,307 @@
+{
+  "slug": "ai-beginner-guide",
+  "status": "published",
+  "topic": "basics",
+  "pillar": true,
+  "cluster": "ai-basics",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 11,
+  "title": {
+    "en": "AI Beginner's Guide: Everything You Need to Know (2026)",
+    "zh": "AI 入门完全指南：你需要知道的一切（2026）"
+  },
+  "excerpt": {
+    "en": "A complete beginner's guide to AI chatbots, large language models, prompts, hallucinations, and how to start using AI APIs. Covers what AI is, how it works, and practical tips for getting started.",
+    "zh": "面向新手的 AI 完整入门指南，涵盖 AI 聊天机器人、大语言模型、Prompt、AI 幻觉以及如何开始使用 AI API。介绍 AI 是什么、如何工作，以及实用的上手技巧。"
+  },
+  "tags": ["ai beginner", "prompt", "chatbot", "hallucination", "tutorial"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "what-is-ai-chatbot",
+      "heading": {
+        "en": "What is an AI Chatbot?",
+        "zh": "什么是 AI 聊天机器人？"
+      },
+      "paragraphs": {
+        "en": [
+          "An AI chatbot is a software application that uses a large language model (LLM) to understand and generate human-like text. When you type a message to ChatGPT, Claude, or Gemini, the chatbot reads your input, predicts the most likely useful response, and generates it word by word.",
+          "Unlike early rule-based chatbots that followed rigid scripts, modern AI chatbots can handle open-ended questions, write code, summarize documents, translate languages, and carry on multi-turn conversations. They are powered by large language models trained on massive amounts of text data.",
+          "Popular AI chatbots in 2026 include ChatGPT (by OpenAI), Claude (by Anthropic), Gemini (by Google), and DeepSeek. Each has different strengths — for example, Claude is known for long-context reasoning, while Gemini integrates deeply with Google services."
+        ],
+        "zh": [
+          "AI 聊天机器人是一种利用大语言模型（LLM）来理解和生成类人文本的软件应用。当你向 ChatGPT、Claude 或 Gemini 发送消息时，聊天机器人会读取你的输入，预测最可能有用的回复，然后逐字生成。",
+          "与早期遵循固定脚本的规则型聊天机器人不同，现代 AI 聊天机器人可以处理开放性问题、写代码、总结文档、翻译语言，并进行多轮对话。它们由在海量文本数据上训练的大语言模型驱动。",
+          "2026 年流行的 AI 聊天机器人包括 ChatGPT（OpenAI）、Claude（Anthropic）、Gemini（Google）和 DeepSeek。它们各有优势——例如 Claude 以长上下文推理著称，而 Gemini 与 Google 服务深度整合。"
+        ]
+      }
+    },
+    {
+      "id": "how-ai-works",
+      "heading": {
+        "en": "How AI Works: Large Language Models Explained",
+        "zh": "AI 如何工作：大语言模型简介"
+      },
+      "paragraphs": {
+        "en": [
+          "A large language model (LLM) is a neural network trained on billions of words of text. It learns patterns in language — grammar, facts, reasoning steps, and style — by predicting the next word in a sequence. This simple-sounding task, repeated trillions of times during training, produces a model that can write essays, answer questions, and even write code.",
+          "When you send a prompt to an AI chatbot, the model converts your text into numbers (called tokens), processes them through its neural network, and generates a response one token at a time. Each token is chosen based on the probability distribution learned during training, which is why the same prompt can produce slightly different answers each time.",
+          "You don't need to understand the math to use AI effectively. The key takeaway is: the model doesn't \"think\" like a human or have true understanding — it's doing sophisticated pattern matching based on its training data. This is why AI can sometimes produce confident-sounding but incorrect answers, a phenomenon known as AI hallucination (more on that below)."
+        ],
+        "zh": [
+          "大语言模型（LLM）是在数十亿词的文本上训练的神经网络。它通过预测序列中的下一个词来学习语言模式——语法、事实、推理步骤和风格。这个听起来简单的任务，在训练期间重复了数万亿次，最终产生了一个能写文章、回答问题甚至写代码的模型。",
+          "当你向 AI 聊天机器人发送 Prompt 时，模型会将你的文本转换为数字（称为 token），通过神经网络处理，然后逐个 token 生成回复。每个 token 的选择基于训练时学到的概率分布，这就是为什么同一个 Prompt 每次可能产生略有不同的回答。",
+          "你不需要理解数学就能有效使用 AI。关键要点是：模型不会像人类一样「思考」或具有真正的理解——它在做基于训练数据的复杂模式匹配。这就是为什么 AI 有时会产生听起来自信但错误的回答，这种现象被称为 AI 幻觉（下文详述）。"
+        ]
+      }
+    },
+    {
+      "id": "what-is-prompt",
+      "heading": {
+        "en": "What is a Prompt and How to Write a Good One",
+        "zh": "什么是 Prompt 以及如何写好 Prompt"
+      },
+      "paragraphs": {
+        "en": [
+          "A prompt is the text you give to an AI model to get a response. It's how you communicate with AI — you type a question, instruction, or piece of text, and the AI generates a relevant response. Writing good prompts is the single most important skill for getting useful results from AI.",
+          "A well-structured prompt typically contains three elements: a role (who the AI should act as), a task (what you want it to do), and context (background information). For example, instead of asking \"Write a blog post about AI,\" a better prompt would be: \"You are a technology blogger. Write a 500-word blog post explaining AI hallucinations to beginners, using simple analogies.\"",
+          "If you want to dive deeper into prompt writing, our detailed guide on how to write good prompts covers advanced techniques like few-shot examples, chain-of-thought reasoning, and prompt templates for different tasks. You can also start with our primer on what a prompt is if you're completely new to the concept."
+        ],
+        "zh": [
+          "Prompt 是你给 AI 模型的文本输入，用来获取回复。这是你与 AI 交流的方式——你输入一个问题、指令或一段文本，AI 生成相关的回复。写好 Prompt 是从 AI 获得有用结果的最重要技能。",
+          "一个结构良好的 Prompt 通常包含三个要素：角色（AI 应该扮演什么身份）、任务（你希望它做什么）和上下文（背景信息）。例如，与其问「写一篇关于 AI 的博客」，不如这样写：「你是一位科技博主。写一篇 500 字的博客，用简单的类比向新手解释 AI 幻觉。」",
+          "如果你想深入了解 Prompt 写作，我们关于如何写出好 Prompt 的详细指南涵盖了少样本示例、思维链推理和不同任务的 Prompt 模板等高级技巧。如果你完全是新手，也可以先从什么是 Prompt 这篇入门文章开始。"
+        ]
+      }
+    },
+    {
+      "id": "ai-hallucinations",
+      "heading": {
+        "en": "What are AI Hallucinations and How to Avoid Them",
+        "zh": "什么是 AI 幻觉以及如何避免"
+      },
+      "paragraphs": {
+        "en": [
+          "AI hallucination is when a language model generates text that sounds plausible and confident but is factually wrong. The model doesn't know it's wrong — it's simply producing text that statistically looks like a correct answer based on its training data.",
+          "Common examples include inventing fake citations, fabricating statistics, making up API methods that don't exist, or confidently stating incorrect historical facts. Hallucinations are not bugs in the traditional sense — they're an inherent property of how language models work.",
+          "To reduce hallucinations, you can: verify important facts independently, ask the AI to cite its sources (and check them), use retrieval-augmented generation (RAG) to ground answers in real documents, and phrase your prompt to discourage guessing (e.g., \"If you're not sure, say you don't know\"). For a thorough understanding, read our complete guide on what AI hallucinations are and how they work."
+        ],
+        "zh": [
+          "AI 幻觉是指语言模型生成的文本听起来合理且自信，但事实上是错误的。模型不知道自己错了——它只是根据训练数据生成在统计上看起来像正确答案的文本。",
+          "常见例子包括编造虚假引用、捏造统计数据、虚构不存在的 API 方法，或自信地陈述错误的历史事实。幻觉不是传统意义上的 bug——它是语言模型工作方式的固有特性。",
+          "要减少幻觉，你可以：独立验证重要事实、要求 AI 引用来源（并检查它们）、使用检索增强生成（RAG）将回答基于真实文档，以及在 Prompt 中明确要求不要猜测（如「如果不确定，就说不知道」）。如需深入理解，请阅读我们关于什么是 AI 幻觉及其工作原理的完整指南。"
+        ]
+      }
+    },
+    {
+      "id": "ai-vs-search",
+      "heading": {
+        "en": "AI Chatbots vs Search Engines: What's the Difference?",
+        "zh": "AI 聊天机器人 vs 搜索引擎：有什么区别？"
+      },
+      "paragraphs": {
+        "en": [
+          "Search engines like Google retrieve and rank web pages that match your keywords. You get a list of links, and you click through to read the content yourself. AI chatbots, on the other hand, generate a direct answer by synthesizing information from their training data.",
+          "Each approach has trade-offs. Search engines give you original sources and the latest information, but require you to do the reading. AI chatbots save time by synthesizing answers, but may hallucinate or have outdated information. For complex, factual research, search engines are often more reliable. For creative tasks, brainstorming, and quick explanations, AI chatbots are more convenient.",
+          "The two technologies are increasingly converging. Google's AI Overviews (formerly SGE) and AI-powered search like Perplexity combine search and AI generation, giving you synthesized answers with source citations. Our detailed comparison of AI chatbots vs search engines breaks down the strengths and weaknesses of each approach across different use cases."
+        ],
+        "zh": [
+          "像 Google 这样的搜索引擎会检索和排序与你的关键词匹配的网页。你得到一个链接列表，然后点击进去自己阅读内容。而 AI 聊天机器人通过综合训练数据中的信息直接生成答案。",
+          "两种方式各有利弊。搜索引擎给你原始来源和最新信息，但需要你自己阅读。AI 聊天机器人通过综合答案节省时间，但可能产生幻觉或信息过时。对于复杂的、事实性的研究，搜索引擎通常更可靠。对于创意任务、头脑风暴和快速解释，AI 聊天机器人更方便。",
+          "这两种技术正在日益融合。Google 的 AI Overviews（原 SGE）和 Perplexity 等 AI 驱动的搜索结合了搜索和 AI 生成，为你提供带来源引用的综合答案。我们关于 AI 聊天机器人 vs 搜索引擎的详细对比分析了不同使用场景下两种方法各自的优缺点。"
+        ]
+      }
+    },
+    {
+      "id": "start-with-ai-api",
+      "heading": {
+        "en": "How to Start Using AI APIs from Scratch",
+        "zh": "如何从零开始使用 AI API"
+      },
+      "paragraphs": {
+        "en": [
+          "Using AI through an API (rather than a chat interface) lets you integrate AI into your own applications. The basic workflow is: sign up for a provider account, generate an API key, install the provider's SDK or use HTTP requests, and start making calls.",
+          "Most providers follow a similar pattern. Here's a minimal example using the OpenAI SDK:"
+        ],
+        "zh": [
+          "通过 API（而非聊天界面）使用 AI 可以让你将 AI 集成到自己的应用中。基本流程是：注册供应商账户、生成 API Key、安装供应商的 SDK 或使用 HTTP 请求，然后开始调用。",
+          "大多数供应商遵循类似的模式。以下是使用 OpenAI SDK 的最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(api_key=\"sk-your-api-key-here\")\n\nresponse = client.chat.completions.create(\n    model=\"gpt-4o\",\n    messages=[\n        {\"role\": \"system\", \"content\": \"You are a helpful assistant.\"},\n        {\"role\": \"user\", \"content\": \"Explain what an API key is in one sentence.\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Minimal example: calling the OpenAI API with Python",
+            "zh": "最小示例：用 Python 调用 OpenAI API"
+          }
+        }
+      ]
+    },
+    {
+      "id": "getting-first-key",
+      "heading": {
+        "en": "Getting Your First API Key",
+        "zh": "获取你的第一个 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "An API key is a unique string that authenticates your requests to an AI provider. To get one, sign up at a provider's platform (e.g., platform.openai.com for OpenAI), navigate to the API keys section, and create a new key. Keep it secret — never commit it to version control or expose it in frontend code.",
+          "Most providers charge based on usage (typically per token). Some, like Google AI Studio, offer free tiers for development. Start with small experiments to understand pricing before scaling up. For a complete walkthrough, read our beginner's guide on what an API key is."
+        ],
+        "zh": [
+          "API Key 是用于验证你对 AI 供应商请求的唯一字符串。要获取 Key，在供应商平台（如 OpenAI 的 platform.openai.com）注册，进入 API Key 页面，创建新 Key。务必保密——不要提交到版本控制或暴露在前端代码中。",
+          "大多数供应商按用量收费（通常按 token 计费）。有些（如 Google AI Studio）提供开发用的免费额度。先做小实验了解定价，再逐步扩大规模。如需完整指引，请阅读我们关于什么是 API Key 的新手指南。"
+        ]
+      }
+    },
+    {
+      "id": "choose-provider",
+      "heading": {
+        "en": "Choosing the Right AI Provider",
+        "zh": "选择合适的 AI 供应商"
+      },
+      "paragraphs": {
+        "en": [
+          "There's no single \"best\" AI model — the right choice depends on your use case, budget, and technical requirements. Here are the main options to consider:"
+        ],
+        "zh": [
+          "没有唯一「最好」的 AI 模型——正确的选择取决于你的使用场景、预算和技术需求。以下是需要考虑的主要选项："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "OpenAI (GPT-4o, o-series) — best all-around capability, large ecosystem, moderate pricing",
+          "Anthropic (Claude) — excellent for long documents and nuanced reasoning, strong safety focus",
+          "Google (Gemini) — deep integration with Google Workspace, generous free tier for development",
+          "DeepSeek (V3, R1) — highly cost-effective, strong reasoning with R1, open-weight options available",
+          "OpenRouter — aggregated access to 100+ models through a single API, great for experimentation"
+        ],
+        "zh": [
+          "OpenAI（GPT-4o、o 系列）——综合能力最强，生态系统庞大，定价适中",
+          "Anthropic（Claude）——擅长处理长文档和细致推理，安全性强",
+          "Google（Gemini）——与 Google Workspace 深度整合，开发免费额度慷慨",
+          "DeepSeek（V3、R1）——性价比极高，R1 推理能力强，有开源权重选项",
+          "OpenRouter——通过单一 API 聚合访问 100+ 模型，适合实验探索"
+        ]
+      }
+    },
+    {
+      "id": "common-mistakes",
+      "heading": {
+        "en": "Common Beginner Mistakes to Avoid",
+        "zh": "新手常见错误及如何避免"
+      },
+      "paragraphs": {
+        "en": [
+          "When starting with AI, beginners often make a few common mistakes. First, trusting AI output without verification — always fact-check important information. Second, writing vague prompts — the more specific you are, the better the results. Third, ignoring token costs — API calls add up quickly, so monitor your usage.",
+          "Fourth, treating AI as a search engine — AI generates plausible-sounding answers, not necessarily true ones. Fifth, not iterating — if your first prompt doesn't give good results, refine it and try again. Prompt engineering is an iterative process."
+        ],
+        "zh": [
+          "刚开始使用 AI 时，新手常犯几个常见错误。第一，不经验证就信任 AI 输出——重要信息一定要核实。第二，写含糊的 Prompt——你越具体，结果越好。第三，忽视 token 成本——API 调用费用累积很快，要监控用量。",
+          "第四，把 AI 当搜索引擎用——AI 生成的是听起来合理的答案，不一定是真实的。第五，不迭代——如果第一个 Prompt 效果不好，修改后再试。Prompt 工程是一个迭代过程。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Do I need to know how to code to use AI?",
+        "zh": "使用 AI 需要会编程吗？"
+      },
+      "answer": {
+        "en": "No. You can use AI chatbots like ChatGPT, Claude, or Gemini through their web interfaces without any coding. You only need programming skills if you want to integrate AI into your own applications via API.",
+        "zh": "不需要。你可以通过 ChatGPT、Claude 或 Gemini 的网页界面使用 AI，完全不需要编程。只有当你想通过 API 将 AI 集成到自己的应用中时，才需要编程技能。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which AI chatbot is best for beginners?",
+        "zh": "哪个 AI 聊天机器人最适合新手？"
+      },
+      "answer": {
+        "en": "ChatGPT is the most popular starting point due to its intuitive interface and large community. Gemini is great if you already use Google services. Claude is excellent for long documents and careful reasoning. Try a few and see which feels most natural to you.",
+        "zh": "ChatGPT 因界面直观和社区庞大而成为最受欢迎的入门选择。如果你已经在用 Google 服务，Gemini 是很好的选择。Claude 在处理长文档和细致推理方面表现出色。多试几个，看看哪个最适合你。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is AI free to use?",
+        "zh": "AI 是免费的吗？"
+      },
+      "answer": {
+        "en": "Most AI chatbots offer free tiers with usage limits. ChatGPT, Claude, and Gemini all have free versions. For heavier usage or API access, you typically need a paid subscription or pay-per-use pricing. Google AI Studio offers a generous free tier for API development.",
+        "zh": "大多数 AI 聊天机器人提供带用量限制的免费版。ChatGPT、Claude 和 Gemini 都有免费版本。如果用量较大或需要 API 访问，通常需要付费订阅或按量付费。Google AI Studio 为 API 开发提供了慷慨的免费额度。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can AI replace search engines?",
+        "zh": "AI 能取代搜索引擎吗？"
+      },
+      "answer": {
+        "en": "Not entirely. AI chatbots are great for synthesized answers, creative tasks, and complex explanations. Search engines are better for finding specific websites, getting the latest news, and verifying original sources. The two are converging — tools like Perplexity and Google AI Overviews combine both approaches.",
+        "zh": "不能完全取代。AI 聊天机器人擅长综合答案、创意任务和复杂解释。搜索引擎更适合查找特定网站、获取最新新闻和验证原始来源。两者正在融合——像 Perplexity 和 Google AI Overviews 等工具结合了两种方式。"
+      }
+    },
+    {
+      "question": {
+        "en": "How much does it cost to use AI APIs?",
+        "zh": "使用 AI API 要花多少钱？"
+      },
+      "answer": {
+        "en": "Costs vary by provider and model. As of 2026, GPT-4o costs roughly $2.50-$10.00 per million tokens, Claude 3.5 Sonnet is around $3.00-$15.00, and DeepSeek V3 is much cheaper at about $0.27-$1.10. Most providers charge separately for input and output tokens. Start with free tiers and small experiments to understand your cost patterns.",
+        "zh": "费用因供应商和模型而异。截至 2026 年，GPT-4o 大约每百万 token $2.50-$10.00，Claude 3.5 Sonnet 约 $3.00-$15.00，DeepSeek V3 便宜得多，约 $0.27-$1.10。大多数供应商对输入和输出 token 分别收费。先从免费额度和小实验开始，了解你的成本模式。"
+      }
+    },
+    {
+      "question": {
+        "en": "What should I do if the AI gives a wrong answer?",
+        "zh": "如果 AI 给出错误答案怎么办？"
+      },
+      "answer": {
+        "en": "First, verify the answer through independent sources. If it's wrong, try refining your prompt — add more context, ask for citations, or explicitly tell the AI to say \"I don't know\" when uncertain. For critical tasks, always cross-check AI output with trusted sources.",
+        "zh": "首先，通过独立来源验证答案。如果确实错了，尝试优化你的 Prompt——增加更多上下文、要求引用来源，或明确告诉 AI 在不确定时说「我不知道」。对于关键任务，一定要用可信来源交叉验证 AI 的输出。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenAI API Documentation",
+      "url": "https://platform.openai.com/docs/overview",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic API Documentation",
+      "url": "https://docs.anthropic.com/en/api/getting-started",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "site": "Google",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "DeepSeek API Documentation",
+      "url": "https://api-docs.deepseek.com/",
+      "site": "DeepSeek",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "AI Beginner's Guide: Everything You Need to Know (2026) | Get Model Key",
+      "zh": "AI 入门完全指南：你需要知道的一切（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete beginner's guide to AI: what chatbots are, how large language models work, writing prompts, avoiding hallucinations, AI vs search engines, and getting started with AI APIs.",
+      "zh": "AI 完整入门指南：什么是聊天机器人、大语言模型如何工作、编写 Prompt、避免幻觉、AI 与搜索引擎对比，以及如何开始使用 AI API。"
+    }
+  }
+}

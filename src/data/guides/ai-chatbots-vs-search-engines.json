@@ -1,0 +1,202 @@
+{
+  "slug": "ai-chatbots-vs-search-engines",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "AI Chatbots vs Search Engines: Which Should You Use? (2026)",
+    "zh": "AI 聊天机器人 vs 搜索引擎：你该用哪个？（2026）"
+  },
+  "excerpt": {
+    "en": "AI chatbots generate answers, search engines retrieve sources. Learn the key differences in how they work, accuracy, real-time data, and when to use each — plus the emerging trend of AI-powered search.",
+    "zh": "AI 聊天机器人生成答案，搜索引擎检索来源。了解两者在工作原理、准确性、实时数据方面的关键差异，以及各自适用场景——还有 AI 搜索的新趋势。"
+  },
+  "tags": ["ai chatbot", "search engine", "comparison", "basics"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "core-difference",
+      "heading": {
+        "en": "The Core Difference: Retrieval vs Generation",
+        "zh": "核心区别：检索 vs 生成"
+      },
+      "paragraphs": {
+        "en": [
+          "Search engines and AI chatbots solve information problems in fundamentally different ways. A search engine like Google crawls the web, indexes billions of pages, and when you search, it retrieves and ranks the most relevant pages. You get a list of links and decide which to read.",
+          "An AI chatbot like ChatGPT or Claude takes your question and generates a new answer by predicting the most likely useful response based on its training data. It synthesizes information rather than retrieving it. You get a direct answer instead of a list of links.",
+          "This distinction — retrieval vs generation — is the foundation of every other difference between the two technologies, from accuracy to speed to cost."
+        ],
+        "zh": [
+          "搜索引擎和 AI 聊天机器人以根本不同的方式解决信息问题。像 Google 这样的搜索引擎会爬取网页、索引数十亿页面，当你搜索时，它检索并排序最相关的页面。你得到一个链接列表，自己决定读哪个。",
+          "像 ChatGPT 或 Claude 这样的 AI 聊天机器人接收你的问题，根据训练数据预测最可能有用的回复，生成全新答案。它综合信息而非检索信息。你得到的是直接答案而非链接列表。",
+          "这个区别——检索 vs 生成——是两者之间所有其他差异的基础，从准确性到速度到成本。"
+        ]
+      }
+    },
+    {
+      "id": "accuracy",
+      "heading": {
+        "en": "Information Accuracy: Sources vs Synthesis",
+        "zh": "信息准确性：来源 vs 综合"
+      },
+      "paragraphs": {
+        "en": [
+          "Search engines point you to original sources. When you click a link from Google, you're reading the actual website that published the information. You can evaluate the credibility of the source, check the date, and compare multiple sources yourself. This makes search engines more transparent and verifiable.",
+          "AI chatbots synthesize answers from training data, which means you can't always trace where the information came from. Worse, AI can hallucinate — generating confident-sounding but incorrect information. A chatbot might cite a paper that doesn't exist or state a fact that's subtly wrong.",
+          "For factual research, legal matters, medical information, or anything where accuracy is critical, search engines are generally more trustworthy because you can verify sources. For quick explanations, brainstorming, or creative tasks where precision matters less, AI chatbots are faster and more convenient."
+        ],
+        "zh": [
+          "搜索引擎将你指向原始来源。当你点击 Google 的链接时，你阅读的是实际发布信息的网站。你可以评估来源的可信度、检查日期，并自行对比多个来源。这使得搜索引擎更透明、更可验证。",
+          "AI 聊天机器人从训练数据中综合答案，这意味着你无法总是追溯信息来自哪里。更糟的是，AI 可能产生幻觉——生成听起来自信但错误的信息。聊天机器人可能引用不存在的论文或陈述微妙错误的事实。",
+          "对于事实性研究、法律事务、医疗信息或任何准确性至关重要的场景，搜索引擎通常更可信，因为你可以验证来源。对于快速解释、头脑风暴或精确度不那么重要的创意任务，AI 聊天机器人更快更方便。"
+        ]
+      }
+    },
+    {
+      "id": "realtime",
+      "heading": {
+        "en": "Real-Time Information: Freshness Matters",
+        "zh": "实时信息：时效性很重要"
+      },
+      "paragraphs": {
+        "en": [
+          "Search engines excel at real-time information. Google indexes new pages within minutes to hours, so you can find today's news, current stock prices, or the latest software documentation. If something happened this morning, search engines will have it.",
+          "AI chatbots have a knowledge cutoff — their training data only goes up to a certain date. A model trained on data up to January 2026 won't know about events from March 2026 unless it has web browsing capabilities. Some chatbots (like ChatGPT with web search or Gemini with Google Search integration) can access real-time information, but this effectively turns them into AI-powered search tools.",
+          "If you need the latest information — news, prices, weather, recently published content — search engines (or AI chatbots with live web access) are the right choice. For general knowledge, explanations of concepts, or creative tasks, the training cutoff rarely matters."
+        ],
+        "zh": [
+          "搜索引擎在实时信息方面表现出色。Google 在几分钟到几小时内索引新页面，所以你可以找到今天的新闻、当前股价或最新的软件文档。如果事情是今天早上发生的，搜索引擎会有。",
+          "AI 聊天机器人有知识截止日期——它们的训练数据只到某个时间点。一个用截至 2026 年 1 月数据训练的模型不会知道 2026 年 3 月的事件，除非它有网页浏览能力。一些聊天机器人（如带网页搜索的 ChatGPT 或与 Google 搜索整合的 Gemini）可以访问实时信息，但这实际上把它们变成了 AI 驱动的搜索工具。",
+          "如果你需要最新信息——新闻、价格、天气、最近发布的内容——搜索引擎（或带实时网络访问的 AI 聊天机器人）是正确选择。对于一般知识、概念解释或创意任务，训练截止日期通常不太重要。"
+        ]
+      }
+    },
+    {
+      "id": "use-cases",
+      "heading": {
+        "en": "When to Use Which: Use Case Guide",
+        "zh": "何时用哪个：使用场景指南"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's a practical breakdown of which tool to reach for in common situations:"
+        ],
+        "zh": [
+          "以下是常见场景下该用哪种工具的实用指南："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Use search engines for: finding specific websites, latest news, fact-checking, shopping, local business info, downloading software",
+          "Use AI chatbots for: explaining complex concepts, writing and editing, brainstorming ideas, coding help, summarizing long text, translation, creative tasks",
+          "Use both: research projects (search for sources, AI to synthesize), learning new topics (search for tutorials, AI to explain concepts), troubleshooting (search for error messages, AI for solutions)",
+          "Avoid AI chatbots for: anything requiring verifiable citations, medical diagnosis, legal advice, financial decisions based on real-time data",
+          "Avoid search engines for: open-ended creative tasks, long-form writing, code generation, explaining nuanced concepts"
+        ],
+        "zh": [
+          "搜索引擎适用于：查找特定网站、最新新闻、事实核查、购物、本地商家信息、下载软件",
+          "AI 聊天机器人适用于：解释复杂概念、写作和编辑、头脑风暴、编程帮助、总结长文、翻译、创意任务",
+          "两者结合使用：研究项目（搜索找来源，AI 做综合）、学习新主题（搜索找教程，AI 解释概念）、故障排除（搜索错误信息，AI 找解决方案）",
+          "避免用 AI 聊天机器人：需要可验证引用的内容、医疗诊断、法律建议、基于实时数据的金融决策",
+          "避免用搜索引擎：开放式创意任务、长文写作、代码生成、解释微妙概念"
+        ]
+      }
+    },
+    {
+      "id": "convergence",
+      "heading": {
+        "en": "The Convergence: AI-Powered Search",
+        "zh": "融合趋势：AI 驱动的搜索"
+      },
+      "paragraphs": {
+        "en": [
+          "The line between search engines and AI chatbots is blurring. Google's AI Overviews (formerly Search Generative Experience, or SGE) generates AI summaries at the top of search results, with links to sources below. Perplexity AI positions itself as an \"answer engine\" — it searches the web, synthesizes an answer, and cites its sources.",
+          "This convergence combines the strengths of both approaches: real-time information and verifiable sources from search, with synthesized, easy-to-read answers from AI. However, it also introduces new challenges, such as AI summaries sometimes misrepresenting the source content or reducing traffic to original publishers.",
+          "Looking ahead, the distinction between \"searching\" and \"asking\" will continue to fade. The future is likely a hybrid where you ask questions in natural language and get answers grounded in real-time web sources, with citations you can verify. This is part of the broader AI basics landscape covered in our beginner's guide to AI."
+        ],
+        "zh": [
+          "搜索引擎和 AI 聊天机器人之间的界限正在模糊。Google 的 AI Overviews（原搜索生成体验，简称 SGE）在搜索结果顶部生成 AI 摘要，下方附来源链接。Perplexity AI 将自己定位为「答案引擎」——它搜索网络、综合答案，并引用来源。",
+          "这种融合结合了两种方式的优势：来自搜索的实时信息和可验证来源，以及来自 AI 的综合、易读答案。但也带来了新挑战，比如 AI 摘要有时会曲解原始内容或减少原始发布者的流量。",
+          "展望未来，「搜索」和「提问」之间的区别将继续淡化。未来的趋势可能是混合模式——你用自然语言提问，获得基于实时网络来源的答案，并附可验证的引用。这是我们 AI 入门指南中涵盖的更广泛 AI 基础知识的一部分。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is ChatGPT a search engine?",
+        "zh": "ChatGPT 是搜索引擎吗？"
+      },
+      "answer": {
+        "en": "No, ChatGPT is an AI chatbot that generates answers from its training data. However, with web search enabled, it can retrieve real-time information and function similarly to an AI-powered search engine. The underlying mechanism is still generation, not retrieval.",
+        "zh": "不是，ChatGPT 是从训练数据生成答案的 AI 聊天机器人。但启用网页搜索后，它可以检索实时信息，功能类似 AI 驱动的搜索引擎。不过其底层机制仍然是生成，而非检索。"
+      }
+    },
+    {
+      "question": {
+        "en": "Why does Google still show links instead of just giving me the answer?",
+        "zh": "为什么 Google 还是显示链接而不是直接给我答案？"
+      },
+      "answer": {
+        "en": "Google's core business model is based on users clicking through to websites. AI Overviews now provide synthesized answers for many queries, but Google still prioritizes linking to sources to maintain the web ecosystem and ad revenue. The balance is shifting toward more AI-generated answers over time.",
+        "zh": "Google 的核心商业模式基于用户点击进入网站。AI Overviews 现在为许多查询提供综合答案，但 Google 仍优先链接到来源，以维护网络生态系统和广告收入。这个平衡正在逐渐向更多 AI 生成答案的方向转变。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I trust AI-generated answers more than search results?",
+        "zh": "AI 生成的答案比搜索结果更可信吗？"
+      },
+      "answer": {
+        "en": "It depends. Search results let you evaluate the credibility of each source yourself, which is more transparent. AI answers are more convenient but can hallucinate or misrepresent information. For important decisions, always verify AI answers against original sources found through search.",
+        "zh": "视情况而定。搜索结果让你自己评估每个来源的可信度，更透明。AI 答案更方便，但可能产生幻觉或曲解信息。对于重要决策，一定要通过搜索找到原始来源来验证 AI 的答案。"
+      }
+    },
+    {
+      "question": {
+        "en": "Will AI chatbots replace Google search?",
+        "zh": "AI 聊天机器人会取代 Google 搜索吗？"
+      },
+      "answer": {
+        "en": "Unlikely in the near term. Google processes over 8 billion searches per day and is deeply integrated into how people navigate the web. Instead of replacement, we're seeing convergence — Google is adding AI features, and AI chatbots are adding search capabilities. The two are becoming more similar over time.",
+        "zh": "短期内不太可能。Google 每天处理超过 80 亿次搜索，深深融入了人们浏览网页的方式。与其说是取代，不如说是融合——Google 在添加 AI 功能，AI 聊天机器人在添加搜索能力。两者正在变得越来越相似。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google AI Overviews Documentation",
+      "url": "https://support.google.com/websearch/answer/14681670",
+      "site": "Google",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Perplexity AI",
+      "url": "https://docs.perplexity.ai/",
+      "site": "Perplexity",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenAI Web Search Guide",
+      "url": "https://platform.openai.com/docs/guides/web-search",
+      "site": "OpenAI",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "AI Chatbots vs Search Engines: Which Should You Use? (2026) | Get Model Key",
+      "zh": "AI 聊天机器人 vs 搜索引擎：你该用哪个？（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Detailed comparison of AI chatbots and search engines: how they work, accuracy, real-time data, use case recommendations, and the emerging trend of AI-powered search.",
+      "zh": "AI 聊天机器人与搜索引擎的详细对比：工作原理、准确性、实时数据、使用场景推荐，以及 AI 搜索的新趋势。"
+    }
+  }
+}

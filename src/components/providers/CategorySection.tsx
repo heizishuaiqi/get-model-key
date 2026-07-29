@@ -1,10 +1,11 @@
 import type { Provider, Category } from '@/types/provider';
+import type { Lang } from '@/lib/shared';
 import ProviderCard from './ProviderCard';
 
 interface CategorySectionProps {
   category: Category;
   providers: Provider[];
-  lang: 'en' | 'zh';
+  lang: Lang;
 }
 
 export default function CategorySection({ category, providers, lang }: CategorySectionProps) {

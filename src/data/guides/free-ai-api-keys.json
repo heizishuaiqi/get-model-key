@@ -1,0 +1,228 @@
+{
+  "slug": "free-ai-api-keys",
+  "status": "published",
+  "topic": "comparison",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "Free AI API Keys: Complete List of Free Tier Providers (2026)",
+    "zh": "免费 AI API Key：免费额度供应商完整列表（2026）"
+  },
+  "excerpt": {
+    "en": "Several AI providers offer free tiers or credits. Here's a complete comparison of which platforms give free access, how much you get, and the limits you should know about.",
+    "zh": "多家 AI 供应商提供免费额度或免费积分。本文完整对比哪些平台提供免费访问、额度多少，以及需要注意的限制。"
+  },
+  "tags": ["free", "api key", "trial", "credits", "comparison"],
+  "providerSlugs": ["google", "openai", "anthropic", "deepseek", "openrouter"],
+  "sections": [
+    {
+      "id": "which-providers-free",
+      "heading": {
+        "en": "Which Platforms Offer Free AI API Access?",
+        "zh": "哪些平台提供免费 AI API 访问？"
+      },
+      "paragraphs": {
+        "en": [
+          "Several major AI providers offer free tiers in 2026. The most notable is Google Gemini's free tier, which provides generous usage limits at no cost. Other options include OpenRouter's free models, HuggingFace's inference API, and limited-time offers from various providers.",
+          "It's important to distinguish between 'free tier' (ongoing free usage with rate limits) and 'free credits' (one-time sign-up bonus that gets consumed). Both can be useful depending on your needs."
+        ],
+        "zh": [
+          "2026 年，多家主要 AI 供应商提供免费额度。最值得注意的是 Google Gemini 的免费层，提供慷慨的免费使用限额。其他选项包括 OpenRouter 的免费模型、HuggingFace 的推理 API，以及各供应商的限时免费活动。",
+          "需要区分「免费层」（持续的免费使用，有速率限制）和「免费积分」（注册时一次性赠送，用完即止）。根据你的需求，两种方式都有用。"
+        ]
+      }
+    },
+    {
+      "id": "gemini-free-tier",
+      "heading": {
+        "en": "Google Gemini Free Tier",
+        "zh": "Google Gemini 免费层"
+      },
+      "paragraphs": {
+        "en": [
+          "Google's Gemini API offers the most generous free tier among major providers. Through Google AI Studio, developers get free access to Gemini models with per-minute and per-day rate limits. No credit card is required to sign up.",
+          "The free tier is suitable for development, prototyping, and light production use. For higher volumes, you can upgrade to the paid tier with the same API key."
+        ],
+        "zh": [
+          "Google 的 Gemini API 在主要供应商中提供最慷慨的免费层。通过 Google AI Studio，开发者可以免费使用 Gemini 模型，有每分钟和每天的速率限制。注册时不需要信用卡。",
+          "免费层适合开发、原型设计和轻量生产使用。用量更大时，可以用同一个 API Key 升级到付费层。"
+        ]
+      }
+    },
+    {
+      "id": "openrouter-free-models",
+      "heading": {
+        "en": "OpenRouter Free Models",
+        "zh": "OpenRouter 免费模型"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenRouter is an API aggregator that lists free models from various providers. Models marked 'free' have no cost per token. This is a convenient way to try multiple models with a single API key.",
+          "The free models rotate as providers update their offerings. Check the OpenRouter model list for current free options."
+        ],
+        "zh": [
+          "OpenRouter 是一个 API 聚合平台，列出各供应商的免费模型。标记为「free」的模型按 token 免费。这是一个用一个 API Key 尝试多个模型的便捷方式。",
+          "免费模型会随供应商更新而轮换。查看 OpenRouter 模型列表获取当前免费选项。"
+        ]
+      }
+    },
+    {
+      "id": "huggingface-inference",
+      "heading": {
+        "en": "HuggingFace Inference API",
+        "zh": "HuggingFace 推理 API"
+      },
+      "paragraphs": {
+        "en": [
+          "HuggingFace offers a free inference API that lets you call thousands of open-source models. The free tier has rate limits but is great for experimentation. You need a HuggingFace account and access token.",
+          "This is especially useful for trying smaller, specialized models that aren't available from the major API providers."
+        ],
+        "zh": [
+          "HuggingFace 提供免费推理 API，可以调用数千个开源模型。免费层有速率限制，但非常适合实验。你需要一个 HuggingFace 账户和访问令牌。",
+          "这对尝试主要 API 供应商不提供的小型、专门化模型特别有用。"
+        ]
+      }
+    },
+    {
+      "id": "comparison-table",
+      "heading": {
+        "en": "Free Tier Comparison Table",
+        "zh": "免费额度对比表"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's a summary of the main free options and their key limits. Note that these limits can change — always verify on the provider's official page."
+        ],
+        "zh": [
+          "以下是主要免费选项及其关键限制的总结。注意这些限制可能会变化，请以供应商官方页面为准。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Google Gemini: free tier, ~15 RPM / 1500 requests per day, no credit card",
+          "OpenRouter: free models available, rate-limited, single key for many models",
+          "HuggingFace: free inference API, rate-limited, great for open-source models",
+          "DeepSeek: occasional free credits for new users, limited time",
+          "OpenAI: no ongoing free tier; sometimes new accounts get trial credits"
+        ],
+        "zh": [
+          "Google Gemini：免费层，约 15 RPM / 每天 1500 次请求，无需信用卡",
+          "OpenRouter：提供免费模型，有速率限制，一个 Key 调用多模型",
+          "HuggingFace：免费推理 API，有速率限制，适合开源模型",
+          "DeepSeek：新用户偶尔赠送免费积分，限时",
+          "OpenAI：无持续免费层；新账户有时会获得试用积分"
+        ]
+      }
+    },
+    {
+      "id": "maximize-free-credits",
+      "heading": {
+        "en": "How to Maximize Free Usage",
+        "zh": "如何最大化利用免费额度"
+      },
+      "paragraphs": {
+        "en": [
+          "To get the most out of free tiers: use Gemini for primary development, OpenRouter to compare models, and HuggingFace for specialized open-source models. Cache responses when possible, and keep prompts concise to reduce token usage.",
+          "For production apps, combine free tiers with cheap paid options. For example, use Gemini's free tier for low-traffic times and fall back to a low-cost provider like DeepSeek when free limits are hit."
+        ],
+        "zh": [
+          "充分利用免费层的方法：用 Gemini 做主要开发，用 OpenRouter 对比模型，用 HuggingFace 调用专门化开源模型。尽可能缓存响应，并保持 Prompt 简洁以减少 token 消耗。",
+          "生产应用可以将免费层与低价付费方案结合。例如，低流量时使用 Gemini 免费层，达到免费限制后回退到 DeepSeek 等低成本供应商。"
+        ]
+      }
+    },
+    {
+      "id": "limitations",
+      "heading": {
+        "en": "Free Tier Limitations to Know",
+        "zh": "免费层需注意的限制"
+      },
+      "paragraphs": {
+        "en": [
+          "Free tiers come with trade-offs. Rate limits can cause request failures during traffic spikes. Some free tiers restrict access to the most capable models or limit features like function calling and vision. Commercial use may also be restricted — check each provider's terms.",
+          "Free tiers can be changed or discontinued at any time. Don't build a production business solely on free tiers without a paid fallback plan."
+        ],
+        "zh": [
+          "免费层有权衡。速率限制可能导致流量高峰时请求失败。部分免费层限制访问最强模型，或限制函数调用、视觉等功能。商用也可能受限——请查看各供应商条款。",
+          "免费层可能随时变更或取消。不要仅依赖免费层构建生产业务，必须有付费回退方案。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is Google Gemini API really free?",
+        "zh": "Google Gemini API 真的免费吗？"
+      },
+      "answer": {
+        "en": "Yes, Google offers a free tier through Google AI Studio with per-minute and per-day limits. No credit card is required. It's the most generous free option among major providers in 2026.",
+        "zh": "是的，Google 通过 Google AI Studio 提供免费层，有每分钟和每天的限制。无需信用卡。这是 2026 年主要供应商中最慷慨的免费选项。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use free AI API keys for commercial projects?",
+        "zh": "免费 AI API Key 可以用于商业项目吗？"
+      },
+      "answer": {
+        "en": "It depends on the provider. Google's free tier generally allows commercial use within rate limits. Others may restrict commercial use. Always read the terms of service for each provider before using free tiers in commercial products.",
+        "zh": "取决于供应商。Google 免费层通常允许在速率限制内商用。其他供应商可能限制商用。在商业产品中使用免费层前，请务必阅读各供应商的服务条款。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does OpenAI offer a free API tier?",
+        "zh": "OpenAI 提供免费 API 层吗？"
+      },
+      "answer": {
+        "en": "No, OpenAI does not offer an ongoing free tier for the API. New accounts may occasionally receive small trial credits, but ongoing free access is not available. For free OpenAI models, try OpenRouter's free model listings.",
+        "zh": "不提供。OpenAI 的 API 没有持续的免费层。新账户偶尔会获得少量试用积分，但没有持续的免费访问。想免费使用 OpenAI 模型，可以试试 OpenRouter 的免费模型列表。"
+      }
+    },
+    {
+      "question": {
+        "en": "What's the best free AI API for beginners?",
+        "zh": "对初学者来说最好的免费 AI API 是什么？"
+      },
+      "answer": {
+        "en": "Google Gemini's free tier is the best starting point — no credit card needed, generous limits, and good documentation. OpenRouter is a strong second choice for trying multiple models with one key.",
+        "zh": "Google Gemini 免费层是最佳起点——无需信用卡，额度慷慨，文档完善。OpenRouter 是第二选择，可以用一个 Key 尝试多个模型。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google AI Studio Pricing",
+      "url": "https://ai.google.dev/pricing",
+      "site": "Google",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenRouter Models",
+      "url": "https://openrouter.ai/models",
+      "site": "OpenRouter",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "HuggingFace Inference API",
+      "url": "https://huggingface.co/docs/api-inference",
+      "site": "HuggingFace",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Free AI API Keys: Complete List of Free Tier Providers (2026) | Get Model Key",
+      "zh": "免费 AI API Key：免费额度供应商完整列表（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete comparison of free AI API providers in 2026 — Google Gemini free tier, OpenRouter free models, HuggingFace inference API, limits and tips.",
+      "zh": "2026 年免费 AI API 供应商完整对比——Google Gemini 免费层、OpenRouter 免费模型、HuggingFace 推理 API，限制与技巧。"
+    }
+  }
+}

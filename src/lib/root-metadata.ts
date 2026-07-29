@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { Lang } from './shared';
 
 export const baseUrl = 'https://www.getmodelkey.com';
 
@@ -6,20 +7,29 @@ export const structuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${baseUrl}/#organization`,
     name: 'Get Model Key',
     url: baseUrl,
     logo: `${baseUrl}/android-chrome-512x512.png`,
+    sameAs: [
+      'https://github.com/getmodelkey',
+    ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
     name: 'Get Model Key',
     url: baseUrl,
     inLanguage: ['en', 'zh-CN'],
   },
 ];
 
-export function getRootMetadata(lang: 'en' | 'zh'): Metadata {
+/**
+ * Generate root-level metadata for the site layout.
+ * Includes icons, manifest, OpenGraph, Twitter cards, and alternate language links.
+ */
+export function getRootMetadata(lang: Lang): Metadata {
   const titles = {
     en: 'Get Model Key - Official API Key Directory for AI Model Providers',
     zh: 'Get Model Key - AI 模型提供商官方 API Key 目录',
@@ -72,10 +82,10 @@ export function getRootMetadata(lang: 'en' | 'zh'): Metadata {
       locale: lang === 'en' ? 'en_US' : 'zh_CN',
       images: [
         {
-          url: '/android-chrome-512x512.png',
-          width: 512,
-          height: 512,
-          alt: 'Get Model Key logo',
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Get Model Key - Official API Key Directory for AI Model Providers',
         },
       ],
     },
@@ -83,7 +93,7 @@ export function getRootMetadata(lang: 'en' | 'zh'): Metadata {
       card: 'summary_large_image',
       title: titles[lang],
       description: descriptions[lang],
-      images: ['/android-chrome-512x512.png'],
+      images: ['/og-image.png'],
     },
   };
 }

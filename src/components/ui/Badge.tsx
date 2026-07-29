@@ -16,10 +16,10 @@ export default function Badge({
   const variantClasses = {
     brand: 'tag-brand',
     neutral: 'tag-neutral',
-    success: 'rounded-full border border-brand-300/20 bg-brand-12 px-3 py-1 text-xs font-semibold text-brand-300',
-    warning: 'rounded-full border border-warning-500/20 bg-warning-500/10 px-3 py-1 text-xs font-semibold text-warning-500',
-    info: 'rounded-full border border-info-500/20 bg-info-500/10 px-3 py-1 text-xs font-semibold text-info-500',
-    danger: 'rounded-full border border-danger-500/20 bg-danger-500/10 px-3 py-1 text-xs font-semibold text-danger-500',
+    success: 'rounded-full border border-brand-300/20 bg-brand-12 font-semibold text-brand-300',
+    warning: 'rounded-full border border-warning-500/20 bg-warning-500/10 font-semibold text-warning-500',
+    info: 'rounded-full border border-info-500/20 bg-info-500/10 font-semibold text-info-500',
+    danger: 'rounded-full border border-danger-500/20 bg-danger-500/10 font-semibold text-danger-500',
   };
 
   const sizeClasses = {
@@ -27,11 +27,12 @@ export default function Badge({
     md: 'px-3 py-1 text-xs',
   };
 
-  const baseClasses = `${variantClasses[variant]} ${sizeClasses[size]}`;
-  const combinedClasses = `${baseClasses} ${className}`.trim();
+  const baseClasses = [variantClasses[variant], sizeClasses[size], className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
-    <span className={combinedClasses}>
+    <span className={baseClasses}>
       {children}
     </span>
   );

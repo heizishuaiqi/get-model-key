@@ -1,5 +1,6 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Card from '@/components/ui/Card';
+import { baseUrl } from '@/lib/root-metadata';
 
 export const metadata: Metadata = {
   title: '隐私政策',
@@ -11,6 +12,19 @@ export const metadata: Metadata = {
       zh: '/zh/privacy/',
       'x-default': '/privacy/',
     },
+  },
+  openGraph: {
+    type: 'article',
+    url: `${baseUrl}/zh/privacy/`,
+    title: '隐私政策',
+    description: '了解 Get Model Key 如何处理访问数据与外部链接相关隐私说明。',
+    siteName: 'Get Model Key',
+    locale: 'zh_CN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '隐私政策',
+    description: '了解 Get Model Key 如何处理访问数据与外部链接相关隐私说明。',
   },
 };
 
@@ -27,7 +41,7 @@ export default function ZhPrivacyPage() {
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-info-500/10">
-                <svg className="h-6 w-6 text-info-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-info-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -124,7 +138,7 @@ export default function ZhPrivacyPage() {
             <div className="grid gap-6 sm:grid-cols-3">
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
                 </div>
@@ -133,7 +147,7 @@ export default function ZhPrivacyPage() {
               </div>
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
@@ -142,7 +156,7 @@ export default function ZhPrivacyPage() {
               </div>
               <div>
                 <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-12">
-                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>

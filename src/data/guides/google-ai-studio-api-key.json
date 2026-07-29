@@ -1,0 +1,270 @@
+{
+  "slug": "google-ai-studio-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "gemini",
+  "pillarSlug": "gemini-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "Google AI Studio API Key: Complete Setup Guide (2026)",
+    "zh": "Google AI Studio API Key：完全设置指南（2026）"
+  },
+  "excerpt": {
+    "en": "Learn how to get and use a Google AI Studio API key to access Gemini models. Covers the free tier, differences from Vertex AI, and code examples in Python and Node.js.",
+    "zh": "了解如何获取和使用 Google AI Studio API Key 来访问 Gemini 模型。涵盖免费额度、与 Vertex AI 的区别，以及 Python 和 Node.js 代码示例。"
+  },
+  "tags": ["google ai studio", "gemini", "api key", "google"],
+  "providerSlugs": ["google"],
+  "sections": [
+    {
+      "id": "what-is-google-ai-studio",
+      "heading": {
+        "en": "What Is Google AI Studio?",
+        "zh": "什么是 Google AI Studio？"
+      },
+      "paragraphs": {
+        "en": [
+          "Google AI Studio is a browser-based IDE for building generative AI applications with Google's Gemini models. It provides a fast, zero-setup way to prototype prompts, test model behavior, and generate an API key for programmatic access.",
+          "Unlike a full cloud platform, Google AI Studio is designed to get developers from idea to first API call in minutes. You can experiment with different Gemini models, adjust parameters like temperature and token limits, and export working code directly from the UI.",
+          "Google AI Studio is the recommended starting point for most developers who want to use the Gemini API, especially those who do not already have a Google Cloud project or need enterprise-grade infrastructure."
+        ],
+        "zh": [
+          "Google AI Studio 是一个基于浏览器的 IDE，用于使用 Google 的 Gemini 模型构建生成式 AI 应用。它提供了一种快速、零配置的方式来原型化提示词、测试模型行为，并生成用于编程访问的 API Key。",
+          "与完整的云平台不同，Google AI Studio 的设计目标是让开发者在几分钟内从创意到第一次 API 调用。你可以实验不同的 Gemini 模型、调整温度和 token 限制等参数，并直接从界面导出可用的代码。",
+          "对于大多数想要使用 Gemini API 的开发者来说，Google AI Studio 是推荐的起点，尤其是那些还没有 Google Cloud 项目或不需要企业级基础设施的用户。"
+        ]
+      }
+    },
+    {
+      "id": "ai-studio-vs-vertex-ai",
+      "heading": {
+        "en": "Google AI Studio vs. Google Cloud Vertex AI",
+        "zh": "Google AI Studio 与 Google Cloud Vertex AI 的区别"
+      },
+      "paragraphs": {
+        "en": [
+          "Google AI Studio and Google Cloud Vertex AI both provide access to Gemini models, but they target different use cases. Google AI Studio is designed for prototyping and development, with a simple key-based authentication and a generous free tier. Vertex AI is an enterprise platform with IAM-based access control, VPC integration, and advanced billing management.",
+          "If you are an individual developer or a small team building prototypes, Google AI Studio is the right choice. If you are deploying to production with strict security requirements, existing GCP infrastructure, or need higher rate limits, Vertex AI is more appropriate.",
+          "Both platforms access the same underlying Gemini models — the difference is in the access method, billing, and management layer."
+        ],
+        "zh": [
+          "Google AI Studio 和 Google Cloud Vertex AI 都提供对 Gemini 模型的访问，但面向不同的使用场景。Google AI Studio 为原型开发和设计，采用简单的 Key 认证和慷慨的免费额度。Vertex AI 是一个企业平台，提供基于 IAM 的访问控制、VPC 集成和高级计费管理。",
+          "如果你是个人开发者或小团队构建原型，Google AI Studio 是正确的选择。如果你要部署到有严格安全要求的生产环境，已有 GCP 基础设施，或需要更高速率限制，Vertex AI 更合适。",
+          "两个平台访问的是相同的底层 Gemini 模型——区别在于访问方式、计费和管理层。"
+        ]
+      }
+    },
+    {
+      "id": "accessing-ai-studio",
+      "heading": {
+        "en": "Accessing aistudio.google.com",
+        "zh": "访问 aistudio.google.com"
+      },
+      "paragraphs": {
+        "en": [
+          "To access Google AI Studio, go to aistudio.google.com in your browser. You need a Google account to sign in — the same account you use for Gmail, Google Drive, or YouTube will work.",
+          "Google AI Studio is available in most regions. If you are in a region where it is not directly accessible, you may need to use a VPN. Once signed in, you will see the dashboard with options to create prompts, chat with models, and manage API keys.",
+          "The interface is available in English. The platform is free to use for development within the free tier rate limits."
+        ],
+        "zh": [
+          "要访问 Google AI Studio，在浏览器中打开 aistudio.google.com。你需要一个 Google 账号登录——你用于 Gmail、Google Drive 或 YouTube 的账号都可以。",
+          "Google AI Studio 在大部分地区可用。如果你所在的地区无法直接访问，可能需要使用 VPN。登录后你会看到仪表盘，可以创建提示词、与模型对话和管理 API Key。",
+          "界面语言为英文。在免费额度速率限制内，平台可免费用于开发。"
+        ]
+      }
+    },
+    {
+      "id": "get-api-key-steps",
+      "heading": {
+        "en": "How to Get a Google AI Studio API Key",
+        "zh": "如何获取 Google AI Studio API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Getting an API key from Google AI Studio takes less than a minute. Once you are signed in, the process is entirely browser-based — no CLI or cloud project setup required."
+        ],
+        "zh": [
+          "从 Google AI Studio 获取 API Key 不到一分钟即可完成。登录后，整个过程完全在浏览器中操作，无需 CLI 或云项目配置。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Step 1: Go to aistudio.google.com and sign in with your Google account",
+          "Step 2: Click 'Get API key' in the left sidebar menu",
+          "Step 3: Click 'Create API key' button",
+          "Step 4: A new Google Cloud project is automatically created if you don't have one",
+          "Step 5: Copy the generated API key and store it securely (e.g., in an environment variable)"
+        ],
+        "zh": [
+          "第 1 步：访问 aistudio.google.com 并用 Google 账号登录",
+          "第 2 步：点击左侧栏菜单中的「Get API key」",
+          "第 3 步：点击「Create API key」按钮",
+          "第 4 步：如果你没有 Google Cloud 项目，系统会自动创建一个",
+          "第 5 步：复制生成的 API Key 并安全保存（例如存入环境变量）"
+        ]
+      }
+    },
+    {
+      "id": "free-tier",
+      "heading": {
+        "en": "Gemini API Free Tier (Google AI Studio)",
+        "zh": "Gemini API 免费额度（Google AI Studio）"
+      },
+      "paragraphs": {
+        "en": [
+          "Google AI Studio provides a free tier for the Gemini API that is generous enough for development, testing, and small projects. The free tier includes access to all available Gemini models, including Gemini 2.5 Pro and Gemini 2.5 Flash.",
+          "The free tier has per-minute rate limits (typically 15 requests per minute for most models) but does not impose a daily cap. This makes it well-suited for iterative development where you need to test prompts and adjust parameters repeatedly.",
+          "When you need higher rate limits or are ready for production, you can upgrade to the paid tier by enabling billing in Google Cloud. Paid pricing is per million tokens, with separate rates for input and output tokens. Prompt caching is also available at a discount on supported models."
+        ],
+        "zh": [
+          "Google AI Studio 为 Gemini API 提供了免费额度，足够用于开发、测试和小型项目。免费额度包括对所有可用 Gemini 模型的访问，包括 Gemini 2.5 Pro 和 Gemini 2.5 Flash。",
+          "免费额度有每分钟速率限制（大多数模型通常每分钟 15 次请求），但没有每日上限。这非常适合需要反复测试提示词和调整参数的迭代开发。",
+          "当你需要更高速率限制或准备投入生产时，可以在 Google Cloud 中启用计费升级到付费版。付费版按百万 token 计费，输入和输出 token 分别定价。支持的模型还提供提示缓存折扣。"
+        ]
+      }
+    },
+    {
+      "id": "use-api-key-in-code",
+      "heading": {
+        "en": "Using Your API Key in Code",
+        "zh": "在代码中使用 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Once you have your API key, you can start making requests to the Gemini API. Google provides official SDKs for Python and JavaScript/TypeScript. You can also use the REST API directly or the OpenAI-compatible endpoint.",
+          "Here is a minimal example using the official Google Gen AI Python SDK:"
+        ],
+        "zh": [
+          "获取 API Key 后，就可以开始调用 Gemini API。Google 提供了 Python 和 JavaScript/TypeScript 的官方 SDK。你也可以直接使用 REST API 或 OpenAI 兼容端点。",
+          "以下是使用官方 Google Gen AI Python SDK 的最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from google import genai\n\nclient = genai.Client(api_key=\"YOUR_GOOGLE_AI_STUDIO_API_KEY\")\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.5-flash\",\n    contents=\"Explain what an API key is in one sentence.\"\n)\n\nprint(response.text)",
+          "caption": {
+            "en": "Calling the Gemini API with the Google Gen AI Python SDK",
+            "zh": "使用 Google Gen AI Python SDK 调用 Gemini API"
+          }
+        },
+        {
+          "language": "javascript",
+          "code": "import { GoogleGenAI } from \"@google/genai\";\n\nconst ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });\n\nconst response = await ai.models.generateContent({\n  model: \"gemini-2.5-flash\",\n  contents: \"Explain what an API key is in one sentence.\",\n});\n\nconsole.log(response.text);",
+          "caption": {
+            "en": "Calling the Gemini API with the Google Gen AI JavaScript SDK",
+            "zh": "使用 Google Gen AI JavaScript SDK 调用 Gemini API"
+          }
+        }
+      ]
+    },
+    {
+      "id": "security-best-practices",
+      "heading": {
+        "en": "API Key Security Best Practices",
+        "zh": "API Key 安全最佳实践"
+      },
+      "paragraphs": {
+        "en": [
+          "Treat your Google AI Studio API key like a password. Never commit it to version control or hardcode it in client-side code. Store it in environment variables or a secrets manager, and use different keys for development and production.",
+          "If a key is compromised, you can delete or regenerate it from the Google AI Studio dashboard. Monitor your API usage regularly to detect unexpected spikes that might indicate key leakage."
+        ],
+        "zh": [
+          "像对待密码一样对待你的 Google AI Studio API Key。永远不要将其提交到版本控制或硬编码在客户端代码中。将其存储在环境变量或密钥管理器中，开发和生产使用不同的 Key。",
+          "如果 Key 泄露，可以在 Google AI Studio 仪表盘中删除或重新生成。定期监控 API 使用量，以便发现可能表明 Key 泄露的异常增长。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is Google AI Studio free to use?",
+        "zh": "Google AI Studio 是免费的吗？"
+      },
+      "answer": {
+        "en": "Yes, Google AI Studio offers a free tier with per-minute rate limits but no daily cap. The free tier is sufficient for development, testing, and small projects. For production with higher limits, paid billing is required.",
+        "zh": "是的，Google AI Studio 提供免费额度，有每分钟速率限制但没有每日上限。免费额度足够用于开发、测试和小型项目。生产环境需要更高速率限制时，需要启用付费计费。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do I need a Google Cloud account to use Google AI Studio?",
+        "zh": "使用 Google AI Studio 需要 Google Cloud 账号吗？"
+      },
+      "answer": {
+        "en": "No. You only need a regular Google account. Google AI Studio automatically creates a Google Cloud project for you when you generate an API key, but you do not need to set up or manage a GCP project manually.",
+        "zh": "不需要。你只需要一个普通的 Google 账号。生成 API Key 时，Google AI Studio 会自动为你创建 Google Cloud 项目，但你不需要手动设置或管理 GCP 项目。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use a Google AI Studio API key with the OpenAI SDK?",
+        "zh": "可以用 OpenAI SDK 调用 Google AI Studio 的 API 吗？"
+      },
+      "answer": {
+        "en": "Yes. Google provides an OpenAI-compatible endpoint for the Gemini API. Set the base URL to the Gemini OpenAI-compatible endpoint and use your Google AI Studio API key as the API key in the OpenAI SDK.",
+        "zh": "可以。Google 为 Gemini API 提供了 OpenAI 兼容端点。将 base URL 设置为 Gemini 的 OpenAI 兼容端点，并使用 Google AI Studio API Key 作为 OpenAI SDK 中的 API Key 即可。"
+      }
+    },
+    {
+      "question": {
+        "en": "What models can I access with a Google AI Studio API key?",
+        "zh": "用 Google AI Studio API Key 可以访问哪些模型？"
+      },
+      "answer": {
+        "en": "A Google AI Studio API key gives you access to all available Gemini models, including Gemini 2.5 Pro, Gemini 2.5 Flash, and Gemini 2.5 Flash-Lite. The same key works across all models, and you specify the model name in your API request.",
+        "zh": "Google AI Studio API Key 可以访问所有可用的 Gemini 模型，包括 Gemini 2.5 Pro、Gemini 2.5 Flash 和 Gemini 2.5 Flash-Lite。同一个 Key 适用于所有模型，在 API 请求中指定模型名称即可。"
+      }
+    },
+    {
+      "question": {
+        "en": "What is the rate limit for the free tier?",
+        "zh": "免费额度的速率限制是多少？"
+      },
+      "answer": {
+        "en": "The free tier typically allows 15 requests per minute for most models, with no daily cap. Rate limits may vary by model. Check the official documentation for the most current limits.",
+        "zh": "免费额度通常允许大多数模型每分钟 15 次请求，没有每日上限。不同模型的速率限制可能有所不同。请查看官方文档获取最新限制。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "site": "Google",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Gemini API Documentation",
+      "url": "https://ai.google.dev/gemini-api/docs",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Gemini API Pricing",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Google Gen AI SDK",
+      "url": "https://ai.google.dev/gemini-api/docs/sdks",
+      "site": "Google AI for Developers",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Google AI Studio API Key: Complete Setup Guide (2026) | Get Model Key",
+      "zh": "Google AI Studio API Key：完全设置指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Learn how to get a Google AI Studio API key, understand the free tier, compare with Vertex AI, and start building with Gemini models using Python and JavaScript examples.",
+      "zh": "了解如何获取 Google AI Studio API Key、理解免费额度、与 Vertex AI 对比，并使用 Python 和 JavaScript 示例开始构建 Gemini 模型应用。"
+    }
+  }
+}

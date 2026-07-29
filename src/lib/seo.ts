@@ -1,8 +1,12 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { getSiteConfig } from './providers';
 import { getGuideBySlug } from './guides';
+import type { Lang } from './shared';
 
-export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+/**
+ * Generate SEO metadata for the homepage in the given language.
+ */
+export async function getHomepageMetadata(lang: Lang = 'en'): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
 
   const titles = {
@@ -45,7 +49,10 @@ export async function getHomepageMetadata(lang: 'en' | 'zh' = 'en'): Promise<Met
   };
 }
 
-export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+/**
+ * Generate SEO metadata for a provider detail page.
+ */
+export async function getProviderMetadata(slug: string, lang: Lang = 'en'): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
   const { getProviderBySlug } = await import('./providers');
   const provider = await getProviderBySlug(slug);
@@ -59,8 +66,8 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
 
   const defaultTitle =
     lang === 'en'
-      ? `${provider.name.en} API Key - Official Access, Models & Quick Overview | ${siteConfig.siteName}`
-      : `${provider.name.zh} API Key - 官方入口、常用模型与快速说明 | ${siteConfig.siteName}`;
+      ? `${provider.name.en} API Key & Models | ${siteConfig.siteName}`
+      : `${provider.name.zh} API Key 与模型 | ${siteConfig.siteName}`;
 
   const defaultDescription =
     lang === 'en'
@@ -103,13 +110,16 @@ export async function getProviderMetadata(slug: string, lang: 'en' | 'zh' = 'en'
   };
 }
 
-export async function getGuidesIndexMetadata(lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+/**
+ * Generate SEO metadata for the guides index page.
+ */
+export async function getGuidesIndexMetadata(lang: Lang = 'en'): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
   const url = lang === 'en' ? `${siteConfig.domain}/guides/` : `${siteConfig.domain}/zh/guides/`;
 
   const titles = {
-    en: `AI API Guides - Setup, Troubleshooting, and Best Practices | ${siteConfig.siteName}`,
-    zh: `AI API 指南 - 开通、排错与实践建议 | ${siteConfig.siteName}`,
+    en: `AI API Guides | ${siteConfig.siteName}`,
+    zh: `AI API 指南 | ${siteConfig.siteName}`,
   };
 
   const descriptions = {
@@ -145,7 +155,10 @@ export async function getGuidesIndexMetadata(lang: 'en' | 'zh' = 'en'): Promise<
   };
 }
 
-export async function getGuideMetadata(slug: string, lang: 'en' | 'zh' = 'en'): Promise<Metadata> {
+/**
+ * Generate SEO metadata for a guide detail page.
+ */
+export async function getGuideMetadata(slug: string, lang: Lang = 'en'): Promise<Metadata> {
   const siteConfig = await getSiteConfig();
   const guide = await getGuideBySlug(slug);
 
@@ -189,6 +202,57 @@ export async function getGuideMetadata(slug: string, lang: 'en' | 'zh' = 'en'): 
       title,
       description,
       images: [coverImage],
+    },
+  };
+}
+
+/** FAQ item shape shared by providers and guides. */
+interface FaqItem {
+  question: Record<Lang, string>;
+  answer: Record<Lang, string>;
+}
+
+/**
+ * Build FAQPage structured data for JSON-LD injection.
+ * Returns null when there are no FAQ items, so callers can conditionally render the script tag.
+ */
+export function buildFaqStructuredData(
+  faqItems: FaqItem[] | undefined,
+  lang: Lang
+): Record<string, unknown> | null {
+  if (!faqItems || faqItems.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question[lang],
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer[lang],
+      },
+    })),
+  };
+}
+
+/**
+ * Build WebPage structured data for static pages (about, contact, privacy, terms).
+ */
+export function buildWebPageStructuredData(
+  title: string,
+  url: string,
+  lang: Lang
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: title,
+    url,
+    inLanguage: lang === 'en' ? 'en' : 'zh-CN',
+    isPartOf: {
+      '@type': 'WebSite',
+      url: 'https://www.getmodelkey.com',
+      name: 'Get Model Key',
     },
   };
 }

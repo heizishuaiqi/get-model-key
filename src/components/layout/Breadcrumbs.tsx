@@ -2,9 +2,10 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { normalizePath, type Lang } from '@/lib/shared';
 
 interface BreadcrumbsProps {
-  lang: 'en' | 'zh';
+  lang: Lang;
 }
 
 interface BreadcrumbItem {
@@ -12,7 +13,7 @@ interface BreadcrumbItem {
   href: string;
 }
 
-const LABELS = {
+const LABELS: Record<Lang, Record<string, string>> = {
   en: {
     home: 'Home',
     about: 'About',
@@ -24,22 +25,16 @@ const LABELS = {
     terms: 'Terms',
   },
   zh: {
-    home: '\u9996\u9875',
-    about: '\u5173\u4e8e',
-    providers: '\u4f9b\u5e94\u5546',
-    guides: '\u6307\u5357',
-    offers: '\u798f\u5229\u4e13\u9898',
-    contact: '\u8054\u7cfb\u6211\u4eec',
-    privacy: '\u9690\u79c1\u653f\u7b56',
-    terms: '\u670d\u52a1\u6761\u6b3e',
+    home: '首页',
+    about: '关于',
+    providers: '供应商',
+    guides: '指南',
+    offers: '福利专题',
+    contact: '联系我们',
+    privacy: '隐私政策',
+    terms: '服务条款',
   },
-} as const;
-
-function normalizePath(pathname: string): string {
-  if (!pathname) return '/';
-  const trimmed = pathname.replace(/\/+$/, '');
-  return trimmed === '' ? '/' : trimmed;
-}
+};
 
 function humanizeSegment(segment: string): string {
   const decoded = decodeURIComponent(segment);
@@ -48,12 +43,12 @@ function humanizeSegment(segment: string): string {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
-function getSegmentLabel(segment: string, lang: 'en' | 'zh'): string {
-  const labels = LABELS[lang] as Record<string, string>;
+function getSegmentLabel(segment: string, lang: Lang): string {
+  const labels = LABELS[lang];
   return labels[segment] || humanizeSegment(segment);
 }
 
-function buildBreadcrumbs(pathname: string, lang: 'en' | 'zh'): BreadcrumbItem[] {
+function buildBreadcrumbs(pathname: string, lang: Lang): BreadcrumbItem[] {
   const normalized = normalizePath(pathname);
   const rawSegments = normalized.split('/').filter(Boolean);
 
@@ -81,7 +76,7 @@ export default function Breadcrumbs({ lang }: BreadcrumbsProps) {
 
   return (
     <nav
-      aria-label={lang === 'zh' ? '\u9762\u5305\u5c51\u5bfc\u822a' : 'Breadcrumb'}
+      aria-label={lang === 'zh' ? '面包屑导航' : 'Breadcrumb'}
       className="container-custom pt-4 pb-2"
     >
       <ol
@@ -94,7 +89,7 @@ export default function Breadcrumbs({ lang }: BreadcrumbsProps) {
 
           return (
             <li
-              key={`${item.href}-${item.label}`}
+              key={item.href}
               className="inline-flex items-center gap-2"
               itemProp="itemListElement"
               itemScope
@@ -108,7 +103,7 @@ export default function Breadcrumbs({ lang }: BreadcrumbsProps) {
                 <Link
                   href={item.href}
                   itemProp="item"
-                  className="transition-colors hover:text-brand-300"
+                  className="transition-colors hover:text-brand-300 focus:outline-none focus:ring-2 focus:ring-brand-300/40 focus:ring-offset-2 focus:ring-offset-bg-app rounded"
                 >
                   <span itemProp="name">{item.label}</span>
                 </Link>

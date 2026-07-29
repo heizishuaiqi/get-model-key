@@ -1,0 +1,293 @@
+{
+  "slug": "china-ai-api-keys-complete-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": true,
+  "cluster": "china-ai",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 12,
+  "title": {
+    "en": "China AI API Keys Complete Guide (2026): DeepSeek, Kimi, Qwen, ERNIE & Doubao",
+    "zh": "中国 AI 模型 API Key 完全指南（2026）：DeepSeek、Kimi、通义千问、文心一言与豆包"
+  },
+  "excerpt": {
+    "en": "Complete guide to China's major AI API platforms. Compare DeepSeek, Kimi/Moonshot, Qwen, ERNIE, and Doubao on pricing, registration, payment methods, and how to choose the right one for your project.",
+    "zh": "中国主流 AI API 平台完全指南。对比 DeepSeek、Kimi/Moonshot、通义千问、文心一言和豆包的定价、注册、支付方式，以及如何为你的项目选择合适的平台。"
+  },
+  "tags": ["china ai", "deepseek", "kimi", "qwen", "ernie", "api key"],
+  "providerSlugs": ["deepseek", "moonshot", "alibaba", "baidu", "bytedance"],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": {
+        "en": "China AI API Landscape Overview",
+        "zh": "中国 AI API 格局概览"
+      },
+      "paragraphs": {
+        "en": [
+          "China's AI API ecosystem has matured rapidly. Several platforms now offer production-grade language model APIs with competitive pricing, strong multilingual support, and OpenAI-compatible endpoints. The five major platforms are DeepSeek, Moonshot AI (Kimi), Alibaba Tongyi Qianwen, Baidu ERNIE, and ByteDance Doubao.",
+          "Each platform has distinct strengths: DeepSeek leads on cost-efficiency and reasoning, Kimi excels at ultra-long context processing, Qwen offers the broadest model variety, ERNIE has deep Chinese language understanding, and Doubao provides aggressive pricing for high-volume usage.",
+          "For international developers, DeepSeek and Moonshot are the most accessible — both accept international phone numbers and provide English documentation. Alibaba's Qwen models are also globally available through Alibaba Cloud International. Baidu and ByteDance primarily target the domestic Chinese market."
+        ],
+        "zh": [
+          "中国 AI API 生态快速发展。多个平台现在提供生产级语言模型 API，具有有竞争力的定价、强大的多语言支持和 OpenAI 兼容端点。五大平台分别是 DeepSeek、月之暗面（Kimi）、阿里通义千问、百度文心一言和字节豆包。",
+          "每个平台各有优势：DeepSeek 在性价比和推理能力上领先，Kimi 在超长上下文处理上出色，通义千问提供最丰富的模型种类，文心一言有深入的中文理解能力，豆包在高并发场景下定价激进。",
+          "对于国际开发者，DeepSeek 和 Moonshot 最为友好——两者都接受国际手机号并提供英文文档。阿里的通义千问模型也可通过阿里云国际版全球访问。百度和字节主要面向国内市场。"
+        ]
+      }
+    },
+    {
+      "id": "platform-summary",
+      "heading": {
+        "en": "Platform-by-Platform Summary",
+        "zh": "各平台概览"
+      },
+      "paragraphs": {
+        "en": [
+          "Here is a quick overview of each platform's key characteristics. For detailed setup instructions, refer to the dedicated guide for each provider.",
+          "DeepSeek offers OpenAI-compatible endpoints with DeepSeek-V3 for general chat and DeepSeek-R1 for advanced reasoning. It is known for extremely competitive pricing and global accessibility. For step-by-step instructions, see our guide on how to get a DeepSeek API key.",
+          "Moonshot AI provides the Kimi API with the Kimi K3 model, which supports an ultra-long context window of up to 256K tokens. Kimi is particularly strong in Chinese language tasks and long-document understanding. See our dedicated guide on how to get a Kimi API key.",
+          "Alibaba Tongyi Qianwen (Qwen) offers the widest range of models, from Qwen-Turbo to Qwen-Max, available through Alibaba Cloud's DashScope platform. Baidu ERNIE provides the ERNIE 4.0 and ERNIE Speed models through its Qianfan platform. ByteDance Doubao offers aggressive per-token pricing through the Volcano Engine platform."
+        ],
+        "zh": [
+          "以下是各平台关键特性的快速概览。详细的设置说明请参考每个供应商的专门指南。",
+          "DeepSeek 提供 OpenAI 兼容端点，DeepSeek-V3 用于通用对话，DeepSeek-R1 用于高级推理。以极具竞争力的定价和全球可访问性著称。详细步骤请参阅我们的如何获取 DeepSeek API Key 指南。",
+          "月之暗面提供 Kimi API 和 Kimi K3 模型，支持高达 256K token 的超长上下文窗口。Kimi 在中文任务和长文档理解方面特别强。请参阅我们的专门指南：如何获取 Kimi API Key。",
+          "阿里通义千问（Qwen）提供最丰富的模型系列，从 Qwen-Turbo 到 Qwen-Max，通过阿里云 DashScope 平台提供。百度文心通过千帆平台提供 ERNIE 4.0 和 ERNIE Speed 模型。字节豆包通过火山引擎平台提供激进的每 token 定价。"
+        ]
+      }
+    },
+    {
+      "id": "api-key-access",
+      "heading": {
+        "en": "API Key Access Points",
+        "zh": "API Key 获取入口汇总"
+      },
+      "paragraphs": {
+        "en": [
+          "Each platform has its own developer portal where you register, generate API keys, and manage billing. Below is a summary of the access points for all five platforms."
+        ],
+        "zh": [
+          "每个平台都有自己的开发者门户，你可以在那里注册、生成 API Key 并管理计费。以下是五个平台获取入口的汇总。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "DeepSeek — platform.deepseek.com, accepts international phone numbers, OpenAI-compatible API",
+          "Moonshot (Kimi) — platform.moonshot.cn, accepts Chinese phone numbers, OpenAI-compatible API",
+          "Alibaba Qwen — dashscope.aliyun.com, requires Alibaba Cloud account, supports international accounts",
+          "Baidu ERNIE — qianfan.baidubce.com, requires Baidu account and real-name verification",
+          "ByteDance Doubao — volcengine.com, requires Volcano Engine account and real-name verification"
+        ],
+        "zh": [
+          "DeepSeek — platform.deepseek.com，支持国际手机号，API 兼容 OpenAI",
+          "Moonshot（Kimi）— platform.moonshot.cn，支持中国手机号，API 兼容 OpenAI",
+          "阿里通义千问 — dashscope.aliyun.com，需阿里云账号，支持国际账号",
+          "百度文心 — qianfan.baidubce.com，需百度账号及实名认证",
+          "字节豆包 — volcengine.com，需火山引擎账号及实名认证"
+        ]
+      }
+    },
+    {
+      "id": "pricing-comparison",
+      "heading": {
+        "en": "Pricing Comparison Across Platforms",
+        "zh": "各平台定价对比"
+      },
+      "paragraphs": {
+        "en": [
+          "Chinese AI API platforms are generally more affordable than their international counterparts. Pricing is per million tokens, with input and output rates billed separately. DeepSeek and Doubao are the most cost-effective, while ERNIE 4.0 and Qwen-Max command higher prices for their premium capabilities.",
+          "DeepSeek-V3 offers some of the lowest per-token rates in the market. Moonshot's Kimi K3 is competitively priced for its long-context capabilities. Qwen offers tiered pricing from budget (Qwen-Turbo) to premium (Qwen-Max). ERNIE 4.0 is priced at a premium for its deep Chinese optimization. Doubao's pricing is aggressively low, targeting high-volume enterprise customers.",
+          "Most platforms also offer prompt caching discounts and free trial credits for new users. Always check the official pricing pages for the latest rates, as prices in the Chinese AI market change frequently."
+        ],
+        "zh": [
+          "中国 AI API 平台通常比国际同类平台更经济实惠。按百万 token 计价，输入和输出分别计费。DeepSeek 和豆包性价比最高，而文心 4.0 和通义千问 Max 因其高端能力定价较高。",
+          "DeepSeek-V3 提供市场上最低的每 token 费率之一。Moonshot 的 Kimi K3 考虑到其长上下文能力，定价有竞争力。通义千问提供从经济型（Qwen-Turbo）到高端型（Qwen-Max）的分层定价。文心 4.0 因其中文深度优化定价较高。豆包定价激进，面向高并发企业客户。",
+          "大多数平台还提供提示缓存折扣和新用户免费试用额度。建议查看官方定价页面获取最新价格，因为中国 AI 市场价格变动频繁。"
+        ]
+      }
+    },
+    {
+      "id": "international-differences",
+      "heading": {
+        "en": "Differences from International APIs",
+        "zh": "与国际 API 的差异"
+      },
+      "paragraphs": {
+        "en": [
+          "Chinese AI APIs differ from international alternatives in several important ways beyond pricing. Understanding these differences helps you make an informed decision.",
+          "Registration requirements vary. DeepSeek and Moonshot accept international phone numbers, making them accessible to global developers. Alibaba Cloud International allows overseas users to access Qwen models. Baidu and ByteDance require Chinese phone numbers and real-name verification, which can be a barrier for international developers.",
+          "Payment methods are primarily domestic: Alipay and WeChat Pay are universally supported. DeepSeek and Alibaba Cloud International also support credit cards for international users. Documentation quality varies — DeepSeek and Moonshot provide English docs, while Baidu and ByteDance documentation is primarily in Chinese.",
+          "All five platforms provide OpenAI-compatible API endpoints, meaning you can use the standard OpenAI SDK with a different base URL. This significantly reduces migration effort if you are already using OpenAI's ecosystem."
+        ],
+        "zh": [
+          "中国 AI API 与国际替代方案在定价之外的多个重要方面有所不同。了解这些差异有助于做出明智的决策。",
+          "注册要求各不相同。DeepSeek 和 Moonshot 接受国际手机号，全球开发者均可使用。阿里云国际版允许海外用户访问通义千问模型。百度和字节要求中国手机号和实名认证，对国际开发者可能有门槛。",
+          "支付方式以国内为主：支付宝和微信支付普遍支持。DeepSeek 和阿里云国际版也支持国际用户的信用卡。文档质量不一——DeepSeek 和 Moonshot 提供英文文档，而百度和字节的文档主要为中文。",
+          "五个平台都提供 OpenAI 兼容的 API 端点，意味着你可以使用标准 OpenAI SDK，只需更换 base URL。如果你已经在使用 OpenAI 生态，这大大降低了迁移成本。"
+        ]
+      }
+    },
+    {
+      "id": "how-to-choose",
+      "heading": {
+        "en": "How to Choose the Right China AI API",
+        "zh": "如何选择适合的中国 AI API"
+      },
+      "paragraphs": {
+        "en": [
+          "The best platform depends on your specific needs. Here are practical recommendations based on common scenarios:",
+          "For cost-sensitive high-volume applications, DeepSeek and Doubao offer the best value. For long-context tasks like document analysis or codebase understanding, Kimi K3 with its 256K context window is the strongest choice. For the best Chinese language understanding, ERNIE 4.0 and Qwen-Max are top contenders.",
+          "For international developers, DeepSeek is the easiest to start with — global registration, English documentation, and OpenAI-compatible API. If you need a specific model's capability that is only available on a domestic platform, consider using a cloud intermediary or partnering with a China-based entity.",
+          "Many teams use multiple providers: for example, DeepSeek for general chat, Kimi for long-context tasks, and Qwen for multimodal applications. The OpenAI-compatible endpoints make it easy to switch between providers with minimal code changes."
+        ],
+        "zh": [
+          "最佳平台取决于你的具体需求。以下是基于常见场景的实用建议：",
+          "对于成本敏感的高并发应用，DeepSeek 和豆包提供最佳性价比。对于文档分析或代码库理解等长上下文任务，拥有 256K 上下文窗口的 Kimi K3 是最强选择。对于最佳中文理解能力，文心 4.0 和通义千问 Max 是顶级候选。",
+          "对于国际开发者，DeepSeek 最容易上手——全球注册、英文文档、OpenAI 兼容 API。如果你需要某个仅在国内平台提供的特定模型能力，可以考虑使用云中介或与国内实体合作。",
+          "很多团队使用多个供应商：例如 DeepSeek 用于通用对话，Kimi 用于长上下文任务，通义千问用于多模态应用。OpenAI 兼容端点使得在供应商之间切换只需最少的代码改动。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Best for cost: DeepSeek (low per-token rates) or Doubao (aggressive volume pricing)",
+          "Best for long context: Kimi K3 (256K token context window)",
+          "Best for Chinese language: ERNIE 4.0 or Qwen-Max (deep Chinese optimization)",
+          "Best for international developers: DeepSeek (global registration, English docs)",
+          "Best for model variety: Qwen (from Turbo to Max, multimodal support)"
+        ],
+        "zh": [
+          "最佳性价比：DeepSeek（低每 token 费率）或豆包（激进批量定价）",
+          "最佳长上下文：Kimi K3（256K token 上下文窗口）",
+          "最佳中文能力：文心 4.0 或通义千问 Max（深度中文优化）",
+          "最适合国际开发者：DeepSeek（全球注册、英文文档）",
+          "最佳模型多样性：通义千问（从 Turbo 到 Max，支持多模态）"
+        ]
+      }
+    },
+    {
+      "id": "getting-started-tips",
+      "heading": {
+        "en": "Getting Started Tips",
+        "zh": "入门建议"
+      },
+      "paragraphs": {
+        "en": [
+          "If you are new to Chinese AI APIs, start with DeepSeek — it has the lowest barrier to entry for international developers. Register with your email or international phone number, add credits via credit card, and use the OpenAI SDK with a different base URL.",
+          "Take advantage of free trial credits offered by most platforms. This lets you evaluate model quality on your own tasks before committing to paid usage. Test with your actual prompts and data, not just generic benchmarks.",
+          "Monitor your API usage and costs regularly. Chinese platforms often have different billing cycles and minimum top-up amounts compared to international providers. Set up spending alerts where available."
+        ],
+        "zh": [
+          "如果你刚开始使用中国 AI API，建议从 DeepSeek 入手——它对国际开发者门槛最低。用邮箱或国际手机号注册，通过信用卡充值，使用 OpenAI SDK 更换 base URL 即可。",
+          "利用大多数平台提供的新用户免费试用额度。这让你在付费使用前，可以在自己的任务上评估模型质量。用你实际的提示词和数据测试，而不仅仅是通用基准。",
+          "定期监控 API 使用量和成本。与国际供应商相比，中国平台通常有不同的计费周期和最低充值金额。在可用时设置消费提醒。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Can international developers use Chinese AI APIs?",
+        "zh": "国际开发者可以使用中国 AI API 吗？"
+      },
+      "answer": {
+        "en": "Yes, but accessibility varies by platform. DeepSeek and Alibaba Cloud International accept international registrations with credit card payments. Moonshot accepts international phone numbers. Baidu and ByteDance primarily require Chinese phone numbers and real-name verification, making them harder for overseas developers to access directly.",
+        "zh": "可以，但各平台可访问性不同。DeepSeek 和阿里云国际版接受国际注册并支持信用卡支付。Moonshot 接受国际手机号。百度和字节主要要求中国手机号和实名认证，海外开发者直接访问较为困难。"
+      }
+    },
+    {
+      "question": {
+        "en": "Are Chinese AI APIs cheaper than OpenAI?",
+        "zh": "中国 AI API 比 OpenAI 便宜吗？"
+      },
+      "answer": {
+        "en": "Generally yes. Chinese AI platforms offer significantly lower per-token pricing compared to OpenAI, especially DeepSeek and Doubao. However, exact savings depend on the model and usage volume. Premium models like ERNIE 4.0 and Qwen-Max are priced closer to international alternatives.",
+        "zh": "通常是的。中国 AI 平台的每 token 定价比 OpenAI 低不少，特别是 DeepSeek 和豆包。但具体节省多少取决于模型和使用量。文心 4.0 和通义千问 Max 等高端模型定价接近国际同类产品。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do Chinese AI APIs support OpenAI SDK?",
+        "zh": "中国 AI API 支持 OpenAI SDK 吗？"
+      },
+      "answer": {
+        "en": "Yes. All five major platforms (DeepSeek, Moonshot, Qwen, ERNIE, and Doubao) provide OpenAI-compatible API endpoints. You can use the standard OpenAI SDK by changing the base URL and API key, with no other code changes needed.",
+        "zh": "支持。五大平台（DeepSeek、Moonshot、通义千问、文心、豆包）都提供 OpenAI 兼容的 API 端点。你只需更改 base URL 和 API Key 即可使用标准 OpenAI SDK，无需其他代码改动。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which Chinese AI model is best for Chinese language tasks?",
+        "zh": "哪个中国 AI 模型最适合中文任务？"
+      },
+      "answer": {
+        "en": "ERNIE 4.0 and Qwen-Max are the top choices for Chinese language understanding, as they are specifically optimized for Chinese semantics, cultural context, and idiomatic expressions. Kimi K3 also performs excellently on Chinese tasks, especially for long-document processing in Chinese.",
+        "zh": "文心 4.0 和通义千问 Max 是中文理解的最佳选择，因为它们专门针对中文语义、文化背景和习惯用语进行了优化。Kimi K3 在中文任务上也表现出色，特别是中文长文档处理。"
+      }
+    },
+    {
+      "question": {
+        "en": "What payment methods do Chinese AI API platforms accept?",
+        "zh": "中国 AI API 平台支持哪些支付方式？"
+      },
+      "answer": {
+        "en": "Most platforms support Alipay and WeChat Pay. DeepSeek and Alibaba Cloud International also support credit cards for international users. Some platforms require a minimum top-up amount. Check each platform's billing page for specific payment options.",
+        "zh": "大多数平台支持支付宝和微信支付。DeepSeek 和阿里云国际版还支持国际用户的信用卡。部分平台有最低充值金额要求。请查看各平台的计费页面了解具体支付方式。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use multiple Chinese AI APIs together?",
+        "zh": "可以同时使用多个中国 AI API 吗？"
+      },
+      "answer": {
+        "en": "Absolutely. Since all major Chinese AI APIs provide OpenAI-compatible endpoints, you can use multiple providers simultaneously with minimal code changes. Many teams use DeepSeek for general chat, Kimi for long-context tasks, and Qwen for multimodal applications, switching between them by changing the base URL and API key.",
+        "zh": "完全可以。由于所有主要中国 AI API 都提供 OpenAI 兼容端点，你可以同时使用多个供应商，只需最少的代码改动。很多团队用 DeepSeek 做通用对话，Kimi 做长上下文任务，通义千问做多模态应用，通过更换 base URL 和 API Key 即可切换。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "DeepSeek API Documentation",
+      "url": "https://api-docs.deepseek.com/",
+      "site": "DeepSeek",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Moonshot AI Platform",
+      "url": "https://platform.moonshot.cn/",
+      "site": "Moonshot AI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Alibaba Cloud DashScope",
+      "url": "https://dashscope.aliyun.com/",
+      "site": "Alibaba Cloud",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Baidu Qianfan Platform",
+      "url": "https://qianfan.baidubce.com/",
+      "site": "Baidu",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Volcano Engine (Doubao)",
+      "url": "https://www.volcengine.com/product/doubao",
+      "site": "ByteDance Volcano Engine",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "China AI API Keys Complete Guide (2026): DeepSeek, Kimi, Qwen, ERNIE, Doubao | Get Model Key",
+      "zh": "中国 AI 模型 API Key 完全指南（2026）：DeepSeek、Kimi、通义千问、文心、豆包 | Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to China's major AI API platforms. Compare DeepSeek, Kimi, Qwen, ERNIE, and Doubao on pricing, registration, payment methods, and model capabilities.",
+      "zh": "中国主流 AI API 平台完全指南。对比 DeepSeek、Kimi、通义千问、文心和豆包的定价、注册、支付方式和模型能力。"
+    }
+  }
+}

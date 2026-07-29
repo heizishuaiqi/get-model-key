@@ -1,7 +1,8 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
+import type { Lang } from '@/lib/shared';
 
 interface FooterProps {
-  lang: 'en' | 'zh';
+  lang: Lang;
 }
 
 export default function Footer({ lang }: FooterProps) {

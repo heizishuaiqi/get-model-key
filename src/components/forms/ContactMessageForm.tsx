@@ -1,8 +1,7 @@
-﻿'use client';
+'use client';
 
-import { FormEvent, useState } from 'react';
-
-type Lang = 'en' | 'zh';
+import { FormEvent, useState, useRef, useEffect } from 'react';
+import type { Lang } from '@/lib/shared';
 
 interface ContactMessageFormProps {
   lang: Lang;
@@ -20,6 +19,9 @@ type FieldName = keyof FormValues;
 type FormErrors = Partial<Record<FieldName, string>>;
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MIN_NAME_LENGTH = 2;
+const MIN_MESSAGE_LENGTH = 10;
+const SUCCESS_TIMEOUT_MS = 3000;
 
 const COPY = {
   en: {
@@ -99,11 +101,18 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const successTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  useEffect(() => {
+    return () => {
+      if (successTimerRef.current) clearTimeout(successTimerRef.current);
+    };
+  }, []);
 
   const validate = (nextValues: FormValues): FormErrors => {
     const nextErrors: FormErrors = {};
 
-    if (nextValues.name.trim().length < 2) {
+    if (nextValues.name.trim().length < MIN_NAME_LENGTH) {
       nextErrors.name = text.errors.name;
     }
 
@@ -115,7 +124,7 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
       nextErrors.subject = text.errors.subject;
     }
 
-    if (nextValues.message.trim().length < 10) {
+    if (nextValues.message.trim().length < MIN_MESSAGE_LENGTH) {
       nextErrors.message = text.errors.message;
     }
 
@@ -161,7 +170,7 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
     setIsSubmitting(false);
     setShowSuccess(true);
     setValues(INITIAL_VALUES);
-    setTimeout(() => setShowSuccess(false), 3000);
+    successTimerRef.current = setTimeout(() => setShowSuccess(false), SUCCESS_TIMEOUT_MS);
   };
 
   const handleReset = () => {
@@ -200,13 +209,16 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
               type="text"
               id={`contact-name-${lang}`}
               name="name"
+              autoComplete="name"
               value={values.name}
               onChange={(event) => updateField('name', event.target.value)}
               className={fieldClass('name')}
               placeholder={text.placeholders.name}
               disabled={isSubmitting}
+              aria-invalid={errors.name ? true : undefined}
+              aria-describedby={errors.name ? `contact-name-${lang}-error` : undefined}
             />
-            {errors.name && <p className="mt-2 text-body-sm text-danger-500">{errors.name}</p>}
+            {errors.name && <p id={`contact-name-${lang}-error`} role="alert" className="mt-2 text-body-sm text-danger-500">{errors.name}</p>}
           </div>
 
           <div>
@@ -217,13 +229,16 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
               type="email"
               id={`contact-email-${lang}`}
               name="email"
+              autoComplete="email"
               value={values.email}
               onChange={(event) => updateField('email', event.target.value)}
               className={fieldClass('email')}
               placeholder={text.placeholders.email}
               disabled={isSubmitting}
+              aria-invalid={errors.email ? true : undefined}
+              aria-describedby={errors.email ? `contact-email-${lang}-error` : undefined}
             />
-            {errors.email && <p className="mt-2 text-body-sm text-danger-500">{errors.email}</p>}
+            {errors.email && <p id={`contact-email-${lang}-error`} role="alert" className="mt-2 text-body-sm text-danger-500">{errors.email}</p>}
           </div>
         </div>
 
@@ -238,6 +253,8 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
             onChange={(event) => updateField('subject', event.target.value)}
             className={fieldClass('subject')}
             disabled={isSubmitting}
+            aria-invalid={errors.subject ? true : undefined}
+            aria-describedby={errors.subject ? `contact-subject-${lang}-error` : undefined}
           >
             <option value="">{text.subjectPlaceholder}</option>
             {text.subjects.map((subject) => (
@@ -246,7 +263,7 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
               </option>
             ))}
           </select>
-          {errors.subject && <p className="mt-2 text-body-sm text-danger-500">{errors.subject}</p>}
+          {errors.subject && <p id={`contact-subject-${lang}-error`} role="alert" className="mt-2 text-body-sm text-danger-500">{errors.subject}</p>}
         </div>
 
         <div>
@@ -262,8 +279,10 @@ export default function ContactMessageForm({ lang, contactEmail }: ContactMessag
             className={`${fieldClass('message')} resize-none`}
             placeholder={text.placeholders.message}
             disabled={isSubmitting}
+            aria-invalid={errors.message ? true : undefined}
+            aria-describedby={errors.message ? `contact-message-${lang}-error` : undefined}
           />
-          {errors.message && <p className="mt-2 text-body-sm text-danger-500">{errors.message}</p>}
+          {errors.message && <p id={`contact-message-${lang}-error`} role="alert" className="mt-2 text-body-sm text-danger-500">{errors.message}</p>}
         </div>
 
         <div className="flex items-center gap-4">

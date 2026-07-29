@@ -1,10 +1,11 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Card from '@/components/ui/Card';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import PillButton from '@/components/ui/PillButton';
 import ContactMessageForm from '@/components/forms/ContactMessageForm';
 import { getSiteConfig } from '@/lib/providers';
+import { baseUrl } from '@/lib/root-metadata';
 
 export const metadata: Metadata = {
   title: '联系我们 - Get Model Key',
@@ -16,6 +17,19 @@ export const metadata: Metadata = {
       zh: '/zh/contact/',
       'x-default': '/contact/',
     },
+  },
+  openGraph: {
+    type: 'article',
+    url: `${baseUrl}/zh/contact/`,
+    title: '联系我们 - Get Model Key',
+    description: '联系 Get Model Key，反馈链接错误、补充新提供商或提出产品建议。',
+    siteName: 'Get Model Key',
+    locale: 'zh_CN',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '联系我们 - Get Model Key',
+    description: '联系 Get Model Key，反馈链接错误、补充新提供商或提出产品建议。',
   },
 };
 
@@ -49,7 +63,7 @@ export default async function ZhContactPage() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                    <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -62,7 +76,7 @@ export default async function ZhContactPage() {
                     className="inline-flex items-center gap-2 text-h4 text-brand-300 transition-colors hover:text-brand-400"
                   >
                     {siteConfig.contactEmail}
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
@@ -102,7 +116,7 @@ export default async function ZhContactPage() {
                   className="flex items-center justify-between rounded-lg bg-surface-1 p-3 transition-colors hover:bg-surface-2"
                 >
                   <span className="text-body text-text-primary">浏览全部供应商</span>
-                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
@@ -111,7 +125,7 @@ export default async function ZhContactPage() {
                   className="flex items-center justify-between rounded-lg bg-surface-1 p-3 transition-colors hover:bg-surface-2"
                 >
                   <span className="text-body text-text-primary">了解项目定位</span>
-                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
@@ -120,7 +134,7 @@ export default async function ZhContactPage() {
                   className="flex items-center justify-between rounded-lg bg-surface-1 p-3 transition-colors hover:bg-surface-2"
                 >
                   <span className="text-body text-text-primary">查看隐私政策</span>
-                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="h-5 w-5 text-text-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
@@ -137,7 +151,7 @@ export default async function ZhContactPage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Card variant="standard" hover padding="lg" className="text-center">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
@@ -146,7 +160,7 @@ export default async function ZhContactPage() {
             </Card>
             <Card variant="standard" hover padding="lg" className="text-center">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -155,7 +169,7 @@ export default async function ZhContactPage() {
             </Card>
             <Card variant="standard" hover padding="lg" className="text-center">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
@@ -164,7 +178,7 @@ export default async function ZhContactPage() {
             </Card>
             <Card variant="standard" hover padding="lg" className="text-center">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-12">
-                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>

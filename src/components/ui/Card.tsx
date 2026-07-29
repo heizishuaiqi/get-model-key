@@ -34,8 +34,14 @@ export default function Card({
     ? 'transition-all duration-300 hover:border-white-08 hover:shadow-float' 
     : '';
 
-  const baseClasses = `${variantClasses[variant]} ${paddingClasses[padding]} ${hoverClasses}`;
-  const combinedClasses = `${baseClasses} ${className}`.trim();
+  const combinedClasses = [
+    variantClasses[variant],
+    paddingClasses[padding],
+    hoverClasses,
+    className || null,
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <div className={combinedClasses}>

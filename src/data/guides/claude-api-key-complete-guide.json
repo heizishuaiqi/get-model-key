@@ -1,0 +1,169 @@
+{
+  "slug": "claude-api-key-complete-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": true,
+  "cluster": "claude",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 10,
+  "title": {
+    "en": "Claude API Key Complete Guide (2026): Setup, Pricing & Model Comparison",
+    "zh": "Claude API Key 完全指南（2026）：开通、定价与模型对比"
+  },
+  "excerpt": {
+    "en": "Everything about Claude API keys: how to create an Anthropic API key, choose between Claude Sonnet/Opus/Haiku, understand pricing, and integrate with the Anthropic SDK.",
+    "zh": "关于 Claude API Key 的一切：如何创建 Anthropic API Key、在 Claude Sonnet/Opus/Haiku 之间选择、理解定价，以及集成 Anthropic SDK。"
+  },
+  "tags": ["claude", "anthropic", "api key", "pricing", "setup"],
+  "providerSlugs": ["anthropic"],
+  "sections": [
+    {
+      "id": "overview",
+      "heading": {
+        "en": "Claude API Overview",
+        "zh": "Claude API 概览"
+      },
+      "paragraphs": {
+        "en": [
+          "Claude is Anthropic's AI assistant, accessed programmatically through the Anthropic API. Claude models are known for strong reasoning, writing quality, and safety features. The API provides access to multiple model tiers: Claude Opus (most capable), Claude Sonnet (balanced), and Claude Haiku (fast and affordable).",
+          "Claude API key searches remain consistently high, with 'claude api key' and 'how to get claude api key' being among the most searched terms in the AI API space."
+        ],
+        "zh": [
+          "Claude 是 Anthropic 的 AI 助手，通过 Anthropic API 进行编程调用。Claude 模型以强推理、写作质量和安全特性著称。API 提供多个模型层级：Claude Opus（能力最强）、Claude Sonnet（均衡）和 Claude Haiku（快速实惠）。",
+          "Claude API Key 的搜索热度持续较高，「claude api key」和「how to get claude api key」是 AI API 领域搜索量最高的词之一。"
+        ]
+      }
+    },
+    {
+      "id": "models",
+      "heading": {
+        "en": "Claude Model Tiers",
+        "zh": "Claude 模型层级"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic offers three model tiers to balance performance and cost:"
+        ],
+        "zh": [
+          "Anthropic 提供三个模型层级来平衡性能和成本："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Claude Opus — Most capable, best for complex reasoning and analysis",
+          "Claude Sonnet — Balanced performance and cost, good for most use cases",
+          "Claude Haiku — Fastest and most affordable, ideal for high-volume tasks"
+        ],
+        "zh": [
+          "Claude Opus — 能力最强，适合复杂推理和分析",
+          "Claude Sonnet — 性能与成本均衡，适合大多数场景",
+          "Claude Haiku — 最快最实惠，适合高用量任务"
+        ]
+      }
+    },
+    {
+      "id": "getting-key",
+      "heading": {
+        "en": "Getting Your API Key",
+        "zh": "获取 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "To use Claude's API, you need an Anthropic API key created from the Anthropic Console. The process involves registering an account, generating a key, and adding credits.",
+          "For detailed step-by-step instructions, see our dedicated guide on how to get a Claude API key."
+        ],
+        "zh": [
+          "要使用 Claude API，你需要从 Anthropic Console 创建 Anthropic API Key。流程包括注册账号、生成 Key 和充值。",
+          "详细步骤说明请参阅我们的专门指南：如何获取 Claude API Key。"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Pricing Structure",
+        "zh": "定价结构"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic charges per million tokens, with separate input and output rates for each model tier. Claude Haiku is the most affordable, Claude Sonnet is mid-range, and Claude Opus commands a premium for its advanced capabilities.",
+          "Anthropic also offers batch API discounts and prompt caching to reduce costs for specific use cases."
+        ],
+        "zh": [
+          "Anthropic 按百万 token 计费，每个模型层级的输入和输出分别定价。Claude Haiku 最实惠，Claude Sonnet 中档，Claude Opus 因其高级能力定价较高。",
+          "Anthropic 还提供批量 API 折扣和提示缓存来降低特定场景的成本。"
+        ]
+      }
+    },
+    {
+      "id": "comparison",
+      "heading": {
+        "en": "Claude vs OpenAI: Which to Choose?",
+        "zh": "Claude vs OpenAI：选哪个？"
+      },
+      "paragraphs": {
+        "en": [
+          "Both Claude and OpenAI offer excellent AI models, but they excel in different areas. Claude is often preferred for long-context reasoning, writing quality, and safety. OpenAI's GPT models are more widely integrated and have a larger ecosystem.",
+          "Many developers use both APIs — Claude for tasks that require careful reasoning and OpenAI for general-purpose tasks or where ecosystem compatibility matters."
+        ],
+        "zh": [
+          "Claude 和 OpenAI 都提供优秀的 AI 模型，但各有所长。Claude 在长上下文推理、写作质量和安全性方面通常更受青睐。OpenAI 的 GPT 模型生态更广泛，集成更多。",
+          "很多开发者同时使用两个 API——Claude 用于需要仔细推理的任务，OpenAI 用于通用任务或生态兼容性重要的场景。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is Claude API or OpenAI API cheaper?",
+        "zh": "Claude API 和 OpenAI API 哪个更便宜？"
+      },
+      "answer": {
+        "en": "It depends on the model tier you compare. Claude Haiku is very competitively priced. Claude Opus is more expensive than GPT-4o. For most use cases, compare specific model prices to find the best value for your needs.",
+        "zh": "取决于你比较的模型层级。Claude Haiku 价格很有竞争力。Claude Opus 比 GPT-4o 贵。大多数场景下，建议比较具体模型价格来找到最适合你需求的方案。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I try Claude API for free?",
+        "zh": "可以免费试用 Claude API 吗？"
+      },
+      "answer": {
+        "en": "New Anthropic accounts may receive a small amount of free credits for testing. There is no permanent free tier. For ongoing free access to AI models, consider Google AI Studio's Gemini API free tier.",
+        "zh": "新注册的 Anthropic 账号可能会获得少量免费测试额度。没有永久免费层。如果需要持续免费使用 AI 模型，可以考虑 Google AI Studio 的 Gemini API 免费额度。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Anthropic Console",
+      "url": "https://console.anthropic.com/",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic API Documentation",
+      "url": "https://docs.anthropic.com/",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Anthropic Pricing",
+      "url": "https://www.anthropic.com/pricing",
+      "site": "Anthropic",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Claude API Key Complete Guide (2026) | Get Model Key",
+      "zh": "Claude API Key 完全指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to Claude API: Anthropic key setup, model comparison (Opus/Sonnet/Haiku), pricing, SDK integration, and Claude vs OpenAI comparison.",
+      "zh": "Claude API 完全指南：Anthropic Key 开通、模型对比（Opus/Sonnet/Haiku）、定价、SDK 集成，以及 Claude 与 OpenAI 的比较。"
+    }
+  }
+}

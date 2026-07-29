@@ -1,11 +1,12 @@
 import type { Provider } from '@/types/provider';
+import type { Lang } from '@/lib/shared';
 import Card from '@/components/ui/Card';
 
 type SectionKey = 'overview' | 'howToGetKey' | 'faq';
 
 interface ProviderContentSectionsProps {
   provider: Provider;
-  lang: 'en' | 'zh';
+  lang: Lang;
   include?: SectionKey[];
 }
 
@@ -47,8 +48,8 @@ export default function ProviderContentSections({
         <Card variant="standard">
           <h2 className="mb-4 text-h2 text-text-primary">{labels.overview}</h2>
           <div className="space-y-3">
-            {overview.map((paragraph) => (
-              <p key={paragraph} className="text-body text-text-secondary">
+            {overview.map((paragraph, index) => (
+              <p key={`overview-${index}`} className="text-body text-text-secondary">
                 {paragraph}
               </p>
             ))}
@@ -60,8 +61,8 @@ export default function ProviderContentSections({
         <Card variant="standard">
           <h2 className="mb-4 text-h2 text-text-primary">{labels.howToGetKey}</h2>
           <ol className="list-decimal space-y-3 pl-5 text-body text-text-secondary">
-            {howToGetKey.map((step) => (
-              <li key={step}>{step}</li>
+            {howToGetKey.map((step, index) => (
+              <li key={`step-${index}`}>{step}</li>
             ))}
           </ol>
         </Card>

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import GuideCard from '@/components/guides/GuideCard';
 import Card from '@/components/ui/Card';
-import { getPublishedGuides } from '@/lib/guides';
+import Badge from '@/components/ui/Badge';
+import { getPublishedGuides, getGuidesGroupedByCluster, CLUSTER_LABELS } from '@/lib/guides';
 import { getGuidesIndexMetadata } from '@/lib/seo';
 import { getSiteConfig } from '@/lib/providers';
 
@@ -10,9 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ZhGuidesPage() {
-  const [guides, siteConfig] = await Promise.all([
+  const [guides, siteConfig, clusterGroups] = await Promise.all([
     getPublishedGuides(),
     getSiteConfig(),
+    getGuidesGroupedByCluster(),
   ]);
 
   const itemListStructuredData = {
@@ -43,9 +46,51 @@ export default async function ZhGuidesPage() {
           </p>
         </div>
 
-        <div className="mb-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {guides.map((guide) => (
-            <GuideCard key={guide.slug} guide={guide} lang="zh" />
+        {/* 按集群分组 — 支柱页 + 集群文章 */}
+        <div className="mb-12 space-y-12">
+          {clusterGroups.map(({ cluster, pillar, articles }) => (
+            <section key={cluster}>
+              <div className="mb-6 flex items-center gap-3">
+                <h2 className="text-h2 text-text-primary">
+                  {CLUSTER_LABELS[cluster]?.zh ?? cluster}
+                </h2>
+                <span className="text-caption text-text-muted">
+                  {articles.length + (pillar ? 1 : 0)} 篇指南
+                </span>
+              </div>
+
+              {/* 支柱页 — 优先展示 */}
+              {pillar && (
+                <div className="mb-4">
+                  <Card variant="emphasis" hover className="group relative overflow-hidden transition-transform duration-300 hover:scale-[1.01]">
+                    <Link
+                      href={`/zh/guides/${pillar.slug}/`}
+                      aria-label={`阅读支柱指南：${pillar.title.zh}`}
+                      className="absolute inset-0 z-10 rounded-2xl"
+                    />
+                    <div className="pointer-events-none relative z-20 flex flex-col gap-3">
+                      <div className="flex items-center gap-2">
+                        <Badge variant="success">支柱指南</Badge>
+                        <span className="text-caption text-text-muted">
+                          {pillar.readingMinutes} 分钟阅读
+                        </span>
+                      </div>
+                      <h3 className="text-h3 text-text-primary">{pillar.title.zh}</h3>
+                      <p className="text-body-sm text-text-secondary">{pillar.excerpt.zh}</p>
+                    </div>
+                  </Card>
+                </div>
+              )}
+
+              {/* 集群文章 */}
+              {articles.length > 0 && (
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  {articles.map((guide) => (
+                    <GuideCard key={guide.slug} guide={guide} lang="zh" />
+                  ))}
+                </div>
+              )}
+            </section>
           ))}
         </div>
 

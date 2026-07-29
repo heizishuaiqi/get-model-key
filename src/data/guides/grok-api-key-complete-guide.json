@@ -1,0 +1,241 @@
+{
+  "slug": "grok-api-key-complete-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": true,
+  "cluster": "grok",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 10,
+  "title": {
+    "en": "Grok API Key Complete Guide (2026): Setup, Pricing, Models & Best Practices",
+    "zh": "Grok API Key 完全指南（2026）：开通、定价、模型与最佳实践"
+  },
+  "excerpt": {
+    "en": "Everything you need to know about Grok API keys: how to register on xAI, create keys, understand Grok-2 vs Grok-3 vs Grok-4.5 pricing, fix common errors, and build real-time-aware applications.",
+    "zh": "关于 Grok API Key 的一切：如何在 xAI 注册、创建密钥、理解 Grok-2 / Grok-3 / Grok-4.5 定价差异、排查常见错误，以及构建实时信息应用。"
+  },
+  "tags": ["grok", "xai", "api key", "complete guide", "grok 4.5"],
+  "providerSlugs": ["xai"],
+  "sections": [
+    {
+      "id": "what-is-grok",
+      "heading": {
+        "en": "What is Grok?",
+        "zh": "什么是 Grok？"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok is the AI model family developed by xAI, the company founded by Elon Musk. Unlike other LLMs, Grok has real-time access to information through X (formerly Twitter), giving it a unique advantage for current-events queries. The model also has a more humorous, less filtered personality that distinguishes it from GPT-4o and Claude.",
+          "The Grok API is fully OpenAI-compatible, meaning you can use the same SDK and code patterns with just a base URL change. This makes migration from OpenAI straightforward."
+        ],
+        "zh": [
+          "Grok 是 xAI 开发的 AI 模型系列，xAI 由马斯克创立。与其他 LLM 不同，Grok 通过 X（原 Twitter）获取实时信息，在时事查询方面有独特优势。模型风格更幽默、过滤更少，与 GPT-4o 和 Claude 形成差异。",
+          "Grok API 完全兼容 OpenAI 格式，只需更改 base URL 即可使用相同的 SDK 和代码模式，从 OpenAI 迁移非常简单。"
+        ]
+      }
+    },
+    {
+      "id": "grok-models",
+      "heading": {
+        "en": "Grok Model Lineup: Grok-2, Grok-3, and Grok-4.5",
+        "zh": "Grok 模型阵容：Grok-2、Grok-3 和 Grok-4.5"
+      },
+      "paragraphs": {
+        "en": [
+          "xAI offers three main Grok models. Grok-2 is the cost-effective option for lighter workloads. Grok-3 is the flagship with the strongest reasoning and multimodal capabilities. Grok-4.5, released July 2026, is the first model co-trained with Cursor, specifically optimized for coding and agentic tasks with 1.5 trillion parameters.",
+          "For most general-purpose applications, Grok-3 provides the best balance of performance and cost. For coding tasks, Grok-4.5 offers superior token efficiency. For cost-sensitive workloads, Grok-2 remains a solid choice."
+        ],
+        "zh": [
+          "xAI 提供三个主要 Grok 模型。Grok-2 适合轻量负载，性价比高。Grok-3 是旗舰模型，推理和多模态能力最强。Grok-4.5 于 2026 年 7 月发布，是首个与 Cursor 联合训练的模型，1.5 万亿参数，专为编程和 Agent 任务优化。",
+          "通用场景下 Grok-3 提供最佳性能与成本平衡。编程任务推荐 Grok-4.5，Token 效率更优。成本敏感场景可选用 Grok-2。"
+        ]
+      }
+    },
+    {
+      "id": "how-to-get-key",
+      "heading": {
+        "en": "How to Get a Grok API Key",
+        "zh": "如何获取 Grok API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Getting a Grok API key is straightforward. Go to console.x.ai, sign up with your email or X account, bind a payment method, and create an API key in the dashboard. The key is shown only once at creation time, so copy it immediately.",
+          "There is no permanent free tier, but xAI has offered promotional credits in the past. Check the console dashboard after signing up for any active promotions.",
+          "For a detailed step-by-step walkthrough including screenshots and code examples, see our dedicated guide: [[guide:how-to-get-grok-api-key|How to Get a Grok API Key]]."
+        ],
+        "zh": [
+          "获取 Grok API Key 很简单。访问 console.x.ai，用邮箱或 X 账号注册，绑定支付方式，然后在后台创建 API Key。Key 只在创建时显示一次，请立即复制保存。",
+          "API 没有永久免费套餐，但 xAI 曾推出过促销额度。注册后可在控制台查看当前活动。",
+          "如需包含截图和代码示例的详细步骤，请参阅我们的专门指南：[[guide:how-to-get-grok-api-key|如何获取 Grok API Key]]。"
+        ]
+      }
+    },
+    {
+      "id": "grok-45-setup",
+      "heading": {
+        "en": "Setting Up Grok 4.5 for Coding",
+        "zh": "为编程设置 Grok 4.5"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok 4.5 is particularly powerful for coding tasks. Its API uses the same OpenAI-compatible format, with the model ID grok-4.5. If you already use the OpenAI SDK, migration requires only two changes: swap the base URL to https://api.x.ai/v1 and replace your API key.",
+          "For a comprehensive guide covering registration, first API call, error handling, and pricing comparison against Claude Sonnet 5, see our detailed guide: [[guide:grok-45-api-key-setup-2026|How to Get a Grok 4.5 API Key]]."
+        ],
+        "zh": [
+          "Grok 4.5 在编程任务上特别强大。API 使用相同的 OpenAI 兼容格式，模型 ID 为 grok-4.5。如果已在用 OpenAI SDK，只需更改两处：将 base URL 改为 https://api.x.ai/v1 并替换 API Key。",
+          "如需涵盖注册、首次 API 调用、错误处理及与 Claude Sonnet 5 定价对比的完整指南，请参阅：[[guide:grok-45-api-key-setup-2026|Grok 4.5 API Key 申请教程]]。"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Grok API Pricing",
+        "zh": "Grok API 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok models are priced competitively. Grok-4.5 costs $2 per million input tokens and $6 per million output tokens — significantly lower than Claude Opus 4.8 ($15/$75) while delivering comparable benchmark performance.",
+          "The cost advantage is amplified by token efficiency: Grok 4.5 completes complex coding tasks using roughly half the tokens of comparable models. Input and output tokens are billed separately, with discounts for cached prompts on some models."
+        ],
+        "zh": [
+          "Grok 模型定价有竞争力。Grok-4.5 输入 $2/百万 Tokens、输出 $6/百万 Tokens，远低于 Claude Opus 4.8（$15/$75），同时提供可比的基准性能。",
+          "成本优势因 Token 效率而放大：Grok 4.5 完成复杂编程任务的 Token 消耗约为竞品的一半。输入和输出 Token 分别计价，部分模型有缓存提示词折扣。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Grok-2: Budget option for light workloads",
+          "Grok-3: Flagship model for general-purpose use",
+          "Grok-4.5: $2 input / $6 output per million tokens, optimized for coding",
+          "Claude Sonnet 5: $3 input / $15 output per million tokens (comparison)",
+          "All models: prepaid credits model, no permanent free tier"
+        ],
+        "zh": [
+          "Grok-2：轻量负载的经济选择",
+          "Grok-3：通用旗舰模型",
+          "Grok-4.5：$2 输入 / $6 输出（每百万 Tokens），专为编程优化",
+          "Claude Sonnet 5：$3 输入 / $15 输出（每百万 Tokens，对比参考）",
+          "所有模型：预付额度模式，无永久免费套餐"
+        ]
+      }
+    },
+    {
+      "id": "code-example",
+      "heading": {
+        "en": "Quick Start: Your First Grok API Call",
+        "zh": "快速开始：第一次 Grok API 调用"
+      },
+      "paragraphs": {
+        "en": [
+          "The xAI API is OpenAI-compatible. Use the OpenAI SDK with the xAI base URL and your Grok API key:"
+        ],
+        "zh": [
+          "xAI 的 API 兼容 OpenAI 格式。使用 OpenAI SDK，配合 xAI 的 base URL 和你的 Grok API Key："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"your-grok-api-key\",\n    base_url=\"https://api.x.ai/v1\"\n)\n\nresponse = client.chat.completions.create(\n    model=\"grok-3\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"What's the latest AI news today?\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Calling the Grok-3 model through the xAI API using the OpenAI Python SDK",
+            "zh": "使用 OpenAI Python SDK 通过 xAI API 调用 Grok-3 模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "best-practices",
+      "heading": {
+        "en": "Best Practices",
+        "zh": "最佳实践"
+      },
+      "paragraphs": {
+        "en": [
+          "Always store your API key as a server-side environment variable. Never expose it in client-side code or public repositories. Use descriptive key names in the console so you can track which application each key belongs to.",
+          "Monitor your usage through the xAI console dashboard. Set up billing alerts to avoid unexpected charges. For production applications, implement exponential backoff retry logic for 429 rate limit errors.",
+          "Take advantage of Grok's real-time information access for applications that need current-events awareness — this is a capability that most other LLMs cannot match."
+        ],
+        "zh": [
+          "始终将 API Key 存储为服务端环境变量，不要在客户端代码或公开仓库中暴露。在控制台中使用描述性 Key 名称，便于追踪每个 Key 对应的应用。",
+          "通过 xAI 控制台监控用量，设置账单告警以避免意外费用。生产环境中，为 429 限流错误实现指数退避重试逻辑。",
+          "利用 Grok 的实时信息访问能力构建需要时事感知的应用——这是大多数其他 LLM 无法匹配的能力。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is the Grok API free?",
+        "zh": "Grok API 是免费的吗？"
+      },
+      "answer": {
+        "en": "The Grok API is not free. It uses a prepaid credits model with no permanent free tier. New accounts may receive promotional credits for initial testing. After credits are used, you need to add funds to continue.",
+        "zh": "Grok API 不是免费的。采用预付额度模式，无永久免费套餐。新账户可能会获得促销额度用于初始测试，用完后需要充值才能继续使用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is the Grok API OpenAI-compatible?",
+        "zh": "Grok API 兼容 OpenAI 吗？"
+      },
+      "answer": {
+        "en": "Yes. The xAI API is fully OpenAI-compatible. Use the OpenAI SDK with base URL https://api.x.ai/v1 and your Grok API key. The request format is the same — just change the model name to grok-2, grok-3, or grok-4.5.",
+        "zh": "完全兼容。xAI 的 API 完全兼容 OpenAI 格式。使用 OpenAI SDK，将 base URL 设为 https://api.x.ai/v1 并使用你的 Grok API Key。请求格式相同，只需将模型名改为 grok-2、grok-3 或 grok-4.5。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which Grok model should I use?",
+        "zh": "我应该用哪个 Grok 模型？"
+      },
+      "answer": {
+        "en": "Use Grok-3 for general-purpose applications needing the best reasoning and multimodal capabilities. Use Grok-4.5 for coding and agentic tasks — it offers superior token efficiency. Use Grok-2 for cost-sensitive, lighter workloads.",
+        "zh": "通用场景用 Grok-3，推理和多模态能力最强。编程和 Agent 任务用 Grok-4.5，Token 效率更优。成本敏感的轻量负载用 Grok-2。"
+      }
+    },
+    {
+      "question": {
+        "en": "What makes Grok different from ChatGPT or Claude?",
+        "zh": "Grok 与 ChatGPT 或 Claude 有什么不同？"
+      },
+      "answer": {
+        "en": "Grok's main differentiator is real-time information access through X's data pipeline, allowing it to answer questions about current events. It also has a more humorous, less filtered personality. For coding, Grok 4.5 was co-trained with Cursor, making it especially strong at multi-file project understanding.",
+        "zh": "Grok 的主要差异是通过 X 数据管道访问实时信息，可以回答时事问题。风格更幽默、过滤更少。编程方面，Grok 4.5 与 Cursor 联合训练，在多文件项目理解上格外出色。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "xAI API Documentation",
+      "url": "https://docs.x.ai/",
+      "site": "xAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "xAI Console",
+      "url": "https://console.x.ai/",
+      "site": "xAI",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Grok 4.5 Model Specs",
+      "url": "https://docs.x.ai/docs/models",
+      "site": "xAI Docs",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Grok API Key Complete Guide (2026) | Get Model Key",
+      "zh": "Grok API Key 完全指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to Grok API keys: xAI registration, key creation, Grok-2/3/4.5 model comparison, pricing, error fixes, and best practices.",
+      "zh": "Grok API Key 完全指南：xAI 注册、密钥创建、Grok-2/3/4.5 模型对比、定价、排错与最佳实践。"
+    }
+  }
+}

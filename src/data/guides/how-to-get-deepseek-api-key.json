@@ -1,0 +1,189 @@
+{
+  "slug": "how-to-get-deepseek-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "deepseek",
+  "pillarSlug": "deepseek-api-key-complete-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 7,
+  "title": {
+    "en": "How to Get a DeepSeek API Key (2026 Step-by-Step Guide)",
+    "zh": "如何获取 DeepSeek API Key（2026 逐步指南）"
+  },
+  "excerpt": {
+    "en": "DeepSeek offers competitive pricing and strong reasoning models. Here's exactly how to create your DeepSeek API key, check pricing, and make your first request.",
+    "zh": "DeepSeek 提供有竞争力的定价和强大的推理模型。本文教你如何创建 DeepSeek API Key、查看定价，并发送第一个请求。"
+  },
+  "tags": ["deepseek", "api key", "setup", "china"],
+  "providerSlugs": ["deepseek"],
+  "sections": [
+    {
+      "id": "why-deepseek",
+      "heading": {
+        "en": "Why Choose DeepSeek API?",
+        "zh": "为什么选择 DeepSeek API？"
+      },
+      "paragraphs": {
+        "en": [
+          "DeepSeek has become one of the fastest-growing AI API providers in 2026, with search interest increasing over 60% month-over-month. The DeepSeek-V3 and DeepSeek-R1 models offer competitive performance at significantly lower prices than many international alternatives.",
+          "DeepSeek is particularly strong in reasoning tasks, code generation, and multilingual support. If you're looking for a cost-effective API with strong reasoning capabilities, DeepSeek is worth serious consideration."
+        ],
+        "zh": [
+          "DeepSeek 已成为 2026 年增长最快的 AI API 供应商之一，搜索热度月增长超过 60%。DeepSeek-V3 和 DeepSeek-R1 模型在性能上有竞争力的同时，价格比许多国际替代方案低不少。",
+          "DeepSeek 在推理任务、代码生成和多语言支持方面表现突出。如果你在找一个性价比高且推理能力强的 API，DeepSeek 值得认真考虑。"
+        ]
+      }
+    },
+    {
+      "id": "create-account",
+      "heading": {
+        "en": "Step 1: Create a DeepSeek Account",
+        "zh": "第 1 步：注册 DeepSeek 账号"
+      },
+      "paragraphs": {
+        "en": [
+          "Go to the DeepSeek developer platform and sign up with your email or phone number. Email verification is required. The registration process is straightforward and typically takes under two minutes.",
+          "DeepSeek accepts both international and Chinese phone numbers for verification, making it accessible to developers worldwide."
+        ],
+        "zh": [
+          "前往 DeepSeek 开发者平台，使用邮箱或手机号注册。需要验证邮箱，整个注册流程很简单，通常不到两分钟。",
+          "DeepSeek 支持国际和中国手机号验证，全球开发者都可以使用。"
+        ]
+      }
+    },
+    {
+      "id": "generate-key",
+      "heading": {
+        "en": "Step 2: Generate Your API Key",
+        "zh": "第 2 步：生成 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "After logging in, navigate to the API Keys section in your dashboard. Click 'Create API Key' and give it a descriptive name. Copy the key immediately — like most API providers, DeepSeek only shows the full key once.",
+          "Store the key in a secure location such as an environment variable or a secret management system. Never hardcode it in your source files."
+        ],
+        "zh": [
+          "登录后进入后台的 API Keys 页面，点击「Create API Key」，给 Key 起一个描述性的名字。立即复制保存——和大多数 API 供应商一样，DeepSeek 只显示一次完整 Key。",
+          "将 Key 存储在安全位置，如环境变量或密钥管理系统。不要硬编码在源代码中。"
+        ]
+      }
+    },
+    {
+      "id": "add-credits",
+      "heading": {
+        "en": "Step 3: Add Credits to Your Account",
+        "zh": "第 3 步：为账户充值"
+      },
+      "paragraphs": {
+        "en": [
+          "DeepSeek uses a prepaid model. Before making API calls, you need to add credits to your account. The platform supports various payment methods including Alipay and WeChat Pay.",
+          "New users may receive a small amount of free credits upon registration, which is enough for testing. For production use, add credits based on your expected usage."
+        ],
+        "zh": [
+          "DeepSeek 采用预付费模式。在调用 API 之前，需要先为账户充值。平台支持支付宝、微信支付等多种支付方式。",
+          "新用户注册后可能会获得少量免费额度，足够用于测试。生产使用时，根据预期用量充值即可。"
+        ]
+      }
+    },
+    {
+      "id": "first-request",
+      "heading": {
+        "en": "Step 4: Make Your First API Request",
+        "zh": "第 4 步：发送第一个 API 请求"
+      },
+      "paragraphs": {
+        "en": [
+          "DeepSeek's API is OpenAI-compatible, which means you can use the same SDK and request format. Simply change the base URL and API key. Here's a minimal example:"
+        ],
+        "zh": [
+          "DeepSeek 的 API 兼容 OpenAI 格式，意味着你可以使用相同的 SDK 和请求格式。只需修改 base URL 和 API Key 即可。以下是最小示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"your-deepseek-api-key\",\n    base_url=\"https://api.deepseek.com\"\n)\n\nresponse = client.chat.completions.create(\n    model=\"deepseek-chat\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"Hello, what can you do?\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Minimal DeepSeek API call using the OpenAI Python SDK",
+            "zh": "使用 OpenAI Python SDK 调用 DeepSeek API 的最小示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "DeepSeek API Pricing",
+        "zh": "DeepSeek API 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "DeepSeek's pricing is one of its main advantages. The DeepSeek-V3 model is priced significantly lower than comparable models from other providers, making it attractive for high-volume applications.",
+          "Check the official pricing page for the most up-to-date rates, as pricing can change. Input and output tokens are priced separately, and some models offer cached prompt discounts."
+        ],
+        "zh": [
+          "DeepSeek 的定价是其主要优势之一。DeepSeek-V3 模型的定价比其他供应商的同类模型低不少，对高用量应用很有吸引力。",
+          "建议查看官方定价页面获取最新价格，因为定价可能会有变化。输入和输出 token 分别计价，部分模型提供缓存折扣。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is DeepSeek API free?",
+        "zh": "DeepSeek API 是免费的吗？"
+      },
+      "answer": {
+        "en": "DeepSeek API is not free, but new users may receive a small amount of free credits. The paid pricing is very competitive compared to other providers.",
+        "zh": "DeepSeek API 不是免费的，但新用户可能会获得少量免费额度。付费定价相比其他供应商非常有竞争力。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is DeepSeek API compatible with OpenAI SDK?",
+        "zh": "DeepSeek API 兼容 OpenAI SDK 吗？"
+      },
+      "answer": {
+        "en": "Yes, DeepSeek's API is OpenAI-compatible. You can use the OpenAI SDK by simply changing the base URL to https://api.deepseek.com and using your DeepSeek API key.",
+        "zh": "是的，DeepSeek 的 API 兼容 OpenAI 格式。你只需将 base URL 改为 https://api.deepseek.com 并使用 DeepSeek API Key，就可以使用 OpenAI SDK。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can international developers use DeepSeek API?",
+        "zh": "国际开发者可以使用 DeepSeek API 吗？"
+      },
+      "answer": {
+        "en": "Yes. DeepSeek accepts international phone numbers for registration and supports multiple payment methods. The API documentation is available in both English and Chinese.",
+        "zh": "可以。DeepSeek 支持国际手机号注册，并支持多种支付方式。API 文档同时提供英文和中文版本。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "DeepSeek API Documentation",
+      "url": "https://api-docs.deepseek.com/",
+      "site": "DeepSeek",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "DeepSeek API Pricing",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "site": "DeepSeek",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Get a DeepSeek API Key (2026 Guide) | Get Model Key",
+      "zh": "如何获取 DeepSeek API Key（2026 指南）| Get Model Key"
+    },
+    "description": {
+      "en": "Step-by-step guide to creating a DeepSeek API key, adding credits, making your first request, and understanding DeepSeek API pricing.",
+      "zh": "逐步指南：创建 DeepSeek API Key、充值、发送第一个请求，并了解 DeepSeek API 定价。"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "slug": "api-key-vs-public-key",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "API Key vs Public Key vs Private Key: Differences Explained (2026)",
+    "zh": "API Key vs Public Key vs Private Key：区别详解（2026）"
+  },
+  "excerpt": {
+    "en": "API keys, public keys, and private keys serve very different purposes. Learn what each one does, how they differ, and why an API key is neither a public nor a private key.",
+    "zh": "API Key、公钥和私钥的用途完全不同。了解各自的作用、区别，以及为什么 API Key 既不是公钥也不是私钥。"
+  },
+  "tags": ["api key", "public key", "private key", "security", "basics"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "api-key-basics",
+      "heading": {
+        "en": "What is an API Key?",
+        "zh": "什么是 API Key？"
+      },
+      "paragraphs": {
+        "en": [
+          "An API key is a simple secret string that identifies a caller to an API. It's like a membership card — you present it with each request, and the server checks it against its database. API keys are typically sent in a header (e.g., Authorization: Bearer sk-xxxx) or as a query parameter.",
+          "API keys are easy to use but have a weakness: anyone who obtains the key can use it. There's no cryptographic identity proof. They're best suited for server-to-server communication where the key stays on your backend."
+        ],
+        "zh": [
+          "API Key 是一个简单的密钥字符串，用于向 API 标识调用者身份。它就像一张会员卡——每次请求时出示，服务器在数据库中核对。API Key 通常放在请求头（如 Authorization: Bearer sk-xxxx）或查询参数中传递。",
+          "API Key 使用简单，但有一个弱点：任何拿到 Key 的人都能使用。它没有加密身份证明。最适合服务器到服务器的通信场景，Key 保留在你的后端。"
+        ]
+      }
+    },
+    {
+      "id": "public-private-key",
+      "heading": {
+        "en": "Public Key and Private Key: A Brief Intro",
+        "zh": "公钥和私钥：简介"
+      },
+      "paragraphs": {
+        "en": [
+          "Public-key cryptography (asymmetric cryptography) uses a pair of mathematically linked keys: a public key and a private key. The public key can be shared openly; the private key must be kept secret. Data encrypted with the public key can only be decrypted with the private key, and vice versa.",
+          "This is the foundation of TLS/HTTPS, SSH, digital signatures, and blockchain. Key pairs are typically generated with algorithms like RSA or ECC. Unlike an API key, a key pair proves identity cryptographically — you can sign a message with your private key, and anyone can verify it with your public key."
+        ],
+        "zh": [
+          "公钥加密（非对称加密）使用一对数学关联的密钥：公钥和私钥。公钥可以公开分享；私钥必须保密。用公钥加密的数据只能用私钥解密，反之亦然。",
+          "这是 TLS/HTTPS、SSH、数字签名和区块链的基础。密钥对通常使用 RSA 或 ECC 等算法生成。与 API Key 不同，密钥对可以以加密方式证明身份——你可以用私钥对消息签名，任何人都可以用你的公钥验证。"
+        ]
+      }
+    },
+    {
+      "id": "why-api-key-is-neither",
+      "heading": {
+        "en": "Why an API Key Is Neither a Public Nor a Private Key",
+        "zh": "为什么 API Key 既不是公钥也不是私钥"
+      },
+      "paragraphs": {
+        "en": [
+          "An API key is a bearer token — possession equals authorization. It doesn't come in a pair, and it can't encrypt data or create signatures. It's just a secret string stored in the provider's database.",
+          "A private key, by contrast, is part of a cryptographic pair. You never send it to anyone. You use it locally to sign or decrypt. An API key is sent with every request, while a private key never leaves your machine (or your HSM)."
+        ],
+        "zh": [
+          "API Key 是持有者令牌——拥有即授权。它不成对出现，不能加密数据或创建签名。它只是一个存储在供应商数据库中的密钥字符串。",
+          "私钥则相反，它是加密密钥对的一部分。你永远不会把它发给任何人。你在本地用它签名或解密。API Key 每次请求都要发送，而私钥永远不会离开你的机器（或 HSM）。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "API key: single string, sent with each request, no cryptography",
+          "Public key: half of a pair, shareable, used to encrypt/verify",
+          "Private key: half of a pair, secret, used to decrypt/sign",
+          "API keys are for access control; key pairs are for encryption and identity"
+        ],
+        "zh": [
+          "API Key：单一字符串，每次请求发送，无加密",
+          "公钥：密钥对的一半，可分享，用于加密/验证",
+          "私钥：密钥对的一半，保密，用于解密/签名",
+          "API Key 用于访问控制；密钥对用于加密和身份验证"
+        ]
+      }
+    },
+    {
+      "id": "security-comparison",
+      "heading": {
+        "en": "Security Level Comparison",
+        "zh": "安全等级对比"
+      },
+      "paragraphs": {
+        "en": [
+          "Security-wise, API keys are the weakest of the three. If leaked, they can be immediately abused. Rotating an API key requires updating it everywhere it's used.",
+          "Public keys are safe to distribute — that's their purpose. Private keys are the most sensitive — a compromised private key breaks the entire trust model. Best practice for private keys: store in an HSM or hardware key, never in plaintext files."
+        ],
+        "zh": [
+          "安全性方面，API Key 是三者中最弱的。一旦泄露，可被立即滥用。轮换 API Key 需要在所有使用的地方更新。",
+          "公钥可以安全分发——这正是它的用途。私钥最敏感——私钥泄露会破坏整个信任模型。私钥的最佳实践：存储在 HSM 或硬件密钥中，不要以明文文件保存。"
+        ]
+      }
+    },
+    {
+      "id": "use-cases",
+      "heading": {
+        "en": "When to Use Which",
+        "zh": "各场景使用哪种"
+      },
+      "paragraphs": {
+        "en": [
+          "Use API keys for authenticating to third-party services (AI APIs, payment gateways, cloud services). Use public/private key pairs for secure communication (HTTPS, SSH), digital signatures (code signing, document signing), and blockchain transactions.",
+          "Some systems combine both: mTLS uses key pairs to authenticate the connection, then an API key authorizes specific actions within that connection. This layered approach gives stronger security than API keys alone."
+        ],
+        "zh": [
+          "对第三方服务的认证（AI API、支付网关、云服务）使用 API Key。安全通信（HTTPS、SSH）、数字签名（代码签名、文档签名）和区块链交易使用公私钥对。",
+          "有些系统将两者结合：mTLS 用密钥对认证连接，然后用 API Key 授权该连接内的具体操作。这种分层方式比单独使用 API Key 安全性更高。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is an API key a private key?",
+        "zh": "API Key 是私钥吗？"
+      },
+      "answer": {
+        "en": "No. An API key is a bearer token for access control, not part of a cryptographic key pair. It has no corresponding public key and cannot encrypt or sign data.",
+        "zh": "不是。API Key 是用于访问控制的持有者令牌，不属于加密密钥对。它没有对应的公钥，不能加密或签名数据。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use a public key as an API key?",
+        "zh": "可以用公钥作为 API Key 吗？"
+      },
+      "answer": {
+        "en": "No, they serve different purposes. A public key is for encryption/verification, while an API key is for identifying and authorizing a caller. They are not interchangeable.",
+        "zh": "不能，它们的用途不同。公钥用于加密/验证，而 API Key 用于标识和授权调用者。它们不能互换使用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which is more secure, an API key or a private key?",
+        "zh": "API Key 和私钥哪个更安全？"
+      },
+      "answer": {
+        "en": "Private keys are part of a cryptographic system and offer stronger security guarantees (signing, encryption). API keys are simpler but weaker — if leaked, they can be abused directly. For high-security needs, use key-pair-based authentication like mTLS.",
+        "zh": "私钥属于加密体系，提供更强的安全保证（签名、加密）。API Key 更简单但更弱——泄露后可直接被滥用。高安全需求场景应使用基于密钥对的认证方式，如 mTLS。"
+      }
+    },
+    {
+      "question": {
+        "en": "Should I put my API key in the frontend code?",
+        "zh": "应该把 API Key 放在前端代码里吗？"
+      },
+      "answer": {
+        "en": "No. API keys should stay on the backend. Putting them in frontend code exposes them to anyone who inspects the page. For client-side calls, use a backend proxy or short-lived tokens issued by your server.",
+        "zh": "不应该。API Key 应保留在后端。放在前端代码中会被任何查看页面的人获取。客户端调用应通过后端代理或由服务器签发的短期令牌。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OWASP API Security Top 10",
+      "url": "https://owasp.org/API-Security/",
+      "site": "OWASP",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Public-key cryptography (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Public-key_cryptography",
+      "site": "Wikipedia",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "API Key vs Public Key vs Private Key: Differences (2026) | Get Model Key",
+      "zh": "API Key vs Public Key vs Private Key：区别详解（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Understand the difference between API keys, public keys, and private keys. Learn what each is used for, security levels, and why an API key is neither public nor private.",
+      "zh": "了解 API Key、公钥和私钥的区别。掌握各自的用途、安全等级，以及为什么 API Key 既不是公钥也不是私钥。"
+    }
+  }
+}

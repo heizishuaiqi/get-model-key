@@ -1,0 +1,199 @@
+{
+  "slug": "how-to-get-openrouter-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "How to Get an OpenRouter API Key (2026 Step-by-Step Guide)",
+    "zh": "如何获取 OpenRouter API Key（2026 逐步指南）"
+  },
+  "excerpt": {
+    "en": "OpenRouter is an AI API aggregator — one key gives you access to OpenAI, Claude, Gemini, DeepSeek, and hundreds of other models. Here's how to get started.",
+    "zh": "OpenRouter 是 AI API 聚合平台——一个 Key 即可访问 OpenAI、Claude、Gemini、DeepSeek 等数百个模型。以下是上手方法。"
+  },
+  "tags": ["openrouter", "api key", "aggregator", "tutorial"],
+  "providerSlugs": ["openrouter"],
+  "sections": [
+    {
+      "id": "what-is-openrouter",
+      "heading": {
+        "en": "What is OpenRouter?",
+        "zh": "什么是 OpenRouter？"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenRouter is an AI API aggregator that provides a unified interface to hundreds of models from different providers. Instead of managing separate API keys for OpenAI, Anthropic, Google, and DeepSeek, you use one OpenRouter key to access them all.",
+          "This simplifies billing, model switching, and fallback strategies. If one provider goes down, you can reroute to another with a one-line code change. OpenRouter also normalizes pricing into a consistent format, making cost comparison easier."
+        ],
+        "zh": [
+          "OpenRouter 是一个 AI API 聚合平台，提供统一接口访问来自不同供应商的数百个模型。你不需要为 OpenAI、Anthropic、Google 和 DeepSeek 分别管理 API Key，只需一个 OpenRouter Key 即可访问全部。",
+          "这简化了计费、模型切换和回退策略。如果某个供应商宕机，你可以用一行代码切换到另一个。OpenRouter 还将定价统一格式化，便于成本对比。"
+        ]
+      }
+    },
+    {
+      "id": "create-account",
+      "heading": {
+        "en": "Step 1: Create an OpenRouter Account",
+        "zh": "第 1 步：注册 OpenRouter 账号"
+      },
+      "paragraphs": {
+        "en": [
+          "Go to openrouter.ai and sign up. OpenRouter supports Google and GitHub login for quick onboarding. The registration process takes less than a minute.",
+          "After registering, you'll land on the dashboard where you can manage keys, credits, and view usage analytics."
+        ],
+        "zh": [
+          "前往 openrouter.ai 注册。OpenRouter 支持 Google 和 GitHub 登录，快速上手。注册过程不到一分钟。",
+          "注册后进入后台，你可以管理 Key、额度和查看用量分析。"
+        ]
+      }
+    },
+    {
+      "id": "get-api-key",
+      "heading": {
+        "en": "Step 2: Generate Your API Key",
+        "zh": "第 2 步：生成 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "In the dashboard, navigate to the 'Keys' section. Click 'Create Key', give it a name (e.g., 'production' or 'dev'), and copy the generated key. Like most providers, the full key is only shown once.",
+          "OpenRouter lets you create multiple keys with different credit limits — useful for separating production and development environments."
+        ],
+        "zh": [
+          "在后台进入「Keys」页面，点击「Create Key」，给它命名（如「production」或「dev」），然后复制生成的 Key。和大多数供应商一样，完整 Key 只显示一次。",
+          "OpenRouter 支持创建多个 Key，并设置不同的额度限制——适合区分生产和开发环境。"
+        ]
+      }
+    },
+    {
+      "id": "add-credits",
+      "heading": {
+        "en": "Step 3: Add Credits",
+        "zh": "第 3 步：充值"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenRouter uses a prepaid credits model. Add credits via credit card or crypto. Some models are free (marked in the model list), so you can start experimenting even without payment.",
+          "Credits are shared across all models — you don't need separate balances for OpenAI vs Claude. The dashboard shows real-time usage breakdown by model."
+        ],
+        "zh": [
+          "OpenRouter 采用预付额度模式。可通过信用卡或加密货币充值。部分模型免费（在模型列表中标记），所以不付款也可以开始实验。",
+          "额度在所有模型间共享——不需要为 OpenAI 和 Claude 分别充值。后台显示按模型划分的实时用量。"
+        ]
+      }
+    },
+    {
+      "id": "call-multiple-models",
+      "heading": {
+        "en": "Step 4: Call Multiple Models with One Key",
+        "zh": "第 4 步：用一个 Key 调用多个模型"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenRouter's API is OpenAI-compatible. To switch models, just change the model name in your request. Here's an example calling three different providers with the same key:"
+        ],
+        "zh": [
+          "OpenRouter 的 API 兼容 OpenAI 格式。切换模型只需修改请求中的模型名称。以下是用同一个 Key 调用三个不同供应商的示例："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"your-openrouter-api-key\",\n    base_url=\"https://openrouter.ai/api/v1\"\n)\n\n# Call OpenAI GPT-4o\nr1 = client.chat.completions.create(\n    model=\"openai/gpt-4o\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)\n\n# Call Anthropic Claude\nr2 = client.chat.completions.create(\n    model=\"anthropic/claude-3.5-sonnet\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)\n\n# Call Google Gemini\nr3 = client.chat.completions.create(\n    model=\"google/gemini-2.0-flash\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)\n\nprint(r1.choices[0].message.content)\nprint(r2.choices[0].message.content)\nprint(r3.choices[0].message.content)",
+          "caption": {
+            "en": "Calling OpenAI, Claude, and Gemini models through OpenRouter with a single API key",
+            "zh": "通过 OpenRouter 用一个 API Key 调用 OpenAI、Claude 和 Gemini 模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "OpenRouter Pricing",
+        "zh": "OpenRouter 定价"
+      },
+      "paragraphs": {
+        "en": [
+          "OpenRouter passes through provider pricing with a small markup. The markup is transparent — shown on each model's page. For high-volume users, the convenience of a single billing system often outweighs the small premium.",
+          "Free models are available with rate limits. Paid models are billed per-token, consistent with each provider's original pricing. Check the model list page for real-time pricing."
+        ],
+        "zh": [
+          "OpenRouter 在供应商定价基础上加收少量费用。加价透明——在每个模型页面显示。对高用量用户，单一计费系统的便利性通常超过小幅加价。",
+          "免费模型有速率限制。付费模型按 token 计费，与各供应商原始定价一致。查看模型列表页面获取实时定价。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is OpenRouter API free?",
+        "zh": "OpenRouter API 是免费的吗？"
+      },
+      "answer": {
+        "en": "OpenRouter itself is free to sign up. Some models on the platform are free (rate-limited), while paid models are billed per token. You only pay for what you use.",
+        "zh": "OpenRouter 注册免费。平台上的部分模型免费（有速率限制），付费模型按 token 计费。你只需为实际使用付费。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use OpenAI SDK with OpenRouter?",
+        "zh": "可以用 OpenAI SDK 调用 OpenRouter 吗？"
+      },
+      "answer": {
+        "en": "Yes. OpenRouter is OpenAI-compatible. Set the base URL to https://openrouter.ai/api/v1 and use your OpenRouter API key. The same code works — just change the model name to include the provider prefix (e.g., 'openai/gpt-4o').",
+        "zh": "可以。OpenRouter 兼容 OpenAI 格式。将 base URL 设为 https://openrouter.ai/api/v1 并使用 OpenRouter API Key。代码不变——只需在模型名前加上供应商前缀（如「openai/gpt-4o」）。"
+      }
+    },
+    {
+      "question": {
+        "en": "Which models can I access through OpenRouter?",
+        "zh": "通过 OpenRouter 可以访问哪些模型？"
+      },
+      "answer": {
+        "en": "Hundreds of models from OpenAI, Anthropic, Google, Meta, DeepSeek, Mistral, and more. The full list is on the OpenRouter models page, including free and paid options with real-time pricing.",
+        "zh": "来自 OpenAI、Anthropic、Google、Meta、DeepSeek、Mistral 等供应商的数百个模型。完整列表在 OpenRouter 模型页面，包括免费和付费选项及实时定价。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does OpenRouter support streaming and function calling?",
+        "zh": "OpenRouter 支持流式输出和函数调用吗？"
+      },
+      "answer": {
+        "en": "Yes. OpenRouter supports streaming responses, function calling, and other features where the underlying provider supports them. Feature availability depends on the specific model you choose.",
+        "zh": "支持。OpenRouter 支持流式响应、函数调用等功能（前提是底层供应商支持）。功能可用性取决于你选择的具体模型。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "OpenRouter Documentation",
+      "url": "https://openrouter.ai/docs/quickstart",
+      "site": "OpenRouter",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "OpenRouter Models List",
+      "url": "https://openrouter.ai/models",
+      "site": "OpenRouter",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Get an OpenRouter API Key (2026 Guide) | Get Model Key",
+      "zh": "如何获取 OpenRouter API Key（2026 指南）| Get Model Key"
+    },
+    "description": {
+      "en": "Step-by-step guide to creating an OpenRouter API key, adding credits, and calling OpenAI, Claude, Gemini, and DeepSeek models through one unified API.",
+      "zh": "逐步指南：创建 OpenRouter API Key、充值，并通过统一 API 调用 OpenAI、Claude、Gemini 和 DeepSeek 模型。"
+    }
+  }
+}

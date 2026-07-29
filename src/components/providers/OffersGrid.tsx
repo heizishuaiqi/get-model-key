@@ -4,44 +4,35 @@ import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
+import { REGION_LABELS, getProviderDetailHref, type Lang } from '@/lib/shared';
 
 interface OffersGridProps {
   providers: Provider[];
-  lang: 'en' | 'zh';
+  lang: Lang;
 }
-
-const REGION_LABELS = {
-  en: {
-    global: 'Global',
-    china: 'China',
-    aggregator: 'Aggregator',
-    cloud: 'Cloud',
-  },
-  zh: {
-    global: '国际',
-    china: '中国',
-    aggregator: '聚合平台',
-    cloud: '云平台',
-  },
-} as const;
 
 const COPY = {
   en: {
     offerTag: 'Offer',
+    featuredTag: 'Featured',
     getKey: 'Get API Key',
     verifiedAt: 'Verified',
     noData: 'No active offers yet.',
+    detailAria: (name: string) => `View details for ${name}`,
   },
   zh: {
     offerTag: '福利',
+    featuredTag: '精选',
     getKey: '获取 API Key',
     verifiedAt: '核验时间',
     noData: '当前暂无可展示福利。',
+    detailAria: (name: string) => `查看 ${name} 详情`,
   },
 } as const;
 
 export default function OffersGrid({ providers, lang }: OffersGridProps) {
   const text = COPY[lang];
+  const regionLabels = REGION_LABELS[lang];
 
   if (providers.length === 0) {
     return (
@@ -54,12 +45,8 @@ export default function OffersGrid({ providers, lang }: OffersGridProps) {
   return (
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {providers.map((provider) => {
-        const detailHref =
-          lang === 'en' ? `/providers/${provider.slug}` : `/zh/providers/${provider.slug}`;
-        const detailAriaLabel =
-          lang === 'en'
-            ? `View details for ${provider.name[lang]}`
-            : `查看 ${provider.name[lang]} 详情`;
+        const detailHref = getProviderDetailHref(provider.slug, lang);
+        const detailAriaLabel = text.detailAria(provider.name[lang]);
 
         return (
           <Card
@@ -77,15 +64,15 @@ export default function OffersGrid({ providers, lang }: OffersGridProps) {
             <div className="pointer-events-none relative z-20 flex h-full flex-col">
               <div className="mb-5">
                 <div className="mb-3 flex flex-wrap items-center gap-2">
-                  <Badge variant="brand">{REGION_LABELS[lang][provider.region]}</Badge>
+                  <Badge variant="brand">{regionLabels[provider.region]}</Badge>
                   <Badge variant="neutral">{text.offerTag}</Badge>
                   {provider.featured && (
-                    <Badge variant="success">{lang === 'en' ? 'Featured' : '精选'}</Badge>
+                    <Badge variant="success">{text.featuredTag}</Badge>
                   )}
                 </div>
                 <div className="mb-2 flex items-center gap-3">
                   <ProviderLogo provider={provider} lang={lang} size="md" />
-                  <h3 className="text-h3 text-text-primary">{provider.name[lang]}</h3>
+                  <h2 className="text-h3 text-text-primary">{provider.name[lang]}</h2>
                 </div>
                 <p className="text-body-sm text-text-secondary">{provider.summary[lang]}</p>
               </div>

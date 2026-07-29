@@ -27,7 +27,7 @@ export interface GuideFaqItem {
 export interface GuideArticle {
   slug: string;
   status: 'published' | 'draft';
-  topic: 'api-key-setup' | 'troubleshooting' | 'comparison' | 'offers';
+  topic: 'api-key-setup' | 'troubleshooting' | 'comparison' | 'offers' | 'basics';
   publishedAt: string;
   updatedAt: string;
   readingMinutes: number;
@@ -39,6 +39,12 @@ export interface GuideArticle {
   sections: GuideSection[];
   faq?: GuideFaqItem[];
   sources: GuideSource[];
+  /** Marks this article as a pillar page (hub page for a content cluster) */
+  pillar?: boolean;
+  /** Cluster identifier — groups pillar + cluster articles together (e.g. "openai", "gemini", "deepseek") */
+  cluster?: string;
+  /** Slug of the pillar page this article belongs to (for back-linking) */
+  pillarSlug?: string;
   seo?: {
     title: Record<'en' | 'zh', string>;
     description: Record<'en' | 'zh', string>;

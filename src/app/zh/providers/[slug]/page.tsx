@@ -7,20 +7,14 @@ import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
 import ProviderContentSections from '@/components/providers/ProviderContentSections';
-import { getActiveOffers, getAllProviders, getProviderBySlug } from '@/lib/providers';
+import { getActiveOffers, getAllProviders, getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuidesByProviderSlug } from '@/lib/guides';
-import { getProviderMetadata } from '@/lib/seo';
+import { getProviderMetadata, buildFaqStructuredData } from '@/lib/seo';
+import { REGION_LABELS } from '@/lib/shared';
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
-
-const regionLabels = {
-  global: '\u56fd\u9645',
-  china: '\u4e2d\u56fd',
-  aggregator: '\u805a\u5408\u5e73\u53f0',
-  cloud: '\u4e91\u5e73\u53f0',
-} as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -42,22 +36,34 @@ export default async function ZhProviderPage({ params }: Props) {
 
   const activeOffers = getActiveOffers(provider);
   const relatedGuides = await getGuidesByProviderSlug(provider.slug);
+  const siteConfig = await getSiteConfig();
 
-  const faqStructuredData =
-    provider.faq && provider.faq.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: provider.faq.map((item) => ({
-            '@type': 'Question',
-            name: item.question.zh,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer.zh,
-            },
-          })),
-        }
-      : null;
+  const faqStructuredData = buildFaqStructuredData(provider.faq, 'zh');
+
+  const breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: '首页',
+        item: `${siteConfig.domain}/zh/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: '供应商',
+        item: `${siteConfig.domain}/zh/providers/`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: provider.name.zh,
+        item: `${siteConfig.domain}/zh/providers/${provider.slug}/`,
+      },
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-bg-app text-text-primary">
@@ -68,21 +74,25 @@ export default async function ZhProviderPage({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
           />
         )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbStructuredData) }}
+        />
         <div className="mb-8">
           <Link
             href="/zh/providers"
             className="inline-flex items-center gap-2 text-body-sm text-brand-300 transition-colors hover:text-brand-400"
           >
             <span aria-hidden="true">{'<'}</span>
-            {'\u8fd4\u56de\u4f9b\u5e94\u5546\u5217\u8868'}
+            {'返回供应商列表'}
           </Link>
         </div>
 
         <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-3xl">
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <Badge variant="brand">{regionLabels[provider.region]}</Badge>
-              {provider.featured && <Badge variant="success">{'\u7cbe\u9009'}</Badge>}
+              <Badge variant="brand">{REGION_LABELS.zh[provider.region]}</Badge>
+              {provider.featured && <Badge variant="success">{'精选'}</Badge>}
               {provider.categories.map((category) => (
                 <Badge key={category} variant="neutral" size="sm">
                   {category}
@@ -98,21 +108,21 @@ export default async function ZhProviderPage({ params }: Props) {
 
           <div className="flex w-full max-w-sm flex-col gap-3">
             <PrimaryInverseButton href={provider.officialKeyUrl} newTab className="w-full">
-              {'\u83b7\u53d6 API Key'}
+              {'获取 API Key'}
             </PrimaryInverseButton>
             {provider.officialSiteUrl && (
               <PillButton href={provider.officialSiteUrl} newTab variant="ghost" size="lg" className="w-full">
-                {provider.officialSiteUrlGlobal ? '\u5b98\u7f51\uff08\u4e2d\u56fd\u7ad9\uff09' : '\u8bbf\u95ee\u5b98\u7f51'}
+                {provider.officialSiteUrlGlobal ? '官网（中国站）' : '访问官网'}
               </PillButton>
             )}
             {provider.officialSiteUrlGlobal && (
               <PillButton href={provider.officialSiteUrlGlobal} newTab variant="ghost" size="lg" className="w-full">
-                {provider.officialSiteUrl ? '\u5b98\u7f51\uff08\u56fd\u9645\u7ad9\uff09' : '\u8bbf\u95ee\u5b98\u7f51'}
+                {provider.officialSiteUrl ? '官网（国际站）' : '访问官网'}
               </PillButton>
             )}
             {provider.officialDocsUrl && (
               <PillButton href={provider.officialDocsUrl} newTab variant="neutral" size="lg" className="w-full">
-                {'\u67e5\u770b\u6587\u6863'}
+                {'查看文档'}
               </PillButton>
             )}
           </div>
@@ -131,7 +141,7 @@ export default async function ZhProviderPage({ params }: Props) {
             />
 
             <Card variant="emphasis">
-              <h2 className="mb-4 text-h2 text-text-primary">{'\u5e38\u7528\u6a21\u578b'}</h2>
+              <h2 className="mb-4 text-h2 text-text-primary">{'常用模型'}</h2>
               <div className="flex flex-wrap gap-3">
                 {provider.models.zh.map((model) => (
                   <span
@@ -146,7 +156,7 @@ export default async function ZhProviderPage({ params }: Props) {
 
             {activeOffers.length > 0 && (
               <Card variant="standard">
-                <h2 className="mb-4 text-h2 text-text-primary">{'\u5f53\u524d\u798f\u5229'}</h2>
+                <h2 className="mb-4 text-h2 text-text-primary">{'当前福利'}</h2>
                 <div className="space-y-4">
                   {activeOffers.map((offer) => (
                     <div key={offer.id} className="rounded-xl border border-white-06 bg-surface-1 p-4">
@@ -158,7 +168,7 @@ export default async function ZhProviderPage({ params }: Props) {
                         <p className="mb-2 text-caption text-text-tertiary">{offer.notes.zh}</p>
                       )}
                       <div className="flex flex-wrap gap-3 text-caption text-text-muted">
-                        <span>{'\u6838\u9a8c\u65f6\u95f4'}: {offer.verifiedAt}</span>
+                        <span>{'核验时间'}: {offer.verifiedAt}</span>
                       </div>
                     </div>
                   ))}
@@ -170,7 +180,7 @@ export default async function ZhProviderPage({ params }: Props) {
 
             {provider.tags.length > 0 && (
               <Card variant="standard">
-                <h2 className="mb-4 text-h2 text-text-primary">{'\u6807\u7b7e'}</h2>
+                <h2 className="mb-4 text-h2 text-text-primary">{'标签'}</h2>
                 <div className="flex flex-wrap gap-2">
                   {provider.tags.map((tag) => (
                     <Badge key={tag} variant="neutral">
@@ -183,18 +193,32 @@ export default async function ZhProviderPage({ params }: Props) {
 
             {relatedGuides.length > 0 && (
               <Card variant="standard">
-                <h2 className="mb-4 text-h2 text-text-primary">{'\u76f8\u5173\u6307\u5357'}</h2>
+                <h2 className="mb-4 text-h2 text-text-primary">{'相关指南'}</h2>
                 <div className="space-y-3">
-                  {relatedGuides.slice(0, 4).map((guide) => (
+                  {[...relatedGuides]
+                    .sort((a, b) => (b.pillar ? 1 : 0) - (a.pillar ? 1 : 0))
+                    .slice(0, 6)
+                    .map((guide) => (
                     <Link
                       key={guide.slug}
                       href={`/zh/guides/${guide.slug}`}
                       className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 transition-colors hover:bg-surface-2"
                     >
-                      <div className="text-body font-semibold text-text-primary">{guide.title.zh}</div>
+                      <div className="flex items-center gap-2">
+                        <div className="text-body font-semibold text-text-primary">{guide.title.zh}</div>
+                        {guide.pillar && <Badge variant="brand" size="sm">{'支柱页'}</Badge>}
+                      </div>
                       <div className="mt-1 text-body-sm text-text-secondary">{guide.excerpt.zh}</div>
                     </Link>
                   ))}
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/zh/guides"
+                    className="text-body-sm text-brand-300 transition-colors hover:text-brand-400"
+                  >
+                    {'查看全部指南 →'}
+                  </Link>
                 </div>
               </Card>
             )}
@@ -202,21 +226,19 @@ export default async function ZhProviderPage({ params }: Props) {
 
           <div className="space-y-8">
             <Card variant="standard">
-              <h2 className="mb-4 text-h3 text-text-primary">{'\u5feb\u901f\u4fe1\u606f'}</h2>
+              <h2 className="mb-4 text-h3 text-text-primary">{'快速信息'}</h2>
               <div className="space-y-4">
                 <div>
-                  <div className="mb-1 text-body-sm text-text-tertiary">{'\u533a\u57df'}</div>
-                  <div className="text-body text-text-primary">{regionLabels[provider.region]}</div>
+                  <div className="mb-1 text-body-sm text-text-tertiary">{'区域'}</div>
+                  <div className="text-body text-text-primary">{REGION_LABELS.zh[provider.region]}</div>
                 </div>
                 <div>
-                  <div className="mb-1 text-body-sm text-text-tertiary">{'\u72b6\u6001'}</div>
-                  <Badge variant={provider.status === 'active' ? 'success' : 'danger'}>
-                    {provider.status}
-                  </Badge>
+                  <div className="mb-1 text-body-sm text-text-tertiary">状态</div>
+                  <Badge variant="success">active</Badge>
                 </div>
                 {provider.lastVerified && (
                   <div>
-                    <div className="mb-1 text-body-sm text-text-tertiary">{'\u6700\u540e\u6821\u9a8c'}</div>
+                    <div className="mb-1 text-body-sm text-text-tertiary">{'最后校验'}</div>
                     <div className="text-body text-text-primary">{provider.lastVerified}</div>
                   </div>
                 )}
@@ -224,7 +246,7 @@ export default async function ZhProviderPage({ params }: Props) {
             </Card>
 
             <Card variant="standard">
-              <h2 className="mb-4 text-h3 text-text-primary">{'\u5b98\u65b9\u94fe\u63a5'}</h2>
+              <h2 className="mb-4 text-h3 text-text-primary">{'官方链接'}</h2>
               <div className="space-y-3">
                 <a
                   href={provider.officialKeyUrl}
@@ -232,7 +254,7 @@ export default async function ZhProviderPage({ params }: Props) {
                   rel="noopener noreferrer"
                   className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                 >
-                  {'API Key \u9875\u9762'}
+                  {'API Key 页面'}
                 </a>
                 {provider.officialSiteUrl && (
                   <a
@@ -241,7 +263,7 @@ export default async function ZhProviderPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
-                    {provider.officialSiteUrlGlobal ? '\u5b98\u7f51\uff08\u4e2d\u56fd\u7ad9\uff09' : '\u5b98\u7f51'}
+                    {provider.officialSiteUrlGlobal ? '官网（中国站）' : '官网'}
                   </a>
                 )}
                 {provider.officialSiteUrlGlobal && (
@@ -251,7 +273,7 @@ export default async function ZhProviderPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
-                    {provider.officialSiteUrl ? '\u5b98\u7f51\uff08\u56fd\u9645\u7ad9\uff09' : '\u5b98\u7f51'}
+                    {provider.officialSiteUrl ? '官网（国际站）' : '官网'}
                   </a>
                 )}
                 {provider.officialDocsUrl && (
@@ -261,7 +283,7 @@ export default async function ZhProviderPage({ params }: Props) {
                     rel="noopener noreferrer"
                     className="block rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body text-text-primary transition-colors hover:bg-surface-2"
                   >
-                    {'\u6587\u6863'}
+                    {'文档'}
                   </a>
                 )}
               </div>

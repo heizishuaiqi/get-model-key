@@ -6,6 +6,9 @@
   },
   "status": "published",
   "topic": "comparison",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
   "publishedAt": "2026-07-25",
   "updatedAt": "2026-07-25",
   "readingMinutes": 10,
@@ -33,7 +36,7 @@
     "google",
     "deepseek",
     "moonshot",
-    "zhipuai"
+    "zhipu"
   ],
   "sections": [
     {

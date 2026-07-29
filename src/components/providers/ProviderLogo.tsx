@@ -1,12 +1,13 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import type { Provider } from '@/types/provider';
 import { getProviderInitials, getProviderLogoUrl } from '@/lib/provider-logo';
+import type { Lang } from '@/lib/shared';
 
 interface ProviderLogoProps {
   provider: Provider;
-  lang: 'en' | 'zh';
+  lang: Lang;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
@@ -25,7 +26,7 @@ export default function ProviderLogo({
 }: ProviderLogoProps) {
   const providerName = provider.name[lang];
   const logoAlt = lang === 'en' ? `${providerName} logo` : `${providerName} 标志`;
-  const logoUrl = useMemo(() => getProviderLogoUrl(provider), [provider]);
+  const logoUrl = getProviderLogoUrl(provider);
   const [loadFailed, setLoadFailed] = useState(false);
 
   const logoSrc = !loadFailed ? logoUrl : '';

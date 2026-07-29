@@ -1,0 +1,210 @@
+{
+  "slug": "ollama-models-list",
+  "status": "published",
+  "topic": "basics",
+  "pillar": false,
+  "cluster": "ai-basics",
+  "pillarSlug": "ai-beginner-guide",
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "Ollama Models List & Local LLM Guide (2026)",
+    "zh": "Ollama 模型列表与本地 LLM 指南（2026）"
+  },
+  "excerpt": {
+    "en": "Ollama lets you run large language models locally. Here's the list of popular Ollama models, how to install them, and how to use the local API endpoint.",
+    "zh": "Ollama 让你在本地运行大型语言模型。以下是热门 Ollama 模型列表、安装方法，以及如何使用本地 API 端点。"
+  },
+  "tags": ["ollama", "local model", "llm", "self-hosted"],
+  "providerSlugs": [],
+  "sections": [
+    {
+      "id": "what-is-ollama",
+      "heading": {
+        "en": "What is Ollama?",
+        "zh": "什么是 Ollama？"
+      },
+      "paragraphs": {
+        "en": [
+          "Ollama is an open-source tool that lets you run large language models locally on your own machine. It handles model downloading, quantization, and serving, making local LLM deployment as simple as running a single command.",
+          "Unlike cloud APIs, Ollama runs entirely on your hardware — no API key, no per-token billing, no data leaving your machine. This makes it ideal for privacy-sensitive applications, offline use, and cost-free experimentation."
+        ],
+        "zh": [
+          "Ollama 是一个开源工具，让你在本地机器上运行大型语言模型。它处理模型下载、量化和服务，使本地 LLM 部署就像运行一条命令一样简单。",
+          "与云端 API 不同，Ollama 完全在你的硬件上运行——无需 API Key、无按 token 计费、数据不离开你的机器。这使它非常适合隐私敏感的应用、离线使用和免费实验。"
+        ]
+      }
+    },
+    {
+      "id": "popular-models",
+      "heading": {
+        "en": "Popular Ollama Models List",
+        "zh": "热门 Ollama 模型列表"
+      },
+      "paragraphs": {
+        "en": [
+          "Ollama supports a wide range of open-source models. Here are the most popular ones in 2026, with their parameter sizes and approximate memory requirements:"
+        ],
+        "zh": [
+          "Ollama 支持多种开源模型。以下是 2026 年最热门的模型，及其参数大小和近似内存需求："
+        ]
+      },
+      "bullets": {
+        "en": [
+          "llama3.1:8b — Meta's Llama 3.1, 8B params, ~5GB RAM",
+          "llama3.1:70b — Llama 3.1, 70B params, ~40GB RAM (requires strong GPU)",
+          "qwen2.5:7b — Alibaba's Qwen 2.5, 7B params, ~5GB RAM, strong Chinese support",
+          "deepseek-r1:7b — DeepSeek-R1 distilled reasoning model, 7B params, ~5GB RAM",
+          "deepseek-r1:14b — DeepSeek-R1, 14B params, ~9GB RAM, better reasoning",
+          "gemma2:9b — Google's Gemma 2, 9B params, ~6GB RAM",
+          "mistral:7b — Mistral 7B, lightweight and fast, ~5GB RAM",
+          "phi3:3.8b — Microsoft Phi-3 mini, 3.8B params, ~3GB RAM, great for low-end hardware"
+        ],
+        "zh": [
+          "llama3.1:8b — Meta Llama 3.1，80 亿参数，约 5GB 内存",
+          "llama3.1:70b — Llama 3.1，700 亿参数，约 40GB 内存（需要强力 GPU）",
+          "qwen2.5:7b — 阿里 Qwen 2.5，70 亿参数，约 5GB 内存，中文支持好",
+          "deepseek-r1:7b — DeepSeek-R1 蒸馏推理模型，70 亿参数，约 5GB 内存",
+          "deepseek-r1:14b — DeepSeek-R1，140 亿参数，约 9GB 内存，推理更强",
+          "gemma2:9b — Google Gemma 2，90 亿参数，约 6GB 内存",
+          "mistral:7b — Mistral 7B，轻量快速，约 5GB 内存",
+          "phi3:3.8b — 微软 Phi-3 mini，38 亿参数，约 3GB 内存，适合低端硬件"
+        ]
+      }
+    },
+    {
+      "id": "install-pull",
+      "heading": {
+        "en": "How to Install and Pull Models",
+        "zh": "如何安装和拉取模型"
+      },
+      "paragraphs": {
+        "en": [
+          "Install Ollama from ollama.com — there are installers for macOS, Linux, and Windows. After installation, pulling a model is a single command:"
+        ],
+        "zh": [
+          "从 ollama.com 安装 Ollama——有 macOS、Linux 和 Windows 的安装包。安装后，拉取模型只需一条命令："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "bash",
+          "code": "# Pull the Llama 3.1 8B model\nollama pull llama3.1:8b\n\n# Run the model interactively\nollama run llama3.1:8b\n\n# List installed models\nollama list",
+          "caption": {
+            "en": "Basic Ollama commands to pull, run, and list models",
+            "zh": "拉取、运行和列出模型的基本 Ollama 命令"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local-api",
+      "heading": {
+        "en": "Using the Ollama Local API",
+        "zh": "使用 Ollama 本地 API"
+      },
+      "paragraphs": {
+        "en": [
+          "Ollama runs a local HTTP server on port 11434. The API is OpenAI-compatible, so you can use the same SDK with the base URL set to localhost. No API key is required for local calls."
+        ],
+        "zh": [
+          "Ollama 在本地 11434 端口运行 HTTP 服务器。API 兼容 OpenAI 格式，所以你可以用相同的 SDK，将 base URL 设为 localhost 即可。本地调用不需要 API Key。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\n# Ollama runs locally — no API key needed\nclient = OpenAI(\n    api_key=\"ollama\",  # any string works\n    base_url=\"http://localhost:11434/v1\"\n)\n\nresponse = client.chat.completions.create(\n    model=\"llama3.1:8b\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"Explain what an API key is.\"}\n    ]\n)\n\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "Calling a local Ollama model through the OpenAI-compatible API",
+            "zh": "通过兼容 OpenAI 的 API 调用本地 Ollama 模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "local-vs-cloud",
+      "heading": {
+        "en": "Ollama vs Cloud APIs: When to Use Which",
+        "zh": "Ollama vs 云端 API：何时使用哪个"
+      },
+      "paragraphs": {
+        "en": [
+          "Ollama shines for privacy-sensitive work, offline environments, and cost-free unlimited usage. Cloud APIs offer more powerful models (GPT-4o, Claude 3.5 Sonnet) that can't run on consumer hardware, plus features like function calling and vision that local models may not fully support.",
+          "A common pattern: prototype locally with Ollama, then deploy to cloud APIs for production. This gives you free development and the best models for production."
+        ],
+        "zh": [
+          "Ollama 在隐私敏感工作、离线环境和免费无限使用方面表现出色。云端 API 提供更强大的模型（GPT-4o、Claude 3.5 Sonnet），这些模型无法在消费级硬件上运行，还提供本地模型可能不完全支持的函数调用和视觉等功能。",
+          "常见模式：用 Ollama 本地原型开发，然后部署到云端 API 用于生产。这样既免费开发，生产又能用上最好的模型。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is Ollama completely free?",
+        "zh": "Ollama 完全免费吗？"
+      },
+      "answer": {
+        "en": "Yes. Ollama is open-source and free. You download and run models on your own hardware at no cost. The only cost is your own compute resources (CPU, RAM, GPU).",
+        "zh": "是的。Ollama 是开源免费的。你在自己的硬件上下载和运行模型，无需付费。唯一的成本是你自己的计算资源（CPU、内存、GPU）。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do I need an API key for Ollama?",
+        "zh": "Ollama 需要 API Key 吗？"
+      },
+      "answer": {
+        "en": "No. Ollama runs locally on your machine. The local API endpoint doesn't require authentication. When using the OpenAI SDK, you can pass any string as the API key — it's ignored.",
+        "zh": "不需要。Ollama 在本地机器上运行。本地 API 端点不需要认证。使用 OpenAI SDK 时，传入任意字符串作为 API Key 即可——它会被忽略。"
+      }
+    },
+    {
+      "question": {
+        "en": "What hardware do I need to run Ollama models?",
+        "zh": "运行 Ollama 模型需要什么硬件？"
+      },
+      "answer": {
+        "en": "For 7-8B parameter models, you need about 5GB RAM (8GB+ recommended). For 14B models, about 9GB. For 70B models, you need a strong GPU with 40GB+ VRAM. Smaller models like Phi-3 (3.8B) can run on machines with as little as 4GB RAM.",
+        "zh": "70-80 亿参数模型需要约 5GB 内存（推荐 8GB 以上）。140 亿参数模型约 9GB。700 亿参数模型需要 40GB 以上显存的强力 GPU。Phi-3（38 亿）等小模型可以在仅 4GB 内存的机器上运行。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can Ollama models be used in production?",
+        "zh": "Ollama 模型可以用于生产吗？"
+      },
+      "answer": {
+        "en": "Yes, but with caveats. Local deployment is great for privacy and cost control, but performance and model quality may lag behind top cloud models. For production use, ensure you have adequate hardware and monitor response latency.",
+        "zh": "可以，但需注意。本地部署在隐私和成本控制方面很棒，但性能和模型质量可能落后于顶级云端模型。生产使用时，确保硬件充足并监控响应延迟。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Ollama Official Website",
+      "url": "https://ollama.com/",
+      "site": "Ollama",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "Ollama Model Library",
+      "url": "https://ollama.com/library",
+      "site": "Ollama",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Ollama Models List & Local LLM Guide (2026) | Get Model Key",
+      "zh": "Ollama 模型列表与本地 LLM 指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Complete guide to Ollama: popular models list (Llama 3, Qwen 2.5, DeepSeek-R1), how to install and pull models, and how to use the local OpenAI-compatible API.",
+      "zh": "Ollama 完整指南：热门模型列表（Llama 3、Qwen 2.5、DeepSeek-R1）、安装和拉取模型方法，以及如何使用兼容 OpenAI 的本地 API。"
+    }
+  }
+}
