@@ -6,7 +6,7 @@
   "cluster": "claude",
   "pillarSlug": "claude-api-key-complete-guide",
   "publishedAt": "2026-07-21",
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-08-07",
   "readingMinutes": 10,
   "title": {
     "en": "How to Get a Claude Fable 5 API Key — Anthropic's Most Powerful Public Model (2026)",
@@ -16,8 +16,18 @@
     "en": "Claude Fable 5 is Anthropic's first Mythos-class model available to the public — released June 9, 2026. It leads every major benchmark including SWE-bench Verified (95.0%) and GPQA Diamond (92.8%). This guide covers registration, key creation, your first API call with adaptive thinking, error fixes, and a full pricing comparison.",
     "zh": "Claude Fable 5 是 Anthropic 首款对公众开放的 Mythos 级模型，2026 年 6 月 9 日正式发布，SWE-bench Verified 达 95.0%，GPQA Diamond 达 92.8%，领跑所有主流基准测试。本指南涵盖注册、创建密钥、首次调用（含自适应思考）、报错排查及完整定价对比。"
   },
-  "tags": ["anthropic", "claude", "claude fable 5", "api key", "mythos", "agent", "coding"],
-  "providerSlugs": ["anthropic"],
+  "tags": [
+    "anthropic",
+    "claude",
+    "claude fable 5",
+    "api key",
+    "mythos",
+    "agent",
+    "coding"
+  ],
+  "providerSlugs": [
+    "anthropic"
+  ],
   "sections": [
     {
       "id": "what-is-fable-5",

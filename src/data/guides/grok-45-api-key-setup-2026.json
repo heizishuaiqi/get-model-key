@@ -6,7 +6,7 @@
   "cluster": "grok",
   "pillarSlug": "grok-api-key-complete-guide",
   "publishedAt": "2026-07-21",
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-08-07",
   "readingMinutes": 8,
   "title": {
     "en": "How to Get a Grok 4.5 API Key (July 2026)",
@@ -16,8 +16,17 @@
     "en": "xAI released Grok 4.5 on July 8, 2026 — 1.5 trillion parameters, co-trained with Cursor, priced at $2/M input tokens. This guide covers registration, key creation, your first API call, error fixes, and how Grok 4.5 compares to rivals.",
     "zh": "xAI 于 2026 年 7 月 8 日发布 Grok 4.5：1.5 万亿参数，联合 Cursor 训练，输入仅 $2/M Tokens。本指南涵盖注册、创建密钥、首次 API 调用、报错排查及与竞品的对比。"
   },
-  "tags": ["xai", "grok", "grok 4.5", "api key", "coding", "agent"],
-  "providerSlugs": ["xai"],
+  "tags": [
+    "xai",
+    "grok",
+    "grok 4.5",
+    "api key",
+    "coding",
+    "agent"
+  ],
+  "providerSlugs": [
+    "xai"
+  ],
   "sections": [
     {
       "id": "what-is-grok-45",

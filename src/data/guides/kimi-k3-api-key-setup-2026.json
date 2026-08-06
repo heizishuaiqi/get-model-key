@@ -6,7 +6,7 @@
   "cluster": "china-ai",
   "pillarSlug": "china-ai-api-keys-complete-guide",
   "publishedAt": "2026-07-21",
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-08-07",
   "readingMinutes": 8,
   "title": {
     "en": "How to Get a Kimi K3 API Key (July 2026)",
@@ -16,8 +16,18 @@
     "en": "Kimi K3 is Moonshot AI's latest flagship — 2.8 trillion parameters, 1M context window, open-source weights releasing July 27. This guide walks through registration, key creation, your first API call, common error fixes, and a pricing comparison.",
     "zh": "Kimi K3 是月之暗面最新旗舰：2.8 万亿参数、100 万 Token 上下文、7月27日开放权重。本指南涵盖注册、创建密钥、首次 API 调用、常见报错排查及定价对比。"
   },
-  "tags": ["moonshot", "kimi", "kimi k3", "api key", "china", "open source", "long context"],
-  "providerSlugs": ["moonshot"],
+  "tags": [
+    "moonshot",
+    "kimi",
+    "kimi k3",
+    "api key",
+    "china",
+    "open source",
+    "long context"
+  ],
+  "providerSlugs": [
+    "moonshot"
+  ],
   "sections": [
     {
       "id": "what-is-kimi-k3",
