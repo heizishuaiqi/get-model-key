@@ -35,14 +35,14 @@
       },
       "paragraphs": {
         "en": [
-          "Kimi K3 is the flagship language model from Moonshot AI (月之暗面), one of China's leading AI startups. It is specifically designed for ultra-long context processing, supporting up to 256K tokens in a single request — enough to process an entire book or a large codebase in one call.",
+          "Kimi K3 is the flagship language model from Moonshot AI (月之暗面), one of China's leading AI startups. As part of the broader landscape of [[guide:china-ai-api-keys-complete-guide|Chinese AI API platforms]], Kimi stands out for its ultra-long context capabilities. It is specifically designed for ultra-long context processing, supporting up to 256K tokens in a single request — enough to process an entire book or a large codebase in one call.",
           "Kimi K3 excels at Chinese language understanding, long-document Q&A, and multi-turn conversations that require maintaining context over extended interactions. It also performs strongly on reasoning tasks and code generation, making it a versatile choice for developers building applications that need to process large amounts of text.",
-          "The Kimi API is OpenAI-compatible, which means you can use the standard OpenAI SDK with a different base URL. This makes migration from OpenAI or other compatible APIs straightforward."
+          "The Kimi API is OpenAI-compatible, which means you can use the standard OpenAI SDK with a different base URL. This makes migration from OpenAI or other compatible APIs straightforward. For the latest model details and a July 2026 update, [[guide:kimi-k3-api-key-setup-2026|the Kimi K3 setup guide]] covers the newest 2.8T parameter release."
         ],
         "zh": [
-          "Kimi K3 是月之暗面（Moonshot AI）的旗舰语言模型，月之暗面是中国领先的 AI 创业公司之一。Kimi K3 专为超长上下文处理设计，单次请求支持高达 256K token——足以在一次调用中处理整本书或大型代码库。",
+          "Kimi K3 是月之暗面（Moonshot AI）的旗舰语言模型，月之暗面是中国领先的 AI 创业公司之一。在 [[guide:china-ai-api-keys-complete-guide|中国 AI API 平台]]的整体格局中，Kimi 以超长上下文能力脱颖而出。Kimi K3 专为超长上下文处理设计，单次请求支持高达 256K token——足以在一次调用中处理整本书或大型代码库。",
           "Kimi K3 在中文理解、长文档问答和需要长时间维持上下文的多轮对话方面表现出色。它在推理任务和代码生成方面也有很强的表现，是构建需要处理大量文本的应用的开发者的全能选择。",
-          "Kimi API 兼容 OpenAI 格式，意味着你可以使用标准 OpenAI SDK，只需更换 base URL。这使得从 OpenAI 或其他兼容 API 迁移变得简单。"
+          "Kimi API 兼容 OpenAI 格式，意味着你可以使用标准 OpenAI SDK，只需更换 base URL。这使得从 OpenAI 或其他兼容 API 迁移变得简单。关于最新模型的详细信息和 2026 年 7 月更新，[[guide:kimi-k3-api-key-setup-2026|Kimi K3 接入指南]]涵盖了最新的 2.8 万亿参数版本。"
         ]
       }
     },
@@ -74,12 +74,12 @@
       "paragraphs": {
         "en": [
           "After logging in to the Moonshot platform, navigate to the 'API Key Management' section in the dashboard. Click 'Create API Key', give it a descriptive name so you can identify it later, and the key will be generated.",
-          "Copy the API key immediately and store it securely. Like most API providers, Moonshot only displays the full key once at creation time. If you lose it, you will need to create a new one.",
+          "Copy the API key immediately and store it securely. Like most API providers, Moonshot only displays the full key once at creation time. If you lose it, you will need to create a new one. The same applies when you obtain your [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API key]] through the updated console interface.",
           "Store the key in an environment variable or a secrets management system. Never hardcode API keys in source files or commit them to version control."
         ],
         "zh": [
           "登录 Moonshot 平台后，进入仪表盘中的「API Key 管理」页面。点击「创建 API Key」，给它起一个描述性的名字以便日后识别，Key 即会生成。",
-          "立即复制 API Key 并安全保存。和大多数 API 供应商一样，Moonshot 只在创建时显示一次完整 Key。如果遗失，需要重新创建。",
+          "立即复制 API Key 并安全保存。和大多数 API 供应商一样，Moonshot 只在创建时显示一次完整 Key。如果遗失，需要重新创建。通过更新后的控制台获取 [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API Key]] 时，同样适用这一规则。",
           "将 Key 存储在环境变量或密钥管理系统中。永远不要将 API Key 硬编码在源文件中或提交到版本控制。"
         ]
       },
@@ -110,12 +110,12 @@
         "en": [
           "Moonshot uses a pay-per-token pricing model with separate rates for input and output tokens. The Kimi K3 model is competitively priced, especially considering its long-context capabilities — processing 256K tokens in a single call is more cost-effective than chunking and making multiple requests with shorter-context models.",
           "New users may receive free trial credits upon registration, which is enough for initial testing. For continued usage, you need to add credits to your account. The platform supports Alipay and WeChat Pay for payments.",
-          "Moonshot also offers prompt caching discounts for repeated context, which can reduce costs significantly for applications that process the same long documents across multiple requests. Check the official pricing page for current rates."
+          "Moonshot also offers prompt caching discounts for repeated context, which can reduce costs significantly for applications that process the same long documents across multiple requests. For a detailed cost breakdown against Claude Sonnet 5 and Kimi K2.5, [[guide:kimi-k3-api-key-setup-2026|see our detailed tutorial]]. Check the official pricing page for current rates."
         ],
         "zh": [
           "Moonshot 采用按 token 付费模式，输入和输出 token 分别计价。Kimi K3 模型定价有竞争力，特别是考虑到其长上下文能力——单次调用处理 256K token 比用短上下文模型分块多次请求更经济。",
           "新用户注册后可能会获得免费试用额度，足够用于初始测试。继续使用需要为账户充值。平台支持支付宝和微信支付。",
-          "Moonshot 还提供重复上下文的提示缓存折扣，对于跨多次请求处理相同长文档的应用可以显著降低成本。请查看官方定价页面获取最新价格。"
+          "Moonshot 还提供重复上下文的提示缓存折扣，对于跨多次请求处理相同长文档的应用可以显著降低成本。如需与 Claude Sonnet 5 和 Kimi K2.5 的详细成本对比，[[guide:kimi-k3-api-key-setup-2026|请参阅我们的详细教程]]。请查看官方定价页面获取最新价格。"
         ]
       }
     },
@@ -161,12 +161,12 @@
       "paragraphs": {
         "en": [
           "Kimi K3 stands out in several areas that make it particularly suitable for certain use cases. Understanding these features helps you decide when to choose Kimi over other models.",
-          "The ultra-long context window is Kimi K3's defining feature. With 256K tokens, you can feed entire documents, codebases, or conversation histories into a single request without chunking or summarization. This is especially valuable for legal document analysis, code review, and research tasks.",
+          "The ultra-long context window is Kimi K3's defining feature. With 256K tokens, you can feed entire documents, codebases, or conversation histories into a single request without chunking or summarization. This is especially valuable for legal document analysis, code review, and research tasks. The latest K3 release expands this to 1M tokens — [[guide:kimi-k3-api-key-setup-2026|the updated Kimi K3 walkthrough]] has full details.",
           "Kimi K3 also features strong reasoning capabilities, performing well on mathematical and logical benchmarks. Its Chinese language understanding is among the best of all commercial LLMs, making it ideal for applications targeting Chinese-speaking users."
         ],
         "zh": [
           "Kimi K3 在几个方面有突出表现，使其特别适合某些使用场景。了解这些特点有助于你决定何时选择 Kimi。",
-          "超长上下文窗口是 Kimi K3 的标志性特征。256K token 的上下文意味着你可以在单次请求中输入整篇文档、代码库或对话历史，无需分块或摘要。这对法律文档分析、代码审查和研究任务特别有价值。",
+          "超长上下文窗口是 Kimi K3 的标志性特征。256K token 的上下文意味着你可以在单次请求中输入整篇文档、代码库或对话历史，无需分块或摘要。这对法律文档分析、代码审查和研究任务特别有价值。最新的 K3 版本将上下文扩展至 100 万 Token——[[guide:kimi-k3-api-key-setup-2026|更新版 Kimi K3 教程]]有完整介绍。",
           "Kimi K3 还具有强大的推理能力，在数学和逻辑基准测试上表现良好。其中文理解能力在商用 LLM 中名列前茅，非常适合面向中文用户的应用。"
         ]
       },

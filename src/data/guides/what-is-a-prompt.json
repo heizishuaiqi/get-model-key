@@ -32,12 +32,12 @@
       },
       "paragraphs": {
         "en": [
-          "A prompt is the text input you give to an AI chatbot or language model to get a response. It's how you communicate with AI — you type a question, instruction, or piece of text, and the AI generates a relevant response.",
-          "Searches for 'what is a prompt' grew over 2100% in 2026, reflecting the massive influx of new users entering the AI space. Understanding prompts is the first step to effectively using any AI model."
+          "A prompt is the text input you give to an AI chatbot or language model to get a response. It's how you communicate with AI — you type a question, instruction, or piece of text, and the AI generates a relevant response. Prompts can range from a single word to multiple paragraphs, and the quality of your prompt directly determines the quality of the AI's output.",
+          "Searches for 'what is a prompt' grew over 2100% in 2026, reflecting the massive influx of new users entering the AI space. Understanding prompts is the first step to effectively using any AI model, and [[guide:ai-beginner-guide|our comprehensive beginner's guide to AI]] covers the full landscape from basic concepts to API integration."
         ],
         "zh": [
-          "Prompt 是你给 AI 聊天机器人或语言模型的文本输入，用来获取回复。这是你与 AI 交流的方式——你输入一个问题、指令或一段文本，AI 生成相关的回复。",
-          "「what is a prompt」的搜索量在 2026 年增长了 2100% 以上，反映了大量新用户涌入 AI 领域。理解 Prompt 是有效使用任何 AI 模型的第一步。"
+          "Prompt 是你给 AI 聊天机器人或语言模型的文本输入，用来获取回复。这是你与 AI 交流的方式——你输入一个问题、指令或一段文本，AI 生成相关的回复。Prompt 可以从一个词到多个段落不等，而你的 Prompt 质量直接决定 AI 输出的质量。",
+          "「what is a prompt」的搜索量在 2026 年增长了 2100% 以上，反映了大量新用户涌入 AI 领域。理解 Prompt 是有效使用任何 AI 模型的第一步，而 [[guide:ai-beginner-guide|我们全面的 AI 新手指南]] 涵盖了从基础概念到 API 集成的完整知识体系。"
         ]
       }
     },
@@ -50,11 +50,11 @@
       "paragraphs": {
         "en": [
           "An effective prompt typically contains three key elements: role, task, and context. Searches for 'what are the 3 main steps of a good prompt' increased 1100% in 2026, showing strong interest in structured prompt writing.",
-          "The role tells the AI who to act as (e.g., 'You are a Python expert'). The task describes what you want the AI to do (e.g., 'Write a function to sort a list'). The context provides background information the AI needs to give a good answer."
+          "The role tells the AI who to act as (e.g., 'You are a Python expert'). The task describes what you want the AI to do (e.g., 'Write a function to sort a list'). The context provides background information the AI needs to give a good answer. For a deeper dive into crafting each of these elements, see [[guide:how-to-write-good-prompts|our practical guide to writing effective prompts]], which includes side-by-side good vs bad examples and advanced techniques like few-shot and chain-of-thought prompting."
         ],
         "zh": [
           "一个有效的 Prompt 通常包含三个关键要素：角色、任务和上下文。「what are the 3 main steps of a good prompt」的搜索量在 2026 年增长了 1100%，显示了对结构化 Prompt 写作的强烈兴趣。",
-          "角色告诉 AI 扮演什么身份（如「你是一个 Python 专家」）。任务描述你希望 AI 做什么（如「写一个排序列表的函数」）。上下文提供 AI 需要的背景信息来给出好答案。"
+          "角色告诉 AI 扮演什么身份（如「你是一个 Python 专家」）。任务描述你希望 AI 做什么（如「写一个排序列表的函数」）。上下文提供 AI 需要的背景信息来给出好答案。想要深入了解如何构建这些要素，请参阅 [[guide:how-to-write-good-prompts|我们的实用 Prompt 写作指南]]，其中包含好坏对比示例和少样本、思维链等高级技巧。"
         ]
       }
     },
@@ -84,6 +84,29 @@
       ]
     },
     {
+      "id": "types-of-prompts",
+      "heading": {
+        "en": "Common Types of Prompts",
+        "zh": "常见的 Prompt 类型"
+      },
+      "paragraphs": {
+        "en": [
+          "Prompts come in many forms depending on what you want the AI to do. Understanding the different types helps you choose the right approach for your task.",
+          "Instruction prompts tell the AI to perform a specific action, like 'Summarize this article in 3 bullet points.' These are the most common type and work well for straightforward tasks where you need a clear, structured output.",
+          "Question prompts ask the AI for information, like 'What is the difference between supervised and unsupervised learning?' These are ideal for learning and research, especially when you need a concept explained in simple terms.",
+          "Creative prompts ask the AI to generate original content, like 'Write a short story about a robot learning to paint.' These benefit from higher temperature settings for more creative and varied output.",
+          "Code prompts ask the AI to write, debug, or explain code, like 'Write a Python function to fetch data from a REST API.' Always specify the programming language, framework, and any constraints like error handling or performance requirements."
+        ],
+        "zh": [
+          "Prompt 有多种形式，取决于你想让 AI 做什么。了解不同类型有助于你为任务选择正确的方法。",
+          "指令型 Prompt 让 AI 执行特定操作，如「用 3 个要点总结这篇文章」。这是最常见的类型，适合需要清晰、结构化输出的简单直接任务。",
+          "提问型 Prompt 向 AI 询问信息，如「监督学习和无监督学习有什么区别？」这类 Prompt 非常适合学习和研究，尤其是需要用简单语言解释概念时。",
+          "创意型 Prompt 让 AI 生成原创内容，如「写一个关于机器人学习画画的短篇故事」。这类 Prompt 适合用较高的温度设置来获得更有创意和多样性的输出。",
+          "代码型 Prompt 让 AI 编写、调试或解释代码，如「写一个 Python 函数从 REST API 获取数据」。务必指定编程语言、框架以及错误处理或性能要求等约束条件。"
+        ]
+      }
+    },
+    {
       "id": "tips",
       "heading": {
         "en": "Tips for Better Prompts",
@@ -91,12 +114,12 @@
       },
       "paragraphs": {
         "en": [
-          "Be specific rather than vague. Provide examples when possible. Break complex tasks into smaller steps. And iterate — if the AI's response isn't what you wanted, refine your prompt and try again.",
-          "When using AI through an API (rather than a chat interface), you can also set parameters like temperature (creativity) and max tokens (response length) to fine-tune the output."
+          "Be specific rather than vague. Provide examples when possible. Break complex tasks into smaller steps. And iterate — if the AI's response isn't what you wanted, refine your prompt and try again. Poor prompts can also contribute to [[guide:what-are-ai-hallucinations|AI generating incorrect information]], so clear instructions are essential for reliable results.",
+          "When using AI through an API (rather than a chat interface), you can also set parameters like temperature (creativity) and max tokens (response length) to fine-tune the output. To get started with programmatic AI access, you'll need [[guide:what-is-an-api-key|an API key]] — a unique credential that authenticates your requests to the AI provider."
         ],
         "zh": [
-          "要具体而非含糊。尽可能提供示例。将复杂任务拆分为更小的步骤。还要迭代——如果 AI 的回复不是你想要的，修改你的 Prompt 再试一次。",
-          "通过 API（而非聊天界面）使用 AI 时，你还可以设置温度（创意度）和最大 token 数（回复长度）等参数来微调输出。"
+          "要具体而非含糊。尽可能提供示例。将复杂任务拆分为更小的步骤。还要迭代——如果 AI 的回复不是你想要的，修改你的 Prompt 再试一次。模糊的 Prompt 也可能导致 [[guide:what-are-ai-hallucinations|AI 生成错误信息]]，因此清晰的指令对获得可靠结果至关重要。",
+          "通过 API（而非聊天界面）使用 AI 时，你还可以设置温度（创意度）和最大 token 数（回复长度）等参数来微调输出。要开始编程式 AI 访问，你需要 [[guide:what-is-an-api-key|一个 API Key]] —— 这是向 AI 供应商验证请求的唯一凭证。"
         ]
       }
     }

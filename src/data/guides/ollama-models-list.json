@@ -33,11 +33,11 @@
       "paragraphs": {
         "en": [
           "Ollama is an open-source tool that lets you run large language models locally on your own machine. It handles model downloading, quantization, and serving, making local LLM deployment as simple as running a single command.",
-          "Unlike cloud APIs, Ollama runs entirely on your hardware — no API key, no per-token billing, no data leaving your machine. This makes it ideal for privacy-sensitive applications, offline use, and cost-free experimentation."
+          "Unlike cloud APIs, Ollama runs entirely on your hardware — no API key, no per-token billing, no data leaving your machine. This makes it ideal for privacy-sensitive applications, offline use, and cost-free experimentation. For a broader overview of AI tools and concepts, [[guide:ai-beginner-guide|the beginner's guide to AI]] provides context on where local models fit in the ecosystem."
         ],
         "zh": [
           "Ollama 是一个开源工具，让你在本地机器上运行大型语言模型。它处理模型下载、量化和服务，使本地 LLM 部署就像运行一条命令一样简单。",
-          "与云端 API 不同，Ollama 完全在你的硬件上运行——无需 API Key、无按 token 计费、数据不离开你的机器。这使它非常适合隐私敏感的应用、离线使用和免费实验。"
+          "与云端 API 不同，Ollama 完全在你的硬件上运行——无需 API Key、无按 token 计费、数据不离开你的机器。这使它非常适合隐私敏感的应用、离线使用和免费实验。如需更广泛地了解 AI 工具和概念，[[guide:ai-beginner-guide|AI 新手指南]] 提供了本地模型在生态中定位的背景知识。"
         ]
       }
     },
@@ -49,10 +49,10 @@
       },
       "paragraphs": {
         "en": [
-          "Ollama supports a wide range of open-source models. Here are the most popular ones in 2026, with their parameter sizes and approximate memory requirements:"
+          "Ollama supports a wide range of open-source models. Here are the most popular ones in 2026, with their parameter sizes and approximate memory requirements. The models range from lightweight options that run on laptops to powerful models that need dedicated GPUs."
         ],
         "zh": [
-          "Ollama 支持多种开源模型。以下是 2026 年最热门的模型，及其参数大小和近似内存需求："
+          "Ollama 支持多种开源模型。以下是 2026 年最热门的模型，及其参数大小和近似内存需求。这些模型从能在笔记本上运行的轻量选项到需要专用 GPU 的强大模型都有覆盖。"
         ]
       },
       "bullets": {
@@ -75,6 +75,27 @@
           "gemma2:9b — Google Gemma 2，90 亿参数，约 6GB 内存",
           "mistral:7b — Mistral 7B，轻量快速，约 5GB 内存",
           "phi3:3.8b — 微软 Phi-3 mini，38 亿参数，约 3GB 内存，适合低端硬件"
+        ]
+      }
+    },
+    {
+      "id": "choosing-model",
+      "heading": {
+        "en": "Choosing the Right Model for Your Hardware",
+        "zh": "根据硬件选择合适的模型"
+      },
+      "paragraphs": {
+        "en": [
+          "Selecting the right model depends on your hardware capabilities and use case. For laptops and basic desktops with 8-16GB RAM, the 7-8B parameter models (Llama 3.1 8B, Qwen 2.5 7B, Mistral 7B) are ideal — they offer good quality at manageable memory footprints and generate text at reasonable speeds.",
+          "For machines with 16-32GB RAM or a mid-range GPU (8-16GB VRAM), the 9-14B models (Gemma 2 9B, DeepSeek-R1 14B) provide better reasoning and knowledge depth. These models are suitable for more complex tasks like code generation and detailed analysis.",
+          "For servers with high-end GPUs (40GB+ VRAM), the 70B models like Llama 3.1 70B deliver near-GPT-4 quality for many tasks. However, inference is significantly slower, and you should carefully evaluate whether the quality improvement justifies the hardware cost.",
+          "If you have limited hardware (4GB RAM), the Microsoft Phi-3 mini (3.8B) is an excellent choice. It runs on almost any machine and still handles basic conversation, Q&A, and simple coding tasks reasonably well."
+        ],
+        "zh": [
+          "选择合适的模型取决于你的硬件能力和使用场景。对于 8-16GB 内存的笔记本和基本台式机，70-80 亿参数模型（Llama 3.1 8B、Qwen 2.5 7B、Mistral 7B）是理想选择——它们在可接受的内存占用下提供不错的质量，并以合理的速度生成文本。",
+          "对于 16-32GB 内存或中端 GPU（8-16GB 显存）的机器，90-140 亿参数模型（Gemma 2 9B、DeepSeek-R1 14B）提供更好的推理和知识深度。这些模型适合更复杂的任务，如代码生成和详细分析。",
+          "对于配备高端 GPU（40GB+ 显存）的服务器，Llama 3.1 70B 等 700 亿参数模型在许多任务上接近 GPT-4 的质量。但推理速度明显更慢，你需要仔细评估质量提升是否值得硬件成本。",
+          "如果硬件有限（4GB 内存），微软 Phi-3 mini（38 亿）是极佳的选择。它几乎可以在任何机器上运行，仍能合理处理基本对话、问答和简单编程任务。"
         ]
       }
     },
@@ -111,10 +132,10 @@
       },
       "paragraphs": {
         "en": [
-          "Ollama runs a local HTTP server on port 11434. The API is OpenAI-compatible, so you can use the same SDK with the base URL set to localhost. No API key is required for local calls."
+          "Ollama runs a local HTTP server on port 11434. The API is OpenAI-compatible, so you can use the same SDK with the base URL set to localhost. No API key is required for local calls, which is a significant advantage over cloud APIs that require [[guide:what-is-an-api-key|authentication credentials]] — you simply point your code at localhost and start generating."
         ],
         "zh": [
-          "Ollama 在本地 11434 端口运行 HTTP 服务器。API 兼容 OpenAI 格式，所以你可以用相同的 SDK，将 base URL 设为 localhost 即可。本地调用不需要 API Key。"
+          "Ollama 在本地 11434 端口运行 HTTP 服务器。API 兼容 OpenAI 格式，所以你可以用相同的 SDK，将 base URL 设为 localhost 即可。本地调用不需要 API Key，这比需要 [[guide:what-is-an-api-key|认证凭证]] 的云端 API 有明显优势——你只需将代码指向 localhost 即可开始生成。"
         ]
       },
       "codeBlocks": [
@@ -136,12 +157,12 @@
       },
       "paragraphs": {
         "en": [
-          "Ollama shines for privacy-sensitive work, offline environments, and cost-free unlimited usage. Cloud APIs offer more powerful models (GPT-4o, Claude 3.5 Sonnet) that can't run on consumer hardware, plus features like function calling and vision that local models may not fully support.",
-          "A common pattern: prototype locally with Ollama, then deploy to cloud APIs for production. This gives you free development and the best models for production."
+          "Ollama shines for privacy-sensitive work, offline environments, and cost-free unlimited usage. Cloud APIs offer more powerful models (GPT-4o, Claude 3.5 Sonnet) that can't run on consumer hardware, plus features like function calling and vision that local models may not fully support. If you're looking for free cloud-based options, [[guide:free-ai-api-keys|our free AI API guide]] covers providers like Google Gemini and OpenRouter that offer free tiers.",
+          "A common pattern: prototype locally with Ollama, then deploy to cloud APIs for production. This gives you free development and the best models for production. For the cloud deployment phase, [[guide:how-to-get-openrouter-api-key|setting up an OpenRouter API key]] is a convenient option since one key gives you access to hundreds of models from different providers."
         ],
         "zh": [
-          "Ollama 在隐私敏感工作、离线环境和免费无限使用方面表现出色。云端 API 提供更强大的模型（GPT-4o、Claude 3.5 Sonnet），这些模型无法在消费级硬件上运行，还提供本地模型可能不完全支持的函数调用和视觉等功能。",
-          "常见模式：用 Ollama 本地原型开发，然后部署到云端 API 用于生产。这样既免费开发，生产又能用上最好的模型。"
+          "Ollama 在隐私敏感工作、离线环境和免费无限使用方面表现出色。云端 API 提供更强大的模型（GPT-4o、Claude 3.5 Sonnet），这些模型无法在消费级硬件上运行，还提供本地模型可能不完全支持的函数调用和视觉等功能。如果你在寻找免费的云端方案，[[guide:free-ai-api-keys|我们的免费 AI API 指南]] 介绍了 Google Gemini 和 OpenRouter 等提供免费额度的供应商。",
+          "常见模式：用 Ollama 本地原型开发，然后部署到云端 API 用于生产。这样既免费开发，生产又能用上最好的模型。在云端部署阶段，[[guide:how-to-get-openrouter-api-key|设置 OpenRouter API Key]] 是一个便捷选择，因为一个 Key 即可访问来自不同供应商的数百个模型。"
         ]
       }
     }

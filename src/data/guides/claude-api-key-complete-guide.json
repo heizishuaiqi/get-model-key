@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "Claude is Anthropic's AI assistant, accessed programmatically through the Anthropic API. Claude models are known for strong reasoning, writing quality, and safety features. The API provides access to multiple model tiers: Claude Opus (most capable), Claude Sonnet (balanced), and Claude Haiku (fast and affordable).",
+          "Claude is Anthropic's AI assistant, accessed programmatically through the Anthropic API. Claude models are known for strong reasoning, writing quality, and safety features. The API provides access to multiple model tiers: Claude Opus (most capable), Claude Sonnet (balanced), and Claude Haiku (fast and affordable). For Anthropic's newest Mythos-class flagship, see our [[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 setup walkthrough]] — it covers the most powerful public model available.",
           "Claude API key searches remain consistently high, with 'claude api key' and 'how to get claude api key' being among the most searched terms in the AI API space.",
           "In our testing, Claude models consistently produced higher-quality long-form writing and more accurate reasoning on complex tasks compared to many alternatives. The trade-off is that Claude Opus pricing is on the higher end — but Claude Haiku remains one of the most competitive options for high-volume text processing."
         ],
         "zh": [
-          "Claude 是 Anthropic 的 AI 助手，通过 Anthropic API 进行编程调用。Claude 模型以强推理、写作质量和安全特性著称。API 提供多个模型层级：Claude Opus（能力最强）、Claude Sonnet（均衡）和 Claude Haiku（快速实惠）。",
+          "Claude 是 Anthropic 的 AI 助手，通过 Anthropic API 进行编程调用。Claude 模型以强推理、写作质量和安全特性著称。API 提供多个模型层级：Claude Opus（能力最强）、Claude Sonnet（均衡）和 Claude Haiku（快速实惠）。如需了解 Anthropic 最新 Mythos 级旗舰模型，请参阅我们的 [[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 开通指南]]——它涵盖了当前最强的公开模型。",
           "Claude API Key 的搜索热度持续较高，「claude api key」和「how to get claude api key」是 AI API 领域搜索量最高的词之一。",
           "在我们的测试中，Claude 模型在长文本写作和复杂任务推理上持续产出更高质量的结果。代价是 Claude Opus 定价偏高 —— 但 Claude Haiku 在高用量文本处理场景中仍然是最有竞争力的选择之一。"
         ]

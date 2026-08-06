@@ -36,12 +36,12 @@
         "en": [
           "Google's Gemini model family includes three tiers designed for different use cases: Gemini 2.5 Pro for complex reasoning and high-quality output, Gemini 2.5 Flash for fast and cost-efficient general tasks, and Gemini 2.5 Flash-Lite for high-volume, latency-sensitive workloads.",
           "All three models share the same API interface — you only need to change the model name in your request. They all support multimodal input (text, images, audio, video) and can be accessed through Google AI Studio or Vertex AI.",
-          "Choosing the right model depends on your priorities: if you need the best possible reasoning and output quality, Pro is the answer; if you need a balance of speed and cost, Flash is the sweet spot; if you are processing massive volumes where cost per token is critical, Flash-Lite delivers."
+          "Choosing the right model depends on your priorities: if you need the best possible reasoning and output quality, Pro is the answer; if you need a balance of speed and cost, Flash is the sweet spot; if you are processing massive volumes where cost per token is critical, Flash-Lite delivers. For the full setup walkthrough, the [[guide:gemini-api-key-complete-guide|Gemini API key guide]] is our most comprehensive resource."
         ],
         "zh": [
           "Google 的 Gemini 模型家族包括三个层次，针对不同使用场景设计：Gemini 2.5 Pro 用于复杂推理和高质量输出，Gemini 2.5 Flash 用于快速且高性价比的通用任务，Gemini 2.5 Flash-Lite 用于高并发、对延迟敏感的工作负载。",
           "三个模型共享相同的 API 接口——你只需在请求中更改模型名称即可。它们都支持多模态输入（文本、图片、音频、视频），可通过 Google AI Studio 或 Vertex AI 访问。",
-          "选择合适的模型取决于你的优先级：如果需要最好的推理和输出质量，选 Pro；如果需要速度和成本的平衡，Flash 是最佳选择；如果处理大量数据且每个 token 的成本至关重要，Flash-Lite 最合适。"
+          "选择合适的模型取决于你的优先级：如果需要最好的推理和输出质量，选 Pro；如果需要速度和成本的平衡，Flash 是最佳选择；如果处理大量数据且每个 token 的成本至关重要，Flash-Lite 最合适。如需完整的开通流程，[[guide:gemini-api-key-complete-guide|Gemini API Key 指南]] 是我们最全面的资源。"
         ]
       }
     },
@@ -86,12 +86,12 @@
         "en": [
           "Gemini model pricing is per million tokens, with separate rates for input and output. Flash-Lite is the most affordable, Flash offers a middle ground, and Pro commands a premium for its superior reasoning and output quality.",
           "Prompt caching is available on all models and can significantly reduce costs for repetitive prompts. Cached input tokens are billed at a fraction of the standard input rate.",
-          "The free tier in Google AI Studio allows you to test all three models without cost, subject to rate limits. This lets you evaluate quality differences before committing to paid usage."
+          "The free tier in Google AI Studio allows you to test all three models without cost, subject to rate limits. This lets you evaluate quality differences before committing to paid usage. If you haven't obtained a key yet, our [[guide:how-to-get-gemini-api-key|Gemini API key tutorial]] covers both AI Studio and Vertex AI methods."
         ],
         "zh": [
           "Gemini 模型按百万 token 定价，输入和输出分别计价。Flash-Lite 最经济实惠，Flash 提供中间价位，Pro 因其卓越的推理和输出质量定价最高。",
           "所有模型都支持提示缓存，可以显著降低重复提示的成本。缓存的输入 token 按标准输入费率的一部分计费。",
-          "Google AI Studio 的免费额度允许你在速率限制内免费测试三个模型，方便在付费使用前评估质量差异。"
+          "Google AI Studio 的免费额度允许你在速率限制内免费测试三个模型，方便在付费使用前评估质量差异。如果你还没有获取密钥，我们的 [[guide:how-to-get-gemini-api-key|Gemini API Key 教程]] 同时涵盖了 AI Studio 和 Vertex AI 两种方式。"
         ]
       },
       "bullets": {
@@ -138,10 +138,10 @@
       },
       "paragraphs": {
         "en": [
-          "Choosing the right Gemini model depends on your specific use case, performance requirements, and budget. Here are practical recommendations based on common scenarios:"
+          "Choosing the right Gemini model depends on your specific use case, performance requirements, and budget. Here are practical recommendations based on common scenarios. For the fastest path from key creation to first call, the [[guide:gemini-api-key-quickstart-2026|Gemini quickstart guide]] is the shortest route. And if you want to understand the AI Studio platform itself, our [[guide:google-ai-studio-api-key|Google AI Studio key guide]] has you covered."
         ],
         "zh": [
-          "选择合适的 Gemini 模型取决于你的具体使用场景、性能需求和预算。以下是基于常见场景的实用建议："
+          "选择合适的 Gemini 模型取决于你的具体使用场景、性能需求和预算。以下是基于常见场景的实用建议。如需从密钥创建到首次调用的最快路径，[[guide:gemini-api-key-quickstart-2026|Gemini 快速入门指南]] 是最短的路线。如果你想了解 AI Studio 平台本身，我们的 [[guide:google-ai-studio-api-key|Google AI Studio 密钥指南]] 为你全面覆盖。"
         ]
       },
       "bullets": {

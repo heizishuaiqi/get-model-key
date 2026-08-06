@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "OpenRouter is an AI API aggregator that provides a unified interface to hundreds of models from different providers. Instead of managing separate API keys for OpenAI, Anthropic, Google, and DeepSeek, you use one OpenRouter key to access them all.",
-          "This simplifies billing, model switching, and fallback strategies. If one provider goes down, you can reroute to another with a one-line code change. OpenRouter also normalizes pricing into a consistent format, making cost comparison easier."
+          "OpenRouter is an AI API aggregator that provides a unified interface to hundreds of models from different providers. Instead of managing separate API keys for OpenAI, Anthropic, Google, and DeepSeek, you use one OpenRouter key to access them all. It's one of the key tools covered in [[guide:ai-beginner-guide|our beginner's guide to AI]] for simplifying the API landscape.",
+          "This simplifies billing, model switching, and fallback strategies. If one provider goes down, you can reroute to another with a one-line code change. OpenRouter also normalizes pricing into a consistent format, making cost comparison easier. Additionally, OpenRouter provides usage analytics across all models in a single dashboard, so you can track spending and optimize your model mix without juggling multiple provider accounts."
         ],
         "zh": [
-          "OpenRouter 是一个 AI API 聚合平台，提供统一接口访问来自不同供应商的数百个模型。你不需要为 OpenAI、Anthropic、Google 和 DeepSeek 分别管理 API Key，只需一个 OpenRouter Key 即可访问全部。",
-          "这简化了计费、模型切换和回退策略。如果某个供应商宕机，你可以用一行代码切换到另一个。OpenRouter 还将定价统一格式化，便于成本对比。"
+          "OpenRouter 是一个 AI API 聚合平台，提供统一接口访问来自不同供应商的数百个模型。你不需要为 OpenAI、Anthropic、Google 和 DeepSeek 分别管理 API Key，只需一个 OpenRouter Key 即可访问全部。它是 [[guide:ai-beginner-guide|我们的 AI 新手指南]] 中介绍的关键工具之一，用于简化 API 生态。",
+          "这简化了计费、模型切换和回退策略。如果某个供应商宕机，你可以用一行代码切换到另一个。OpenRouter 还将定价统一格式化，便于成本对比。此外，OpenRouter 在单一后台提供跨所有模型的使用分析，你可以跟踪支出并优化模型组合，无需在多个供应商账户之间切换。"
         ]
       }
     },
@@ -51,11 +51,11 @@
       },
       "paragraphs": {
         "en": [
-          "Go to openrouter.ai and sign up. OpenRouter supports Google and GitHub login for quick onboarding. The registration process takes less than a minute.",
+          "Go to openrouter.ai and sign up. OpenRouter supports Google and GitHub login for quick onboarding. The registration process takes less than a minute, and you don't need a credit card to create an account — you only need to add payment when you're ready to use paid models.",
           "After registering, you'll land on the dashboard where you can manage keys, credits, and view usage analytics."
         ],
         "zh": [
-          "前往 openrouter.ai 注册。OpenRouter 支持 Google 和 GitHub 登录，快速上手。注册过程不到一分钟。",
+          "前往 openrouter.ai 注册。OpenRouter 支持 Google 和 GitHub 登录，快速上手。注册过程不到一分钟，创建账户不需要信用卡——只有准备使用付费模型时才需要添加付款方式。",
           "注册后进入后台，你可以管理 Key、额度和查看用量分析。"
         ]
       }
@@ -68,11 +68,11 @@
       },
       "paragraphs": {
         "en": [
-          "In the dashboard, navigate to the 'Keys' section. Click 'Create Key', give it a name (e.g., 'production' or 'dev'), and copy the generated key. Like most providers, the full key is only shown once.",
+          "In the dashboard, navigate to the 'Keys' section. Click 'Create Key', give it a name (e.g., 'production' or 'dev'), and copy the generated key. Like most providers, the full key is only shown once. If you're unfamiliar with how API keys work in general, [[guide:what-is-an-api-key|our API key guide]] explains the fundamentals of authentication, authorization, and billing.",
           "OpenRouter lets you create multiple keys with different credit limits — useful for separating production and development environments."
         ],
         "zh": [
-          "在后台进入「Keys」页面，点击「Create Key」，给它命名（如「production」或「dev」），然后复制生成的 Key。和大多数供应商一样，完整 Key 只显示一次。",
+          "在后台进入「Keys」页面，点击「Create Key」，给它命名（如「production」或「dev」），然后复制生成的 Key。和大多数供应商一样，完整 Key 只显示一次。如果你不熟悉 API Key 的一般工作原理，[[guide:what-is-an-api-key|我们的 API Key 指南]] 解释了认证、授权和计费的基础知识。",
           "OpenRouter 支持创建多个 Key，并设置不同的额度限制——适合区分生产和开发环境。"
         ]
       }
@@ -85,11 +85,11 @@
       },
       "paragraphs": {
         "en": [
-          "OpenRouter uses a prepaid credits model. Add credits via credit card or crypto. Some models are free (marked in the model list), so you can start experimenting even without payment.",
+          "OpenRouter uses a prepaid credits model. Add credits via credit card or crypto. Some models are free (marked in the model list), so you can start experimenting even without payment. For a broader view of all free AI API options across providers, [[guide:free-ai-api-keys|our free AI API guide]] compares every free tier available in 2026.",
           "Credits are shared across all models — you don't need separate balances for OpenAI vs Claude. The dashboard shows real-time usage breakdown by model."
         ],
         "zh": [
-          "OpenRouter 采用预付额度模式。可通过信用卡或加密货币充值。部分模型免费（在模型列表中标记），所以不付款也可以开始实验。",
+          "OpenRouter 采用预付额度模式。可通过信用卡或加密货币充值。部分模型免费（在模型列表中标记），所以不付款也可以开始实验。如需更全面地了解所有供应商的免费 AI API 选项，[[guide:free-ai-api-keys|我们的免费 AI API 指南]] 对比了 2026 年所有可用的免费层。",
           "额度在所有模型间共享——不需要为 OpenAI 和 Claude 分别充值。后台显示按模型划分的实时用量。"
         ]
       }
@@ -102,10 +102,10 @@
       },
       "paragraphs": {
         "en": [
-          "OpenRouter's API is OpenAI-compatible. To switch models, just change the model name in your request. Here's an example calling three different providers with the same key:"
+          "OpenRouter's API is OpenAI-compatible, meaning you can use the same OpenAI SDK you already know. To switch models, just change the model name in your request — no code restructuring needed. Here's an example calling three different providers with the same key:"
         ],
         "zh": [
-          "OpenRouter 的 API 兼容 OpenAI 格式。切换模型只需修改请求中的模型名称。以下是用同一个 Key 调用三个不同供应商的示例："
+          "OpenRouter 的 API 兼容 OpenAI 格式，意味着你可以使用已经熟悉的 OpenAI SDK。切换模型只需修改请求中的模型名称——无需重构代码。以下是用同一个 Key 调用三个不同供应商的示例："
         ]
       },
       "codeBlocks": [
@@ -128,11 +128,11 @@
       "paragraphs": {
         "en": [
           "OpenRouter passes through provider pricing with a small markup. The markup is transparent — shown on each model's page. For high-volume users, the convenience of a single billing system often outweighs the small premium.",
-          "Free models are available with rate limits. Paid models are billed per-token, consistent with each provider's original pricing. Check the model list page for real-time pricing."
+          "Free models are available with rate limits. Paid models are billed per-token, consistent with each provider's original pricing. Check the model list page for real-time pricing. For developers who need unlimited free usage without rate limits, [[guide:ollama-models-list|running models locally with Ollama]] is a compelling alternative that works entirely offline."
         ],
         "zh": [
           "OpenRouter 在供应商定价基础上加收少量费用。加价透明——在每个模型页面显示。对高用量用户，单一计费系统的便利性通常超过小幅加价。",
-          "免费模型有速率限制。付费模型按 token 计费，与各供应商原始定价一致。查看模型列表页面获取实时定价。"
+          "免费模型有速率限制。付费模型按 token 计费，与各供应商原始定价一致。查看模型列表页面获取实时定价。对于需要无限免费使用且无速率限制的开发者，[[guide:ollama-models-list|用 Ollama 在本地运行模型]] 是一个有吸引力的替代方案，完全离线工作。"
         ]
       }
     }

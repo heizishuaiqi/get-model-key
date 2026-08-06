@@ -83,12 +83,12 @@
       },
       "paragraphs": {
         "en": [
-          "Visit console.anthropic.com and sign up with your email address. Google single sign-on is also supported. Once registered, you will be prompted to complete phone number verification — this is required to activate API access and prevents abuse.",
+          "Visit console.anthropic.com and sign up with your email address. Google single sign-on is also supported. Once registered, you will be prompted to complete phone number verification — this is required to activate API access and prevents abuse. For a more detailed walkthrough of the account setup process, see our [[guide:how-to-get-claude-api-key|guide to getting a Claude API key]].",
           "After verification, you need to add a credit card or purchase credits before generating API keys. Anthropic does not offer a permanent free tier for the API, but new accounts occasionally receive a small starter credit. Check the console dashboard for any active promotions after signing up.",
           "Note for users outside the US: Anthropic's API is available globally. The June 2026 US export control incident that briefly suspended access for some countries was resolved on July 1, 2026, and international access has been fully restored."
         ],
         "zh": [
-          "访问 console.anthropic.com，使用邮箱注册，也支持 Google 一键登录。注册后需完成手机号验证——这是激活 API 访问的必要步骤，用于防止滥用。",
+          "访问 console.anthropic.com，使用邮箱注册，也支持 Google 一键登录。注册后需完成手机号验证——这是激活 API 访问的必要步骤，用于防止滥用。如需更详细的账号注册流程说明，请参阅我们的 [[guide:how-to-get-claude-api-key|Claude API Key 获取指南]]。",
           "验证完成后，需要绑定信用卡或购买额度才能生成 API Key。Anthropic API 没有永久免费套餐，但新账号偶尔会有少量赠送额度，注册后可在控制台查看。",
           "国际用户注意：2026 年 6 月曾出现短暂的出口管制限制，但美国商务部已于 7 月 1 日撤销该限制令，Anthropic 随即全面恢复了国际用户访问。如果此前无法访问，现在可以重新尝试。"
         ]
@@ -133,11 +133,11 @@
       },
       "paragraphs": {
         "en": [
-          "Claude Fable 5 uses Anthropic's native API format, not the OpenAI-compatible format. You need the official Anthropic SDK (anthropic-sdk-python or @anthropic-ai/sdk for Node.js). The model ID is claude-fable-5.",
+          "Claude Fable 5 uses Anthropic's native API format, not the OpenAI-compatible format. You need the official Anthropic SDK (anthropic-sdk-python or @anthropic-ai/sdk for Node.js). The model ID is claude-fable-5. For a broader overview of the entire Claude API ecosystem, the [[guide:claude-api-key-complete-guide|complete Claude API key guide]] covers all model tiers, pricing, and SDK integration.",
           "Fable 5 supports an optional thinking parameter for deeper analytical work. When thinking is enabled, the model allocates additional compute to problem-solving before generating a final response — ideal for complex coding, multi-step reasoning, or research tasks. Anthropic recommends using the 'high' thinking preset for best results."
         ],
         "zh": [
-          "Claude Fable 5 使用 Anthropic 原生 API 格式，而非 OpenAI 兼容格式。需要安装官方 Anthropic SDK（Python 用 anthropic-sdk-python，Node.js 用 @anthropic-ai/sdk），模型 ID 为 claude-fable-5。",
+          "Claude Fable 5 使用 Anthropic 原生 API 格式，而非 OpenAI 兼容格式。需要安装官方 Anthropic SDK（Python 用 anthropic-sdk-python，Node.js 用 @anthropic-ai/sdk），模型 ID 为 claude-fable-5。如需全面了解 Claude API 生态，[[guide:claude-api-key-complete-guide|Claude API Key 完全指南]] 涵盖了所有模型层级、定价和 SDK 集成。",
           "Fable 5 支持可选的 thinking 参数，用于更深入的分析工作。开启思考模式后，模型会在生成最终响应之前分配额外算力进行问题求解——非常适合复杂编程、多步推理或研究任务。Anthropic 推荐使用 'high' 思考预设以获得最佳效果。"
         ]
       },
@@ -204,11 +204,11 @@
       "paragraphs": {
         "en": [
           "Most API errors fall into three categories: authentication failures (401), rate limit exceeded (429), and overloaded servers (529). Fable 5 also has a unique behavior: when a request triggers one of its built-in safety classifiers, Cursor and the API will automatically fall back to Claude Opus 4.8 rather than returning an error. This means your task continues uninterrupted.",
-          "The most important thing to verify on a 401 is the header format. Anthropic's API uses x-api-key as the header name — not Authorization: Bearer like OpenAI's API. If you are migrating code from OpenAI, this is the most common mistake."
+          "The most important thing to verify on a 401 is the header format. Anthropic's API uses x-api-key as the header name — not Authorization: Bearer like OpenAI's API. If you are migrating code from OpenAI, this is the most common mistake. For team-level integration patterns including key isolation and environment management, our [[guide:claude-api-key-getting-started-2026|team onboarding guide]] covers these operational concerns in depth."
         ],
         "zh": [
           "API 报错大多属于三类：身份验证失败（401）、限流（429）、服务器过载（529）。Fable 5 还有一个特殊行为：当请求触发内置安全分类器时，Cursor 和 API 会自动回退到 Claude Opus 4.8，而不是返回报错——这意味着你的任务不会中断。",
-          "遇到 401 时，最重要的是检查请求头格式。Anthropic API 使用 x-api-key 作为请求头名称，而不是 OpenAI 的 Authorization: Bearer 格式。如果是从 OpenAI 迁移代码，这是最常见的错误来源。"
+          "遇到 401 时，最重要的是检查请求头格式。Anthropic API 使用 x-api-key 作为请求头名称，而不是 OpenAI 的 Authorization: Bearer 格式。如果是从 OpenAI 迁移代码，这是最常见的错误来源。关于团队级集成模式（密钥隔离和环境管理），我们的 [[guide:claude-api-key-getting-started-2026|团队接入指南]] 深入覆盖了这些运维问题。"
         ]
       },
       "bullets": {
@@ -240,12 +240,12 @@
         "en": [
           "Fable 5 is priced at $10 per million input tokens and $50 per million output tokens. Cache writes cost $12.50/M and cache reads cost $1/M — making prompt caching especially valuable for long-context applications. This is exactly twice the price of Claude Opus 4.8 ($5/$15 per M), and roughly in line with GPT-5.5's premium tier.",
           "Against the benchmark gains, the cost increase is justified for the right workloads. At Fable 5's SWE-bench accuracy (95.0% vs. Opus 4.8's 69.2%), agentic coding tasks that previously required multiple re-attempts can often be resolved in a single pass — reducing total token spend per completed task even at higher per-token rates.",
-          "For cost-sensitive workloads that don't require frontier capability, Claude Sonnet 5 ($3/$15 per M) remains an excellent choice. The recommended strategy is to use Fable 5 for complex multi-step agents and high-stakes code generation, and Sonnet 5 for high-volume, lighter tasks."
+          "For cost-sensitive workloads that don't require frontier capability, Claude Sonnet 5 ($3/$15 per M) remains an excellent choice. The recommended strategy is to use Fable 5 for complex multi-step agents and high-stakes code generation, and Sonnet 5 for high-volume, lighter tasks. To see how Claude models compare against OpenAI alternatives, check out our [[guide:claude-vs-openai-api|Claude vs OpenAI API comparison]]."
         ],
         "zh": [
           "Fable 5 定价为输入 $10/M Tokens、输出 $50/M Tokens。缓存写入 $12.50/M，缓存读取 $1/M——对长上下文应用，Prompt 缓存非常重要。这正是 Claude Opus 4.8（$5/$15/M）的两倍，与 GPT-5.5 高端档位大体相当。",
           "对照基准测试的提升来看，合适的场景下这个成本增幅是合理的。Fable 5 在 SWE-bench 上准确率（95.0% vs Opus 4.8 的 69.2%）更高，许多之前需要多次重试的 Agent 编程任务可以一次完成——即使单价更高，每个已完成任务的总 Token 消耗反而可能更低。",
-          "对于不需要前沿能力的成本敏感场景，Claude Sonnet 5（$3/$15/M）仍是优选。推荐策略：Fable 5 用于复杂多步 Agent 和高要求代码生成；Sonnet 5 用于大批量、轻量级任务。"
+          "对于不需要前沿能力的成本敏感场景，Claude Sonnet 5（$3/$15/M）仍是优选。推荐策略：Fable 5 用于复杂多步 Agent 和高要求代码生成；Sonnet 5 用于大批量、轻量级任务。想了解 Claude 模型与 OpenAI 的详细对比，请参阅我们的 [[guide:claude-vs-openai-api|Claude vs OpenAI API 对比分析]]。"
         ]
       },
       "bullets": {

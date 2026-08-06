@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "Before coding, define who owns Anthropic billing, who manages API keys, and which environments will use Claude. This avoids ad-hoc key sharing later.",
-          "For production, keep a clear owner for key rotation and incident response."
+          "Before coding, define who owns Anthropic billing, who manages API keys, and which environments will use Claude. This avoids ad-hoc key sharing later. Start by listing all teams that need access — backend services, data pipelines, internal tools, and experimentation environments all have different usage patterns and security requirements. Document the ownership matrix in your team wiki so new hires can find it without asking.",
+          "For production, keep a clear owner for key rotation and incident response. This person should also be responsible for monitoring spend dashboards and setting up budget alerts. If you need broader context on Anthropic's ecosystem, our [[guide:claude-api-key-complete-guide|complete Claude API key guide]] covers model selection, pricing, and SDK integration in depth."
         ],
         "zh": [
-          "接入前先明确 Anthropic 账单归属、密钥管理员和各环境使用边界，避免后期临时共享密钥。",
-          "生产环境建议指定固定负责人，统一处理轮换与安全事件。"
+          "接入前先明确 Anthropic 账单归属、密钥管理员和各环境使用边界，避免后期临时共享密钥。先列出所有需要接入的团队——后端服务、数据管道、内部工具和实验环境各有不同的使用模式和安全要求。将归属矩阵记录在团队知识库中，方便新成员查阅。",
+          "生产环境建议指定固定负责人，统一处理轮换与安全事件。该负责人还需监控消费看板并设置预算告警。如需全面了解 Anthropic 生态，我们的 [[guide:claude-api-key-complete-guide|Claude API Key 完全指南]] 深入涵盖了模型选择、定价和 SDK 集成。"
         ]
       }
     },
@@ -51,12 +51,12 @@
       },
       "paragraphs": {
         "en": [
-          "Anthropic API requests require x-api-key and anthropic-version headers. If either is missing or incorrect, your first integration tests may fail even when the key is valid.",
-          "Start from the official curl example and only then port into SDK or framework wrappers."
+          "Anthropic API requests require x-api-key and anthropic-version headers. If either is missing or incorrect, your first integration tests may fail even when the key is valid. This is one of the most common stumbling blocks for teams new to the Anthropic API — especially those migrating from OpenAI, which uses a different authentication header format (Authorization: Bearer). Always double-check that your SDK version sends the correct headers automatically.",
+          "Start from the official curl example and only then port into SDK or framework wrappers. If you haven't generated a key yet, follow our [[guide:how-to-get-claude-api-key|step-by-step key creation guide]] first — the process takes about five minutes from sign-up to first successful response."
         ],
         "zh": [
-          "Anthropic API 请求需要 x-api-key 和 anthropic-version 头。即使 Key 正确，只要头信息缺失或错误，也会导致接入失败。",
-          "建议先用官方 curl 示例打通，再迁移到 SDK 或框架封装。"
+          "Anthropic API 请求需要 x-api-key 和 anthropic-version 头。即使 Key 正确，只要头信息缺失或错误，也会导致接入失败。这是新团队接入 Anthropic API 时最常见的绊脚石——尤其是从 OpenAI 迁移的团队，因为 OpenAI 使用不同的认证头格式（Authorization: Bearer）。务必确认你的 SDK 版本会自动发送正确的请求头。",
+          "建议先用官方 curl 示例打通，再迁移到 SDK 或框架封装。如果你还没有生成密钥，请先按照我们的 [[guide:how-to-get-claude-api-key|密钥创建逐步指南]] 操作——从注册到首次成功响应大约只需五分钟。"
         ]
       }
     },
@@ -68,12 +68,12 @@
       },
       "paragraphs": {
         "en": [
-          "Install Anthropic SDKs in your backend service and load API keys from server environment variables. Avoid direct browser usage in production workflows.",
-          "Keep environment-level key separation so staging tests cannot drain production quotas."
+          "Install Anthropic SDKs in your backend service and load API keys from server environment variables. Avoid direct browser usage in production workflows. The official Python package (anthropic) and Node.js package (@anthropic-ai/sdk) both handle header injection automatically, reducing the risk of malformed requests. For containerized deployments, inject the key via your orchestrator's secret management system rather than baking it into the image.",
+          "Keep environment-level key separation so staging tests cannot drain production quotas. For teams planning to use Anthropic's latest Mythos-class model, the [[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 setup guide]] covers model-specific configuration and adaptive thinking parameters."
         ],
         "zh": [
-          "在后端服务中安装 Anthropic SDK，并从服务端环境变量读取 Key。生产流程避免浏览器端直接持有密钥。",
-          "建议按环境隔离密钥，避免测试流量误耗生产额度。"
+          "在后端服务中安装 Anthropic SDK，并从服务端环境变量读取 Key。生产流程避免浏览器端直接持有密钥。官方 Python 包（anthropic）和 Node.js 包（@anthropic-ai/sdk）都会自动处理请求头注入，降低请求格式错误的风险。容器化部署时，通过编排器的密钥管理系统注入 Key，不要将 Key 硬编码到镜像中。",
+          "建议按环境隔离密钥，避免测试流量误耗生产额度。如果团队计划使用 Anthropic 最新的 Mythos 级模型，[[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 设置指南]] 涵盖了模型专属配置和自适应思考参数。"
         ]
       }
     },
@@ -114,12 +114,12 @@
       },
       "paragraphs": {
         "en": [
-          "Before launch, verify key scope, logging, timeout strategy, and fallback behavior. This reduces firefighting during early traffic growth.",
-          "Treat model integration as an SRE concern: observability and key hygiene are as important as prompt quality."
+          "Before launch, verify key scope, logging, timeout strategy, and fallback behavior. This reduces firefighting during early traffic growth. A common pattern is to set a conservative max_tokens limit, implement circuit breakers for 429 and 529 errors, and log every request with enough metadata to reconstruct failures.",
+          "Treat model integration as an SRE concern: observability and key hygiene are as important as prompt quality. If you're running a multi-provider architecture, our [[guide:claude-vs-openai-api|Claude vs OpenAI comparison]] can help you decide which tasks to route to each provider for optimal cost-quality balance."
         ],
         "zh": [
-          "上线前要核对密钥范围、日志字段、超时策略和降级策略，避免流量初期频繁救火。",
-          "模型接入不仅是 Prompt 工程，也属于稳定性工程：可观测性与密钥治理同样重要。"
+          "上线前要核对密钥范围、日志字段、超时策略和降级策略，避免流量初期频繁救火。常见做法是设置保守的 max_tokens 上限，为 429 和 529 错误实现熔断器，并记录每个请求的足够元数据以便复现故障。",
+          "模型接入不仅是 Prompt 工程，也属于稳定性工程：可观测性与密钥治理同样重要。如果你的架构涉及多供应商路由，我们的 [[guide:claude-vs-openai-api|Claude 与 OpenAI 对比分析]] 可以帮你决定哪些任务分配给哪个供应商，以达到最优的成本质量平衡。"
         ]
       }
     },

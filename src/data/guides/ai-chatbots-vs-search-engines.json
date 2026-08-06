@@ -33,12 +33,12 @@
       "paragraphs": {
         "en": [
           "Search engines and AI chatbots solve information problems in fundamentally different ways. A search engine like Google crawls the web, indexes billions of pages, and when you search, it retrieves and ranks the most relevant pages. You get a list of links and decide which to read.",
-          "An AI chatbot like ChatGPT or Claude takes your question and generates a new answer by predicting the most likely useful response based on its training data. It synthesizes information rather than retrieving it. You get a direct answer instead of a list of links.",
+          "An AI chatbot like ChatGPT or Claude takes your question — which is essentially a [[guide:what-is-a-prompt|prompt]] — and generates a new answer by predicting the most likely useful response based on its training data. It synthesizes information rather than retrieving it. You get a direct answer instead of a list of links.",
           "This distinction — retrieval vs generation — is the foundation of every other difference between the two technologies, from accuracy to speed to cost."
         ],
         "zh": [
           "搜索引擎和 AI 聊天机器人以根本不同的方式解决信息问题。像 Google 这样的搜索引擎会爬取网页、索引数十亿页面，当你搜索时，它检索并排序最相关的页面。你得到一个链接列表，自己决定读哪个。",
-          "像 ChatGPT 或 Claude 这样的 AI 聊天机器人接收你的问题，根据训练数据预测最可能有用的回复，生成全新答案。它综合信息而非检索信息。你得到的是直接答案而非链接列表。",
+          "像 ChatGPT 或 Claude 这样的 AI 聊天机器人接收你的问题——本质上就是一个 [[guide:what-is-a-prompt|Prompt]]——根据训练数据预测最可能有用的回复，生成全新答案。它综合信息而非检索信息。你得到的是直接答案而非链接列表。",
           "这个区别——检索 vs 生成——是两者之间所有其他差异的基础，从准确性到速度到成本。"
         ]
       }
@@ -52,13 +52,13 @@
       "paragraphs": {
         "en": [
           "Search engines point you to original sources. When you click a link from Google, you're reading the actual website that published the information. You can evaluate the credibility of the source, check the date, and compare multiple sources yourself. This makes search engines more transparent and verifiable.",
-          "AI chatbots synthesize answers from training data, which means you can't always trace where the information came from. Worse, AI can hallucinate — generating confident-sounding but incorrect information. A chatbot might cite a paper that doesn't exist or state a fact that's subtly wrong.",
-          "For factual research, legal matters, medical information, or anything where accuracy is critical, search engines are generally more trustworthy because you can verify sources. For quick explanations, brainstorming, or creative tasks where precision matters less, AI chatbots are faster and more convenient."
+          "AI chatbots synthesize answers from training data, which means you can't always trace where the information came from. Worse, AI can [[guide:what-are-ai-hallucinations|hallucinate]] — generating confident-sounding but incorrect information. A chatbot might cite a paper that doesn't exist or state a fact that's subtly wrong.",
+          "For factual research, legal matters, medical information, or anything where accuracy is critical, search engines are generally more trustworthy because you can verify sources. For quick explanations, brainstorming, or creative tasks where precision matters less, AI chatbots are faster and more convenient — and [[guide:how-to-write-good-prompts|writing better prompts]] can further improve the quality of AI responses."
         ],
         "zh": [
           "搜索引擎将你指向原始来源。当你点击 Google 的链接时，你阅读的是实际发布信息的网站。你可以评估来源的可信度、检查日期，并自行对比多个来源。这使得搜索引擎更透明、更可验证。",
-          "AI 聊天机器人从训练数据中综合答案，这意味着你无法总是追溯信息来自哪里。更糟的是，AI 可能产生幻觉——生成听起来自信但错误的信息。聊天机器人可能引用不存在的论文或陈述微妙错误的事实。",
-          "对于事实性研究、法律事务、医疗信息或任何准确性至关重要的场景，搜索引擎通常更可信，因为你可以验证来源。对于快速解释、头脑风暴或精确度不那么重要的创意任务，AI 聊天机器人更快更方便。"
+          "AI 聊天机器人从训练数据中综合答案，这意味着你无法总是追溯信息来自哪里。更糟的是，AI 可能产生 [[guide:what-are-ai-hallucinations|幻觉]]——生成听起来自信但错误的信息。聊天机器人可能引用不存在的论文或陈述微妙错误的事实。",
+          "对于事实性研究、法律事务、医疗信息或任何准确性至关重要的场景，搜索引擎通常更可信，因为你可以验证来源。对于快速解释、头脑风暴或精确度不那么重要的创意任务，AI 聊天机器人更快更方便——而且 [[guide:how-to-write-good-prompts|编写更好的 Prompt]] 可以进一步提升 AI 回复的质量。"
         ]
       }
     },
@@ -122,12 +122,12 @@
         "en": [
           "The line between search engines and AI chatbots is blurring. Google's AI Overviews (formerly Search Generative Experience, or SGE) generates AI summaries at the top of search results, with links to sources below. Perplexity AI positions itself as an \"answer engine\" — it searches the web, synthesizes an answer, and cites its sources.",
           "This convergence combines the strengths of both approaches: real-time information and verifiable sources from search, with synthesized, easy-to-read answers from AI. However, it also introduces new challenges, such as AI summaries sometimes misrepresenting the source content or reducing traffic to original publishers.",
-          "Looking ahead, the distinction between \"searching\" and \"asking\" will continue to fade. The future is likely a hybrid where you ask questions in natural language and get answers grounded in real-time web sources, with citations you can verify. This is part of the broader AI basics landscape covered in our beginner's guide to AI."
+          "Looking ahead, the distinction between \"searching\" and \"asking\" will continue to fade. The future is likely a hybrid where you ask questions in natural language and get answers grounded in real-time web sources, with citations you can verify. This is part of the broader AI basics landscape covered in [[guide:ai-beginner-guide|our beginner's guide to AI]]."
         ],
         "zh": [
           "搜索引擎和 AI 聊天机器人之间的界限正在模糊。Google 的 AI Overviews（原搜索生成体验，简称 SGE）在搜索结果顶部生成 AI 摘要，下方附来源链接。Perplexity AI 将自己定位为「答案引擎」——它搜索网络、综合答案，并引用来源。",
           "这种融合结合了两种方式的优势：来自搜索的实时信息和可验证来源，以及来自 AI 的综合、易读答案。但也带来了新挑战，比如 AI 摘要有时会曲解原始内容或减少原始发布者的流量。",
-          "展望未来，「搜索」和「提问」之间的区别将继续淡化。未来的趋势可能是混合模式——你用自然语言提问，获得基于实时网络来源的答案，并附可验证的引用。这是我们 AI 入门指南中涵盖的更广泛 AI 基础知识的一部分。"
+          "展望未来，「搜索」和「提问」之间的区别将继续淡化。未来的趋势可能是混合模式——你用自然语言提问，获得基于实时网络来源的答案，并附可验证的引用。这是 [[guide:ai-beginner-guide|我们的 AI 入门指南]] 中涵盖的更广泛 AI 基础知识的一部分。"
         ]
       }
     }

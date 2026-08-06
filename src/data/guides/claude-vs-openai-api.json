@@ -36,11 +36,11 @@
       "paragraphs": {
         "en": [
           "Anthropic's Claude and OpenAI's GPT are the two most popular AI API providers in 2026. Both offer powerful language models, but they differ in strengths, pricing, and developer experience. This comparison covers the key factors you should consider.",
-          "The short version: OpenAI has a broader model lineup, lower entry-level pricing, and a larger ecosystem. Claude excels at long-context tasks, nuanced writing, and coding — often at a premium price point for its top models."
+          "The short version: OpenAI has a broader model lineup, lower entry-level pricing, and a larger ecosystem. Claude excels at long-context tasks, nuanced writing, and coding — often at a premium price point for its top models. For a comprehensive overview of all Claude model tiers and setup, our [[guide:claude-api-key-complete-guide|Claude API key guide]] is the place to start."
         ],
         "zh": [
           "Anthropic 的 Claude 和 OpenAI 的 GPT 是 2026 年最受欢迎的两大 AI API 供应商。两者都提供强大的语言模型，但在优势领域、定价和开发体验上有所不同。本文对比你需要考虑的关键因素。",
-          "简单来说：OpenAI 模型阵容更广、入门价格更低、生态系统更大。Claude 在长上下文任务、细腻的写作和编程方面表现突出——但顶级模型价格更高。"
+          "简单来说：OpenAI 模型阵容更广、入门价格更低、生态系统更大。Claude 在长上下文任务、细腻的写作和编程方面表现突出——但顶级模型价格更高。如需全面了解 Claude 各模型层级和开通流程，我们的 [[guide:claude-api-key-complete-guide|Claude API Key 指南]] 是最佳起点。"
         ]
       }
     },
@@ -147,12 +147,12 @@
       "paragraphs": {
         "en": [
           "OpenAI's API is the de facto industry standard. Its chat completions format has been adopted by virtually every alternative provider (DeepSeek, Mistral, Groq, Together AI), meaning code written for OpenAI can often be ported elsewhere by changing only the base URL. This gives OpenAI a massive ecosystem advantage.",
-          "Anthropic's API uses its own message format, which means you need the Anthropic SDK or a compatibility layer. The SDK is well-designed and documented, but the smaller ecosystem means fewer third-party tools and integrations out of the box.",
+          "Anthropic's API uses its own message format, which means you need the Anthropic SDK or a compatibility layer. The SDK is well-designed and documented, but the smaller ecosystem means fewer third-party tools and integrations out of the box. If you haven't set up an Anthropic key yet, our [[guide:how-to-get-claude-api-key|Claude API key tutorial]] walks through account creation and key generation.",
           "Both providers offer streaming, function calling (tool use), and vision support. OpenAI additionally offers structured outputs (JSON schema enforcement), which is more mature than Anthropic's tool-based approach to structured data."
         ],
         "zh": [
           "OpenAI 的 API 是事实上的行业标准。其 chat completions 格式被几乎所有替代供应商采用（DeepSeek、Mistral、Groq、Together AI），意味着为 OpenAI 写的代码通常只需改 base URL 就能移植到其他平台。这给 OpenAI 带来了巨大的生态优势。",
-          "Anthropic 的 API 使用自己的消息格式，意味着你需要 Anthropic SDK 或兼容层。SDK 设计和文档都很好，但较小的生态系统意味着开箱即用的第三方工具和集成更少。",
+          "Anthropic 的 API 使用自己的消息格式，意味着你需要 Anthropic SDK 或兼容层。SDK 设计和文档都很好，但较小的生态系统意味着开箱即用的第三方工具和集成更少。如果你还没有 Anthropic 密钥，我们的 [[guide:how-to-get-claude-api-key|Claude API Key 教程]] 详细介绍了账号注册和密钥生成。",
           "两个供应商都支持流式输出、函数调用（工具使用）和视觉能力。OpenAI 还额外提供结构化输出（JSON schema 强制执行），比 Anthropic 基于工具的结构化数据方案更成熟。"
         ]
       }
@@ -200,11 +200,11 @@
       "paragraphs": {
         "en": [
           "Choose Claude if: your application involves long documents (200K+ context), you prioritize code quality and clean refactoring, you need nuanced creative writing or content generation, or you value stronger instruction-following on complex, multi-step prompts.",
-          "Many production teams use both: OpenAI for high-volume, cost-sensitive tasks (classification, simple Q&A) and Claude for tasks where quality matters most (code generation, long-document analysis, content creation). This hybrid approach lets you optimize for both cost and quality."
+          "Many production teams use both: OpenAI for high-volume, cost-sensitive tasks (classification, simple Q&A) and Claude for tasks where quality matters most (code generation, long-document analysis, content creation). This hybrid approach lets you optimize for both cost and quality. For frontier-class reasoning, the [[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 setup walkthrough]] covers Anthropic's most powerful public model. Teams preparing for production should also check our [[guide:claude-api-key-getting-started-2026|team onboarding guide]] for key isolation patterns."
         ],
         "zh": [
           "选择 Claude 的场景：你的应用涉及长文档（200K+ 上下文）、你重视代码质量和干净的重构、需要细腻的创意写作或内容生成，或你在复杂的多步骤提示词上需要更强的指令遵循能力。",
-          "许多生产团队同时使用两者：OpenAI 用于高用量、对成本敏感的任务（分类、简单问答），Claude 用于质量最关键的任务（代码生成、长文档分析、内容创作）。这种混合方案让你同时优化成本和质量。"
+          "许多生产团队同时使用两者：OpenAI 用于高用量、对成本敏感的任务（分类、简单问答），Claude 用于质量最关键的任务（代码生成、长文档分析、内容创作）。这种混合方案让你同时优化成本和质量。如需前沿级推理能力，[[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 开通指南]] 介绍了 Anthropic 最强的公开模型。准备上线的团队还可以参考我们的 [[guide:claude-api-key-getting-started-2026|团队接入指南]]，了解密钥隔离方案。"
         ]
       }
     }

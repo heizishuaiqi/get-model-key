@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI charges per token, not per request. A token is roughly 4 characters of English text, or about 3/4 of a word. A 1,000-word English article is approximately 1,300 tokens.",
+          "OpenAI charges per token, not per request. A token is roughly 4 characters of English text, or about 3/4 of a word. A 1,000-word English article is approximately 1,300 tokens. [[guide:openai-api-key-complete-guide|The complete OpenAI guide]] provides broader context on how pricing fits into the overall API workflow.",
           "Every API call has two token counts: input tokens (the prompt you send) and output tokens (the model's response). These are billed at different rates — output tokens are typically 3-4x more expensive than input tokens.",
           "Chinese text uses more tokens per character than English because tokenizers are optimized for Latin scripts. A Chinese character typically costs 1-2 tokens, so factor this in when estimating costs for Chinese-language applications."
         ],
         "zh": [
-          "OpenAI 按 token 计费，不是按请求次数。一个 token 大约相当于 4 个英文字符，或 3/4 个单词。一篇 1,000 词的英文文章大约是 1,300 个 token。",
+          "OpenAI 按 token 计费，不是按请求次数。一个 token 大约相当于 4 个英文字符，或 3/4 个单词。一篇 1,000 词的英文文章大约是 1,300 个 token。[[guide:openai-api-key-complete-guide|完整的 OpenAI 指南]] 提供了定价在整体 API 工作流中如何定位的更广泛背景。",
           "每次 API 调用有两个 token 计数：输入 token（你发送的提示词）和输出 token（模型的回复）。它们按不同价格计费——输出 token 通常比输入 token 贵 3-4 倍。",
           "中文每个字符消耗的 token 比英文多，因为分词器是为拉丁语系优化的。一个中文字符通常消耗 1-2 个 token，在估算中文应用成本时需要考虑这一点。"
         ]
@@ -131,11 +131,11 @@
       "paragraphs": {
         "en": [
           "If your use case doesn't require real-time responses, the Batch API offers a 50% discount on all models. You submit a batch of requests (up to 50,000 per file), and OpenAI processes them within 24 hours (typically much faster).",
-          "Batch API is ideal for bulk processing tasks like content classification, document summarization, data enrichment, and evaluation runs. The request format is identical to the standard API — you only need to wrap your requests in a JSONL file and submit it via the batch endpoint."
+          "Batch API is ideal for bulk processing tasks like content classification, document summarization, data enrichment, and evaluation runs. The request format is identical to the standard API — you only need to wrap your requests in a JSONL file and submit it via the batch endpoint. If batch requests fail with 429 errors, [[guide:openai-401-429-troubleshooting-2026|troubleshooting rate limit errors]] can help you identify whether the issue is concurrency or quota."
         ],
         "zh": [
           "如果你的场景不需要实时响应，Batch API 在所有模型上提供 50% 折扣。你提交一批请求（每个文件最多 50,000 条），OpenAI 在 24 小时内处理完成（通常更快）。",
-          "Batch API 非常适合批量处理任务，如内容分类、文档摘要、数据富化和评估运行。请求格式与标准 API 完全相同——只需将请求包装在 JSONL 文件中，通过 batch 端点提交即可。"
+          "Batch API 非常适合批量处理任务，如内容分类、文档摘要、数据富化和评估运行。请求格式与标准 API 完全相同——只需将请求包装在 JSONL 文件中，通过 batch 端点提交即可。如果批量请求遇到 429 错误，[[guide:openai-401-429-troubleshooting-2026|排查限流错误]] 可以帮你判断是并发问题还是额度问题。"
         ]
       }
     },
@@ -176,12 +176,12 @@
       },
       "paragraphs": {
         "en": [
-          "New OpenAI accounts may receive approximately $5 in trial credits. These credits expire a few months after account creation and are intended for testing the API before committing to paid usage.",
-          "There is no permanent free tier for the OpenAI API. Once trial credits are exhausted or expired, you must add funds to continue using the API. Set up billing alerts to avoid unexpected charges."
+          "New OpenAI accounts may receive approximately $5 in trial credits. These credits expire a few months after account creation and are intended for testing the API before committing to paid usage. If you haven't created an [[guide:how-to-get-openai-api-key|OpenAI API key]] yet, our step-by-step guide covers registration and billing setup.",
+          "There is no permanent free tier for the OpenAI API. Once trial credits are exhausted or expired, you must add funds to continue using the API. Set up billing alerts to avoid unexpected charges, and review [[guide:openai-api-key-setup-2026|configuring your key securely]] to ensure your spending limits are enforced at the key level too."
         ],
         "zh": [
-          "新注册的 OpenAI 账号可能会获得约 $5 的试用额度。这些额度在创建账号后几个月内过期，用于在正式付费前测试 API。",
-          "OpenAI API 没有永久免费层。试用额度用完或过期后，必须充值才能继续使用 API。建议设置计费提醒以避免意外支出。"
+          "新注册的 OpenAI 账号可能会获得约 $5 的试用额度。这些额度在创建账号后几个月内过期，用于在正式付费前测试 API。如果你还没有创建 [[guide:how-to-get-openai-api-key|OpenAI API Key]]，我们的逐步指南涵盖了注册和计费设置。",
+          "OpenAI API 没有永久免费层。试用额度用完或过期后，必须充值才能继续使用 API。建议设置计费提醒以避免意外支出，并了解[[guide:openai-api-key-setup-2026|安全配置密钥]]，确保消费限制也在 Key 级别得到执行。"
         ]
       }
     }

@@ -36,12 +36,12 @@
       },
       "paragraphs": {
         "en": [
-          "SiliconFlow's most compelling feature is its free model tier. These are not stripped-down demos — they are the actual production models, available at zero cost subject to rate limits. The free catalog rotates as new models are released, but as of mid-2026 these three are reliably free:",
+          "SiliconFlow's most compelling feature is its free model tier. These are not stripped-down demos — they are the actual production models, available at zero cost subject to rate limits. The free catalog rotates as new models are released, but as of mid-2026 these three are reliably free. [[guide:silicon-flow-api-key-complete-guide|The full SiliconFlow overview]] provides additional context on the platform's overall architecture.",
           "Qwen3-8B (model ID: Qwen/Qwen3-8B) is the best all-rounder for free-tier users. It handles general conversation, text summarization, and light coding tasks well. DeepSeek-R1-Distill-Qwen-7B (deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) provides chain-of-thought reasoning, making it ideal for math, logic, and step-by-step problem solving. DeepSeek-OCR (deepseek-ai/DeepSeek-OCR) specializes in extracting text from images and documents.",
           "Rate limits for free models are relatively generous at the L1 verification tier — typically enough for personal development and testing. For heavier workloads, you either wait for the limit to reset or switch to a low-cost paid model."
         ],
         "zh": [
-          "硅基流动最吸引人的是免费模型层。这些不是阉割版演示——它们是真正的生产模型，在速率限制内零成本可用。免费目录随新模型发布而轮换，截至 2026 年中以下三个稳定免费：",
+          "硅基流动最吸引人的是免费模型层。这些不是阉割版演示——它们是真正的生产模型，在速率限制内零成本可用。免费目录随新模型发布而轮换，截至 2026 年中以下三个稳定免费。[[guide:silicon-flow-api-key-complete-guide|完整的硅基流动概览]] 提供了平台整体架构的补充背景。",
           "Qwen3-8B（模型 ID：Qwen/Qwen3-8B）是免费层用户的最佳全能选择，擅长通用对话、文本摘要和轻量编程任务。DeepSeek-R1-Distill-Qwen-7B（deepseek-ai/DeepSeek-R1-Distill-Qwen-7B）提供思维链推理，适合数学、逻辑和分步解题。DeepSeek-OCR（deepseek-ai/DeepSeek-OCR）专攻图片和文档文字提取。",
           "免费模型在 L1 认证等级的速率限制相对宽松——通常够个人开发和测试用。负载更高时，等限制重置或切换到低成本付费模型。"
         ]
@@ -129,14 +129,14 @@
       },
       "paragraphs": {
         "en": [
-          "For prototyping and learning: start with the free Qwen3-8B. It covers 80% of use cases at zero cost and lets you build and test your application end-to-end before spending anything.",
+          "For prototyping and learning: start with the free Qwen3-8B. It covers 80% of use cases at zero cost and lets you build and test your application end-to-end before spending anything. If you don't have a [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key]] yet, the registration tutorial takes about five minutes.",
           "For production coding and reasoning: DeepSeek-V4-Pro is the best balance of quality and cost. Its chain-of-thought reasoning and large parameter count make it competitive with models costing 5–10× more.",
           "For Chinese-heavy applications: GLM-5 is purpose-built for Chinese language and cultural context, often outperforming Western models on domestic content.",
           "For long documents (books, legal contracts, research papers): Kimi K2.6's extended context window handles inputs that would overflow other models.",
           "For cost-minimized creative writing: MiniMax-M2.5 at ~¥1/¥1 per million tokens is hard to beat for volume text generation."
         ],
         "zh": [
-          "原型和学习阶段：先用免费的 Qwen3-8B。零成本覆盖 80% 的用例，让你在花一分钱之前把应用端到端建好测好。",
+          "原型和学习阶段：先用免费的 Qwen3-8B。零成本覆盖 80% 的用例，让你在花一分钱之前把应用端到端建好测好。如果你还没有 [[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key]]，注册教程大约只需五分钟。",
           "生产级编程和推理：DeepSeek-V4-Pro 是质量和成本的最佳平衡。思维链推理和超大参数量使其能与价格高 5–10 倍的模型竞争。",
           "中文为主的应用：GLM-5 专为中文语言和文化语境打造，在中文内容上经常优于西方模型。",
           "长文档场景（书籍、法律合同、论文）：Kimi K2.6 的扩展上下文窗口能处理会让其他模型溢出的输入。",
@@ -152,12 +152,12 @@
       },
       "paragraphs": {
         "en": [
-          "The most effective cost strategy on SiliconFlow is a tiered model approach: use free models for development and testing, then switch to paid models only for production traffic. This can reduce your development-phase API costs to literally zero.",
+          "The most effective cost strategy on SiliconFlow is a tiered model approach: use free models for development and testing, then switch to paid models only for production traffic. This can reduce your development-phase API costs to literally zero. You can also explore [[guide:silicon-flow-byok-setup-guide|using your key in other tools]] to test models in different environments without additional setup.",
           "Second, monitor your token usage closely. Chinese-language prompts tend to use more tokens per character than English due to tokenization differences. If your application processes a lot of Chinese text, factor this into your cost estimates.",
           "Third, take advantage of caching where possible. SiliconFlow does not currently offer prompt caching discounts like some Western providers, but you can implement client-side caching for repeated queries to reduce API calls."
         ],
         "zh": [
-          "硅基流动最有效的成本策略是分层用模：开发和测试用免费模型，只有生产流量才切到付费模型。这可以把开发阶段的 API 成本降到零。",
+          "硅基流动最有效的成本策略是分层用模：开发和测试用免费模型，只有生产流量才切到付费模型。这可以把开发阶段的 API 成本降到零。你也可以[[guide:silicon-flow-byok-setup-guide|在其他工具中使用你的 Key]]，在不同环境中测试模型，无需额外设置。",
           "第二，密切监控 Token 用量。由于分词差异，中文提示词每字符消耗的 Token 通常比英文多。如果你的应用处理大量中文文本，成本预估时要考虑这一点。",
           "第三，尽可能利用缓存。硅基流动目前不像某些西方厂商那样提供提示词缓存折扣，但你可以为重复查询实现客户端缓存来减少 API 调用。"
         ]

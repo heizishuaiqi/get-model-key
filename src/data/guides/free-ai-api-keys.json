@@ -39,11 +39,11 @@
       },
       "paragraphs": {
         "en": [
-          "Several major AI providers offer free tiers in 2026. The most notable is Google Gemini's free tier, which provides generous usage limits at no cost. Other options include OpenRouter's free models, HuggingFace's inference API, and limited-time offers from various providers.",
+          "Several major AI providers offer free tiers in 2026. The most notable is Google Gemini's free tier, which provides generous usage limits at no cost. Other options include OpenRouter's free models, HuggingFace's inference API, and limited-time offers from various providers. For a broader understanding of where free tiers fit in the AI landscape, [[guide:ai-beginner-guide|the beginner's guide to AI]] covers the full ecosystem of AI tools and services.",
           "It's important to distinguish between 'free tier' (ongoing free usage with rate limits) and 'free credits' (one-time sign-up bonus that gets consumed). Both can be useful depending on your needs."
         ],
         "zh": [
-          "2026 年，多家主要 AI 供应商提供免费额度。最值得注意的是 Google Gemini 的免费层，提供慷慨的免费使用限额。其他选项包括 OpenRouter 的免费模型、HuggingFace 的推理 API，以及各供应商的限时免费活动。",
+          "2026 年，多家主要 AI 供应商提供免费额度。最值得注意的是 Google Gemini 的免费层，提供慷慨的免费使用限额。其他选项包括 OpenRouter 的免费模型、HuggingFace 的推理 API，以及各供应商的限时免费活动。如需更广泛地了解免费额度在 AI 生态中的位置，[[guide:ai-beginner-guide|AI 新手指南]] 涵盖了完整的 AI 工具和服务生态。",
           "需要区分「免费层」（持续的免费使用，有速率限制）和「免费积分」（注册时一次性赠送，用完即止）。根据你的需求，两种方式都有用。"
         ]
       }
@@ -56,11 +56,11 @@
       },
       "paragraphs": {
         "en": [
-          "Google's Gemini API offers the most generous free tier among major providers. Through Google AI Studio, developers get free access to Gemini models with per-minute and per-day rate limits. No credit card is required to sign up.",
+          "Google's Gemini API offers the most generous free tier among major providers. Through Google AI Studio, developers get free access to Gemini models with per-minute and per-day rate limits. No credit card is required to sign up, which makes it the easiest way to start experimenting with AI APIs for beginners.",
           "The free tier is suitable for development, prototyping, and light production use. For higher volumes, you can upgrade to the paid tier with the same API key."
         ],
         "zh": [
-          "Google 的 Gemini API 在主要供应商中提供最慷慨的免费层。通过 Google AI Studio，开发者可以免费使用 Gemini 模型，有每分钟和每天的速率限制。注册时不需要信用卡。",
+          "Google 的 Gemini API 在主要供应商中提供最慷慨的免费层。通过 Google AI Studio，开发者可以免费使用 Gemini 模型，有每分钟和每天的速率限制。注册时不需要信用卡，这使其成为初学者开始体验 AI API 最简单的方式。",
           "免费层适合开发、原型设计和轻量生产使用。用量更大时，可以用同一个 API Key 升级到付费层。"
         ]
       }
@@ -73,11 +73,11 @@
       },
       "paragraphs": {
         "en": [
-          "OpenRouter is an API aggregator that lists free models from various providers. Models marked 'free' have no cost per token. This is a convenient way to try multiple models with a single API key.",
+          "OpenRouter is an API aggregator that lists free models from various providers. Models marked 'free' have no cost per token. This is a convenient way to try multiple models with a single API key. If you haven't set up an OpenRouter account yet, [[guide:how-to-get-openrouter-api-key|our step-by-step OpenRouter guide]] walks you through the entire process.",
           "The free models rotate as providers update their offerings. Check the OpenRouter model list for current free options."
         ],
         "zh": [
-          "OpenRouter 是一个 API 聚合平台，列出各供应商的免费模型。标记为「free」的模型按 token 免费。这是一个用一个 API Key 尝试多个模型的便捷方式。",
+          "OpenRouter 是一个 API 聚合平台，列出各供应商的免费模型。标记为「free」的模型按 token 免费。这是一个用一个 API Key 尝试多个模型的便捷方式。如果你还没有注册 OpenRouter，[[guide:how-to-get-openrouter-api-key|我们的 OpenRouter 逐步指南]] 将引导你完成整个过程。",
           "免费模型会随供应商更新而轮换。查看 OpenRouter 模型列表获取当前免费选项。"
         ]
       }
@@ -138,11 +138,11 @@
       },
       "paragraphs": {
         "en": [
-          "To get the most out of free tiers: use Gemini for primary development, OpenRouter to compare models, and HuggingFace for specialized open-source models. Cache responses when possible, and keep prompts concise to reduce token usage.",
+          "To get the most out of free tiers: use Gemini for primary development, OpenRouter to compare models, and HuggingFace for specialized open-source models. Cache responses when possible, and keep prompts concise to reduce token usage. When free tiers aren't enough, [[guide:ai-api-token-price-comparison-2026|our 2026 token price comparison]] helps you find the most cost-effective paid options.",
           "For production apps, combine free tiers with cheap paid options. For example, use Gemini's free tier for low-traffic times and fall back to a low-cost provider like DeepSeek when free limits are hit."
         ],
         "zh": [
-          "充分利用免费层的方法：用 Gemini 做主要开发，用 OpenRouter 对比模型，用 HuggingFace 调用专门化开源模型。尽可能缓存响应，并保持 Prompt 简洁以减少 token 消耗。",
+          "充分利用免费层的方法：用 Gemini 做主要开发，用 OpenRouter 对比模型，用 HuggingFace 调用专门化开源模型。尽可能缓存响应，并保持 Prompt 简洁以减少 token 消耗。当免费额度不够用时，[[guide:ai-api-token-price-comparison-2026|我们的 2026 年 Token 价格对比]] 帮你找到最具性价比的付费方案。",
           "生产应用可以将免费层与低价付费方案结合。例如，低流量时使用 Gemini 免费层，达到免费限制后回退到 DeepSeek 等低成本供应商。"
         ]
       }
@@ -155,11 +155,11 @@
       },
       "paragraphs": {
         "en": [
-          "Free tiers come with trade-offs. Rate limits can cause request failures during traffic spikes. Some free tiers restrict access to the most capable models or limit features like function calling and vision. Commercial use may also be restricted — check each provider's terms.",
+          "Free tiers come with trade-offs. Rate limits can cause request failures during traffic spikes. Some free tiers restrict access to the most capable models or limit features like function calling and vision. Commercial use may also be restricted — check each provider's terms. For truly unlimited, cost-free AI usage, [[guide:ollama-models-list|running local models with Ollama]] is an excellent alternative that doesn't require any API key or internet connection.",
           "Free tiers can be changed or discontinued at any time. Don't build a production business solely on free tiers without a paid fallback plan."
         ],
         "zh": [
-          "免费层有权衡。速率限制可能导致流量高峰时请求失败。部分免费层限制访问最强模型，或限制函数调用、视觉等功能。商用也可能受限——请查看各供应商条款。",
+          "免费层有权衡。速率限制可能导致流量高峰时请求失败。部分免费层限制访问最强模型，或限制函数调用、视觉等功能。商用也可能受限——请查看各供应商条款。对于真正无限、免费的 AI 使用，[[guide:ollama-models-list|用 Ollama 运行本地模型]] 是极佳的替代方案，无需任何 API Key 或网络连接。",
           "免费层可能随时变更或取消。不要仅依赖免费层构建生产业务，必须有付费回退方案。"
         ]
       }

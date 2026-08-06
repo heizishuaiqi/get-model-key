@@ -27,11 +27,11 @@
       },
       "paragraphs": {
         "en": [
-          "On July 8, 2026, xAI (SpaceXAI) officially released Grok 4.5, co-trained with AI coding company Cursor. It is built on xAI's new V9 architecture with 1.5 trillion parameters — roughly three times the scale of Grok 4.3 — and is the first Grok model specifically designed for coding and agentic tasks.",
+          "On July 8, 2026, xAI (SpaceXAI) officially released Grok 4.5, co-trained with AI coding company Cursor. It is built on xAI's new V9 architecture with 1.5 trillion parameters — roughly three times the scale of Grok 4.3 — and is the first Grok model specifically designed for coding and agentic tasks. For broader context on the entire model family, [[guide:grok-api-key-complete-guide|the complete Grok guide]] covers all available versions and their use cases.",
           "According to xAI's published benchmarks, Grok 4.5 surpasses Claude Opus 4.8 across multiple software engineering tests. The model runs at 80 tokens per second and achieves twice the token efficiency of competing models on complex coding tasks, which means fewer steps and lower real-world cost per completed task."
         ],
         "zh": [
-          "2026 年 7 月 8 日，xAI（SpaceXAI）正式联合 AI 编程公司 Cursor 发布 Grok 4.5，基于全新 V9 架构，参数量达 1.5 万亿，约为上代 Grok 4.3 的三倍，是 xAI 首款专门针对编程和 Agent 任务训练的模型。",
+          "2026 年 7 月 8 日，xAI（SpaceXAI）正式联合 AI 编程公司 Cursor 发布 Grok 4.5，基于全新 V9 架构，参数量达 1.5 万亿，约为上代 Grok 4.3 的三倍，是 xAI 首款专门针对编程和 Agent 任务训练的模型。如需了解整个模型系列的背景，[[guide:grok-api-key-complete-guide|Grok 完整指南]]涵盖了所有可用版本及其使用场景。",
           "根据 xAI 公布的基准测试，Grok 4.5 在多项软件工程基准上超越 Claude Opus 4.8，运行速度达 80 TPS，复杂编程任务的 Token 效率是同类模型两倍——更少步骤，更低单次任务成本。"
         ]
       }
@@ -44,11 +44,11 @@
       },
       "paragraphs": {
         "en": [
-          "Go to console.x.ai and sign up with your email or X (Twitter) account. You do not need an active X Premium subscription to access the API — the developer console is a separate product.",
+          "Go to console.x.ai and sign up with your email or X (Twitter) account. You do not need an active X Premium subscription to access the API — the developer console is a separate product. If you're new to the platform, [[guide:how-to-get-grok-api-key|getting started with the Grok API]] walks through the initial registration in detail.",
           "After signup, you need to bind a payment method before creating API keys. xAI accepts major international credit cards. There is no permanent free tier, but xAI has offered promotional credits in the past — check the console for active offers after you sign up."
         ],
         "zh": [
-          "访问 console.x.ai，使用邮箱或 X（Twitter）账号注册。访问 API 无需 X Premium 订阅——开发者控制台是独立产品。",
+          "访问 console.x.ai，使用邮箱或 X（Twitter）账号注册。访问 API 无需 X Premium 订阅——开发者控制台是独立产品。如果你是平台新用户，[[guide:how-to-get-grok-api-key|Grok API 入门指南]]详细介绍了初始注册流程。",
           "注册后需绑定支付方式才能创建 API Key，支持主流国际信用卡。API 没有永久免费套餐，但 xAI 曾推出过促销额度，注册后可在控制台查看当前活动。"
         ]
       }
@@ -61,11 +61,11 @@
       },
       "paragraphs": {
         "en": [
-          "After logging in, navigate to API Keys in the left sidebar (or go directly to console.x.ai/team/default/api-keys). Click \"Create API Key\", enter a descriptive name, and confirm.",
+          "After logging in, navigate to API Keys in the left sidebar (or go directly to console.x.ai/team/default/api-keys). The process for [[guide:how-to-get-grok-api-key|obtaining your xAI credentials]] is the same across all Grok models. Click \"Create API Key\", enter a descriptive name, and confirm.",
           "The key is shown only once at creation. Copy it immediately and store it in a password manager or secrets vault — you cannot retrieve it again from the console."
         ],
         "zh": [
-          "登录后，点击左侧菜单「API Keys」（或直接访问 console.x.ai/team/default/api-keys），点击「Create API Key」，填写描述性名称并确认。",
+          "登录后，点击左侧菜单「API Keys」（或直接访问 console.x.ai/team/default/api-keys）。[[guide:how-to-get-grok-api-key|获取 xAI 凭证]]的流程在所有 Grok 模型中都是相同的。点击「Create API Key」，填写描述性名称并确认。",
           "Key 只在创建时显示一次，请立即复制并保存到密码管理器或密钥系统中，之后无法在控制台再次查看完整内容。"
         ]
       },
@@ -134,11 +134,11 @@
       "paragraphs": {
         "en": [
           "Most API errors fall into one of three categories: authentication failures (401), quota or rate limit exceeded (429), and malformed requests (400). Here is how to diagnose and fix each one.",
-          "If you see a 401 error, the most common causes are: the API key was not set as an environment variable correctly, the key was copied with extra whitespace, or the Authorization header format is wrong. Double-check that you are passing Bearer <key> with a space, not Bearer<key>."
+          "If you see a 401 error, the most common causes are: the API key was not set as an environment variable correctly, the key was copied with extra whitespace, or the Authorization header format is wrong. These issues are common across all xAI models — [[guide:how-to-get-grok-api-key|troubleshooting xAI authentication]] covers them in more detail. Double-check that you are passing Bearer <key> with a space, not Bearer<key>."
         ],
         "zh": [
           "API 报错大多属于三类：身份验证失败（401）、超出配额或限流（429）、请求格式错误（400）。以下是各类报错的排查和修复方法。",
-          "遇到 401 错误，最常见原因是：环境变量未正确设置、Key 复制时带了多余空格，或 Authorization 请求头格式错误。请确认传入的是 Bearer <key>（中间有空格），而不是 Bearer<key>。"
+          "遇到 401 错误，最常见原因是：环境变量未正确设置、Key 复制时带了多余空格，或 Authorization 请求头格式错误。这些问题在所有 xAI 模型中都很常见——[[guide:how-to-get-grok-api-key|xAI 身份验证排查]]有更详细的说明。请确认传入的是 Bearer <key>（中间有空格），而不是 Bearer<key>。"
         ]
       },
       "bullets": {
@@ -167,11 +167,11 @@
       "paragraphs": {
         "en": [
           "Grok 4.5 is priced at $2 per million input tokens and $6 per million output tokens. This is significantly lower than comparable frontier models, while delivering Opus-class benchmark performance.",
-          "The cost advantage is amplified by Grok 4.5's efficiency: it completes complex software engineering tasks in fewer token steps than competitors. xAI reports that on typical agentic coding benchmarks, Grok 4.5 uses roughly half the tokens of comparable models per resolved task — making the effective cost difference even larger than the per-token rate suggests."
+          "The cost advantage is amplified by Grok 4.5's efficiency: it completes complex software engineering tasks in fewer token steps than competitors. xAI reports that on typical agentic coding benchmarks, Grok 4.5 uses roughly half the tokens of comparable models per resolved task — making the effective cost difference even larger than the per-token rate suggests. For a breakdown of [[guide:how-to-get-grok-api-key|Grok API key pricing]] across Grok-2 and Grok-3, check our foundational guide."
         ],
         "zh": [
           "Grok 4.5 定价为输入 $2/M Tokens、输出 $6/M Tokens，在提供 Opus 级基准性能的同时，价格显著低于同级别竞品。",
-          "成本优势因效率而放大：xAI 数据显示，在典型 Agent 编程基准中，Grok 4.5 每解决一个任务所消耗的 Token 约为竞品的一半——实际任务成本差距比单纯对比单价更大。"
+          "成本优势因效率而放大：xAI 数据显示，在典型 Agent 编程基准中，Grok 4.5 每解决一个任务所消耗的 Token 约为竞品的一半——实际任务成本差距比单纯对比单价更大。如需了解 [[guide:how-to-get-grok-api-key|Grok API Key 定价]]详情，包括 Grok-2 和 Grok-3 的价格，请参阅我们的基础指南。"
         ]
       },
       "bullets": {

@@ -7,7 +7,7 @@
   "pillarSlug": "openai-api-key-complete-guide",
   "publishedAt": "2026-03-31",
   "updatedAt": "2026-03-31",
-  "readingMinutes": 8,
+  "readingMinutes": 10,
   "title": {
     "en": "How to Create and Safely Use an OpenAI API Key (2026)",
     "zh": "OpenAI API Key 开通与安全使用指南（2026）"
@@ -34,12 +34,14 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI keys are created in the API Keys page of the developer platform. Use your organization account instead of personal throwaway accounts when this key is for production.",
-          "After creation, store the secret immediately in a secure vault. Do not paste it into chat tools, tickets, or public docs."
+          "OpenAI keys are created in the API Keys page of the developer platform at platform.openai.com. Use your organization account instead of personal throwaway accounts when this key is for production. If you haven't registered yet, [[guide:how-to-get-openai-api-key|the OpenAI API key tutorial]] walks through account creation, phone verification, and billing setup step by step.",
+          "After creation, store the secret immediately in a secure vault. Do not paste it into chat tools, tickets, or public docs. The key string starts with 'sk-' and is typically 51 characters long — if yours looks shorter or truncated, you may have copied it incompletely.",
+          "Give each key a descriptive name that reflects its purpose and environment, such as 'prod-backend-audit' or 'dev-staging-test'. This makes it much easier to identify which key to rotate or revoke when team members change roles or leave the organization. OpenAI's dashboard also lets you assign keys to specific projects, which helps with spending tracking and access isolation."
         ],
         "zh": [
-          "OpenAI 的 Key 在开发者平台的 API Keys 页面创建。若用于生产环境，建议使用团队组织账号，不要使用临时个人账号。",
-          "创建后请立即保存到安全位置（例如密码管理器或密钥系统），不要把 Key 贴到聊天群、工单系统或公开文档。"
+          "OpenAI 的 Key 在开发者平台（platform.openai.com）的 API Keys 页面创建。若用于生产环境，建议使用团队组织账号，不要使用临时个人账号。如果尚未注册，[[guide:how-to-get-openai-api-key|OpenAI API Key 教程]] 逐步讲解了账号注册、手机验证和计费设置。",
+          "创建后请立即保存到安全位置（例如密码管理器或密钥系统），不要把 Key 贴到聊天群、工单系统或公开文档。Key 字符串以「sk-」开头，通常为 51 个字符——如果你的 Key 看起来更短或被截断，可能是复制不完整。",
+          "为每个 Key 取一个能反映用途和环境的描述性名称，如「prod-backend-audit」或「dev-staging-test」。当团队成员更换角色或离职时，这能大大方便你判断该轮换或撤销哪个 Key。OpenAI 后台还支持将 Key 分配到特定项目，有助于消费追踪和访问隔离。"
         ]
       }
     },
@@ -51,12 +53,14 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI supports key-level permission modes such as All, Restricted, and Read Only. For production apps, prefer Restricted and enable only the endpoints your service actually needs.",
-          "If multiple internal services use OpenAI, create separate keys per service. This limits blast radius and makes auditing easier."
+          "OpenAI supports key-level permission modes such as All, Restricted, and Read Only. For production apps, prefer Restricted and enable only the endpoints your service actually needs — for example, enable 'Chat Completions' and 'Embeddings' if your app only does text generation and search. [[guide:openai-api-key-complete-guide|The full OpenAI API reference]] explains each permission scope in detail.",
+          "If multiple internal services use OpenAI, create separate keys per service. This limits blast radius and makes auditing easier.",
+          "A common mistake is creating a single key with All permissions and sharing it across multiple services. If one service is compromised, the attacker gains full access to your account — including the ability to delete models, change billing, or drain your credits. With Restricted keys, even a leaked key only exposes the specific endpoints it was scoped to, dramatically reducing the potential damage."
         ],
         "zh": [
-          "OpenAI 支持 Key 级权限（如 All、Restricted、Read Only）。生产环境建议优先使用 Restricted，仅开放业务实际需要的接口。",
-          "如果多个内部服务都会调用 OpenAI，建议为每个服务单独创建 Key，既便于审计，也能降低单点泄露影响。"
+          "OpenAI 支持 Key 级权限（如 All、Restricted、Read Only）。生产环境建议优先使用 Restricted，仅开放业务实际需要的接口——例如你的应用只做文本生成和搜索，就只开「Chat Completions」和「Embeddings」。[[guide:openai-api-key-complete-guide|完整的 OpenAI API 参考指南]] 详细说明了各权限范围。",
+          "如果多个内部服务都会调用 OpenAI，建议为每个服务单独创建 Key，既便于审计，也能降低单点泄露影响。",
+          "一个常见错误是创建一个 All 权限的 Key 并在多个服务间共享。一旦某个服务被攻破，攻击者就能完全控制你的账号——包括删除模型、修改计费或耗尽额度。使用 Restricted Key 时，即使泄露也只暴露其授权的特定接口，能大幅降低潜在损失。"
         ]
       }
     },
@@ -68,12 +72,16 @@
       },
       "paragraphs": {
         "en": [
-          "Never expose OPENAI_API_KEY in frontend JavaScript. Keep it in server environment variables and call OpenAI from your backend.",
-          "Use separate keys for development, staging, and production. Rotate keys periodically and immediately after team offboarding or suspected leakage."
+          "Never expose OPENAI_API_KEY in frontend JavaScript. Keep it in server environment variables and call OpenAI from your backend. If you accidentally expose the key in client-side code, revoke it immediately in the dashboard and create a new one — assume any exposed key is already compromised.",
+          "Use separate keys for development, staging, and production. Rotate keys periodically and immediately after team offboarding or suspected leakage.",
+          "Here's how to configure the key in a .env file and load it in a Node.js application:",
+          "For Next.js specifically, do NOT prefix your environment variable with NEXT_PUBLIC_. Variables prefixed with NEXT_PUBLIC_ are bundled into client-side JavaScript and will be visible to anyone who inspects your website's source code. A plain OPENAI_API_KEY variable is only accessible in Server Components and API routes, which is exactly what you want. Monitoring your usage also helps you catch unexpected cost spikes — [[guide:openai-api-pricing|understanding API costs]] early prevents surprises at the end of the month."
         ],
         "zh": [
-          "不要把 OPENAI_API_KEY 暴露在前端代码中。正确做法是将 Key 放在服务端环境变量里，通过后端请求 OpenAI。",
-          "开发、测试、生产环境建议使用不同 Key。团队成员离职或疑似泄露时，要立刻轮换密钥。"
+          "不要把 OPENAI_API_KEY 暴露在前端代码中。正确做法是将 Key 放在服务端环境变量里，通过后端请求 OpenAI。如果不小心在前端代码中暴露了 Key，请立即在后台撤销并创建新 Key——应假设任何已暴露的 Key 都已被利用。",
+          "开发、测试、生产环境建议使用不同 Key。团队成员离职或疑似泄露时，要立刻轮换密钥。",
+          "以下是在 .env 文件中配置 Key 并在 Node.js 应用中加载的方法：",
+          "对于 Next.js，切记不要给环境变量加 NEXT_PUBLIC_ 前缀。带 NEXT_PUBLIC_ 前缀的变量会被打包到客户端 JavaScript 中，任何查看网页源代码的人都能看到。不带前缀的 OPENAI_API_KEY 变量只能在 Server Components 和 API 路由中访问，这正是你需要的。同时，持续监控用量有助于及时发现异常消费——尽早[[guide:openai-api-pricing|了解 API 成本]] 能避免月底的意外账单。"
         ]
       },
       "bullets": {
@@ -87,7 +95,25 @@
           "禁止把 Key 提交到 Git 仓库",
           "建立固定轮换机制"
         ]
-      }
+      },
+      "codeBlocks": [
+        {
+          "language": "bash",
+          "code": "# .env file\nOPENAI_API_KEY=sk-your-key-here\n\n# .gitignore — make sure .env is listed\n.env",
+          "caption": {
+            "en": "Environment variable configuration for OpenAI API key",
+            "zh": "OpenAI API Key 的环境变量配置"
+          }
+        },
+        {
+          "language": "javascript",
+          "code": "// Load the key from environment in Node.js\nrequire('dotenv').config();\n\nconst { OpenAI } = require('openai');\n\nconst client = new OpenAI({\n  apiKey: process.env.OPENAI_API_KEY, // never hardcode\n});",
+          "caption": {
+            "en": "Loading the API key from environment variables in Node.js",
+            "zh": "在 Node.js 中从环境变量加载 API Key"
+          }
+        }
+      ]
     },
     {
       "id": "first-request",
@@ -97,12 +123,14 @@
       },
       "paragraphs": {
         "en": [
-          "Before integrating business logic, send a minimal test call with your server key. This confirms that network policy, project settings, and permissions are all correct.",
-          "Log request IDs and response status codes for troubleshooting. Add alerting for repeated 401 and 429 errors."
+          "Before integrating business logic, send a minimal test call with your server key. This confirms that network policy, project settings, and permissions are all correct. If the test fails, you'll know the issue is with authentication or configuration — not your application code.",
+          "Log request IDs and response status codes for troubleshooting. Add alerting for repeated 401 and 429 errors. For a comprehensive guide to diagnosing these errors — including distinguishing rate limits from quota exhaustion and implementing safe retry strategies — see [[guide:openai-401-429-troubleshooting-2026|troubleshooting 401 and 429 errors]].",
+          "A common pitfall during first-time setup is using the wrong base URL. The API endpoint is https://api.openai.com/v1 — not the ChatGPT URL. Another frequent issue is forgetting that free trial credits may have expired, resulting in a 429 'quota exceeded' error even though the key itself is valid."
         ],
         "zh": [
-          "在接业务逻辑之前，先用服务端 Key 发一个最小化测试请求，确认网络策略、项目配置和权限都正常。",
-          "建议记录请求 ID 与状态码，便于排查问题；同时对连续 401/429 建立告警。"
+          "在接业务逻辑之前，先用服务端 Key 发一个最小化测试请求，确认网络策略、项目配置和权限都正常。如果测试失败，你就知道问题出在认证或配置上——而不是应用代码。",
+          "建议记录请求 ID 与状态码，便于排查问题；同时对连续 401/429 建立告警。关于如何诊断这些错误——包括区分速率限制与额度耗尽以及实现安全重试策略——请参阅 [[guide:openai-401-429-troubleshooting-2026|排查 401 和 429 错误]] 指南。",
+          "首次配置时的一个常见陷阱是使用了错误的 base URL。API 端点是 https://api.openai.com/v1——不是 ChatGPT 的网址。另一个常见问题是忘记免费试用额度可能已过期，导致即使 Key 本身有效，也会收到 429「额度用尽」错误。"
         ]
       }
     },
@@ -115,11 +143,13 @@
       "paragraphs": {
         "en": [
           "Set project budgets and monitor usage so quota issues are detected early. If your workload spikes, review rate-limit guidance and add retry with exponential backoff.",
-          "Treat key management as part of production readiness, not a one-time setup step."
+          "Treat key management as part of production readiness, not a one-time setup step. Schedule quarterly key rotations, review access logs for unusual patterns, and maintain a runbook for incident response so your team knows exactly what to do when a key is compromised.",
+          "Consider implementing a key management service if you have more than a handful of keys. Tools like AWS Secrets Manager, HashiCorp Vault, or Doppler can automate rotation, audit access, and integrate with your CI/CD pipeline — so a new deployment automatically picks up the latest key without manual intervention."
         ],
         "zh": [
           "给项目设置预算并持续监控用量，尽早发现额度问题。流量上升时要结合速率限制策略，并实现指数退避重试。",
-          "密钥管理不是一次性动作，而是生产可用性的长期工作。"
+          "密钥管理不是一次性动作，而是生产可用性的长期工作。建议建立季度密钥轮换机制，审查访问日志中的异常模式，并维护一份事件响应 Runbook，让团队在 Key 泄露时明确知道该做什么。",
+          "如果 Key 数量较多，可以考虑使用密钥管理服务。AWS Secrets Manager、HashiCorp Vault 或 Doppler 等工具能自动化轮换、审计访问记录，并与 CI/CD 管道集成——这样新部署会自动获取最新 Key，无需人工介入。"
         ]
       }
     }

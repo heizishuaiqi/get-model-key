@@ -32,11 +32,11 @@
       },
       "paragraphs": {
         "en": [
-          "An API key is a unique string of characters that identifies and authenticates a developer or application when calling an API. Think of it as a username and password combined into one token — it tells the API provider who you are and whether you're authorized to access the service.",
+          "An API key is a unique string of characters that identifies and authenticates a developer or application when calling an API. Think of it as a username and password combined into one token — it tells the API provider who you are and whether you're authorized to access the service. If you're just getting started, [[guide:ai-beginner-guide|our beginner's guide to AI]] provides a broader overview of all the key concepts you'll need.",
           "When you use an AI model like GPT-4o, Claude, or Gemini through code (not through a web interface), you need an API key to prove you have permission to make that call."
         ],
         "zh": [
-          "API Key 是一串唯一字符，用于在调用 API 时识别和验证开发者或应用程序。可以把它理解为用户名和密码合二为一的令牌——它告诉 API 供应商你是谁，以及你是否有权访问该服务。",
+          "API Key 是一串唯一字符，用于在调用 API 时识别和验证开发者或应用程序。可以把它理解为用户名和密码合二为一的令牌——它告诉 API 供应商你是谁，以及你是否有权访问该服务。如果你刚开始入门，[[guide:ai-beginner-guide|我们的 AI 新手指南]] 提供了所有关键概念的更全面概述。",
           "当你通过代码（而非网页界面）使用 GPT-4o、Claude 或 Gemini 等 AI 模型时，你需要 API Key 来证明你有权限进行调用。"
         ]
       }
@@ -83,12 +83,12 @@
       },
       "paragraphs": {
         "en": [
-          "Each AI model provider has its own platform where you can create API keys. The most popular providers include:",
-          "You can find the official API key pages for all major AI providers on our providers page. We link directly to each provider's official key creation page."
+          "Each AI model provider has its own platform where you can create API keys. The most popular providers are listed below. If you're looking to minimize costs, [[guide:free-ai-api-keys|our free AI API guide]] covers which providers offer free tiers and how much you can use at no cost.",
+          "You can find the official API key pages for all major AI providers on our providers page. We link directly to each provider's official key creation page. For a convenient option that gives you access to hundreds of models with a single key, [[guide:how-to-get-openrouter-api-key|our OpenRouter setup guide]] walks you through the process step by step."
         ],
         "zh": [
-          "每个 AI 模型供应商都有自己的平台来创建 API Key。最受欢迎的供应商包括：",
-          "你可以在我们的供应商页面找到所有主流 AI 供应商的官方 API Key 页面。我们直接链接到每个供应商的官方 Key 创建页面。"
+          "每个 AI 模型供应商都有自己的平台来创建 API Key。最受欢迎的供应商如下所示。如果你想降低成本，[[guide:free-ai-api-keys|我们的免费 AI API 指南]] 介绍了哪些供应商提供免费额度以及免费使用量。",
+          "你可以在我们的供应商页面找到所有主流 AI 供应商的官方 API Key 页面。我们直接链接到每个供应商的官方 Key 创建页面。如果想要一个 Key 访问数百个模型的便捷方案，[[guide:how-to-get-openrouter-api-key|我们的 OpenRouter 设置指南]] 将逐步引导你完成整个过程。"
         ]
       },
       "bullets": {
@@ -116,12 +116,12 @@
       },
       "paragraphs": {
         "en": [
-          "Treat your API key like a password. Never share it publicly, never commit it to a Git repository, and never expose it in frontend code. If someone else obtains your key, they can make API calls that you pay for.",
-          "Store keys in environment variables or a secret management system. Use different keys for development and production. Rotate keys periodically and immediately if you suspect they've been compromised."
+          "Treat your API key like a password. Never share it publicly, never commit it to a Git repository, and never expose it in frontend code. If someone else obtains your key, they can make API calls that you pay for. It's important to understand that an API key is different from a cryptographic key pair — see [[guide:api-key-vs-public-key|our comparison of API keys vs public keys]] for a detailed explanation of why they serve fundamentally different security purposes.",
+          "Store keys in environment variables or a secret management system. Use different keys for development and production. Rotate keys periodically and immediately if you suspect they've been compromised. Many providers also support setting spending limits on individual keys, which is a best practice to prevent runaway costs from a leaked key. Additionally, some platforms offer key scopes or permissions — use the most restrictive scope that still allows your application to function."
         ],
         "zh": [
-          "把 API Key 当作密码来对待。不要公开分享、不要提交到 Git 仓库、不要暴露在前端代码中。如果别人拿到你的 Key，他们可以发起由你付费的 API 调用。",
-          "将 Key 存储在环境变量或密钥管理系统中。开发和生产使用不同 Key。定期轮换密钥，怀疑泄露时立即轮换。"
+          "把 API Key 当作密码来对待。不要公开分享、不要提交到 Git 仓库、不要暴露在前端代码中。如果别人拿到你的 Key，他们可以发起由你付费的 API 调用。需要理解的是，API Key 与加密密钥对不同——请参阅 [[guide:api-key-vs-public-key|我们的 API Key 与公钥对比]] 了解为什么它们在安全用途上有根本区别。",
+          "将 Key 存储在环境变量或密钥管理系统中。开发和生产使用不同 Key。定期轮换密钥，怀疑泄露时立即轮换。许多供应商还支持为单个 Key 设置消费限额，这是防止 Key 泄露导致费用失控的最佳实践。此外，部分平台提供 Key 权限范围——应使用仍能让应用正常运行的最小权限范围。"
         ]
       }
     }

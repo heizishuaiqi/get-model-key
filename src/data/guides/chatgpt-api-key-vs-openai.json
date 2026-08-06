@@ -7,7 +7,7 @@
   "pillarSlug": "openai-api-key-complete-guide",
   "publishedAt": "2026-07-07",
   "updatedAt": "2026-07-29",
-  "readingMinutes": 5,
+  "readingMinutes": 7,
   "title": {
     "en": "ChatGPT API Key vs OpenAI API Key: What's the Difference? (2026)",
     "zh": "ChatGPT API Key vs OpenAI API Key：有什么区别？（2026）"
@@ -35,11 +35,13 @@
       "paragraphs": {
         "en": [
           "ChatGPT is a product name — the chatbot interface you use at chat.openai.com. OpenAI is the company that builds both ChatGPT and the API platform. There is only one type of API key, issued by OpenAI, and it works for all OpenAI models including GPT-4o, GPT-4, and GPT-3.5.",
-          "Many beginners search for 'how to get a ChatGPT API key', but the correct question is 'how to get an OpenAI API key'. The key you create on platform.openai.com is what powers any ChatGPT model through the API."
+          "Many beginners search for 'how to get a ChatGPT API key', but the correct question is 'how to get an OpenAI API key'. The key you create on platform.openai.com is what powers any ChatGPT model through the API. For a detailed walkthrough of the registration and key creation process, [[guide:how-to-get-openai-api-key|see our step-by-step tutorial]].",
+          "The naming confusion is understandable — ChatGPT is the face of OpenAI that most people interact with. But when developers talk about integrating AI into their applications, they are always referring to the OpenAI API, not 'ChatGPT the product'. The API is a separate platform with its own billing, usage limits, and authentication system. [[guide:openai-api-key-complete-guide|The complete OpenAI API guide]] covers the full picture if you're new to the ecosystem."
         ],
         "zh": [
           "ChatGPT 是产品名——你在 chat.openai.com 使用的聊天界面。OpenAI 是同时开发 ChatGPT 和 API 平台的公司。API Key 只有一种，由 OpenAI 签发，适用于所有 OpenAI 模型，包括 GPT-4o、GPT-4 和 GPT-3.5。",
-          "很多初学者搜索「how to get a ChatGPT API key」，但正确的问题应该是「how to get an OpenAI API key」。你在 platform.openai.com 上创建的 Key 就是通过 API 调用任何 ChatGPT 模型的凭证。"
+          "很多初学者搜索「how to get a ChatGPT API key」，但正确的问题应该是「how to get an OpenAI API key」。你在 platform.openai.com 上创建的 Key 就是通过 API 调用任何 ChatGPT 模型的凭证。[[guide:how-to-get-openai-api-key|查看我们的逐步注册教程]] 了解完整的创建流程。",
+          "这种命名混淆可以理解——ChatGPT 是大多数人接触 OpenAI 的入口。但开发者谈论将 AI 集成到应用中时，他们指的始终是 OpenAI API，而不是「ChatGPT 这个产品」。API 是一个独立平台，有自己的计费、用量限制和认证系统。如果你刚接触这个生态，[[guide:openai-api-key-complete-guide|完整的 OpenAI API 指南]] 涵盖了全貌。"
         ]
       }
     },
@@ -52,11 +54,13 @@
       "paragraphs": {
         "en": [
           "ChatGPT Plus is a $20/month subscription for the chat interface — it gives you priority access, higher message limits, and early features in the ChatGPT web app. It does NOT include API credits.",
-          "The API is billed separately, pay-as-you-go, based on token usage. You can use the API without a Plus subscription, and a Plus subscription doesn't give you any API access. They are two completely separate billing systems."
+          "The API is billed separately, pay-as-you-go, based on token usage. You can use the API without a Plus subscription, and a Plus subscription doesn't give you any API access. They are two completely separate billing systems. To understand the cost structure in detail — including per-token rates for GPT-4o, o-series reasoning models, and volume discounts — [[guide:openai-api-pricing|learn more about API pricing]].",
+          "The cost difference can be dramatic depending on your usage pattern. A casual user who sends 100 messages per day on ChatGPT Plus pays a flat $20/month. The same volume via API using GPT-4o-mini might cost less than $1 per month. However, heavy production workloads using GPT-4o or o3 reasoning models can easily exceed $20/month, so it's important to estimate costs before committing to either approach."
         ],
         "zh": [
           "ChatGPT Plus 是每月 20 美元的订阅，针对聊天界面——它给你优先访问、更高的消息限制和 ChatGPT 网页版的早期功能。它不包含 API 额度。",
-          "API 采用单独的按量计费方式，按 token 使用量收费。你不需要订阅 Plus 就能使用 API，而 Plus 订阅也不会给你任何 API 访问权限。这是两套完全独立的计费系统。"
+          "API 采用单独的按量计费方式，按 token 使用量收费。你不需要订阅 Plus 就能使用 API，而 Plus 订阅也不会给你任何 API 访问权限。这是两套完全独立的计费系统。要详细了解成本结构——包括 GPT-4o、o 系列推理模型的每 token 费率和批量折扣——请[[guide:openai-api-pricing|了解更多 API 定价信息]]。",
+          "根据使用模式不同，成本差异可能很大。一个每天发送 100 条消息的普通 ChatGPT Plus 用户每月固定支付 20 美元。同样的量通过 API 使用 GPT-4o-mini 可能每月不到 1 美元。但使用 GPT-4o 或 o3 推理模型的重度生产负载很容易超过每月 20 美元，因此在选择方案前预估成本很重要。"
         ]
       }
     },
@@ -68,10 +72,14 @@
       },
       "paragraphs": {
         "en": [
-          "Once you have an OpenAI API key, you can call any ChatGPT model (like GPT-4o) through the API. Here's a minimal example:"
+          "Once you have an OpenAI API key, you can call any ChatGPT model (like GPT-4o) through the API. The key works identically across Python, Node.js, and direct HTTP calls — the model doesn't know or care which language you use. For guidance on [[guide:openai-api-key-setup-2026|setting up your API credentials securely]], including permission scoping and environment variable management, see our dedicated setup guide. Here's a minimal Python example:",
+          "The same request in Node.js using the official SDK:",
+          "Or as a plain HTTP request with no SDK dependency — useful for environments where you can't install packages:"
         ],
         "zh": [
-          "有了 OpenAI API Key 之后，你就可以通过 API 调用任何 ChatGPT 模型（如 GPT-4o）。以下是最小示例："
+          "有了 OpenAI API Key 之后，你就可以通过 API 调用任何 ChatGPT 模型（如 GPT-4o）。Key 在 Python、Node.js 和直接 HTTP 调用中完全通用——模型不关心你用什么语言。关于如何[[guide:openai-api-key-setup-2026|安全地配置 API 凭证]]，包括权限范围和环境变量管理，请参阅我们的专项设置指南。以下是最小的 Python 示例：",
+          "以下是使用官方 SDK 的 Node.js 版本：",
+          "或者用纯 HTTP 请求，不依赖任何 SDK——适用于无法安装包的环境："
         ]
       },
       "codeBlocks": [
@@ -82,8 +90,62 @@
             "en": "Calling the GPT-4o (ChatGPT) model using the OpenAI Python SDK",
             "zh": "使用 OpenAI Python SDK 调用 GPT-4o（ChatGPT）模型"
           }
+        },
+        {
+          "language": "javascript",
+          "code": "import OpenAI from \"openai\";\n\nconst client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });\n\nconst response = await client.chat.completions.create({\n  model: \"gpt-4o\",\n  messages: [{ role: \"user\", content: \"Hello! What can you do?\" }],\n});\n\nconsole.log(response.choices[0].message.content);",
+          "caption": {
+            "en": "Calling GPT-4o using the OpenAI Node.js SDK",
+            "zh": "使用 OpenAI Node.js SDK 调用 GPT-4o"
+          }
+        },
+        {
+          "language": "bash",
+          "code": "curl https://api.openai.com/v1/chat/completions \\\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"gpt-4o\",\n    \"messages\": [{\"role\": \"user\", \"content\": \"Hello! What can you do?\"}]\n  }'",
+          "caption": {
+            "en": "Calling the OpenAI API with a plain curl request",
+            "zh": "用 curl 直接请求 OpenAI API"
+          }
         }
       ]
+    },
+    {
+      "id": "when-to-use-which",
+      "heading": {
+        "en": "When to Use ChatGPT vs the API",
+        "zh": "什么时候用 ChatGPT，什么时候用 API"
+      },
+      "paragraphs": {
+        "en": [
+          "ChatGPT (the web app) is ideal for casual conversation, brainstorming, exploring new models without writing code, and situations where you want a polished chat interface with features like file uploads, web browsing, and image generation built in. It's the fastest way to interact with OpenAI's models — just open a browser and start typing.",
+          "The API is ideal for building applications that integrate AI programmatically, processing large volumes of data, automating workflows, fine-tuning model behavior through system prompts, and any scenario where you need AI output fed into another system. If your use case involves code calling AI and doing something with the response, the API is the right choice.",
+          "Many teams use both: ChatGPT for prototyping and experimentation, then the API for production. You can prototype a feature in the ChatGPT web interface, and once the prompt is dialed in, move it to the API for automated execution at scale. This workflow lets you iterate quickly on prompts without worrying about token costs during development."
+        ],
+        "zh": [
+          "ChatGPT（网页版）适合日常对话、头脑风暴、无需写代码探索新模型，以及需要完整聊天界面（支持文件上传、网页搜索、图像生成等功能）的场景。这是与 OpenAI 模型交互最快的方式——打开浏览器就能开始输入。",
+          "API 适合编程式集成 AI、批量数据处理、自动化工作流、通过系统提示精细控制模型行为，以及任何需要将 AI 输出传递给其他系统的场景。如果你的用例是代码调用 AI 并处理返回结果，API 是正确选择。",
+          "很多团队两者都用：ChatGPT 做原型和实验，API 做生产。你可以先在 ChatGPT 网页版里打磨提示词，定型后迁移到 API 做大规模自动化执行。这种工作流让你在开发阶段快速迭代提示词，而不用担心 token 成本。"
+        ]
+      }
+    },
+    {
+      "id": "common-misconceptions",
+      "heading": {
+        "en": "Common Misconceptions",
+        "zh": "常见误区"
+      },
+      "paragraphs": {
+        "en": [
+          "Misconception: 'I have ChatGPT Plus, so I can use the API for free.' Reality: Plus subscription and API billing are entirely separate systems. Your $20/month only covers the chat interface — API usage requires adding credits to your API account separately.",
+          "Misconception: 'ChatGPT uses different models than the API.' Reality: The same GPT-4o model is available through both the ChatGPT web app and the API. The difference is the interface and billing, not the model itself. The API may expose additional parameters like temperature, max_tokens, and system prompts that the ChatGPT interface abstracts away.",
+          "Misconception: 'I need a special key for GPT-4o vs GPT-3.5.' Reality: One API key grants access to all OpenAI models. You simply change the model parameter in your API call. There's no need to create separate keys for different models, though you can create separate keys for different projects or environments for security purposes."
+        ],
+        "zh": [
+          "误区：「我有 ChatGPT Plus，就能免费用 API。」事实：Plus 订阅和 API 计费是完全独立的两套系统。每月 20 美元只覆盖聊天界面——API 使用需要单独为 API 账户充值。",
+          "误区：「ChatGPT 用的模型和 API 不一样。」事实：同一个 GPT-4o 模型在 ChatGPT 网页版和 API 中都可用。区别在于界面和计费方式，不是模型本身。API 可能暴露更多参数，如 temperature、max_tokens 和系统提示，这些在 ChatGPT 界面中被封装了。",
+          "误区：「GPT-4o 和 GPT-3.5 需要不同的 Key。」事实：一个 API Key 即可访问所有 OpenAI 模型，只需在 API 调用中更改 model 参数。不需要为不同模型创建不同的 Key，但出于安全考虑，你可以为不同项目或环境创建独立的 Key。"
+        ]
+      }
     },
     {
       "id": "summary-table",

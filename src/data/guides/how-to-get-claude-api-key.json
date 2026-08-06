@@ -35,11 +35,11 @@
       "paragraphs": {
         "en": [
           "There is no separate 'Claude API key' — the key you need is an Anthropic API key. Claude is the model; Anthropic is the company that provides the API. When you search for 'how to get a Claude API key,' what you actually need is an Anthropic API key from the Anthropic Console.",
-          "The same key works for all Claude models, including Claude Sonnet, Claude Opus, and Claude Haiku."
+          "The same key works for all Claude models, including Claude Sonnet, Claude Opus, and Claude Haiku. For the full picture including pricing and SDK integration, our [[guide:claude-api-key-complete-guide|complete Claude API key guide]] covers everything you need. If you're interested in Anthropic's most powerful public model, the [[guide:claude-fable-5-api-key-setup-2026|Fable 5 key setup guide]] is worth reading."
         ],
         "zh": [
           "不存在单独的「Claude API Key」——你需要的实际上是 Anthropic API Key。Claude 是模型名，Anthropic 是提供 API 的公司。当你搜索「如何获取 Claude API Key」时，实际需要的是从 Anthropic Console 获取的 Anthropic API Key。",
-          "同一个 Key 可以用于所有 Claude 模型，包括 Claude Sonnet、Claude Opus 和 Claude Haiku。"
+          "同一个 Key 可以用于所有 Claude 模型，包括 Claude Sonnet、Claude Opus 和 Claude Haiku。如需全面了解定价和 SDK 集成，我们的 [[guide:claude-api-key-complete-guide|Claude API Key 完全指南]] 涵盖了所有内容。如果你想了解 Anthropic 最强的公开模型，可以看看 [[guide:claude-fable-5-api-key-setup-2026|Fable 5 密钥开通指南]]。"
         ]
       }
     },
@@ -86,11 +86,11 @@
       "paragraphs": {
         "en": [
           "Anthropic uses a prepaid billing model. Before making API calls, you need to add credits to your account. New accounts may receive a small amount of free credits for testing.",
-          "Go to the Billing section in the console, add your payment method, and purchase credits. You can also set spending limits to avoid unexpected charges."
+          "Go to the Billing section in the console, add your payment method, and purchase credits. You can also set spending limits to avoid unexpected charges. For team-based key management and environment isolation, see our [[guide:claude-api-key-getting-started-2026|team onboarding walkthrough]]."
         ],
         "zh": [
           "Anthropic 采用预付费模式。在调用 API 之前需要先充值。新账号可能会获得少量免费测试额度。",
-          "进入控制台的 Billing 页面，添加支付方式并购买额度。你也可以设置消费上限以避免意外支出。"
+          "进入控制台的 Billing 页面，添加支付方式并购买额度。你也可以设置消费上限以避免意外支出。关于团队密钥管理和环境隔离，请参阅我们的 [[guide:claude-api-key-getting-started-2026|团队接入指南]]。"
         ]
       }
     },
@@ -128,11 +128,11 @@
       "paragraphs": {
         "en": [
           "Anthropic charges per million tokens, with separate rates for input and output. Different Claude models have different price points — Claude Haiku is the most affordable, Claude Sonnet is mid-range, and Claude Opus is the premium tier.",
-          "Check the official Anthropic pricing page for current rates, as pricing may change when new models are released."
+          "Check the official Anthropic pricing page for current rates, as pricing may change when new models are released. To see how Claude stacks up against alternatives, our [[guide:claude-vs-openai-api|Claude vs OpenAI comparison]] breaks down the cost differences."
         ],
         "zh": [
           "Anthropic 按百万 token 计费，输入和输出分别定价。不同 Claude 模型价格不同——Claude Haiku 最实惠，Claude Sonnet 中档，Claude Opus 是高端档。",
-          "建议查看 Anthropic 官方定价页面获取最新价格，因为新模型发布时定价可能会调整。"
+          "建议查看 Anthropic 官方定价页面获取最新价格，因为新模型发布时定价可能会调整。想了解 Claude 与竞品的差异，我们的 [[guide:claude-vs-openai-api|Claude 与 OpenAI 对比分析]] 详细拆解了成本差异。"
         ]
       }
     }

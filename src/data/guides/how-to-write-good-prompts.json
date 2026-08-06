@@ -32,13 +32,13 @@
       },
       "paragraphs": {
         "en": [
-          "Every effective prompt contains three core elements: role, task, and context. Mastering these three is the difference between getting mediocre answers and getting exactly what you need.",
+          "Every effective prompt contains three core elements: role, task, and context. Mastering these three is the difference between getting mediocre answers and getting exactly what you need. This builds on the foundations covered in [[guide:ai-beginner-guide|the beginner's guide to AI]], which provides the broader context for working with AI models.",
           "Role tells the AI who to act as. This sets the perspective, expertise level, and tone. For example, \"You are a senior Python developer\" produces very different output than \"You are a beginner learning Python.\" The role primes the model to draw on relevant patterns from its training data.",
           "Task describes what you want the AI to do. Be specific about the output format, length, and scope. \"Write a function\" is vague; \"Write a Python function that takes a list of integers and returns the median value, with error handling for empty lists\" is specific and actionable.",
           "Context provides the background the AI needs. This includes your audience, constraints, prior work, and any reference material. Without context, the AI guesses — and it often guesses wrong. The more context you provide, the more accurate and useful the response."
         ],
         "zh": [
-          "每个有效的 Prompt 都包含三个核心要素：角色、任务和上下文。掌握这三点，是从获得平庸答案到获得精准所需结果的关键。",
+          "每个有效的 Prompt 都包含三个核心要素：角色、任务和上下文。掌握这三点，是从获得平庸答案到获得精准所需结果的关键。这建立在 [[guide:ai-beginner-guide|AI 新手指南]] 涵盖的基础知识之上，为使用 AI 模型提供了更全面的背景。",
           "角色告诉 AI 扮演什么身份。这设定了视角、专业水平和语气。例如，「你是一位资深 Python 开发者」和「你是一个正在学 Python 的新手」会产生非常不同的输出。角色引导模型从训练数据中提取相关模式。",
           "任务描述你希望 AI 做什么。要具体说明输出格式、长度和范围。「写一个函数」太含糊；「写一个 Python 函数，接收整数列表并返回中位数，包含空列表的错误处理」则具体且可操作。",
           "上下文提供 AI 所需的背景信息。包括你的受众、约束条件、之前的工作和任何参考材料。没有上下文，AI 只能猜测——而且经常猜错。你提供的上下文越多，回复就越准确有用。"
@@ -109,10 +109,10 @@
       },
       "paragraphs": {
         "en": [
-          "Here are ready-to-use templates for four common tasks. Replace the bracketed placeholders with your specific content."
+          "Here are ready-to-use templates for four common tasks. Replace the bracketed placeholders with your specific content. One important tip: never include sensitive credentials like API keys in your prompts — understanding [[guide:api-key-vs-public-key|the difference between API keys and cryptographic keys]] can help you avoid security mistakes when building AI applications."
         ],
         "zh": [
-          "以下是四个常见任务的即用模板。将括号中的占位符替换为你的具体内容。"
+          "以下是四个常见任务的即用模板。将括号中的占位符替换为你的具体内容。一个重要提示：永远不要在 Prompt 中包含 API Key 等敏感凭证——了解 [[guide:api-key-vs-public-key|API Key 与加密密钥的区别]] 有助于在构建 AI 应用时避免安全错误。"
         ]
       },
       "bullets": {
@@ -139,17 +139,17 @@
       "paragraphs": {
         "en": [
           "Even with the right framework, certain mistakes consistently produce poor results. Here are the most common ones:",
-          "Being too vague. \"Write something about AI\" gives the AI no direction. Always specify the format, length, audience, and angle. Vague prompts produce vague answers.",
+          "Being too vague. \"Write something about AI\" gives the AI no direction. Always specify the format, length, audience, and angle. Vague prompts produce vague answers. If you're new to the concept, [[guide:what-is-a-prompt|understanding the basics of prompts]] will help you avoid this common pitfall.",
           "Overloading the prompt. Cramming multiple unrelated tasks into one prompt confuses the AI. If you need several things done, break them into separate prompts or use a multi-step approach where each step builds on the previous output.",
           "Not iterating. Your first prompt rarely produces the perfect result. Treat prompt writing as a conversation — if the output isn't right, refine your prompt based on what went wrong and try again. The best prompt engineers iterate 3-5 times before settling on a final version.",
-          "Ignoring model differences. A prompt that works great with GPT-4o might perform poorly with a smaller model. Different models have different strengths — adjust your prompt complexity based on the model you're using."
+          "Ignoring model differences. A prompt that works great with GPT-4o might perform poorly with a smaller model. Different models have different strengths — adjust your prompt complexity based on the model you're using. Poorly matched prompts can even increase the risk of [[guide:what-are-ai-hallucinations|AI generating fabricated information]], so always test on your target model."
         ],
         "zh": [
           "即使有了正确的框架，某些错误仍会持续产生差的结果。以下是最常见的错误：",
-          "太含糊。「写点关于 AI 的东西」没有给 AI 任何方向。务必指定格式、长度、受众和角度。含糊的 Prompt 产生含糊的答案。",
+          "太含糊。「写点关于 AI 的东西」没有给 AI 任何方向。务必指定格式、长度、受众和角度。含糊的 Prompt 产生含糊的答案。如果你刚接触这个概念，[[guide:what-is-a-prompt|了解 Prompt 的基础知识]] 能帮你避免这个常见陷阱。",
           "Prompt 过载。把多个不相关的任务塞进一个 Prompt 会让 AI 困惑。如果你需要做多件事，拆分成单独的 Prompt，或用多步骤方式让每步基于前一步的输出。",
           "不迭代。你的第一个 Prompt 很少能产生完美结果。把 Prompt 写作当作对话——如果输出不对，根据问题修改 Prompt 再试。最好的 Prompt 工程师会迭代 3-5 次才确定最终版本。",
-          "忽视模型差异。在 GPT-4o 上效果很好的 Prompt 可能在较小模型上表现很差。不同模型有不同优势——根据你使用的模型调整 Prompt 的复杂度。"
+          "忽视模型差异。在 GPT-4o 上效果很好的 Prompt 可能在较小模型上表现很差。不同模型有不同优势——根据你使用的模型调整 Prompt 的复杂度。不匹配的 Prompt 甚至可能增加 [[guide:what-are-ai-hallucinations|AI 生成虚假信息]] 的风险，因此务必在目标模型上测试。"
         ]
       }
     }

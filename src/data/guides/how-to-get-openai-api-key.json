@@ -35,11 +35,11 @@
       "paragraphs": {
         "en": [
           "OpenAI remains the most widely adopted AI API provider in 2026, offering access to the GPT-4o multimodal model family, the o-series reasoning models (o1, o3, o4-mini), and specialized models for embeddings, text-to-speech, and image generation.",
-          "The OpenAI API has the largest ecosystem of SDKs, community libraries, and third-party integrations. If you're building an AI-powered application, the OpenAI API is often the default choice due to its mature tooling, comprehensive documentation, and broad model coverage."
+          "The OpenAI API has the largest ecosystem of SDKs, community libraries, and third-party integrations. If you're building an AI-powered application, the OpenAI API is often the default choice due to its mature tooling, comprehensive documentation, and broad model coverage. [[guide:openai-api-key-complete-guide|Our comprehensive OpenAI resource]] covers the entire platform in depth."
         ],
         "zh": [
           "OpenAI 仍然是 2026 年使用最广泛的 AI API 供应商，提供 GPT-4o 多模态模型系列、o 系列推理模型（o1、o3、o4-mini），以及用于向量嵌入、文本转语音和图像生成的专用模型。",
-          "OpenAI API 拥有最大的 SDK、社区库和第三方集成生态系统。如果你在构建 AI 驱动的应用，OpenAI API 凭借成熟的工具链、完善的文档和广泛的模型覆盖，往往是默认选择。"
+          "OpenAI API 拥有最大的 SDK、社区库和第三方集成生态系统。如果你在构建 AI 驱动的应用，OpenAI API 凭借成熟的工具链、完善的文档和广泛的模型覆盖，往往是默认选择。[[guide:openai-api-key-complete-guide|我们的 OpenAI 综合资源]] 对整个平台进行了深入介绍。"
         ]
       }
     },
@@ -68,13 +68,13 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI's API billing is completely separate from ChatGPT Plus subscriptions. Even if you pay for ChatGPT Plus, you still need to add a payment method and fund your API account separately.",
-          "Navigate to Settings > Billing in the dashboard. Add a credit card — OpenAI accepts Visa, Mastercard, and American Express. After adding your card, you can choose to auto-recharge when your balance drops below a threshold, or manually top up.",
+          "OpenAI's API billing is completely separate from ChatGPT Plus subscriptions. Even if you pay for ChatGPT Plus, you still need to add a payment method and fund your API account separately. [[guide:chatgpt-api-key-vs-openai|See our detailed comparison]] for a full breakdown of the differences.",
+          "Navigate to Settings > Billing in the dashboard. Add a credit card — OpenAI accepts Visa, Mastercard, and American Express. After adding your card, you can choose to auto-recharge when your balance drops below a threshold, or manually top up. To [[guide:openai-api-pricing|learn more about pricing]] and estimate your monthly costs, see our detailed pricing breakdown.",
           "New accounts may receive a small amount of free trial credits (typically $5), but these expire after a few months. Check the Billing page to see if your account has any remaining trial credits."
         ],
         "zh": [
-          "OpenAI 的 API 计费与 ChatGPT Plus 订阅完全独立。即使你付费订阅了 ChatGPT Plus，仍然需要单独添加支付方式并为 API 账户充值。",
-          "在后台进入 Settings > Billing。添加信用卡——OpenAI 支持 Visa、Mastercard 和 American Express。添加卡片后，你可以选择余额低于阈值时自动充值，或手动充值。",
+          "OpenAI 的 API 计费与 ChatGPT Plus 订阅完全独立。即使你付费订阅了 ChatGPT Plus，仍然需要单独添加支付方式并为 API 账户充值。[[guide:chatgpt-api-key-vs-openai|查看我们的详细对比]] 了解两者完整区别。",
+          "在后台进入 Settings > Billing。添加信用卡——OpenAI 支持 Visa、Mastercard 和 American Express。添加卡片后，你可以选择余额低于阈值时自动充值，或手动充值。要[[guide:openai-api-pricing|了解更多定价信息]]并估算月度成本，请参阅我们的详细定价分析。",
           "新账号可能会获得少量免费试用额度（通常 $5），但这些额度会在几个月后过期。在 Billing 页面可以查看账号是否还有试用额度。"
         ]
       }
@@ -149,12 +149,12 @@
       "paragraphs": {
         "en": [
           "Never expose your API key in client-side code, public repositories, or screenshots. If a key is compromised, delete it immediately in the API Keys dashboard and create a new one.",
-          "Use environment variables or a secrets manager to inject the key at runtime. In Next.js, use server-side environment variables (without the NEXT_PUBLIC_ prefix) so the key never reaches the browser.",
+          "Use environment variables or a secrets manager to inject the key at runtime. In Next.js, use server-side environment variables (without the NEXT_PUBLIC_ prefix) so the key never reaches the browser. For a deeper dive into [[guide:openai-api-key-setup-2026|setting up your API credentials securely]], including permission scoping and key rotation strategies, see our dedicated setup guide.",
           "Rotate your keys periodically — create a new key, update your application, then delete the old one. This limits the damage if a key is accidentally leaked."
         ],
         "zh": [
           "永远不要在客户端代码、公开仓库或截图中暴露你的 API Key。如果 Key 泄露，请立即在 API Keys 后台删除并创建新的。",
-          "使用环境变量或密钥管理器在运行时注入 Key。在 Next.js 中，使用服务端环境变量（不带 NEXT_PUBLIC_ 前缀），确保 Key 不会到达浏览器。",
+          "使用环境变量或密钥管理器在运行时注入 Key。在 Next.js 中，使用服务端环境变量（不带 NEXT_PUBLIC_ 前缀），确保 Key 不会到达浏览器。关于如何[[guide:openai-api-key-setup-2026|安全地设置 API 凭证]]，包括权限范围和密钥轮换策略，请参阅我们的专项设置指南。",
           "定期轮换 Key——创建新 Key、更新应用、然后删除旧 Key。这样即使 Key 意外泄露，也能将影响降到最低。"
         ]
       }

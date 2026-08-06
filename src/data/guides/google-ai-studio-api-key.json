@@ -36,12 +36,12 @@
         "en": [
           "Google AI Studio is a browser-based IDE for building generative AI applications with Google's Gemini models. It provides a fast, zero-setup way to prototype prompts, test model behavior, and generate an API key for programmatic access.",
           "Unlike a full cloud platform, Google AI Studio is designed to get developers from idea to first API call in minutes. You can experiment with different Gemini models, adjust parameters like temperature and token limits, and export working code directly from the UI.",
-          "Google AI Studio is the recommended starting point for most developers who want to use the Gemini API, especially those who do not already have a Google Cloud project or need enterprise-grade infrastructure."
+          "Google AI Studio is the recommended starting point for most developers who want to use the Gemini API, especially those who do not already have a Google Cloud project or need enterprise-grade infrastructure. For the full picture including model selection and pricing, our [[guide:gemini-api-key-complete-guide|complete Gemini API key guide]] is the definitive resource."
         ],
         "zh": [
           "Google AI Studio 是一个基于浏览器的 IDE，用于使用 Google 的 Gemini 模型构建生成式 AI 应用。它提供了一种快速、零配置的方式来原型化提示词、测试模型行为，并生成用于编程访问的 API Key。",
           "与完整的云平台不同，Google AI Studio 的设计目标是让开发者在几分钟内从创意到第一次 API 调用。你可以实验不同的 Gemini 模型、调整温度和 token 限制等参数，并直接从界面导出可用的代码。",
-          "对于大多数想要使用 Gemini API 的开发者来说，Google AI Studio 是推荐的起点，尤其是那些还没有 Google Cloud 项目或不需要企业级基础设施的用户。"
+          "对于大多数想要使用 Gemini API 的开发者来说，Google AI Studio 是推荐的起点，尤其是那些还没有 Google Cloud 项目或不需要企业级基础设施的用户。如需全面了解模型选择和定价，我们的 [[guide:gemini-api-key-complete-guide|Gemini API Key 完全指南]] 是权威资源。"
         ]
       }
     },
@@ -124,12 +124,12 @@
         "en": [
           "Google AI Studio provides a free tier for the Gemini API that is generous enough for development, testing, and small projects. The free tier includes access to all available Gemini models, including Gemini 2.5 Pro and Gemini 2.5 Flash.",
           "The free tier has per-minute rate limits (typically 15 requests per minute for most models) but does not impose a daily cap. This makes it well-suited for iterative development where you need to test prompts and adjust parameters repeatedly.",
-          "When you need higher rate limits or are ready for production, you can upgrade to the paid tier by enabling billing in Google Cloud. Paid pricing is per million tokens, with separate rates for input and output tokens. Prompt caching is also available at a discount on supported models."
+          "When you need higher rate limits or are ready for production, you can upgrade to the paid tier by enabling billing in Google Cloud. Paid pricing is per million tokens, with separate rates for input and output tokens. Prompt caching is also available at a discount on supported models. To choose the right model for your workload, see our [[guide:gemini-models-comparison|Gemini models comparison]]. And for a detailed walkthrough of both key creation methods, the [[guide:how-to-get-gemini-api-key|step-by-step key guide]] covers AI Studio and Vertex AI side by side."
         ],
         "zh": [
           "Google AI Studio 为 Gemini API 提供了免费额度，足够用于开发、测试和小型项目。免费额度包括对所有可用 Gemini 模型的访问，包括 Gemini 2.5 Pro 和 Gemini 2.5 Flash。",
           "免费额度有每分钟速率限制（大多数模型通常每分钟 15 次请求），但没有每日上限。这非常适合需要反复测试提示词和调整参数的迭代开发。",
-          "当你需要更高速率限制或准备投入生产时，可以在 Google Cloud 中启用计费升级到付费版。付费版按百万 token 计费，输入和输出 token 分别定价。支持的模型还提供提示缓存折扣。"
+          "当你需要更高速率限制或准备投入生产时，可以在 Google Cloud 中启用计费升级到付费版。付费版按百万 token 计费，输入和输出 token 分别定价。支持的模型还提供提示缓存折扣。如需选择适合你工作负载的模型，请参阅我们的 [[guide:gemini-models-comparison|Gemini 模型对比]]。如需两种密钥创建方式的详细说明，[[guide:how-to-get-gemini-api-key|逐步密钥指南]] 并列介绍了 AI Studio 和 Vertex AI。"
         ]
       }
     },
@@ -177,11 +177,11 @@
       "paragraphs": {
         "en": [
           "Treat your Google AI Studio API key like a password. Never commit it to version control or hardcode it in client-side code. Store it in environment variables or a secrets manager, and use different keys for development and production.",
-          "If a key is compromised, you can delete or regenerate it from the Google AI Studio dashboard. Monitor your API usage regularly to detect unexpected spikes that might indicate key leakage."
+          "If a key is compromised, you can delete or regenerate it from the Google AI Studio dashboard. Monitor your API usage regularly to detect unexpected spikes that might indicate key leakage. For a rapid end-to-end setup including key creation and verification, the [[guide:gemini-api-key-quickstart-2026|Gemini quickstart]] is the fastest path."
         ],
         "zh": [
           "像对待密码一样对待你的 Google AI Studio API Key。永远不要将其提交到版本控制或硬编码在客户端代码中。将其存储在环境变量或密钥管理器中，开发和生产使用不同的 Key。",
-          "如果 Key 泄露，可以在 Google AI Studio 仪表盘中删除或重新生成。定期监控 API 使用量，以便发现可能表明 Key 泄露的异常增长。"
+          "如果 Key 泄露，可以在 Google AI Studio 仪表盘中删除或重新生成。定期监控 API 使用量，以便发现可能表明 Key 泄露的异常增长。如需从密钥创建到验证的快速端到端设置，[[guide:gemini-api-key-quickstart-2026|Gemini 快速入门]] 是最快的路径。"
         ]
       }
     }

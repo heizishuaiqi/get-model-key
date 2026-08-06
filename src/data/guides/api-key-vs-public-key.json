@@ -33,11 +33,11 @@
       },
       "paragraphs": {
         "en": [
-          "An API key is a simple secret string that identifies a caller to an API. It's like a membership card — you present it with each request, and the server checks it against its database. API keys are typically sent in a header (e.g., Authorization: Bearer sk-xxxx) or as a query parameter.",
+          "An API key is a simple secret string that identifies a caller to an API. It's like a membership card — you present it with each request, and the server checks it against its database. API keys are typically sent in a header (e.g., Authorization: Bearer sk-xxxx) or as a query parameter. For a more detailed introduction, see [[guide:what-is-an-api-key|our beginner's guide to API keys]].",
           "API keys are easy to use but have a weakness: anyone who obtains the key can use it. There's no cryptographic identity proof. They're best suited for server-to-server communication where the key stays on your backend."
         ],
         "zh": [
-          "API Key 是一个简单的密钥字符串，用于向 API 标识调用者身份。它就像一张会员卡——每次请求时出示，服务器在数据库中核对。API Key 通常放在请求头（如 Authorization: Bearer sk-xxxx）或查询参数中传递。",
+          "API Key 是一个简单的密钥字符串，用于向 API 标识调用者身份。它就像一张会员卡——每次请求时出示，服务器在数据库中核对。API Key 通常放在请求头（如 Authorization: Bearer sk-xxxx）或查询参数中传递。如需更详细的入门介绍，请参阅 [[guide:what-is-an-api-key|我们的 API Key 新手指南]]。",
           "API Key 使用简单，但有一个弱点：任何拿到 Key 的人都能使用。它没有加密身份证明。最适合服务器到服务器的通信场景，Key 保留在你的后端。"
         ]
       }
@@ -67,11 +67,11 @@
       },
       "paragraphs": {
         "en": [
-          "An API key is a bearer token — possession equals authorization. It doesn't come in a pair, and it can't encrypt data or create signatures. It's just a secret string stored in the provider's database.",
+          "An API key is a bearer token — possession equals authorization. It doesn't come in a pair, and it can't encrypt data or create signatures. It's just a secret string stored in the provider's database. This is one of the fundamental concepts covered in [[guide:ai-beginner-guide|the beginner's guide to AI]] — understanding it helps you make better security decisions.",
           "A private key, by contrast, is part of a cryptographic pair. You never send it to anyone. You use it locally to sign or decrypt. An API key is sent with every request, while a private key never leaves your machine (or your HSM)."
         ],
         "zh": [
-          "API Key 是持有者令牌——拥有即授权。它不成对出现，不能加密数据或创建签名。它只是一个存储在供应商数据库中的密钥字符串。",
+          "API Key 是持有者令牌——拥有即授权。它不成对出现，不能加密数据或创建签名。它只是一个存储在供应商数据库中的密钥字符串。这是 [[guide:ai-beginner-guide|AI 新手指南]] 中涵盖的基础概念之一——理解它有助于做出更好的安全决策。",
           "私钥则相反，它是加密密钥对的一部分。你永远不会把它发给任何人。你在本地用它签名或解密。API Key 每次请求都要发送，而私钥永远不会离开你的机器（或 HSM）。"
         ]
       },
@@ -98,11 +98,11 @@
       },
       "paragraphs": {
         "en": [
-          "Security-wise, API keys are the weakest of the three. If leaked, they can be immediately abused. Rotating an API key requires updating it everywhere it's used.",
+          "Security-wise, API keys are the weakest of the three. If leaked, they can be immediately abused — and since API calls are billed per token, a compromised key can rack up significant charges. See [[guide:ai-api-token-price-comparison-2026|our 2026 token price comparison]] to understand the cost implications. Rotating an API key requires updating it everywhere it's used.",
           "Public keys are safe to distribute — that's their purpose. Private keys are the most sensitive — a compromised private key breaks the entire trust model. Best practice for private keys: store in an HSM or hardware key, never in plaintext files."
         ],
         "zh": [
-          "安全性方面，API Key 是三者中最弱的。一旦泄露，可被立即滥用。轮换 API Key 需要在所有使用的地方更新。",
+          "安全性方面，API Key 是三者中最弱的。一旦泄露，可被立即滥用——而且 API 调用按 token 计费，泄露的 Key 可能产生巨额费用。请参阅 [[guide:ai-api-token-price-comparison-2026|我们的 2026 年 Token 价格对比]] 了解成本影响。轮换 API Key 需要在所有使用的地方更新。",
           "公钥可以安全分发——这正是它的用途。私钥最敏感——私钥泄露会破坏整个信任模型。私钥的最佳实践：存储在 HSM 或硬件密钥中，不要以明文文件保存。"
         ]
       }
@@ -115,11 +115,11 @@
       },
       "paragraphs": {
         "en": [
-          "Use API keys for authenticating to third-party services (AI APIs, payment gateways, cloud services). Use public/private key pairs for secure communication (HTTPS, SSH), digital signatures (code signing, document signing), and blockchain transactions.",
+          "Use API keys for authenticating to third-party services (AI APIs, payment gateways, cloud services). For example, [[guide:how-to-get-openrouter-api-key|getting an OpenRouter API key]] lets you access hundreds of AI models with a single credential. Use public/private key pairs for secure communication (HTTPS, SSH), digital signatures (code signing, document signing), and blockchain transactions.",
           "Some systems combine both: mTLS uses key pairs to authenticate the connection, then an API key authorizes specific actions within that connection. This layered approach gives stronger security than API keys alone."
         ],
         "zh": [
-          "对第三方服务的认证（AI API、支付网关、云服务）使用 API Key。安全通信（HTTPS、SSH）、数字签名（代码签名、文档签名）和区块链交易使用公私钥对。",
+          "对第三方服务的认证（AI API、支付网关、云服务）使用 API Key。例如，[[guide:how-to-get-openrouter-api-key|获取 OpenRouter API Key]] 可以用一个凭证访问数百个 AI 模型。安全通信（HTTPS、SSH）、数字签名（代码签名、文档签名）和区块链交易使用公私钥对。",
           "有些系统将两者结合：mTLS 用密钥对认证连接，然后用 API Key 授权该连接内的具体操作。这种分层方式比单独使用 API Key 安全性更高。"
         ]
       }

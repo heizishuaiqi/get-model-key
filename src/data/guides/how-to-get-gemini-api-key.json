@@ -36,11 +36,11 @@
       "paragraphs": {
         "en": [
           "There are two main ways to get a Gemini API key: through Google AI Studio (simpler, recommended for most developers) or through Google Cloud Vertex AI (better for enterprise workloads with existing GCP infrastructure).",
-          "Google AI Studio is the fastest path. It provides a free tier and is ideal for prototyping and small projects. Google Cloud Vertex AI is better for production workloads that need IAM, billing controls, and enterprise support."
+          "Google AI Studio is the fastest path. It provides a free tier and is ideal for prototyping and small projects. Google Cloud Vertex AI is better for production workloads that need IAM, billing controls, and enterprise support. For a comprehensive deep dive into the entire Gemini ecosystem — including model selection, pricing structures, and SDK integration — our [[guide:gemini-api-key-complete-guide|complete Gemini API key guide]] is the definitive resource."
         ],
         "zh": [
           "获取 Gemini API Key 主要有两种方式：通过 Google AI Studio（更简单，推荐大多数开发者使用）或通过 Google Cloud Vertex AI（适合已有 GCP 基础设施的企业工作负载）。",
-          "Google AI Studio 是最快的路径，提供免费额度，适合原型开发和小型项目。Google Cloud Vertex AI 更适合需要 IAM、计费控制和企业支持的生产工作负载。"
+          "Google AI Studio 是最快的路径，提供免费额度，适合原型开发和小型项目。Google Cloud Vertex AI 更适合需要 IAM、计费控制和企业支持的生产工作负载。如需全面深入了解 Gemini 生态——包括模型选择、定价结构和 SDK 集成——我们的 [[guide:gemini-api-key-complete-guide|Gemini API Key 完全指南]] 是权威资源。"
         ]
       }
     },
@@ -52,12 +52,12 @@
       },
       "paragraphs": {
         "en": [
-          "Google AI Studio is the quickest way to get a Gemini API key. Search interest for 'Google AI Studio' grew 50% in 2026, reflecting its growing popularity among developers.",
-          "Go to aistudio.google.com, sign in with your Google account, and click 'Get API key' in the left sidebar. If you don't have a project yet, Google AI Studio will create one for you automatically. Accept the terms of service, and your API key will be generated."
+          "Google AI Studio is the quickest way to get a Gemini API key. Search interest for 'Google AI Studio' grew 50% in 2026, reflecting its growing popularity among developers. The platform is browser-based, requires no local installation, and works with any standard Google account — no Google Cloud project setup needed upfront.",
+          "Go to aistudio.google.com, sign in with your Google account, and click 'Get API key' in the left sidebar. If you don't have a project yet, Google AI Studio will create one for you automatically. Accept the terms of service, and your API key will be generated. For a deeper look at the platform's features and capabilities, our [[guide:google-ai-studio-api-key|Google AI Studio API key guide]] covers everything from navigation to advanced settings."
         ],
         "zh": [
-          "Google AI Studio 是获取 Gemini API Key 最快的方式。「Google AI Studio」的搜索热度在 2026 年增长了 50%，反映了其在开发者中的流行度。",
-          "访问 aistudio.google.com，用 Google 账号登录，点击左侧栏的「Get API key」。如果你还没有项目，Google AI Studio 会自动为你创建一个。接受服务条款后，API Key 就会生成。"
+          "Google AI Studio 是获取 Gemini API Key 最快的方式。「Google AI Studio」的搜索热度在 2026 年增长了 50%，反映了其在开发者中的流行度。平台基于浏览器，无需本地安装，使用任何标准 Google 账号即可——无需预先配置 Google Cloud 项目。",
+          "访问 aistudio.google.com，用 Google 账号登录，点击左侧栏的「Get API key」。如果你还没有项目，Google AI Studio 会自动为你创建一个。接受服务条款后，API Key 就会生成。如需深入了解平台的功能和特性，我们的 [[guide:google-ai-studio-api-key|Google AI Studio API Key 指南]] 从导航到高级设置全面覆盖。"
         ]
       },
       "bullets": {
@@ -85,12 +85,12 @@
       },
       "paragraphs": {
         "en": [
-          "If you already use Google Cloud Platform, you can enable the Vertex AI API and generate credentials from the GCP Console. This method provides more control over IAM permissions, billing, and quotas.",
-          "Navigate to the Google Cloud Console, enable the 'Vertex AI API', then go to 'Credentials' and create an API key or service account key. This approach is recommended for enterprise setups."
+          "If you already use Google Cloud Platform, you can enable the Vertex AI API and generate credentials from the GCP Console. This method provides more control over IAM permissions, billing, and quotas. It also integrates seamlessly with existing GCP services like Cloud Functions, Cloud Run, and BigQuery, making it the natural choice for teams already invested in the Google Cloud ecosystem.",
+          "Navigate to the Google Cloud Console, enable the 'Vertex AI API', then go to 'Credentials' and create an API key or service account key. This approach is recommended for enterprise setups. Once you have your key, choosing the right model is critical — our [[guide:gemini-models-comparison|Gemini models comparison]] breaks down the differences between Pro, Flash, and Flash-Lite to help you pick the best fit for your workload and budget."
         ],
         "zh": [
-          "如果你已经在使用 Google Cloud Platform，可以启用 Vertex AI API 并从 GCP 控制台生成凭证。这种方法对 IAM 权限、计费和配额有更多控制。",
-          "进入 Google Cloud 控制台，启用「Vertex AI API」，然后前往「Credentials」创建 API Key 或服务账号密钥。这种方法适合企业级部署。"
+          "如果你已经在使用 Google Cloud Platform，可以启用 Vertex AI API 并从 GCP 控制台生成凭证。这种方法对 IAM 权限、计费和配额有更多控制。它还能与 Cloud Functions、Cloud Run 和 BigQuery 等现有 GCP 服务无缝集成，是已投入 Google Cloud 生态的团队的自然之选。",
+          "进入 Google Cloud 控制台，启用「Vertex AI API」，然后前往「Credentials」创建 API Key 或服务账号密钥。这种方法适合企业级部署。拿到密钥后，选择合适的模型至关重要——我们的 [[guide:gemini-models-comparison|Gemini 模型对比]] 详细拆解了 Pro、Flash 和 Flash-Lite 的差异，帮你为工作负载和预算选择最佳方案。"
         ]
       }
     },
@@ -102,12 +102,12 @@
       },
       "paragraphs": {
         "en": [
-          "Google AI Studio offers a generous free tier for the Gemini API. The free tier has per-minute rate limits but no daily cap, making it suitable for development and testing.",
-          "When you're ready for production, you can enable billing in Google Cloud to access higher rate limits and additional features. The paid tier bills per million tokens, with separate rates for input and output."
+          "Google AI Studio offers a generous free tier for the Gemini API. The free tier has per-minute rate limits but no daily cap, making it suitable for development and testing. In our experience, a solo developer can build and iterate on a prototype for weeks without ever hitting the limits. The free tier includes access to all Gemini models, including the most capable Pro variant — a rarity among AI API providers.",
+          "When you're ready for production, you can enable billing in Google Cloud to access higher rate limits and additional features. The paid tier bills per million tokens, with separate rates for input and output. For a rapid end-to-end setup that takes you from key creation to verified first call in minutes, the [[guide:gemini-api-key-quickstart-2026|Gemini API quickstart]] is the fastest route available."
         ],
         "zh": [
-          "Google AI Studio 为 Gemini API 提供了慷慨的免费额度。免费额度有每分钟速率限制但没有每日上限，适合开发和测试。",
-          "准备好投入生产时，可以在 Google Cloud 中启用计费以获取更高速率限制和额外功能。付费版按百万 token 计费，输入和输出分别定价。"
+          "Google AI Studio 为 Gemini API 提供了慷慨的免费额度。免费额度有每分钟速率限制但没有每日上限，适合开发和测试。根据我们的经验，个人开发者可以在免费额度上构建和迭代原型数周而不会触及限制。免费额度包含对所有 Gemini 模型的访问，包括能力最强的 Pro 版本——这在 AI API 供应商中非常罕见。",
+          "准备好投入生产时，可以在 Google Cloud 中启用计费以获取更高速率限制和额外功能。付费版按百万 token 计费，输入和输出分别定价。如需从密钥创建到验证首次调用的快速端到端设置，[[guide:gemini-api-key-quickstart-2026|Gemini API 快速入门]] 是可用的最快路径。"
         ]
       }
     },

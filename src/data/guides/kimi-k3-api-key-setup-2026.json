@@ -28,11 +28,11 @@
       "paragraphs": {
         "en": [
           "On July 16, 2026, Moonshot AI officially released Kimi K3 at the World Artificial Intelligence Conference (WAIC). With 2.8 trillion total parameters, it is currently the world's largest open-source AI model. K3 is built on KDA (Kimi Delta Attention), a hybrid linear attention architecture, natively supports vision understanding, and features a 1 million token context window.",
-          "In benchmark tests, Kimi K3 matches Claude Opus-class performance on coding, reasoning, and long-context tasks. Moonshot AI has committed to releasing the full model weights before July 27, 2026, allowing anyone to download, run locally, and fine-tune the model freely."
+          "In benchmark tests, Kimi K3 matches Claude Opus-class performance on coding, reasoning, and long-context tasks. Within the broader [[guide:china-ai-api-keys-complete-guide|Chinese AI API landscape]], K3 represents the open-source frontier. Moonshot AI has committed to releasing the full model weights before July 27, 2026, allowing anyone to download, run locally, and fine-tune the model freely."
         ],
         "zh": [
           "2026 年 7 月 16 日，月之暗面在世界人工智能大会（WAIC）上正式发布 Kimi K3，参数规模达 2.8 万亿，是目前全球参数最大的开源 AI 模型。K3 基于 KDA（Kimi Delta Attention）混合线性注意力架构，原生支持视觉理解，上下文窗口达 100 万 Token。",
-          "基准测试显示 K3 在编程、推理和长上下文任务上性能对标 Claude Opus 级别。月之暗面官方承诺将于 2026 年 7 月 27 日前发布完整模型权重，任何人均可下载、本地运行和自由微调。"
+          "基准测试显示 K3 在编程、推理和长上下文任务上性能对标 Claude Opus 级别。在更广阔的 [[guide:china-ai-api-keys-complete-guide|中国 AI API 格局]]中，K3 代表了开源前沿。月之暗面官方承诺将于 2026 年 7 月 27 日前发布完整模型权重，任何人均可下载、本地运行和自由微调。"
         ]
       }
     },
@@ -45,11 +45,11 @@
       "paragraphs": {
         "en": [
           "Visit platform.moonshot.cn and register with your mobile phone number or WeChat account. New users typically receive a starter credit of around CNY 15 to use for testing — enough to run several hundred thousand tokens.",
-          "Real-name verification (实名认证) is required to unlock full quota and billing access. This is standard for Chinese AI platforms. You can start with the signup credit before completing verification."
+          "Real-name verification (实名认证) is required to unlock full quota and billing access. This is standard for Chinese AI platforms. You can start with the signup credit before completing verification. For [[guide:how-to-get-kimi-api-key|Kimi API fundamentals]] including account setup tips, our beginner's guide has you covered."
         ],
         "zh": [
           "访问 platform.moonshot.cn，使用手机号或微信账号注册。新用户通常可获得约 15 元体验额度，足够测试数十万 Token。",
-          "需要完成实名认证才能解锁完整配额和充值功能，这是国内 AI 平台的标准流程。注册后可先用赠送额度进行测试，验证完成前不影响基础使用。"
+          "需要完成实名认证才能解锁完整配额和充值功能，这是国内 AI 平台的标准流程。注册后可先用赠送额度进行测试，验证完成前不影响基础使用。关于 [[guide:how-to-get-kimi-api-key|Kimi API 基础入门]]，包括账号设置技巧，我们的初学者指南有详细介绍。"
         ]
       }
     },
@@ -62,11 +62,11 @@
       "paragraphs": {
         "en": [
           "After logging in, click \"API Key Management\" (API Key 管理) in the left sidebar. Click \"New\" (新建), give the key a descriptive name — for example your project name — then click Confirm.",
-          "The key is shown in full only once, immediately after creation. Copy it right away and store it securely in a password manager or secrets vault."
+          "The key is shown in full only once, immediately after creation. Copy it right away and store it securely in a password manager or secrets vault. If you'd like to [[guide:how-to-get-kimi-api-key|learn more about the basics]] of Moonshot's API key management, our foundational guide explains the workflow step by step."
         ],
         "zh": [
           "登录后，点击左侧菜单「API Key 管理」，点击「新建」，填写描述性名称（例如项目名），点击确定创建。",
-          "Key 只在创建后完整显示一次，请立即复制并保存到密码管理器或密钥系统中，之后无法再次查看完整内容。"
+          "Key 只在创建后完整显示一次，请立即复制并保存到密码管理器或密钥系统中，之后无法再次查看完整内容。如需[[guide:how-to-get-kimi-api-key|了解更多基础信息]]，关于 Moonshot API Key 管理的工作流程，我们的基础指南有逐步说明。"
         ]
       },
       "bullets": {
@@ -90,11 +90,11 @@
       },
       "paragraphs": {
         "en": [
-          "Kimi K3's API is compatible with the OpenAI chat completions format. The base URL is https://api.moonshot.cn/v1 and the model ID is kimi-k3. If you already use the OpenAI SDK, you only need to change the base URL and API key.",
+          "Kimi K3's API is compatible with the OpenAI chat completions format. The base URL is https://api.moonshot.cn/v1 and the model ID is kimi-k3. If you already have a [[guide:how-to-get-kimi-api-key|Kimi API key]], you only need to change the base URL and API key in your existing OpenAI SDK code.",
           "Store MOONSHOT_API_KEY as a server-side environment variable and always call the API from your backend. Never expose the key in frontend JavaScript, mobile apps, or public source repositories."
         ],
         "zh": [
-          "Kimi K3 API 兼容 OpenAI Chat Completions 格式，Base URL 为 https://api.moonshot.cn/v1，模型 ID 为 kimi-k3。如果已在使用 OpenAI SDK，只需替换 base URL 和 API Key 即可。",
+          "Kimi K3 API 兼容 OpenAI Chat Completions 格式，Base URL 为 https://api.moonshot.cn/v1，模型 ID 为 kimi-k3。如果你已有 [[guide:how-to-get-kimi-api-key|Kimi API Key]]，只需在现有 OpenAI SDK 代码中替换 base URL 和 API Key 即可。",
           "将 MOONSHOT_API_KEY 设置为服务端环境变量，仅在后端调用 API，不要在前端代码、移动端或公开仓库中暴露密钥。"
         ]
       },
@@ -167,11 +167,11 @@
       "paragraphs": {
         "en": [
           "Kimi K3 is priced at $3 per million input tokens (cache miss), $0.30 per million input tokens (cache hit), and $15 per million output tokens. The full 1M token context window has no per-length surcharge — every request is billed at the same flat rate regardless of context size.",
-          "This pricing matches Claude Sonnet 5 and is significantly higher than Kimi K2.5 ($0.60/$2.50 per million tokens). Moonshot AI has intentionally positioned K3 as a frontier model, not a budget option. For cost-sensitive workloads that do not need K3's full capability, K2.5 remains available."
+          "This pricing matches Claude Sonnet 5 and is significantly higher than Kimi K2.5 ($0.60/$2.50 per million tokens). Moonshot AI has intentionally positioned K3 as a frontier model, not a budget option. For cost-sensitive workloads that do not need K3's full capability, K2.5 remains available. To compare with other Moonshot offerings, [[guide:how-to-get-kimi-api-key|the foundational Kimi guide]] includes a broader pricing overview."
         ],
         "zh": [
           "Kimi K3 定价为：输入 $3/M Tokens（缓存未命中）、$0.30/M Tokens（缓存命中），输出 $15/M Tokens。100 万 Token 上下文窗口统一定价，不因输入长度分级加收。",
-          "此定价与 Claude Sonnet 5 持平，明显高于 Kimi K2.5（输入 $0.60/M、输出 $2.50/M）。月之暗面有意将 K3 定位为前沿旗舰，而非性价比产品。对成本敏感的场景，K2.5 仍然可用。"
+          "此定价与 Claude Sonnet 5 持平，明显高于 Kimi K2.5（输入 $0.60/M、输出 $2.50/M）。月之暗面有意将 K3 定位为前沿旗舰，而非性价比产品。对成本敏感的场景，K2.5 仍然可用。如需对比 Moonshot 其他产品，[[guide:how-to-get-kimi-api-key|Kimi 基础指南]]包含更全面的定价概览。"
         ]
       },
       "bullets": {

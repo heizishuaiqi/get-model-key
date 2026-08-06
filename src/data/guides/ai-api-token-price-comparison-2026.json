@@ -48,11 +48,11 @@
       "paragraphs": {
         "en": [
           "The table below lists standard API prices per 1 million tokens as of July 2026. International providers price in USD; Chinese providers price in CNY. Prices reflect standard (non-batch, non-cached) API calls — batch and prompt caching can reduce costs by 20–50%.",
-          "Note: prices change frequently. Always verify on the provider's official pricing page before making budget decisions."
+          "Note: prices change frequently. Always verify on the provider's official pricing page before making budget decisions. If you're looking to minimize costs, [[guide:free-ai-api-keys|our free AI API guide]] covers which providers offer free tiers that can supplement your paid usage."
         ],
         "zh": [
           "下表为截至 2026 年 7 月的标准 API 每百万 Token 价格。国际供应商以美元计价，国内供应商以人民币计价。价格均指标准（非批量、非缓存）调用——批量推理和 Prompt 缓存通常可降低 20–50% 成本。",
-          "注意：价格随时可能变动，决策前请以各供应商官网定价页面为准。"
+          "注意：价格随时可能变动，决策前请以各供应商官网定价页面为准。如果你想降低成本，[[guide:free-ai-api-keys|我们的免费 AI API 指南]] 介绍了哪些供应商提供免费额度，可以补充你的付费使用。"
         ]
       },
       "bullets": {
@@ -128,18 +128,18 @@
       },
       "paragraphs": {
         "en": [
-          "There is no single right answer — the best model depends on your task, quality requirements, volume, and budget. Here is a practical breakdown by use case.",
+          "There is no single right answer — the best model depends on your task, quality requirements, volume, and budget. For broader context on AI model fundamentals, [[guide:ai-beginner-guide|the beginner's guide to AI]] is a great starting point. Here is a practical breakdown by use case.",
           "For high-stakes tasks requiring maximum accuracy — legal analysis, medical research, complex code review, enterprise agents — Claude Fable 5 or GPT-5.6 Sol are the top choices despite their price. The cost is justified when errors are expensive.",
           "For general-purpose application backends — customer support, document processing, RAG pipelines — GPT-5.6 Terra, Gemini 3.1 Pro, or GPT-5.6 Luna hit the best capability-to-cost ratio. These models handle most real-world tasks well at a fraction of flagship cost.",
           "For high-volume, latency-sensitive workloads — content moderation, classification, lightweight summarization — Gemini 3.1 Flash-Lite at $0.25/$1.50 is hard to beat. Similarly, DeepSeek V4 Pro at ¥3/¥6 is the dominant choice for Chinese-language, cost-sensitive applications.",
-          "For Chinese-language applications with domestic infrastructure needs — RMB billing, low latency in China, local compliance — DeepSeek, Kimi K3, and GLM-5.2 are the practical choices. DeepSeek leads on price; Kimi K3 leads on reasoning and long context."
+          "For Chinese-language applications with domestic infrastructure needs — RMB billing, low latency in China, local compliance — DeepSeek, Kimi K3, and GLM-5.2 are the practical choices. DeepSeek leads on price; Kimi K3 leads on reasoning and long context. Regardless of which provider you choose, you'll need [[guide:what-is-an-api-key|an API key]] to start making calls."
         ],
         "zh": [
-          "没有万能答案——最佳模型取决于你的任务、质量要求、调用量和预算。以下是按使用场景的实用分析。",
+          "没有万能答案——最佳模型取决于你的任务、质量要求、调用量和预算。如需更全面的 AI 模型基础知识，[[guide:ai-beginner-guide|AI 新手指南]] 是一个很好的起点。以下是按使用场景的实用分析。",
           "高风险、要求最高准确性的任务——法律分析、医疗研究、复杂代码审查、企业 Agent——首选 Claude Fable 5 或 GPT-5.6 Sol。错误成本高时，溢价是值得的。",
           "通用应用后端——客服、文档处理、RAG 管道——GPT-5.6 Terra、Gemini 3.1 Pro 或 GPT-5.6 Luna 的性价比最优。这些模型能处理大多数真实任务，成本仅为旗舰款的一小部分。",
           "高并发、低延迟场景——内容审核、分类、轻量摘要——Gemini 3.1 Flash-Lite（$0.25/$1.50）几乎无可匹敌。中文低成本场景下，DeepSeek V4 Pro（¥3/¥6）是首选。",
-          "需要国内基础设施的中文应用——人民币计费、中国低延迟、本地合规——DeepSeek、Kimi K3 和 GLM-5.2 是实用选择。DeepSeek 价格最优；Kimi K3 在推理和长上下文上表现突出。"
+          "需要国内基础设施的中文应用——人民币计费、中国低延迟、本地合规——DeepSeek、Kimi K3 和 GLM-5.2 是实用选择。DeepSeek 价格最优；Kimi K3 在推理和长上下文上表现突出。无论选择哪个供应商，你都需要 [[guide:what-is-an-api-key|一个 API Key]] 才能开始调用。"
         ]
       }
     },
@@ -151,13 +151,13 @@
       },
       "paragraphs": {
         "en": [
-          "Batch inference cuts costs by 50% on most providers. If your tasks do not require real-time responses — offline document processing, nightly data enrichment, bulk classification — always use the batch API. The tradeoff is latency (results return within hours, not seconds).",
+          "Batch inference cuts costs by 50% on most providers. If your tasks do not require real-time responses — offline document processing, nightly data enrichment, bulk classification — always use the batch API. The tradeoff is latency (results return within hours, not seconds). Using an aggregator like [[guide:how-to-get-openrouter-api-key|OpenRouter]] can also simplify billing across multiple providers.",
           "Prompt caching reduces repeated input costs. If your prompts share a long system prompt or large context document, providers like Anthropic and OpenAI cache the prefix and charge a fraction of the normal input price for cache hits. This is particularly effective for RAG and agent systems.",
           "Model routing saves money at scale. Use a cheap model (Gemini Flash-Lite, GPT-5.6 Luna) for simple sub-tasks and a premium model only when complexity demands it. Many production systems route 80% of queries to cheap models and 20% to expensive ones, cutting average cost by 60–70%.",
           "Trim your prompts. Verbose system prompts, unnecessary examples, and repeated context all add input tokens. A 30% reduction in average prompt length means a 30% reduction in input costs. Use structured output (JSON mode) to minimize output verbosity."
         ],
         "zh": [
-          "批量推理可降低 50% 成本。如果任务不要求实时响应——离线文档处理、夜间数据增强、大批量分类——请务必使用 Batch API。代价是延迟（结果在数小时内返回，而非秒级）。",
+          "批量推理可降低 50% 成本。如果任务不要求实时响应——离线文档处理、夜间数据增强、大批量分类——请务必使用 Batch API。代价是延迟（结果在数小时内返回，而非秒级）。使用 [[guide:how-to-get-openrouter-api-key|OpenRouter]] 等聚合平台还可以简化跨供应商的计费。",
           "Prompt 缓存可降低重复输入成本。如果 Prompt 包含较长的系统提示或大型上下文文档，Anthropic、OpenAI 等供应商会缓存前缀，缓存命中时仅收取极低费用——对 RAG 和 Agent 系统尤为有效。",
           "模型路由可在规模上节省成本。简单子任务使用廉价模型（Gemini Flash-Lite、GPT-5.6 Luna），复杂任务才调用高价模型。许多生产系统将 80% 请求路由至廉价模型，平均成本可降低 60–70%。",
           "精简 Prompt。冗长的系统提示、多余示例和重复上下文都会增加输入 Token。平均 Prompt 长度缩减 30%，输入成本就降低 30%。使用结构化输出（JSON 模式）还能减少输出冗余。"

@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI error guidance lists multiple 401 scenarios, including invalid credentials and IP allowlist mismatch. Treat 401 as a category, not a single root cause.",
-          "Start by checking which key is used, which project it belongs to, and whether your request source IP matches project policy."
+          "OpenAI error guidance lists multiple 401 scenarios, including invalid credentials and IP allowlist mismatch. Treat 401 as a category, not a single root cause. If you're starting from scratch, [[guide:how-to-get-openai-api-key|getting your OpenAI API key]] correctly from the start prevents most 401 issues.",
+          "Start by checking which key is used, which project it belongs to, and whether your request source IP matches project policy. For [[guide:openai-api-key-setup-2026|proper key configuration]] including permission scoping and project assignment, see our setup guide."
         ],
         "zh": [
-          "OpenAI 错误文档中，401 不止一种原因，包括认证失败与 IP 白名单不匹配等。不要把 401 当成单一问题。",
-          "建议先确认：当前使用的是哪把 Key、归属哪个项目、请求出口 IP 是否符合项目策略。"
+          "OpenAI 错误文档中，401 不止一种原因，包括认证失败与 IP 白名单不匹配等。不要把 401 当成单一问题。如果从头开始，[[guide:how-to-get-openai-api-key|正确获取 OpenAI API Key]] 可以避免大部分 401 问题。",
+          "建议先确认：当前使用的是哪把 Key、归属哪个项目、请求出口 IP 是否符合项目策略。关于[[guide:openai-api-key-setup-2026|正确配置密钥]]，包括权限范围和项目分配，请参阅我们的设置指南。"
         ]
       },
       "bullets": {
@@ -64,11 +64,11 @@
       "paragraphs": {
         "en": [
           "OpenAI distinguishes at least two common 429 patterns: rate-limit reached and current quota exceeded. The mitigation path is different for each.",
-          "If requests are too fast, smooth traffic and retry with backoff. If quota is exceeded, check billing, limits, and project budget settings."
+          "If requests are too fast, smooth traffic and retry with backoff. If quota is exceeded, check billing, limits, and project budget settings. [[guide:openai-api-pricing|Understanding your quota and spending limits]] helps you distinguish billing issues from traffic spikes."
         ],
         "zh": [
           "OpenAI 常见的 429 包括“请求频率过快”和“额度/预算已用尽”，两者处理路径不同。",
-          "前者要做流量平滑与重试，后者要优先检查计费、limits 和项目预算。"
+          "前者要做流量平滑与重试，后者要优先检查计费、limits 和项目预算。[[guide:openai-api-pricing|了解你的额度和消费限制]] 有助于区分计费问题和流量突发。"
         ]
       }
     },
@@ -80,11 +80,11 @@
       },
       "paragraphs": {
         "en": [
-          "OpenAI rate limits are measured across several dimensions. You can hit RPM first even when TPM still looks healthy, so monitor both request and token dimensions.",
+          "OpenAI rate limits are measured across several dimensions. You can hit RPM first even when TPM still looks healthy, so monitor both request and token dimensions. [[guide:openai-api-key-complete-guide|The full OpenAI API reference]] documents these limits for each tier and model.",
           "Unsuccessful requests still count toward per-minute limits, so repeated immediate retries can worsen incidents."
         ],
         "zh": [
-          "OpenAI 限额是多维度的，可能先撞到 RPM，即使 TPM 还没满，因此要同时看请求和 token 两个维度。",
+          "OpenAI 限额是多维度的，可能先撞到 RPM，即使 TPM 还没满，因此要同时看请求和 token 两个维度。[[guide:openai-api-key-complete-guide|完整的 OpenAI API 参考指南]] 记录了每个等级和模型的限额。",
           "官方文档也强调：失败请求同样计入限额，盲目立刻重试会让问题更严重。"
         ]
       }

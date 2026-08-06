@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "DeepSeek has become one of the fastest-growing AI API providers in 2026, with search interest increasing over 60% month-over-month. The DeepSeek-V3 and DeepSeek-R1 models offer competitive performance at significantly lower prices than many international alternatives.",
-          "DeepSeek is particularly strong in reasoning tasks, code generation, and multilingual support. If you're looking for a cost-effective API with strong reasoning capabilities, DeepSeek is worth serious consideration."
+          "DeepSeek has become one of the fastest-growing AI API providers in 2026, with search interest increasing over 60% month-over-month. For a comprehensive overview, [[guide:deepseek-api-key-complete-guide|the complete DeepSeek API guide]] covers pricing, models, and use cases. The DeepSeek-V3 and DeepSeek-R1 models offer competitive performance at significantly lower prices than many international alternatives.",
+          "DeepSeek is particularly strong in reasoning tasks, code generation, and multilingual support. As one of the leading [[guide:china-ai-api-keys-complete-guide|Chinese AI API providers]], DeepSeek offers capabilities that rival Western alternatives. If you're looking for a cost-effective API with strong reasoning capabilities, DeepSeek is worth serious consideration."
         ],
         "zh": [
-          "DeepSeek 已成为 2026 年增长最快的 AI API 供应商之一，搜索热度月增长超过 60%。DeepSeek-V3 和 DeepSeek-R1 模型在性能上有竞争力的同时，价格比许多国际替代方案低不少。",
-          "DeepSeek 在推理任务、代码生成和多语言支持方面表现突出。如果你在找一个性价比高且推理能力强的 API，DeepSeek 值得认真考虑。"
+          "DeepSeek 已成为 2026 年增长最快的 AI API 供应商之一，搜索热度月增长超过 60%。[[guide:deepseek-api-key-complete-guide|DeepSeek API 完整指南]]涵盖了定价、模型和使用场景的全面介绍。DeepSeek-V3 和 DeepSeek-R1 模型在性能上有竞争力的同时，价格比许多国际替代方案低不少。",
+          "DeepSeek 在推理任务、代码生成和多语言支持方面表现突出。作为 [[guide:china-ai-api-keys-complete-guide|中国 AI API 供应商]]中的佼佼者，DeepSeek 的能力可与西方替代方案媲美。如果你在找一个性价比高且推理能力强的 API，DeepSeek 值得认真考虑。"
         ]
       }
     },
@@ -102,10 +102,10 @@
       },
       "paragraphs": {
         "en": [
-          "DeepSeek's API is OpenAI-compatible, which means you can use the same SDK and request format. Simply change the base URL and API key. Here's a minimal example:"
+          "DeepSeek's API is OpenAI-compatible, which means you can use the same SDK and request format. This is common among Chinese AI platforms — for instance, [[guide:kimi-k3-api-key-setup-2026|the latest Kimi K3 setup guide]] follows the same pattern. Simply change the base URL and API key. Here's a minimal example:"
         ],
         "zh": [
-          "DeepSeek 的 API 兼容 OpenAI 格式，意味着你可以使用相同的 SDK 和请求格式。只需修改 base URL 和 API Key 即可。以下是最小示例："
+          "DeepSeek 的 API 兼容 OpenAI 格式，意味着你可以使用相同的 SDK 和请求格式。这在国内 AI 平台中很常见——例如 [[guide:kimi-k3-api-key-setup-2026|最新的 Kimi K3 接入指南]]也遵循同样的模式。只需修改 base URL 和 API Key 即可。以下是最小示例："
         ]
       },
       "codeBlocks": [
@@ -128,11 +128,11 @@
       "paragraphs": {
         "en": [
           "DeepSeek's pricing is one of its main advantages. The DeepSeek-V3 model is priced significantly lower than comparable models from other providers, making it attractive for high-volume applications.",
-          "Check the official pricing page for the most up-to-date rates, as pricing can change. Input and output tokens are priced separately, and some models offer cached prompt discounts."
+          "Check the official pricing page for the most up-to-date rates, as pricing can change. If you're comparing options, [[guide:how-to-get-kimi-api-key|learn more about Kimi K3]] — another leading Chinese AI model with an ultra-long context window. Input and output tokens are priced separately, and some models offer cached prompt discounts."
         ],
         "zh": [
           "DeepSeek 的定价是其主要优势之一。DeepSeek-V3 模型的定价比其他供应商的同类模型低不少，对高用量应用很有吸引力。",
-          "建议查看官方定价页面获取最新价格，因为定价可能会有变化。输入和输出 token 分别计价，部分模型提供缓存折扣。"
+          "建议查看官方定价页面获取最新价格，因为定价可能会有变化。如果你在对比选项，可以[[guide:how-to-get-kimi-api-key|了解 Kimi K3 的详细信息]]——另一个领先的中文 AI 模型，拥有超长上下文窗口。输入和输出 token 分别计价，部分模型提供缓存折扣。"
         ]
       }
     }

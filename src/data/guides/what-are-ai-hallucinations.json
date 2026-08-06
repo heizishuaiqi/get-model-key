@@ -32,11 +32,11 @@
       },
       "paragraphs": {
         "en": [
-          "AI hallucinations occur when a language model generates information that is false, fabricated, or unsupported by its training data — but presents it confidently as if it were true. The model is not 'lying' intentionally; it's predicting the next most likely token based on patterns, which can sometimes produce plausible-sounding but incorrect output.",
+          "AI hallucinations occur when a language model generates information that is false, fabricated, or unsupported by its training data — but presents it confidently as if it were true. The model is not 'lying' intentionally; it's predicting the next most likely token based on patterns, which can sometimes produce plausible-sounding but incorrect output. This is one of the most important concepts covered in [[guide:ai-beginner-guide|our beginner's guide to AI]], as it affects every user regardless of which model they choose.",
           "Searches for 'what are hallucinations' in the AI context grew 1150% in 2026, reflecting growing awareness of this important issue among AI users."
         ],
         "zh": [
-          "AI 幻觉是指语言模型生成虚假、编造或不受训练数据支持的信息，但却自信地将其呈现为真实。模型不是在故意「撒谎」——它是在根据模式预测下一个最可能的 token，有时会产生听起来合理但不正确的输出。",
+          "AI 幻觉是指语言模型生成虚假、编造或不受训练数据支持的信息，但却自信地将其呈现为真实。模型不是在故意「撒谎」——它是在根据模式预测下一个最可能的 token，有时会产生听起来合理但不正确的输出。这是 [[guide:ai-beginner-guide|我们的 AI 新手指南]] 中涵盖的最重要的概念之一，因为它影响每一位用户，无论使用哪种模型。",
           "在 AI 语境下，「what are hallucinations」的搜索量在 2026 年增长了 1150%，反映了 AI 用户对这个重要问题的日益关注。"
         ]
       }
@@ -50,11 +50,13 @@
       "paragraphs": {
         "en": [
           "Language models don't 'know' facts the way databases do. They learn statistical patterns from training data and generate responses by predicting likely sequences of tokens. When a model encounters a topic it has limited training data on, or when a prompt is ambiguous, it may fill gaps with plausible-sounding but incorrect information.",
-          "Hallucinations are more common when asking about very recent events, obscure topics, or requesting specific citations and URLs that the model may construct from patterns rather than recall from memory."
+          "Hallucinations are more common when asking about very recent events, obscure topics, or requesting specific citations and URLs that the model may construct from patterns rather than recall from memory. A poorly constructed prompt can also increase hallucination risk — understanding [[guide:what-is-a-prompt|what makes a good prompt]] is essential for getting reliable answers from any AI model.",
+          "Training data bias is another contributing factor. If a model was trained predominantly on English-language sources, it may hallucinate more readily when asked about non-English topics or regional events. Similarly, models may extrapolate patterns from popular topics to less common ones, producing confident but inaccurate responses on niche subjects."
         ],
         "zh": [
           "语言模型不像数据库那样「记住」事实。它从训练数据中学习统计模式，通过预测可能的 token 序列来生成回复。当模型遇到训练数据有限的话题，或 Prompt 含糊时，它可能用听起来合理但不正确的信息来填补空白。",
-          "当你询问非常新近的事件、冷门话题，或要求具体的引用和 URL 时，幻觉更容易发生——模型可能是根据模式构造而非从记忆中回忆。"
+          "当你询问非常新近的事件、冷门话题，或要求具体的引用和 URL 时，幻觉更容易发生——模型可能是根据模式构造而非从记忆中回忆。构造不当的 Prompt 也会增加幻觉风险——了解 [[guide:what-is-a-prompt|什么是好的 Prompt]] 对于从任何 AI 模型获得可靠答案至关重要。",
+          "训练数据偏差是另一个促成因素。如果模型的训练数据以英语来源为主，在被问及非英语话题或地区性事件时更容易产生幻觉。类似地，模型可能将热门话题的模式外推到较少见的话题上，对小众主题产生自信但不准确的回复。"
         ]
       }
     },
@@ -66,10 +68,10 @@
       },
       "paragraphs": {
         "en": [
-          "While you can't eliminate hallucinations entirely, you can significantly reduce them with good practices:"
+          "While you can't eliminate hallucinations entirely, you can significantly reduce them with good practices. [[guide:how-to-write-good-prompts|Learning to write effective prompts]] is one of the most impactful steps — clear instructions with proper context dramatically reduce the chance of fabricated output:"
         ],
         "zh": [
-          "虽然无法完全消除幻觉，但通过好的实践可以显著减少："
+          "虽然无法完全消除幻觉，但通过好的实践可以显著减少。[[guide:how-to-write-good-prompts|学习编写有效的 Prompt]] 是最有影响力的步骤之一——带有适当上下文的清晰指令可以大幅降低生成虚假输出的概率："
         ]
       },
       "bullets": {
@@ -133,12 +135,12 @@
       "paragraphs": {
         "en": [
           "Based on our hands-on testing, hallucination rates vary significantly between models and providers. We don't have rigorous benchmark numbers, but here's our qualitative impression from daily use:",
-          "Reasoning models (like Claude Opus, GPT-4o, and DeepSeek-R1) hallucinate less on factual questions within their training data, but can be more convincing when they do hallucinate. Faster, cheaper models (like Claude Haiku, GPT-4o-mini) hallucinate more frequently but their errors are often easier to catch.",
+          "Reasoning models (like Claude Opus, GPT-4o, and DeepSeek-R1) hallucinate less on factual questions within their training data, but can be more convincing when they do hallucinate. Faster, cheaper models (like Claude Haiku, GPT-4o-mini) hallucinate more frequently but their errors are often easier to catch. For critical factual research, [[guide:ai-chatbots-vs-search-engines|using search engines instead of AI chatbots]] remains the safer choice since you can verify sources directly.",
           "The key insight: model size matters, but prompt design matters more. A well-structured prompt with context and verification steps on a smaller model often outperforms a vague prompt on the most advanced model."
         ],
         "zh": [
           "根据我们的实际测试，不同模型和供应商的幻觉率差异很大。我们没有严格的基准数字，但以下是我们日常使用的定性印象：",
-          "推理模型（如 Claude Opus、GPT-4o 和 DeepSeek-R1）在训练数据范围内的事实性问题上幻觉更少，但一旦幻觉就更难识别。更快更便宜的模型（如 Claude Haiku、GPT-4o-mini）幻觉更频繁，但错误通常更容易发现。",
+          "推理模型（如 Claude Opus、GPT-4o 和 DeepSeek-R1）在训练数据范围内的事实性问题上幻觉更少，但一旦幻觉就更难识别。更快更便宜的模型（如 Claude Haiku、GPT-4o-mini）幻觉更频繁，但错误通常更容易发现。对于关键的事实性研究，[[guide:ai-chatbots-vs-search-engines|使用搜索引擎而非 AI 聊天机器人]] 仍然是更安全的选择，因为你可以直接验证来源。",
           "核心洞察：模型大小重要，但提示设计更重要。用小模型配结构良好、有上下文和验证步骤的提示，往往优于用最先进的模型配模糊的提示。"
         ]
       }

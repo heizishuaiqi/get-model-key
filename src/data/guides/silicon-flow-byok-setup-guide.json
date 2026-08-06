@@ -37,13 +37,13 @@
       "paragraphs": {
         "en": [
           "BYOK stands for Bring Your Own Key. It means a third-party AI tool lets you enter your own API key and choose your own model backend, rather than forcing you to use the tool creator's servers. The tool sends requests to whatever endpoint you specify.",
-          "SiliconFlow is ideal for BYOK because its API is fully OpenAI-compatible. Any tool that accepts a custom OpenAI base URL will work with SiliconFlow out of the box — no special integration needed. You get access to 200+ models in your favorite tool without running anything locally.",
-          "This is especially powerful for free-tier users: you can use the free Qwen3-8B model inside premium chat clients and translation tools at zero cost."
+          "SiliconFlow is ideal for BYOK because its API is fully OpenAI-compatible. Any tool that accepts a custom OpenAI base URL will work with SiliconFlow out of the box — no special integration needed. You get access to 200+ models in your favorite tool without running anything locally. [[guide:silicon-flow-api-key-complete-guide|The complete SiliconFlow resource]] covers the full range of capabilities beyond BYOK.",
+          "This is especially powerful for free-tier users: you can use the free Qwen3-8B model inside premium chat clients and translation tools at zero cost. If you haven't obtained a [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key]] yet, registration takes just a few minutes."
         ],
         "zh": [
           "BYOK 全称 Bring Your Own Key，指第三方 AI 工具允许你输入自己的 API Key、选择自己的模型后端，而不是强制用工具方的服务器。工具把请求发到你指定的端点。",
-          "硅基流动特别适合 BYOK，因为它的 API 完全兼容 OpenAI 格式。任何接受自定义 OpenAI base URL 的工具都能开箱即用——不需要特殊适配。你在喜欢的工具里就能访问 200+ 模型，无需本地运行任何东西。",
-          "对免费用户尤其友好：你可以在高级聊天客户端和翻译工具中免费使用 Qwen3-8B 等免费模型，零成本。"
+          "硅基流动特别适合 BYOK，因为它的 API 完全兼容 OpenAI 格式。任何接受自定义 OpenAI base URL 的工具都能开箱即用——不需要特殊适配。你在喜欢的工具里就能访问 200+ 模型，无需本地运行任何东西。[[guide:silicon-flow-api-key-complete-guide|完整的硅基流动资源]] 涵盖了 BYOK 之外的全面能力。",
+          "对免费用户尤其友好：你可以在高级聊天客户端和翻译工具中免费使用 Qwen3-8B 等免费模型，零成本。如果你还没有[[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key]]，注册只需几分钟。"
         ]
       }
     },
@@ -150,11 +150,11 @@
       "paragraphs": {
         "en": [
           "For any other tool that supports custom OpenAI endpoints, the configuration is always the same three values. Once you know this pattern, you can connect SiliconFlow to virtually any BYOK-compatible tool.",
-          "If a tool asks for an API key prefix, SiliconFlow keys start with sk-. If a tool requires a model list, use the full vendor/model-name format. If a tool has a connection test feature, test with a free model first (Qwen/Qwen3-8B) to confirm without spending credits."
+          "If a tool asks for an API key prefix, SiliconFlow keys start with sk-. If a tool requires a model list, use the full vendor/model-name format. For guidance on [[guide:silicon-flow-models-and-pricing|choosing the right model]] for your use case and budget, see our model comparison guide. If a tool has a connection test feature, test with a free model first (Qwen/Qwen3-8B) to confirm without spending credits."
         ],
         "zh": [
           "对于任何其他支持自定义 OpenAI 端点的工具，配置永远是相同的三个值。掌握了这个模式，你几乎可以把硅基流动接入任何 BYOK 兼容工具。",
-          "如果工具要求 API Key 前缀，硅基流动 Key 以 sk- 开头。如果工具需要模型列表，用完整的「厂商/模型名」格式。如果工具有连接测试功能，先用免费模型（Qwen/Qwen3-8B）测试，不花额度即可确认。"
+          "如果工具要求 API Key 前缀，硅基流动 Key 以 sk- 开头。如果工具需要模型列表，用完整的「厂商/模型名」格式。关于如何[[guide:silicon-flow-models-and-pricing|选择合适的模型]]来匹配你的用例和预算，请参阅我们的模型对比指南。如果工具有连接测试功能，先用免费模型（Qwen/Qwen3-8B）测试，不花额度即可确认。"
         ]
       },
       "bullets": {

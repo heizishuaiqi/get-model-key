@@ -34,12 +34,12 @@
       },
       "paragraphs": {
         "en": [
-          "Grok is the AI model family developed by xAI, the company founded by Elon Musk. The latest models, Grok-2 and Grok-3, are known for two distinguishing features: access to real-time information through X (formerly Twitter) and a more humorous, less filtered response style.",
-          "Grok models are positioned as alternatives to GPT-4o and Claude, with competitive performance on reasoning and coding benchmarks. The API gives developers access to these models for integration into applications."
+          "Grok is the AI model family developed by xAI, the company founded by Elon Musk. The latest models, Grok-2 and Grok-3, are known for two distinguishing features: access to real-time information through X (formerly Twitter) and a more humorous, less filtered response style. For a broader picture of the ecosystem, [[guide:grok-api-key-complete-guide|the complete Grok API guide]] covers all available models and integration patterns.",
+          "Grok models are positioned as alternatives to GPT-4o and Claude, with competitive performance on reasoning and coding benchmarks. The API gives developers access to these models for integration into applications. If you're interested in xAI's newest release, the [[guide:grok-45-api-key-setup-2026|Grok 4.5 API key]] setup is covered in a separate, up-to-date tutorial."
         ],
         "zh": [
-          "Grok 是 xAI 开发的 AI 模型系列，xAI 由马斯克创立。最新的 Grok-2 和 Grok-3 两个模型以两大特色著称：通过 X（原 Twitter）访问实时信息，以及更幽默、过滤更少的回复风格。",
-          "Grok 模型定位为 GPT-4o 和 Claude 的替代选择，在推理和编程基准测试上表现有竞争力。API 让开发者可以将这些模型集成到应用中。"
+          "Grok 是 xAI 开发的 AI 模型系列，xAI 由马斯克创立。最新的 Grok-2 和 Grok-3 两个模型以两大特色著称：通过 X（原 Twitter）访问实时信息，以及更幽默、过滤更少的回复风格。如需了解整个生态的全貌，[[guide:grok-api-key-complete-guide|Grok API 完整指南]]涵盖了所有可用模型和集成方式。",
+          "Grok 模型定位为 GPT-4o 和 Claude 的替代选择，在推理和编程基准测试上表现有竞争力。API 让开发者可以将这些模型集成到应用中。如果你对 xAI 的最新发布感兴趣，[[guide:grok-45-api-key-setup-2026|Grok 4.5 API Key]]的设置在另一篇最新教程中有详细介绍。"
         ]
       }
     },
@@ -52,11 +52,11 @@
       "paragraphs": {
         "en": [
           "Go to the xAI developer console (console.x.ai) and sign up. You can log in with your X account or create a new account with email. Identity verification may be required depending on your region.",
-          "After registering, you'll access the dashboard where you can manage API keys, view usage, and add credits."
+          "After registering, you'll access the dashboard where you can manage API keys, view usage, and add credits. The dashboard also shows real-time token consumption and cost breakdowns by model, which helps you monitor spending across different projects."
         ],
         "zh": [
           "前往 xAI 开发者控制台（console.x.ai）注册。可以使用 X 账号登录，或用邮箱创建新账号。根据地区不同，可能需要身份验证。",
-          "注册后进入后台，你可以管理 API Key、查看用量和充值。"
+          "注册后进入后台，你可以管理 API Key、查看用量和充值。后台还显示实时的 token 消耗和按模型的成本明细，方便你监控不同项目的支出。"
         ]
       }
     },
@@ -69,11 +69,11 @@
       "paragraphs": {
         "en": [
           "In the dashboard, navigate to the API Keys section. Click 'Create API Key', name it descriptively, and copy the key immediately. Like most providers, xAI only displays the full key once at creation time.",
-          "Store the key in an environment variable or secret manager. Never expose it in client-side code or public repositories."
+          "Store the key in an environment variable or secret manager. Never expose it in client-side code or public repositories. A common practice is to use a .env file for local development and a secrets management service like AWS Secrets Manager or HashiCorp Vault for production environments."
         ],
         "zh": [
           "在后台进入 API Keys 页面，点击「Create API Key」，给它一个描述性名称，然后立即复制保存。和大多数供应商一样，xAI 只在创建时显示一次完整 Key。",
-          "将 Key 存储在环境变量或密钥管理器中。不要暴露在客户端代码或公开仓库中。"
+          "将 Key 存储在环境变量或密钥管理器中。不要暴露在客户端代码或公开仓库中。常见做法是本地开发使用 .env 文件，生产环境使用 AWS Secrets Manager 或 HashiCorp Vault 等密钥管理服务。"
         ]
       }
     },
@@ -85,12 +85,12 @@
       },
       "paragraphs": {
         "en": [
-          "xAI uses a prepaid credits model. Add credits via the billing page using supported payment methods. New accounts may receive trial credits for initial testing — check the dashboard for any active promotions.",
-          "Credits are shared across all Grok models. Usage is billed per-token, with separate rates for input and output tokens."
+          "xAI uses a prepaid credits model. Add credits via the billing page using supported payment methods. New accounts may receive trial credits for initial testing — check the dashboard for any active promotions. The minimum top-up amount is typically $5, and credits do not expire as long as your account remains active.",
+          "Credits are shared across all Grok models. Usage is billed per-token, with separate rates for input and output tokens. For the newest model, [[guide:grok-45-api-key-setup-2026|see our detailed walkthrough]] which includes a pricing comparison against Claude Sonnet 5 and other frontier models."
         ],
         "zh": [
-          "xAI 采用预付额度模式。在计费页面用支持的支付方式充值。新账户可能会获得试用积分用于初始测试——查看后台是否有促销活动。",
-          "额度在所有 Grok 模型间共享。按 token 计费，输入和输出 token 分别定价。"
+          "xAI 采用预付额度模式。在计费页面用支持的支付方式充值。新账户可能会获得试用积分用于初始测试——查看后台是否有促销活动。最低充值金额通常为 $5，只要账户保持活跃，额度不会过期。",
+          "额度在所有 Grok 模型间共享。按 token 计费，输入和输出 token 分别定价。对于最新模型，[[guide:grok-45-api-key-setup-2026|请参阅我们的详细教程]]，其中包含与 Claude Sonnet 5 等前沿模型的定价对比。"
         ]
       }
     },
@@ -102,11 +102,11 @@
       },
       "paragraphs": {
         "en": [
-          "Grok models are priced competitively against GPT-4o and Claude. Grok-3 is the flagship model with the highest performance, while Grok-2 offers a cost-effective option for lighter workloads. Check the official pricing page for current rates.",
+          "Grok models are priced competitively against GPT-4o and Claude. Grok-3 is the flagship model with the highest performance, while Grok-2 offers a cost-effective option for lighter workloads. For the latest pricing details on xAI's newest release, [[guide:grok-45-api-key-setup-2026|the Grok 4.5 pricing comparison]] breaks down costs against Claude Sonnet 5 and Claude Opus 4.8. Check the official pricing page for current rates.",
           "Input and output tokens are billed separately, with discounts for cached prompts on some models. The dashboard provides real-time usage and cost tracking."
         ],
         "zh": [
-          "Grok 模型定价对标 GPT-4o 和 Claude，具有竞争力。Grok-3 是旗舰模型，性能最高；Grok-2 为轻量负载提供高性价比选项。查看官方定价页面获取最新价格。",
+          "Grok 模型定价对标 GPT-4o 和 Claude，具有竞争力。Grok-3 是旗舰模型，性能最高；Grok-2 为轻量负载提供高性价比选项。关于 xAI 最新模型的定价详情，[[guide:grok-45-api-key-setup-2026|Grok 4.5 定价对比]]详细列出了与 Claude Sonnet 5 和 Claude Opus 4.8 的成本对比。查看官方定价页面获取最新价格。",
           "输入和输出 token 分别计价，部分模型有缓存提示词折扣。后台提供实时用量和成本追踪。"
         ]
       }
@@ -144,12 +144,12 @@
       },
       "paragraphs": {
         "en": [
-          "Grok's standout features include real-time information access through X's data pipeline, which means it can answer questions about current events that other models can't. It also has a more humorous, less filtered personality — some developers find this useful for creative applications.",
-          "Grok-3 also offers strong reasoning capabilities, multimodal features, and a large context window. For applications needing real-time awareness or a distinctive tone, Grok is a compelling choice."
+          "Grok's standout features include real-time information access through X's data pipeline, which means it can answer questions about current events that other models can't. It also has a more humorous, less filtered personality — some developers find this useful for creative applications. This real-time awareness is particularly valuable for news aggregation, social media monitoring, and trend analysis tools that need up-to-the-minute information.",
+          "Grok-3 also offers strong reasoning capabilities, multimodal features, and a large context window. For applications needing real-time awareness or a distinctive tone, Grok is a compelling choice. When deciding between models, consider that Grok 4.5 — covered in [[guide:grok-45-api-key-setup-2026|our Grok 4.5 setup guide]] — offers even stronger coding performance at competitive pricing."
         ],
         "zh": [
-          "Grok 的突出特色包括通过 X 数据管道访问实时信息，这意味着它可以回答其他模型无法回答的时事问题。它还有更幽默、过滤更少的个性——一些开发者觉得这对创意应用很有用。",
-          "Grok-3 还提供强大的推理能力、多模态功能和大型上下文窗口。对需要实时感知或独特语气的应用，Grok 是一个有吸引力的选择。"
+          "Grok 的突出特色包括通过 X 数据管道访问实时信息，这意味着它可以回答其他模型无法回答的时事问题。它还有更幽默、过滤更少的个性——一些开发者觉得这对创意应用很有用。这种实时感知能力对新闻聚合、社交媒体监控和趋势分析等需要最新信息的工具特别有价值。",
+          "Grok-3 还提供强大的推理能力、多模态功能和大型上下文窗口。对需要实时感知或独特语气的应用，Grok 是一个有吸引力的选择。在选择模型时，可以考虑 Grok 4.5——[[guide:grok-45-api-key-setup-2026|我们的 Grok 4.5 设置指南]]中有介绍——它以有竞争力的定价提供更强的编程性能。"
         ]
       }
     }

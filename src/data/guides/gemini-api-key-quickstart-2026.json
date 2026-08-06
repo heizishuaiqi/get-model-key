@@ -34,11 +34,11 @@
       },
       "paragraphs": {
         "en": [
-          "Google's Gemini API key is created in Google AI Studio. Start there, create a key, and map it to the right Google Cloud project if your team uses multiple projects.",
+          "Google's Gemini API key is created in Google AI Studio. Start there, create a key, and map it to the right Google Cloud project if your team uses multiple projects. For a comprehensive overview of the entire Gemini API ecosystem, the [[guide:gemini-api-key-complete-guide|complete Gemini API key guide]] covers all models, pricing, and integration options.",
           "For team operations, align project ownership early so billing and quota management stay predictable."
         ],
         "zh": [
-          "Gemini API 的密钥在 Google AI Studio 创建。建议先确认所属的 Google Cloud 项目，避免多项目环境下后续计费和配额混乱。",
+          "Gemini API 的密钥在 Google AI Studio 创建。建议先确认所属的 Google Cloud 项目，避免多项目环境下后续计费和配额混乱。如需全面了解 Gemini API 生态，[[guide:gemini-api-key-complete-guide|Gemini API Key 完全指南]] 涵盖了所有模型、定价和集成选项。",
           "团队协作场景下，尽早明确项目归属和权限边界，会显著降低后续运维成本。"
         ]
       }
@@ -97,11 +97,11 @@
       },
       "paragraphs": {
         "en": [
-          "Use the official quickstart pattern to verify the key before integrating business prompts. This helps isolate setup issues from application logic.",
+          "Use the official quickstart pattern to verify the key before integrating business prompts. This helps isolate setup issues from application logic. If you need a more detailed walkthrough of the key creation process, see our [[guide:how-to-get-gemini-api-key|step-by-step Gemini API key guide]].",
           "Record latency and status code on this first call so your monitoring baseline starts early."
         ],
         "zh": [
-          "建议先用官方 quickstart 的最小请求验证密钥，再接入业务 Prompt，这样更容易区分“配置问题”和“业务逻辑问题”。",
+          "建议先用官方 quickstart 的最小请求验证密钥，再接入业务 Prompt，这样更容易区分“配置问题”和“业务逻辑问题”。如需更详细的密钥创建流程说明，请参阅我们的 [[guide:how-to-get-gemini-api-key|Gemini API Key 逐步指南]]。",
           "首次调用就记录耗时与状态码，有助于后续性能和稳定性基线对比。"
         ]
       }
@@ -115,11 +115,11 @@
       "paragraphs": {
         "en": [
           "Add alerting on unusual error spikes and quota usage so your team can respond before users are affected.",
-          "Document fallback behavior (for example, degraded mode or backup provider) for production reliability."
+          "Document fallback behavior (for example, degraded mode or backup provider) for production reliability. To choose the right model for your workload, our [[guide:gemini-models-comparison|Gemini models comparison]] breaks down the differences between Pro, Flash, and Flash-Lite. And if you're new to the platform, the [[guide:google-ai-studio-api-key|Google AI Studio setup guide]] covers the fastest path to getting started."
         ],
         "zh": [
           "对异常错误峰值和配额消耗建立告警，尽量在用户感知前完成处置。",
-          "建议提前写好降级策略（如降级模型或备用供应商），保证生产可用性。"
+          "建议提前写好降级策略（如降级模型或备用供应商），保证生产可用性。如需选择适合你工作负载的模型，我们的 [[guide:gemini-models-comparison|Gemini 模型对比]] 详细拆解了 Pro、Flash 和 Flash-Lite 的差异。如果你刚接触该平台，[[guide:google-ai-studio-api-key|Google AI Studio 设置指南]] 覆盖了最快的上手路径。"
         ]
       }
     },
