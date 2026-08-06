@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-06-26",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,7 +16,12 @@
     "en": "AI chatbots generate answers, search engines retrieve sources. Learn the key differences in how they work, accuracy, real-time data, and when to use each — plus the emerging trend of AI-powered search.",
     "zh": "AI 聊天机器人生成答案，搜索引擎检索来源。了解两者在工作原理、准确性、实时数据方面的关键差异，以及各自适用场景——还有 AI 搜索的新趋势。"
   },
-  "tags": ["ai chatbot", "search engine", "comparison", "basics"],
+  "tags": [
+    "ai chatbot",
+    "search engine",
+    "comparison",
+    "basics"
+  ],
   "providerSlugs": [],
   "sections": [
     {

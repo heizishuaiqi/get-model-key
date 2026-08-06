@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-28",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,7 +16,12 @@
     "en": "Ollama lets you run large language models locally. Here's the list of popular Ollama models, how to install them, and how to use the local API endpoint.",
     "zh": "Ollama 让你在本地运行大型语言模型。以下是热门 Ollama 模型列表、安装方法，以及如何使用本地 API 端点。"
   },
-  "tags": ["ollama", "local model", "llm", "self-hosted"],
+  "tags": [
+    "ollama",
+    "local model",
+    "llm",
+    "self-hosted"
+  ],
   "providerSlugs": [],
   "sections": [
     {

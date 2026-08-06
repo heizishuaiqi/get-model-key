@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-27",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,7 +16,12 @@
     "en": "Learn the three key elements of a good prompt, see good vs bad examples, master advanced techniques like few-shot and chain-of-thought, and use ready-made prompt templates for writing, coding, analysis, and translation.",
     "zh": "学习好 Prompt 的三个关键要素，看好坏对比示例，掌握少样本和思维链等高级技巧，并使用写作、编程、分析、翻译的现成 Prompt 模板。"
   },
-  "tags": ["prompt engineering", "prompt", "tutorial", "basics"],
+  "tags": [
+    "prompt engineering",
+    "prompt",
+    "tutorial",
+    "basics"
+  ],
   "providerSlugs": [],
   "sections": [
     {

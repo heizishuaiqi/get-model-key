@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "china-ai",
   "pillarSlug": "china-ai-api-keys-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-12",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,8 +16,16 @@
     "en": "Kimi K3 by Moonshot AI offers ultra-long context and strong reasoning. Learn how to register, get your API key, understand pricing, and make your first request with code examples.",
     "zh": "月之暗面的 Kimi K3 提供超长上下文和强大推理能力。了解如何注册、获取 API Key、理解定价，并用代码示例发送第一个请求。"
   },
-  "tags": ["kimi", "kimi k3", "moonshot", "api key", "china ai"],
-  "providerSlugs": ["moonshot"],
+  "tags": [
+    "kimi",
+    "kimi k3",
+    "moonshot",
+    "api key",
+    "china ai"
+  ],
+  "providerSlugs": [
+    "moonshot"
+  ],
   "sections": [
     {
       "id": "what-is-kimi",

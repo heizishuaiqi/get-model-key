@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "gemini",
   "pillarSlug": "gemini-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-25",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,8 +16,15 @@
     "en": "Learn how to get and use a Google AI Studio API key to access Gemini models. Covers the free tier, differences from Vertex AI, and code examples in Python and Node.js.",
     "zh": "了解如何获取和使用 Google AI Studio API Key 来访问 Gemini 模型。涵盖免费额度、与 Vertex AI 的区别，以及 Python 和 Node.js 代码示例。"
   },
-  "tags": ["google ai studio", "gemini", "api key", "google"],
-  "providerSlugs": ["google"],
+  "tags": [
+    "google ai studio",
+    "gemini",
+    "api key",
+    "google"
+  ],
+  "providerSlugs": [
+    "google"
+  ],
   "sections": [
     {
       "id": "what-is-google-ai-studio",

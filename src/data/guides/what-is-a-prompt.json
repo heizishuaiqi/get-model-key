@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-03",
   "updatedAt": "2026-07-29",
   "readingMinutes": 5,
   "title": {
@@ -16,7 +16,12 @@
     "en": "A prompt is the text you give to an AI model to get a response. Learn what makes a good prompt, the key components, and how to write effective prompts for AI APIs.",
     "zh": "Prompt 是你给 AI 模型的输入文本，用来获取回复。了解好的 Prompt 是什么、关键组成部分，以及如何为 AI API 编写有效的 Prompt。"
   },
-  "tags": ["prompt", "basics", "beginner", "ai"],
+  "tags": [
+    "prompt",
+    "basics",
+    "beginner",
+    "ai"
+  ],
   "providerSlugs": [],
   "sections": [
     {

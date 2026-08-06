@@ -4,7 +4,30 @@
   "domain": "https://www.getmodelkey.com",
   "defaultLocale": "en",
   "supportedLocales": ["en", "zh"],
-  "contactEmail": "hello@getmodelkey.com",
+  "contactEmail": "heizishuaiqi@gmail.com",
   "socialImage": "https://www.getmodelkey.com/og-image.png",
-  "favicon": "/favicon-32x32.png"
+  "favicon": "/favicon-32x32.png",
+  "author": {
+    "name": "Heizi",
+    "role": {
+      "en": "Founder & Editor",
+      "zh": "创始人 & 编辑"
+    },
+    "bio": {
+      "en": "Full-stack developer and AI integration specialist. Has configured and tested API integrations with 20+ AI model providers including OpenAI, Anthropic, Google, DeepSeek, and more. Every guide on this site is based on hands-on testing with real API keys.",
+      "zh": "全栈开发者，AI 集成方向。已实际配置并测试过 20+ AI 模型供应商的 API 集成，包括 OpenAI、Anthropic、Google、DeepSeek 等。本站每篇指南都基于真实 API Key 的亲手测试。"
+    },
+    "experience": {
+      "en": "8+ years building web applications, 3+ years integrating LLM APIs in production",
+      "zh": "8 年以上 Web 应用开发经验，3 年以上生产环境 LLM API 集成经验"
+    },
+    "social": {
+      "github": "https://github.com/heizishuaiqi"
+    }
+  },
+  "foundedDate": "2026-06",
+  "editorialProcess": {
+    "en": "Every guide follows a hands-on testing protocol: we register a real account, generate an actual API key, write and run test code, and document the entire process. We re-verify all information at least once per quarter and update guides when providers change their APIs, pricing, or dashboards.",
+    "zh": "每篇指南都遵循实测流程：注册真实账号、生成实际 API Key、编写并运行测试代码、记录全过程。我们至少每季度重新验证一次所有信息，并在供应商更改 API、定价或控制台时更新指南。"
+  }
 }

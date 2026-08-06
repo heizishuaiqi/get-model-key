@@ -8,6 +8,7 @@ import { getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuideMetadata, buildFaqStructuredData } from '@/lib/seo';
 import { TOPIC_LABELS } from '@/lib/shared';
 import { renderParagraphWithLinks } from '@/lib/inline-links';
+import AuthorByline from '@/components/layout/AuthorByline';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -55,7 +56,13 @@ export default async function GuideDetailPage({ params }: Props) {
     dateModified: guide.updatedAt,
     inLanguage: 'en',
     mainEntityOfPage: `${siteConfig.domain}/guides/${guide.slug}/`,
-    author: {
+    author: siteConfig.author ? {
+      '@type': 'Person',
+      name: siteConfig.author.name,
+      url: `${siteConfig.domain}/about/`,
+      description: siteConfig.author.bio.en,
+      jobTitle: siteConfig.author.role.en,
+    } : {
       '@type': 'Organization',
       name: siteConfig.siteName,
       url: siteConfig.domain,
@@ -148,7 +155,13 @@ export default async function GuideDetailPage({ params }: Props) {
               <span className="text-caption text-text-muted">Updated: {guide.updatedAt}</span>
             </div>
             <h1 className="mb-4 text-h1 text-text-primary">{guide.title.en}</h1>
-            <p className="text-body text-text-secondary">{guide.excerpt.en}</p>
+            <p className="mb-5 text-body text-text-secondary">{guide.excerpt.en}</p>
+            <AuthorByline
+              author={siteConfig.author}
+              lang="en"
+              publishedAt={guide.publishedAt}
+              updatedAt={guide.updatedAt}
+            />
           </header>
 
           <div className="space-y-8">

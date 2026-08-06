@@ -122,6 +122,50 @@
           "模型接入不仅是 Prompt 工程，也属于稳定性工程：可观测性与密钥治理同样重要。"
         ]
       }
+    },
+    {
+      "id": "real-world-example",
+      "heading": {
+        "en": "Real-World Example: Team Onboarding",
+        "zh": "真实案例：团队接入"
+      },
+      "paragraphs": {
+        "en": [
+          "When we onboarded a 5-person team to Claude API, the biggest time sink wasn't coding — it was untangling shared key usage. Three developers had used the same key for local testing, staging, and an early production deploy. When rate limits kicked in, nobody knew whose traffic was causing it.",
+          "The fix was straightforward: we created separate keys for each environment (dev-key, staging-key, prod-key) and added per-key spending limits in the Anthropic Console. After that, usage was transparent and 429 errors dropped to near zero.",
+          "Our recommended setup: one production key with tight spending limits, one staging key for QA, and individual developer keys with small budgets for local testing. Total setup time: about 20 minutes."
+        ],
+        "zh": [
+          "我们给 5 人团队接入 Claude API 时，最耗时的不是写代码 —— 而是理清共享密钥的使用。三个开发者用了同一个 Key 做本地测试、预发布和早期生产部署。速率限制触发时，没人知道是谁的流量导致的。",
+          "解决方案很简单：我们为每个环境创建了独立 Key（dev-key、staging-key、prod-key），并在 Anthropic Console 设置了每个 Key 的消费上限。之后使用情况一目了然，429 错误几乎降为零。",
+          "我们推荐的配置：一个消费限额严格的生产 Key、一个用于 QA 的预发布 Key、以及给每个开发者小额预算的本地测试 Key。总配置时间约 20 分钟。"
+        ]
+      }
+    },
+    {
+      "id": "code-verification",
+      "heading": {
+        "en": "Quick Verification Script",
+        "zh": "快速验证脚本"
+      },
+      "paragraphs": {
+        "en": [
+          "Use this minimal script to verify your key works before building full integrations. We use it on every new project:"
+        ],
+        "zh": [
+          "在搭建完整集成前，用这个最小脚本验证你的 Key 是否可用。我们在每个新项目上都会用："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "bash",
+          "code": "curl https://api.anthropic.com/v1/messages \\\n  -H \"x-api-key: $ANTHROPIC_API_KEY\" \\\n  -H \"anthropic-version: 2023-06-01\" \\\n  -H \"content-type: application/json\" \\\n  -d '{\n    \"model\": \"claude-sonnet-4-20250514\",\n    \"max_tokens\": 100,\n    \"messages\": [{\"role\": \"user\", \"content\": \"Say hello in one word.\"}]\n  }'",
+          "caption": {
+            "en": "If you get a 200 response with text, your key and headers are correct",
+            "zh": "如果收到 200 响应和文本，说明 Key 和请求头都正确"
+          }
+        }
+      ]
     }
   ],
   "faq": [

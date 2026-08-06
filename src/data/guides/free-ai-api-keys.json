@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-20",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,8 +16,20 @@
     "en": "Several AI providers offer free tiers or credits. Here's a complete comparison of which platforms give free access, how much you get, and the limits you should know about.",
     "zh": "多家 AI 供应商提供免费额度或免费积分。本文完整对比哪些平台提供免费访问、额度多少，以及需要注意的限制。"
   },
-  "tags": ["free", "api key", "trial", "credits", "comparison"],
-  "providerSlugs": ["google", "openai", "anthropic", "deepseek", "openrouter"],
+  "tags": [
+    "free",
+    "api key",
+    "trial",
+    "credits",
+    "comparison"
+  ],
+  "providerSlugs": [
+    "google",
+    "openai",
+    "anthropic",
+    "deepseek",
+    "openrouter"
+  ],
   "sections": [
     {
       "id": "which-providers-free",

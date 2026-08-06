@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-07",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,7 +16,12 @@
     "en": "API keys are the foundation of accessing AI services. Learn what they are, how they work, why you need one, and how to get started with AI model APIs.",
     "zh": "API Key 是访问 AI 服务的基础。了解它是什么、如何工作、为什么需要它，以及如何开始使用 AI 模型 API。"
   },
-  "tags": ["api key", "basics", "beginner", "ai"],
+  "tags": [
+    "api key",
+    "basics",
+    "beginner",
+    "ai"
+  ],
   "providerSlugs": [],
   "sections": [
     {

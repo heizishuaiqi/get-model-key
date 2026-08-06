@@ -4,7 +4,7 @@
   "topic": "api-key-setup",
   "pillar": true,
   "cluster": "china-ai",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-06-08",
   "updatedAt": "2026-07-29",
   "readingMinutes": 12,
   "title": {
@@ -15,8 +15,21 @@
     "en": "Complete guide to China's major AI API platforms. Compare DeepSeek, Kimi/Moonshot, Qwen, ERNIE, and Doubao on pricing, registration, payment methods, and how to choose the right one for your project.",
     "zh": "中国主流 AI API 平台完全指南。对比 DeepSeek、Kimi/Moonshot、通义千问、文心一言和豆包的定价、注册、支付方式，以及如何为你的项目选择合适的平台。"
   },
-  "tags": ["china ai", "deepseek", "kimi", "qwen", "ernie", "api key"],
-  "providerSlugs": ["deepseek", "moonshot", "alibaba", "baidu", "bytedance"],
+  "tags": [
+    "china ai",
+    "deepseek",
+    "kimi",
+    "qwen",
+    "ernie",
+    "api key"
+  ],
+  "providerSlugs": [
+    "deepseek",
+    "moonshot",
+    "alibaba",
+    "baidu",
+    "bytedance"
+  ],
   "sections": [
     {
       "id": "overview",
@@ -47,13 +60,13 @@
         "en": [
           "Here is a quick overview of each platform's key characteristics. For detailed setup instructions, refer to the dedicated guide for each provider.",
           "DeepSeek offers OpenAI-compatible endpoints with DeepSeek-V3 for general chat and DeepSeek-R1 for advanced reasoning. It is known for extremely competitive pricing and global accessibility. For step-by-step instructions, see our guide on how to get a DeepSeek API key.",
-          "Moonshot AI provides the Kimi API with the Kimi K3 model, which supports an ultra-long context window of up to 256K tokens. Kimi is particularly strong in Chinese language tasks and long-document understanding. See our dedicated guide on how to get a Kimi API key.",
+          "Moonshot AI provides the Kimi API with the Kimi K3 model, which supports an ultra-long context window of up to 256K tokens. Kimi is particularly strong in Chinese language tasks and long-document understanding. See our [[guide:how-to-get-kimi-api-key|dedicated guide on how to get a Kimi API key]] or the [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API Key setup walkthrough]] for detailed steps.",
           "Alibaba Tongyi Qianwen (Qwen) offers the widest range of models, from Qwen-Turbo to Qwen-Max, available through Alibaba Cloud's DashScope platform. Baidu ERNIE provides the ERNIE 4.0 and ERNIE Speed models through its Qianfan platform. ByteDance Doubao offers aggressive per-token pricing through the Volcano Engine platform."
         ],
         "zh": [
           "以下是各平台关键特性的快速概览。详细的设置说明请参考每个供应商的专门指南。",
           "DeepSeek 提供 OpenAI 兼容端点，DeepSeek-V3 用于通用对话，DeepSeek-R1 用于高级推理。以极具竞争力的定价和全球可访问性著称。详细步骤请参阅我们的如何获取 DeepSeek API Key 指南。",
-          "月之暗面提供 Kimi API 和 Kimi K3 模型，支持高达 256K token 的超长上下文窗口。Kimi 在中文任务和长文档理解方面特别强。请参阅我们的专门指南：如何获取 Kimi API Key。",
+          "月之暗面提供 Kimi API 和 Kimi K3 模型，支持高达 256K token 的超长上下文窗口。Kimi 在中文任务和长文档理解方面特别强。详细步骤请参阅我们的 [[guide:how-to-get-kimi-api-key|如何获取 Kimi API Key 指南]] 或 [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API Key 申请教程]]。",
           "阿里通义千问（Qwen）提供最丰富的模型系列，从 Qwen-Turbo 到 Qwen-Max，通过阿里云 DashScope 平台提供。百度文心通过千帆平台提供 ERNIE 4.0 和 ERNIE Speed 模型。字节豆包通过火山引擎平台提供激进的每 token 定价。"
         ]
       }

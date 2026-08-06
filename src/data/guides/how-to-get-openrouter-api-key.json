@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-18",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,8 +16,15 @@
     "en": "OpenRouter is an AI API aggregator — one key gives you access to OpenAI, Claude, Gemini, DeepSeek, and hundreds of other models. Here's how to get started.",
     "zh": "OpenRouter 是 AI API 聚合平台——一个 Key 即可访问 OpenAI、Claude、Gemini、DeepSeek 等数百个模型。以下是上手方法。"
   },
-  "tags": ["openrouter", "api key", "aggregator", "tutorial"],
-  "providerSlugs": ["openrouter"],
+  "tags": [
+    "openrouter",
+    "api key",
+    "aggregator",
+    "tutorial"
+  ],
+  "providerSlugs": [
+    "openrouter"
+  ],
   "sections": [
     {
       "id": "what-is-openrouter",

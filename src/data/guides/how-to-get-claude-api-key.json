@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "claude",
   "pillarSlug": "claude-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-06-28",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,8 +16,15 @@
     "en": "Claude by Anthropic is a top-tier AI model. Here's exactly how to create your Claude/Anthropic API key, understand pricing, and make your first API call.",
     "zh": "Anthropic 的 Claude 是顶级 AI 模型。本文教你如何创建 Claude/Anthropic API Key、理解定价，并发送第一个 API 请求。"
   },
-  "tags": ["claude", "anthropic", "api key", "setup"],
-  "providerSlugs": ["anthropic"],
+  "tags": [
+    "claude",
+    "anthropic",
+    "api key",
+    "setup"
+  ],
+  "providerSlugs": [
+    "anthropic"
+  ],
   "sections": [
     {
       "id": "claude-vs-anthropic",

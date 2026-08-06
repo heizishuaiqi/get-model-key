@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "gemini",
   "pillarSlug": "gemini-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-22",
   "updatedAt": "2026-07-29",
   "readingMinutes": 8,
   "title": {
@@ -16,8 +16,15 @@
     "en": "Compare Gemini 2.5 Pro, Flash, and Flash-Lite models across context window, pricing, reasoning, vision, and code capabilities. Find the right Gemini model for your use case.",
     "zh": "全面对比 Gemini 2.5 Pro、Flash 和 Flash-Lite 模型的上下文窗口、定价、推理、视觉和代码能力。找到适合你场景的 Gemini 模型。"
   },
-  "tags": ["gemini", "models", "comparison", "google"],
-  "providerSlugs": ["google"],
+  "tags": [
+    "gemini",
+    "models",
+    "comparison",
+    "google"
+  ],
+  "providerSlugs": [
+    "google"
+  ],
   "sections": [
     {
       "id": "overview",

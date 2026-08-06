@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "grok",
   "pillarSlug": "grok-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-08",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,8 +16,15 @@
     "en": "Grok is xAI's language model, known for real-time information access and a witty style. Here's how to get your Grok API key and start calling Grok-2 and Grok-3.",
     "zh": "Grok 是 xAI 的语言模型，以实时信息访问和幽默风格著称。以下是获取 Grok API Key 并开始调用 Grok-2 和 Grok-3 的方法。"
   },
-  "tags": ["grok", "xai", "api key", "tutorial"],
-  "providerSlugs": ["xai"],
+  "tags": [
+    "grok",
+    "xai",
+    "api key",
+    "tutorial"
+  ],
+  "providerSlugs": [
+    "xai"
+  ],
   "sections": [
     {
       "id": "what-is-grok",

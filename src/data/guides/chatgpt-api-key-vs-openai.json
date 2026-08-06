@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "openai",
   "pillarSlug": "openai-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-07",
   "updatedAt": "2026-07-29",
   "readingMinutes": 5,
   "title": {
@@ -16,8 +16,15 @@
     "en": "There is no separate 'ChatGPT API Key' — ChatGPT is a product, OpenAI is the company. All API keys are managed on platform.openai.com. Here's what you need to know.",
     "zh": "并没有独立的「ChatGPT API Key」——ChatGPT 是产品名，OpenAI 是公司名。所有 API Key 统一在 platform.openai.com 管理。这里是你需要了解的。"
   },
-  "tags": ["chatgpt", "openai", "api key", "comparison"],
-  "providerSlugs": ["openai"],
+  "tags": [
+    "chatgpt",
+    "openai",
+    "api key",
+    "comparison"
+  ],
+  "providerSlugs": [
+    "openai"
+  ],
   "sections": [
     {
       "id": "no-separate-chatgpt-key",

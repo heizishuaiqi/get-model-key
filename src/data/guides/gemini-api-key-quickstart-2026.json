@@ -122,6 +122,64 @@
           "建议提前写好降级策略（如降级模型或备用供应商），保证生产可用性。"
         ]
       }
+    },
+    {
+      "id": "free-tier-tips",
+      "heading": {
+        "en": "Free Tier Tips from Our Testing",
+        "zh": "免费额度实测建议"
+      },
+      "paragraphs": {
+        "en": [
+          "We ran a development project entirely on the Gemini free tier for three weeks. Here's what we learned about maximizing the free limits:",
+          "The free tier gives you 15 requests per minute on Gemini Flash with 1500 requests per day. For a solo developer or small team in the prototyping phase, this is surprisingly generous. We processed about 200-300 API calls per day during active development without hitting limits.",
+          "However, if you're testing batch jobs or stress-testing, you'll hit the daily cap fast. Our solution: spread batch tests across the day using a simple queue with rate limiting, or use the off-peak hours for heavy testing."
+        ],
+        "zh": [
+          "我们在 Gemini 免费额度上跑了整整三周的开发项目。以下是我们学到的最大化利用免费额度的经验：",
+          "免费额度给你 Gemini Flash 上每分钟 15 次请求，每天 1500 次。对于原型阶段的个人开发者或小团队，这相当慷慨。活跃开发期间我们每天约 200-300 次 API 调用，从未触及限制。",
+          "但如果你在测试批量任务或压力测试，很快就会撞到每日上限。我们的方案：用简单的限流队列把批量测试分散到全天，或在闲时做重度测试。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Use Gemini Flash for development — higher free limits than Pro",
+          "Implement client-side rate limiting (12 RPM is a safe buffer under the 15 RPM limit)",
+          "Cache responses for identical prompts during testing to save quota",
+          "Monitor remaining quota via response headers — Google returns rate limit info"
+        ],
+        "zh": [
+          "开发时用 Gemini Flash —— 免费限制比 Pro 更高",
+          "实现客户端限流（12 RPM 是 15 RPM 限制下的安全缓冲）",
+          "测试时对相同提示缓存响应以节省额度",
+          "通过响应头监控剩余额度 —— Google 会返回速率限制信息"
+        ]
+      }
+    },
+    {
+      "id": "first-call-code",
+      "heading": {
+        "en": "Minimal First Call Code",
+        "zh": "最小首次调用代码"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's the exact code we use to verify every new Gemini API key. Run it before anything else:"
+        ],
+        "zh": [
+          "这是我们验证每个新 Gemini API Key 的精确代码。在做任何其他事之前先跑这个："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from google import genai\nimport os\n\nclient = genai.Client(api_key=os.environ[\"GEMINI_API_KEY\"])\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.0-flash\",\n    contents=\"Reply with exactly: KEY_WORKS\"\n)\n\nassert \"KEY_WORKS\" in response.text, \"Unexpected response — check your key\"\nprint(\"Success! Your Gemini API key is working.\")",
+          "caption": {
+            "en": "If you see 'Success!', your key is valid and ready for development",
+            "zh": "如果看到 'Success!'，说明 Key 有效，可以开始开发了"
+          }
+        }
+      ]
     }
   ],
   "faq": [

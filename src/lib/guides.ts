@@ -150,10 +150,11 @@ export const CLUSTER_LABELS: Record<string, Record<'en' | 'zh', string>> = {
   'china-ai': { en: 'China AI Models', zh: '中国 AI 模型' },
   'ai-basics': { en: 'AI Basics', zh: 'AI 基础' },
   grok: { en: 'Grok', zh: 'Grok' },
+  siliconflow: { en: 'SiliconFlow', zh: '硅基流动' },
 };
 
 /** Get cluster order for consistent display */
-export const CLUSTER_ORDER = ['openai', 'claude', 'gemini', 'grok', 'deepseek', 'china-ai', 'ai-basics'];
+export const CLUSTER_ORDER = ['openai', 'claude', 'gemini', 'grok', 'deepseek', 'china-ai', 'siliconflow', 'ai-basics'];
 
 /**
  * Get all published guides grouped by cluster, with pillar pages first.

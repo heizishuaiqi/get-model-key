@@ -1,11 +1,25 @@
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import type { Lang } from '@/lib/shared';
 
 interface FooterProps {
   lang: Lang;
 }
 
+// Synchronously load author info from site.json (safe in static export — runs at build time only)
+function getAuthor() {
+  try {
+    const sitePath = path.join(process.cwd(), 'src/data/site.json');
+    const data = JSON.parse(fs.readFileSync(sitePath, 'utf-8'));
+    return data.author;
+  } catch {
+    return undefined;
+  }
+}
+
 export default function Footer({ lang }: FooterProps) {
+  const author = getAuthor();
   const footerLinks = {
     en: [
       { name: 'Guides', href: '/guides/' },
@@ -45,6 +59,13 @@ export default function Footer({ lang }: FooterProps) {
               ? 'This site does not sell API access or replace official platforms.'
               : '本站不售卖 API，也不替代任何官方平台。'}
           </p>
+          {author && (
+            <p className="mt-3 text-xs text-text-muted">
+              {lang === 'en'
+                ? <>Maintained by <span className="font-semibold text-text-secondary">{author.name}</span> · {author.role.en}</>
+                : <>由 <span className="font-semibold text-text-secondary">{author.name}</span> 维护 · {author.role.zh}</>}
+            </p>
+          )}
         </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-6 md:justify-start">

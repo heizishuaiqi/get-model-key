@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "deepseek",
   "pillarSlug": "deepseek-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-01",
   "updatedAt": "2026-07-29",
   "readingMinutes": 7,
   "title": {
@@ -16,8 +16,15 @@
     "en": "DeepSeek offers competitive pricing and strong reasoning models. Here's exactly how to create your DeepSeek API key, check pricing, and make your first request.",
     "zh": "DeepSeek 提供有竞争力的定价和强大的推理模型。本文教你如何创建 DeepSeek API Key、查看定价，并发送第一个请求。"
   },
-  "tags": ["deepseek", "api key", "setup", "china"],
-  "providerSlugs": ["deepseek"],
+  "tags": [
+    "deepseek",
+    "api key",
+    "setup",
+    "china"
+  ],
+  "providerSlugs": [
+    "deepseek"
+  ],
   "sections": [
     {
       "id": "why-deepseek",

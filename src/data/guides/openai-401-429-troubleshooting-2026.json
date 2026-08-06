@@ -122,6 +122,52 @@
           "在高峰期，标准化的短流程比临时排查更能保证恢复速度。"
         ]
       }
+    },
+    {
+      "id": "real-debugging-example",
+      "heading": {
+        "en": "Real Debugging Session: A 429 That Wasn't Rate Limit",
+        "zh": "真实调试案例：一个不是速率限制的 429"
+      },
+      "paragraphs": {
+        "en": [
+          "We once spent two hours chasing a persistent 429 error that turned out to be something entirely different. Here's what happened:",
+          "Our application started returning 429 on every request after a deployment. We assumed rate limiting and implemented aggressive backoff — but the errors continued even after 10 minutes of zero traffic. That was the clue: true rate limits reset within 60 seconds.",
+          "The actual cause: our new deployment had a bug where the API key environment variable was empty in one container. OpenAI returned 429 (not 401) because the empty key triggered a different internal path. The fix was a one-line config correction.",
+          "Lesson: if 429 persists beyond 60 seconds of zero traffic, it's not a rate limit. Check your key, your headers, and your deployment configuration."
+        ],
+        "zh": [
+          "我们曾花了两小时追查一个持续的 429 错误，结果发现原因完全不同。事情是这样的：",
+          "我们的应用在一次部署后每个请求都返回 429。我们以为是速率限制，实施了激进退避 —— 但即使零流量 10 分钟后错误仍在继续。这就是线索：真正的速率限制在 60 秒内会重置。",
+          "实际原因：我们的新部署有一个 bug，一个容器里的 API Key 环境变量为空。OpenAI 返回了 429（而非 401），因为空 Key 触发了不同的内部路径。修复只需改一行配置。",
+          "教训：如果 429 在零流量超过 60 秒后仍然存在，那就不是速率限制。检查你的 Key、请求头和部署配置。"
+        ]
+      }
+    },
+    {
+      "id": "retry-code-pattern",
+      "heading": {
+        "en": "Retry Code Pattern We Use in Production",
+        "zh": "我们生产环境使用的重试代码模式"
+      },
+      "paragraphs": {
+        "en": [
+          "Here's the retry pattern we've refined over months of production usage. It includes exponential backoff with jitter and max-retry limits:"
+        ],
+        "zh": [
+          "这是我们经过数月生产使用后打磨出的重试模式。包含带抖动的指数退避和最大重试限制："
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "import time\nimport random\nfrom openai import OpenAI\n\nclient = OpenAI()\n\ndef call_with_retry(model, messages, max_retries=5):\n    for attempt in range(max_retries):\n        try:\n            response = client.chat.completions.create(\n                model=model,\n                messages=messages\n            )\n            return response\n        except Exception as e:\n            if attempt == max_retries - 1:\n                raise\n            # Exponential backoff with jitter: 1s, 2s, 4s, 8s + random\n            wait = (2 ** attempt) + random.uniform(0, 1)\n            print(f\"Attempt {attempt+1} failed, waiting {wait:.1f}s...\")\n            time.sleep(wait)\n",
+          "caption": {
+            "en": "Tested in production — handles both 429 and transient network errors",
+            "zh": "生产实测 —— 可处理 429 和临时网络错误"
+          }
+        }
+      ]
     }
   ],
   "faq": [

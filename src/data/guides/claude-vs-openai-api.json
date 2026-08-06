@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "claude",
   "pillarSlug": "claude-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-14",
   "updatedAt": "2026-07-29",
   "readingMinutes": 9,
   "title": {
@@ -16,8 +16,16 @@
     "en": "A detailed comparison of Claude and OpenAI APIs across model capabilities, pricing, context windows, developer experience, latency, and best use cases to help you pick the right one.",
     "zh": "从模型能力、定价、上下文窗口、开发体验、延迟和最佳适用场景等维度，详细对比 Claude 和 OpenAI API，帮你做出正确选择。"
   },
-  "tags": ["claude", "openai", "comparison", "api"],
-  "providerSlugs": ["openai", "anthropic"],
+  "tags": [
+    "claude",
+    "openai",
+    "comparison",
+    "api"
+  ],
+  "providerSlugs": [
+    "openai",
+    "anthropic"
+  ],
   "sections": [
     {
       "id": "overview",

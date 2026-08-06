@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-06-26",
   "updatedAt": "2026-07-29",
   "readingMinutes": 5,
   "title": {
@@ -16,7 +16,12 @@
     "en": "AI hallucinations are when models generate false or misleading information. Learn why they happen, how to recognize them, and best practices to minimize hallucinations.",
     "zh": "AI 幻觉是指模型生成虚假或误导性信息。了解为什么会发生、如何识别，以及减少幻觉的最佳实践。"
   },
-  "tags": ["hallucinations", "basics", "ai", "safety"],
+  "tags": [
+    "hallucinations",
+    "basics",
+    "ai",
+    "safety"
+  ],
   "providerSlugs": [],
   "sections": [
     {
@@ -83,6 +88,58 @@
           "将复杂问题拆分为更小的可验证步骤",
           "事实性查询使用较低的温度设置",
           "用权威来源交叉验证关键信息"
+        ]
+      }
+    },
+    {
+      "id": "real-examples",
+      "heading": {
+        "en": "Real Hallucination Examples We've Encountered",
+        "zh": "我们遇到过的真实幻觉案例"
+      },
+      "paragraphs": {
+        "en": [
+          "In our testing across 20+ AI model providers, we've seen hallucinations in many forms. Here are the most common types we've documented:",
+          "The most dangerous hallucinations are the ones that sound most convincing. A model might cite a real-sounding academic paper with a real author name, a plausible title, and a fabricated journal — and you'd never know unless you searched for it. We've seen Claude, GPT-4, and Gemini all do this."
+        ],
+        "zh": [
+          "在我们测试 20+ AI 模型供应商的过程中，我们见过多种形式的幻觉。以下是我们记录的最常见类型：",
+          "最危险的幻觉是那些听起来最有说服力的。模型可能引用一篇听起来真实的学术论文 —— 作者名真实、标题合理、期刊却是编造的 —— 除非你去搜索，否则根本不会发现。我们看到 Claude、GPT-4 和 Gemini 都做过这种事。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Fabricated citations — Real author names with fake paper titles and journals (most common in our testing)",
+          "Invented API parameters — Models confidently describing SDK methods that don't exist. We caught GPT-4 inventing a 'stream_options' parameter months before it was actually added",
+          "Nonexistent URLs — Plausible-looking documentation links that 404. Always test URLs before adding them to your codebase",
+          "Wrong pricing data — Models recalling outdated or incorrect pricing. Always verify current prices on official pages",
+          "Historical revisionism — Confidently stating incorrect dates or events, especially for events after the training cutoff"
+        ],
+        "zh": [
+          "编造引用 —— 真实的作者名配假的论文标题和期刊（我们测试中最常见）",
+          "虚构 API 参数 —— 模型自信地描述不存在的 SDK 方法。我们发现 GPT-4 曾虚构了一个 'stream_options' 参数，而几个月后这个参数才真正被添加",
+          "不存在的 URL —— 看起来合理但 404 的文档链接。在加入代码库前务必测试 URL",
+          "错误的定价数据 —— 模型回忆过时或不正确的定价。务必在官方页面验证当前价格",
+          "历史修正主义 —— 自信地陈述错误的日期或事件，尤其是训练截止日期之后的事件"
+        ]
+      }
+    },
+    {
+      "id": "which-models",
+      "heading": {
+        "en": "Which Models Hallucinate Most?",
+        "zh": "哪些模型幻觉最多？"
+      },
+      "paragraphs": {
+        "en": [
+          "Based on our hands-on testing, hallucination rates vary significantly between models and providers. We don't have rigorous benchmark numbers, but here's our qualitative impression from daily use:",
+          "Reasoning models (like Claude Opus, GPT-4o, and DeepSeek-R1) hallucinate less on factual questions within their training data, but can be more convincing when they do hallucinate. Faster, cheaper models (like Claude Haiku, GPT-4o-mini) hallucinate more frequently but their errors are often easier to catch.",
+          "The key insight: model size matters, but prompt design matters more. A well-structured prompt with context and verification steps on a smaller model often outperforms a vague prompt on the most advanced model."
+        ],
+        "zh": [
+          "根据我们的实际测试，不同模型和供应商的幻觉率差异很大。我们没有严格的基准数字，但以下是我们日常使用的定性印象：",
+          "推理模型（如 Claude Opus、GPT-4o 和 DeepSeek-R1）在训练数据范围内的事实性问题上幻觉更少，但一旦幻觉就更难识别。更快更便宜的模型（如 Claude Haiku、GPT-4o-mini）幻觉更频繁，但错误通常更容易发现。",
+          "核心洞察：模型大小重要，但提示设计更重要。用小模型配结构良好、有上下文和验证步骤的提示，往往优于用最先进的模型配模糊的提示。"
         ]
       }
     }

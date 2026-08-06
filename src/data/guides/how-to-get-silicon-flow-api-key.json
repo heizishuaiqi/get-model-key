@@ -1,0 +1,204 @@
+{
+  "slug": "how-to-get-silicon-flow-api-key",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "siliconflow",
+  "pillarSlug": "silicon-flow-api-key-complete-guide",
+  "publishedAt": "2026-07-15",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "How to Get a SiliconFlow API Key (2026 Step-by-Step Tutorial)",
+    "zh": "如何获取硅基流动 API Key（2026 逐步教程）"
+  },
+  "excerpt": {
+    "en": "Register on siliconflow.cn, complete real-name verification to claim ¥30 in free credits, create your API key, and make your first free model call in under five minutes.",
+    "zh": "在 siliconflow.cn 注册、完成实名认证领取 ¥30 免费额度、创建 API Key，五分钟内完成第一次免费模型调用。"
+  },
+  "tags": [
+    "siliconflow",
+    "silicon flow",
+    "硅基流动",
+    "api key",
+    "tutorial",
+    "free credits"
+  ],
+  "providerSlugs": [
+    "silicon-flow"
+  ],
+  "sections": [
+    {
+      "id": "prerequisites",
+      "heading": {
+        "en": "Prerequisites",
+        "zh": "准备工作"
+      },
+      "paragraphs": {
+        "en": [
+          "You need a phone number for registration. Chinese +86 numbers work directly on siliconflow.cn; international users should use the global site at siliconflow.com. A payment method is not required to start — the free tier and bonus credits work without any top-up.",
+          "No prior experience with API keys is needed. This tutorial covers everything from account creation to your first successful API call."
+        ],
+        "zh": [
+          "注册需要一个手机号。中国 +86 号码在 siliconflow.cn 直接使用；国际用户建议用全球站 siliconflow.com。开始时无需支付方式——免费额度和赠送额度不充值即可使用。",
+          "不需要有 API Key 使用经验。本教程从注册账号到完成第一次 API 调用全程覆盖。"
+        ]
+      }
+    },
+    {
+      "id": "step-1-register",
+      "heading": {
+        "en": "Step 1: Register Your Account",
+        "zh": "第一步：注册账号"
+      },
+      "paragraphs": {
+        "en": [
+          "Go to siliconflow.cn (or siliconflow.com for international users). Click the register button in the top-right corner. Enter your phone number, receive an SMS verification code, and set a password. Upon successful registration, you immediately receive ¥14 in promotional credits.",
+          "The account is fully functional at this point, but to unlock the additional ¥16 verification bonus and higher rate limits, you need to complete real-name verification in the next step."
+        ],
+        "zh": [
+          "访问 siliconflow.cn（国际用户用 siliconflow.com）。点击右上角注册按钮。输入手机号，接收短信验证码，设置密码。注册成功后立即获得 ¥14 促销额度。",
+          "此时账号已完全可用，但要解锁额外的 ¥16 认证额度和更高速率限制，需要下一步完成实名认证。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Visit siliconflow.cn (China) or siliconflow.com (global)",
+          "Click register, enter phone number and SMS code",
+          "Set a strong password",
+          "Receive ¥14 promotional credit instantly"
+        ],
+        "zh": [
+          "访问 siliconflow.cn（中国）或 siliconflow.com（全球）",
+          "点击注册，输入手机号和短信验证码",
+          "设置强密码",
+          "立即获得 ¥14 促销额度"
+        ]
+      }
+    },
+    {
+      "id": "step-2-verify",
+      "heading": {
+        "en": "Step 2: Complete Real-Name Verification",
+        "zh": "第二步：完成实名认证"
+      },
+      "paragraphs": {
+        "en": [
+          "After logging in, go to Account Settings > Real-Name Verification. SiliconFlow requires ID verification to comply with Chinese regulations and to prevent abuse of the free tier. For Chinese users, this means submitting your identity card or passport. The verification is usually instant.",
+          "Once verified, you receive an additional ¥16 in credits, bringing your total to ¥30. Your rate limits also increase, which matters if you plan to use the free models heavily during development."
+        ],
+        "zh": [
+          "登录后，进入「账号设置」>「实名认证」。硅基流动按中国法规要求身份认证，也是为了防止免费额度被滥用。中国用户需提交身份证或护照。认证通常即时完成。",
+          "认证后额外获得 ¥16 额度，总计 ¥30。你的速率限制也会提升，如果你打算开发期间大量使用免费模型，这一点很重要。"
+        ]
+      }
+    },
+    {
+      "id": "step-3-create-key",
+      "heading": {
+        "en": "Step 3: Create Your API Key",
+        "zh": "第三步：创建 API Key"
+      },
+      "paragraphs": {
+        "en": [
+          "Navigate to the API Keys page in the console dashboard (usually found under a menu item labeled API 密钥 or API Keys). Click Create New Key, give it a descriptive name like my-dev-project so you can identify it later, and click confirm.",
+          "The full key (starting with sk-) is displayed only once. Copy it immediately to a secure location — a password manager, a .env file in your project, or your server's environment variables. If you lose it, you will need to create a new key and update all your applications."
+        ],
+        "zh": [
+          "在控制台进入 API 密钥页面（菜单项通常叫「API 密钥」或「API Keys」）。点击「新建密钥」，给它一个描述性名称，如 my-dev-project，方便日后识别，然后确认。",
+          "完整 Key（以 sk- 开头）只显示一次。请立即复制到安全位置——密码管理器、项目的 .env 文件或服务器环境变量。如果丢失，需要新建 Key 并更新所有应用。"
+        ]
+      }
+    },
+    {
+      "id": "step-4-first-call",
+      "heading": {
+        "en": "Step 4: Make Your First API Call",
+        "zh": "第四步：完成第一次 API 调用"
+      },
+      "paragraphs": {
+        "en": [
+          "With your key ready, you can call any model on the platform. Here is a minimal example using the free Qwen3-8B model and the OpenAI Python SDK. If you don't have the SDK installed, run pip install openai first."
+        ],
+        "zh": [
+          "拿到 Key 后就能调用平台上的任何模型。下面是一个使用免费 Qwen3-8B 模型和 OpenAI Python SDK 的最小示例。如果没装 SDK，先运行 pip install openai。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"sk-your-copied-key-here\",\n    base_url=\"https://api.siliconflow.cn/v1\"\n)\n\nresponse = client.chat.completions.create(\n    model=\"Qwen/Qwen3-8B\",\n    messages=[\n        {\"role\": \"user\", \"content\": \"你好，介绍一下你自己\"}\n    ]\n)\n\nprint(response.choices[0].message.content)\nprint(f\"\\nTokens used: {response.usage.total_tokens}\")",
+          "caption": {
+            "en": "First API call to the free Qwen3-8B model via SiliconFlow",
+            "zh": "通过硅基流动第一次调用免费 Qwen3-8B 模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "heading": {
+        "en": "Common Registration Issues",
+        "zh": "常见注册问题"
+      },
+      "paragraphs": {
+        "en": [
+          "If the SMS verification code does not arrive, wait 60 seconds and request a new one. International phone numbers may have delivery delays; the global site (siliconflow.com) tends to be more reliable for non-Chinese numbers.",
+          "If real-name verification fails, ensure the name on your ID exactly matches what you entered, and that the document photo is clear and unobstructed. Support can be reached through the in-console help button.",
+          "If your API call returns a 401 error, double-check that you copied the entire key including the sk- prefix, and that you are using the correct base URL. A 429 error means you hit the rate limit — wait a minute and retry, or check the complete guide for tier upgrade details."
+        ],
+        "zh": [
+          "如果短信验证码收不到，等 60 秒后重新获取。国际手机号可能有送达延迟；非中国号码用全球站（siliconflow.com）通常更可靠。",
+          "如果实名认证失败，确认证件上的姓名与填写完全一致，证件照片清晰无遮挡。可通过控制台内的帮助按钮联系客服。",
+          "如果 API 调用返回 401 错误，检查是否复制了完整的 Key（包括 sk- 前缀）以及 base URL 是否正确。429 错误表示触发限流——等一分钟重试，或查看完全指南了解等级升级详情。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Do I need to pay to get a SiliconFlow API key?",
+        "zh": "获取硅基流动 API Key 需要付费吗？"
+      },
+      "answer": {
+        "en": "No. Registration and API key creation are completely free. New users receive ¥30 in free credits, and several models including Qwen3-8B and DeepSeek-R1-Distill-Qwen-7B remain free within rate limits even after credits are exhausted.",
+        "zh": "不需要。注册和创建 API Key 完全免费。新用户获得 ¥30 免费额度，额度用完后 Qwen3-8B 和 DeepSeek-R1-Distill-Qwen-7B 等模型在速率限制内仍可免费使用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I use SiliconFlow without real-name verification?",
+        "zh": "不做实名认证能用硅基流动吗？"
+      },
+      "answer": {
+        "en": "You can register and create keys without verification, but you will miss out on the ¥16 verification bonus and will have lower rate limits. Completing verification is strongly recommended to unlock full free-tier benefits.",
+        "zh": "可以注册和创建 Key，但拿不到 ¥16 认证额度，速率限制也更低。强烈建议完成认证以解锁完整免费权益。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "SiliconFlow Registration Guide",
+      "url": "https://docs.siliconflow.cn/",
+      "site": "SiliconFlow",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "SiliconFlow Console",
+      "url": "https://cloud.siliconflow.cn/",
+      "site": "SiliconFlow",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "How to Get a SiliconFlow API Key (2026 Tutorial) | Get Model Key",
+      "zh": "硅基流动 API Key 注册教程（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Step-by-step tutorial: register on siliconflow.cn, verify your identity for ¥30 free credits, create an API key, and make your first free model call in 5 minutes.",
+      "zh": "逐步教程：在 siliconflow.cn 注册、实名认证领取 ¥30 免费额度、创建 API Key，5 分钟完成首次免费模型调用。"
+    }
+  }
+}

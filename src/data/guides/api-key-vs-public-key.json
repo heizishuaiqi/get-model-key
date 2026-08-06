@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-03",
   "updatedAt": "2026-07-29",
   "readingMinutes": 6,
   "title": {
@@ -16,7 +16,13 @@
     "en": "API keys, public keys, and private keys serve very different purposes. Learn what each one does, how they differ, and why an API key is neither a public nor a private key.",
     "zh": "API Key、公钥和私钥的用途完全不同。了解各自的作用、区别，以及为什么 API Key 既不是公钥也不是私钥。"
   },
-  "tags": ["api key", "public key", "private key", "security", "basics"],
+  "tags": [
+    "api key",
+    "public key",
+    "private key",
+    "security",
+    "basics"
+  ],
   "providerSlugs": [],
   "sections": [
     {

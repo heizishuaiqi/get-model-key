@@ -4,7 +4,7 @@
   "topic": "api-key-setup",
   "pillar": true,
   "cluster": "grok",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-02",
   "updatedAt": "2026-07-29",
   "readingMinutes": 10,
   "title": {
@@ -15,8 +15,16 @@
     "en": "Everything you need to know about Grok API keys: how to register on xAI, create keys, understand Grok-2 vs Grok-3 vs Grok-4.5 pricing, fix common errors, and build real-time-aware applications.",
     "zh": "关于 Grok API Key 的一切：如何在 xAI 注册、创建密钥、理解 Grok-2 / Grok-3 / Grok-4.5 定价差异、排查常见错误，以及构建实时信息应用。"
   },
-  "tags": ["grok", "xai", "api key", "complete guide", "grok 4.5"],
-  "providerSlugs": ["xai"],
+  "tags": [
+    "grok",
+    "xai",
+    "api key",
+    "complete guide",
+    "grok 4.5"
+  ],
+  "providerSlugs": [
+    "xai"
+  ],
   "sections": [
     {
       "id": "what-is-grok",

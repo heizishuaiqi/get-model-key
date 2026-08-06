@@ -55,6 +55,16 @@ export interface Category {
   order: number;
 }
 
+export interface SiteAuthor {
+  name: string;
+  role: Record<'en' | 'zh', string>;
+  bio: Record<'en' | 'zh', string>;
+  experience: Record<'en' | 'zh', string>;
+  social?: {
+    github?: string;
+  };
+}
+
 export interface SiteConfig {
   siteName: string;
   alternateSiteName: string[];
@@ -64,4 +74,7 @@ export interface SiteConfig {
   contactEmail: string;
   socialImage: string;
   favicon: string;
+  author?: SiteAuthor;
+  foundedDate?: string;
+  editorialProcess?: Record<'en' | 'zh', string>;
 }

@@ -1,0 +1,222 @@
+{
+  "slug": "silicon-flow-byok-setup-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "pillar": false,
+  "cluster": "siliconflow",
+  "pillarSlug": "silicon-flow-api-key-complete-guide",
+  "publishedAt": "2026-07-24",
+  "updatedAt": "2026-07-29",
+  "readingMinutes": 6,
+  "title": {
+    "en": "SiliconFlow BYOK Setup Guide: Use One Key in Cherry Studio, ChatHub, Claude Code & More",
+    "zh": "硅基流动 BYOK 接入指南：一把 Key 用在 Cherry Studio、ChatHub、Claude Code 等工具"
+  },
+  "excerpt": {
+    "en": "Because SiliconFlow is OpenAI-compatible, you can paste your API key into dozens of AI tools. Here's how to configure Cherry Studio, ChatHub, immersive-translate, and Claude Code with step-by-step instructions.",
+    "zh": "因为硅基流动兼容 OpenAI 格式，你可以把 API Key 粘贴到几十款 AI 工具中。以下是 Cherry Studio、ChatHub、沉浸式翻译和 Claude Code 的详细配置步骤。"
+  },
+  "tags": [
+    "siliconflow",
+    "byok",
+    "cherry studio",
+    "chathub",
+    "claude code",
+    "immersive translate"
+  ],
+  "providerSlugs": [
+    "silicon-flow"
+  ],
+  "sections": [
+    {
+      "id": "what-is-byok",
+      "heading": {
+        "en": "What is BYOK and Why SiliconFlow Excels at It",
+        "zh": "什么是 BYOK？为什么硅基流动特别适合"
+      },
+      "paragraphs": {
+        "en": [
+          "BYOK stands for Bring Your Own Key. It means a third-party AI tool lets you enter your own API key and choose your own model backend, rather than forcing you to use the tool creator's servers. The tool sends requests to whatever endpoint you specify.",
+          "SiliconFlow is ideal for BYOK because its API is fully OpenAI-compatible. Any tool that accepts a custom OpenAI base URL will work with SiliconFlow out of the box — no special integration needed. You get access to 200+ models in your favorite tool without running anything locally.",
+          "This is especially powerful for free-tier users: you can use the free Qwen3-8B model inside premium chat clients and translation tools at zero cost."
+        ],
+        "zh": [
+          "BYOK 全称 Bring Your Own Key，指第三方 AI 工具允许你输入自己的 API Key、选择自己的模型后端，而不是强制用工具方的服务器。工具把请求发到你指定的端点。",
+          "硅基流动特别适合 BYOK，因为它的 API 完全兼容 OpenAI 格式。任何接受自定义 OpenAI base URL 的工具都能开箱即用——不需要特殊适配。你在喜欢的工具里就能访问 200+ 模型，无需本地运行任何东西。",
+          "对免费用户尤其友好：你可以在高级聊天客户端和翻译工具中免费使用 Qwen3-8B 等免费模型，零成本。"
+        ]
+      }
+    },
+    {
+      "id": "cherry-studio",
+      "heading": {
+        "en": "Cherry Studio: Multi-Model Desktop Chat Client",
+        "zh": "Cherry Studio：多模型桌面聊天客户端"
+      },
+      "paragraphs": {
+        "en": [
+          "Cherry Studio is a popular open-source desktop client that lets you chat with multiple AI models side by side. It natively supports custom OpenAI-compatible providers, making SiliconFlow integration seamless.",
+          "To set it up: open Cherry Studio Settings, navigate to Model Providers, click Add Provider, and fill in the fields. Set the provider name to SiliconFlow, the API endpoint to https://api.siliconflow.cn/v1, and paste your API key. Then add the model IDs you want to use (e.g., Qwen/Qwen3-8B, deepseek-ai/DeepSeek-V4-Pro) in the models field."
+        ],
+        "zh": [
+          "Cherry Studio 是一款流行的开源桌面客户端，支持多个 AI 模型并排聊天。它原生支持自定义 OpenAI 兼容供应商，硅基流动接入无缝。",
+          "设置方法：打开 Cherry Studio 设置，进入「模型供应商」，点击「添加供应商」，填写字段。供应商名称填 SiliconFlow，API 端点填 https://api.siliconflow.cn/v1，粘贴你的 API Key。然后在模型字段添加你要用的模型 ID（如 Qwen/Qwen3-8B、deepseek-ai/DeepSeek-V4-Pro）。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Provider Name: SiliconFlow",
+          "API Endpoint: https://api.siliconflow.cn/v1",
+          "API Key: your sk- key from the SiliconFlow console",
+          "Models: Qwen/Qwen3-8B, deepseek-ai/DeepSeek-V4-Pro, etc.",
+          "Save and start chatting with 200+ models"
+        ],
+        "zh": [
+          "供应商名称：SiliconFlow",
+          "API 端点：https://api.siliconflow.cn/v1",
+          "API Key：硅基流动控制台的 sk- 密钥",
+          "模型：Qwen/Qwen3-8B、deepseek-ai/DeepSeek-V4-Pro 等",
+          "保存后即可用 200+ 模型聊天"
+        ]
+      }
+    },
+    {
+      "id": "chathub",
+      "heading": {
+        "en": "ChatHub: Browser Extension for Multi-Model Chat",
+        "zh": "ChatHub：浏览器多模型聊天扩展"
+      },
+      "paragraphs": {
+        "en": [
+          "ChatHub is a browser extension (available for Chrome, Edge, and Firefox) that lets you compare responses from multiple AI models simultaneously. It supports custom OpenAI-compatible endpoints, so SiliconFlow works directly.",
+          "In ChatHub settings, go to Custom AI Providers, add a new provider, and enter the same endpoint and key as above. The advantage of ChatHub is that you can see responses from Qwen3, DeepSeek, and GLM side by side in real time, helping you pick the best model for each query."
+        ],
+        "zh": [
+          "ChatHub 是一款浏览器扩展（Chrome、Edge、Firefox 可用），支持同时对比多个 AI 模型的回复。它支持自定义 OpenAI 兼容端点，硅基流动直接可用。",
+          "在 ChatHub 设置中，进入「自定义 AI 供应商」，添加新供应商，输入与上面相同的端点和 Key。ChatHub 的优势是可以实时并排看到 Qwen3、DeepSeek、GLM 的回复，帮你为每类查询选最佳模型。"
+        ]
+      }
+    },
+    {
+      "id": "immersive-translate",
+      "heading": {
+        "en": "Immersive Translate: Document and Webpage Translation",
+        "zh": "沉浸式翻译：文档和网页翻译"
+      },
+      "paragraphs": {
+        "en": [
+          "Immersive Translate is a popular translation tool that can use AI models for higher-quality translations. By default it requires its own subscription, but it also supports BYOK for OpenAI-compatible APIs. Configuring SiliconFlow as the backend gives you access to powerful Chinese-optimized models at a fraction of the cost.",
+          "In Immersive Translate settings, find the AI Translation service section, select Custom OpenAI-compatible, and set the base URL to https://api.siliconflow.cn/v1. Use a model like Qwen/Qwen3-8B (free) or deepseek-ai/DeepSeek-V4-Pro (paid) depending on your quality and budget needs."
+        ],
+        "zh": [
+          "沉浸式翻译是一款热门翻译工具，支持用 AI 模型做更高质量翻译。默认需要自己的订阅，但也支持 BYOK 接入 OpenAI 兼容 API。把硅基流动配置为后端，可以用中文优化的强模型，成本大幅降低。",
+          "在沉浸式翻译设置中，找到「AI 翻译服务」部分，选择「自定义 OpenAI 兼容」，将 base URL 设为 https://api.siliconflow.cn/v1。根据质量和预算需求选择 Qwen/Qwen3-8B（免费）或 deepseek-ai/DeepSeek-V4-Pro（付费）等模型。"
+        ]
+      }
+    },
+    {
+      "id": "claude-code",
+      "heading": {
+        "en": "Claude Code: Coding Agent with SiliconFlow Backend",
+        "zh": "Claude Code：用硅基流动做后端的编程 Agent"
+      },
+      "paragraphs": {
+        "en": [
+          "Claude Code is an AI coding agent that normally uses Anthropic's Claude models. However, because it relies on an OpenAI-compatible API layer, you can point it at SiliconFlow and use DeepSeek-V4-Pro or Qwen3 as the coding backend instead — often at much lower cost.",
+          "Configuration involves setting environment variables. Set ANTHROPIC_BASE_URL (or the relevant provider URL variable) to https://api.siliconflow.cn/v1 and your SiliconFlow key as the API key. Then specify the model ID in your Claude Code configuration. DeepSeek-V4-Pro is the recommended model for coding tasks due to its strong reasoning and code-generation benchmarks."
+        ],
+        "zh": [
+          "Claude Code 是 AI 编程 Agent，通常用 Anthropic 的 Claude 模型。但由于它依赖 OpenAI 兼容的 API 层，你可以把端点指向硅基流动，用 DeepSeek-V4-Pro 或 Qwen3 做编程后端——成本通常低得多。",
+          "配置需要设置环境变量。把 ANTHROPIC_BASE_URL（或对应的供应商 URL 变量）设为 https://api.siliconflow.cn/v1，硅基流动 Key 设为 API Key。然后在 Claude Code 配置中指定模型 ID。编程任务推荐 DeepSeek-V4-Pro，推理和代码生成基准表现强。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "bash",
+          "code": "# Set SiliconFlow as the backend for Claude Code\nexport ANTHROPIC_BASE_URL=\"https://api.siliconflow.cn/v1\"\nexport ANTHROPIC_API_KEY=\"sk-your-siliconflow-key\"\n\n# Optional: specify the coding model\nexport CLAUDE_CODE_MODEL=\"deepseek-ai/DeepSeek-V4-Pro\"",
+          "caption": {
+            "en": "Environment variables for routing Claude Code through SiliconFlow",
+            "zh": "让 Claude Code 走硅基流动后端的环境变量"
+          }
+        }
+      ]
+    },
+    {
+      "id": "general-config",
+      "heading": {
+        "en": "General Configuration Pattern",
+        "zh": "通用配置模式"
+      },
+      "paragraphs": {
+        "en": [
+          "For any other tool that supports custom OpenAI endpoints, the configuration is always the same three values. Once you know this pattern, you can connect SiliconFlow to virtually any BYOK-compatible tool.",
+          "If a tool asks for an API key prefix, SiliconFlow keys start with sk-. If a tool requires a model list, use the full vendor/model-name format. If a tool has a connection test feature, test with a free model first (Qwen/Qwen3-8B) to confirm without spending credits."
+        ],
+        "zh": [
+          "对于任何其他支持自定义 OpenAI 端点的工具，配置永远是相同的三个值。掌握了这个模式，你几乎可以把硅基流动接入任何 BYOK 兼容工具。",
+          "如果工具要求 API Key 前缀，硅基流动 Key 以 sk- 开头。如果工具需要模型列表，用完整的「厂商/模型名」格式。如果工具有连接测试功能，先用免费模型（Qwen/Qwen3-8B）测试，不花额度即可确认。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Base URL: https://api.siliconflow.cn/v1 (China) or https://api.siliconflow.com/v1 (global)",
+          "API Key: your sk- key from SiliconFlow console",
+          "Model ID format: vendor/model-name (e.g., Qwen/Qwen3-8B)",
+          "Test with a free model first to avoid spending credits"
+        ],
+        "zh": [
+          "Base URL：https://api.siliconflow.cn/v1（中国）或 https://api.siliconflow.com/v1（全球）",
+          "API Key：硅基流动控制台的 sk- 密钥",
+          "模型 ID 格式：厂商/模型名（如 Qwen/Qwen3-8B）",
+          "先用免费模型测试，避免消耗额度"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Can I use one SiliconFlow key in multiple tools simultaneously?",
+        "zh": "一个硅基流动 Key 能同时在多个工具里用吗？"
+      },
+      "answer": {
+        "en": "Yes. The same API key works across unlimited tools and devices at the same time. All requests share your account's rate limits and credit balance. For better usage tracking, you can create separate keys for each tool in the SiliconFlow console and give them descriptive names.",
+        "zh": "可以。同一个 API Key 能同时在无限个工具和设备上使用，所有请求共享账号的速率限制和额度余额。为了更好追踪用量，可以在硅基流动控制台为每个工具创建单独的 Key 并取描述性名称。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does BYOK work with free models?",
+        "zh": "BYOK 能用免费模型吗？"
+      },
+      "answer": {
+        "en": "Yes. Free models like Qwen3-8B work in any BYOK-compatible tool, subject to the same rate limits as direct API calls. This means you can use free models in premium chat clients and translation tools at zero cost.",
+        "zh": "可以。Qwen3-8B 等免费模型在任何 BYOK 兼容工具中都能用，速率限制与直接调用 API 相同。这意味着你可以零成本在高级聊天客户端和翻译工具中使用免费模型。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Cherry Studio Documentation",
+      "url": "https://docs.cherry-ai.com/",
+      "site": "Cherry Studio",
+      "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "SiliconFlow API Reference",
+      "url": "https://docs.siliconflow.cn/api-reference",
+      "site": "SiliconFlow Docs",
+      "checkedAt": "2026-07-29"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "SiliconFlow BYOK Setup Guide (2026) | Get Model Key",
+      "zh": "硅基流动 BYOK 接入指南（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Configure SiliconFlow API key in Cherry Studio, ChatHub, immersive-translate, and Claude Code. Step-by-step BYOK setup with endpoint and model ID formats.",
+      "zh": "在 Cherry Studio、ChatHub、沉浸式翻译、Claude Code 中配置硅基流动 API Key。含端点和模型 ID 格式的 BYOK 逐步接入教程。"
+    }
+  }
+}

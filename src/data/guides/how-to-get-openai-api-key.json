@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "openai",
   "pillarSlug": "openai-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-15",
   "updatedAt": "2026-07-29",
   "readingMinutes": 8,
   "title": {
@@ -16,8 +16,15 @@
     "en": "OpenAI's API powers GPT-4o, o-series reasoning models, and more. Here's exactly how to create your OpenAI API key, set up billing, configure usage limits, and make your first request.",
     "zh": "OpenAI 的 API 支持 GPT-4o、o 系列推理模型等。本文教你如何创建 OpenAI API Key、设置计费、配置用量限制，并发送第一个请求。"
   },
-  "tags": ["openai", "api key", "tutorial", "chatgpt"],
-  "providerSlugs": ["openai"],
+  "tags": [
+    "openai",
+    "api key",
+    "tutorial",
+    "chatgpt"
+  ],
+  "providerSlugs": [
+    "openai"
+  ],
   "sections": [
     {
       "id": "why-openai-api",

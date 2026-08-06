@@ -4,7 +4,7 @@
   "topic": "basics",
   "pillar": true,
   "cluster": "ai-basics",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-06-05",
   "updatedAt": "2026-07-29",
   "readingMinutes": 11,
   "title": {
@@ -15,7 +15,13 @@
     "en": "A complete beginner's guide to AI chatbots, large language models, prompts, hallucinations, and how to start using AI APIs. Covers what AI is, how it works, and practical tips for getting started.",
     "zh": "面向新手的 AI 完整入门指南，涵盖 AI 聊天机器人、大语言模型、Prompt、AI 幻觉以及如何开始使用 AI API。介绍 AI 是什么、如何工作，以及实用的上手技巧。"
   },
-  "tags": ["ai beginner", "prompt", "chatbot", "hallucination", "tutorial"],
+  "tags": [
+    "ai beginner",
+    "prompt",
+    "chatbot",
+    "hallucination",
+    "tutorial"
+  ],
   "providerSlugs": [],
   "sections": [
     {
@@ -66,12 +72,12 @@
         "en": [
           "A prompt is the text you give to an AI model to get a response. It's how you communicate with AI — you type a question, instruction, or piece of text, and the AI generates a relevant response. Writing good prompts is the single most important skill for getting useful results from AI.",
           "A well-structured prompt typically contains three elements: a role (who the AI should act as), a task (what you want it to do), and context (background information). For example, instead of asking \"Write a blog post about AI,\" a better prompt would be: \"You are a technology blogger. Write a 500-word blog post explaining AI hallucinations to beginners, using simple analogies.\"",
-          "If you want to dive deeper into prompt writing, our detailed guide on how to write good prompts covers advanced techniques like few-shot examples, chain-of-thought reasoning, and prompt templates for different tasks. You can also start with our primer on what a prompt is if you're completely new to the concept."
+          "If you want to dive deeper, our [[guide:how-to-write-good-prompts|detailed guide on how to write good prompts]] covers advanced techniques like few-shot examples, chain-of-thought reasoning, and prompt templates for different tasks. You can also start with our primer on [[guide:what-is-a-prompt|what a prompt is]] if you're completely new to the concept."
         ],
         "zh": [
           "Prompt 是你给 AI 模型的文本输入，用来获取回复。这是你与 AI 交流的方式——你输入一个问题、指令或一段文本，AI 生成相关的回复。写好 Prompt 是从 AI 获得有用结果的最重要技能。",
           "一个结构良好的 Prompt 通常包含三个要素：角色（AI 应该扮演什么身份）、任务（你希望它做什么）和上下文（背景信息）。例如，与其问「写一篇关于 AI 的博客」，不如这样写：「你是一位科技博主。写一篇 500 字的博客，用简单的类比向新手解释 AI 幻觉。」",
-          "如果你想深入了解 Prompt 写作，我们关于如何写出好 Prompt 的详细指南涵盖了少样本示例、思维链推理和不同任务的 Prompt 模板等高级技巧。如果你完全是新手，也可以先从什么是 Prompt 这篇入门文章开始。"
+          "如果你想深入了解，我们的 [[guide:how-to-write-good-prompts|如何写出好 Prompt 的详细指南]] 涵盖了少样本示例、思维链推理和不同任务的 Prompt 模板等高级技巧。如果你完全是新手，也可以先从 [[guide:what-is-a-prompt|什么是 Prompt]] 这篇入门文章开始。"
         ]
       }
     },
@@ -85,12 +91,12 @@
         "en": [
           "AI hallucination is when a language model generates text that sounds plausible and confident but is factually wrong. The model doesn't know it's wrong — it's simply producing text that statistically looks like a correct answer based on its training data.",
           "Common examples include inventing fake citations, fabricating statistics, making up API methods that don't exist, or confidently stating incorrect historical facts. Hallucinations are not bugs in the traditional sense — they're an inherent property of how language models work.",
-          "To reduce hallucinations, you can: verify important facts independently, ask the AI to cite its sources (and check them), use retrieval-augmented generation (RAG) to ground answers in real documents, and phrase your prompt to discourage guessing (e.g., \"If you're not sure, say you don't know\"). For a thorough understanding, read our complete guide on what AI hallucinations are and how they work."
+          "To reduce hallucinations, you can: verify important facts independently, ask the AI to cite its sources (and check them), use retrieval-augmented generation (RAG) to ground answers in real documents, and phrase your prompt to discourage guessing (e.g., \"If you're not sure, say you don't know\"). For a thorough understanding, read our complete guide on [[guide:what-are-ai-hallucinations|what AI hallucinations are and how they work]]."
         ],
         "zh": [
           "AI 幻觉是指语言模型生成的文本听起来合理且自信，但事实上是错误的。模型不知道自己错了——它只是根据训练数据生成在统计上看起来像正确答案的文本。",
           "常见例子包括编造虚假引用、捏造统计数据、虚构不存在的 API 方法，或自信地陈述错误的历史事实。幻觉不是传统意义上的 bug——它是语言模型工作方式的固有特性。",
-          "要减少幻觉，你可以：独立验证重要事实、要求 AI 引用来源（并检查它们）、使用检索增强生成（RAG）将回答基于真实文档，以及在 Prompt 中明确要求不要猜测（如「如果不确定，就说不知道」）。如需深入理解，请阅读我们关于什么是 AI 幻觉及其工作原理的完整指南。"
+          "要减少幻觉，你可以：独立验证重要事实、要求 AI 引用来源（并检查它们）、使用检索增强生成（RAG）将回答基于真实文档，以及在 Prompt 中明确要求不要猜测（如「如果不确定，就说不知道」）。如需深入理解，请阅读我们关于 [[guide:what-are-ai-hallucinations|什么是 AI 幻觉及其工作原理]] 的完整指南。"
         ]
       }
     },
@@ -104,12 +110,12 @@
         "en": [
           "Search engines like Google retrieve and rank web pages that match your keywords. You get a list of links, and you click through to read the content yourself. AI chatbots, on the other hand, generate a direct answer by synthesizing information from their training data.",
           "Each approach has trade-offs. Search engines give you original sources and the latest information, but require you to do the reading. AI chatbots save time by synthesizing answers, but may hallucinate or have outdated information. For complex, factual research, search engines are often more reliable. For creative tasks, brainstorming, and quick explanations, AI chatbots are more convenient.",
-          "The two technologies are increasingly converging. Google's AI Overviews (formerly SGE) and AI-powered search like Perplexity combine search and AI generation, giving you synthesized answers with source citations. Our detailed comparison of AI chatbots vs search engines breaks down the strengths and weaknesses of each approach across different use cases."
+          "The two technologies are increasingly converging. Google's AI Overviews (formerly SGE) and AI-powered search like Perplexity combine search and AI generation, giving you synthesized answers with source citations. Our detailed [[guide:ai-chatbots-vs-search-engines|comparison of AI chatbots vs search engines]] breaks down the strengths and weaknesses of each approach across different use cases."
         ],
         "zh": [
           "像 Google 这样的搜索引擎会检索和排序与你的关键词匹配的网页。你得到一个链接列表，然后点击进去自己阅读内容。而 AI 聊天机器人通过综合训练数据中的信息直接生成答案。",
           "两种方式各有利弊。搜索引擎给你原始来源和最新信息，但需要你自己阅读。AI 聊天机器人通过综合答案节省时间，但可能产生幻觉或信息过时。对于复杂的、事实性的研究，搜索引擎通常更可靠。对于创意任务、头脑风暴和快速解释，AI 聊天机器人更方便。",
-          "这两种技术正在日益融合。Google 的 AI Overviews（原 SGE）和 Perplexity 等 AI 驱动的搜索结合了搜索和 AI 生成，为你提供带来源引用的综合答案。我们关于 AI 聊天机器人 vs 搜索引擎的详细对比分析了不同使用场景下两种方法各自的优缺点。"
+          "这两种技术正在日益融合。Google 的 AI Overviews（原 SGE）和 Perplexity 等 AI 驱动的搜索结合了搜索和 AI 生成，为你提供带来源引用的综合答案。我们关于 [[guide:ai-chatbots-vs-search-engines|AI 聊天机器人 vs 搜索引擎的详细对比]] 分析了不同使用场景下两种方法各自的优缺点。"
         ]
       }
     },
@@ -149,11 +155,11 @@
       "paragraphs": {
         "en": [
           "An API key is a unique string that authenticates your requests to an AI provider. To get one, sign up at a provider's platform (e.g., platform.openai.com for OpenAI), navigate to the API keys section, and create a new key. Keep it secret — never commit it to version control or expose it in frontend code.",
-          "Most providers charge based on usage (typically per token). Some, like Google AI Studio, offer free tiers for development. Start with small experiments to understand pricing before scaling up. For a complete walkthrough, read our beginner's guide on what an API key is."
+          "Most providers charge based on usage (typically per token). Some, like Google AI Studio, offer free tiers for development. Start with small experiments to understand pricing before scaling up. If you're unsure what an API key actually does under the hood, read our beginner's guide on [[guide:what-is-an-api-key|what an API key is]]. You can also compare costs across providers in our [[guide:ai-api-token-price-comparison-2026|API token price comparison]]."
         ],
         "zh": [
           "API Key 是用于验证你对 AI 供应商请求的唯一字符串。要获取 Key，在供应商平台（如 OpenAI 的 platform.openai.com）注册，进入 API Key 页面，创建新 Key。务必保密——不要提交到版本控制或暴露在前端代码中。",
-          "大多数供应商按用量收费（通常按 token 计费）。有些（如 Google AI Studio）提供开发用的免费额度。先做小实验了解定价，再逐步扩大规模。如需完整指引，请阅读我们关于什么是 API Key 的新手指南。"
+          "大多数供应商按用量收费（通常按 token 计费）。有些（如 Google AI Studio）提供开发用的免费额度。先做小实验了解定价，再逐步扩大规模。如果你不确定 API Key 底层是如何工作的，请阅读我们关于 [[guide:what-is-an-api-key|什么是 API Key]] 的新手指南。你也可以在 [[guide:ai-api-token-price-comparison-2026|API token 价格对比]] 中比较各供应商的成本。"
         ]
       }
     },
@@ -165,10 +171,10 @@
       },
       "paragraphs": {
         "en": [
-          "There's no single \"best\" AI model — the right choice depends on your use case, budget, and technical requirements. Here are the main options to consider:"
+          "There's no single \"best\" AI model — the right choice depends on your use case, budget, and technical requirements. Here are the main options to consider. If you want to experiment with multiple models without managing separate accounts, [[guide:how-to-get-openrouter-api-key|OpenRouter]] gives you a single API for 100+ models. For budget-conscious projects, our [[guide:free-ai-api-keys|free AI API keys list]] covers every provider with a free tier."
         ],
         "zh": [
-          "没有唯一「最好」的 AI 模型——正确的选择取决于你的使用场景、预算和技术需求。以下是需要考虑的主要选项："
+          "没有唯一「最好」的 AI 模型——正确的选择取决于你的使用场景、预算和技术需求。以下是需要考虑的主要选项。如果你想用一个账号试多个模型，[[guide:how-to-get-openrouter-api-key|OpenRouter]] 提供单一 API 访问 100+ 模型。预算有限的项目可以参考我们的 [[guide:free-ai-api-keys|免费 AI API Keys 清单]]，涵盖所有提供免费额度的供应商。"
         ]
       },
       "bullets": {

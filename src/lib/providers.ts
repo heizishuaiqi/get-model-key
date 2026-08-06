@@ -108,7 +108,7 @@ const DEFAULT_SITE_CONFIG: SiteConfig = {
   domain: 'https://www.getmodelkey.com',
   defaultLocale: 'en',
   supportedLocales: ['en', 'zh'],
-  contactEmail: 'hello@getmodelkey.com',
+  contactEmail: 'heizishuaiqi@gmail.com',
   socialImage: '/android-chrome-512x512.png',
   favicon: '/favicon.ico',
 };

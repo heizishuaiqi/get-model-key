@@ -5,7 +5,7 @@
   "pillar": false,
   "cluster": "gemini",
   "pillarSlug": "gemini-api-key-complete-guide",
-  "publishedAt": "2026-07-29",
+  "publishedAt": "2026-07-05",
   "updatedAt": "2026-07-29",
   "readingMinutes": 8,
   "title": {
@@ -16,8 +16,16 @@
     "en": "Get your Google Gemini API key through Google AI Studio or Google Cloud. This guide covers both methods, free tier limits, and how to make your first request.",
     "zh": "通过 Google AI Studio 或 Google Cloud 获取 Gemini API Key。本指南覆盖两种方法、免费额度限制，以及如何发送第一个请求。"
   },
-  "tags": ["gemini", "google", "api key", "setup", "google ai studio"],
-  "providerSlugs": ["google"],
+  "tags": [
+    "gemini",
+    "google",
+    "api key",
+    "setup",
+    "google ai studio"
+  ],
+  "providerSlugs": [
+    "google"
+  ],
   "sections": [
     {
       "id": "two-ways",

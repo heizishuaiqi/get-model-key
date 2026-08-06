@@ -8,6 +8,7 @@ import { getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuideMetadata, buildFaqStructuredData } from '@/lib/seo';
 import { TOPIC_LABELS } from '@/lib/shared';
 import { renderParagraphWithLinks } from '@/lib/inline-links';
+import AuthorByline from '@/components/layout/AuthorByline';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -55,7 +56,13 @@ export default async function ZhGuideDetailPage({ params }: Props) {
     dateModified: guide.updatedAt,
     inLanguage: 'zh-CN',
     mainEntityOfPage: `${siteConfig.domain}/zh/guides/${guide.slug}/`,
-    author: {
+    author: siteConfig.author ? {
+      '@type': 'Person',
+      name: siteConfig.author.name,
+      url: `${siteConfig.domain}/zh/about/`,
+      description: siteConfig.author.bio.zh,
+      jobTitle: siteConfig.author.role.zh,
+    } : {
       '@type': 'Organization',
       name: siteConfig.siteName,
       url: siteConfig.domain,
@@ -148,7 +155,13 @@ export default async function ZhGuideDetailPage({ params }: Props) {
               <span className="text-caption text-text-muted">更新于：{guide.updatedAt}</span>
             </div>
             <h1 className="mb-4 text-h1 text-text-primary">{guide.title.zh}</h1>
-            <p className="text-body text-text-secondary">{guide.excerpt.zh}</p>
+            <p className="mb-5 text-body text-text-secondary">{guide.excerpt.zh}</p>
+            <AuthorByline
+              author={siteConfig.author}
+              lang="zh"
+              publishedAt={guide.publishedAt}
+              updatedAt={guide.updatedAt}
+            />
           </header>
 
           <div className="space-y-8">

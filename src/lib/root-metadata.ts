@@ -12,7 +12,7 @@ export const structuredData = [
     url: baseUrl,
     logo: `${baseUrl}/android-chrome-512x512.png`,
     sameAs: [
-      'https://github.com/getmodelkey',
+      'https://github.com/heizishuaiqi',
     ],
   },
   {
