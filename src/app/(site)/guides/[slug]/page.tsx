@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
@@ -9,6 +10,7 @@ import { getGuideMetadata, buildFaqStructuredData } from '@/lib/seo';
 import { TOPIC_LABELS } from '@/lib/shared';
 import { renderParagraphWithLinks } from '@/lib/inline-links';
 import AuthorByline from '@/components/layout/AuthorByline';
+import { AdsterraBanner, AdsterraNative } from '@/components/ads/AdsterraAd';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -165,43 +167,48 @@ export default async function GuideDetailPage({ params }: Props) {
           </header>
 
           <div className="space-y-8">
-            {guide.sections.map((section) => (
-              <Card key={section.id} variant="standard">
-                <h2 className="mb-4 text-h3 text-text-primary">{section.heading.en}</h2>
-                <div className="space-y-3">
-                  {section.paragraphs.en.map((paragraph, index) => (
-                    <p key={`${section.id}-paragraph-${index}`} className="text-body text-text-secondary">
-                      {renderParagraphWithLinks(paragraph, 'en')}
-                    </p>
-                  ))}
-                </div>
-                {section.bullets?.en && section.bullets.en.length > 0 && (
-                  <ul className="mt-4 list-disc space-y-2 pl-5 text-body-sm text-text-secondary">
-                    {section.bullets.en.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-                {section.codeBlocks && section.codeBlocks.length > 0 && (
-                  <div className="mt-4 space-y-3">
-                    {section.codeBlocks.map((block, i) => (
-                      <div key={i}>
-                        <div className="flex items-center gap-2 rounded-t-lg border border-b-0 border-white-06 bg-surface-2 px-4 py-2">
-                          <span className="text-caption font-mono text-text-muted">{block.language}</span>
-                        </div>
-                        <pre className="overflow-x-auto rounded-b-lg border border-white-06 bg-[#1a1d1b] p-4 text-body-sm leading-relaxed">
-                          <code className="font-mono text-text-secondary">{block.code}</code>
-                        </pre>
-                        {block.caption?.en && (
-                          <p className="mt-1 text-caption text-text-muted">{block.caption.en}</p>
-                        )}
-                      </div>
+            {guide.sections.map((section, sectionIndex) => (
+              <Fragment key={section.id}>
+                <Card variant="standard">
+                  <h2 className="mb-4 text-h3 text-text-primary">{section.heading.en}</h2>
+                  <div className="space-y-3">
+                    {section.paragraphs.en.map((paragraph, index) => (
+                      <p key={`${section.id}-paragraph-${index}`} className="text-body text-text-secondary">
+                        {renderParagraphWithLinks(paragraph, 'en')}
+                      </p>
                     ))}
                   </div>
-                )}
-              </Card>
+                  {section.bullets?.en && section.bullets.en.length > 0 && (
+                    <ul className="mt-4 list-disc space-y-2 pl-5 text-body-sm text-text-secondary">
+                      {section.bullets.en.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {section.codeBlocks && section.codeBlocks.length > 0 && (
+                    <div className="mt-4 space-y-3">
+                      {section.codeBlocks.map((block, i) => (
+                        <div key={i}>
+                          <div className="flex items-center gap-2 rounded-t-lg border border-b-0 border-white-06 bg-surface-2 px-4 py-2">
+                            <span className="text-caption font-mono text-text-muted">{block.language}</span>
+                          </div>
+                          <pre className="overflow-x-auto rounded-b-lg border border-white-06 bg-[#1a1d1b] p-4 text-body-sm leading-relaxed">
+                            <code className="font-mono text-text-secondary">{block.code}</code>
+                          </pre>
+                          {block.caption?.en && (
+                            <p className="mt-1 text-caption text-text-muted">{block.caption.en}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Card>
+                {sectionIndex === 0 ? <AdsterraNative lang="en" /> : null}
+              </Fragment>
             ))}
           </div>
+
+          <AdsterraBanner size="300x250" lang="en" className="mt-10" />
 
           {guide.faq && guide.faq.length > 0 && (
             <section className="mt-10">

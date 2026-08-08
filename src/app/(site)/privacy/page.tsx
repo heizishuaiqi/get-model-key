@@ -108,8 +108,15 @@ export default function PrivacyPage() {
           
           <h3>3.2 Analytics</h3>
           <p>
-            We may use privacy-focused analytics services that respect user privacy 
-            and do not use cookies or track individual users.
+            We may use analytics services (such as Google Analytics) to understand
+            aggregate traffic patterns and improve the site.
+          </p>
+
+          <h3>3.3 Advertising</h3>
+          <p>
+            We may display third-party advertisements (including Adsterra) on some pages.
+            These partners may use cookies or similar technologies to show ads and measure
+            performance. Their data practices are governed by their own privacy policies.
           </p>
 
           <h2>4. Data Security</h2>

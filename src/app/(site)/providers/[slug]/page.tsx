@@ -11,6 +11,7 @@ import { getActiveOffers, getAllProviders, getProviderBySlug, getSiteConfig } fr
 import { getGuidesByProviderSlug } from '@/lib/guides';
 import { getProviderMetadata, buildFaqStructuredData } from '@/lib/seo';
 import { REGION_LABELS } from '@/lib/shared';
+import { AdsterraBanner, AdsterraNative } from '@/components/ads/AdsterraAd';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -131,6 +132,8 @@ export default async function ProviderPage({ params }: Props) {
         <p className="mb-8 rounded-lg border border-white-06 bg-surface-1 px-4 py-3 text-body-sm text-text-tertiary">
           getModelKey links official API key pages only. We do not sell, generate, or broker API keys.
         </p>
+
+        <AdsterraNative lang="en" className="mb-8" />
 
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
           <div className="space-y-8">
@@ -288,6 +291,8 @@ export default async function ProviderPage({ params }: Props) {
                 )}
               </div>
             </Card>
+
+            <AdsterraBanner size="160x600" lang="en" className="hidden lg:flex sticky top-24" />
           </div>
         </div>
       </main>

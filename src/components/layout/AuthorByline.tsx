@@ -11,7 +11,7 @@ interface AuthorBylineProps {
 
 /**
  * Displays an author byline with name, role, and dates.
- * Used on guide pages to establish E-E-A-T signals for AdSense.
+ * Used on guide pages to establish E-E-A-T signals.
  */
 export default function AuthorByline({ author, lang, publishedAt, updatedAt }: AuthorBylineProps) {
   if (!author) return null;
