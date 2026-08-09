@@ -1,0 +1,92 @@
+{
+  "slug": "claude-models-api-pricing",
+  "status": "published",
+  "topic": "comparison",
+  "publishedAt": "2026-08-10",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 12,
+  "pillar": false,
+  "cluster": "claude",
+  "pillarSlug": "claude-api-key-complete-guide",
+  "title": {"en": "Claude Models & API Pricing: Fable, Opus, Sonnet and Haiku", "zh": "Claude 模型与 API 价格：Fable、Opus、Sonnet 和 Haiku"},
+  "excerpt": {"en": "Compare current Claude model pricing, prompt caching, 1M context, Batch and Fast mode, tool charges, data residency, and Sonnet 5 introductory pricing.", "zh": "对比当前 Claude 模型价格、提示缓存、1M 上下文、Batch、Fast mode、工具费用、数据驻留及 Sonnet 5 推广价格。"},
+  "tags": ["claude", "anthropic", "pricing", "models"],
+  "providerSlugs": ["anthropic"],
+  "sections": [
+    {
+      "id": "current-models",
+      "heading": {"en": "Current Claude Model Family", "zh": "当前 Claude 模型家族"},
+      "paragraphs": {
+        "en": ["Anthropic’s current core lineup spans four workload tiers. Claude Fable 5 is the most capable broadly released model, Opus 5 targets complex agentic coding and enterprise work, Sonnet 5 balances speed and intelligence, and Haiku 4.5 prioritizes latency and cost.", "The visual comparison above uses Anthropic’s official model overview and pricing pages checked on August 10, 2026. Claude Mythos 5 shares Fable 5 specifications and pricing but is limited-access through Project Glasswing, so it is not presented as a self-service default."],
+        "zh": ["Anthropic 当前核心产品线覆盖四个工作负载档位：Claude Fable 5 是广泛发布模型中能力最强的版本，Opus 5 面向复杂智能体编程和企业工作，Sonnet 5 平衡速度与智能，Haiku 4.5 则优先考虑延迟与成本。", "上方对比使用 2026 年 8 月 10 日核验的 Anthropic 官方模型概览和价格页。Claude Mythos 5 与 Fable 5 规格和价格相同，但仅通过 Project Glasswing 有限提供，因此没有作为自助使用的默认模型展示。"]
+      }
+    },
+    {
+      "id": "standard-pricing",
+      "heading": {"en": "Standard Token Pricing", "zh": "标准 Token 价格"},
+      "paragraphs": {
+        "en": ["Claude API prices are quoted in USD per million tokens (MTok). Input and output are billed separately, and output tokens are materially more expensive across all four models.", "Choose by workload rather than price alone: Fable for maximum broadly available capability, Opus for complex production agents, Sonnet for the general-purpose balance, and Haiku for high-volume execution."],
+        "zh": ["Claude API 以美元/百万 tokens（MTok）报价，输入和输出分别计费，四个模型的输出 token 都明显贵于输入。", "模型选择不应只看价格：最高广泛可用能力选择 Fable，复杂生产智能体选择 Opus，通用平衡选择 Sonnet，高调用量执行选择 Haiku。"]
+      },
+      "bullets": {
+        "en": ["Fable 5: $10 input · $50 output", "Opus 5: $5 input · $25 output", "Sonnet 5: introductory $2 input · $10 output through August 31, 2026", "Haiku 4.5: $1 input · $5 output"],
+        "zh": ["Fable 5：输入 $10 · 输出 $50", "Opus 5：输入 $5 · 输出 $25", "Sonnet 5：截至 2026 年 8 月 31 日推广价输入 $2 · 输出 $10", "Haiku 4.5：输入 $1 · 输出 $5"]
+      }
+    },
+    {
+      "id": "sonnet-price-change",
+      "heading": {"en": "Sonnet 5 Introductory Price Ends August 31", "zh": "Sonnet 5 推广价将在 8 月 31 日结束"},
+      "paragraphs": {
+        "en": ["Sonnet 5 has time-limited introductory pricing of $2 per MTok input and $10 per MTok output through August 31, 2026. On September 1, 2026, standard pricing becomes $3 input and $15 output.", "The cache prices change at the same time: 5-minute writes move from $2.50 to $3.75, 1-hour writes from $4 to $6, and cache hits from $0.20 to $0.30. Budget September and later workloads with the standard rates now."],
+        "zh": ["Sonnet 5 在 2026 年 8 月 31 日之前执行输入 $2/MTok、输出 $10/MTok 的限时推广价；从 2026 年 9 月 1 日起，标准价格变为输入 $3、输出 $15。", "缓存价格也会同时变化：5 分钟写入从 $2.50 调整为 $3.75，1 小时写入从 $4 调整为 $6，缓存命中从 $0.20 调整为 $0.30。9 月及之后的预算现在就应使用标准价格。"]
+      }
+    },
+    {
+      "id": "prompt-caching",
+      "heading": {"en": "Prompt Caching Prices", "zh": "提示缓存价格"},
+      "paragraphs": {
+        "en": ["Anthropic separates cache creation from cache reads. A 5-minute cache write costs 1.25× the base input price, a 1-hour write costs 2×, and cache hits or refreshes cost 0.1× base input.", "Caching is valuable when long system instructions, documents, or examples repeat across requests. Calculate whether reuse is frequent enough to offset the initial write premium."],
+        "zh": ["Anthropic 将缓存创建与缓存读取分开计费。5 分钟缓存写入为基础输入价格的 1.25 倍，1 小时写入为 2 倍，缓存命中或刷新为基础输入价格的 0.1 倍。", "当长系统指令、文档或示例在多个请求中重复时，缓存很有价值。应计算复用频率是否足以覆盖首次写入的溢价。"]
+      }
+    },
+    {
+      "id": "context-batch-fast",
+      "heading": {"en": "Context Windows, Batch and Fast Mode", "zh": "上下文窗口、Batch 与 Fast Mode"},
+      "paragraphs": {
+        "en": ["Fable 5, Opus 5 and Sonnet 5 include a full 1M-token context window at standard per-token rates and support 128K synchronous output. Haiku 4.5 supports 200K input and 64K output.", "Batch API reduces both input and output prices by 50%. Fast mode is a research preview for Opus 5 and Opus 4.8 on the first-party Claude API; Opus 5 Fast mode costs $10 input and $50 output per MTok. Fast mode cannot be combined with Batch."],
+        "zh": ["Fable 5、Opus 5 和 Sonnet 5 以标准 token 单价包含完整 1M 上下文窗口，同步输出上限为 128K；Haiku 4.5 支持 200K 输入和 64K 输出。", "Batch API 的输入和输出价格均享受 50% 折扣。Fast mode 是 Opus 5 和 Opus 4.8 在第一方 Claude API 上的研究预览；Opus 5 Fast mode 输入 $10、输出 $50/MTok，且不能与 Batch 组合使用。"]
+      }
+    },
+    {
+      "id": "routing-and-tools",
+      "heading": {"en": "Data Residency and Tool Charges", "zh": "数据驻留与工具费用"},
+      "paragraphs": {
+        "en": ["For Claude 4.6 and later, US-only inference selected through inference_geo applies a 1.1× multiplier to input, output, cache writes, and cache reads. Default global routing uses standard prices.", "Web search costs $10 per 1,000 searches plus normal tokens. Web fetch has no separate tool fee, but fetched content becomes billable input. Code execution includes 1,550 free organization-hours per month and then costs $0.05 per container-hour when it is not free through eligible web search or fetch usage."],
+        "zh": ["Claude 4.6 及更高版本通过 inference_geo 选择仅限美国推理时，输入、输出、缓存写入和缓存读取统一应用 1.1 倍乘数；默认全球路由使用标准价格。", "网络搜索每 1,000 次 $10，另计正常 token；Web fetch 没有单独工具费，但抓取内容会成为计费输入。代码执行每个组织每月包含 1,550 免费小时，在未通过符合条件的网络搜索或抓取免费使用时，超出部分按每容器小时 $0.05 收费。"]
+      }
+    },
+    {
+      "id": "managed-agents",
+      "heading": {"en": "Claude Managed Agents and Cost Control", "zh": "Claude Managed Agents 与成本控制"},
+      "paragraphs": {
+        "en": ["Claude Managed Agents bill model tokens at standard rates plus $0.08 per running session-hour. Idle, rescheduling, and terminated time is not billed as runtime. Batch, Fast mode, data-residency, and partner-cloud pricing modifiers do not apply to Managed Agents sessions.", "For cost control, route simple work to Haiku, general production work to Sonnet, complex agents to Opus, and highest-capability workloads to Fable. Add prompt caching for repeated context and Batch for non-interactive jobs."],
+        "zh": ["Claude Managed Agents 按标准模型 token 价格计费，并额外按每个运行中的会话小时 $0.08 收取运行时间费用；idle、rescheduling 和 terminated 状态不计运行时费用。Batch、Fast mode、数据驻留和合作云平台价格修饰符不适用于 Managed Agents 会话。", "控制成本时，可将简单任务路由给 Haiku，通用生产任务给 Sonnet，复杂智能体给 Opus，最高能力需求给 Fable；重复上下文使用提示缓存，非交互任务使用 Batch。"]
+      }
+    }
+  ],
+  "faq": [
+    {"question": {"en": "Which Claude model is cheapest?", "zh": "哪个 Claude 模型最便宜？"}, "answer": {"en": "Claude Haiku 4.5 is the lowest-cost current core model at $1 input and $5 output per MTok.", "zh": "Claude Haiku 4.5 是当前核心模型中价格最低的版本，输入 $1、输出 $5/MTok。"}},
+    {"question": {"en": "When does Sonnet 5 pricing change?", "zh": "Sonnet 5 什么时候涨到标准价？"}, "answer": {"en": "The $2/$10 introductory input/output rates apply through August 31, 2026. Standard $3/$15 rates begin September 1, 2026.", "zh": "输入/输出 $2/$10 的推广价有效至 2026 年 8 月 31 日；2026 年 9 月 1 日起执行 $3/$15 标准价。"}},
+    {"question": {"en": "Do current Claude models support 1M context?", "zh": "当前 Claude 模型都支持 1M 上下文吗？"}, "answer": {"en": "Fable 5, Opus 5 and Sonnet 5 do. Haiku 4.5 has a 200K context window.", "zh": "Fable 5、Opus 5 和 Sonnet 5 支持 1M；Haiku 4.5 的上下文窗口为 200K。"}},
+    {"question": {"en": "Can prompt caching and Batch be combined?", "zh": "提示缓存和 Batch 可以组合吗？"}, "answer": {"en": "Yes. Batch and prompt-caching discounts can be combined. Fast mode cannot be combined with Batch.", "zh": "可以，Batch 和提示缓存折扣能够组合；Fast mode 不能与 Batch 组合。"}}
+  ],
+  "sources": [
+    {"label": "Anthropic Models & Pricing", "url": "https://platform.claude.com/docs/en/about-claude/pricing", "site": "Anthropic", "checkedAt": "2026-08-10"},
+    {"label": "Claude Models Overview", "url": "https://platform.claude.com/docs/en/about-claude/models/overview", "site": "Anthropic", "checkedAt": "2026-08-10"},
+    {"label": "Anthropic 中文定价", "url": "https://platform.claude.com/docs/zh-CN/about-claude/pricing", "site": "Anthropic", "checkedAt": "2026-08-10"}
+  ],
+  "seo": {
+    "title": {"en": "Claude Models & API Pricing 2026 | Get Model Key", "zh": "Claude 模型与 API 价格 2026 | Get Model Key"},
+    "description": {"en": "Compare Claude Fable 5, Opus 5, Sonnet 5 and Haiku 4.5 pricing, context, output, prompt caching, Batch, Fast mode, tools and data residency.", "zh": "对比 Claude Fable 5、Opus 5、Sonnet 5 与 Haiku 4.5 的价格、上下文、输出、提示缓存、Batch、Fast mode、工具和数据驻留。"}
+  }
+}

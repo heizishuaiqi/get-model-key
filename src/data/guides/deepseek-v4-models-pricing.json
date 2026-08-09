@@ -1,0 +1,135 @@
+{
+  "slug": "deepseek-v4-models-pricing",
+  "status": "published",
+  "topic": "comparison",
+  "publishedAt": "2026-08-10",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 9,
+  "pillar": false,
+  "cluster": "deepseek",
+  "pillarSlug": "deepseek-api-key-complete-guide",
+  "title": {"en": "DeepSeek V4 Flash vs V4 Pro: Models & API Pricing", "zh": "DeepSeek V4 Flash 与 V4 Pro：模型能力和 API 价格"},
+  "excerpt": {"en": "Compare official DeepSeek V4 Flash and V4 Pro pricing, cache rates, 1M context, 384K output, API compatibility, features, concurrency limits, and the announced price increase.", "zh": "对比 DeepSeek V4 Flash 与 V4 Pro 的官方价格、缓存费率、1M 上下文、384K 输出、API 兼容性、功能、并发限制及涨价提示。"},
+  "tags": ["deepseek", "v4", "pricing", "models"],
+  "providerSlugs": ["deepseek"],
+  "sections": [
+    {
+      "id": "model-overview",
+      "heading": {"en": "DeepSeek V4 Flash and V4 Pro Overview", "zh": "DeepSeek V4 Flash 与 V4 Pro 概览"},
+      "paragraphs": {
+        "en": [
+          "DeepSeek currently exposes two V4 API model IDs: deepseek-v4-flash and deepseek-v4-pro. The Flash endpoint resolves to DeepSeek-V4-Flash-0731, while Pro resolves to DeepSeek-V4-Pro. Both support non-thinking mode and thinking mode, with thinking enabled by default.",
+          "Both models provide a 1M context window and up to 384K output. DeepSeek offers an OpenAI-compatible base URL at https://api.deepseek.com and an Anthropic-compatible base URL at https://api.deepseek.com/anthropic. The comparison above reflects the official pricing page checked on August 10, 2026."
+        ],
+        "zh": [
+          "DeepSeek 当前提供两个 V4 API 模型 ID：deepseek-v4-flash 和 deepseek-v4-pro。Flash 对应 DeepSeek-V4-Flash-0731，Pro 对应 DeepSeek-V4-Pro。两者均支持非思考模式和思考模式，并默认启用思考。",
+          "两个模型都提供 1M 上下文窗口和最大 384K 输出。OpenAI 兼容格式的 BASE URL 为 https://api.deepseek.com，Anthropic 兼容格式为 https://api.deepseek.com/anthropic。上方对比采用 2026 年 8 月 10 日核验的官方价格页数据。"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {"en": "V4 Token Pricing", "zh": "V4 Token 价格"},
+      "paragraphs": {
+        "en": [
+          "DeepSeek bills by total input and output token usage. Input is split into cache-hit and cache-miss rates, creating a large cost difference for applications that reuse stable prompt prefixes.",
+          "Fees are deducted from promotional balance before prepaid balance when both are available. DeepSeek states that product prices can change and advises users to recharge according to actual usage."
+        ],
+        "zh": [
+          "DeepSeek 根据输入与输出 token 总量计费。输入价格分为缓存命中与缓存未命中两档，因此重复使用稳定提示前缀的应用可能获得明显的成本差异。",
+          "当赠送余额和充值余额同时存在时，优先扣减赠送余额。DeepSeek 声明产品价格可能变化，并建议用户依据实际用量按需充值。"
+        ]
+      },
+      "bullets": {
+        "en": ["V4 Flash: cache-hit input ¥0.02 · cache-miss input ¥1.00 · output ¥2.00 per 1M tokens", "V4 Pro: cache-hit input ¥0.025 · cache-miss input ¥3.00 · output ¥6.00 per 1M tokens", "Fee formula: token usage × the applicable model rate"],
+        "zh": ["V4 Flash：缓存命中输入 ¥0.02 · 缓存未命中输入 ¥1.00 · 输出 ¥2.00 / 百万 tokens", "V4 Pro：缓存命中输入 ¥0.025 · 缓存未命中输入 ¥3.00 · 输出 ¥6.00 / 百万 tokens", "扣费公式：token 消耗量 × 对应模型单价"]
+      }
+    },
+    {
+      "id": "price-warning",
+      "heading": {"en": "Official Price Increase Notice", "zh": "官方涨价提示"},
+      "paragraphs": {
+        "en": [
+          "DeepSeek’s official pricing page currently warns that API service pricing is expected to increase across the board in the near term and that the increase may be significant. No final replacement rates are listed on the page yet.",
+          "Treat every number in this guide as a dated snapshot rather than a future price guarantee. Recheck the official pricing page before purchasing a large balance, calculating a long-term budget, or launching a high-volume workload."
+        ],
+        "zh": [
+          "DeepSeek 官方价格页当前提示，近期计划整体上调 API 服务价格，预计涨幅较大，但页面尚未公布最终替代费率。",
+          "因此本文所有数字都应视为带日期的价格快照，而不是未来价格保证。大额充值、制定长期预算或上线高调用量负载前，请重新核对官方价格页。"
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": {"en": "Feature and API Compatibility", "zh": "功能与 API 兼容性"},
+      "paragraphs": {
+        "en": [
+          "Both V4 models support JSON Output, Tool Calls, the Anthropic API format, beta chat-prefix completion, and beta FIM completion in non-thinking mode. Both can be called through OpenAI-compatible and Anthropic-compatible SDK configurations.",
+          "The official table still marks Responses API support as available only for deepseek-v4-flash and not yet available for deepseek-v4-pro. Although the page says Pro support was planned for early August 2026, its current status field has not yet changed, so this guide preserves the official status instead of assuming rollout completion."
+        ],
+        "zh": [
+          "两个 V4 模型都支持 JSON Output、Tool Calls、Anthropic API 格式、Beta 对话前缀续写，以及仅限非思考模式的 Beta FIM 补全；也都能通过 OpenAI 兼容和 Anthropic 兼容的 SDK 配置调用。",
+          "官方表格目前仍把 Responses API 标记为仅支持 deepseek-v4-flash，deepseek-v4-pro 暂不支持。尽管页面写明原计划于 2026 年 8 月初增加 Pro 支持，但当前状态字段尚未更新，因此本文保留官方现状，不推测部署已经完成。"
+        ]
+      }
+    },
+    {
+      "id": "context-and-output",
+      "heading": {"en": "1M Context and 384K Output", "zh": "1M 上下文与 384K 输出"},
+      "paragraphs": {
+        "en": [
+          "A 1M context window allows both models to accept large documents, codebases, or long conversation histories in one request. The 384K maximum output is unusually large and can support extensive generation, but it should not be used as a default target.",
+          "Large contexts and outputs can raise latency and cost quickly, especially on cache misses. Set explicit output limits, keep reusable prefixes stable for cache hits, and measure real token usage before scaling."
+        ],
+        "zh": [
+          "1M 上下文窗口允许两个模型在单次请求中接收大型文档、代码库或长对话历史。384K 最大输出非常可观，适合超长生成，但不应作为默认目标。",
+          "长上下文和大输出会迅速增加延迟与成本，缓存未命中时尤其明显。建议明确设置输出上限、保持可复用前缀稳定以提高缓存命中率，并在扩容前测量真实 token 用量。"
+        ]
+      }
+    },
+    {
+      "id": "concurrency",
+      "heading": {"en": "Concurrency Limits and user_id Isolation", "zh": "并发限制与 user_id 隔离"},
+      "paragraphs": {
+        "en": [
+          "The official table lists concurrency limits of 2,500 for V4 Flash and 500 for V4 Pro. DeepSeek’s rate-limit documentation explains that upgraded API users can also be limited at the account level and per user_id.",
+          "Requests exceeding the per-user limit receive HTTP 429. Assign meaningful user_id values for workload isolation and backoff correctly on 429 responses instead of retrying immediately."
+        ],
+        "zh": [
+          "官方表格列出的并发限制为 V4 Flash 2500、V4 Pro 500。DeepSeek 限速文档说明，提升过并发配额的 API 用户还可能同时受到账号总并发和每个 user_id 的限制。",
+          "超过单个 user_id 限制的请求会收到 HTTP 429。建议通过合理的 user_id 隔离负载，并在遇到 429 时使用退避策略，不要立即密集重试。"
+        ]
+      }
+    },
+    {
+      "id": "choose-model",
+      "heading": {"en": "Choose Flash or Pro", "zh": "选择 Flash 还是 Pro"},
+      "paragraphs": {
+        "en": [
+          "Start with V4 Flash when cost, concurrency, Responses API support, or high-volume processing matters. It has lower cache-miss and output rates and five times the listed concurrency of Pro.",
+          "Evaluate V4 Pro for workloads where its higher-tier reasoning quality justifies a 3× cache-miss input rate and 3× output rate. Test both with representative prompts and include thinking-token output in the cost comparison."
+        ],
+        "zh": [
+          "重视成本、并发、Responses API 或高调用量处理时，建议先用 V4 Flash。它的缓存未命中输入和输出价格更低，官方并发限制是 Pro 的 5 倍。",
+          "当更高阶推理质量足以覆盖 3 倍缓存未命中输入价格和 3 倍输出价格时，再评估 V4 Pro。应使用真实提示词测试两个模型，并把思考 token 输出纳入成本比较。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {"question": {"en": "Which DeepSeek V4 model is cheaper?", "zh": "哪个 DeepSeek V4 模型更便宜？"}, "answer": {"en": "V4 Flash is cheaper: ¥1 cache-miss input and ¥2 output per 1M tokens, compared with V4 Pro at ¥3 and ¥6. Cache-hit input is ¥0.02 for Flash and ¥0.025 for Pro.", "zh": "V4 Flash 更便宜：缓存未命中输入 ¥1、输出 ¥2 / 百万 tokens；V4 Pro 分别为 ¥3 和 ¥6。缓存命中输入则为 Flash ¥0.02、Pro ¥0.025。"}},
+    {"question": {"en": "Does V4 Pro support the Responses API?", "zh": "V4 Pro 支持 Responses API 吗？"}, "answer": {"en": "As of the August 10, 2026 official pricing snapshot, the table still says not yet supported. Flash is marked supported.", "zh": "截至 2026 年 8 月 10 日核验的官方价格快照，表格仍标记 Pro 暂不支持，Flash 已支持。"}},
+    {"question": {"en": "Will DeepSeek API prices increase?", "zh": "DeepSeek API 会涨价吗？"}, "answer": {"en": "DeepSeek currently says it plans an across-the-board API price increase and expects the increase to be significant, but final rates have not been announced on the pricing page.", "zh": "DeepSeek 当前表示计划整体上调 API 服务价格，预计涨幅较大，但价格页尚未公布最终费率。"}},
+    {"question": {"en": "Can I use the Anthropic SDK format?", "zh": "可以使用 Anthropic SDK 格式吗？"}, "answer": {"en": "Yes. Both models support the Anthropic-compatible endpoint at https://api.deepseek.com/anthropic, in addition to the OpenAI-compatible base URL.", "zh": "可以。两个模型都支持 https://api.deepseek.com/anthropic 这一 Anthropic 兼容端点，同时也支持 OpenAI 兼容 BASE URL。"}}
+  ],
+  "sources": [
+    {"label": "DeepSeek Models & Pricing", "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing", "site": "DeepSeek API Docs", "checkedAt": "2026-08-10"},
+    {"label": "Thinking Mode", "url": "https://api-docs.deepseek.com/zh-cn/guides/thinking_mode", "site": "DeepSeek API Docs", "checkedAt": "2026-08-10"},
+    {"label": "Rate Limits and Isolation", "url": "https://api-docs.deepseek.com/zh-cn/quick_start/rate_limit", "site": "DeepSeek API Docs", "checkedAt": "2026-08-10"},
+    {"label": "DeepSeek API Introduction", "url": "https://api-docs.deepseek.com/zh-cn/", "site": "DeepSeek API Docs", "checkedAt": "2026-08-10"}
+  ],
+  "seo": {
+    "title": {"en": "DeepSeek V4 Flash vs Pro Pricing & Models | Get Model Key", "zh": "DeepSeek V4 Flash vs Pro 模型与价格 | Get Model Key"},
+    "description": {"en": "Official DeepSeek V4 Flash and V4 Pro price snapshot with cache rates, 1M context, 384K output, API features, concurrency limits and price increase notice.", "zh": "DeepSeek V4 Flash 与 V4 Pro 官方价格快照，包含缓存费率、1M 上下文、384K 输出、API 功能、并发限制和涨价提示。"}
+  }
+}

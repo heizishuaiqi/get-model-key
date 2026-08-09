@@ -9,7 +9,7 @@
   "updatedAt": "2026-08-07",
   "readingMinutes": 7,
   "title": {
-    "en": "Gemini API Key Quickstart: From AI Studio to First Call",
+    "en": "Gemini API Code Quickstart: Python, Environment Variables and Errors",
     "zh": "Gemini API Key 快速入门：从 AI Studio 到首个请求"
   },
   "excerpt": {
@@ -173,7 +173,7 @@
       "codeBlocks": [
         {
           "language": "python",
-          "code": "from google import genai\nimport os\n\nclient = genai.Client(api_key=os.environ[\"GEMINI_API_KEY\"])\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.0-flash\",\n    contents=\"Reply with exactly: KEY_WORKS\"\n)\n\nassert \"KEY_WORKS\" in response.text, \"Unexpected response — check your key\"\nprint(\"Success! Your Gemini API key is working.\")",
+          "code": "from google import genai\nimport os\n\nclient = genai.Client(api_key=os.environ[\"GEMINI_API_KEY\"])\n\nresponse = client.models.generate_content(\n    model=\"gemini-3.5-flash\",\n    contents=\"Reply with exactly: KEY_WORKS\"\n)\n\nassert \"KEY_WORKS\" in response.text, \"Unexpected response — check your key\"\nprint(\"Success! Your Gemini API key is working.\")",
           "caption": {
             "en": "If you see 'Success!', your key is valid and ready for development",
             "zh": "如果看到 'Success!'，说明 Key 有效，可以开始开发了"
@@ -230,7 +230,7 @@
   ],
   "seo": {
     "title": {
-      "en": "Gemini API Key Quickstart (2026) | Get Model Key",
+      "en": "Gemini API Code Quickstart: Python & Key Validation",
       "zh": "Gemini API Key 快速入门（2026）| Get Model Key"
     },
     "description": {

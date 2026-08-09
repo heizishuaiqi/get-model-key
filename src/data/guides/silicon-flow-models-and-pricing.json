@@ -1,223 +1,147 @@
 {
   "slug": "silicon-flow-models-and-pricing",
   "status": "published",
-  "topic": "api-key-setup",
+  "topic": "pricing",
   "pillar": false,
   "cluster": "siliconflow",
   "pillarSlug": "silicon-flow-api-key-complete-guide",
-  "publishedAt": "2026-07-20",
-  "updatedAt": "2026-08-07",
-  "readingMinutes": 7,
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 8,
   "title": {
-    "en": "SiliconFlow Models and Pricing Guide (2026): Free Tiers, Rate Limits & Cost Comparison",
-    "zh": "硅基流动模型与定价指南（2026）：免费额度、速率限制与成本对比"
+    "en": "SiliconFlow Free Models 2026: Current List, Limits and API Example",
+    "zh": "SiliconFlow 免费模型 2026：当前清单、限额与 API 示例"
   },
   "excerpt": {
-    "en": "Compare every major model on SiliconFlow — DeepSeek-V4-Pro, Qwen3, GLM-5, Kimi K2.6, MiniMax-M2.5 — with pricing tables, free-tier details, rate-limit tiers (L0–L5), and recommendations for different workloads.",
-    "zh": "对比硅基流动上所有主要模型——DeepSeek-V4-Pro、Qwen3、GLM-5、Kimi K2.6、MiniMax-M2.5——包含定价表、免费额度详情、速率限制分级（L0–L5）及不同负载的选型建议。"
+    "en": "A verified snapshot of SiliconFlow models currently marked free on the official pricing page, plus identity verification, fixed rate limits, Pro model naming, and a first API call.",
+    "zh": "依据硅基流动官方价格页整理当前标记为免费的模型，并说明实名认证、固定限额、Pro 命名规则与首次 API 调用。"
   },
-  "tags": [
-    "siliconflow",
-    "pricing",
-    "models",
-    "deepseek",
-    "qwen3",
-    "free models"
-  ],
-  "providerSlugs": [
-    "silicon-flow"
-  ],
+  "tags": ["siliconflow free models", "siliconflow api free tier 2026", "siliconflow pricing", "free ai api"],
+  "providerSlugs": ["silicon-flow"],
   "sections": [
     {
-      "id": "free-models",
-      "heading": {
-        "en": "Free Models You Can Use Right Now",
-        "zh": "现在就能免费使用的模型"
-      },
+      "id": "verified-free-list",
+      "heading": { "en": "Free models verified on August 10, 2026", "zh": "2026 年 8 月 10 日核验的免费模型" },
       "paragraphs": {
         "en": [
-          "SiliconFlow's most compelling feature is its free model tier. These are not stripped-down demos — they are the actual production models, available at zero cost subject to rate limits. The free catalog rotates as new models are released, but as of mid-2026 these three are reliably free. [[guide:silicon-flow-api-key-complete-guide|The full SiliconFlow overview]] provides additional context on the platform's overall architecture.",
-          "Qwen3-8B (model ID: Qwen/Qwen3-8B) is the best all-rounder for free-tier users. It handles general conversation, text summarization, and light coding tasks well. DeepSeek-R1-Distill-Qwen-7B (deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) provides chain-of-thought reasoning, making it ideal for math, logic, and step-by-step problem solving. DeepSeek-OCR (deepseek-ai/DeepSeek-OCR) specializes in extracting text from images and documents.",
-          "Rate limits for free models are relatively generous at the L1 verification tier — typically enough for personal development and testing. For heavier workloads, you either wait for the limit to reset or switch to a low-cost paid model."
+          "SiliconFlow's official pricing page currently marks the following text models as free for both input and output. The catalog changes, so treat this as a dated snapshot and confirm the live price before production use.",
+          "The same official page also lists free embedding, reranking, image, and speech models. This guide separates those modalities so a free text model is not confused with a free embedding or media endpoint."
         ],
         "zh": [
-          "硅基流动最吸引人的是免费模型层。这些不是阉割版演示——它们是真正的生产模型，在速率限制内零成本可用。免费目录随新模型发布而轮换，截至 2026 年中以下三个稳定免费。[[guide:silicon-flow-api-key-complete-guide|完整的硅基流动概览]] 提供了平台整体架构的补充背景。",
-          "Qwen3-8B（模型 ID：Qwen/Qwen3-8B）是免费层用户的最佳全能选择，擅长通用对话、文本摘要和轻量编程任务。DeepSeek-R1-Distill-Qwen-7B（deepseek-ai/DeepSeek-R1-Distill-Qwen-7B）提供思维链推理，适合数学、逻辑和分步解题。DeepSeek-OCR（deepseek-ai/DeepSeek-OCR）专攻图片和文档文字提取。",
-          "免费模型在 L1 认证等级的速率限制相对宽松——通常够个人开发和测试用。负载更高时，等限制重置或切换到低成本付费模型。"
-        ]
-      }
-    },
-    {
-      "id": "paid-flagship-models",
-      "heading": {
-        "en": "Paid Flagship Models",
-        "zh": "付费旗舰模型"
-      },
-      "paragraphs": {
-        "en": [
-          "When free models are not enough, SiliconFlow offers the latest flagship models from each major Chinese AI lab. Here is the pricing breakdown for the most popular ones (prices in CNY per million tokens, checked July 2026):",
-          "DeepSeek-V4-Pro (deepseek-ai/DeepSeek-V4-Pro) is the flagship reasoning and coding model from DeepSeek. At roughly ¥4 input / ¥16 output per million tokens, it delivers top-tier performance at a fraction of the cost of Western alternatives like GPT-4o or Claude Opus. This is the go-to model for production applications that need the best quality.",
-          "Qwen3-235B (Qwen/Qwen3-235B) is Alibaba's largest open-source model, excelling at multilingual tasks and long-context reasoning. GLM-5 (Zhipu/GLM-5) from Zhipu is strong for Chinese-language understanding and tool-use scenarios. Kimi K2.6 (moonshot/Kimi-K2.6) offers an exceptionally long context window for document-heavy applications. MiniMax-M2.5 (MiniMax/MiniMax-M2.5) is optimized for creative writing and dialogue."
-        ],
-        "zh": [
-          "当免费模型不够用时，硅基流动提供各家中国 AI 实验室的最新旗舰模型。以下是最热门模型的定价明细（价格为人民币/百万 Tokens，2026 年 7 月核实）：",
-          "DeepSeek-V4-Pro（deepseek-ai/DeepSeek-V4-Pro）是 DeepSeek 的旗舰推理和编程模型。约 ¥4 输入 / ¥16 输出（每百万 Tokens），以 GPT-4o 或 Claude Opus 等西方模型的零头价格提供顶级性能。这是需要最高质量的生产应用的首选。",
-          "Qwen3-235B（Qwen/Qwen3-235B）是阿里最大的开源模型，擅长多语言任务和长上下文推理。智谱的 GLM-5（Zhipu/GLM-5）在中文理解和工具调用场景表现出色。月之暗面的 Kimi K2.6（moonshot/Kimi-K2.6）提供超长上下文窗口，适合文档密集型应用。MiniMax-M2.5（MiniMax/MiniMax-M2.5）专为创意写作和对话优化。"
+          "硅基流动官方价格页当前将下列文本模型的输入和输出均标记为“免费”。模型目录会变化，因此这是一份带核验日期的快照；投入生产前仍应检查实时价格。",
+          "官方页面还列出了免费的 Embedding、Rerank、图像和语音模型。本文按模态拆分，避免把免费文本模型与免费向量或媒体接口混为一谈。"
         ]
       },
       "bullets": {
         "en": [
-          "DeepSeek-V4-Pro: ~¥4 input / ¥16 output per million tokens (flagship reasoning & coding)",
-          "Qwen3-235B: ~¥4 input / ¥12 output per million tokens (multilingual & long context)",
-          "GLM-5: ~¥5 input / ¥5 output per million tokens (Chinese-language specialist)",
-          "Kimi K2.6: ~¥8 input / ¥8 output per million tokens (ultra-long context window)",
-          "MiniMax-M2.5: ~¥1 input / ¥1 output per million tokens (budget creative writing)",
-          "All free models: ¥0 (rate-limited)"
+          "Qwen/Qwen3.5-4B",
+          "PaddlePaddle/PaddleOCR-VL-1.5",
+          "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          "THUDM/GLM-4.1V-9B-Thinking",
+          "PaddlePaddle/PaddleOCR-VL",
+          "deepseek-ai/DeepSeek-OCR",
+          "Qwen/Qwen3-8B",
+          "tencent/Hunyuan-MT-7B",
+          "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+          "THUDM/GLM-Z1-9B-0414",
+          "Qwen/Qwen2.5-7B-Instruct",
+          "Qwen/Qwen2.5-Coder-7B-Instruct",
+          "THUDM/GLM-4-9B-0414",
+          "internlm/internlm2_5-7b-chat",
+          "THUDM/glm-4-9b-chat",
+          "Qwen/Qwen2-7B-Instruct"
         ],
         "zh": [
-          "DeepSeek-V4-Pro：约 ¥4 输入 / ¥16 输出（每百万 Tokens，旗舰推理与编程）",
-          "Qwen3-235B：约 ¥4 输入 / ¥12 输出（每百万 Tokens，多语言与长上下文）",
-          "GLM-5：约 ¥5 输入 / ¥5 输出（每百万 Tokens，中文专长）",
-          "Kimi K2.6：约 ¥8 输入 / ¥8 输出（每百万 Tokens，超长上下文窗口）",
-          "MiniMax-M2.5：约 ¥1 输入 / ¥1 输出（每百万 Tokens，经济型创意写作）",
-          "所有免费模型：¥0（有速率限制）"
+          "Qwen/Qwen3.5-4B",
+          "PaddlePaddle/PaddleOCR-VL-1.5",
+          "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          "THUDM/GLM-4.1V-9B-Thinking",
+          "PaddlePaddle/PaddleOCR-VL",
+          "deepseek-ai/DeepSeek-OCR",
+          "Qwen/Qwen3-8B",
+          "tencent/Hunyuan-MT-7B",
+          "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+          "THUDM/GLM-Z1-9B-0414",
+          "Qwen/Qwen2.5-7B-Instruct",
+          "Qwen/Qwen2.5-Coder-7B-Instruct",
+          "THUDM/GLM-4-9B-0414",
+          "internlm/internlm2_5-7b-chat",
+          "THUDM/glm-4-9b-chat",
+          "Qwen/Qwen2-7B-Instruct"
         ]
       }
     },
     {
-      "id": "rate-limit-tiers",
-      "heading": {
-        "en": "Rate-Limit Tiers (L0–L5) Explained",
-        "zh": "速率限制分级（L0–L5）详解"
-      },
+      "id": "other-free-modalities",
+      "heading": { "en": "Other free modalities", "zh": "其他免费模态" },
+      "paragraphs": {
+        "en": ["The current pricing page also marks BAAI/bge-m3, BAAI/bge-reranker-v2-m3, BAAI/bge-large-zh-v1.5 and BAAI/bge-large-en-v1.5 as free. Kolors is listed as a free image model, while TeleAI/TeleSpeechASR and FunAudioLLM/SenseVoiceSmall are listed as free speech models."],
+        "zh": ["当前价格页还将 BAAI/bge-m3、BAAI/bge-reranker-v2-m3、BAAI/bge-large-zh-v1.5 和 BAAI/bge-large-en-v1.5 标记为免费；Kolors 被列为免费生图模型，TeleAI/TeleSpeechASR 与 FunAudioLLM/SenseVoiceSmall 被列为免费语音模型。"]
+      }
+    },
+    {
+      "id": "rules-and-limits",
+      "heading": { "en": "Free does not mean unlimited", "zh": "免费不等于不限量" },
       "paragraphs": {
         "en": [
-          "SiliconFlow assigns every account a spending tier that determines API rate limits. Higher tiers unlock more requests per minute and higher token throughput. The tier is based on your cumulative spending and upgrades automatically as you spend more.",
-          "L0 is the default for new accounts with under ¥50 cumulative spending. L1 activates after basic verification. L2 through L5 correspond to spending thresholds of ¥200, ¥1,000, ¥3,000, and ¥10,000 respectively. Free models are subject to these limits regardless of whether you are paying, so heavy free-tier users may want to reach L2+ for more headroom.",
-          "For a concrete example: an L0 account might be limited to 1,000 requests per hour on a free model, while an L3 account gets 10,000+. Exact numbers vary by model and are shown in the console dashboard."
+          "SiliconFlow's official rate-limit documentation says identity verification is required to use all free models. Calls to free models are billed at zero, but their rate limits are fixed and cannot be increased by moving up a paid usage tier.",
+          "Some models have both a free and paid service. The free model uses the ordinary vendor/model ID; the paid version adds the Pro/ prefix. Paid models use account-level rate limits based on usage. Check the console for the exact live limit of a model instead of relying on a static RPM copied into an article."
         ],
         "zh": [
-          "硅基流动为每个账号分配一个消费等级，决定 API 速率限制。等级越高，每分钟请求数和 Token 吞吐量越大。等级基于累计消费，消费越多自动升级。",
-          "L0 是累计消费 ¥50 以下新账号的默认等级。L1 在基础认证后激活。L2 到 L5 分别对应 ¥200、¥1,000、¥3,000、¥10,000 的消费门槛。免费模型也受这些限制约束（无论是否付费），所以重度免费用户可能需要达到 L2 以上获得更大余量。",
-          "举例：L0 账号在免费模型上可能限制每小时 1,000 次请求，而 L3 账号可达 10,000+。具体数字因模型而异，控制台面板可见。"
-        ]
-      },
-      "bullets": {
-        "en": [
-          "L0: Default, under ¥50 spent — lowest limits",
-          "L1: After real-name verification — moderate limits",
-          "L2: ¥200+ spent — comfortable for development",
-          "L3: ¥1,000+ spent — suitable for small production apps",
-          "L4: ¥3,000+ spent — production-scale throughput",
-          "L5: ¥10,000+ spent — maximum limits, enterprise-grade"
-        ],
-        "zh": [
-          "L0：默认，消费 ¥50 以下——限制最低",
-          "L1：实名认证后——限制适中",
-          "L2：消费 ¥200 以上——开发够用",
-          "L3：消费 ¥1,000 以上——适合小型生产应用",
-          "L4：消费 ¥3,000 以上——生产级吞吐",
-          "L5：消费 ¥10,000 以上——最高限制，企业级"
+          "硅基流动官方限流文档说明，完成实名认证后才能使用全部免费模型。免费模型调用费用为 0，但其 Rate Limits 是固定值，不能通过提升付费用量等级来提高。",
+          "部分模型同时提供免费版与收费版：免费版使用普通的“厂商/模型”ID，收费版在前面增加 Pro/。收费模型的限额随账户用量等级变化。具体模型的实时限额应在控制台查看，不应依赖文章里写死的 RPM。"
         ]
       }
     },
     {
-      "id": "model-selection-guide",
-      "heading": {
-        "en": "Which Model Should You Choose?",
-        "zh": "该选哪个模型？"
-      },
+      "id": "new-user-credit",
+      "heading": { "en": "New-user credit: ¥16 in China or $1 globally", "zh": "新用户赠金：中国站 ¥16，国际站 $1" },
       "paragraphs": {
         "en": [
-          "For prototyping and learning: start with the free Qwen3-8B. It covers 80% of use cases at zero cost and lets you build and test your application end-to-end before spending anything. If you don't have a [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key]] yet, the registration tutorial takes about five minutes.",
-          "For production coding and reasoning: DeepSeek-V4-Pro is the best balance of quality and cost. Its chain-of-thought reasoning and large parameter count make it competitive with models costing 5–10× more.",
-          "For Chinese-heavy applications: GLM-5 is purpose-built for Chinese language and cultural context, often outperforming Western models on domestic content.",
-          "For long documents (books, legal contracts, research papers): Kimi K2.6's extended context window handles inputs that would overflow other models.",
-          "For cost-minimized creative writing: MiniMax-M2.5 at ~¥1/¥1 per million tokens is hard to beat for volume text generation."
+          "SiliconFlow's official June 2026 product announcement states that new users can receive ¥16 on the China site or $1 on the global site to try platform models. This promotional credit is separate from zero-priced models and can be used to test paid models under the applicable campaign rules."
         ],
         "zh": [
-          "原型和学习阶段：先用免费的 Qwen3-8B。零成本覆盖 80% 的用例，让你在花一分钱之前把应用端到端建好测好。如果你还没有 [[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key]]，注册教程大约只需五分钟。",
-          "生产级编程和推理：DeepSeek-V4-Pro 是质量和成本的最佳平衡。思维链推理和超大参数量使其能与价格高 5–10 倍的模型竞争。",
-          "中文为主的应用：GLM-5 专为中文语言和文化语境打造，在中文内容上经常优于西方模型。",
-          "长文档场景（书籍、法律合同、论文）：Kimi K2.6 的扩展上下文窗口能处理会让其他模型溢出的输入。",
-          "极致低成本的创意写作：MiniMax-M2.5 约 ¥1/¥1 每百万 Tokens，大批量文本生成很难找到更便宜的。"
+          "硅基流动 2026 年 6 月官方产品公告说明，新用户可获得中国站 ¥16 或国际站 $1 赠金，用于体验平台模型。赠金与价格为 0 的免费模型是两套概念，可按活动规则测试付费模型。"
         ]
       }
     },
     {
-      "id": "cost-optimization",
-      "heading": {
-        "en": "Cost Optimization Tips",
-        "zh": "成本优化技巧"
-      },
+      "id": "first-call",
+      "heading": { "en": "First free API call", "zh": "第一次免费 API 调用" },
       "paragraphs": {
-        "en": [
-          "The most effective cost strategy on SiliconFlow is a tiered model approach: use free models for development and testing, then switch to paid models only for production traffic. This can reduce your development-phase API costs to literally zero. You can also explore [[guide:silicon-flow-byok-setup-guide|using your key in other tools]] to test models in different environments without additional setup.",
-          "Second, monitor your token usage closely. Chinese-language prompts tend to use more tokens per character than English due to tokenization differences. If your application processes a lot of Chinese text, factor this into your cost estimates.",
-          "Third, take advantage of caching where possible. SiliconFlow does not currently offer prompt caching discounts like some Western providers, but you can implement client-side caching for repeated queries to reduce API calls."
-        ],
-        "zh": [
-          "硅基流动最有效的成本策略是分层用模：开发和测试用免费模型，只有生产流量才切到付费模型。这可以把开发阶段的 API 成本降到零。你也可以[[guide:silicon-flow-byok-setup-guide|在其他工具中使用你的 Key]]，在不同环境中测试模型，无需额外设置。",
-          "第二，密切监控 Token 用量。由于分词差异，中文提示词每字符消耗的 Token 通常比英文多。如果你的应用处理大量中文文本，成本预估时要考虑这一点。",
-          "第三，尽可能利用缓存。硅基流动目前不像某些西方厂商那样提供提示词缓存折扣，但你可以为重复查询实现客户端缓存来减少 API 调用。"
-        ]
+        "en": ["Create a key at https://cloud.siliconflow.cn/me/account/ak, complete identity verification, and select a model still marked free on the live pricing page. SiliconFlow accepts the OpenAI SDK at the China endpoint shown below."],
+        "zh": ["在 https://cloud.siliconflow.cn/me/account/ak 创建 Key，完成实名认证，并选择实时价格页仍标记为免费的模型。硅基流动可通过 OpenAI SDK 调用，下面使用中国站端点。"]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\nimport os\n\nclient = OpenAI(\n    api_key=os.environ[\"SILICONFLOW_API_KEY\"],\n    base_url=\"https://api.siliconflow.cn/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"Qwen/Qwen3.5-4B\",\n    messages=[{\"role\": \"user\", \"content\": \"Reply with: KEY_WORKS\"}],\n)\nprint(response.choices[0].message.content)",
+          "caption": { "en": "OpenAI-compatible Python request", "zh": "OpenAI 兼容 Python 请求" }
+        }
+      ]
+    },
+    {
+      "id": "before-production",
+      "heading": { "en": "Checklist before production", "zh": "投入生产前检查" },
+      "paragraphs": {
+        "en": ["Confirm the model still appears as free, verify its current rate limit in the console, use the full namespaced model ID, and keep a paid fallback if a fixed free-model limit cannot meet production traffic. For account setup, see [[guide:how-to-get-silicon-flow-api-key|the SiliconFlow API key tutorial]]."],
+        "zh": ["确认模型仍显示免费、在控制台核对实时限额、使用完整命名空间模型 ID，并在免费模型固定限额无法支撑生产流量时准备付费回退方案。账户开通步骤请参阅[[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key 教程]]。"]
       }
     }
   ],
   "faq": [
-    {
-      "question": {
-        "en": "Are SiliconFlow free models really free?",
-        "zh": "硅基流动的免费模型真的免费吗？"
-      },
-      "answer": {
-        "en": "Yes. Models like Qwen3-8B and DeepSeek-R1-Distill-Qwen-7B are free to call within your tier's rate limits. There is no hidden cost or expiration. However, rate limits are stricter than paid models, so heavy usage may require upgrading tiers or switching to a paid model.",
-        "zh": "真的免费。Qwen3-8B 和 DeepSeek-R1-Distill-Qwen-7B 等模型在你等级的速率限制内免费调用，没有隐藏费用或到期时间。但速率限制比付费模型更严，重度使用可能需要升级等级或切换到付费模型。"
-      }
-    },
-    {
-      "question": {
-        "en": "How do I upgrade my rate-limit tier?",
-        "zh": "如何升级速率限制等级？"
-      },
-      "answer": {
-        "en": "Tiers upgrade automatically based on cumulative spending. Once your total spending crosses the threshold for the next tier (¥200 for L2, ¥1,000 for L3, etc.), the higher limits activate within minutes. You do not need to apply or contact support.",
-        "zh": "等级根据累计消费自动升级。一旦总消费跨过下一级门槛（L2 为 ¥200、L3 为 ¥1,000 等），更高限制在几分钟内激活。不需要申请或联系客服。"
-      }
-    },
-    {
-      "question": {
-        "en": "Which is cheaper: SiliconFlow or calling model providers directly?",
-        "zh": "硅基流动和直连模型厂商哪个更便宜？"
-      },
-      "answer": {
-        "en": "Prices are typically identical to or slightly above the official provider API, because SiliconFlow adds a thin margin for hosting. The value is not in per-token savings but in convenience: one key, one endpoint, one billing system for 200+ models, plus free models that some providers do not offer for free.",
-        "zh": "价格通常与官方厂商 API 相同或略高，因为硅基流动加了托管薄利。价值不在单 Token 省钱，而在便利：一个 Key、一个端点、一套计费系统搞定 200+ 模型，还有部分厂商不提供的免费模型。"
-      }
-    }
+    { "question": { "en": "Is the SiliconFlow API completely free?", "zh": "SiliconFlow API 完全免费吗？" }, "answer": { "en": "No. SiliconFlow has both free and paid models. Models marked free are billed at zero within fixed rate limits; paid models are charged according to the live pricing page.", "zh": "不是。硅基流动同时有免费与付费模型。标记为免费的模型在固定限额内费用为 0；付费模型按实时价格页计费。" } },
+    { "question": { "en": "Is identity verification required for free models?", "zh": "免费模型需要实名认证吗？" }, "answer": { "en": "SiliconFlow's official rate-limit documentation says identity verification is required to use all free models.", "zh": "硅基流动官方限流文档说明，使用全部免费模型需要完成实名认证。" } },
+    { "question": { "en": "Can I raise a free model's rate limit?", "zh": "免费模型的限额可以提升吗？" }, "answer": { "en": "The official documentation says free-model rate limits are fixed. Where available, a Pro/ version is paid and follows paid-model limits.", "zh": "官方文档说明免费模型限额固定。若平台提供对应 Pro/ 版本，它属于收费模型并采用收费模型限额。" } },
+    { "question": { "en": "How much credit do new SiliconFlow users get?", "zh": "SiliconFlow 新用户有多少赠金？" }, "answer": { "en": "The current official announcement states ¥16 for China-site users or $1 for global-site users. Campaign availability should be confirmed when registering.", "zh": "当前官方公告写明中国站新用户 ¥16、国际站新用户 $1；注册时仍应确认活动是否继续有效。" } }
   ],
   "sources": [
-    {
-      "label": "SiliconFlow Pricing Page",
-      "url": "https://siliconflow.cn/pricing",
-      "site": "SiliconFlow",
-      "checkedAt": "2026-07-29"
-    },
-    {
-      "label": "SiliconFlow Model Documentation",
-      "url": "https://docs.siliconflow.cn/models",
-      "site": "SiliconFlow Docs",
-      "checkedAt": "2026-07-29"
-    }
+    { "label": "SiliconFlow pricing", "url": "https://siliconflow.cn/pricing", "site": "SiliconFlow", "checkedAt": "2026-08-10" },
+    { "label": "SiliconFlow rate limits", "url": "https://docs.siliconflow.cn/cn/userguide/rate-limits/rate-limit-and-upgradation", "site": "SiliconFlow Docs", "checkedAt": "2026-08-10" },
+    { "label": "SiliconFlow new-user credit announcement", "url": "https://siliconflow.cn/news/yuz3kzv65rdcvcffwpl88263", "site": "SiliconFlow", "checkedAt": "2026-08-10" }
   ],
   "seo": {
-    "title": {
-      "en": "SiliconFlow Models & Pricing Guide (2026) | Get Model Key",
-      "zh": "硅基流动模型与定价指南（2026）| Get Model Key"
-    },
-    "description": {
-      "en": "Compare DeepSeek-V4-Pro, Qwen3, GLM-5, Kimi K2.6 pricing. Free model tiers, rate-limit tiers L0–L5, and cost optimization tips for SiliconFlow.",
-      "zh": "对比 DeepSeek-V4-Pro、Qwen3、GLM-5、Kimi K2.6 定价。免费模型额度、速率限制 L0–L5 分级及硅基流动成本优化技巧。"
-    }
+    "title": { "en": "SiliconFlow Free Models 2026: List, Limits & API Example", "zh": "SiliconFlow 免费模型 2026：清单、限额与 API 示例" },
+    "description": { "en": "See SiliconFlow models currently marked free, the identity-verification rule, fixed rate limits, ¥16/$1 new-user credit, and a working API example.", "zh": "查看 SiliconFlow 当前免费模型、实名认证规则、固定限额、¥16/$1 新用户赠金与可运行 API 示例。" }
   }
 }

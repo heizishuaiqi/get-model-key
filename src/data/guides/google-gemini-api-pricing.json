@@ -1,0 +1,174 @@
+{
+  "slug": "google-gemini-api-pricing",
+  "status": "published",
+  "topic": "comparison",
+  "pillar": false,
+  "cluster": "gemini",
+  "pillarSlug": "gemini-api-key-complete-guide",
+  "publishedAt": "2026-08-10",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 10,
+  "title": {
+    "en": "Google Gemini API Pricing & Models (2026 Official Guide)",
+    "zh": "Google Gemini API 模型与价格（2026 官方数据指南）"
+  },
+  "excerpt": {
+    "en": "Compare official Gemini 3.6 Flash, 3.5 Flash, and 3.5 Flash-Lite pricing, context limits, capabilities, free tier rules, Batch, Flex, Priority, and grounding charges.",
+    "zh": "对比 Gemini 3.6 Flash、3.5 Flash 与 3.5 Flash-Lite 的官方价格、上下文限制、能力、免费层级、Batch、Flex、Priority 和 grounding 费用。"
+  },
+  "tags": ["google", "gemini", "pricing", "models"],
+  "providerSlugs": ["google"],
+  "sections": [
+    {
+      "id": "stable-models",
+      "heading": {"en": "Current Stable Gemini Models", "zh": "当前稳定版 Gemini 模型"},
+      "paragraphs": {
+        "en": [
+          "Google’s current stable general-purpose lineup is led by Gemini 3.6 Flash, Gemini 3.5 Flash, and Gemini 3.5 Flash-Lite. Gemini 3.6 Flash is the latest balance of speed and intelligence, 3.5 Flash targets sustained frontier agentic and coding work, and 3.5 Flash-Lite prioritizes throughput and cost.",
+          "All three accept text, images, video, audio, and PDF input and return text. Each supports 1,048,576 input tokens and 65,536 output tokens. The visual comparison above uses the official Gemini Developer API model and pricing pages checked on August 10, 2026."
+        ],
+        "zh": [
+          "Google 当前稳定的通用模型主线包括 Gemini 3.6 Flash、Gemini 3.5 Flash 和 Gemini 3.5 Flash-Lite。3.6 Flash 是速度与智能的最新平衡，3.5 Flash 面向持续的前沿智能体和编程任务，3.5 Flash-Lite 则优先考虑吞吐量与成本。",
+          "三个模型都接受文本、图像、视频、音频和 PDF 输入，并输出文本；输入上限均为 1,048,576 tokens，输出上限均为 65,536 tokens。上方对比使用 2026 年 8 月 10 日核验的 Gemini Developer API 官方模型和价格页面。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Gemini 3.6 Flash — Standard input $1.50, cached input $0.15, output $7.50 per 1M tokens",
+          "Gemini 3.5 Flash — Standard input $1.50, cached input $0.15, output $9.00 per 1M tokens",
+          "Gemini 3.5 Flash-Lite — Standard input $0.30, cached input $0.03, output $2.50 per 1M tokens"
+        ],
+        "zh": [
+          "Gemini 3.6 Flash：Standard 输入 $1.50、缓存输入 $0.15、输出 $7.50 / 百万 tokens",
+          "Gemini 3.5 Flash：Standard 输入 $1.50、缓存输入 $0.15、输出 $9.00 / 百万 tokens",
+          "Gemini 3.5 Flash-Lite：Standard 输入 $0.30、缓存输入 $0.03、输出 $2.50 / 百万 tokens"
+        ]
+      }
+    },
+    {
+      "id": "choose-model",
+      "heading": {"en": "Which Gemini Model Should You Choose?", "zh": "应该选择哪个 Gemini 模型？"},
+      "paragraphs": {
+        "en": [
+          "Choose 3.6 Flash when you want Google’s newest stable general-purpose model and need strong multimodal, grounding, and agentic performance. It also has a lower Standard output price than 3.5 Flash in the current snapshot.",
+          "Choose 3.5 Flash for workloads already validated on that model or when sustained frontier coding performance matters. Choose 3.5 Flash-Lite for classification, extraction, translation, routing, and other high-volume tasks where unit cost dominates."
+        ],
+        "zh": [
+          "需要 Google 最新稳定通用模型，以及较强的多模态、grounding 和智能体能力时，优先选择 3.6 Flash。在当前价格快照中，它的 Standard 输出价格也低于 3.5 Flash。",
+          "已经在 3.5 Flash 上完成验证，或重视持续前沿编程表现时，可以继续使用 3.5 Flash。分类、抽取、翻译、路由等高调用量任务更适合 3.5 Flash-Lite。"
+        ]
+      }
+    },
+    {
+      "id": "processing-options",
+      "heading": {"en": "Standard, Batch, Flex, and Priority Pricing", "zh": "Standard、Batch、Flex 与 Priority 价格"},
+      "paragraphs": {
+        "en": [
+          "Standard is the normal paid-tier rate. Batch and Flex reduce token prices for work that can accept asynchronous or flexible processing. Priority inference costs more for workloads that need prioritized capacity.",
+          "Batch and Flex are not temporary discounts. They are processing options with different delivery characteristics. Check the official documentation for availability and operational limits before routing production traffic."
+        ],
+        "zh": [
+          "Standard 是普通付费层级价格；Batch 和 Flex 为可以接受异步或弹性处理的工作负载降低 token 单价；Priority inference 价格更高，用于需要优先容量的负载。",
+          "Batch 和 Flex 不是临时促销，而是交付特性不同的处理选项。生产流量切换前，应通过官方文档确认可用性和运行限制。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "3.6 Flash input/output — Standard $1.50/$7.50 · Batch or Flex $0.75/$3.75 · Priority $2.70/$13.50",
+          "3.5 Flash input/output — Standard $1.50/$9.00 · Batch or Flex $0.75/$4.50 · Priority $2.70/$16.20",
+          "3.5 Flash-Lite input/output — Standard $0.30/$2.50 · Batch or Flex $0.15/$1.25 · Priority $0.54/$4.50"
+        ],
+        "zh": [
+          "3.6 Flash 输入/输出：Standard $1.50/$7.50 · Batch 或 Flex $0.75/$3.75 · Priority $2.70/$13.50",
+          "3.5 Flash 输入/输出：Standard $1.50/$9.00 · Batch 或 Flex $0.75/$4.50 · Priority $2.70/$16.20",
+          "3.5 Flash-Lite 输入/输出：Standard $0.30/$2.50 · Batch 或 Flex $0.15/$1.25 · Priority $0.54/$4.50"
+        ]
+      }
+    },
+    {
+      "id": "capabilities",
+      "heading": {"en": "Shared Model Capabilities", "zh": "模型共有能力"},
+      "paragraphs": {
+        "en": [
+          "The three stable models share a broad capability surface: thinking, structured outputs, function calling, code execution, file search, URL context, Search grounding, Google Maps grounding, caching, and preview access to Computer Use.",
+          "They do not generate audio or images directly and do not use the Live API. For native image, speech, live conversation, music, or video generation, use Google’s specialized Nano Banana, TTS, Live, Lyria, Imagen, or Veo model families and check their separate units and prices."
+        ],
+        "zh": [
+          "三个稳定模型具备广泛的共同能力：Thinking、结构化输出、函数调用、代码执行、文件搜索、URL Context、Search grounding、Google Maps grounding、缓存，以及预览版 Computer Use。",
+          "它们不直接生成音频或图像，也不使用 Live API。原生图像、语音、实时对话、音乐或视频生成应选择 Nano Banana、TTS、Live、Lyria、Imagen 或 Veo 等专用模型，并单独核对计量单位和价格。"
+        ]
+      }
+    },
+    {
+      "id": "free-tier-and-data",
+      "heading": {"en": "Free Tier, Paid Tier, and Data Use", "zh": "免费层级、付费层级与数据使用"},
+      "paragraphs": {
+        "en": [
+          "The official pricing table lists free-of-charge token usage for these stable models, subject to rate limits and availability. Paid-tier usage is billed at the rates above and is marked as not used to improve Google products, while the free tier is marked as used to improve products.",
+          "Free-tier limits are account and service constraints, not a permanent unlimited allowance. Review rate limits and billing status in Google AI Studio before estimating production capacity."
+        ],
+        "zh": [
+          "官方价格表显示，这些稳定模型在免费层级可免费使用 token，但受速率限制和可用性约束。付费层级按上述价格收费，并标记为不用于改进 Google 产品；免费层级则标记为会用于改进产品。",
+          "免费层级限制属于账户和服务约束，并非永久无限额度。估算生产容量前，应在 Google AI Studio 中确认速率限制和账单状态。"
+        ]
+      }
+    },
+    {
+      "id": "grounding-costs",
+      "heading": {"en": "Google Search and Maps Grounding Charges", "zh": "Google Search 与 Maps Grounding 费用"},
+      "paragraphs": {
+        "en": [
+          "Grounding charges are separate from model token prices. The current Gemini 3.x pricing table includes 5,000 free Google Search requests per month shared across Gemini 3.x models, then $14 per 1,000 requests. Google Maps grounding similarly includes a shared monthly allowance followed by $14 per 1,000 search queries.",
+          "One customer request can trigger multiple search queries, and Google charges each individual query performed. Measure actual grounding activity rather than estimating cost only from API request count."
+        ],
+        "zh": [
+          "Grounding 费用与模型 token 价格分开计算。当前 Gemini 3.x 价格表包含每月共享的 5,000 次免费 Google Search 请求，超出后每 1,000 次 $14；Google Maps grounding 也提供共享月度额度，之后每 1,000 个搜索查询 $14。",
+          "一次客户请求可能触发多个搜索查询，Google 会按实际执行的每个查询收费。因此应监控真实 grounding 活动，而不能只按 API 请求次数估算。"
+        ]
+      }
+    },
+    {
+      "id": "estimate-and-verify",
+      "heading": {"en": "Estimate Costs and Verify Prices", "zh": "估算成本并核验价格"},
+      "paragraphs": {
+        "en": [
+          "Estimate token cost with: input tokens × input rate plus output tokens (including thinking tokens) × output rate, divided by one million. Add grounding, cache storage, or specialized media charges separately.",
+          "This page is a dated editorial snapshot, not a live billing feed. Google can add models, change preview status, or update prices. Verify the model ID, pricing tier, rate limits, and final billing terms on the official Gemini Developer API pages before deployment."
+        ],
+        "zh": [
+          "Token 成本可按以下公式估算：输入 tokens × 输入单价，加上输出 tokens（包括 Thinking tokens）× 输出单价，再除以一百万。Grounding、缓存存储或专用媒体费用需要另行加入。",
+          "本页是带日期的编辑快照，并非实时账单。Google 可能新增模型、调整预览状态或更新价格。部署前请在 Gemini Developer API 官方页面核对模型 ID、价格层级、速率限制和最终账单条款。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {"en": "Which stable Gemini model is cheapest?", "zh": "哪个稳定版 Gemini 模型最便宜？"},
+      "answer": {"en": "Gemini 3.5 Flash-Lite has the lowest paid Standard rate among the three highlighted stable models: $0.30 input and $2.50 output per 1M tokens.", "zh": "在本文重点展示的三个稳定模型中，Gemini 3.5 Flash-Lite 的 Standard 付费价格最低：输入 $0.30、输出 $2.50 / 百万 tokens。"}
+    },
+    {
+      "question": {"en": "Does Gemini 3.6 Flash have a free tier?", "zh": "Gemini 3.6 Flash 有免费层级吗？"},
+      "answer": {"en": "The official pricing page lists free-of-charge Standard token usage, subject to rate limits and availability. Check AI Studio for the limits applied to your account.", "zh": "官方价格页列出了免费的 Standard token 使用，但受速率限制和可用性约束。请在 AI Studio 中确认你账户的实际限制。"}
+    },
+    {
+      "question": {"en": "Are Batch and Flex always half the Standard price?", "zh": "Batch 和 Flex 始终是 Standard 的半价吗？"},
+      "answer": {"en": "They are half the Standard input and output rates for the three models in this August 10, 2026 snapshot. Do not assume the same ratio for every Gemini model or future price update.", "zh": "在 2026 年 8 月 10 日的价格快照中，这三个模型的 Batch 和 Flex 输入、输出价格是 Standard 的一半，但不能假设所有 Gemini 模型或未来价格都保持相同比例。"}
+    },
+    {
+      "question": {"en": "Is Google Search grounding included in token pricing?", "zh": "Google Search grounding 包含在 token 价格内吗？"},
+      "answer": {"en": "No. Grounding has a separate monthly allowance and per-query pricing after that allowance. A single request may produce multiple billed search queries.", "zh": "不包含。Grounding 有独立的月度免费额度，超出后按查询收费，而且一次请求可能产生多个计费搜索查询。"}
+    }
+  ],
+  "sources": [
+    {"label": "Gemini Developer API Pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing", "site": "Google AI for Developers", "checkedAt": "2026-08-10"},
+    {"label": "Gemini API Models", "url": "https://ai.google.dev/gemini-api/docs/models", "site": "Google AI for Developers", "checkedAt": "2026-08-10"},
+    {"label": "Gemini 3.6 Flash Model", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash", "site": "Google AI for Developers", "checkedAt": "2026-08-10"},
+    {"label": "Gemini 3.5 Flash Model", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash", "site": "Google AI for Developers", "checkedAt": "2026-08-10"},
+    {"label": "Gemini 3.5 Flash-Lite Model", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite", "site": "Google AI for Developers", "checkedAt": "2026-08-10"}
+  ],
+  "seo": {
+    "title": {"en": "Google Gemini API Pricing & Models (2026) | Get Model Key", "zh": "Google Gemini API 模型与价格（2026）| Get Model Key"},
+    "description": {"en": "Official Gemini API price snapshot for Gemini 3.6 Flash, 3.5 Flash and 3.5 Flash-Lite, including context limits, capabilities, Batch, Flex and Priority rates.", "zh": "Gemini API 官方价格快照：Gemini 3.6 Flash、3.5 Flash 与 3.5 Flash-Lite，包含上下文限制、能力及 Batch、Flex、Priority 价格。"}
+  }
+}

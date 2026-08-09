@@ -1,0 +1,70 @@
+{
+  "slug": "minimax-china-api-key",
+  "status": "published",
+  "topic": "api-key",
+  "pillar": true,
+  "cluster": "minimax",
+  "publishedAt": "2026-08-10",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 7,
+  "title": { "en": "MiniMax China API Key Guide: M2.7, Pricing and First Call", "zh": "MiniMax 中国 API Key 指南：M2.7、价格与首次调用" },
+  "excerpt": { "en": "Use the official MiniMax China key page, compare current M2.7 pay-as-you-go prices, and make a first request with the OpenAI- or Anthropic-compatible API.", "zh": "使用 MiniMax 中国官方密钥入口，对比当前 M2.7 按量价格，并通过 OpenAI 或 Anthropic 兼容接口完成首次请求。" },
+  "tags": ["minimax china api key", "minimax m2.7", "minimax pricing", "openai compatible"],
+  "providerSlugs": ["minimax"],
+  "sections": [
+    {
+      "id": "official-key-page",
+      "heading": { "en": "Official MiniMax China API key page", "zh": "MiniMax 中国 API Key 官方入口" },
+      "paragraphs": {
+        "en": ["Sign in to https://platform.minimaxi.com and open Account Management → Interface Keys. The direct official key URL is https://platform.minimaxi.com/user-center/basic-information/interface-key. Create a separate key for each application and keep it on the server."],
+        "zh": ["登录 https://platform.minimaxi.com，进入“账户管理 → 接口密钥”。官方直达地址是 https://platform.minimaxi.com/user-center/basic-information/interface-key。建议每个应用创建独立 Key，并只保存在服务端。"]
+      }
+    },
+    {
+      "id": "current-models",
+      "heading": { "en": "Current M2 text models", "zh": "当前 M2 文本模型" },
+      "paragraphs": {
+        "en": ["MiniMax's current API overview lists M2.7, M2.7-highspeed, M2.5, M2.5-highspeed, M2.1, M2.1-highspeed, and M2. All have a documented 204,800-token input-plus-output window. M2.7 is described at about 60 output tokens per second, while M2.7-highspeed is about 100 TPS."],
+        "zh": ["MiniMax 当前 API 概览列出 M2.7、M2.7-highspeed、M2.5、M2.5-highspeed、M2.1、M2.1-highspeed 与 M2，官方标注输入输出合计窗口均为 204,800 Token。M2.7 输出速度约 60 TPS，M2.7-highspeed 约 100 TPS。"]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": { "en": "Verified pay-as-you-go text pricing", "zh": "已核验的文本按量价格" },
+      "paragraphs": {
+        "en": ["Prices below are CNY per million tokens from MiniMax's official pay-as-you-go page, checked August 10, 2026. Audio, image, video and music use separate units and price tables."],
+        "zh": ["以下价格来自 MiniMax 官方按量计费页，单位为人民币/百万 Token，核验日期为 2026 年 8 月 10 日。语音、图像、视频和音乐采用单独计量方式与价格表。"]
+      },
+      "bullets": {
+        "en": ["MiniMax-M2.7: input ¥2.1; output ¥8.4; cache read ¥0.42; cache write ¥2.625", "MiniMax-M2.7-highspeed: input ¥4.2; output ¥16.8; cache read ¥0.42; cache write ¥2.625", "MiniMax-M2.5: input ¥2.1; output ¥8.4; cache read ¥0.21; cache write ¥2.625", "MiniMax-M2.5-highspeed: input ¥4.2; output ¥16.8; cache read ¥0.21; cache write ¥2.625", "M2-her: input ¥2.1; output ¥8.4; no cache price listed"],
+        "zh": ["MiniMax-M2.7：输入 ¥2.1；输出 ¥8.4；缓存读取 ¥0.42；缓存写入 ¥2.625", "MiniMax-M2.7-highspeed：输入 ¥4.2；输出 ¥16.8；缓存读取 ¥0.42；缓存写入 ¥2.625", "MiniMax-M2.5：输入 ¥2.1；输出 ¥8.4；缓存读取 ¥0.21；缓存写入 ¥2.625", "MiniMax-M2.5-highspeed：输入 ¥4.2；输出 ¥16.8；缓存读取 ¥0.21；缓存写入 ¥2.625", "M2-her：输入 ¥2.1；输出 ¥8.4；官方表格未列缓存价格"]
+      }
+    },
+    {
+      "id": "openai-compatible",
+      "heading": { "en": "First call with the OpenAI-compatible API", "zh": "通过 OpenAI 兼容接口首次调用" },
+      "paragraphs": { "en": ["MiniMax officially supports the OpenAI SDK at https://api.minimaxi.com/v1. The response content can include thinking tags, so preserve the full assistant message in multi-turn conversations."], "zh": ["MiniMax 官方支持在 https://api.minimaxi.com/v1 使用 OpenAI SDK。响应 content 可能包含思考标签，多轮对话中应完整保留 assistant 消息。"] },
+      "codeBlocks": [{ "language": "python", "code": "from openai import OpenAI\nimport os\n\nclient = OpenAI(\n    api_key=os.environ[\"MINIMAX_API_KEY\"],\n    base_url=\"https://api.minimaxi.com/v1\",\n)\nresponse = client.chat.completions.create(\n    model=\"MiniMax-M2.7\",\n    messages=[{\"role\": \"user\", \"content\": \"Reply with: KEY_WORKS\"}],\n)\nprint(response.choices[0].message.content)", "caption": { "en": "MiniMax M2.7 with the OpenAI Python SDK", "zh": "使用 OpenAI Python SDK 调用 MiniMax M2.7" } }]
+    },
+    {
+      "id": "anthropic-compatible",
+      "heading": { "en": "Anthropic-compatible endpoint", "zh": "Anthropic 兼容端点" },
+      "paragraphs": { "en": ["MiniMax also provides an Anthropic-compatible endpoint at https://api.minimaxi.com/anthropic and recommends this integration for current text models. It supports text, tool use, tool results and thinking blocks; the compatibility page says image and document inputs are not currently supported."], "zh": ["MiniMax 还提供 https://api.minimaxi.com/anthropic 这一 Anthropic 兼容端点，并推荐当前文本模型使用这种接入方式。兼容页说明它支持文本、工具调用、工具结果与 thinking 块，但目前不支持图像和文档输入。"] }
+    }
+  ],
+  "faq": [
+    { "question": { "en": "What is the MiniMax China API base URL?", "zh": "MiniMax 中国 API 的 Base URL 是什么？" }, "answer": { "en": "Use https://api.minimaxi.com/v1 for the OpenAI SDK or https://api.minimaxi.com/anthropic for the Anthropic SDK.", "zh": "OpenAI SDK 使用 https://api.minimaxi.com/v1；Anthropic SDK 使用 https://api.minimaxi.com/anthropic。" } },
+    { "question": { "en": "How large is the M2.7 context window?", "zh": "M2.7 上下文窗口多大？" }, "answer": { "en": "MiniMax documents a 204,800-token combined input and output window.", "zh": "MiniMax 官方标注输入和输出合计为 204,800 Token。" } },
+    { "question": { "en": "Is M2.7-highspeed a different-quality model?", "zh": "M2.7-highspeed 的模型质量不同吗？" }, "answer": { "en": "MiniMax describes it as the same capability with faster output, approximately 100 TPS instead of approximately 60 TPS, and prices it at twice the standard input/output rate.", "zh": "MiniMax 将其描述为能力不变但输出更快，约 100 TPS 而非约 60 TPS；输入与输出价格是标准版的两倍。" } }
+  ],
+  "sources": [
+    { "label": "MiniMax API overview", "url": "https://platform.minimaxi.com/docs/api-reference/api-overview", "site": "MiniMax", "checkedAt": "2026-08-10" },
+    { "label": "MiniMax pay-as-you-go pricing", "url": "https://platform.minimaxi.com/docs/guides/pricing-paygo", "site": "MiniMax", "checkedAt": "2026-08-10" },
+    { "label": "MiniMax OpenAI compatibility", "url": "https://platform.minimaxi.com/docs/api-reference/text-openai-api", "site": "MiniMax", "checkedAt": "2026-08-10" },
+    { "label": "MiniMax Anthropic compatibility", "url": "https://platform.minimaxi.com/docs/api-reference/text-anthropic-api", "site": "MiniMax", "checkedAt": "2026-08-10" }
+  ],
+  "seo": {
+    "title": { "en": "MiniMax China API Key: M2.7 Pricing & First Call (2026)", "zh": "MiniMax 中国 API Key：M2.7 价格与首次调用（2026）" },
+    "description": { "en": "Get a MiniMax China API key, compare verified M2.7 and M2.5 CNY prices, and call the OpenAI- or Anthropic-compatible API.", "zh": "获取 MiniMax 中国 API Key，对比已核验的 M2.7/M2.5 人民币价格，并调用 OpenAI 或 Anthropic 兼容 API。" }
+  }
+}

@@ -14,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.domain;
 
   /** Fixed dates for static pages — avoids unreliable new Date() in lastmod signals */
-  const STATIC_DATE = '2026-07-29';
+  const STATIC_DATE = '2026-08-10';
 
   const routes = [
     {
@@ -146,7 +146,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.75,
   }));
 
-  return [
+  const pages = [
     ...routes,
     ...providerPages,
     ...guidePages,
@@ -154,4 +154,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...chineseProviderPages,
     ...chineseGuidePages,
   ];
+
+  return pages.map((page) => {
+    const pathname = new URL(page.url).pathname;
+    const isChinese = pathname === '/zh/' || pathname.startsWith('/zh/');
+    const englishPath = isChinese ? pathname.replace(/^\/zh(?=\/)/, '') : pathname;
+    const chinesePath = isChinese
+      ? pathname
+      : pathname === '/'
+        ? '/zh/'
+        : `/zh${pathname}`;
+
+    return {
+      ...page,
+      alternates: {
+        languages: {
+          en: `${baseUrl}${englishPath}`,
+          zh: `${baseUrl}${chinesePath}`,
+          'x-default': `${baseUrl}${englishPath}`,
+        },
+      },
+    };
+  });
 }

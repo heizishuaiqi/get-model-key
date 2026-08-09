@@ -1,105 +1,79 @@
 {
   "slug": "anthropic",
   "status": "active",
-  "categories": [
-    "top-picks",
-    "global"
-  ],
+  "categories": ["top-picks", "global"],
   "region": "global",
   "featured": true,
   "officialKeyUrl": "https://console.anthropic.com/account/keys",
   "officialSiteUrl": "https://www.anthropic.com/",
-  "officialDocsUrl": "https://docs.anthropic.com/",
-  "name": {
-    "en": "Anthropic",
-    "zh": "Anthropic"
-  },
+  "officialDocsUrl": "https://platform.claude.com/docs/zh-CN/about-claude/pricing",
+  "name": { "en": "Anthropic", "zh": "Anthropic" },
   "summary": {
-    "en": "Anthropic's frontier models, now including Claude Fable 5 — first Mythos-class model open to the public. SWE-bench Verified 95.0%, 1M context, adaptive thinking. Best for complex agent workflows and high-stakes coding.",
-    "zh": "Anthropic 旗舰模型家族，最新加入 Claude Fable 5——首款对公众开放的 Mythos 级模型。SWE-bench Verified 95.0%，100 万 Token 上下文，自适应思考。最适合复杂 Agent 工作流和高要求代码任务。"
+    "en": "Official Claude API access for Claude Fable 5, Opus 5, Sonnet 5, and Haiku 4.5, spanning frontier agents, coding, balanced production workloads, and high-throughput tasks.",
+    "zh": "Anthropic 官方 Claude API，覆盖 Claude Fable 5、Opus 5、Sonnet 5 与 Haiku 4.5，分别面向前沿 Agent、复杂编程、均衡生产负载和高吞吐任务。"
   },
   "models": {
-    "en": [
-      "Claude Fable 5",
-      "Claude Sonnet 5",
-      "Claude Opus 4.8",
-      "Claude Haiku 4.5",
-      "Claude Sonnet 4.6",
-      "Claude 3.5 Sonnet"
-    ],
-    "zh": [
-      "Claude Fable 5",
-      "Claude Sonnet 5",
-      "Claude Opus 4.8",
-      "Claude Haiku 4.5",
-      "Claude Sonnet 4.6",
-      "Claude 3.5 Sonnet"
-    ]
+    "en": ["Claude Fable 5", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"],
+    "zh": ["Claude Fable 5", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"]
   },
-  "tags": [
-    "reasoning",
-    "safety",
-    "complex-tasks"
-  ],
-  "searchAliases": [
-    "claude",
-    "anthropic ai"
-  ],
-  "lastVerified": "2026-07-22",
+  "tags": ["reasoning", "coding", "long-context"],
+  "searchAliases": ["claude", "anthropic ai", "claude api"],
+  "lastVerified": "2026-08-10",
   "seo": {
     "title": {
-      "en": "Anthropic API Key — Claude Fable 5 & All Models Access | Get Model Key",
-      "zh": "Anthropic API Key——Claude Fable 5 及全系列模型入口 | Get Model Key"
+      "en": "Anthropic API Key — Claude Fable 5, Opus 5, Sonnet 5 & Haiku 4.5 | Get Model Key",
+      "zh": "Anthropic API Key：Claude Fable 5、Opus 5、Sonnet 5 与 Haiku 4.5 | Get Model Key"
     },
     "description": {
-      "en": "Get your Anthropic API key for Claude Fable 5 and all Claude models. Fable 5: Mythos-class frontier model, SWE-bench 95%, 1M context.",
-      "zh": "获取 Anthropic Claude Fable 5 及全系列模型的官方 API Key。Fable 5：Mythos 级前沿模型，SWE-bench 95%，百万 Token 上下文。"
+      "en": "Get an Anthropic API key and compare current Claude models, token prices, prompt caching, context windows, and output limits.",
+      "zh": "获取 Anthropic API Key，并对比当前 Claude 模型的 Token 价格、Prompt 缓存、上下文窗口与最大输出。"
     }
   },
   "img": "https://img.amz123.com/upload/image_cloud/202407/1721118005719027_Claude.webp",
   "overview": {
     "en": [
-      "Anthropic builds the Claude family, including Claude Fable 5 (Mythos-class, public access), plus Sonnet, Opus, and Haiku lines for agents and coding.",
-      "Use the Anthropic Console when you want first-party Claude APIs with long context and adaptive thinking, without an AWS or third-party middle layer."
+      "Anthropic's current Claude lineup includes Fable 5 for the most demanding agentic work, Opus 5 for frontier coding and reasoning, Sonnet 5 for a balance of intelligence and cost, and Haiku 4.5 for fast, high-volume workloads.",
+      "As verified on August 10, 2026, standard input/output prices per million tokens are $10/$50 for Fable 5, $5/$25 for Opus 5, and $1/$5 for Haiku 4.5. Sonnet 5 is temporarily $2/$10 through August 31, then becomes $3/$15 on September 1."
     ],
     "zh": [
-      "Anthropic 打造 Claude 家族，包括对公众开放的 Mythos 级 Claude Fable 5，以及 Sonnet、Opus、Haiku 等，面向 Agent 与高要求编程。",
-      "若希望直连官方 Claude API、使用长上下文与自适应思考，而不经过 AWS 或第三方中间层，请使用 Anthropic Console。"
+      "Anthropic 当前 Claude 阵容包括：面向高难度 Agent 任务的 Fable 5、面向前沿编程与推理的 Opus 5、兼顾能力与成本的 Sonnet 5，以及适合快速高吞吐任务的 Haiku 4.5。",
+      "截至 2026 年 8 月 10 日，每百万 Token 的标准输入/输出价分别为：Fable 5 为 $10/$50，Opus 5 为 $5/$25，Haiku 4.5 为 $1/$5。Sonnet 5 在 8 月 31 日前为限时 $2/$10，9 月 1 日起恢复为 $3/$15。"
     ]
   },
   "howToGetKey": {
     "en": [
       "Sign up or log in at console.anthropic.com.",
-      "Open Account → API Keys (console.anthropic.com/account/keys) and create a key.",
-      "Copy the secret immediately; Anthropic shows full key material only at creation time.",
-      "Call the Messages API with x-api-key (or SDK auth) using docs.anthropic.com guidance."
+      "Open Account → API Keys and create a key.",
+      "Copy the secret immediately and store it in a password manager or environment variable.",
+      "Call the Messages API with the x-api-key header or an official Anthropic SDK."
     ],
     "zh": [
       "在 console.anthropic.com 注册或登录。",
-      "进入 Account → API Keys（console.anthropic.com/account/keys）创建密钥。",
-      "创建时立即复制完整密钥，之后通常无法再次查看明文。",
-      "按 docs.anthropic.com 说明，用 x-api-key 或官方 SDK 调用 Messages API。"
+      "进入 Account → API Keys 并创建密钥。",
+      "立即复制密钥，并保存到密码管理器或环境变量中。",
+      "使用 x-api-key 请求头或 Anthropic 官方 SDK 调用 Messages API。"
     ]
   },
   "faq": [
     {
-      "question": {
-        "en": "Can one Anthropic key call Claude Fable 5 and older Claude models?",
-        "zh": "一把 Anthropic Key 能否同时调用 Fable 5 与其他 Claude？"
-      },
+      "question": { "en": "Which current Claude model should I choose?", "zh": "当前应该选择哪款 Claude 模型？" },
       "answer": {
-        "en": "Keys issued in the Anthropic Console are used across Claude models your workspace is allowed to call; confirm Fable 5 availability in the console.",
-        "zh": "Console 签发的 Key 可用于工作区已开通的 Claude 模型；Fable 5 是否可用请在控制台确认。"
+        "en": "Choose Fable 5 for maximum agent capability, Opus 5 for demanding coding and reasoning, Sonnet 5 for balanced production use, or Haiku 4.5 for latency-sensitive high-volume tasks.",
+        "zh": "追求最强 Agent 能力可选 Fable 5；复杂编程与推理选 Opus 5；常规生产任务选 Sonnet 5；对延迟和吞吐量敏感则选 Haiku 4.5。"
       }
     },
     {
-      "question": {
-        "en": "Where do I read Claude API docs?",
-        "zh": "Claude API 文档在哪里？"
-      },
+      "question": { "en": "When does the Claude Sonnet 5 promotional price end?", "zh": "Claude Sonnet 5 的优惠价何时结束？" },
       "answer": {
-        "en": "Official docs are at https://docs.anthropic.com/. Keys are managed at https://console.anthropic.com/account/keys.",
-        "zh": "官方文档：https://docs.anthropic.com/。密钥管理：https://console.anthropic.com/account/keys。"
+        "en": "The $2 input / $10 output price per million tokens ends August 31, 2026. Standard $3/$15 pricing begins September 1, 2026.",
+        "zh": "每百万 Token 输入 $2、输出 $10 的优惠价于 2026 年 8 月 31 日结束；9 月 1 日起按标准 $3/$15 计费。"
+      }
+    },
+    {
+      "question": { "en": "Can prompt caching reduce Claude API costs?", "zh": "Prompt 缓存能降低 Claude API 成本吗？" },
+      "answer": {
+        "en": "Yes. A cache hit costs 10% of base input pricing. Five-minute and one-hour cache writes cost 1.25× and 2× the base input price respectively.",
+        "zh": "可以。缓存命中的费用为基础输入价的 10%；5 分钟和 1 小时缓存写入分别按基础输入价的 1.25 倍和 2 倍计费。"
       }
     }
   ]

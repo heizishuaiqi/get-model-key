@@ -9,7 +9,7 @@
   "featured": true,
   "officialKeyUrl": "https://platform.deepseek.com/api_keys",
   "officialSiteUrl": "https://www.deepseek.com/",
-  "officialDocsUrl": "https://platform.deepseek.com/api-docs/",
+  "officialDocsUrl": "https://api-docs.deepseek.com/zh-cn/",
   "name": {
     "en": "DeepSeek",
     "zh": "深度求索"
@@ -20,12 +20,16 @@
   },
   "models": {
     "en": [
+      "DeepSeek V4 Flash",
+      "DeepSeek V4 Pro",
       "DeepSeek-V3.2",
       "DeepSeek-Coder-V3",
       "DeepSeek-R1",
       "DeepSeek-Reasoner"
     ],
     "zh": [
+      "DeepSeek V4 Flash",
+      "DeepSeek V4 Pro",
       "DeepSeek-V3.2",
       "DeepSeek-Coder-V3",
       "DeepSeek-R1",
@@ -42,25 +46,25 @@
     "deep seek",
     "深度求索"
   ],
-  "lastVerified": "2026-07-22",
+  "lastVerified": "2026-08-10",
   "seo": {
     "title": {
       "en": "DeepSeek API Key - Official Access for DeepSeek Models | Get Model Key",
       "zh": "DeepSeek API Key - 深度求索模型官方入口 | Get Model Key"
     },
     "description": {
-      "en": "Get official DeepSeek API key for DeepSeek-V3, Coder, and R1 models. Strong coding and reasoning capabilities.",
-      "zh": "获取 DeepSeek-V3、Coder 和 R1 模型的官方 API Key。强大的代码和推理能力。"
+      "en": "Get the official DeepSeek API key and compare V4 Flash and V4 Pro pricing, 1M context, 384K output, API formats and concurrency limits.",
+      "zh": "获取 DeepSeek 官方 API Key，并比较 V4 Flash 与 V4 Pro 的价格、1M 上下文、384K 输出、API 格式和并发限制。"
     }
   },
   "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773806237995049_deepseek.webp",
   "overview": {
     "en": [
-      "DeepSeek provides coding- and reasoning-strong models such as DeepSeek-V3.2, Coder, R1, and Reasoner via its own platform APIs.",
+      "DeepSeek provides coding- and reasoning-strong models through its platform API. Its current V4 endpoints are deepseek-v4-flash and deepseek-v4-pro, both with thinking and non-thinking modes.",
       "Developers often pick DeepSeek for cost-effective Chinese-friendly coding agents and long reasoning traces without hosting the weights themselves."
     ],
     "zh": [
-      "DeepSeek（深度求索）通过自有平台提供偏代码与推理的模型，如 DeepSeek-V3.2、Coder、R1、Reasoner。",
+      "DeepSeek（深度求索）通过自有平台 API 提供偏代码与推理的模型。当前 V4 接口包括 deepseek-v4-flash 与 deepseek-v4-pro，均支持思考和非思考模式。",
       "开发者常因高性价比、中文友好与较强编程/推理能力而选择 DeepSeek，无需自托管权重。"
     ]
   },
@@ -95,9 +99,13 @@
         "zh": "哪些 DeepSeek 模型需要平台 Key？"
       },
       "answer": {
-        "en": "Official cloud access to V3.2, Coder, R1, and Reasoner lines is via platform API keys. Check the console for current model IDs.",
-        "zh": "V3.2、Coder、R1、Reasoner 等云端调用通过平台 API Key。当前模型 ID 以控制台为准。"
+        "en": "Current V4 cloud endpoints use deepseek-v4-flash and deepseek-v4-pro. Older model lines may remain available; confirm current IDs in the official docs and console.",
+        "zh": "当前 V4 云端接口使用 deepseek-v4-flash 和 deepseek-v4-pro。旧模型系列可能仍然可用，请以官方文档和控制台中的当前 ID 为准。"
       }
+    },
+    {
+      "question": {"en": "Are current DeepSeek V4 prices permanent?", "zh": "当前 DeepSeek V4 价格会长期不变吗？"},
+      "answer": {"en": "No guarantee. DeepSeek currently warns that it plans a significant API price increase. Treat our figures as a dated snapshot and verify before recharging.", "zh": "不能保证。DeepSeek 当前提示计划较大幅度上调 API 价格。请将本站数字视为带日期的快照，并在充值前重新核验。"}
     }
   ]
 }

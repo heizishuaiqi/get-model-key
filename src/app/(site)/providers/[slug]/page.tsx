@@ -7,6 +7,10 @@ import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
 import ProviderContentSections from '@/components/providers/ProviderContentSections';
+import OpenAIFrontierModels from '@/components/providers/OpenAIFrontierModels';
+import GoogleGeminiModels from '@/components/providers/GoogleGeminiModels';
+import DeepSeekV4Models from '@/components/providers/DeepSeekV4Models';
+import ClaudeModelFamily from '@/components/providers/ClaudeModelFamily';
 import { getActiveOffers, getAllProviders, getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuidesByProviderSlug } from '@/lib/guides';
 import { getProviderMetadata, buildFaqStructuredData } from '@/lib/seo';
@@ -142,6 +146,11 @@ export default async function ProviderPage({ params }: Props) {
               lang="en"
               include={['overview', 'howToGetKey']}
             />
+
+            {provider.slug === 'openai' ? <OpenAIFrontierModels lang="en" compact /> : null}
+            {provider.slug === 'google' ? <GoogleGeminiModels lang="en" compact /> : null}
+            {provider.slug === 'deepseek' ? <DeepSeekV4Models lang="en" compact /> : null}
+            {provider.slug === 'anthropic' ? <ClaudeModelFamily lang="en" compact /> : null}
 
             <Card variant="emphasis">
               <h2 className="mb-4 text-h2 text-text-primary">Common Models</h2>

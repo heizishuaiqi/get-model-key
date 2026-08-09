@@ -1,149 +1,56 @@
 {
   "slug": "minimax",
   "status": "active",
-  "categories": [
-    "china",
-    "multimodal",
-    "llm",
-    "agent"
-  ],
+  "categories": ["china", "multimodal"],
   "region": "china",
-  "featured": false,
+  "featured": true,
   "officialKeyUrl": "https://platform.minimaxi.com/user-center/basic-information/interface-key",
   "officialSiteUrl": "https://www.minimaxi.com/",
-  "officialDocsUrl": "https://platform.minimaxi.com/docs/guides/models-intro",
-  "name": {
-    "en": "MiniMax AI",
-    "zh": "MiniMax"
-  },
+  "officialDocsUrl": "https://platform.minimaxi.com/docs/api-reference/api-overview",
+  "name": { "en": "MiniMax AI", "zh": "MiniMax" },
   "summary": {
-    "en": "A leading AI model provider with multimodal capabilities, including text, speech, music and intelligent agent tools.",
-    "zh": "领先的AI模型提供商，具备文本、语音、音乐和智能体工具等多模态能力。"
+    "en": "MiniMax's China API platform for text, speech, image, video, and music. Current text APIs center on MiniMax-M2.7, with OpenAI- and Anthropic-compatible endpoints.",
+    "zh": "MiniMax 中国开放平台，提供文本、语音、图像、视频与音乐 API。当前文本接口以 MiniMax-M2.7 为主，并兼容 OpenAI 与 Anthropic API 格式。"
   },
   "models": {
-    "en": [
-      "M2.7",
-      "M2.5",
-      "M2-Her",
-      "M2.1",
-      "M2",
-      "Speech 2.6",
-      "Speech 2.5",
-      "Hailuo 2.3",
-      "Hailuo 02",
-      "Music 2.5+",
-      "Music 2.5",
-      "Music 2.0",
-      "Music 1.5",
-      "Agent"
-    ],
-    "zh": [
-      "M2.7",
-      "M2.5",
-      "M2-Her",
-      "M2.1",
-      "M2",
-      "语音2.6",
-      "语音2.5",
-      "海螺2.3",
-      "海螺02",
-      "音乐2.5+",
-      "音乐2.5",
-      "音乐2.0",
-      "音乐1.5",
-      "智能体"
-    ]
+    "en": ["MiniMax-M2.7", "MiniMax-M2.7-highspeed", "MiniMax-M2.5", "MiniMax-M2.5-highspeed", "M2-her", "speech-2.8-hd", "MiniMax-Hailuo-2.3-Fast"],
+    "zh": ["MiniMax-M2.7", "MiniMax-M2.7-highspeed", "MiniMax-M2.5", "MiniMax-M2.5-highspeed", "M2-her", "speech-2.8-hd", "MiniMax-Hailuo-2.3-Fast"]
   },
-  "tags": [
-    "chinese",
-    "multimodal",
-    "llm",
-    "agent",
-    "speech",
-    "music"
-  ],
-  "searchAliases": [
-    "minimax",
-    "mini max",
-    "海螺",
-    "hailuo"
-  ],
-  "lastVerified": "2026-07-22",
+  "tags": ["china-api", "reasoning", "coding", "multimodal"],
+  "searchAliases": ["minimax", "minimax china api key", "minimaxi", "海螺"],
+  "lastVerified": "2026-08-10",
   "seo": {
-    "title": {
-      "en": "MiniMax AI API Key - Multimodal AI Models | Get Model Key",
-      "zh": "MiniMax AI API Key - 多模态AI模型 | Get Model Key"
-    },
-    "description": {
-      "en": "Get MiniMax AI API key for access to their full suite of multimodal AI models including text, speech, music and agent tools.",
-      "zh": "获取MiniMax AI API Key，访问其全系列多模态AI模型，包括文本、语音、音乐和智能体工具。"
-    }
+    "title": { "en": "MiniMax China API Key: M2.7 Models, Pricing & Official Link", "zh": "MiniMax 中国 API Key：M2.7 模型、价格与官方入口" },
+    "description": { "en": "Open the official MiniMax China API key page, compare M2.7 and M2.5 pricing, and use OpenAI- or Anthropic-compatible endpoints.", "zh": "访问 MiniMax 中国官方 API Key 页面，对比 M2.7、M2.5 价格，并使用 OpenAI 或 Anthropic 兼容接口。" }
   },
-  "offers": [
-    {
-      "id": "openclaw-2026-trial-credit",
-      "status": "active",
-      "type": "signup_credit",
-      "title": {
-        "en": "New user trial credit",
-        "zh": "新用户试用额度"
-      },
-      "benefit": {
-        "en": "New users can generally claim about CNY 15 in trial credit, often with real-name verification required (subject to official policy).",
-        "zh": "新用户一般可领取约 15 元试用额度，通常需实名（具体以官方规则为准）。"
-      },
-      "notes": {
-        "en": "Its concise output style helps control token cost and works well for lightweight daily tasks plus multi-step command chaining in OpenClaw.",
-        "zh": "输出风格精炼、Token 开销可控，适合 OpenClaw 的日常轻任务与多轮指令串联。"
-      },
-      "verifiedAt": "2026-03-26"
-    }
-  ],
   "img": "https://img.amz123.com/upload/image_cloud/202603/1773302663477298_minimax.webp",
   "overview": {
     "en": [
-      "MiniMax is a China multimodal AI platform covering text LLMs, speech, music, video (Hailuo), and agent-oriented tools.",
-      "API access is managed in the MiniMax open platform; interface keys live under the user-center key page."
+      "MiniMax's official China platform manages API keys under Account Management → Interface Keys. The current text lineup is led by MiniMax-M2.7 and its high-speed variant; both have a documented 204,800-token context window.",
+      "Verified pay-as-you-go text prices are quoted in CNY per million tokens. MiniMax-M2.7 costs ¥2.1 input, ¥8.4 output, ¥0.42 cache read and ¥2.625 cache write. M2.7-highspeed costs ¥4.2 input and ¥16.8 output, with the same cache prices."
     ],
     "zh": [
-      "MiniMax 是中国多模态 AI 平台，覆盖文本大模型、语音、音乐、视频（海螺）与智能体相关能力。",
-      "API 在 MiniMax 开放平台管理；接口密钥位于用户中心的 interface-key 页面。"
+      "MiniMax 中国开放平台在“账户管理 → 接口密钥”中管理 API Key。当前文本模型以 MiniMax-M2.7 及其 highspeed 版本为主，官方文档标注二者上下文窗口均为 204,800 Token。",
+      "按量计费文本价格以人民币/百万 Token 计。MiniMax-M2.7 输入 ¥2.1、输出 ¥8.4、缓存读取 ¥0.42、缓存写入 ¥2.625；M2.7-highspeed 输入 ¥4.2、输出 ¥16.8，缓存价格相同。"
     ]
   },
   "howToGetKey": {
     "en": [
       "Register or sign in at platform.minimaxi.com.",
-      "Open User Center → basic information → interface-key (official key page).",
-      "Create an interface key and copy it into a secure server-side secret store.",
-      "Read https://platform.minimaxi.com/docs/guides/models-intro for model IDs and calling conventions."
+      "Open Account Management → Interface Keys, or use the official direct key URL.",
+      "Create and copy the key, then store it as a server-side environment variable.",
+      "Use https://api.minimaxi.com/v1 with the OpenAI SDK, or https://api.minimaxi.com/anthropic with the Anthropic SDK."
     ],
     "zh": [
       "在 platform.minimaxi.com 注册或登录。",
-      "进入用户中心 → 基本信息 → interface-key（官方密钥页）。",
-      "创建接口密钥，并保存到安全的服务端密钥存储。",
-      "阅读 https://platform.minimaxi.com/docs/guides/models-intro 确认模型 ID 与调用方式。"
+      "进入“账户管理 → 接口密钥”，或直接打开官方 Key 地址。",
+      "创建并复制 Key，将其保存为服务端环境变量。",
+      "OpenAI SDK 使用 https://api.minimaxi.com/v1；Anthropic SDK 使用 https://api.minimaxi.com/anthropic。"
     ]
   },
   "faq": [
-    {
-      "question": {
-        "en": "What modalities does MiniMax cover?",
-        "zh": "MiniMax 覆盖哪些模态？"
-      },
-      "answer": {
-        "en": "Text, speech, music, video/agent-related models appear in its catalog—confirm the live list in official docs.",
-        "zh": "文本、语音、音乐、视频/智能体等相关模型都在其产品线中，具体以官方文档实时目录为准。"
-      }
-    },
-    {
-      "question": {
-        "en": "Are trial credits guaranteed?",
-        "zh": "试用额度一定有吗？"
-      },
-      "answer": {
-        "en": "Promotions vary and may require real-name verification. Rely on the official platform rules, not third-party claims.",
-        "zh": "活动会变化，且可能需实名。请以官方平台规则为准，勿轻信第三方承诺。"
-      }
-    }
+    { "question": { "en": "What is the current MiniMax text model?", "zh": "MiniMax 当前文本主模型是什么？" }, "answer": { "en": "The current official API documentation leads with MiniMax-M2.7 and MiniMax-M2.7-highspeed. M2.5 remains available, while M2.1 and M2 are listed as older models in pricing documentation.", "zh": "当前官方 API 文档以 MiniMax-M2.7 和 MiniMax-M2.7-highspeed 为主；M2.5 仍可用，M2.1 与 M2 已在价格文档中归入历史模型。" } },
+    { "question": { "en": "Does MiniMax support the OpenAI SDK?", "zh": "MiniMax 支持 OpenAI SDK 吗？" }, "answer": { "en": "Yes. Set the OpenAI-compatible base URL to https://api.minimaxi.com/v1 and use your MiniMax API key.", "zh": "支持。把 OpenAI 兼容 Base URL 设置为 https://api.minimaxi.com/v1，并使用 MiniMax API Key。" } },
+    { "question": { "en": "Does MiniMax support the Anthropic SDK?", "zh": "MiniMax 支持 Anthropic SDK 吗？" }, "answer": { "en": "Yes. MiniMax recommends its Anthropic-compatible endpoint for current text models at https://api.minimaxi.com/anthropic.", "zh": "支持。MiniMax 对当前文本模型推荐使用 https://api.minimaxi.com/anthropic 这一 Anthropic 兼容端点。" } }
   ]
 }

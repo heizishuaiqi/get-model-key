@@ -9,7 +9,7 @@
   "updatedAt": "2026-08-07",
   "readingMinutes": 8,
   "title": {
-    "en": "How to Get a Gemini API Key (2026 Step-by-Step Guide)",
+    "en": "Create a Gemini API Key in Google AI Studio: Step-by-Step Screens",
     "zh": "如何获取 Gemini API Key（2026 逐步指南）"
   },
   "excerpt": {
@@ -128,7 +128,7 @@
       "codeBlocks": [
         {
           "language": "python",
-          "code": "from google import genai\n\nclient = genai.Client(api_key=\"YOUR_GEMINI_API_KEY\")\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.0-flash\",\n    contents=\"Hello, what can you do?\"\n)\n\nprint(response.text)",
+          "code": "from google import genai\nimport os\n\nclient = genai.Client(api_key=os.environ[\"GEMINI_API_KEY\"])\n\nresponse = client.models.generate_content(\n    model=\"gemini-3.5-flash\",\n    contents=\"Hello, what can you do?\"\n)\n\nprint(response.text)",
           "caption": {
             "en": "Minimal Gemini API call using the Google Gen AI SDK",
             "zh": "使用 Google Gen AI SDK 调用 Gemini API 的最小示例"
@@ -191,7 +191,7 @@
   ],
   "seo": {
     "title": {
-      "en": "How to Get a Gemini API Key (2026 Guide) | Get Model Key",
+      "en": "Create a Gemini API Key in Google AI Studio: Step-by-Step",
       "zh": "如何获取 Gemini API Key（2026 指南）| Get Model Key"
     },
     "description": {

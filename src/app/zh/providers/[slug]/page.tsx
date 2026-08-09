@@ -7,6 +7,10 @@ import PillButton from '@/components/ui/PillButton';
 import PrimaryInverseButton from '@/components/ui/PrimaryInverseButton';
 import ProviderLogo from '@/components/providers/ProviderLogo';
 import ProviderContentSections from '@/components/providers/ProviderContentSections';
+import OpenAIFrontierModels from '@/components/providers/OpenAIFrontierModels';
+import GoogleGeminiModels from '@/components/providers/GoogleGeminiModels';
+import DeepSeekV4Models from '@/components/providers/DeepSeekV4Models';
+import ClaudeModelFamily from '@/components/providers/ClaudeModelFamily';
 import { getActiveOffers, getAllProviders, getProviderBySlug, getSiteConfig } from '@/lib/providers';
 import { getGuidesByProviderSlug } from '@/lib/guides';
 import { getProviderMetadata, buildFaqStructuredData } from '@/lib/seo';
@@ -142,6 +146,11 @@ export default async function ZhProviderPage({ params }: Props) {
               lang="zh"
               include={['overview', 'howToGetKey']}
             />
+
+            {provider.slug === 'openai' ? <OpenAIFrontierModels lang="zh" compact /> : null}
+            {provider.slug === 'google' ? <GoogleGeminiModels lang="zh" compact /> : null}
+            {provider.slug === 'deepseek' ? <DeepSeekV4Models lang="zh" compact /> : null}
+            {provider.slug === 'anthropic' ? <ClaudeModelFamily lang="zh" compact /> : null}
 
             <Card variant="emphasis">
               <h2 className="mb-4 text-h2 text-text-primary">{'常用模型'}</h2>

@@ -1,275 +1,140 @@
 {
   "slug": "gemini-api-key-complete-guide",
   "status": "published",
-  "topic": "api-key-setup",
+  "topic": "api-key",
   "pillar": true,
   "cluster": "gemini",
-  "publishedAt": "2026-06-25",
-  "updatedAt": "2026-08-07",
-  "readingMinutes": 12,
+  "publishedAt": "2026-07-29",
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 9,
   "title": {
-    "en": "Google Gemini API Key Complete Guide (2026): Setup, Free Tier & Pricing",
-    "zh": "Google Gemini API Key 完全指南（2026）：开通、免费额度与定价"
+    "en": "Gemini API Key: Get a Google AI Studio Key (2026)",
+    "zh": "Gemini API Key 获取指南：Google AI Studio 官方入口（2026）"
   },
   "excerpt": {
-    "en": "Complete guide to Google Gemini API: how to get your key via Google AI Studio or Vertex AI, free tier limits, model comparison, pricing, and SDK usage.",
-    "zh": "Google Gemini API 完全指南：如何通过 Google AI Studio 或 Vertex AI 获取 Key、免费额度限制、模型对比、定价与 SDK 使用。"
+    "en": "Create and manage a Gemini API key in Google AI Studio, understand the current free and paid tiers, migrate to Auth keys, and test a secure first request.",
+    "zh": "通过 Google AI Studio 创建并管理 Gemini API Key，了解当前免费与付费层级、Auth key 迁移要求，并安全完成第一次请求。"
   },
-  "tags": [
-    "gemini",
-    "google",
-    "api key",
-    "google ai studio",
-    "pricing"
-  ],
-  "providerSlugs": [
-    "google"
-  ],
+  "tags": ["gemini api key", "google ai api key", "google ai studio", "auth key", "free tier"],
+  "providerSlugs": ["google"],
   "sections": [
     {
-      "id": "overview",
-      "heading": {
-        "en": "Google Gemini API Overview",
-        "zh": "Google Gemini API 概览"
-      },
+      "id": "official-entry",
+      "heading": { "en": "Official Gemini API key page", "zh": "Gemini API Key 官方入口" },
       "paragraphs": {
         "en": [
-          "The Gemini API gives developers access to Google's multimodal AI models, including Gemini 2.0 Flash, Gemini Pro, and Gemini Ultra. Gemini models can process text, images, audio, and video, making them versatile for a wide range of applications.",
-          "Google AI Studio, the primary way to access the Gemini API, saw a 50% increase in search interest in 2026. The Gemini API offers one of the most generous free tiers among major AI API providers.",
-          "What sets Gemini apart in our testing was its true multimodal capability — we successfully fed it images, audio clips, and video frames in a single API call, something most other providers don't support. The 2 million token context window on Gemini Pro is also unmatched in the industry."
+          "Create and manage your key on the official Google AI Studio API Keys page: https://aistudio.google.com/app/apikey. A new user who accepts the terms gets a default Google Cloud project and API key automatically; you can also create another key and associate it with a project.",
+          "Google calls newly created AI Studio keys Auth keys. They are restricted to the Gemini API by default and include leaked-key enforcement. Do not paste a key into public source code or browser-side JavaScript."
         ],
         "zh": [
-          "Gemini API 让开发者可以使用 Google 的多模态 AI 模型，包括 Gemini 2.0 Flash、Gemini Pro 和 Gemini Ultra。Gemini 模型可以处理文本、图像、音频和视频，适用于广泛的应用场景。",
-          "Google AI Studio——访问 Gemini API 的主要方式——在 2026 年搜索热度增长了 50%。Gemini API 在主流 AI API 供应商中提供了最慷慨的免费额度之一。",
-          "在我们的测试中，Gemini 的真正多模态能力让它脱颖而出——我们在一次 API 调用中成功传入了图像、音频片段和视频帧，这是大多数其他供应商不支持的。Gemini Pro 的 200 万 token 上下文窗口在业内也是无出其右的。"
-        ]
-      }
-    },
-    {
-      "id": "models",
-      "heading": {
-        "en": "Gemini Model Family — What We Tested",
-        "zh": "Gemini 模型家族 —— 我们测试了什么"
-      },
-      "paragraphs": {
-        "en": [
-          "Google offers several Gemini models with different capabilities and price points. We tested each across text generation, vision tasks, and multimodal scenarios. For a detailed model-by-model breakdown, see our [[guide:gemini-models-comparison|Gemini models comparison]]."
-        ],
-        "zh": [
-          "Google 提供多个 Gemini 模型，具有不同的能力和价格。我们在文本生成、视觉任务和多模态场景中逐一做了测试。逐模型详细对比请参阅我们的 [[guide:gemini-models-comparison|Gemini 模型对比指南]]："
+          "请在 Google AI Studio 官方 API Keys 页面创建和管理密钥：https://aistudio.google.com/app/apikey。新用户接受条款后，系统会自动创建默认 Google Cloud 项目和 API Key；你也可以创建新 Key 并关联项目。",
+          "Google 将 AI Studio 当前新建的密钥称为 Auth key。它默认仅用于 Gemini API，并带有泄漏密钥阻断机制。不要把 Key 写进公开代码仓库或浏览器端 JavaScript。"
         ]
       },
       "bullets": {
+        "en": ["Sign in to Google AI Studio", "Accept the Gemini API terms", "Open the API Keys page", "Copy the Auth key and store it as GEMINI_API_KEY"],
+        "zh": ["登录 Google AI Studio", "接受 Gemini API 条款", "打开 API Keys 页面", "复制 Auth key，并保存为 GEMINI_API_KEY 环境变量"]
+      }
+    },
+    {
+      "id": "auth-key-migration",
+      "heading": { "en": "Important: migrate Standard keys before September 2026", "zh": "重要：在 2026 年 9 月前迁移 Standard key" },
+      "paragraphs": {
         "en": [
-          "Gemini 2.0 Flash — Fast, cost-efficient, ideal for high-volume tasks. In our benchmark, it processed 1000 short prompts in under 2 minutes. Our top pick for production chatbots and classification.",
-          "Gemini Pro — Balanced performance for general use. The 2M token context window is a game-changer for document analysis — we fed it an entire 300-page PDF and asked questions about specific sections.",
-          "Gemini Ultra — Most capable, for complex reasoning tasks. Comparable to GPT-4o and Claude Opus on reasoning benchmarks, but significantly more expensive.",
-          "Gemini Vision — Specialized for image understanding. We tested it on handwritten notes, screenshots, and charts — accuracy was impressive across the board."
+          "Google states that the Gemini API will reject Standard keys in September 2026. New AI Studio keys are already Auth keys. If an older integration uses a Standard key, open AI Studio and migrate it before the deadline to prevent service interruption.",
+          "A Standard key with explicit API restrictions can continue to work under Google's current transition rules, but the safest documented route is to migrate to an Auth key in AI Studio."
         ],
         "zh": [
-          "Gemini 2.0 Flash —— 快速高效，适合高用量任务。我们的基准测试中，1000 条短提示不到 2 分钟处理完。生产环境聊天机器人和分类的首选。",
-          "Gemini Pro —— 性能均衡，适合通用场景。200 万 token 上下文窗口是文档分析的利器 —— 我们传入了整本 300 页 PDF 并就特定章节提问。",
-          "Gemini Ultra —— 能力最强，适合复杂推理任务。推理基准测试上与 GPT-4o 和 Claude Opus 相当，但价格明显更贵。",
-          "Gemini Vision —— 专注于图像理解。我们用手写笔记、截图和图表做了测试 —— 准确率全面令人印象深刻。"
+          "Google 官方说明，Gemini API 将在 2026 年 9 月拒绝 Standard key。AI Studio 当前新建的 Key 已默认是 Auth key。如果旧项目仍使用 Standard key，应在截止日期前到 AI Studio 完成迁移，避免服务中断。",
+          "在当前过渡规则下，显式配置了 API 限制的 Standard key 仍可工作；但官方推荐且更稳妥的方式，是在 AI Studio 中迁移为 Auth key。"
         ]
       }
     },
     {
-      "id": "getting-key",
-      "heading": {
-        "en": "Getting Your API Key",
-        "zh": "获取 API Key"
-      },
+      "id": "free-and-paid",
+      "heading": { "en": "What the Gemini free tier actually includes", "zh": "Gemini 免费层实际包含什么" },
       "paragraphs": {
         "en": [
-          "There are two main ways to get a Gemini API key. The simplest is through Google AI Studio, which takes about 30 seconds — our [[guide:google-ai-studio-api-key|Google AI Studio API Key guide]] walks through it step by step. The second is through Google Cloud Vertex AI, which is better for enterprise setups.",
-          "For detailed step-by-step instructions, see [[guide:how-to-get-gemini-api-key|How to Get a Gemini API Key]]. If you just want to make your first call quickly, the [[guide:gemini-api-key-quickstart-2026|Gemini API Key quickstart]] covers the fastest path from signup to first request."
+          "New accounts begin on the Free Tier. It provides free input and output for selected Gemini models, subject to the active limits shown for your project in AI Studio. Google does not promise one universal RPM or daily quota: limits depend on the model, project tier, account status, and available capacity.",
+          "The Paid Tier requires linking billing. Google's current billing guide says some accounts must prepay at least $10. Paid usage provides higher limits, access to additional models and features, and different data-use terms. Since March 2026, Gemini API usage is excluded from the $300 Google Cloud Free Trial credit.",
+          "Rate limits apply per project, not per API key. Check the live RPM, TPM, and RPD values in AI Studio before deployment."
         ],
         "zh": [
-          "获取 Gemini API Key 有两种主要方式。最简单的是通过 Google AI Studio，大约 30 秒即可完成——我们的 [[guide:google-ai-studio-api-key|Google AI Studio API Key 指南]] 有逐步截图说明。第二种是通过 Google Cloud Vertex AI，更适合企业部署。",
-          "详细步骤说明请参阅 [[guide:how-to-get-gemini-api-key|如何获取 Gemini API Key]]。如果只想快速跑通第一次调用，[[guide:gemini-api-key-quickstart-2026|Gemini API Key 快速入门]] 覆盖了从注册到首次请求的最快路径。"
+          "新账户从免费层开始。部分 Gemini 模型的输入和输出可在免费层内免费使用，但必须遵守 AI Studio 中该项目显示的实时限额。Google 并未承诺统一的 RPM 或每日请求数；限额会随模型、项目层级、账户状态和可用容量变化。",
+          "升级付费层需要关联结算账户。Google 当前结算文档说明，部分账户需要至少预付 10 美元。付费层具有更高限额、更多模型和功能，并采用不同的数据使用条款。自 2026 年 3 月起，Gemini API 用量不再适用 Google Cloud 300 美元免费试用金。",
+          "限额按项目计算，而不是按单个 API Key 计算。上线前应在 AI Studio 查看实时 RPM、TPM 与 RPD。"
         ]
       }
     },
     {
-      "id": "free-tier",
-      "heading": {
-        "en": "Free Tier vs Paid — What's Actually Free?",
-        "zh": "免费额度与付费 —— 到底什么免费？"
-      },
+      "id": "first-call",
+      "heading": { "en": "Test the key with the current Google Gen AI SDK", "zh": "使用当前 Google Gen AI SDK 测试 Key" },
       "paragraphs": {
-        "en": [
-          "The Gemini API free tier through Google AI Studio is one of the most generous in the industry. We ran an entire development project on the free tier for 3 weeks before hitting any meaningful limits.",
-          "Here's the breakdown from our testing (limits may vary by model):"
-        ],
-        "zh": [
-          "通过 Google AI Studio 提供的 Gemini API 免费额度是业内最慷慨的之一。我们在免费额度上跑了一整个开发项目 3 周，才遇到有意义的限制。",
-          "以下是我们测试得出的明细（不同模型限制可能不同）："
-        ]
-      },
-      "bullets": {
-        "en": [
-          "Gemini Flash free tier: 15 RPM (requests per minute), 1500 requests/day, 1M tokens/min — More than enough for development and small apps",
-          "Gemini Pro free tier: Lower RPM limits but no daily cap — Good for prototyping but you'll hit rate limits on production traffic",
-          "No credit card required for free tier — Just a Google account and an API key from AI Studio",
-          "Paid tier: Pay-per-use with billing enabled in Google Cloud. Flash is incredibly cheap (~$0.075/1M input tokens)",
-          "Vertex AI vs AI Studio: Vertex AI offers enterprise features (VPC, IAM, audit logs) but requires a Google Cloud project with billing"
-        ],
-        "zh": [
-          "Gemini Flash 免费额度：15 RPM（每分钟请求数），1500 次/天，1M token/分钟 —— 开发和小型应用绰绰有余",
-          "Gemini Pro 免费额度：RPM 限制更低但无每日上限 —— 适合原型验证，但生产流量会遇到速率限制",
-          "免费额度不需要信用卡 —— 只需 Google 账号和 AI Studio 的 API Key",
-          "付费额度：在 Google Cloud 启用计费后按量付费。Flash 非常便宜（约 $0.075/百万输入 token）",
-          "Vertex AI vs AI Studio：Vertex AI 提供企业功能（VPC、IAM、审计日志），但需要有计费的 Google Cloud 项目"
-        ]
-      }
-    },
-    {
-      "id": "code-example",
-      "heading": {
-        "en": "Quick Start: Your First Gemini API Call",
-        "zh": "快速开始：你的第一次 Gemini API 调用"
-      },
-      "paragraphs": {
-        "en": [
-          "The fastest way to start is with the Google Gen AI SDK. Here's a minimal example we verified works:"
-        ],
-        "zh": [
-          "最快的方式是使用 Google Gen AI SDK。以下是我们验证过的最小示例："
-        ]
+        "en": ["Install Google's current SDK, keep the secret in an environment variable, and make a small request before adding application logic. Replace the model ID only with one shown as available in your AI Studio project."],
+        "zh": ["安装 Google 当前 SDK，把密钥放在环境变量中，并先发送最小请求，再接入业务逻辑。模型 ID 应以你的 AI Studio 项目实际可用列表为准。"]
       },
       "codeBlocks": [
         {
           "language": "python",
-          "code": "from google import genai\n\nclient = genai.Client(api_key=\"your-api-key-here\")\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.0-flash\",\n    contents=\"Hello, Gemini!\"\n)\n\nprint(response.text)",
-          "caption": {
-            "en": "Tested July 2026 — works with google-genai SDK >= 1.0",
-            "zh": "2026 年 7 月实测 —— 适用于 google-genai SDK >= 1.0"
-          }
+          "code": "from google import genai\nimport os\n\nclient = genai.Client(api_key=os.environ[\"GEMINI_API_KEY\"])\nresponse = client.models.generate_content(\n    model=\"gemini-3.5-flash\",\n    contents=\"Reply with exactly: KEY_WORKS\",\n)\nprint(response.text)",
+          "caption": { "en": "Server-side Python key check", "zh": "服务端 Python Key 检查" }
+        },
+        {
+          "language": "bash",
+          "code": "curl \"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent\" \\\n  -H \"x-goog-api-key: $GEMINI_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -X POST \\\n  -d '{\"contents\":[{\"parts\":[{\"text\":\"Reply with exactly: KEY_WORKS\"}]}]}'",
+          "caption": { "en": "Minimal cURL request", "zh": "最小 cURL 请求" }
         }
       ]
     },
     {
-      "id": "sdk-usage",
-      "heading": {
-        "en": "SDK and Integration Options",
-        "zh": "SDK 与集成选项"
-      },
+      "id": "troubleshooting",
+      "heading": { "en": "Common key and quota errors", "zh": "常见 Key 与配额错误" },
       "paragraphs": {
         "en": [
-          "Google provides the Google Gen AI SDK for Python, JavaScript/TypeScript, and other languages. The Gemini API also offers an OpenAI-compatible endpoint, allowing you to use the OpenAI SDK with minimal changes.",
-          "This compatibility makes it easy to test Gemini alongside other providers or switch between them.",
-          "We particularly like the OpenAI-compatible mode for migration: change one line (the base URL) and your entire OpenAI-based codebase works with Gemini."
+          "A 400 response usually indicates an invalid request or unavailable model ID. A 403 can indicate a key, project, terms, API restriction, or supported-region problem. A 429 RESOURCE_EXHAUSTED response means a rate or spend limit was reached; wait and retry with backoff, reduce request size, or inspect the project's current limits in AI Studio.",
+          "Google says failed 400 and 500 requests are not billed for tokens, although they can still count against quota."
         ],
         "zh": [
-          "Google 为 Python、JavaScript/TypeScript 等语言提供了 Google Gen AI SDK。Gemini API 还提供 OpenAI 兼容端点，让你可以用 OpenAI SDK 做最小修改就能使用。",
-          "这种兼容性让你可以轻松地与其他供应商一起测试 Gemini 或在它们之间切换。",
-          "我们特别喜欢用于迁移的 OpenAI 兼容模式：只需改一行（base URL），整个基于 OpenAI 的代码库就能用 Gemini。"
+          "400 通常表示请求格式错误或模型 ID 不可用；403 可能与 Key、项目、条款、API 限制或支持地区有关；429 RESOURCE_EXHAUSTED 表示触发速率或消费限制，应等待并指数退避重试、缩小请求，或在 AI Studio 检查项目实时限额。",
+          "Google 说明，失败的 400 和 500 请求不会收取 Token 费用，但仍可能计入配额。"
         ]
       }
     },
     {
-      "id": "common-pitfalls",
-      "heading": {
-        "en": "Common Pitfalls We Encountered",
-        "zh": "我们遇到的常见坑"
-      },
+      "id": "related-guides",
+      "heading": { "en": "Choose the right follow-up guide", "zh": "按需要继续阅读" },
       "paragraphs": {
-        "en": [
-          "Gemini API is powerful but has some gotchas. Here's what tripped us up:"
-        ],
-        "zh": [
-          "Gemini API 很强大，但有一些坑。以下是我们踩到的："
-        ]
-      },
-      "bullets": {
-        "en": [
-          "Safety filters are aggressive — Gemini blocks some prompts that other APIs allow. For legitimate use cases being blocked, adjust safety_settings to lower thresholds (but understand the risks).",
-          "Region availability — Gemini API is not available in all countries. EU and China users may need a VPN or alternative access method.",
-          "Token counting differs — Gemini's tokenizer is different from OpenAI's. A prompt that costs 500 tokens on OpenAI may cost 400 or 600 on Gemini. Always re-benchmark costs.",
-          "Streaming response format — The streaming format differs from OpenAI's. If you're migrating, update your streaming parser.",
-          "Image input size limits — Images are converted to tokens (roughly 258 tokens per image). Large images eat into your context window fast."
-        ],
-        "zh": [
-          "安全过滤很激进 —— Gemini 会拦截其他 API 允许的某些提示。合法用途被拦截时，可调整 safety_settings 降低阈值（但要了解风险）。",
-          "地区可用性 —— Gemini API 不是所有国家都能用。欧盟和中国用户可能需要 VPN 或替代访问方式。",
-          "Token 计数不同 —— Gemini 的分词器和 OpenAI 不同。OpenAI 上 500 token 的提示在 Gemini 上可能 400 或 600。务必重新测算成本。",
-          "流式响应格式 —— 流式格式和 OpenAI 不同。如果要迁移，需更新流式解析器。",
-          "图像输入大小限制 —— 图像会转换为 token（约每张 258 token）。大图会快速消耗你的上下文窗口。"
-        ]
+        "en": ["For a screen-by-screen AI Studio walkthrough, use [[guide:how-to-get-gemini-api-key|the step-by-step key tutorial]]. For key and project management, use [[guide:google-ai-studio-api-key|the Google AI Studio guide]]. For a code-first path, use [[guide:gemini-api-key-quickstart-2026|the Gemini API quickstart]]. For model prices, see [[guide:google-gemini-models-api-pricing|the current Gemini model pricing guide]]."],
+        "zh": ["需要逐屏操作说明，请阅读[[guide:how-to-get-gemini-api-key|获取 Key 分步教程]]；需要管理 Key 与项目，请阅读[[guide:google-ai-studio-api-key|Google AI Studio 指南]]；希望直接运行代码，请阅读[[guide:gemini-api-key-quickstart-2026|Gemini API 快速入门]]；模型价格请查看[[guide:google-gemini-models-api-pricing|当前 Gemini 模型定价指南]]。"]
       }
     }
   ],
   "faq": [
     {
-      "question": {
-        "en": "Is the Gemini API free to use?",
-        "zh": "Gemini API 可以免费使用吗？"
-      },
-      "answer": {
-        "en": "Google AI Studio offers a free tier with generous rate limits and no daily cap. For production with higher limits, paid billing is required. The free tier is sufficient for development and testing.",
-        "zh": "Google AI Studio 提供免费额度，速率限制较慷慨且无每日上限。生产环境需要更高速率时需要付费。免费额度足够开发和测试使用。"
-      }
+      "question": { "en": "What is the official Gemini API key URL?", "zh": "Gemini API Key 的官方网址是什么？" },
+      "answer": { "en": "Use https://aistudio.google.com/app/apikey. This is Google AI Studio's official key-management page.", "zh": "请使用 https://aistudio.google.com/app/apikey，这是 Google AI Studio 官方密钥管理页面。" }
     },
     {
-      "question": {
-        "en": "Do I need a Google Cloud account to use Gemini API?",
-        "zh": "需要 Google Cloud 账号才能使用 Gemini API 吗？"
-      },
-      "answer": {
-        "en": "No. You can get a Gemini API key through Google AI Studio with just a regular Google account. Google Cloud is only needed if you want to use Vertex AI for enterprise features.",
-        "zh": "不需要。你只需要普通 Google 账号就可通过 Google AI Studio 获取 Gemini API Key。只有当你想使用 Vertex AI 的企业功能时才需要 Google Cloud。"
-      }
+      "question": { "en": "Is a Gemini API key free?", "zh": "Gemini API Key 免费吗？" },
+      "answer": { "en": "Creating a key is free. Selected models have a Free Tier with project-specific limits; paid usage requires billing.", "zh": "创建 Key 本身免费。部分模型提供带项目限额的免费层；付费用量需要开通结算。" }
     },
     {
-      "question": {
-        "en": "Can I use the OpenAI SDK with Gemini?",
-        "zh": "可以用 OpenAI SDK 调 Gemini 吗？"
-      },
-      "answer": {
-        "en": "Yes. Google provides an OpenAI-compatible endpoint. Just change your base URL to Google's endpoint and keep your existing OpenAI SDK code. This is the easiest migration path for existing OpenAI users.",
-        "zh": "可以。Google 提供了 OpenAI 兼容端点。只需将 base URL 改为 Google 的端点，保留现有的 OpenAI SDK 代码。这是已有 OpenAI 用户最简单的迁移路径。"
-      }
+      "question": { "en": "Do I need a credit card for the Free Tier?", "zh": "使用免费层需要信用卡吗？" },
+      "answer": { "en": "Google describes new accounts as starting on the Free Tier. Billing and a payment method are needed only when upgrading to a Paid Tier.", "zh": "Google 说明新账户默认从免费层开始；升级付费层时才需要设置结算与支付方式。" }
     },
     {
-      "question": {
-        "en": "What's the difference between Google AI Studio and Vertex AI?",
-        "zh": "Google AI Studio 和 Vertex AI 有什么区别？"
-      },
-      "answer": {
-        "en": "Google AI Studio is the developer-friendly quick-start platform — free tier, simple API keys, no Cloud project needed. Vertex AI is the enterprise platform on Google Cloud with IAM, VPC, audit logs, and higher quotas. For most individual developers, AI Studio is the better starting point.",
-        "zh": "Google AI Studio 是面向开发者的快速上手平台 —— 免费额度、简单的 API Key、不需要 Cloud 项目。Vertex AI 是 Google Cloud 上的企业平台，有 IAM、VPC、审计日志和更高配额。对大多数个人开发者来说，AI Studio 是更好的起点。"
-      }
+      "question": { "en": "Are Gemini limits shared across API keys?", "zh": "多个 Gemini API Key 是否共享限额？" },
+      "answer": { "en": "Limits are applied per Google Cloud project, not per API key.", "zh": "限额按 Google Cloud 项目计算，而不是按单个 API Key 计算。" }
     }
   ],
   "sources": [
-    {
-      "label": "Google AI Studio",
-      "url": "https://aistudio.google.com/",
-      "site": "Google",
-      "checkedAt": "2026-07-29"
-    },
-    {
-      "label": "Gemini API Documentation",
-      "url": "https://ai.google.dev/gemini-api/docs",
-      "site": "Google AI for Developers",
-      "checkedAt": "2026-07-29"
-    },
-    {
-      "label": "Gemini API Pricing",
-      "url": "https://ai.google.dev/gemini-api/docs/pricing",
-      "site": "Google AI for Developers",
-      "checkedAt": "2026-07-29"
-    }
+    { "label": "Using Gemini API keys", "url": "https://ai.google.dev/gemini-api/docs/api-key", "site": "Google AI for Developers", "checkedAt": "2026-08-10" },
+    { "label": "Gemini API billing", "url": "https://ai.google.dev/gemini-api/docs/billing", "site": "Google AI for Developers", "checkedAt": "2026-08-10" },
+    { "label": "Gemini API rate limits", "url": "https://ai.google.dev/gemini-api/docs/rate-limits", "site": "Google AI for Developers", "checkedAt": "2026-08-10" },
+    { "label": "Gemini API pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing", "site": "Google AI for Developers", "checkedAt": "2026-08-10" }
   ],
   "seo": {
-    "title": {
-      "en": "Google Gemini API Key Complete Guide (2026) | Get Model Key",
-      "zh": "Google Gemini API Key 完全指南（2026）| Get Model Key"
-    },
-    "description": {
-      "en": "Complete guide to Google Gemini API: key setup via Google AI Studio, model comparison, free tier limits, pricing, and SDK integration.",
-      "zh": "Google Gemini API 完全指南：通过 Google AI Studio 开通 Key、模型对比、免费额度限制、定价与 SDK 集成。"
-    }
+    "title": { "en": "Gemini API Key: Get a Free Google AI Studio Key (2026)", "zh": "Gemini API Key 获取：Google AI Studio 免费层与教程（2026）" },
+    "description": { "en": "Create a Gemini API key at aistudio.google.com/app/apikey. Check the Free Tier, migrate to Auth keys, secure the key, and test your first request.", "zh": "在 aistudio.google.com/app/apikey 创建 Gemini API Key，了解免费层、Auth key 迁移、安全配置并完成首次请求。" }
   }
 }

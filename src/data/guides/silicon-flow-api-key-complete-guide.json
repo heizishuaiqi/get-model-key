@@ -12,8 +12,8 @@
     "zh": "硅基流动（SiliconFlow）API Key 完全指南（2026）：开通、免费模型、定价与 BYOK"
   },
   "excerpt": {
-    "en": "Everything about SiliconFlow API keys: register on siliconflow.cn, get free models like Qwen3-8B and DeepSeek-R1, understand pricing tiers, call 200+ open-source models via one OpenAI-compatible endpoint, and set up BYOK in your favorite AI tools.",
-    "zh": "关于硅基流动 API Key 的一切：在 siliconflow.cn 注册、获取 Qwen3-8B 和 DeepSeek-R1 等免费模型、理解定价分级、通过一个 OpenAI 兼容端点调用 200+ 开源模型，以及在你常用的 AI 工具中配置 BYOK。"
+    "en": "Everything about SiliconFlow API keys: register, use current free models, understand pricing and fixed free-model limits, call the live model catalog through an OpenAI-compatible endpoint, and set up BYOK.",
+    "zh": "关于硅基流动 API Key 的完整说明：注册、使用当前免费模型、理解定价与免费模型固定限额、通过 OpenAI 兼容端点调用实时模型目录，以及配置 BYOK。"
   },
   "tags": [
     "siliconflow",
@@ -36,12 +36,12 @@
       },
       "paragraphs": {
         "en": [
-          "SiliconFlow (硅基流动) is China's largest open-source model inference aggregation platform. Instead of signing up for separate accounts at DeepSeek, Qwen, Zhipu, and MiniMax, you register once on SiliconFlow and access 200+ open-source models through a single API key and a unified OpenAI-compatible endpoint.",
+          "SiliconFlow (硅基流动) is a model inference platform that exposes a broad, changing catalog through one API key and an OpenAI-compatible endpoint.",
           "The platform handles model hosting, load balancing, and inference optimization, so you don't need to deploy models on your own GPUs. This makes SiliconFlow especially popular among Chinese developers and anyone who wants to experiment with multiple open-source models without managing infrastructure.",
           "SiliconFlow offers a generous free tier: several production-grade models — including Qwen3-8B, DeepSeek-R1-Distill-Qwen-7B, and DeepSeek-OCR — can be called for free within rate limits, making it one of the best-value API platforms in 2026."
         ],
         "zh": [
-          "硅基流动（SiliconFlow）是中国最大的开源模型推理聚合平台。你不需要在 DeepSeek、通义千问、智谱、MiniMax 各开一个账号，只需在硅基流动注册一次，就能通过一个 API Key 和统一的 OpenAI 兼容端点调用 200+ 开源模型。",
+          "硅基流动（SiliconFlow）是模型推理平台，通过一把 API Key 和 OpenAI 兼容端点提供持续变化的多模型目录。",
           "平台负责模型托管、负载均衡和推理优化，你不需要自己部署 GPU。这让硅基流动在中国开发者以及想快速试多个开源模型的人群中特别受欢迎。",
           "硅基流动提供慷慨的免费额度：多个生产级模型——包括 Qwen3-8B、DeepSeek-R1-Distill-Qwen-7B 和 DeepSeek-OCR——在速率限制内可免费调用，是 2026 年性价比最高的 API 平台之一。"
         ]
@@ -50,8 +50,8 @@
     {
       "id": "available-models",
       "heading": {
-        "en": "Available Models: 200+ Open-Source Models in One Place",
-        "zh": "可用模型：200+ 开源模型一站调用"
+        "en": "Available models: use the live catalog",
+        "zh": "可用模型：以实时目录为准"
       },
       "paragraphs": {
         "en": [
@@ -75,12 +75,12 @@
       "paragraphs": {
         "en": [
           "Registering and obtaining an API key takes about five minutes. Visit siliconflow.cn, sign up with a phone number (Chinese +86 numbers are standard; international users can use the global site at siliconflow.com), complete real-name verification to unlock bonus credits, then navigate to the API Keys page in the console to create your key.",
-          "New users receive ¥14 in credits upon registration and an additional ¥16 after real-name verification, totaling ¥30 of free credit — enough for extensive experimentation with both free and paid models.",
+          "SiliconFlow's official June 2026 announcement states that new users can receive ¥16 on the China site or $1 on the global site. Identity verification is required to use all free models.",
           "For the complete step-by-step walkthrough including screenshots of every page, the real-name verification process, and how to claim bonus credits, follow our [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key registration tutorial]]."
         ],
         "zh": [
           "注册并获取 API Key 大约需要五分钟。访问 siliconflow.cn，用手机号注册（中国 +86 号码是标准流程，国际用户可访问全球站 siliconflow.com），完成实名认证解锁赠送额度，然后在控制台「API 密钥」页面创建 Key。",
-          "新用户注册即赠 ¥14 额度，实名认证后再赠 ¥16，共 ¥30 免费额度——足够你对免费和付费模型做大量实验。",
+          "硅基流动 2026 年 6 月官方公告说明，中国站新用户可获 ¥16、国际站可获 $1；使用全部免费模型需要完成实名认证。",
           "如需包含每个页面截图、实名认证流程和如何领取赠送额度的完整步骤教程，请参阅我们的 [[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key 注册教程]]。"
         ]
       }
@@ -94,28 +94,28 @@
       "paragraphs": {
         "en": [
           "SiliconFlow uses a prepaid credits model with a six-tier rate-limit system. Your tier is determined by your cumulative spending: L0 (under ¥50) has the lowest limits, while L5 (¥10,000+) unlocks the highest throughput. Moving up tiers is automatic — spend more, get higher limits.",
-          "Paid model pricing is competitive. DeepSeek-V4-Pro costs about ¥4 per million input tokens and ¥16 per million output tokens. Qwen3-235B is similarly priced. The free models remain free regardless of your tier, with rate limits scaling up as you climb tiers.",
+          "Paid model prices change independently. Use SiliconFlow's live pricing page for every production estimate. Free models are billed at zero, but their rate limits are fixed rather than scaling with paid usage tiers.",
           "The [[guide:silicon-flow-models-and-pricing|complete pricing breakdown]] compares every model side by side so you can choose the most cost-effective option for your workload."
         ],
         "zh": [
           "硅基流动采用预付额度模式，配套六级速率限制体系。你的等级由累计消费决定：L0（¥50 以下）限制最低，L5（¥10,000 以上）吞吐量最高。升级是自动的——消费越多，限制越高。",
-          "付费模型定价有竞争力。DeepSeek-V4-Pro 约 ¥4/百万输入 Tokens、¥16/百万输出 Tokens。Qwen3-235B 价格相近。免费模型无论你处于哪个等级都保持免费，速率限制随等级提升而放宽。",
+          "付费模型价格会独立调整，生产预算必须以硅基流动实时价格页为准。免费模型费用为 0，但其限额固定，不会随付费用量等级提高。",
           "[[guide:silicon-flow-models-and-pricing|完整定价对照表]]并排比较了每个模型，帮你为不同负载选择最具性价比的方案。"
         ]
       },
       "bullets": {
         "en": [
           "Free models: Qwen3-8B, DeepSeek-R1-Distill-Qwen-7B, DeepSeek-OCR (rate-limited)",
-          "Paid flagship: DeepSeek-V4-Pro (~¥4 input / ¥16 output per million tokens)",
+          "Paid models: verify input, output and cache prices on the live pricing page",
           "Six rate-limit tiers: L0 (<¥50 spend) to L5 (≥¥10,000 spend)",
-          "New user bonus: ¥14 registration + ¥16 real-name verification = ¥30 total",
+          "Current new-user offer: ¥16 on the China site or $1 on the global site",
           "Prepaid credits model — top up as needed, no monthly subscription required"
         ],
         "zh": [
           "免费模型：Qwen3-8B、DeepSeek-R1-Distill-Qwen-7B、DeepSeek-OCR（有速率限制）",
-          "付费旗舰：DeepSeek-V4-Pro（约 ¥4 输入 / ¥16 输出，每百万 Tokens）",
+          "付费模型：在实时价格页核对输入、输出与缓存价格",
           "六级速率限制：L0（消费 <¥50）到 L5（消费 ≥¥10,000）",
-          "新用户福利：注册 ¥14 + 实名认证 ¥16 = 共 ¥30",
+          "当前新用户活动：中国站 ¥16 或国际站 $1",
           "预付额度模式——按需充值，无需月度订阅"
         ]
       }
@@ -161,12 +161,12 @@
       },
       "paragraphs": {
         "en": [
-          "One of SiliconFlow's biggest advantages is Bring-Your-Own-Key (BYOK) compatibility. Because the endpoint is OpenAI-compatible, you can paste your SiliconFlow API key into dozens of AI tools and instantly access 200+ models without installing anything locally.",
+          "One useful feature is Bring-Your-Own-Key (BYOK) compatibility. Tools that accept a custom OpenAI-compatible endpoint can use your SiliconFlow key and the models currently listed in the platform catalog.",
           "Popular BYOK targets include Cherry Studio (multi-model chat client), ChatHub (browser extension), immersive-translate (document and webpage translation), and Claude Code (using SiliconFlow as the backend for coding agents). In each tool, you simply set the base URL to https://api.siliconflow.cn/v1, paste your key, and pick a model.",
           "Our [[guide:silicon-flow-byok-setup-guide|SiliconFlow BYOK setup guide]] walks through the exact configuration for each major tool with screenshots."
         ],
         "zh": [
-          "硅基流动最大的优势之一是 BYOK（Bring Your Own Key）兼容性。由于端点兼容 OpenAI 格式，你可以把硅基流动的 API Key 粘贴到几十款 AI 工具中，立刻访问 200+ 模型，无需本地安装任何东西。",
+          "硅基流动支持 BYOK（Bring Your Own Key）。接受自定义 OpenAI 兼容端点的工具可以使用硅基流动 Key，并调用平台当前目录中的模型。",
           "热门 BYOK 工具包括 Cherry Studio（多模型聊天客户端）、ChatHub（浏览器扩展）、沉浸式翻译（文档和网页翻译）以及 Claude Code（用硅基流动做编程 Agent 后端）。每个工具只需把 base URL 设为 https://api.siliconflow.cn/v1，粘贴 Key，选模型即可。",
           "我们的 [[guide:silicon-flow-byok-setup-guide|硅基流动 BYOK 接入指南]]手把手讲解了每款主流工具的配置，含截图。"
         ]
@@ -218,8 +218,8 @@
         "zh": "硅基流动 API 是免费的吗？"
       },
       "answer": {
-        "en": "SiliconFlow offers both free and paid models. Free models like Qwen3-8B, DeepSeek-R1-Distill-Qwen-7B, and DeepSeek-OCR can be used at no cost within rate limits. Paid models like DeepSeek-V4-Pro are billed per token. New users also receive ¥30 in free credits.",
-        "zh": "硅基流动同时提供免费和付费模型。Qwen3-8B、DeepSeek-R1-Distill-Qwen-7B 和 DeepSeek-OCR 等免费模型在速率限制内可零成本使用。DeepSeek-V4-Pro 等付费模型按 Token 计费。新用户还可获得 ¥30 免费额度。"
+        "en": "SiliconFlow offers both free and paid models. Models marked free on the live pricing page are billed at zero within fixed rate limits. The current official announcement states a ¥16 China-site or $1 global-site new-user credit.",
+        "zh": "硅基流动同时提供免费和付费模型。实时价格页标记为免费的模型在固定限额内费用为 0。当前官方公告写明中国站新用户 ¥16、国际站 $1。"
       }
     },
     {
@@ -289,8 +289,8 @@
       "zh": "硅基流动 API Key 完全指南（2026）| Get Model Key"
     },
     "description": {
-      "en": "Complete guide to SiliconFlow API keys: registration, free models (Qwen3-8B, DeepSeek-R1), pricing tiers, 200+ open-source models, BYOK setup, and best practices.",
-      "zh": "硅基流动 API Key 完全指南：注册、免费模型（Qwen3-8B、DeepSeek-R1）、定价分级、200+ 开源模型、BYOK 接入与最佳实践。"
+      "en": "Complete guide to SiliconFlow API keys: registration, current free models, fixed free-model limits, live pricing, BYOK setup, and best practices.",
+      "zh": "硅基流动 API Key 完全指南：注册、当前免费模型、免费模型固定限额、实时定价、BYOK 接入与最佳实践。"
     }
   }
 }

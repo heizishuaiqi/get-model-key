@@ -20,6 +20,9 @@
   },
   "models": {
     "en": [
+      "GPT-5.6 Sol",
+      "GPT-5.6 Terra",
+      "GPT-5.6 Luna",
       "GPT-5.4",
       "GPT-4o",
       "o4-mini",
@@ -27,6 +30,9 @@
       "o1"
     ],
     "zh": [
+      "GPT-5.6 Sol",
+      "GPT-5.6 Terra",
+      "GPT-5.6 Luna",
       "GPT-5.4",
       "GPT-4o",
       "o4-mini",
@@ -44,7 +50,7 @@
     "open ai",
     "chatgpt api"
   ],
-  "lastVerified": "2026-07-22",
+  "lastVerified": "2026-08-10",
   "seo": {
     "title": {
       "en": "OpenAI API Key - Official Access, Models & Quick Overview | Get Model Key",
@@ -97,8 +103,8 @@
         "zh": "模型和价格看哪里？"
       },
       "answer": {
-        "en": "Always use OpenAI’s official docs and pricing pages. getModelKey does not publish live prices.",
-        "zh": "请以 OpenAI 官方文档与定价页为准。getModelKey 不公布实时价格。"
+        "en": "The pricing snapshot on this page is checked periodically, not updated in real time. Always confirm final charges on OpenAI’s official pricing page.",
+        "zh": "本页价格为定期核验的快照，并非实时数据。最终费用请始终以 OpenAI 官方定价页为准。"
       }
     }
   ]

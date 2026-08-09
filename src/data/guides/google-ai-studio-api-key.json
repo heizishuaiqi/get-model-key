@@ -9,7 +9,7 @@
   "updatedAt": "2026-08-07",
   "readingMinutes": 7,
   "title": {
-    "en": "Google AI Studio API Key: Complete Setup Guide (2026)",
+    "en": "Google AI Studio Key Management: Projects, Auth Keys and Security",
     "zh": "Google AI Studio API Key：完全设置指南（2026）"
   },
   "excerpt": {
@@ -266,7 +266,7 @@
   ],
   "seo": {
     "title": {
-      "en": "Google AI Studio API Key: Complete Setup Guide (2026) | Get Model Key",
+      "en": "Google AI Studio Key Management: Auth Keys & Projects",
       "zh": "Google AI Studio API Key：完全设置指南（2026）| Get Model Key"
     },
     "description": {

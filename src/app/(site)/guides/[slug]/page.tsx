@@ -11,6 +11,10 @@ import { TOPIC_LABELS } from '@/lib/shared';
 import { renderParagraphWithLinks } from '@/lib/inline-links';
 import AuthorByline from '@/components/layout/AuthorByline';
 import { AdsterraBanner, AdsterraNative } from '@/components/ads/AdsterraAd';
+import OpenAIFrontierModels from '@/components/providers/OpenAIFrontierModels';
+import GoogleGeminiModels from '@/components/providers/GoogleGeminiModels';
+import DeepSeekV4Models from '@/components/providers/DeepSeekV4Models';
+import ClaudeModelFamily from '@/components/providers/ClaudeModelFamily';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -165,6 +169,27 @@ export default async function GuideDetailPage({ params }: Props) {
               updatedAt={guide.updatedAt}
             />
           </header>
+
+          {guide.slug === 'openai-api-pricing' ? (
+            <div className="mb-8">
+              <OpenAIFrontierModels lang="en" />
+            </div>
+          ) : null}
+          {guide.slug === 'google-gemini-api-pricing' ? (
+            <div className="mb-8">
+              <GoogleGeminiModels lang="en" />
+            </div>
+          ) : null}
+          {guide.slug === 'deepseek-v4-models-pricing' ? (
+            <div className="mb-8">
+              <DeepSeekV4Models lang="en" />
+            </div>
+          ) : null}
+          {guide.slug === 'claude-models-api-pricing' ? (
+            <div className="mb-8">
+              <ClaudeModelFamily lang="en" />
+            </div>
+          ) : null}
 
           <div className="space-y-8">
             {guide.sections.map((section, sectionIndex) => (

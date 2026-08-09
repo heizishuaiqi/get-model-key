@@ -9,7 +9,7 @@
   "featured": true,
   "officialKeyUrl": "https://aistudio.google.com/app/apikey",
   "officialSiteUrl": "https://ai.google.dev/",
-  "officialDocsUrl": "https://ai.google.dev/docs",
+  "officialDocsUrl": "https://ai.google.dev/gemini-api/docs",
   "name": {
     "en": "Google AI",
     "zh": "Google AI"
@@ -20,6 +20,9 @@
   },
   "models": {
     "en": [
+      "Gemini 3.6 Flash",
+      "Gemini 3.5 Flash",
+      "Gemini 3.5 Flash-Lite",
       "Gemini 3.1 Pro",
       "Gemini 3 Flash",
       "Gemini 3.1 Flash-Lite",
@@ -31,6 +34,9 @@
       "Gemini Deep Research Preview"
     ],
     "zh": [
+      "Gemini 3.6 Flash",
+      "Gemini 3.5 Flash",
+      "Gemini 3.5 Flash-Lite",
       "Gemini 3.1 Pro",
       "Gemini 3 Flash",
       "Gemini 3.1 Flash-Lite",
@@ -54,15 +60,15 @@
     "bard",
     "google gemini"
   ],
-  "lastVerified": "2026-07-22",
+  "lastVerified": "2026-08-10",
   "seo": {
     "title": {
       "en": "Google AI API Key - Official Gemini API Access | Get Model Key",
       "zh": "Google AI API Key - Gemini API 官方入口 | Get Model Key"
     },
     "description": {
-      "en": "Get official Google AI API key for Gemini models. Access Gemini Pro, Ultra, and Flash with strong multimodal capabilities.",
-      "zh": "获取 Google AI Gemini 模型的官方 API Key。访问 Gemini Pro、Ultra 和 Flash，具备强大的多模态能力。"
+      "en": "Get the official Google AI API key and compare current stable Gemini 3.6 Flash, 3.5 Flash and 3.5 Flash-Lite models and pricing.",
+      "zh": "获取 Google AI 官方 API Key，并比较当前稳定版 Gemini 3.6 Flash、3.5 Flash 和 3.5 Flash-Lite 模型与价格。"
     }
   },
   "img": "https://img.amz123.com/upload/image_cloud/202603/1773304463226234_gemini.webp",
@@ -109,6 +115,16 @@
       "answer": {
         "en": "They both access Google models but differ in console, enterprise controls, and billing. Confirm the product you need in Google’s docs.",
         "zh": "二者都能调用 Google 模型，但控制台、企业管控与计费路径不同。请以 Google 官方文档确认你要使用的产品。"
+      }
+    },
+    {
+      "question": {
+        "en": "Where can I compare current Gemini API prices?",
+        "zh": "在哪里比较当前 Gemini API 价格？"
+      },
+      "answer": {
+        "en": "Use our dated pricing snapshot for a quick comparison, then verify final rates on the official Gemini Developer API pricing page because models and prices can change.",
+        "zh": "可以先通过本站带日期的价格快照快速比较，再到 Gemini Developer API 官方价格页核验最终费率，因为模型和价格可能发生变化。"
       }
     }
   ]

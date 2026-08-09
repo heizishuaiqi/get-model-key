@@ -13,8 +13,8 @@
     "zh": "如何获取硅基流动 API Key（2026 逐步教程）"
   },
   "excerpt": {
-    "en": "Register on siliconflow.cn, complete real-name verification to claim ¥30 in free credits, create your API key, and make your first free model call in under five minutes.",
-    "zh": "在 siliconflow.cn 注册、完成实名认证领取 ¥30 免费额度、创建 API Key，五分钟内完成第一次免费模型调用。"
+    "en": "Register on siliconflow.cn, complete identity verification for free-model access, create your API key, and check the current ¥16 China / $1 global new-user offer.",
+    "zh": "在 siliconflow.cn 注册、完成实名认证以使用全部免费模型、创建 API Key，并核对当前中国站 ¥16 / 国际站 $1 新用户活动。"
   },
   "tags": [
     "siliconflow",
@@ -53,12 +53,12 @@
       },
       "paragraphs": {
         "en": [
-          "Go to siliconflow.cn (or siliconflow.com for international users). Click the register button in the top-right corner. Enter your phone number, receive an SMS verification code, and set a password. Upon successful registration, you immediately receive ¥14 in promotional credits.",
-          "The account is fully functional at this point, but to unlock the additional ¥16 verification bonus and higher rate limits, you need to complete real-name verification in the next step."
+          "Go to siliconflow.cn (or siliconflow.com for international users) and follow the current registration flow. SiliconFlow's official June 2026 announcement states a ¥16 new-user credit on the China site or $1 on the global site; confirm that the campaign is still shown when you register.",
+          "Identity verification is required to use all free models. Free-model rate limits are fixed; verification should not be described as automatically increasing those fixed limits."
         ],
         "zh": [
-          "访问 siliconflow.cn（国际用户用 siliconflow.com）。点击右上角注册按钮。输入手机号，接收短信验证码，设置密码。注册成功后立即获得 ¥14 促销额度。",
-          "此时账号已完全可用，但要解锁额外的 ¥16 认证额度和更高速率限制，需要下一步完成实名认证。"
+          "访问 siliconflow.cn（国际用户用 siliconflow.com），按页面当前流程完成注册。硅基流动 2026 年 6 月官方公告写明中国站新用户赠金为 ¥16、国际站为 $1；注册时请确认活动仍在展示。",
+          "使用全部免费模型需要实名认证。免费模型限额是固定的，因此不应把实名认证描述成会自动提升这些固定限额。"
         ]
       },
       "bullets": {
@@ -66,13 +66,13 @@
           "Visit siliconflow.cn (China) or siliconflow.com (global)",
           "Click register, enter phone number and SMS code",
           "Set a strong password",
-          "Receive ¥14 promotional credit instantly"
+          "Check whether the current ¥16 China / $1 global offer is available"
         ],
         "zh": [
           "访问 siliconflow.cn（中国）或 siliconflow.com（全球）",
           "点击注册，输入手机号和短信验证码",
           "设置强密码",
-          "立即获得 ¥14 促销额度"
+          "核对当前中国站 ¥16 / 国际站 $1 活动是否可用"
         ]
       }
     },
@@ -85,11 +85,11 @@
       "paragraphs": {
         "en": [
           "After logging in, go to Account Settings > Real-Name Verification. SiliconFlow requires ID verification to comply with Chinese regulations and to prevent abuse of the free tier. For Chinese users, this means submitting your identity card or passport. The verification is usually instant.",
-          "Once verified, you receive an additional ¥16 in credits, bringing your total to ¥30. Your rate limits also increase, which matters if you plan to use the free models heavily during development."
+          "After verification, you can use all free models. Their rate limits remain fixed according to SiliconFlow's official documentation; inspect each model's live limit in the console."
         ],
         "zh": [
           "登录后，进入「账号设置」>「实名认证」。硅基流动按中国法规要求身份认证，也是为了防止免费额度被滥用。中国用户需提交身份证或护照。认证通常即时完成。",
-          "认证后额外获得 ¥16 额度，总计 ¥30。你的速率限制也会提升，如果你打算开发期间大量使用免费模型，这一点很重要。"
+          "实名认证后可以使用全部免费模型。根据硅基流动官方文档，免费模型限额仍是固定值；具体数值请在控制台查看。"
         ]
       }
     },
@@ -162,8 +162,8 @@
         "zh": "获取硅基流动 API Key 需要付费吗？"
       },
       "answer": {
-        "en": "No. Registration and API key creation are completely free. New users receive ¥30 in free credits, and several models including Qwen3-8B and DeepSeek-R1-Distill-Qwen-7B remain free within rate limits even after credits are exhausted.",
-        "zh": "不需要。注册和创建 API Key 完全免费。新用户获得 ¥30 免费额度，额度用完后 Qwen3-8B 和 DeepSeek-R1-Distill-Qwen-7B 等模型在速率限制内仍可免费使用。"
+        "en": "No. Registration and API key creation are free. SiliconFlow's current announcement states a ¥16 China-site or $1 global-site new-user credit, and models marked free on the live pricing page are billed at zero within fixed rate limits.",
+        "zh": "不需要。注册和创建 API Key 免费。当前官方公告写明中国站新用户 ¥16、国际站 $1；实时价格页标记为免费的模型在固定限额内费用为 0。"
       }
     },
     {
@@ -172,8 +172,8 @@
         "zh": "不做实名认证能用硅基流动吗？"
       },
       "answer": {
-        "en": "You can register and create keys without verification, but you will miss out on the ¥16 verification bonus and will have lower rate limits. Completing verification is strongly recommended to unlock full free-tier benefits.",
-        "zh": "可以注册和创建 Key，但拿不到 ¥16 认证额度，速率限制也更低。强烈建议完成认证以解锁完整免费权益。"
+        "en": "You can register and create a key, but SiliconFlow's official rate-limit documentation says identity verification is required to use all free models.",
+        "zh": "可以先注册并创建 Key，但硅基流动官方限流文档说明，使用全部免费模型需要完成实名认证。"
       }
     }
   ],
@@ -197,8 +197,8 @@
       "zh": "硅基流动 API Key 注册教程（2026）| Get Model Key"
     },
     "description": {
-      "en": "Step-by-step tutorial: register on siliconflow.cn, verify your identity for ¥30 free credits, create an API key, and make your first free model call in 5 minutes.",
-      "zh": "逐步教程：在 siliconflow.cn 注册、实名认证领取 ¥30 免费额度、创建 API Key，5 分钟完成首次免费模型调用。"
+      "en": "Register on siliconflow.cn, verify your identity for free-model access, create an API key, and check the current ¥16/$1 new-user offer.",
+      "zh": "在 siliconflow.cn 注册、实名认证以使用全部免费模型、创建 API Key，并核对当前 ¥16/$1 新用户活动。"
     }
   }
 }

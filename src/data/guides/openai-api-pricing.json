@@ -6,15 +6,15 @@
   "cluster": "openai",
   "pillarSlug": "openai-api-key-complete-guide",
   "publishedAt": "2026-06-14",
-  "updatedAt": "2026-08-07",
-  "readingMinutes": 7,
+  "updatedAt": "2026-08-10",
+  "readingMinutes": 11,
   "title": {
     "en": "OpenAI API Pricing Explained (2026 Guide)",
     "zh": "OpenAI API 定价详解（2026 指南）"
   },
   "excerpt": {
-    "en": "Understand OpenAI API pricing: GPT-4o and o-series model rates, token-based billing, input vs output pricing, cached prompt discounts, Batch API savings, and how to estimate your costs.",
-    "zh": "全面理解 OpenAI API 定价：GPT-4o 和 o 系列模型价格、token 计费方式、输入/输出价格差异、缓存折扣、Batch API 节省，以及如何估算成本。"
+    "en": "Understand current OpenAI API pricing across GPT-5.6 Sol, Terra and Luna, Standard, Batch, Flex and Fast processing, multimodal models, tools, and practical cost estimation.",
+    "zh": "全面理解当前 OpenAI API 定价：GPT-5.6 Sol、Terra 与 Luna，Standard、Batch、Flex、Fast 处理模式，多模态模型、工具费用及成本估算。"
   },
   "tags": [
     "openai",
@@ -26,6 +26,41 @@
     "openai"
   ],
   "sections": [
+    {
+      "id": "gpt-5-6-frontier-models",
+      "heading": {
+        "en": "GPT-5.6 Frontier Models: Sol, Terra, and Luna",
+        "zh": "GPT-5.6 前沿模型：Sol、Terra 与 Luna"
+      },
+      "paragraphs": {
+        "en": [
+          "The GPT-5.6 family offers three clear cost and capability tiers. Sol targets the most demanding professional reasoning and coding work, Terra balances intelligence and cost, and Luna is optimized for cost-sensitive, high-volume workloads.",
+          "At Standard short-context rates, Sol costs $5.00 input and $30.00 output per 1M tokens; Terra costs $2.00 input and $12.00 output; Luna costs $0.20 input and $1.20 output. Cached input is one tenth of the regular input price for all three models.",
+          "All three expose reasoning effort controls from none through max. Sol also has the gpt-5.6 alias, while Terra and Luna use their explicit model IDs. The visual comparison above is a price snapshot checked on August 10, 2026, not a live billing feed."
+        ],
+        "zh": [
+          "GPT-5.6 家族提供三个清晰的能力与成本档位：Sol 面向高难度专业推理和编程任务，Terra 平衡智能水平与成本，Luna 针对成本敏感、高调用量负载优化。",
+          "按 Standard 短上下文价格，Sol 每百万 token 输入 $5.00、输出 $30.00；Terra 输入 $2.00、输出 $12.00；Luna 输入 $0.20、输出 $1.20。三个模型的缓存输入价格均为普通输入价格的十分之一。",
+          "三个模型都提供从 none 到 max 的推理强度控制。Sol 还提供 gpt-5.6 别名，Terra 与 Luna 使用各自的明确模型 ID。上方可视化为 2026 年 8 月 10 日核验的价格快照，并非实时账单数据。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Sol: $5.00 input · $0.50 cached input · $6.25 cache write · $30.00 output",
+          "Terra: $2.00 input · $0.20 cached input · $2.50 cache write · $12.00 output",
+          "Luna: $0.20 input · $0.02 cached input · $0.25 cache write · $1.20 output",
+          "All three: 128K maximum output · 1.05M context window · February 16, 2026 knowledge cutoff",
+          "Tools: Functions · Web search · File search · Computer use"
+        ],
+        "zh": [
+          "Sol：输入 $5.00 · 缓存输入 $0.50 · 缓存写入 $6.25 · 输出 $30.00",
+          "Terra：输入 $2.00 · 缓存输入 $0.20 · 缓存写入 $2.50 · 输出 $12.00",
+          "Luna：输入 $0.20 · 缓存输入 $0.02 · 缓存写入 $0.25 · 输出 $1.20",
+          "三个模型均支持：128K 最大输出 · 1.05M 上下文窗口 · 知识截止日期 2026 年 2 月 16 日",
+          "工具能力：函数调用 · 网页搜索 · 文件搜索 · 计算机操作"
+        ]
+      }
+    },
     {
       "id": "how-pricing-works",
       "heading": {
@@ -82,7 +117,7 @@
       },
       "paragraphs": {
         "en": [
-          "The o-series models (o1, o3, o4-mini) are designed for complex reasoning tasks like math, coding, and scientific analysis. They use internal 'thinking' tokens that are billed as output tokens, which makes them significantly more expensive per call than GPT-4o models.",
+          "The o-series models (o1, o3, o4-mini) are designed for complex reasoning tasks like math, coding, and scientific analysis. They use internal reasoning tokens that are billed as output tokens, so workload cost depends on more than the visible answer length.",
           "Because reasoning models generate extensive internal chain-of-thought before producing the final answer, the actual output token count can be much higher than the visible response length. Always test with real workloads to understand the actual cost."
         ],
         "zh": [
@@ -92,13 +127,13 @@
       },
       "bullets": {
         "en": [
-          "o3: $10.00 / 1M input tokens, $40.00 / 1M output tokens",
+          "o3: $2.00 / 1M input tokens, $8.00 / 1M output tokens",
           "o3-mini: $1.10 / 1M input tokens, $4.40 / 1M output tokens",
           "o4-mini: $1.10 / 1M input tokens, $4.40 / 1M output tokens",
           "o-series cached input: 75% discount (e.g., o3-mini at $0.275 / 1M)"
         ],
         "zh": [
-          "o3：$10.00 / 百万输入 token，$40.00 / 百万输出 token",
+          "o3：$2.00 / 百万输入 token，$8.00 / 百万输出 token",
           "o3-mini：$1.10 / 百万输入 token，$4.40 / 百万输出 token",
           "o4-mini：$1.10 / 百万输入 token，$4.40 / 百万输出 token",
           "o 系列缓存输入：75% 折扣（如 o3-mini 为 $0.275 / 百万）"
@@ -140,6 +175,68 @@
       }
     },
     {
+      "id": "processing-tiers",
+      "heading": {
+        "en": "Standard, Batch, Flex, and Fast Mode",
+        "zh": "Standard、Batch、Flex 与 Fast 模式"
+      },
+      "paragraphs": {
+        "en": [
+          "Processing tier changes both price and delivery characteristics. Standard is the baseline for normal synchronous requests. Batch and Flex use discounted rates for workloads that can accept delayed or variable processing. Fast mode charges a premium for prioritized processing.",
+          "For GPT-5.6 Sol, Terra, and Luna, Batch and Flex short-context prices are 50% of Standard. Fast mode is 2x Standard for these three models. Select a tier based on latency requirements rather than treating the discounted tiers as temporary promotions."
+        ],
+        "zh": [
+          "处理层级会同时改变价格和交付特性。Standard 是普通同步请求的基础价格；Batch 与 Flex 为能够接受延迟或弹性处理的负载提供折扣；Fast 模式则以更高价格换取优先处理。",
+          "对于 GPT-5.6 Sol、Terra 与 Luna，Batch 和 Flex 的短上下文价格均为 Standard 的 50%，Fast 模式则为 Standard 的 2 倍。应根据延迟需求选择层级，而不是把折扣层级当作限时促销。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Sol input/output — Standard $5/$30 · Batch or Flex $2.50/$15 · Fast $10/$60",
+          "Terra input/output — Standard $2/$12 · Batch or Flex $1/$6 · Fast $4/$24",
+          "Luna input/output — Standard $0.20/$1.20 · Batch or Flex $0.10/$0.60 · Fast $0.40/$2.40",
+          "Long-context rates are higher and should be calculated separately when the request crosses the documented context threshold."
+        ],
+        "zh": [
+          "Sol 输入/输出：Standard $5/$30 · Batch 或 Flex $2.50/$15 · Fast $10/$60",
+          "Terra 输入/输出：Standard $2/$12 · Batch 或 Flex $1/$6 · Fast $4/$24",
+          "Luna 输入/输出：Standard $0.20/$1.20 · Batch 或 Flex $0.10/$0.60 · Fast $0.40/$2.40",
+          "当请求超过官方规定的上下文阈值时，应按更高的长上下文价格单独计算。"
+        ]
+      }
+    },
+    {
+      "id": "multimodal-and-tools",
+      "heading": {
+        "en": "Multimodal Models and Tool Charges",
+        "zh": "多模态模型与工具费用"
+      },
+      "paragraphs": {
+        "en": [
+          "Not every OpenAI service is billed as text tokens. Realtime audio can have separate audio, text, and image token rates; transcription is often estimated per minute; image generation uses image and text token rates; and Sora video generation is priced per second by resolution.",
+          "Built-in tools can add charges on top of model tokens. Web search is priced per call plus applicable search-content tokens, file search combines storage and tool-call charges, and hosted containers are billed by memory size and session duration. Include both model and tool usage in production budgets."
+        ],
+        "zh": [
+          "并非所有 OpenAI 服务都按文本 token 计费。Realtime 音频分别计算音频、文本和图像 token；转录通常按分钟估算；图像生成使用图像与文本 token 价格；Sora 视频生成则按分辨率和秒数计费。",
+          "内置工具可能在模型 token 费用之外产生额外费用。Web Search 按调用次数及适用的搜索内容 token 计费，File Search 同时包含存储费与工具调用费，托管容器则按内存规格和会话时长计费。生产预算需要同时考虑模型与工具使用。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Web search: $10 per 1,000 calls, plus search-content tokens where applicable",
+          "File search: $0.10/GB/day storage after the free allowance and $2.50 per 1,000 tool calls",
+          "Sora 2: from $0.10 per second at Standard 720p; Batch starts at $0.05 per second",
+          "Transcription estimates range from $0.003 to $0.017 per minute depending on model and live processing"
+        ],
+        "zh": [
+          "Web Search：每 1,000 次调用 $10，适用时另计搜索内容 token",
+          "File Search：免费额度后存储费 $0.10/GB/天，工具调用费每 1,000 次 $2.50",
+          "Sora 2：Standard 720p 每秒 $0.10 起，Batch 每秒 $0.05 起",
+          "转录按模型与是否实时处理不同，估算价格约为每分钟 $0.003 至 $0.017"
+        ]
+      }
+    },
+    {
       "id": "estimate-costs",
       "heading": {
         "en": "How to Estimate Your Costs",
@@ -169,19 +266,19 @@
       ]
     },
     {
-      "id": "free-credits",
+      "id": "billing-controls",
       "heading": {
-        "en": "Free Credits & Trial",
-        "zh": "免费额度和试用"
+        "en": "Billing Controls and Price Verification",
+        "zh": "账单控制与价格核验"
       },
       "paragraphs": {
         "en": [
-          "New OpenAI accounts may receive approximately $5 in trial credits. These credits expire a few months after account creation and are intended for testing the API before committing to paid usage. If you haven't created an [[guide:how-to-get-openai-api-key|OpenAI API key]] yet, our step-by-step guide covers registration and billing setup.",
-          "There is no permanent free tier for the OpenAI API. Once trial credits are exhausted or expired, you must add funds to continue using the API. Set up billing alerts to avoid unexpected charges, and review [[guide:openai-api-key-setup-2026|configuring your key securely]] to ensure your spending limits are enforced at the key level too."
+          "Credits, payment requirements, and account eligibility can vary. Check the Platform billing page for the terms attached to your own account rather than assuming a public trial amount. If you have not created an [[guide:how-to-get-openai-api-key|OpenAI API key]] yet, our step-by-step guide covers registration and billing setup.",
+          "Set project budgets and alerts, restrict production keys, and monitor usage by model and service tier. Review [[guide:openai-api-key-setup-2026|configuring your key securely]] before deploying. Prices on this page are a dated editorial snapshot; the official pricing and billing pages control your final charge."
         ],
         "zh": [
-          "新注册的 OpenAI 账号可能会获得约 $5 的试用额度。这些额度在创建账号后几个月内过期，用于在正式付费前测试 API。如果你还没有创建 [[guide:how-to-get-openai-api-key|OpenAI API Key]]，我们的逐步指南涵盖了注册和计费设置。",
-          "OpenAI API 没有永久免费层。试用额度用完或过期后，必须充值才能继续使用 API。建议设置计费提醒以避免意外支出，并了解[[guide:openai-api-key-setup-2026|安全配置密钥]]，确保消费限制也在 Key 级别得到执行。"
+          "赠送额度、付款要求与账户资格可能不同，应在 Platform 账单页面查看自己账户对应的条款，不要假设存在固定的公开试用金额。如果你还没有创建 [[guide:how-to-get-openai-api-key|OpenAI API Key]]，我们的逐步指南涵盖注册与账单设置。",
+          "建议设置项目预算和提醒、限制生产 Key 权限，并按模型和服务层级监控用量。部署前请阅读[[guide:openai-api-key-setup-2026|安全配置密钥]]。本页价格是带日期的编辑快照，最终费用以官方定价和账单页面为准。"
         ]
       }
     }
@@ -193,8 +290,8 @@
         "zh": "哪个 OpenAI 模型最便宜？"
       },
       "answer": {
-        "en": "GPT-4o-mini is the most affordable model in OpenAI's lineup at $0.15/1M input and $0.60/1M output tokens. For even lower costs, use the Batch API to get an additional 50% discount, bringing it down to $0.075/1M input and $0.30/1M output.",
-        "zh": "GPT-4o-mini 是 OpenAI 产品线中最实惠的模型，输入 $0.15/百万、输出 $0.60/百万 token。要进一步降低成本，可以使用 Batch API 获得额外 50% 折扣，降至输入 $0.075/百万、输出 $0.30/百万。"
+        "en": "In the August 10, 2026 Standard price snapshot, GPT-5-nano has the lowest listed text-token rate at $0.05/1M input and $0.40/1M output. Within the GPT-5.6 frontier family, Luna is the lowest-cost option at $0.20/1M input and $1.20/1M output. Model availability and suitability still matter more than headline price alone.",
+        "zh": "在 2026 年 8 月 10 日核验的 Standard 价格快照中，GPT-5-nano 的文本 token 标价最低，为输入 $0.05/百万、输出 $0.40/百万。在 GPT-5.6 前沿家族中，Luna 成本最低，为输入 $0.20/百万、输出 $1.20/百万。选择时仍需同时考虑模型可用性和任务适配度。"
       }
     },
     {
@@ -223,8 +320,8 @@
         "zh": "OpenAI API 全球定价一样吗？"
       },
       "answer": {
-        "en": "Yes, OpenAI API prices are the same globally and are charged in USD. However, your bank may charge foreign transaction fees or currency conversion fees depending on your card and country.",
-        "zh": "是的，OpenAI API 全球定价一致，以美元计费。但根据你的银行卡和所在国家，银行可能会收取跨境交易费或货币转换费。"
+        "en": "Not always. Eligible regional-processing endpoints for newer models can carry a 10% data-residency uplift, and models accessed through Amazon Bedrock are billed by AWS and may differ from direct OpenAI pricing. Currency conversion and bank fees may also apply.",
+        "zh": "不一定。部分较新模型在符合条件的区域处理端点上可能有 10% 的数据驻留加价；通过 Amazon Bedrock 使用的模型由 AWS 计费，也可能不同于 OpenAI 直连价格。此外还可能产生汇率转换或银行费用。"
       }
     },
     {
@@ -241,21 +338,21 @@
   "sources": [
     {
       "label": "OpenAI API Pricing",
-      "url": "https://openai.com/api/pricing/",
+      "url": "https://developers.openai.com/api/docs/pricing",
       "site": "OpenAI",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-10"
     },
     {
       "label": "OpenAI Tokenizer",
       "url": "https://platform.openai.com/tokenizer",
       "site": "OpenAI",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-10"
     },
     {
       "label": "OpenAI Batch API Documentation",
       "url": "https://platform.openai.com/docs/guides/batch",
       "site": "OpenAI",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-10"
     }
   ],
   "seo": {
@@ -264,8 +361,8 @@
       "zh": "OpenAI API 定价详解（2026 指南）| Get Model Key"
     },
     "description": {
-      "en": "Complete guide to OpenAI API pricing: GPT-4o and o-series model rates, token billing, cached input discounts, Batch API savings, and cost estimation tips.",
-      "zh": "OpenAI API 定价完整指南：GPT-4o 和 o 系列模型价格、token 计费、缓存折扣、Batch API 节省及成本估算技巧。"
+      "en": "OpenAI API pricing guide for GPT-5.6 Sol, Terra and Luna, Standard, Batch, Flex and Fast rates, multimodal services, tool charges, and cost estimates.",
+      "zh": "OpenAI API 定价指南：GPT-5.6 Sol、Terra 与 Luna，Standard、Batch、Flex、Fast 价格，多模态服务、工具费用与成本估算。"
     }
   }
 }
