@@ -6,7 +6,7 @@
   "cluster": "siliconflow",
   "pillarSlug": "silicon-flow-api-key-complete-guide",
   "publishedAt": "2026-07-29",
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-21",
   "readingMinutes": 8,
   "title": {
     "en": "SiliconFlow Free Models 2026: Current List, Limits and API Example",
@@ -16,58 +16,34 @@
     "en": "A verified snapshot of SiliconFlow models currently marked free on the official pricing page, plus identity verification, fixed rate limits, Pro model naming, and a first API call.",
     "zh": "依据硅基流动官方价格页整理当前标记为免费的模型，并说明实名认证、固定限额、Pro 命名规则与首次 API 调用。"
   },
-  "tags": ["siliconflow free models", "siliconflow api free tier 2026", "siliconflow pricing", "free ai api"],
+  "tags": ["siliconflow free models", "siliconflow pricing", "free ai api"],
   "providerSlugs": ["silicon-flow"],
   "sections": [
     {
       "id": "verified-free-list",
-      "heading": { "en": "Free models verified on August 10, 2026", "zh": "2026 年 8 月 10 日核验的免费模型" },
+      "heading": { "en": "Free models verified on August 21, 2026", "zh": "2026 年 8 月 21 日核验的免费模型" },
       "paragraphs": {
         "en": [
-          "SiliconFlow's official pricing page currently marks the following text models as free for both input and output. The catalog changes, so treat this as a dated snapshot and confirm the live price before production use.",
-          "The same official page also lists free embedding, reranking, image, and speech models. This guide separates those modalities so a free text model is not confused with a free embedding or media endpoint."
+          "SiliconFlow's official pricing page marked the following chat, translation, and OCR IDs as 免费 for both input and output on August 21, 2026. The catalog changes, so treat this as a dated snapshot and confirm the live price before production use. How the free tier works — verification, fixed limits, credit vs free models — is in [[guide:siliconflow-api-free-tier-2026|the SiliconFlow API free tier 2026 guide]].",
+          "DeepSeek had 6 more models collapsed and Qwen had 30 more. Those hidden rows are omitted. Visible paid chat rows on the same page include DeepSeek-V4-Pro, DeepSeek-V4-Flash, Kimi K2.7/K2.6, MiniMax-M2.5, and the expanded Qwen 3.5/3.6 models."
         ],
         "zh": [
-          "硅基流动官方价格页当前将下列文本模型的输入和输出均标记为“免费”。模型目录会变化，因此这是一份带核验日期的快照；投入生产前仍应检查实时价格。",
-          "官方页面还列出了免费的 Embedding、Rerank、图像和语音模型。本文按模态拆分，避免把免费文本模型与免费向量或媒体接口混为一谈。"
+          "硅基流动官方价格页在 2026 年 8 月 21 日将下列对话、翻译和 OCR 模型的输入、输出均标记为「免费」。模型目录会变化，因此这是一份带核验日期的快照；投入生产前仍应检查实时价格。免费层规则——实名、固定限额、赠金与免费模型——见[[guide:siliconflow-api-free-tier-2026|SiliconFlow API 免费层 2026 指南]]。",
+          "DeepSeek 另有 6 个模型未展开，Qwen 另有 30 个未展开，那些隐藏行不列入。同一页上可见的付费对话行包括 DeepSeek-V4-Pro、DeepSeek-V4-Flash、Kimi K2.7/K2.6、MiniMax-M2.5，以及当时已展开的 Qwen 3.5/3.6 模型。"
         ]
       },
       "bullets": {
         "en": [
-          "Qwen/Qwen3.5-4B",
-          "PaddlePaddle/PaddleOCR-VL-1.5",
-          "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-          "THUDM/GLM-4.1V-9B-Thinking",
-          "PaddlePaddle/PaddleOCR-VL",
-          "deepseek-ai/DeepSeek-OCR",
-          "Qwen/Qwen3-8B",
-          "tencent/Hunyuan-MT-7B",
-          "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
-          "THUDM/GLM-Z1-9B-0414",
-          "Qwen/Qwen2.5-7B-Instruct",
-          "Qwen/Qwen2.5-Coder-7B-Instruct",
-          "THUDM/GLM-4-9B-0414",
-          "internlm/internlm2_5-7b-chat",
-          "THUDM/glm-4-9b-chat",
-          "Qwen/Qwen2-7B-Instruct"
+          "THUDM/GLM-Z1-9B-0414 — chat",
+          "THUDM/GLM-4-9B-0414 — chat",
+          "tencent/Hunyuan-MT-7B — translation",
+          "PaddlePaddle/PaddleOCR-VL-1.5 — OCR / vision-language"
         ],
         "zh": [
-          "Qwen/Qwen3.5-4B",
-          "PaddlePaddle/PaddleOCR-VL-1.5",
-          "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-          "THUDM/GLM-4.1V-9B-Thinking",
-          "PaddlePaddle/PaddleOCR-VL",
-          "deepseek-ai/DeepSeek-OCR",
-          "Qwen/Qwen3-8B",
-          "tencent/Hunyuan-MT-7B",
-          "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
-          "THUDM/GLM-Z1-9B-0414",
-          "Qwen/Qwen2.5-7B-Instruct",
-          "Qwen/Qwen2.5-Coder-7B-Instruct",
-          "THUDM/GLM-4-9B-0414",
-          "internlm/internlm2_5-7b-chat",
-          "THUDM/glm-4-9b-chat",
-          "Qwen/Qwen2-7B-Instruct"
+          "THUDM/GLM-Z1-9B-0414 — 对话",
+          "THUDM/GLM-4-9B-0414 — 对话",
+          "tencent/Hunyuan-MT-7B — 翻译",
+          "PaddlePaddle/PaddleOCR-VL-1.5 — OCR / 视觉语言"
         ]
       }
     },
@@ -75,8 +51,34 @@
       "id": "other-free-modalities",
       "heading": { "en": "Other free modalities", "zh": "其他免费模态" },
       "paragraphs": {
-        "en": ["The current pricing page also marks BAAI/bge-m3, BAAI/bge-reranker-v2-m3, BAAI/bge-large-zh-v1.5 and BAAI/bge-large-en-v1.5 as free. Kolors is listed as a free image model, while TeleAI/TeleSpeechASR and FunAudioLLM/SenseVoiceSmall are listed as free speech models."],
-        "zh": ["当前价格页还将 BAAI/bge-m3、BAAI/bge-reranker-v2-m3、BAAI/bge-large-zh-v1.5 和 BAAI/bge-large-en-v1.5 标记为免费；Kolors 被列为免费生图模型，TeleAI/TeleSpeechASR 与 FunAudioLLM/SenseVoiceSmall 被列为免费语音模型。"]
+        "en": [
+          "The same August 21, 2026 pricing page also marks embedding, rerank, image, and speech IDs as free. Pro/BAAI/bge-m3 and Pro/BAAI/bge-reranker-v2-m3 are paid. Neither listed Wan video model was free."
+        ],
+        "zh": [
+          "同一份 2026 年 8 月 21 日价格页还将向量、重排、生图和语音 ID 标记为免费。Pro/BAAI/bge-m3 与 Pro/BAAI/bge-reranker-v2-m3 收费。当时列出的万相视频模型均不免费。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "BAAI/bge-m3 — embedding (Pro/BAAI/bge-m3 is paid)",
+          "BAAI/bge-reranker-v2-m3 — rerank (Pro/BAAI/bge-reranker-v2-m3 is paid)",
+          "BAAI/bge-large-zh-v1.5 — embedding",
+          "BAAI/bge-large-en-v1.5 — embedding",
+          "Kwai-Kolors/Kolors — image, free per image",
+          "Qwen/Qwen3-ASR-1.7B — speech",
+          "TeleAI/TeleSpeechASR — speech",
+          "FunAudioLLM/SenseVoiceSmall — speech"
+        ],
+        "zh": [
+          "BAAI/bge-m3 — 向量（Pro/BAAI/bge-m3 收费）",
+          "BAAI/bge-reranker-v2-m3 — 重排（Pro/BAAI/bge-reranker-v2-m3 收费）",
+          "BAAI/bge-large-zh-v1.5 — 向量",
+          "BAAI/bge-large-en-v1.5 — 向量",
+          "Kwai-Kolors/Kolors — 生图，按张免费",
+          "Qwen/Qwen3-ASR-1.7B — 语音",
+          "TeleAI/TeleSpeechASR — 语音",
+          "FunAudioLLM/SenseVoiceSmall — 语音"
+        ]
       }
     },
     {
@@ -109,13 +111,13 @@
       "id": "first-call",
       "heading": { "en": "First free API call", "zh": "第一次免费 API 调用" },
       "paragraphs": {
-        "en": ["Create a key at https://cloud.siliconflow.cn/me/account/ak, complete identity verification, and select a model still marked free on the live pricing page. SiliconFlow accepts the OpenAI SDK at the China endpoint shown below."],
-        "zh": ["在 https://cloud.siliconflow.cn/me/account/ak 创建 Key，完成实名认证，并选择实时价格页仍标记为免费的模型。硅基流动可通过 OpenAI SDK 调用，下面使用中国站端点。"]
+        "en": ["Create a key at https://cloud.siliconflow.cn/me/account/ak, complete identity verification, and select a model still marked free on the live pricing page. The example below uses THUDM/GLM-Z1-9B-0414, which was listed as free on August 21, 2026."],
+        "zh": ["在 https://cloud.siliconflow.cn/me/account/ak 创建 Key，完成实名认证，并选择实时价格页仍标记为免费的模型。下面示例用 THUDM/GLM-Z1-9B-0414，它在 2026 年 8 月 21 日价格页为免费。"]
       },
       "codeBlocks": [
         {
           "language": "python",
-          "code": "from openai import OpenAI\nimport os\n\nclient = OpenAI(\n    api_key=os.environ[\"SILICONFLOW_API_KEY\"],\n    base_url=\"https://api.siliconflow.cn/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"Qwen/Qwen3.5-4B\",\n    messages=[{\"role\": \"user\", \"content\": \"Reply with: KEY_WORKS\"}],\n)\nprint(response.choices[0].message.content)",
+          "code": "from openai import OpenAI\nimport os\n\nclient = OpenAI(\n    api_key=os.environ[\"SILICONFLOW_API_KEY\"],\n    base_url=\"https://api.siliconflow.cn/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"THUDM/GLM-Z1-9B-0414\",\n    messages=[{\"role\": \"user\", \"content\": \"Reply with: KEY_WORKS\"}],\n)\nprint(response.choices[0].message.content)",
           "caption": { "en": "OpenAI-compatible Python request", "zh": "OpenAI 兼容 Python 请求" }
         }
       ]
@@ -130,15 +132,16 @@
     }
   ],
   "faq": [
+    { "question": { "en": "Which SiliconFlow models are free right now?", "zh": "现在哪些 SiliconFlow 模型免费？" }, "answer": { "en": "On the August 21, 2026 pricing snapshot: THUDM/GLM-Z1-9B-0414, THUDM/GLM-4-9B-0414, tencent/Hunyuan-MT-7B, PaddlePaddle/PaddleOCR-VL-1.5, four BAAI embedding/rerank IDs, Kwai-Kolors/Kolors, Qwen/Qwen3-ASR-1.7B, TeleAI/TeleSpeechASR, and FunAudioLLM/SenseVoiceSmall. Recheck the live pricing page before you depend on any ID.", "zh": "2026 年 8 月 21 日价格快照里免费的是：THUDM/GLM-Z1-9B-0414、THUDM/GLM-4-9B-0414、tencent/Hunyuan-MT-7B、PaddlePaddle/PaddleOCR-VL-1.5、四个 BAAI 向量/重排 ID、Kwai-Kolors/Kolors、Qwen/Qwen3-ASR-1.7B、TeleAI/TeleSpeechASR、FunAudioLLM/SenseVoiceSmall。投产前请再核实时价格页。" } },
     { "question": { "en": "Is the SiliconFlow API completely free?", "zh": "SiliconFlow API 完全免费吗？" }, "answer": { "en": "No. SiliconFlow has both free and paid models. Models marked free are billed at zero within fixed rate limits; paid models are charged according to the live pricing page.", "zh": "不是。硅基流动同时有免费与付费模型。标记为免费的模型在固定限额内费用为 0；付费模型按实时价格页计费。" } },
     { "question": { "en": "Is identity verification required for free models?", "zh": "免费模型需要实名认证吗？" }, "answer": { "en": "SiliconFlow's official rate-limit documentation says identity verification is required to use all free models.", "zh": "硅基流动官方限流文档说明，使用全部免费模型需要完成实名认证。" } },
     { "question": { "en": "Can I raise a free model's rate limit?", "zh": "免费模型的限额可以提升吗？" }, "answer": { "en": "The official documentation says free-model rate limits are fixed. Where available, a Pro/ version is paid and follows paid-model limits.", "zh": "官方文档说明免费模型限额固定。若平台提供对应 Pro/ 版本，它属于收费模型并采用收费模型限额。" } },
     { "question": { "en": "How much credit do new SiliconFlow users get?", "zh": "SiliconFlow 新用户有多少赠金？" }, "answer": { "en": "The current official announcement states ¥16 for China-site users or $1 for global-site users. Campaign availability should be confirmed when registering.", "zh": "当前官方公告写明中国站新用户 ¥16、国际站新用户 $1；注册时仍应确认活动是否继续有效。" } }
   ],
   "sources": [
-    { "label": "SiliconFlow pricing", "url": "https://siliconflow.cn/pricing", "site": "SiliconFlow", "checkedAt": "2026-08-10" },
-    { "label": "SiliconFlow rate limits", "url": "https://docs.siliconflow.cn/cn/userguide/rate-limits/rate-limit-and-upgradation", "site": "SiliconFlow Docs", "checkedAt": "2026-08-10" },
-    { "label": "SiliconFlow new-user credit announcement", "url": "https://siliconflow.cn/news/yuz3kzv65rdcvcffwpl88263", "site": "SiliconFlow", "checkedAt": "2026-08-10" }
+    { "label": "SiliconFlow pricing", "url": "https://siliconflow.cn/pricing", "site": "SiliconFlow", "checkedAt": "2026-08-21" },
+    { "label": "SiliconFlow rate limits", "url": "https://docs.siliconflow.cn/cn/userguide/rate-limits/rate-limit-and-upgradation", "site": "SiliconFlow Docs", "checkedAt": "2026-08-21" },
+    { "label": "SiliconFlow new-user credit announcement", "url": "https://siliconflow.cn/news/yuz3kzv65rdcvcffwpl88263", "site": "SiliconFlow", "checkedAt": "2026-08-21" }
   ],
   "seo": {
     "title": { "en": "SiliconFlow Free Models 2026: List, Limits & API Example", "zh": "SiliconFlow 免费模型 2026：清单、限额与 API 示例" },

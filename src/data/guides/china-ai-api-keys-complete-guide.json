@@ -5,7 +5,7 @@
   "pillar": true,
   "cluster": "china-ai",
   "publishedAt": "2026-06-08",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-21",
   "readingMinutes": 12,
   "title": {
     "en": "China AI API Keys Complete Guide (2026): DeepSeek, Kimi, Qwen, ERNIE & Doubao",
@@ -59,13 +59,13 @@
       "paragraphs": {
         "en": [
           "Here is a quick overview of each platform's key characteristics. For detailed setup instructions, refer to the dedicated guide for each provider.",
-          "DeepSeek offers OpenAI-compatible endpoints with DeepSeek-V3 for general chat and DeepSeek-R1 for advanced reasoning. It is known for extremely competitive pricing and global accessibility. For step-by-step instructions, see our guide on how to get a DeepSeek API key.",
+          "DeepSeek offers OpenAI-compatible and Anthropic-compatible endpoints with deepseek-v4-flash and deepseek-v4-pro. It is known for competitive pricing (idle hours are half of peak) and global accessibility. For step-by-step instructions, see our guide on how to get a DeepSeek API key.",
           "Moonshot AI provides the Kimi API with the Kimi K3 model, which supports an ultra-long context window of up to 256K tokens. Kimi is particularly strong in Chinese language tasks and long-document understanding. See our [[guide:how-to-get-kimi-api-key|dedicated guide on how to get a Kimi API key]] or the [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API Key setup walkthrough]] for detailed steps.",
           "Alibaba Tongyi Qianwen (Qwen) offers the widest range of models, from Qwen-Turbo to Qwen-Max, available through Alibaba Cloud's DashScope platform. Baidu ERNIE provides the ERNIE 4.0 and ERNIE Speed models through its Qianfan platform. ByteDance Doubao offers aggressive per-token pricing through the Volcano Engine platform."
         ],
         "zh": [
           "以下是各平台关键特性的快速概览。详细的设置说明请参考每个供应商的专门指南。",
-          "DeepSeek 提供 OpenAI 兼容端点，DeepSeek-V3 用于通用对话，DeepSeek-R1 用于高级推理。以极具竞争力的定价和全球可访问性著称。详细步骤请参阅我们的如何获取 DeepSeek API Key 指南。",
+          "DeepSeek 提供兼容 OpenAI 与 Anthropic 的端点，当前模型为 deepseek-v4-flash 和 deepseek-v4-pro。以有竞争力的定价（空闲价为高峰价一半）和全球可访问性著称。详细步骤请参阅我们的如何获取 DeepSeek API Key 指南。",
           "月之暗面提供 Kimi API 和 Kimi K3 模型，支持高达 256K token 的超长上下文窗口。Kimi 在中文任务和长文档理解方面特别强。详细步骤请参阅我们的 [[guide:how-to-get-kimi-api-key|如何获取 Kimi API Key 指南]] 或 [[guide:kimi-k3-api-key-setup-2026|Kimi K3 API Key 申请教程]]。",
           "阿里通义千问（Qwen）提供最丰富的模型系列，从 Qwen-Turbo 到 Qwen-Max，通过阿里云 DashScope 平台提供。百度文心通过千帆平台提供 ERNIE 4.0 和 ERNIE Speed 模型。字节豆包通过火山引擎平台提供激进的每 token 定价。"
         ]
@@ -111,12 +111,12 @@
       "paragraphs": {
         "en": [
           "Chinese AI API platforms are generally more affordable than their international counterparts. Pricing is per million tokens, with input and output rates billed separately. DeepSeek and Doubao are the most cost-effective, while ERNIE 4.0 and Qwen-Max command higher prices for their premium capabilities.",
-          "DeepSeek-V3 offers some of the lowest per-token rates in the market. Moonshot's Kimi K3 is competitively priced for its long-context capabilities. Qwen offers tiered pricing from budget (Qwen-Turbo) to premium (Qwen-Max). ERNIE 4.0 is priced at a premium for its deep Chinese optimization. Doubao's pricing is aggressively low, targeting high-volume enterprise customers.",
+          "DeepSeek V4 Flash still offers some of the lowest per-token rates among domestic APIs after the August 2026 update: peak cache-miss input/output is ¥3.0/¥9.0 per 1M tokens, idle is half. Moonshot's Kimi K3 is competitively priced for its long-context capabilities. Qwen offers tiered pricing from budget (Qwen-Turbo) to premium (Qwen-Max). ERNIE 4.0 is priced at a premium for its deep Chinese optimization. Doubao's pricing is aggressively low, targeting high-volume enterprise customers.",
           "Most platforms also offer prompt caching discounts and free trial credits for new users. Always check the official pricing pages for the latest rates, as prices in the Chinese AI market change frequently."
         ],
         "zh": [
           "中国 AI API 平台通常比国际同类平台更经济实惠。按百万 token 计价，输入和输出分别计费。DeepSeek 和豆包性价比最高，而文心 4.0 和通义千问 Max 因其高端能力定价较高。",
-          "DeepSeek-V3 提供市场上最低的每 token 费率之一。Moonshot 的 Kimi K3 考虑到其长上下文能力，定价有竞争力。通义千问提供从经济型（Qwen-Turbo）到高端型（Qwen-Max）的分层定价。文心 4.0 因其中文深度优化定价较高。豆包定价激进，面向高并发企业客户。",
+          "DeepSeek V4 Flash 在 2026 年 8 月调价后仍是国内 API 中较低的每 token 费率之一：高峰缓存未命中输入/输出为 ¥3.0/¥9.0 / 百万 tokens，空闲价减半。Moonshot 的 Kimi K3 考虑到其长上下文能力，定价有竞争力。通义千问提供从经济型（Qwen-Turbo）到高端型（Qwen-Max）的分层定价。文心 4.0 因其中文深度优化定价较高。豆包定价激进，面向高并发企业客户。",
           "大多数平台还提供提示缓存折扣和新用户免费试用额度。建议查看官方定价页面获取最新价格，因为中国 AI 市场价格变动频繁。"
         ]
       }
@@ -266,7 +266,7 @@
       "label": "DeepSeek API Documentation",
       "url": "https://api-docs.deepseek.com/",
       "site": "DeepSeek",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-21"
     },
     {
       "label": "Moonshot AI Platform",

@@ -46,7 +46,7 @@
     "deep seek",
     "深度求索"
   ],
-  "lastVerified": "2026-08-10",
+  "lastVerified": "2026-08-21",
   "seo": {
     "title": {
       "en": "DeepSeek API Key - Official Access for DeepSeek Models | Get Model Key",
@@ -60,12 +60,12 @@
   "img": "https://aicdn.zfty.work/space_13/image_cloud/202603/1773806237995049_deepseek.webp",
   "overview": {
     "en": [
-      "DeepSeek provides coding- and reasoning-strong models through its platform API. Its current V4 endpoints are deepseek-v4-flash and deepseek-v4-pro, both with thinking and non-thinking modes.",
-      "Developers often pick DeepSeek for cost-effective Chinese-friendly coding agents and long reasoning traces without hosting the weights themselves."
+      "DeepSeek provides coding- and reasoning-strong models through its platform API. Its current V4 endpoints are deepseek-v4-flash (DeepSeek-V4-Flash-0731) and deepseek-v4-pro (DeepSeek-V4-Pro-0813), both with thinking and non-thinking modes.",
+      "Developers often pick DeepSeek for cost-effective Chinese-friendly coding agents and long reasoning traces without hosting the weights themselves. After the August 2026 rate update, idle hours are billed at half the peak rate."
     ],
     "zh": [
-      "DeepSeek（深度求索）通过自有平台 API 提供偏代码与推理的模型。当前 V4 接口包括 deepseek-v4-flash 与 deepseek-v4-pro，均支持思考和非思考模式。",
-      "开发者常因高性价比、中文友好与较强编程/推理能力而选择 DeepSeek，无需自托管权重。"
+      "DeepSeek（深度求索）通过自有平台 API 提供偏代码与推理的模型。当前 V4 接口包括 deepseek-v4-flash（DeepSeek-V4-Flash-0731）与 deepseek-v4-pro（DeepSeek-V4-Pro-0813），均支持思考和非思考模式。",
+      "开发者常因高性价比、中文友好与较强编程/推理能力而选择 DeepSeek，无需自托管权重。2026 年 8 月调价后，空闲时段按高峰价的一半计费。"
     ]
   },
   "howToGetKey": {
@@ -104,8 +104,8 @@
       }
     },
     {
-      "question": {"en": "Are current DeepSeek V4 prices permanent?", "zh": "当前 DeepSeek V4 价格会长期不变吗？"},
-      "answer": {"en": "No guarantee. DeepSeek currently warns that it plans a significant API price increase. Treat our figures as a dated snapshot and verify before recharging.", "zh": "不能保证。DeepSeek 当前提示计划较大幅度上调 API 价格。请将本站数字视为带日期的快照，并在充值前重新核验。"}
+      "question": {"en": "What are current DeepSeek V4 prices?", "zh": "当前 DeepSeek V4 价格是多少？"},
+      "answer": {"en": "As of August 21, 2026, V4 Flash peak rates are ¥3.0 cache-miss input and ¥9.0 output per 1M tokens; V4 Pro is ¥9.0 and ¥27.0. Idle hours (outside Beijing time 09:00–12:00 and 14:00–18:00) are half of peak. DeepSeek can still change prices, so verify before recharging.", "zh": "截至 2026 年 8 月 21 日，V4 Flash 高峰价为缓存未命中输入 ¥3.0、输出 ¥9.0 / 百万 tokens；V4 Pro 为 ¥9.0 和 ¥27.0。北京时间 9:00–12:00、14:00–18:00 之外为空闲时段，按高峰价一半计费。DeepSeek 仍可能调价，充值前请重新核验。"}
     }
   ]
 }

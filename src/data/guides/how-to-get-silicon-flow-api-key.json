@@ -36,11 +36,11 @@
       },
       "paragraphs": {
         "en": [
-          "You need a phone number for registration. Chinese +86 numbers work directly on siliconflow.cn; international users should use the global site at siliconflow.com. A payment method is not required to start — the free tier and bonus credits work without any top-up.",
+          "You need a phone number for registration. Chinese +86 numbers work directly on siliconflow.cn; international users should use the global site at siliconflow.com. A payment method is not required to start — the [[guide:siliconflow-api-free-tier-2026|SiliconFlow free tier]] and bonus credits work without any top-up.",
           "No prior experience with API keys is needed. This tutorial covers everything from account creation to your first successful API call. For a broader overview of the platform, [[guide:silicon-flow-api-key-complete-guide|the complete SiliconFlow guide]] covers models, pricing, and advanced configurations."
         ],
         "zh": [
-          "注册需要一个手机号。中国 +86 号码在 siliconflow.cn 直接使用；国际用户建议用全球站 siliconflow.com。开始时无需支付方式——免费额度和赠送额度不充值即可使用。",
+          "注册需要一个手机号。中国 +86 号码在 siliconflow.cn 直接使用；国际用户建议用全球站 siliconflow.com。开始时无需支付方式——[[guide:siliconflow-api-free-tier-2026|硅基流动免费层]]和赠送额度不充值即可使用。",
           "不需要有 API Key 使用经验。本教程从注册账号到完成第一次 API 调用全程覆盖。如需更全面的平台概览，[[guide:silicon-flow-api-key-complete-guide|完整的硅基流动指南]] 涵盖了模型、定价和高级配置。"
         ]
       }

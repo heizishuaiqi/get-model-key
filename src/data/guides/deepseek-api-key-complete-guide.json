@@ -5,15 +5,15 @@
   "pillar": true,
   "cluster": "deepseek",
   "publishedAt": "2026-06-18",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-21",
   "readingMinutes": 12,
   "title": {
     "en": "DeepSeek API Key Complete Guide (2026): Setup, Pricing & Usage",
     "zh": "DeepSeek API Key 完全指南（2026）：开通、定价与使用"
   },
   "excerpt": {
-    "en": "Complete guide to DeepSeek API: how to get your key, understand pricing, use OpenAI-compatible SDK, and leverage DeepSeek-V3 and DeepSeek-R1 models effectively.",
-    "zh": "DeepSeek API 完全指南：如何获取 Key、理解定价、使用 OpenAI 兼容 SDK，以及有效利用 DeepSeek-V3 和 DeepSeek-R1 模型。"
+    "en": "Complete guide to DeepSeek API: how to get your key, understand V4 Flash and V4 Pro pricing, use OpenAI-compatible SDK, and leverage current DeepSeek models effectively.",
+    "zh": "DeepSeek API 完全指南：如何获取 Key、理解 V4 Flash 与 V4 Pro 定价、使用 OpenAI 兼容 SDK，以及有效利用当前 DeepSeek 模型。"
   },
   "tags": [
     "deepseek",
@@ -34,14 +34,14 @@
       },
       "paragraphs": {
         "en": [
-          "DeepSeek is a Chinese AI company that has gained significant international attention for its high-performance, low-cost language models. The DeepSeek API provides programmatic access to models like DeepSeek-V3 (general chat) and DeepSeek-R1 (advanced reasoning), with OpenAI-compatible endpoints.",
+          "DeepSeek is a Chinese AI company that has gained significant international attention for its high-performance, low-cost language models. The DeepSeek API provides programmatic access to current V4 endpoints — deepseek-v4-flash and deepseek-v4-pro — with OpenAI-compatible and Anthropic-compatible base URLs.",
           "DeepSeek's search interest grew over 60% in 2026, making it one of the fastest-rising AI API providers. Its combination of competitive pricing, strong reasoning capabilities, and OpenAI SDK compatibility has made it a popular choice for developers worldwide.",
-          "What surprised us most in testing was the cost-to-quality ratio. DeepSeek-V3 produces output quality comparable to GPT-4-class models at roughly 1/10th the price. For budget-conscious projects or high-volume applications, it's hard to beat."
+          "What surprised us most in testing was the cost-to-quality ratio. Even after the August 2026 rate update, DeepSeek V4 Flash remains far cheaper than GPT-4-class international APIs for comparable Chinese-language and coding workloads. For budget-conscious projects or high-volume applications, it is still hard to beat — especially if you shift non-interactive jobs into idle hours."
         ],
         "zh": [
-          "DeepSeek 是一家中国 AI 公司，因其高性能、低成本的模型而获得国际关注。DeepSeek API 提供对 DeepSeek-V3（通用对话）和 DeepSeek-R1（高级推理）等模型的编程访问，接口兼容 OpenAI 格式。",
+          "DeepSeek 是一家中国 AI 公司，因其高性能、低成本的模型而获得国际关注。DeepSeek API 提供对当前 V4 接口 deepseek-v4-flash 和 deepseek-v4-pro 的编程访问，同时兼容 OpenAI 与 Anthropic 格式。",
           "DeepSeek 的搜索热度在 2026 年增长超过 60%，是增长最快的 AI API 供应商之一。竞争性定价、强推理能力和 OpenAI SDK 兼容性的组合，使其成为全球开发者的热门选择。",
-          "测试中最让我们惊讶的是性价比。DeepSeek-V3 的输出质量与 GPT-4 级别模型相当，但价格约为 1/10。对于预算敏感的项目或高用量应用，很难找到更好的选择。"
+          "测试中最让我们惊讶的是性价比。即便经历 2026 年 8 月调价，DeepSeek V4 Flash 在中文和编程负载上仍远低于 GPT-4 级别国际 API。对于预算敏感的项目或高用量应用，尤其是把非交互任务排到空闲时段时，仍然很难找到更好的选择。"
         ]
       }
     },
@@ -53,22 +53,22 @@
       },
       "paragraphs": {
         "en": [
-          "DeepSeek currently offers two main models through its API, each optimized for different use cases:"
+          "DeepSeek currently offers two V4 API models. For a full price table, cache rates, peak/idle windows, and concurrency limits, see [[guide:deepseek-v4-models-pricing|DeepSeek V4 Flash vs V4 Pro pricing]]."
         ],
         "zh": [
-          "DeepSeek 目前通过 API 提供两个主要模型，各自针对不同场景优化："
+          "DeepSeek 目前通过 API 提供两款 V4 模型。完整价格表、缓存费率、高峰/空闲时段和并发限制见 [[guide:deepseek-v4-models-pricing|DeepSeek V4 Flash 与 V4 Pro 定价]]。"
         ]
       },
       "bullets": {
         "en": [
-          "deepseek-chat (DeepSeek-V3) — General-purpose chat model. We tested it on coding, writing, Q&A, and translation. Quality is close to GPT-4o on most tasks. Fast response times (~1-3 seconds for typical prompts).",
-          "deepseek-reasoner (DeepSeek-R1) — Advanced reasoning model. This is where DeepSeek truly shines: it solves math problems, logic puzzles, and multi-step reasoning tasks at a level competitive with Claude Opus and o1. The trade-off is slower responses (it 'thinks' longer).",
-          "Model naming note: API model names use lowercase identifiers (deepseek-chat, deepseek-reasoner), not the marketing names (V3, R1)."
+          "deepseek-v4-flash (DeepSeek-V4-Flash-0731) — High-throughput V4 model. 1M context, 384K max output, thinking and non-thinking modes, OpenAI and Anthropic API formats. Best default for cost and concurrency (limit 2500).",
+          "deepseek-v4-pro (DeepSeek-V4-Pro-0813) — Higher-capability V4 tier at 3× Flash token rates. Same 1M context and 384K output, concurrency limit 500.",
+          "Older aliases such as deepseek-chat / deepseek-reasoner may still appear in older code samples. Confirm current IDs in the official docs and console before production use."
         ],
         "zh": [
-          "deepseek-chat（DeepSeek-V3）—— 通用对话模型。我们测试了编程、写作、问答和翻译。多数任务上质量接近 GPT-4o。响应快（典型提示约 1-3 秒）。",
-          "deepseek-reasoner（DeepSeek-R1）—— 高级推理模型。这是 DeepSeek 真正出彩的地方：它解决数学题、逻辑题和多步推理任务的能力可与 Claude Opus 和 o1 竞争。代价是响应较慢（它会「思考」更久）。",
-          "模型命名说明：API 模型名使用小写标识符（deepseek-chat、deepseek-reasoner），不是营销名称（V3、R1）。"
+          "deepseek-v4-flash（DeepSeek-V4-Flash-0731）—— 高吞吐 V4 模型。1M 上下文、最大 384K 输出，支持思考与非思考，兼容 OpenAI 与 Anthropic API。成本和并发的默认首选（并发限制 2500）。",
+          "deepseek-v4-pro（DeepSeek-V4-Pro-0813）—— 更高能力的 V4 档，token 单价约为 Flash 的 3 倍。同样是 1M 上下文和 384K 输出，并发限制 500。",
+          "旧代码示例里仍可能出现 deepseek-chat / deepseek-reasoner 等别名。投产前请以官方文档和控制台中的当前 ID 为准。"
         ]
       }
     },
@@ -95,28 +95,28 @@
       },
       "paragraphs": {
         "en": [
-          "DeepSeek uses a pay-per-token model with separate rates for input and output tokens. The pricing is notably lower than many international alternatives, which is a primary attraction for cost-conscious developers.",
-          "We ran a side-by-side cost comparison for a typical workload (1M input + 500K output tokens):"
+          "DeepSeek uses a pay-per-token model with separate rates for cache-hit input, cache-miss input, and output. After the August 2026 update, each rate also splits into peak and idle windows. Idle rates are half of peak. Peak hours are Beijing time 09:00–12:00 and 14:00–18:00.",
+          "The snapshot below is CNY per 1M tokens. For the full table, including concurrency and API features, see [[guide:deepseek-v4-models-pricing|the V4 Flash vs Pro pricing guide]]."
         ],
         "zh": [
-          "DeepSeek 采用按 token 付费模式，输入和输出 token 分别计价。定价比许多国际替代方案低不少，这是吸引成本敏感开发者的主要原因。",
-          "我们对典型负载（100 万输入 + 50 万输出 token）做了并排成本对比："
+          "DeepSeek 采用按 token 付费模式，缓存命中输入、缓存未命中输入和输出分别计价。2026 年 8 月调价后，每档再按高峰/空闲时段计价，空闲价为高峰价一半。高峰时段为北京时间 9:00–12:00、14:00–18:00。",
+          "以下快照以人民币 / 百万 tokens 计。完整表格（含并发和 API 功能）见 [[guide:deepseek-v4-models-pricing|V4 Flash 与 V4 Pro 定价指南]]。"
         ]
       },
       "bullets": {
         "en": [
-          "DeepSeek-V3 (deepseek-chat): ~$0.27/1M input, ~$1.10/1M output — Same workload cost us $0.82 total",
-          "DeepSeek-R1 (deepseek-reasoner): ~$0.55/1M input, ~$2.19/1M output — Reasoning quality at a fraction of competitors' price",
-          "For comparison: GPT-4o for the same workload would cost ~$7.50; Claude Sonnet ~$10.50",
-          "Prompt caching: Cached input tokens cost ~$0.07/1M — 75% discount. Essential for repeated system prompts.",
-          "Off-peak discount: Some models have lower rates during off-peak hours (UTC 16:00-00:00). Check current pricing for details."
+          "deepseek-v4-flash: cache-hit ¥0.05 idle / ¥0.10 peak · cache-miss ¥1.5 idle / ¥3.0 peak · output ¥4.5 idle / ¥9.0 peak",
+          "deepseek-v4-pro: cache-hit ¥0.15 idle / ¥0.30 peak · cache-miss ¥4.5 idle / ¥9.0 peak · output ¥13.5 idle / ¥27.0 peak",
+          "Fee formula: token usage × the applicable model rate; promotional balance is deducted before prepaid balance",
+          "Prompt caching still matters: cache-hit input is a small fraction of cache-miss input, so keep reusable prefixes stable",
+          "Idle-window discount: schedule batch jobs outside Beijing time 09:00–12:00 and 14:00–18:00 to pay half the peak rate"
         ],
         "zh": [
-          "DeepSeek-V3（deepseek-chat）：约 $0.27/百万输入，约 $1.10/百万输出 —— 同负载我们总共花了 $0.82",
-          "DeepSeek-R1（deepseek-reasoner）：约 $0.55/百万输入，约 $2.19/百万输出 —— 以竞争对手零头的价格获得推理能力",
-          "对比：同样负载 GPT-4o 约 $7.50；Claude Sonnet 约 $10.50",
-          "提示缓存：缓存输入 token 约 $0.07/百万 —— 75% 折扣。对重复系统提示很重要。",
-          "闲时折扣：部分模型在闲时（UTC 16:00-00:00）有更低费率。详情请查看当前定价。"
+          "deepseek-v4-flash：缓存命中 空闲 ¥0.05 / 高峰 ¥0.10 · 缓存未命中 空闲 ¥1.5 / 高峰 ¥3.0 · 输出 空闲 ¥4.5 / 高峰 ¥9.0",
+          "deepseek-v4-pro：缓存命中 空闲 ¥0.15 / 高峰 ¥0.30 · 缓存未命中 空闲 ¥4.5 / 高峰 ¥9.0 · 输出 空闲 ¥13.5 / 高峰 ¥27.0",
+          "扣费公式：token 消耗量 × 对应单价；赠送余额优先于充值余额扣减",
+          "提示缓存仍然关键：缓存命中输入远低于缓存未命中，应保持可复用前缀稳定",
+          "空闲折扣：把批处理排到北京时间 9:00–12:00、14:00–18:00 之外，可按高峰价一半计费"
         ]
       }
     },
@@ -137,10 +137,10 @@
       "codeBlocks": [
         {
           "language": "python",
-          "code": "from openai import OpenAI\n\n# Before (OpenAI):\n# client = OpenAI(api_key=\"sk-...\", base_url=\"https://api.openai.com/v1\")\n\n# After (DeepSeek) — only 2 lines change:\nclient = OpenAI(\n    api_key=\"your-deepseek-key\",\n    base_url=\"https://api.deepseek.com/v1\"  # Just change this URL\n)\n\nresponse = client.chat.completions.create(\n    model=\"deepseek-chat\",  # or \"deepseek-reasoner\"\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)\n\nprint(response.choices[0].message.content)",
+          "code": "from openai import OpenAI\n\n# Before (OpenAI):\n# client = OpenAI(api_key=\"sk-...\", base_url=\"https://api.openai.com/v1\")\n\n# After (DeepSeek) — only 2 lines change:\nclient = OpenAI(\n    api_key=\"your-deepseek-key\",\n    base_url=\"https://api.deepseek.com\"  # Official OpenAI-compatible base URL\n)\n\nresponse = client.chat.completions.create(\n    model=\"deepseek-v4-flash\",  # or \"deepseek-v4-pro\"\n    messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]\n)\n\nprint(response.choices[0].message.content)",
           "caption": {
-            "en": "Tested July 2026 — works with openai SDK >= 1.0",
-            "zh": "2026 年 7 月实测 —— 适用于 openai SDK >= 1.0"
+            "en": "Tested August 2026 — works with openai SDK >= 1.0",
+            "zh": "2026 年 8 月实测 —— 适用于 openai SDK >= 1.0"
           }
         }
       ]
@@ -196,14 +196,14 @@
       },
       "bullets": {
         "en": [
-          "Reasoning model latency — deepseek-reasoner can take 30-60+ seconds for complex problems because it does chain-of-thought reasoning. Don't use it for real-time chat; use it for batch processing.",
+          "Reasoning model latency — thinking mode (default) can take much longer on complex problems because it does chain-of-thought reasoning. Don't use thinking mode for real-time chat unless you need it; disable thinking for latency-sensitive paths.",
           "Chinese-language optimization — DeepSeek was trained heavily on Chinese data. It excels at Chinese tasks but occasionally produces slightly less natural English compared to GPT-4.",
           "Payment methods — International credit cards work, but some users report issues. Alipay/WeChat Pay are the most reliable methods. PayPal is not supported.",
           "Rate limits — Default limits are generous but not documented clearly. We hit a temporary block after 1000 requests in 10 minutes. Add retry logic with exponential backoff.",
           "API stability — DeepSeek occasionally has brief outages (minutes, not hours). For production, implement fallback to another provider."
         ],
         "zh": [
-          "推理模型延迟 —— deepseek-reasoner 解决复杂问题可能需要 30-60+ 秒，因为它做思维链推理。不要用于实时聊天；用于批量处理。",
+          "推理模型延迟 —— 思考模式（默认开启）解决复杂问题会更慢，因为它做思维链推理。实时聊天若不需要思考，应关闭思考；把思考留给批量或高难度路径。",
           "中文优化 —— DeepSeek 在中文数据上训练充分。中文任务表现优秀，但英文偶尔不如 GPT-4 自然。",
           "支付方式 —— 国际信用卡可用，但有用户反馈偶尔有问题。支付宝/微信支付最可靠。不支持 PayPal。",
           "速率限制 —— 默认限制较宽松但文档不清晰。我们在 10 分钟 1000 次请求后被临时封了。建议加指数退避重试逻辑。",
@@ -219,8 +219,8 @@
         "zh": "DeepSeek API 比 OpenAI 便宜吗？"
       },
       "answer": {
-        "en": "Generally yes. DeepSeek's token pricing is significantly lower than OpenAI's comparable models, especially for high-volume usage. However, exact savings depend on your specific usage pattern and model choice.",
-        "zh": "通常是的。DeepSeek 的 token 定价比 OpenAI 的同类模型低不少，特别是高用量场景。但具体节省多少取决于你的使用模式和模型选择。"
+        "en": "Generally yes, especially on V4 Flash idle hours. After the August 2026 update, Flash peak cache-miss input/output is ¥3.0/¥9.0 per 1M tokens and idle is half. Exact savings still depend on cache-hit rate, thinking-token output, and whether traffic lands in peak hours.",
+        "zh": "通常是的，尤其是 V4 Flash 的空闲时段。2026 年 8 月调价后，Flash 高峰缓存未命中输入/输出为 ¥3.0/¥9.0 / 百万 tokens，空闲价减半。具体节省多少仍取决于缓存命中率、思考 token 输出，以及流量是否落在高峰时段。"
       }
     },
     {
@@ -259,13 +259,13 @@
       "label": "DeepSeek API Documentation",
       "url": "https://api-docs.deepseek.com/",
       "site": "DeepSeek",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-21"
     },
     {
       "label": "DeepSeek API Pricing",
       "url": "https://api-docs.deepseek.com/quick_start/pricing",
       "site": "DeepSeek",
-      "checkedAt": "2026-07-29"
+      "checkedAt": "2026-08-21"
     }
   ],
   "seo": {

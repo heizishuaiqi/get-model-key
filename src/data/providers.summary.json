@@ -203,12 +203,16 @@
     },
     "models": {
       "en": [
+        "DeepSeek V4 Flash",
+        "DeepSeek V4 Pro",
         "DeepSeek-V3.2",
         "DeepSeek-Coder-V3",
         "DeepSeek-R1",
         "DeepSeek-Reasoner"
       ],
       "zh": [
+        "DeepSeek V4 Flash",
+        "DeepSeek V4 Pro",
         "DeepSeek-V3.2",
         "DeepSeek-Coder-V3",
         "DeepSeek-R1",

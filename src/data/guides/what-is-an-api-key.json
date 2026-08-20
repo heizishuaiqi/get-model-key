@@ -96,14 +96,14 @@
           "OpenAI — platform.openai.com (GPT-4o, o-series models)",
           "Anthropic — console.anthropic.com (Claude models)",
           "Google — aistudio.google.com (Gemini models)",
-          "DeepSeek — platform.deepseek.com (DeepSeek-V3, R1)",
+          "DeepSeek — platform.deepseek.com (V4 Flash, V4 Pro)",
           "OpenRouter — openrouter.ai (aggregated access to many models)"
         ],
         "zh": [
           "OpenAI — platform.openai.com（GPT-4o、o 系列模型）",
           "Anthropic — console.anthropic.com（Claude 模型）",
           "Google — aistudio.google.com（Gemini 模型）",
-          "DeepSeek — platform.deepseek.com（DeepSeek-V3、R1）",
+          "DeepSeek — platform.deepseek.com（V4 Flash、V4 Pro）",
           "OpenRouter — openrouter.ai（聚合访问多种模型）"
         ]
       }

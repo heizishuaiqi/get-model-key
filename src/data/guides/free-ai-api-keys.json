@@ -6,7 +6,7 @@
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
   "publishedAt": "2026-07-20",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-21",
   "readingMinutes": 7,
   "title": {
     "en": "Free AI API Keys: Complete List of Free Tier Providers (2026)",
@@ -28,7 +28,8 @@
     "openai",
     "anthropic",
     "deepseek",
-    "openrouter"
+    "openrouter",
+    "silicon-flow"
   ],
   "sections": [
     {
@@ -83,6 +84,23 @@
       }
     },
     {
+      "id": "siliconflow-free-tier",
+      "heading": {
+        "en": "SiliconFlow Free Models",
+        "zh": "硅基流动免费模型"
+      },
+      "paragraphs": {
+        "en": [
+          "SiliconFlow is a China-based aggregator with a model-based free tier: selected IDs on the live pricing page are billed at zero after identity verification, with fixed rate limits that do not rise when you spend more. That is separate from the occasional ¥16 / $1 new-user credit.",
+          "[[guide:siliconflow-api-free-tier-2026|The SiliconFlow API free tier 2026 guide]] explains how to start; [[guide:silicon-flow-models-and-pricing|the free models snapshot]] lists IDs last checked on the official pricing page."
+        ],
+        "zh": [
+          "硅基流动是国内聚合平台，免费层按模型：实时价格页上部分 ID 在实名后费用为 0，限额固定，不会随消费提高。这和偶尔出现的 ¥16 / $1 新用户赠金不是同一回事。",
+          "开通方式见[[guide:siliconflow-api-free-tier-2026|SiliconFlow API 免费层 2026 指南]]；官方价格页核验过的 ID 清单见[[guide:silicon-flow-models-and-pricing|免费模型快照]]。"
+        ]
+      }
+    },
+    {
       "id": "huggingface-inference",
       "heading": {
         "en": "HuggingFace Inference API",
@@ -118,6 +136,7 @@
           "Google Gemini: free tier, ~15 RPM / 1500 requests per day, no credit card",
           "OpenRouter: free models available, rate-limited, single key for many models",
           "HuggingFace: free inference API, rate-limited, great for open-source models",
+          "SiliconFlow: selected models billed at ¥0 after verification, fixed free-model limits",
           "DeepSeek: occasional free credits for new users, limited time",
           "OpenAI: no ongoing free tier; sometimes new accounts get trial credits"
         ],
@@ -125,6 +144,7 @@
           "Google Gemini：免费层，约 15 RPM / 每天 1500 次请求，无需信用卡",
           "OpenRouter：提供免费模型，有速率限制，一个 Key 调用多模型",
           "HuggingFace：免费推理 API，有速率限制，适合开源模型",
+          "硅基流动：实名后部分模型费用为 0，免费模型限额固定",
           "DeepSeek：新用户偶尔赠送免费积分，限时",
           "OpenAI：无持续免费层；新账户有时会获得试用积分"
         ]
@@ -138,11 +158,11 @@
       },
       "paragraphs": {
         "en": [
-          "To get the most out of free tiers: use Gemini for primary development, OpenRouter to compare models, and HuggingFace for specialized open-source models. Cache responses when possible, and keep prompts concise to reduce token usage. When free tiers aren't enough, [[guide:ai-api-token-price-comparison-2026|our 2026 token price comparison]] helps you find the most cost-effective paid options.",
+          "To get the most out of free tiers: use Gemini for primary development, OpenRouter or [[guide:siliconflow-api-free-tier-2026|SiliconFlow's free models]] to compare open-source endpoints, and HuggingFace for specialized models. Cache responses when possible, and keep prompts concise to reduce token usage. When free tiers aren't enough, [[guide:ai-api-token-price-comparison-2026|our 2026 token price comparison]] helps you find the most cost-effective paid options.",
           "For production apps, combine free tiers with cheap paid options. For example, use Gemini's free tier for low-traffic times and fall back to a low-cost provider like DeepSeek when free limits are hit."
         ],
         "zh": [
-          "充分利用免费层的方法：用 Gemini 做主要开发，用 OpenRouter 对比模型，用 HuggingFace 调用专门化开源模型。尽可能缓存响应，并保持 Prompt 简洁以减少 token 消耗。当免费额度不够用时，[[guide:ai-api-token-price-comparison-2026|我们的 2026 年 Token 价格对比]] 帮你找到最具性价比的付费方案。",
+          "充分利用免费层的方法：用 Gemini 做主要开发，用 OpenRouter 或[[guide:siliconflow-api-free-tier-2026|硅基流动免费模型]]对比开源接口，用 HuggingFace 调用专门化模型。尽可能缓存响应，并保持 Prompt 简洁以减少 token 消耗。当免费额度不够用时，[[guide:ai-api-token-price-comparison-2026|我们的 2026 年 Token 价格对比]] 帮你找到最具性价比的付费方案。",
           "生产应用可以将免费层与低价付费方案结合。例如，低流量时使用 Gemini 免费层，达到免费限制后回退到 DeepSeek 等低成本供应商。"
         ]
       }
@@ -219,6 +239,12 @@
       "url": "https://openrouter.ai/models",
       "site": "OpenRouter",
       "checkedAt": "2026-07-29"
+    },
+    {
+      "label": "SiliconFlow pricing",
+      "url": "https://siliconflow.cn/pricing",
+      "site": "SiliconFlow",
+      "checkedAt": "2026-08-21"
     },
     {
       "label": "HuggingFace Inference API",

@@ -5,7 +5,7 @@
   "pillar": true,
   "cluster": "siliconflow",
   "publishedAt": "2026-07-28",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-21",
   "readingMinutes": 10,
   "title": {
     "en": "SiliconFlow API Key Complete Guide (2026): Setup, Free Models, Pricing & BYOK",
@@ -38,12 +38,12 @@
         "en": [
           "SiliconFlow (硅基流动) is a model inference platform that exposes a broad, changing catalog through one API key and an OpenAI-compatible endpoint.",
           "The platform handles model hosting, load balancing, and inference optimization, so you don't need to deploy models on your own GPUs. This makes SiliconFlow especially popular among Chinese developers and anyone who wants to experiment with multiple open-source models without managing infrastructure.",
-          "SiliconFlow offers a generous free tier: several production-grade models — including Qwen3-8B, DeepSeek-R1-Distill-Qwen-7B, and DeepSeek-OCR — can be called for free within rate limits, making it one of the best-value API platforms in 2026."
+          "SiliconFlow offers a generous free tier: selected models are billed at zero inside fixed rate limits after identity verification. [[guide:siliconflow-api-free-tier-2026|The 2026 free-tier guide]] explains how that works, what is still free, and when to switch to paid."
         ],
         "zh": [
           "硅基流动（SiliconFlow）是模型推理平台，通过一把 API Key 和 OpenAI 兼容端点提供持续变化的多模型目录。",
           "平台负责模型托管、负载均衡和推理优化，你不需要自己部署 GPU。这让硅基流动在中国开发者以及想快速试多个开源模型的人群中特别受欢迎。",
-          "硅基流动提供慷慨的免费额度：多个生产级模型——包括 Qwen3-8B、DeepSeek-R1-Distill-Qwen-7B 和 DeepSeek-OCR——在速率限制内可免费调用，是 2026 年性价比最高的 API 平台之一。"
+          "硅基流动提供慷慨的免费层：完成实名后，部分模型在固定限额内费用为 0。[[guide:siliconflow-api-free-tier-2026|2026 免费层指南]]说明怎么开通、当前哪些免费、以及何时该切到付费。"
         ]
       }
     },
@@ -57,12 +57,12 @@
         "en": [
           "SiliconFlow aggregates models from dozens of leading open-source providers. The catalog includes the DeepSeek family (DeepSeek V4-Pro, DeepSeek-R1 reasoning models), Alibaba's Qwen3 series, Zhipu's GLM-5, Moonshot's Kimi K2.6, and MiniMax-M2.5. Each model is identified by a namespaced ID like deepseek-ai/DeepSeek-V4-Pro or Qwen/Qwen3-8B.",
           "A standout feature is the free model tier. Qwen3-8B is ideal for general conversation and light tasks, DeepSeek-R1-Distill-Qwen-7B provides chain-of-thought reasoning at no cost, and DeepSeek-OCR handles document and image text extraction for free. These are not toy models — they are production-capable and only limited by rate limits.",
-          "For a detailed breakdown of every model on the platform including benchmarks, use-case recommendations, and the full pricing table, see our comprehensive [[guide:silicon-flow-models-and-pricing|SiliconFlow models and pricing guide]]."
+          "For a dated list of model IDs currently marked free, see [[guide:silicon-flow-models-and-pricing|the SiliconFlow free models snapshot]]. How the free tier itself works — verification, fixed limits, and credit vs free models — is in [[guide:siliconflow-api-free-tier-2026|the SiliconFlow API free tier 2026 guide]]."
         ],
         "zh": [
           "硅基流动聚合了数十家领先开源厂商的模型。目录包括 DeepSeek 家族（DeepSeek V4-Pro、DeepSeek-R1 推理模型）、阿里的 Qwen3 系列、智谱的 GLM-5、月之暗面的 Kimi K2.6 以及 MiniMax-M2.5。每个模型用命名空间 ID 标识，如 deepseek-ai/DeepSeek-V4-Pro 或 Qwen/Qwen3-8B。",
           "一大亮点是免费模型层。Qwen3-8B 适合通用对话和轻量任务，DeepSeek-R1-Distill-Qwen-7B 免费提供思维链推理，DeepSeek-OCR 免费做文档和图片文字提取。这些不是玩具模型——它们具备生产能力，仅受速率限制。",
-          "如需平台全部模型的详细说明，包括基准测试、使用场景推荐和完整定价表，请参阅我们的 [[guide:silicon-flow-models-and-pricing|硅基流动模型与定价指南]]。"
+          "当前标记为免费的模型 ID 清单见[[guide:silicon-flow-models-and-pricing|硅基流动免费模型快照]]。免费层本身怎么运作——实名、固定限额、赠金与免费模型的区别——见[[guide:siliconflow-api-free-tier-2026|SiliconFlow API 免费层 2026 指南]]。"
         ]
       }
     },

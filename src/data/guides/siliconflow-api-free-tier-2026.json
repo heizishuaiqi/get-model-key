@@ -1,0 +1,290 @@
+{
+  "slug": "siliconflow-api-free-tier-2026",
+  "status": "published",
+  "topic": "offers",
+  "publishedAt": "2026-08-21",
+  "updatedAt": "2026-08-21",
+  "readingMinutes": 8,
+  "pillar": false,
+  "cluster": "siliconflow",
+  "pillarSlug": "silicon-flow-api-key-complete-guide",
+  "title": {
+    "en": "SiliconFlow API Free Tier 2026: How Free Models, Limits and Credits Work",
+    "zh": "SiliconFlow API 免费层 2026：免费模型、限额与赠金怎么用"
+  },
+  "excerpt": {
+    "en": "SiliconFlow does not use a classic all-models free quota. In 2026 the free tier means selected models billed at zero, fixed rate limits, and identity verification. This guide explains how to start, what is free, and when to switch to paid.",
+    "zh": "硅基流动不是「全模型免费额度」。2026 年的免费层是：部分模型费用为 0、限额固定、需实名认证。本文说明如何开通、哪些免费、以及何时该切到付费。"
+  },
+  "tags": [
+    "siliconflow api free tier 2026",
+    "siliconflow free tier",
+    "siliconflow free models",
+    "siliconflow api",
+    "硅基流动 免费"
+  ],
+  "providerSlugs": ["silicon-flow"],
+  "sections": [
+    {
+      "id": "what-free-tier-means",
+      "heading": {
+        "en": "What the SiliconFlow free tier actually is",
+        "zh": "硅基流动免费层到底是什么"
+      },
+      "paragraphs": {
+        "en": [
+          "If you searched for siliconflow api free tier 2026, you are looking for ongoing zero-cost API access — not a one-time coupon. SiliconFlow's official rate-limit docs describe that access as free models: calls are billed at zero, they appear as ¥0 on the bill, and they stay free only while the live pricing page still marks them free.",
+          "That is different from Google Gemini's free tier, which gives rate-limited access to flagship models. On SiliconFlow, flagship chat models such as DeepSeek-V4-Pro remain paid. The free tier is a rotating set of smaller or specialized models, plus some embedding, image, and speech endpoints.",
+          "For the rest of the platform — registration, paid catalog, and BYOK — start from [[guide:silicon-flow-api-key-complete-guide|the complete SiliconFlow API key guide]]. This article only answers how the 2026 free tier works."
+        ],
+        "zh": [
+          "搜 siliconflow api free tier 2026，通常是想要持续零成本调用，而不是一次性优惠券。硅基流动官方限流文档把这种能力称为免费模型：调用费用为 0，账单里消耗显示为 0，并且只有实时价格页仍标记为「免费」时才继续免费。",
+          "这和 Google Gemini 免费层不同。Gemini 是给旗舰模型加速率限制；硅基流动的旗舰对话模型（如 DeepSeek-V4-Pro）仍是付费。免费层是一组会轮换的中小模型，以及部分 Embedding、生图和语音接口。",
+          "注册、付费目录和 BYOK 请从[[guide:silicon-flow-api-key-complete-guide|硅基流动 API Key 完全指南]]开始。本文只回答 2026 年免费层怎么用。"
+        ]
+      }
+    },
+    {
+      "id": "three-free-things",
+      "heading": {
+        "en": "Three things people mix up: free models, new-user credit, paid Pro/",
+        "zh": "三件常被混在一起的事：免费模型、新用户赠金、付费 Pro/"
+      },
+      "paragraphs": {
+        "en": [
+          "Free models are ongoing. If the pricing page shows 免费 / Free, input and output for that model ID cost nothing inside the fixed free-model rate limit. Identity verification is required to use all free models.",
+          "New-user credit is separate. SiliconFlow's June 2026 announcement states ¥16 on the China site or $1 on the global site. That balance can test paid models; it is not the free tier itself, and campaign rules can change.",
+          "Some models have a free ID and a paid Pro/ ID. On the August 21, 2026 pricing page, BAAI/bge-m3 is free while Pro/BAAI/bge-m3 is paid at ¥0.07 per million tokens. Using the wrong ID is how people think the free tier disappeared."
+        ],
+        "zh": [
+          "免费模型是持续的。价格页显示「免费」时，该模型 ID 的输入和输出在免费模型固定限额内费用为 0。使用全部免费模型需要实名认证。",
+          "新用户赠金是另一套。硅基流动 2026 年 6 月公告写明中国站 ¥16、国际站 $1。赠金可以试付费模型，它不是免费层本身，活动规则也可能变。",
+          "部分模型同时有免费 ID 和付费 Pro/ ID。2026 年 8 月 21 日价格页上，BAAI/bge-m3 免费，Pro/BAAI/bge-m3 按每百万 tokens ¥0.07 收费。用错 ID，就会误以为免费层没了。"
+        ]
+      }
+    },
+    {
+      "id": "how-to-start",
+      "heading": {
+        "en": "How to start the free tier",
+        "zh": "怎么开通免费层"
+      },
+      "paragraphs": {
+        "en": [
+          "Create an account on siliconflow.cn (China) or siliconflow.com (global). Complete identity verification, then create a key at https://cloud.siliconflow.cn/me/account/ak. Screen-by-screen steps are in [[guide:how-to-get-silicon-flow-api-key|the SiliconFlow API key tutorial]].",
+          "You do not need a credit card to call models currently marked free. Use the OpenAI-compatible base URL https://api.siliconflow.cn/v1 in China, or https://api.siliconflow.com/v1 outside China. Both accept the same key format."
+        ],
+        "zh": [
+          "在 siliconflow.cn（中国站）或 siliconflow.com（国际站）注册，完成实名认证，然后在 https://cloud.siliconflow.cn/me/account/ak 创建 Key。逐屏步骤见[[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key 教程]]。",
+          "调用当前标记为免费的模型不需要信用卡。中国站 OpenAI 兼容地址为 https://api.siliconflow.cn/v1，境外用 https://api.siliconflow.com/v1。两套地址接受同一把 Key。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Register and verify identity — official docs require this for all free models",
+          "Create an API key in the console",
+          "Pick a model ID still marked free on https://siliconflow.cn/pricing",
+          "Call it with the OpenAI SDK and the SiliconFlow base URL"
+        ],
+        "zh": [
+          "注册并实名——官方文档写明使用全部免费模型需要认证",
+          "在控制台创建 API Key",
+          "在 https://siliconflow.cn/pricing 选择仍标记为免费的模型 ID",
+          "用 OpenAI SDK 加上硅基流动 base URL 发起调用"
+        ]
+      }
+    },
+    {
+      "id": "what-is-free-now",
+      "heading": {
+        "en": "Free models checked on August 21, 2026",
+        "zh": "2026 年 8 月 21 日核验的免费模型"
+      },
+      "paragraphs": {
+        "en": [
+          "The list below is taken from SiliconFlow's official pricing page on August 21, 2026. Only rows marked 免费 are included. Treat it as a snapshot: the catalog changes. DeepSeek had 6 more models collapsed; Qwen had 30 more. Those hidden rows are not listed here.",
+          "Paid on the same page and therefore not free-tier: DeepSeek-V4-Pro, DeepSeek-V4-Flash, Kimi K2.7/K2.6, MiniMax-M2.5, visible Qwen 3.5/3.6 chat models, and both Wan video models. The matching ID list also lives in [[guide:silicon-flow-models-and-pricing|the SiliconFlow free models snapshot]]."
+        ],
+        "zh": [
+          "下面清单来自硅基流动官方价格页，核验日期 2026 年 8 月 21 日。只收录标记为「免费」的行。这是快照：目录会变。DeepSeek 另有 6 个模型未展开，Qwen 另有 30 个未展开，那些隐藏行不列入本文。",
+          "同一页上已标价、因此不属于免费层的包括：DeepSeek-V4-Pro、DeepSeek-V4-Flash、Kimi K2.7/K2.6、MiniMax-M2.5、当时可见的 Qwen 3.5/3.6 对话模型，以及两个万相视频模型。对应 ID 清单也写在[[guide:silicon-flow-models-and-pricing|硅基流动免费模型快照]]里。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Chat: THUDM/GLM-Z1-9B-0414 — input and output free",
+          "Chat: THUDM/GLM-4-9B-0414 — input and output free",
+          "Translation: tencent/Hunyuan-MT-7B — input and output free",
+          "OCR / vision-language: PaddlePaddle/PaddleOCR-VL-1.5 — input and output free",
+          "Embedding: BAAI/bge-m3 — free (Pro/BAAI/bge-m3 is paid)",
+          "Rerank: BAAI/bge-reranker-v2-m3 — free (Pro/BAAI/bge-reranker-v2-m3 is paid)",
+          "Embedding: BAAI/bge-large-zh-v1.5 — free",
+          "Embedding: BAAI/bge-large-en-v1.5 — free",
+          "Image: Kwai-Kolors/Kolors — free per image",
+          "Speech: Qwen/Qwen3-ASR-1.7B — free",
+          "Speech: TeleAI/TeleSpeechASR — free",
+          "Speech: FunAudioLLM/SenseVoiceSmall — free",
+          "Video: none of the listed Wan models were free"
+        ],
+        "zh": [
+          "对话：THUDM/GLM-Z1-9B-0414 — 输入、输出免费",
+          "对话：THUDM/GLM-4-9B-0414 — 输入、输出免费",
+          "翻译：tencent/Hunyuan-MT-7B — 输入、输出免费",
+          "OCR / 视觉语言：PaddlePaddle/PaddleOCR-VL-1.5 — 输入、输出免费",
+          "向量：BAAI/bge-m3 — 免费（Pro/BAAI/bge-m3 收费）",
+          "重排：BAAI/bge-reranker-v2-m3 — 免费（Pro/BAAI/bge-reranker-v2-m3 收费）",
+          "向量：BAAI/bge-large-zh-v1.5 — 免费",
+          "向量：BAAI/bge-large-en-v1.5 — 免费",
+          "生图：Kwai-Kolors/Kolors — 按张免费",
+          "语音：Qwen/Qwen3-ASR-1.7B — 免费",
+          "语音：TeleAI/TeleSpeechASR — 免费",
+          "语音：FunAudioLLM/SenseVoiceSmall — 免费",
+          "视频：当时列出的万相模型均不免费"
+        ]
+      }
+    },
+    {
+      "id": "rate-limits",
+      "heading": {
+        "en": "Free-tier limits: fixed, per model, 429 if you exceed them",
+        "zh": "免费层限额：固定、按模型、超了就是 429"
+      },
+      "paragraphs": {
+        "en": [
+          "Official docs say free-model rate limits are fixed. Spending more on paid models (moving from L0 toward L5) does not raise free-model RPM/TPM. Paid models scale with monthly spend; free models do not.",
+          "Limits are per account and per model, not per API key. Hitting the cap on one free model does not block a different model. Exact RPM/TPM values are in the console model square — do not copy a static number from a blog into production.",
+          "Over the cap you get HTTP 429 with a rate-limiting message. Wait, back off, or switch to a paid ID (including a Pro/ variant). Putting the same free key into [[guide:silicon-flow-byok-setup-guide|Cherry Studio or other BYOK tools]] still uses these same account limits."
+        ],
+        "zh": [
+          "官方文档写明：免费模型限额是固定值。多消费付费模型（从 L0 升到 L5）不会提高免费模型的 RPM/TPM。付费模型限额随月消费上升，免费模型不会。",
+          "限额按账户、按模型，不是按 API Key。一个免费模型触顶，不影响另一个模型。具体 RPM/TPM 在控制台模型广场查看，不要把博客里的静态数字写进生产。",
+          "超限会返回 HTTP 429。等待、退避，或改用付费 ID（含 Pro/ 版本）。把同一把免费 Key 配进[[guide:silicon-flow-byok-setup-guide|Cherry Studio 等 BYOK 工具]]，用的仍是同一套账户限额。"
+        ]
+      }
+    },
+    {
+      "id": "first-call",
+      "heading": {
+        "en": "A first free-tier API call",
+        "zh": "第一次免费层 API 调用"
+      },
+      "paragraphs": {
+        "en": [
+          "Use a model ID that is still marked free on the live pricing page. The example below uses THUDM/GLM-Z1-9B-0414, which was listed as free on August 21, 2026. If that ID has moved to paid, swap it before you rely on the snippet."
+        ],
+        "zh": [
+          "使用实时价格页仍标记为免费的模型 ID。下面示例用 THUDM/GLM-Z1-9B-0414，它在 2026 年 8 月 21 日价格页为免费。若该 ID 已改为付费，先换模型再跑代码。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "from openai import OpenAI\nimport os\n\nclient = OpenAI(\n    api_key=os.environ[\"SILICONFLOW_API_KEY\"],\n    base_url=\"https://api.siliconflow.cn/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"THUDM/GLM-Z1-9B-0414\",\n    messages=[{\"role\": \"user\", \"content\": \"Reply with: FREE_TIER_OK\"}],\n)\nprint(response.choices[0].message.content)",
+          "caption": {
+            "en": "OpenAI-compatible call to a SiliconFlow free-tier chat model",
+            "zh": "用 OpenAI 兼容接口调用硅基流动免费层对话模型"
+          }
+        }
+      ]
+    },
+    {
+      "id": "when-to-leave",
+      "heading": {
+        "en": "When the free tier is not enough",
+        "zh": "什么时候免费层不够用"
+      },
+      "paragraphs": {
+        "en": [
+          "Stay on free models for prototyping, OCR trials, embeddings, and light BYOK chat. Leave the free tier when you need DeepSeek V4, higher concurrency, or a limit that can grow with spend.",
+          "Confirm the ID is still free, keep a paid fallback, and recheck https://siliconflow.cn/pricing before a launch. SiliconFlow can change which models are free; this page is a snapshot, not a contract."
+        ],
+        "zh": [
+          "原型、OCR 试验、向量化和轻度 BYOK 对话可以留在免费模型。需要 DeepSeek V4、更高并发，或限额要随消费上涨时，再离开免费层。",
+          "上线前确认 ID 仍免费，准备付费回退，并再看一次 https://siliconflow.cn/pricing。哪些模型免费由平台决定；本文是快照，不是合约。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Which SiliconFlow models are free right now?",
+        "zh": "现在哪些 SiliconFlow 模型免费？"
+      },
+      "answer": {
+        "en": "On the August 21, 2026 pricing snapshot: GLM-Z1-9B-0414, GLM-4-9B-0414, Hunyuan-MT-7B, PaddleOCR-VL-1.5, four BAAI embedding/rerank IDs, Kolors, Qwen3-ASR-1.7B, TeleSpeechASR, and SenseVoiceSmall. Recheck the live pricing page before you depend on any ID.",
+        "zh": "2026 年 8 月 21 日价格快照里免费的是：GLM-Z1-9B-0414、GLM-4-9B-0414、Hunyuan-MT-7B、PaddleOCR-VL-1.5、四个 BAAI 向量/重排 ID、Kolors、Qwen3-ASR-1.7B、TeleSpeechASR、SenseVoiceSmall。投产前请再核实时价格页。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does SiliconFlow have an API free tier in 2026?",
+        "zh": "2026 年 SiliconFlow 还有 API 免费层吗？"
+      },
+      "answer": {
+        "en": "Yes, but it is model-based. Selected models on the live pricing page are billed at zero inside fixed rate limits. It is not unlimited access to every SiliconFlow model.",
+        "zh": "有，但是按模型。实时价格页上部分模型在固定限额内费用为 0。不是平台上所有模型都免费无限用。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is SiliconFlow API completely free?",
+        "zh": "SiliconFlow API 完全免费吗？"
+      },
+      "answer": {
+        "en": "No. Free models cost ¥0; paid models (including DeepSeek V4 and most Pro/ IDs) follow the pricing page. New-user ¥16 / $1 credit is a separate campaign.",
+        "zh": "不是。免费模型费用为 0；付费模型（含 DeepSeek V4 和多数 Pro/ ID）按价格页计费。新用户 ¥16 / $1 赠金是另一项活动。"
+      }
+    },
+    {
+      "question": {
+        "en": "Do I need identity verification for SiliconFlow free models?",
+        "zh": "用硅基流动免费模型要实名吗？"
+      },
+      "answer": {
+        "en": "Yes. Official rate-limit documentation says identity verification is required to use all free models.",
+        "zh": "要。官方限流文档写明：使用全部免费模型需要完成实名认证。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can I raise SiliconFlow free-model rate limits?",
+        "zh": "硅基流动免费模型限额能提高吗？"
+      },
+      "answer": {
+        "en": "Not by spending more. Free-model limits are fixed. Paid models, including Pro/ variants, follow spend-based L0–L5 limits.",
+        "zh": "不能靠多消费提高。免费模型限额固定。付费模型（含 Pro/ 版本）才走 L0–L5 用量等级。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "SiliconFlow pricing",
+      "url": "https://siliconflow.cn/pricing",
+      "site": "SiliconFlow",
+      "checkedAt": "2026-08-21"
+    },
+    {
+      "label": "SiliconFlow rate limits",
+      "url": "https://docs.siliconflow.cn/cn/userguide/rate-limits/rate-limit-and-upgradation",
+      "site": "SiliconFlow Docs",
+      "checkedAt": "2026-08-21"
+    },
+    {
+      "label": "SiliconFlow new-user credit announcement",
+      "url": "https://siliconflow.cn/news/yuz3kzv65rdcvcffwpl88263",
+      "site": "SiliconFlow",
+      "checkedAt": "2026-08-21"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "SiliconFlow API Free Tier 2026: Free Models, Limits & How to Start | Get Model Key",
+      "zh": "SiliconFlow API 免费层 2026：免费模型、限额与开通 | Get Model Key"
+    },
+    "description": {
+      "en": "How the SiliconFlow API free tier works in 2026: zero-priced models, identity verification, fixed rate limits, ¥16/$1 credit vs free models, and a first API call.",
+      "zh": "2026 年硅基流动 API 免费层说明：费用为 0 的模型、实名认证、固定限额、¥16/$1 赠金与免费模型的区别，以及第一次 API 调用。"
+    }
+  }
+}

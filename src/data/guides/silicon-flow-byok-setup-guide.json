@@ -38,12 +38,12 @@
         "en": [
           "BYOK stands for Bring Your Own Key. It means a third-party AI tool lets you enter your own API key and choose your own model backend, rather than forcing you to use the tool creator's servers. The tool sends requests to whatever endpoint you specify.",
           "SiliconFlow is ideal for BYOK because its API is fully OpenAI-compatible. Any tool that accepts a custom OpenAI base URL will work with SiliconFlow out of the box — no special integration needed. You get access to 200+ models in your favorite tool without running anything locally. [[guide:silicon-flow-api-key-complete-guide|The complete SiliconFlow resource]] covers the full range of capabilities beyond BYOK.",
-          "This is especially powerful for free-tier users: you can use the free Qwen3-8B model inside premium chat clients and translation tools at zero cost. If you haven't obtained a [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key]] yet, registration takes just a few minutes."
+          "This is especially powerful for free-tier users: you can paste a SiliconFlow key into premium chat clients and call models still marked free. [[guide:siliconflow-api-free-tier-2026|The 2026 free-tier guide]] covers current limits; if you haven't obtained a [[guide:how-to-get-silicon-flow-api-key|SiliconFlow API key]] yet, registration takes a few minutes."
         ],
         "zh": [
           "BYOK 全称 Bring Your Own Key，指第三方 AI 工具允许你输入自己的 API Key、选择自己的模型后端，而不是强制用工具方的服务器。工具把请求发到你指定的端点。",
           "硅基流动特别适合 BYOK，因为它的 API 完全兼容 OpenAI 格式。任何接受自定义 OpenAI base URL 的工具都能开箱即用——不需要特殊适配。你在喜欢的工具里就能访问 200+ 模型，无需本地运行任何东西。[[guide:silicon-flow-api-key-complete-guide|完整的硅基流动资源]] 涵盖了 BYOK 之外的全面能力。",
-          "对免费用户尤其友好：你可以在高级聊天客户端和翻译工具中免费使用 Qwen3-8B 等免费模型，零成本。如果你还没有[[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key]]，注册只需几分钟。"
+          "对免费用户尤其友好：可以把硅基流动 Key 贴进高级聊天客户端，调用仍标记为免费的模型。限额说明见[[guide:siliconflow-api-free-tier-2026|2026 免费层指南]]；若还没有[[guide:how-to-get-silicon-flow-api-key|硅基流动 API Key]]，注册只需几分钟。"
         ]
       }
     },
