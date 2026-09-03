@@ -5,6 +5,14 @@
   "publishedAt": "2026-09-03",
   "updatedAt": "2026-09-03",
   "readingMinutes": 13,
+  "coverImage": {
+    "en": "/images/guides/grok-bot-guide-en.png",
+    "zh": "/images/guides/grok-bot-guide-zh.png"
+  },
+  "coverImageAlt": {
+    "en": "Grok Bot guide cover showing an AI agent connected to a cloud computer and app workflows",
+    "zh": "Grok Bot 指南封面：一个连接云端电脑和应用工作流的 AI 智能体"
+  },
   "pillar": false,
   "cluster": "grok",
   "pillarSlug": "grok-api-key-complete-guide",
