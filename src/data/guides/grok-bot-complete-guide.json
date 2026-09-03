@@ -1,0 +1,467 @@
+{
+  "slug": "grok-bot-complete-guide",
+  "status": "published",
+  "topic": "basics",
+  "publishedAt": "2026-09-03",
+  "updatedAt": "2026-09-03",
+  "readingMinutes": 13,
+  "pillar": false,
+  "cluster": "grok",
+  "pillarSlug": "grok-api-key-complete-guide",
+  "title": {
+    "en": "What Is Grok Bot? Access, Pricing, Setup & How It Works (2026)",
+    "zh": "Grok Bot 是什么？申请条件、价格、安装与使用指南（2026）"
+  },
+  "excerpt": {
+    "en": "Grok Bot is xAI's persistent agent product, not a new Grok model. Learn who can access it, how usage and trials work, how to install it, and what to check before an agent acts on your accounts.",
+    "zh": "Grok Bot 是 xAI 推出的常驻智能体产品，不是新的 Grok 模型。本文说明可用套餐、用量与试用规则、安装步骤，以及让智能体操作真实账号前要检查的事项。"
+  },
+  "tags": [
+    "grok bot",
+    "what is grok bot",
+    "grok bot pricing",
+    "grok bot download",
+    "grok bot windows",
+    "ai agent",
+    "xai"
+  ],
+  "providerSlugs": [
+    "xai"
+  ],
+  "primaryCta": {
+    "label": {
+      "en": "Download Grok Bot from the official website",
+      "zh": "从官方网站下载 Grok Bot"
+    },
+    "href": "https://x.ai/bot",
+    "note": {
+      "en": "Official downloads for desktop and mobile. Avoid unofficial mirrors and repackaged installers.",
+      "zh": "桌面端和移动端的官方入口。请避开非官方镜像与重新打包的安装程序。"
+    }
+  },
+  "sections": [
+    {
+      "id": "what-is-grok-bot",
+      "heading": {
+        "en": "What is Grok Bot?",
+        "zh": "Grok Bot 是什么？"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok Bot is an early-beta agent product from xAI. It [[https://x.ai/news/introducing-grok-bot|launched on August 11, 2026]] as a way to hand ongoing work to persistent AI teammates. Each Bot can use connected tools, work in a shared cloud computer, remember the context of its job, and continue after you step away.",
+          "The important distinction is that Grok Bot is a product, not a model name and not an API key. You do not select \"grok-bot\" as a model in an API request. If you want to call Grok from your own application, start with the [[guide:grok-api-key-complete-guide|Grok API Key complete guide]] or the [[provider:xai|xAI provider page]].",
+          "Grok Bot is built for delegated work: research a topic, monitor an inbox, update a document, operate a website, or repeat a tested process on a schedule. Because it can act on real systems, it also needs tighter permissions and review rules than an ordinary chatbot."
+        ],
+        "zh": [
+          "Grok Bot 是 xAI [[https://x.ai/news/introducing-grok-bot|于 2026 年 8 月 11 日推出]]的 Early Beta 智能体产品。你可以把持续性的工作交给一个固定 Bot。它能使用已连接的工具，在共享云端电脑中操作，并保留与这项工作有关的上下文；即使你离开电脑，任务也可以继续。",
+          "需要先分清一件事：Grok Bot 是产品，不是模型名称，也不是 API Key。调用 API 时不能把 \"grok-bot\" 填进 model 字段。若要在自己的应用中调用 Grok，请查看[[guide:grok-api-key-complete-guide|Grok API Key 完全指南]]或 [[provider:xai|xAI 供应商页面]]。",
+          "它适合被委派一项明确工作，例如整理资料、处理收件箱、更新文档、操作网页，或按计划重复已经测试过的流程。由于 Bot 能接触真实系统，它需要比普通聊天机器人更严格的权限和复核规则。"
+        ]
+      }
+    },
+    {
+      "id": "bot-vs-chat-vs-api",
+      "heading": {
+        "en": "Grok Bot vs Grok Chat vs the Grok API",
+        "zh": "Grok Bot、Grok Chat 和 Grok API 有什么区别？"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok Chat answers you inside grok.com or the Grok apps. The Grok API lets developers send requests to Grok models from code. Grok Bot sits one level higher: it is an agent workspace that can plan a multi-step job, use plugins or a browser, and return when it needs approval.",
+          "A Grok Bot subscription does not replace an xAI developer account or automatically give your application an API key. Conversely, an xAI API key is not the credential used to sign in to the Grok Bot desktop app. The two products belong to the same ecosystem but solve different problems."
+        ],
+        "zh": [
+          "Grok Chat 在 grok.com 或 Grok App 里回答问题；Grok API 供开发者从代码调用 Grok 模型；Grok Bot 则在更上层，它是一个智能体工作区，可以规划多步骤任务、使用插件或浏览器，并在需要判断时回来请你确认。",
+          "订阅 Grok Bot 不会替代 xAI 开发者账号，也不会自动给你的应用生成 API Key。反过来，xAI API Key 也不是登录 Grok Bot 桌面应用的凭证。两者属于同一生态，但用途不同。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Grok Chat: ask questions and work in a conversation",
+          "Grok API: integrate Grok models into software with an API key",
+          "Grok Bot: delegate multi-step work to persistent agents with tools and a cloud computer"
+        ],
+        "zh": [
+          "Grok Chat：在对话中提问和处理内容",
+          "Grok API：使用 API Key 把 Grok 模型接入软件",
+          "Grok Bot：把多步骤任务交给带工具和云端电脑的常驻智能体"
+        ]
+      }
+    },
+    {
+      "id": "access-and-pricing",
+      "heading": {
+        "en": "Grok Bot access, plans, pricing and free trial",
+        "zh": "Grok Bot 的可用套餐、价格和免费试用"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok Bot is not currently sold as a standalone subscription. [[https://cursor.com/help/grok-bot/plans|Official plan documentation]] checked on September 3, 2026 lists access through paid Cursor plans, Cursor Teams, individual SuperGrok plans, and X Premium+. SuperGrok or X access is linked to the Cursor account that will own the Bot usage.",
+          "Included usage resets weekly. If that allowance runs out, work can continue against shared on-demand spend when the account has it enabled. The free trial is usage credit rather than unlimited access for a fixed period, although a seven-day window also applies. Long agent runs consume more steps and tokens, so one large task can use a substantial share of the trial.",
+          "The table shows entry prices displayed on the official Grok Bot page on September 3, 2026. Taxes, billing cycles, regional prices and higher tiers can differ. The official pages describe weekly usage by relative level rather than publishing a fixed number of steps or tokens, so check the in-app plan screen before paying."
+        ],
+        "zh": [
+          "Grok Bot 目前不是单独售卖的订阅。2026 年 9 月 3 日核验的[[https://cursor.com/help/grok-bot/plans|官方套餐文档]]显示，可通过 Cursor 个人付费套餐、Cursor Teams、个人 SuperGrok 套餐或 X Premium+ 获得使用资格。通过 SuperGrok 或 X 开通时，需要把资格关联到实际承载 Bot 用量的 Cursor 账号。",
+          "套餐内用量按周重置。额度用完后，如果账号开启了按量付费，任务可以继续从共享的 on-demand 预算扣费。免费试用本质上是一笔使用额度，同时有七天时间窗口，并不是七天内无限使用。长任务会消耗更多 Agent Steps 和 Tokens，一次大型任务就可能用掉大部分试用额度。",
+          "下表是 Grok Bot 官方页面在 2026 年 9 月 3 日展示的入门价格。税费、结算周期、地区价格和更高档套餐可能不同。官方目前只用相对等级描述每周用量，没有公布固定的 Steps 或 Tokens 数量，因此付费前还应查看应用内的套餐页面。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Cursor: Pro, Pro+, Ultra, and self-serve Teams plans",
+          "Grok: individual SuperGrok, SuperGrok Plus, and SuperGrok Heavy accounts can be linked",
+          "X: an individual X Premium+ subscription can grant access when linked",
+          "Not included: SuperGrok Lite; enterprise access is managed separately",
+          "Usage: weekly included allowance, with optional on-demand spend depending on the account"
+        ],
+        "zh": [
+          "Cursor：Pro、Pro+、Ultra 和自助开通的 Teams 套餐",
+          "Grok：个人 SuperGrok、SuperGrok Plus 和 SuperGrok Heavy 可关联",
+          "X：个人 X Premium+ 订阅关联后可授予使用资格",
+          "不包含：SuperGrok Lite；企业版需单独管理",
+          "用量：包含每周额度，是否可以继续按量付费取决于账号设置"
+        ]
+      },
+      "table": {
+        "caption": {
+          "en": "Entry prices shown by the official Grok Bot page, checked September 3, 2026.",
+          "zh": "Grok Bot 官方页面展示的入门价格，核验于 2026 年 9 月 3 日。"
+        },
+        "headers": {
+          "en": ["Plan", "Displayed price", "How Grok Bot access works"],
+          "zh": ["套餐", "页面显示价格", "Grok Bot 使用方式"]
+        },
+        "rows": [
+          {
+            "en": ["Cursor Pro", "$20/month", "Access included; weekly usage below Pro+"],
+            "zh": ["Cursor Pro", "20 美元/月", "包含使用资格；每周用量低于 Pro+"]
+          },
+          {
+            "en": ["SuperGrok", "$30/month", "Link the subscription to the correct Cursor account"],
+            "zh": ["SuperGrok", "30 美元/月", "需要关联到正确的 Cursor 账号"]
+          },
+          {
+            "en": ["Cursor Teams Standard", "$40/seat/month", "Every member on a self-serve team receives access"],
+            "zh": ["Cursor Teams Standard", "40 美元/席位/月", "自助开通的团队中，每位成员均可使用"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "download-and-setup",
+      "heading": {
+        "en": "How to download and set up Grok Bot",
+        "zh": "如何下载和设置 Grok Bot"
+      },
+      "paragraphs": {
+        "en": [
+          "Use the official [[https://x.ai/bot|Grok Bot download page]] to get the app. Current setup documentation lists desktop builds for macOS, Windows and Linux. Windows offers x64 and Arm64 installers; Linux releases include deb, rpm and AppImage formats.",
+          "The [[https://docs.x.ai/grok-bot/mobile|mobile app]] currently supports iPhone with iOS 18 or later and Android phones with Android 9 or later. It is designed for phones rather than iPad. Mobile can start work, answer questions and approve steps, but editing routine schedules and some teach-by-demonstration workflows still require the desktop app.",
+          "Open the app and sign in with the Cursor account that owns or will receive the eligible usage. If you are linking SuperGrok or X Premium+, verify the Cursor account first: official documentation says that link cannot be moved to another Cursor account later.",
+          "Create one narrowly defined Bot instead of a catch-all assistant. Give it a short name, one job, the sources it may use, the output you expect, and the situations where it must stop for approval. Start with a reversible task before connecting sensitive systems."
+        ],
+        "zh": [
+          "请从[[https://x.ai/bot|Grok Bot 官方下载页面]]获取应用。当前安装文档列出了 macOS、Windows 和 Linux 桌面版本。Windows 提供 x64 与 Arm64 安装包；Linux 提供 deb、rpm 和 AppImage。",
+          "[[https://docs.x.ai/grok-bot/mobile|移动端应用]]目前支持 iOS 18 及以上的 iPhone，以及 Android 9 及以上的安卓手机；当前定位是手机应用，并非 iPad 应用。移动端可以发起任务、回答问题和批准操作，但修改 Routine 计划以及部分演示教学流程仍需使用桌面应用。",
+          "打开应用后，使用拥有套餐资格或准备接收资格的 Cursor 账号登录。如果要关联 SuperGrok 或 X Premium+，先核对 Cursor 账号。官方文档说明，关联完成后不能把资格移动到另一个 Cursor 账号。",
+          "第一个 Bot 最好只负责一项明确工作，不要一开始就做成万能助手。写清名称、职责、允许使用的来源、交付格式，以及哪些情况必须停下来请求批准。先用可撤销的小任务测试，再连接敏感系统。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Download only from x.ai/bot",
+          "Sign in with the correct Cursor account",
+          "Create a Bot with one primary responsibility",
+          "Run a small task and review every action",
+          "Save a stable process as a skill or routine only after testing it"
+        ],
+        "zh": [
+          "只从 x.ai/bot 下载应用",
+          "确认后再登录正确的 Cursor 账号",
+          "让一个 Bot 只承担一项主要职责",
+          "先执行小任务，并检查每一步结果",
+          "流程稳定后再保存为 Skill 或 Routine"
+        ]
+      },
+      "cta": {
+        "label": {
+          "en": "Open the official Grok Bot download page",
+          "zh": "打开 Grok Bot 官方下载页面"
+        },
+        "href": "https://x.ai/bot",
+        "note": {
+          "en": "Choose the installer that matches your operating system and processor architecture.",
+          "zh": "请根据操作系统和处理器架构选择对应安装包。"
+        }
+      }
+    },
+    {
+      "id": "troubleshooting",
+      "heading": {
+        "en": "Common Grok Bot setup problems",
+        "zh": "Grok Bot 常见安装与登录问题"
+      },
+      "paragraphs": {
+        "en": [
+          "If an eligible plan does not appear, first confirm that Grok Bot is signed in to the Cursor account that owns the plan or received the linked usage. A SuperGrok or X Premium+ link is permanent and cannot be moved to another Cursor account, so do not repeat the linking flow with a second account.",
+          "If a plugin will not authorize, remove it, add it again and finish the provider login in the browser. If the desktop app hangs, fully quit it before reopening; closing the window may leave the process running. The [[https://cursor.com/help/grok-bot/getting-started|official troubleshooting guide]] lists current recovery steps.",
+          "When contacting support, include the Cursor account email, operating system, Grok Bot version, Bot name, exact error text or screenshot, and the steps already tried. Do not include passwords, one-time codes or API keys."
+        ],
+        "zh": [
+          "如果符合条件的套餐没有出现，先确认 Grok Bot 登录的是拥有套餐或接收关联额度的 Cursor 账号。SuperGrok 或 X Premium+ 一旦关联便不能迁移到其他 Cursor 账号，因此不要换一个账号重复关联。",
+          "插件无法授权时，可先移除插件，再重新添加，并在浏览器中完成服务商登录。桌面应用卡住时，应彻底退出进程后再打开；只关闭窗口可能不会结束程序。[[https://cursor.com/help/grok-bot/getting-started|官方故障排查指南]]列出了当前的恢复方法。",
+          "联系支持时，请提供 Cursor 账号邮箱、操作系统、Grok Bot 版本、Bot 名称、完整报错文字或截图，以及已经尝试的步骤；不要附带密码、一次性验证码或 API Key。"
+        ]
+      }
+    },
+    {
+      "id": "how-it-works",
+      "heading": {
+        "en": "How the cloud computer, plugins, skills and routines work",
+        "zh": "云端电脑、插件、Skills 和 Routines 怎么配合？"
+      },
+      "paragraphs": {
+        "en": [
+          "Bots share a computer in the cloud. They can operate websites through a browser and use connected plugins for supported services. If a page requires a password, passkey, two-factor code or CAPTCHA, the Bot asks you to take over. You enter the credential yourself and then return control.",
+          "A skill records a process the Bot has learned, while a routine runs a repeatable job on a schedule. Test the process manually first. A routine will faithfully repeat a bad workflow too, so check sources, permissions and output before letting it run unattended.",
+          "Browser sessions can persist on the shared computer. That is convenient, but it also means another Bot may be able to use the same signed-in session when appropriate. Separate high-risk work, grant the smallest useful permissions, and remove connections you no longer need."
+        ],
+        "zh": [
+          "多个 Bot 使用一台共享的云端电脑。它们可以通过浏览器操作网站，也能调用已经连接的插件。页面需要密码、Passkey、双重验证码或 CAPTCHA 时，Bot 会请你接管。凭证由你亲自输入，完成后再把控制权交还。",
+          "Skill 用来保存 Bot 已经学会的流程，Routine 则按计划重复执行任务。先手动跑通，再设置自动执行。错误流程也会被 Routine 原样重复，因此无人值守前必须检查来源、权限和输出结果。",
+          "浏览器登录状态可以保留在共享电脑上，合适时其他 Bot 也可能使用同一会话。这很方便，但不能忽视权限边界。高风险工作应单独处理，只授予完成任务所需的最低权限，不再使用的连接及时移除。"
+        ]
+      }
+    },
+    {
+      "id": "use-cases",
+      "heading": {
+        "en": "Useful first jobs for Grok Bot",
+        "zh": "适合交给 Grok Bot 的第一批任务"
+      },
+      "paragraphs": {
+        "en": [
+          "The best first job has a clear finish line and produces something you can inspect. Research with source links, draft preparation, issue triage, calendar checks and recurring status reports are easier to verify than an open-ended instruction such as \"manage my business.\"",
+          "For software work, a Bot can inspect a repository, reproduce a bug, draft a patch or monitor an issue queue. Keep production deployment, account deletion, financial transactions and irreversible changes behind explicit approval until you understand how the Bot behaves."
+        ],
+        "zh": [
+          "第一项任务应该有明确的完成标准，结果也要方便检查。带来源链接的资料整理、草稿准备、问题分流、日程核对和定期状态报告，都比「帮我管理公司」这类开放指令更适合起步。",
+          "在软件开发场景中，Bot 可以检查代码仓库、复现 Bug、准备补丁或整理 Issue。生产部署、删除账号、金融交易和其他不可逆操作，应保留人工批准，至少等你充分了解这个 Bot 的行为方式之后再考虑放宽。"
+        ]
+      }
+    },
+    {
+      "id": "is-grok-bot-worth-it",
+      "heading": {
+        "en": "Is Grok Bot worth it?",
+        "zh": "Grok Bot 值得使用吗？"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok Bot is easiest to justify when you already pay for an eligible plan and have repeatable work that crosses websites or apps. The free trial is enough to test one tightly scoped workflow, but it is not proof that every long-running automation will be economical.",
+          "It is less compelling if you only need occasional chat or coding help, cannot store the work in a cloud environment, or expect an agent to make irreversible decisions without supervision. Treat the beta as a workflow test: compare the time saved with the review time and usage consumed before upgrading for Grok Bot alone."
+        ],
+        "zh": [
+          "如果你本来就在使用符合条件的套餐，而且确实有需要跨网站或应用重复执行的工作，Grok Bot 往往更有用。免费试用足以验证一个范围明确的流程，但不能据此认定所有长时间自动化任务都划算。",
+          "如果你只需要偶尔聊天或写代码、无法接受工作内容存放在云端，或者希望智能体在无人复核时做不可逆决定，它的吸引力会明显降低。更稳妥的判断方法是把 Beta 当成一次流程测试：升级前同时记录节省的时间、人工复核时间和实际消耗的额度。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Good fit: repeatable browser work, cross-app handoffs, monitored routines, research with inspectable sources",
+          "Poor fit: one-off questions, sensitive data that cannot use cloud storage, unreviewed financial or production actions",
+          "Decision rule: pay only after one real workflow saves more time than it costs to review and run"
+        ],
+        "zh": [
+          "更适合：重复网页操作、跨应用交接、有人监督的定时任务、结果和来源均可检查的研究工作",
+          "不太适合：一次性问答、不能进入云端的敏感数据、无人复核的付款或生产操作",
+          "判断标准：先让一个真实流程跑通，确认节省的时间大于复核和额度成本，再决定是否付费"
+        ]
+      }
+    },
+    {
+      "id": "x-integration",
+      "heading": {
+        "en": "Using Grok Bot with X",
+        "zh": "如何让 Grok Bot 使用 X"
+      },
+      "paragraphs": {
+        "en": [
+          "The X connector lets a Bot search posts, read a timeline, check mentions, collect current discussions and manage bookmarks. In its [[https://x.ai/news/grok-bot-and-x|August 29 integration announcement]], xAI said it can create an X developer account during connection when the user does not already have one. Paid Grok Bot users also receive introductory X API credits, subject to the current program terms.",
+          "Connect X from the Grok Bot plugin settings, complete authorization in the browser, and start with a read-only research task. Review the requested permissions before allowing posting, messaging or bookmark changes."
+        ],
+        "zh": [
+          "通过 X Connector，Bot 可以搜索帖子、读取时间线、检查提及、整理近期讨论和管理书签。xAI 在[[https://x.ai/news/grok-bot-and-x|8 月 29 日的集成公告]]中表示，如果用户还没有 X 开发者账号，连接过程中可以创建；付费 Grok Bot 用户还能获得一笔起步用的 X API Credits，具体以当期规则为准。",
+          "在 Grok Bot 的插件设置中连接 X，并在浏览器中完成授权。第一次建议只做只读的资料整理。允许发帖、私信或修改书签前，先检查它申请了哪些权限。"
+        ]
+      }
+    },
+    {
+      "id": "privacy-and-safety",
+      "heading": {
+        "en": "Privacy, credentials and beta risks",
+        "zh": "隐私、凭证和 Beta 风险"
+      },
+      "paragraphs": {
+        "en": [
+          "Grok Bot requires cloud data storage. Accounts using Cursor Legacy Privacy Mode must switch to a supported data setting before the product can start. Review the [[https://docs.x.ai/grok-bot/approvals-security-and-privacy|official security and privacy controls]] before assigning confidential client data, private repositories or regulated information.",
+          "Never paste an API key, password or recovery code into the Bot conversation or an ordinary file. Use the takeover flow for interactive login and the secure secret card for credentials needed by tools. Rotate a secret immediately if it appears in chat, logs, screenshots or a repository.",
+          "The product is still in beta. Keep destructive actions behind approval, retain backups, and inspect citations or changed files before accepting a result. Autonomy saves time only when the review boundary is clear."
+        ],
+        "zh": [
+          "Grok Bot 需要使用云端数据存储。启用了 Cursor Legacy Privacy Mode 的账号必须切换到受支持的数据设置后才能启动。把客户机密、私有仓库或受监管数据交给 Bot 之前，应先查看[[https://docs.x.ai/grok-bot/approvals-security-and-privacy|官方安全与隐私控制说明]]。",
+          "不要把 API Key、密码或恢复码粘贴到 Bot 对话或普通文件中。交互式登录使用接管功能；工具需要的凭证应通过安全的 Secret Card 输入。只要密钥出现在聊天、日志、截图或代码仓库里，就应立即轮换。",
+          "产品仍处于 Beta。删除、付款、发布等破坏性操作应保留人工批准，同时保留备份，并在接受结果前检查引用来源或文件改动。明确复核边界之后，自动执行才真正省时间。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "Is Grok Bot a new Grok model?",
+        "zh": "Grok Bot 是新的 Grok 模型吗？"
+      },
+      "answer": {
+        "en": "No. Grok Bot is an agent product that uses tools and a cloud computer. Developers use model names such as Grok 4.6 through the xAI API; grok-bot is not an API model ID.",
+        "zh": "不是。Grok Bot 是使用工具和云端电脑的智能体产品。开发者通过 xAI API 调用 Grok 4.6 等模型；grok-bot 不是 API 模型 ID。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Grok Bot free?",
+        "zh": "Grok Bot 免费吗？"
+      },
+      "answer": {
+        "en": "It has a limited trial based on usage credit and a seven-day window. Ongoing access is included with eligible Cursor, Cursor Teams, individual SuperGrok or linked X Premium+ plans. Check the current plan screen because beta access rules can change.",
+        "zh": "它提供按使用额度计算、同时带七天时间窗口的试用。长期使用包含在符合条件的 Cursor、Cursor Teams、个人 SuperGrok 或已关联的 X Premium+ 套餐中。Beta 期间规则可能变化，请以当前套餐页面为准。"
+      }
+    },
+    {
+      "question": {
+        "en": "How much does Grok Bot cost?",
+        "zh": "Grok Bot 多少钱？"
+      },
+      "answer": {
+        "en": "Grok Bot is bundled with eligible plans rather than sold as a separate subscription. On September 3, 2026, the official page displayed Cursor Pro from $20 per month, SuperGrok from $30 per month, and Cursor Teams Standard from $40 per seat per month. Regional prices and higher tiers may differ.",
+        "zh": "Grok Bot 不是单独售卖的订阅，而是包含在符合条件的套餐中。2026 年 9 月 3 日，官方页面显示 Cursor Pro 20 美元/月起、SuperGrok 30 美元/月起、Cursor Teams Standard 40 美元/席位/月起；地区价格和更高档套餐可能不同。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Grok Bot need an xAI API key?",
+        "zh": "使用 Grok Bot 需要 xAI API Key 吗？"
+      },
+      "answer": {
+        "en": "Not for normal sign-in. Grok Bot uses a Cursor account and an eligible plan or linked subscription. An xAI API key is for developers calling Grok models from code.",
+        "zh": "正常登录不需要。Grok Bot 使用 Cursor 账号以及符合条件的套餐或关联订阅。xAI API Key 是开发者从代码调用 Grok 模型时使用的。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can Grok Bot keep working when my computer is off?",
+        "zh": "关闭自己的电脑后，Grok Bot 还能继续工作吗？"
+      },
+      "answer": {
+        "en": "Yes, jobs can continue on its cloud computer after you step away. A run may still pause when it needs approval, a login step or a decision from you.",
+        "zh": "可以。任务在云端电脑上运行，你离开后仍能继续；但需要批准、登录或人工判断时，任务仍会暂停并等待你处理。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Grok Bot work on Windows and Linux?",
+        "zh": "Grok Bot 支持 Windows 和 Linux 吗？"
+      },
+      "answer": {
+        "en": "Yes. Official setup documentation currently lists macOS, Windows and Linux desktop builds. Phone apps support iPhone with iOS 18 or later and Android 9 or later; the mobile experience is not currently designed for iPad. Download from x.ai/bot rather than an unofficial mirror.",
+        "zh": "支持。官方安装文档目前列出了 macOS、Windows 和 Linux 桌面版本。手机端支持 iOS 18 及以上的 iPhone 和 Android 9 及以上的安卓手机；移动版目前并非为 iPad 设计。请从 x.ai/bot 下载，不要使用非官方镜像。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Grok Bot worth paying for?",
+        "zh": "Grok Bot 值得付费吗？"
+      },
+      "answer": {
+        "en": "It can be worth testing if you already have an eligible plan and repeatable work across websites or apps. Before upgrading only for Grok Bot, run one real workflow and compare time saved with review time and usage consumed.",
+        "zh": "如果你已经拥有符合条件的套餐，并且有需要跨网站或应用重复执行的工作，值得先测试。若准备单纯为了 Grok Bot 升级套餐，应先跑通一个真实流程，再比较节省的时间、人工复核时间和额度消耗。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can Grok Bot access my passwords?",
+        "zh": "Grok Bot 会看到我的密码吗？"
+      },
+      "answer": {
+        "en": "For interactive authentication, official guidance tells the user to take over the computer and enter passwords, passkeys, two-factor codes or CAPTCHAs personally. Do not paste credentials into chat or ordinary files.",
+        "zh": "需要交互式验证时，官方流程要求用户接管电脑，亲自输入密码、Passkey、双重验证码或 CAPTCHA。不要把凭证粘贴进对话或普通文件。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Grok Bot official download",
+      "url": "https://x.ai/bot",
+      "site": "SpaceXAI",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Introducing Grok Bot",
+      "url": "https://x.ai/news/introducing-grok-bot",
+      "site": "SpaceXAI",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Grok Bot getting started",
+      "url": "https://docs.x.ai/grok-bot/get-started",
+      "site": "SpaceXAI Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Grok Bot for mobile",
+      "url": "https://docs.x.ai/grok-bot/mobile",
+      "site": "SpaceXAI Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Grok Bot approvals, security and privacy",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "site": "SpaceXAI Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Grok Bot plans and billing",
+      "url": "https://cursor.com/help/grok-bot/plans",
+      "site": "Cursor Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Getting started with Grok Bot",
+      "url": "https://cursor.com/help/grok-bot/getting-started",
+      "site": "Cursor Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Store secrets securely",
+      "url": "https://cursor.com/help/grok-bot/secrets",
+      "site": "Cursor Docs",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Grok Bot now works with X",
+      "url": "https://x.ai/news/grok-bot-and-x",
+      "site": "SpaceXAI",
+      "checkedAt": "2026-09-03"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Grok Bot Guide 2026: Access, Pricing & Setup | Get Model Key",
+      "zh": "Grok Bot 指南 2026：申请条件、价格与安装 | Get Model Key"
+    },
+    "description": {
+      "en": "What Grok Bot is, who can access it, how its trial and weekly usage work, setup steps for Windows, macOS and Linux, X integration, and security tips.",
+      "zh": "了解 Grok Bot 是什么、哪些套餐可以使用、试用和每周额度如何计算，以及 Windows、macOS、Linux 安装、X 集成与安全注意事项。"
+    }
+  }
+}

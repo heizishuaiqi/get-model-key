@@ -11,12 +11,26 @@ export interface GuideCodeBlock {
   caption?: Record<'en' | 'zh', string>;
 }
 
+export interface GuideCta {
+  label: Record<'en' | 'zh', string>;
+  href: string;
+  note?: Record<'en' | 'zh', string>;
+}
+
+export interface GuideTable {
+  caption?: Record<'en' | 'zh', string>;
+  headers: Record<'en' | 'zh', string[]>;
+  rows: Array<Record<'en' | 'zh', string[]>>;
+}
+
 export interface GuideSection {
   id: string;
   heading: Record<'en' | 'zh', string>;
   paragraphs: Record<'en' | 'zh', string[]>;
   bullets?: Record<'en' | 'zh', string[]>;
   codeBlocks?: GuideCodeBlock[];
+  table?: GuideTable;
+  cta?: GuideCta;
 }
 
 export interface GuideFaqItem {
@@ -32,6 +46,8 @@ export interface GuideArticle {
   updatedAt: string;
   readingMinutes: number;
   coverImage?: Record<'en' | 'zh', string>;
+  coverImageAlt?: Record<'en' | 'zh', string>;
+  primaryCta?: GuideCta;
   title: Record<'en' | 'zh', string>;
   excerpt: Record<'en' | 'zh', string>;
   tags: string[];

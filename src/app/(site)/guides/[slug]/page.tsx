@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import Card from '@/components/ui/Card';
@@ -15,6 +16,7 @@ import OpenAIFrontierModels from '@/components/providers/OpenAIFrontierModels';
 import GoogleGeminiModels from '@/components/providers/GoogleGeminiModels';
 import DeepSeekV4Models from '@/components/providers/DeepSeekV4Models';
 import ClaudeModelFamily from '@/components/providers/ClaudeModelFamily';
+import { GuideCtaBlock, GuideTableBlock, GuideTableOfContents } from '@/components/guides/GuideArticleExtras';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -50,7 +52,9 @@ export default async function GuideDetailPage({ params }: Props) {
     (provider): provider is NonNullable<typeof provider> => Boolean(provider && provider.status === 'active')
   );
 
-  const coverImageUrl = guide.coverImage?.en ?? siteConfig.socialImage;
+  const coverImageUrl = guide.coverImage?.en
+    ? new URL(guide.coverImage.en, siteConfig.domain).toString()
+    : siteConfig.socialImage;
 
   const articleStructuredData = {
     '@context': 'https://schema.org',
@@ -170,6 +174,28 @@ export default async function GuideDetailPage({ params }: Props) {
             />
           </header>
 
+          {guide.primaryCta ? (
+            <div className="mb-8">
+              <GuideCtaBlock cta={guide.primaryCta} lang="en" />
+            </div>
+          ) : null}
+
+          {guide.coverImage?.en ? (
+            <figure className="mb-8 overflow-hidden rounded-2xl border border-white-06 bg-surface-1">
+              <Image
+                src={guide.coverImage.en}
+                alt={guide.coverImageAlt?.en ?? guide.title.en}
+                width={1200}
+                height={675}
+                sizes="(max-width: 896px) 100vw, 896px"
+                className="h-auto w-full"
+                priority
+              />
+            </figure>
+          ) : null}
+
+          <GuideTableOfContents sections={guide.sections} lang="en" />
+
           {guide.slug === 'openai-api-pricing' ? (
             <div className="mb-8">
               <OpenAIFrontierModels lang="en" />
@@ -195,7 +221,7 @@ export default async function GuideDetailPage({ params }: Props) {
             {guide.sections.map((section, sectionIndex) => (
               <Fragment key={section.id}>
                 <Card variant="standard">
-                  <h2 className="mb-4 text-h3 text-text-primary">{section.heading.en}</h2>
+                  <h2 id={section.id} className="scroll-mt-24 mb-4 text-h3 text-text-primary">{section.heading.en}</h2>
                   <div className="space-y-3">
                     {section.paragraphs.en.map((paragraph, index) => (
                       <p key={`${section.id}-paragraph-${index}`} className="text-body text-text-secondary">
@@ -210,6 +236,12 @@ export default async function GuideDetailPage({ params }: Props) {
                       ))}
                     </ul>
                   )}
+                  {section.table ? <GuideTableBlock table={section.table} lang="en" /> : null}
+                  {section.cta ? (
+                    <div className="mt-5">
+                      <GuideCtaBlock cta={section.cta} lang="en" />
+                    </div>
+                  ) : null}
                   {section.codeBlocks && section.codeBlocks.length > 0 && (
                     <div className="mt-4 space-y-3">
                       {section.codeBlocks.map((block, i) => (

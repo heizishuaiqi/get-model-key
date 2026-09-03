@@ -5,7 +5,7 @@
   "pillar": true,
   "cluster": "grok",
   "publishedAt": "2026-07-02",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-09-03",
   "readingMinutes": 10,
   "title": {
     "en": "Grok API Key Complete Guide (2026): Setup, Pricing, Models & Best Practices",
@@ -35,11 +35,13 @@
       "paragraphs": {
         "en": [
           "Grok is the AI model family developed by xAI, the company founded by Elon Musk. Unlike other LLMs, Grok has real-time access to information through X (formerly Twitter), giving it a unique advantage for current-events queries. The model also has a more humorous, less filtered personality that distinguishes it from GPT-4o and Claude.",
-          "The Grok API is fully OpenAI-compatible, meaning you can use the same SDK and code patterns with just a base URL change. This makes migration from OpenAI straightforward."
+          "The Grok API is fully OpenAI-compatible, meaning you can use the same SDK and code patterns with just a base URL change. This makes migration from OpenAI straightforward.",
+          "Grok Bot is a separate agent product, not an API model. If you want persistent agents that can use apps and a cloud computer, read our [[guide:grok-bot-complete-guide|Grok Bot access, pricing and setup guide]]."
         ],
         "zh": [
           "Grok 是 xAI 开发的 AI 模型系列，xAI 由马斯克创立。与其他 LLM 不同，Grok 通过 X（原 Twitter）获取实时信息，在时事查询方面有独特优势。模型风格更幽默、过滤更少，与 GPT-4o 和 Claude 形成差异。",
-          "Grok API 完全兼容 OpenAI 格式，只需更改 base URL 即可使用相同的 SDK 和代码模式，从 OpenAI 迁移非常简单。"
+          "Grok API 完全兼容 OpenAI 格式，只需更改 base URL 即可使用相同的 SDK 和代码模式，从 OpenAI 迁移非常简单。",
+          "Grok Bot 是独立的智能体产品，不是 API 模型。如果你需要能使用应用和云端电脑的常驻智能体，请查看[[guide:grok-bot-complete-guide|Grok Bot 申请条件、价格与安装指南]]。"
         ]
       }
     },
