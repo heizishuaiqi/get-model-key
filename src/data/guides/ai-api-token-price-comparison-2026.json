@@ -10,11 +10,11 @@
   "cluster": "ai-basics",
   "pillarSlug": "ai-beginner-guide",
   "publishedAt": "2026-07-25",
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-09-03",
   "readingMinutes": 10,
   "title": {
-    "en": "AI API Token Price Comparison 2026: GPT-5.6, Claude Fable 5, Gemini 3.6, DeepSeek & More",
-    "zh": "2026 年 AI API Token 价格对比：GPT-5.6、Claude Fable 5、Gemini 3.6、DeepSeek 等主流模型"
+    "en": "AI API Token Price Comparison 2026: GPT-5.6, Claude Fable 5.1, Gemini 3.6, DeepSeek & More",
+    "zh": "2026 年 AI API Token 价格对比：GPT-5.6、Claude Fable 5.1、Gemini 3.6、DeepSeek 等主流模型"
   },
   "excerpt": {
     "en": "A practical breakdown of input and output token prices per 1M tokens across the leading AI providers in 2026, with guidance on choosing the right model for your budget and use case.",
@@ -47,17 +47,17 @@
       },
       "paragraphs": {
         "en": [
-          "The table below lists standard API prices per 1 million tokens as of August 2026. International providers price in USD; Chinese providers price in CNY. Prices reflect standard (non-batch, non-cached) API calls — batch and prompt caching can reduce costs by 20–50%. DeepSeek also splits rates into peak and idle windows.",
+          "The table below lists standard API prices per 1 million tokens as verified on September 3, 2026. International providers price in USD; Chinese providers price in CNY. Prices reflect standard non-batch, non-cached API calls. Batch and prompt caching can reduce costs, while DeepSeek also splits rates into peak and idle windows.",
           "Note: prices change frequently. Always verify on the provider's official pricing page before making budget decisions. If you're looking to minimize costs, [[guide:free-ai-api-keys|our free AI API guide]] covers which providers offer free tiers that can supplement your paid usage."
         ],
         "zh": [
-          "下表为截至 2026 年 8 月的标准 API 每百万 Token 价格。国际供应商以美元计价，国内供应商以人民币计价。价格均指标准（非批量、非缓存）调用——批量推理和 Prompt 缓存通常可降低 20–50% 成本。DeepSeek 还会按高峰/空闲时段分档计价。",
+          "下表为 2026 年 9 月 3 日核验的标准 API 每百万 Token 价格。国际供应商以美元计价，国内供应商以人民币计价。价格均指非批量、非缓存的标准调用；Batch 与 Prompt 缓存可以降低部分费用，DeepSeek 还会按高峰和空闲时段分档计价。",
           "注意：价格随时可能变动，决策前请以各供应商官网定价页面为准。如果你想降低成本，[[guide:free-ai-api-keys|我们的免费 AI API 指南]] 介绍了哪些供应商提供免费额度，可以补充你的付费使用。"
         ]
       },
       "bullets": {
         "en": [
-          "Claude Fable 5 (Anthropic): Input $10.00 / Output $50.00 per 1M tokens — highest capability tier",
+          "Claude Fable 5.1 (Anthropic): Input $10.00 / Output $50.00 per 1M tokens — highest public Claude tier",
           "GPT-5.6 Sol (OpenAI): Input $5.00 / Output $30.00 per 1M tokens — flagship reasoning",
           "GPT-5.6 Terra (OpenAI): Input $2.00 / Output $12.00 per 1M tokens — balanced performance",
           "Gemini 3.6 Flash (Google): Input $1.50 / Output $7.50 per 1M tokens — latest stable balance",
@@ -69,7 +69,7 @@
           "GLM-5.2 (ZhipuAI): Input ¥8.00 / Output ¥28.00 per 1M tokens"
         ],
         "zh": [
-          "Claude Fable 5（Anthropic）：输入 $10.00 / 输出 $50.00 每百万 Token — 顶级能力档",
+          "Claude Fable 5.1（Anthropic）：输入 $10.00 / 输出 $50.00 每百万 Token — Claude 公开旗舰档",
           "GPT-5.6 Sol（OpenAI）：输入 $5.00 / 输出 $30.00 每百万 Token — 旗舰推理",
           "GPT-5.6 Terra（OpenAI）：输入 $2.00 / 输出 $12.00 每百万 Token — 均衡性能",
           "Gemini 3.6 Flash（Google）：输入 $1.50 / 输出 $7.50 每百万 Token — 最新稳定均衡模型",
@@ -90,13 +90,13 @@
       },
       "paragraphs": {
         "en": [
-          "Model capability is the biggest driver. More powerful models require more compute per token — longer reasoning chains, larger activation sizes, and more inference steps all add cost. This is why Claude Fable 5 costs 40x more per output token than Gemini Flash-Lite.",
+          "Model capability is one pricing factor. More demanding reasoning and agent workloads can use more compute per token. At current list prices, Claude Fable 5.1 output costs 20 times as much per token as Gemini 3.5 Flash-Lite output.",
           "Compute infrastructure matters too. Companies like Google own custom TPUs and large-scale data centers, which reduces their marginal cost per token. OpenAI and Anthropic rely more on third-party GPU clusters, which affects their floor pricing.",
           "Market positioning is a deliberate choice. Anthropic targets enterprise customers who prioritize safety, accuracy, and long context. OpenAI spans the full market from consumer to enterprise. Chinese providers like DeepSeek compete aggressively on price to build market share in the domestic developer ecosystem.",
           "Architecture differences — such as Mixture of Experts (MoE) versus dense transformers — also affect costs. MoE models activate only a subset of parameters per token, reducing compute. DeepSeek uses MoE which contributes to its low pricing."
         ],
         "zh": [
-          "模型能力是最大的定价驱动力。更强的模型每个 Token 需要更多算力——更长的推理链、更大的激活规模和更多推理步骤都会增加成本。这就是为什么 Claude Fable 5 的输出 Token 单价是 Gemini Flash-Lite 的 40 倍。",
+          "模型能力是定价因素之一，高难度推理和 Agent 工作负载通常需要更多计算。按当前公开单价，Claude Fable 5.1 的输出 token 单价是 Gemini 3.5 Flash-Lite 的 20 倍。",
           "算力基础设施同样重要。谷歌拥有自研 TPU 和大规模数据中心，降低了边际 Token 成本；OpenAI 和 Anthropic 更多依赖第三方 GPU 集群，影响了定价下限。",
           "市场定位是主动选择。Anthropic 主攻注重安全性、准确性和长上下文的企业客户；OpenAI 覆盖从消费者到企业的全市场；DeepSeek 等国内供应商以低价竞争，积极建立国内开发者生态。",
           "架构差异（如 MoE 稀疏激活 vs 密集 Transformer）也影响成本。MoE 模型每个 Token 只激活部分参数，降低了算力消耗，DeepSeek 采用 MoE 架构是其低价的原因之一。"
@@ -131,14 +131,14 @@
       "paragraphs": {
         "en": [
           "There is no single right answer — the best model depends on your task, quality requirements, volume, and budget. For broader context on AI model fundamentals, [[guide:ai-beginner-guide|the beginner's guide to AI]] is a great starting point. Here is a practical breakdown by use case.",
-          "For high-stakes tasks requiring maximum accuracy — legal analysis, medical research, complex code review, enterprise agents — Claude Fable 5 or GPT-5.6 Sol are the top choices despite their price. The cost is justified when errors are expensive.",
+          "For difficult long-horizon agents and codebase work, Claude Fable 5.1 and GPT-5.6 Sol are premium candidates. High-stakes legal or medical output still requires qualified human review; a higher model price does not make the result automatically reliable.",
           "For general-purpose application backends — customer support, document processing, RAG pipelines — GPT-5.6 Terra, Gemini 3.6 Flash, or GPT-5.6 Luna hit a strong capability-to-cost ratio. These models handle most real-world tasks well at a fraction of flagship cost.",
           "For high-volume, latency-sensitive workloads — content moderation, classification, lightweight summarization — Gemini 3.5 Flash-Lite at $0.30/$2.50 is Google’s current stable low-cost option. DeepSeek V4 Flash is the lower-cost V4 choice for Chinese-language workloads: peak cache-miss input / output is ¥3.0 / ¥9.0 per 1M tokens, idle is half, and cache-hit input is ¥0.05 idle / ¥0.10 peak.",
           "For Chinese-language applications with domestic infrastructure needs — RMB billing, low latency in China, local compliance — DeepSeek, Kimi K3, and GLM-5.2 are the practical choices. DeepSeek leads on price; Kimi K3 leads on reasoning and long context. Regardless of which provider you choose, you'll need [[guide:what-is-an-api-key|an API key]] to start making calls."
         ],
         "zh": [
           "没有万能答案——最佳模型取决于你的任务、质量要求、调用量和预算。如需更全面的 AI 模型基础知识，[[guide:ai-beginner-guide|AI 新手指南]] 是一个很好的起点。以下是按使用场景的实用分析。",
-          "高风险、要求最高准确性的任务——法律分析、医疗研究、复杂代码审查、企业 Agent——首选 Claude Fable 5 或 GPT-5.6 Sol。错误成本高时，溢价是值得的。",
+          "高难度长任务 Agent 和大型代码库工作可以测试 Claude Fable 5.1 或 GPT-5.6 Sol。法律、医疗等高风险输出仍需由合格人员复核，模型价格更高不代表结果自动可靠。",
           "通用应用后端——客服、文档处理、RAG 管道——GPT-5.6 Terra、Gemini 3.6 Flash 或 GPT-5.6 Luna 具有较好的能力成本比，能以低于旗舰模型的成本处理大多数真实任务。",
           "高并发、低延迟场景——内容审核、分类、轻量摘要——Gemini 3.5 Flash-Lite（$0.30/$2.50）是 Google 当前稳定的低成本选择。中文负载可选择 DeepSeek V4 Flash：高峰缓存未命中输入/输出为 ¥3.0 / ¥9.0，空闲价减半，缓存命中输入为空闲 ¥0.05 / 高峰 ¥0.10。",
           "需要国内基础设施的中文应用——人民币计费、中国低延迟、本地合规——DeepSeek、Kimi K3 和 GLM-5.2 是实用选择。DeepSeek 价格最优；Kimi K3 在推理和长上下文上表现突出。无论选择哪个供应商，你都需要 [[guide:what-is-an-api-key|一个 API Key]] 才能开始调用。"
@@ -260,10 +260,10 @@
   ],
   "sources": [
     {
-      "label": "Anthropic API Pricing",
-      "url": "https://platform.claude.com/docs/zh-CN/about-claude/pricing",
+      "label": "Anthropic Fable 5.1 and API Pricing",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
       "site": "Anthropic",
-      "checkedAt": "2026-08-10"
+      "checkedAt": "2026-09-03"
     },
     {
       "label": "OpenAI API Pricing",
@@ -298,12 +298,12 @@
   ],
   "seo": {
     "title": {
-      "en": "AI API Token Price Comparison 2026: GPT-5.6 vs Claude vs Gemini 3.6 vs DeepSeek | Get Model Key",
+      "en": "AI API Token Price Comparison 2026: GPT-5.6 vs Claude Fable 5.1 vs Gemini | Get Model Key",
       "zh": "2026 AI API Token 价格对比：GPT-5.6 vs Claude vs Gemini vs DeepSeek | Get Model Key"
     },
     "description": {
-      "en": "Compare AI API token prices per 1M tokens in 2026 across GPT-5.6, Claude Fable 5, Gemini 3.6, DeepSeek, Kimi K3, and GLM-5.2. Includes model selection guidance and cost reduction tips.",
-      "zh": "对比 2026 年 GPT-5.6、Claude Fable 5、Gemini 3.6、DeepSeek、Kimi K3、GLM-5.2 等模型的每百万 Token 价格，含选型建议与降本技巧。"
+      "en": "Compare AI API token prices per 1M tokens in 2026 across GPT-5.6, Claude Fable 5.1, Gemini 3.6, DeepSeek, Kimi K3, and GLM-5.2. Includes model selection and cost controls.",
+      "zh": "对比 2026 年 GPT-5.6、Claude Fable 5.1、Gemini 3.6、DeepSeek、Kimi K3、GLM-5.2 等模型的每百万 Token 价格，含选型与成本控制建议。"
     }
   }
 }

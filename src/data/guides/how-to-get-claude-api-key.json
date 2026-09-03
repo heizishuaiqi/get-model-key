@@ -6,7 +6,7 @@
   "cluster": "claude",
   "pillarSlug": "claude-api-key-complete-guide",
   "publishedAt": "2026-06-28",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-09-03",
   "readingMinutes": 7,
   "title": {
     "en": "How to Get a Claude API Key (2026 Step-by-Step Guide)",
@@ -35,11 +35,11 @@
       "paragraphs": {
         "en": [
           "There is no separate 'Claude API key' — the key you need is an Anthropic API key. Claude is the model; Anthropic is the company that provides the API. When you search for 'how to get a Claude API key,' what you actually need is an Anthropic API key from the Anthropic Console.",
-          "The same key works for all Claude models, including Claude Sonnet, Claude Opus, and Claude Haiku. For the full picture including pricing and SDK integration, our [[guide:claude-api-key-complete-guide|complete Claude API key guide]] covers everything you need. If you're interested in Anthropic's most powerful public model, the [[guide:claude-fable-5-api-key-setup-2026|Fable 5 key setup guide]] is worth reading."
+          "The same key works for all Claude models your account can access, including Fable 5.1, Opus, Sonnet, and Haiku. For pricing and SDK integration, use the [[guide:claude-api-key-complete-guide|complete Claude API key guide]]. The [[guide:claude-fable-5-1-api-guide|Fable 5.1 API guide]] covers its exact model ID and migration rules."
         ],
         "zh": [
           "不存在单独的「Claude API Key」——你需要的实际上是 Anthropic API Key。Claude 是模型名，Anthropic 是提供 API 的公司。当你搜索「如何获取 Claude API Key」时，实际需要的是从 Anthropic Console 获取的 Anthropic API Key。",
-          "同一个 Key 可以用于所有 Claude 模型，包括 Claude Sonnet、Claude Opus 和 Claude Haiku。如需全面了解定价和 SDK 集成，我们的 [[guide:claude-api-key-complete-guide|Claude API Key 完全指南]] 涵盖了所有内容。如果你想了解 Anthropic 最强的公开模型，可以看看 [[guide:claude-fable-5-api-key-setup-2026|Fable 5 密钥开通指南]]。"
+          "同一个 Key 可以调用账号有权访问的 Claude 模型，包括 Fable 5.1、Opus、Sonnet 和 Haiku。定价与 SDK 集成可参考[[guide:claude-api-key-complete-guide|Claude API Key 完全指南]]；[[guide:claude-fable-5-1-api-guide|Fable 5.1 API 指南]]则说明了准确的模型 ID 和迁移规则。"
         ]
       }
     },

@@ -5,7 +5,7 @@
   "pillar": true,
   "cluster": "gemini",
   "publishedAt": "2026-07-29",
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-09-03",
   "readingMinutes": 9,
   "title": {
     "en": "Gemini API Key: Get a Google AI Studio Key (2026)",
@@ -104,8 +104,8 @@
       "id": "related-guides",
       "heading": { "en": "Choose the right follow-up guide", "zh": "按需要继续阅读" },
       "paragraphs": {
-        "en": ["For a screen-by-screen AI Studio walkthrough, use [[guide:how-to-get-gemini-api-key|the step-by-step key tutorial]]. For key and project management, use [[guide:google-ai-studio-api-key|the Google AI Studio guide]]. For a code-first path, use [[guide:gemini-api-key-quickstart-2026|the Gemini API quickstart]]. For model prices, see [[guide:google-gemini-models-api-pricing|the current Gemini model pricing guide]]."],
-        "zh": ["需要逐屏操作说明，请阅读[[guide:how-to-get-gemini-api-key|获取 Key 分步教程]]；需要管理 Key 与项目，请阅读[[guide:google-ai-studio-api-key|Google AI Studio 指南]]；希望直接运行代码，请阅读[[guide:gemini-api-key-quickstart-2026|Gemini API 快速入门]]；模型价格请查看[[guide:google-gemini-models-api-pricing|当前 Gemini 模型定价指南]]。"]
+        "en": ["For a screen-by-screen AI Studio walkthrough, use [[guide:how-to-get-gemini-api-key|the step-by-step key tutorial]]. For key and project management, use [[guide:google-ai-studio-api-key|the Google AI Studio guide]]. For a code-first path, use [[guide:gemini-api-key-quickstart-2026|the Gemini API quickstart]]. For model prices, see [[guide:google-gemini-api-pricing|the current Gemini model pricing guide]]."],
+        "zh": ["需要逐屏操作说明，请阅读[[guide:how-to-get-gemini-api-key|获取 Key 分步教程]]；需要管理 Key 与项目，请阅读[[guide:google-ai-studio-api-key|Google AI Studio 指南]]；希望直接运行代码，请阅读[[guide:gemini-api-key-quickstart-2026|Gemini API 快速入门]]；模型价格请查看[[guide:google-gemini-api-pricing|当前 Gemini 模型定价指南]]。"]
       }
     }
   ],

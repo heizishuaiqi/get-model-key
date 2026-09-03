@@ -82,26 +82,26 @@
   {
     "slug": "anthropic",
     "region": "global",
-    "officialKeyUrl": "https://console.anthropic.com/account/keys",
+    "officialKeyUrl": "https://console.anthropic.com/settings/keys",
     "officialSiteUrl": "https://www.anthropic.com/",
-    "officialDocsUrl": "https://docs.anthropic.com/",
+    "officialDocsUrl": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
     "name": {
       "en": "Anthropic",
       "zh": "Anthropic"
     },
     "models": {
       "en": [
-        "Claude Fable 5",
+        "Claude Fable 5.1",
         "Claude Sonnet 5",
-        "Claude Opus 4.8",
+        "Claude Opus 5",
         "Claude Haiku 4.5",
         "Claude Sonnet 4.6",
         "Claude 3.5 Sonnet"
       ],
       "zh": [
-        "Claude Fable 5",
+        "Claude Fable 5.1",
         "Claude Sonnet 5",
-        "Claude Opus 4.8",
+        "Claude Opus 5",
         "Claude Haiku 4.5",
         "Claude Sonnet 4.6",
         "Claude 3.5 Sonnet"

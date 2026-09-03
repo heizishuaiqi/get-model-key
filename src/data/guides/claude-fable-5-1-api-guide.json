@@ -1,0 +1,485 @@
+{
+  "slug": "claude-fable-5-1-api-guide",
+  "status": "published",
+  "topic": "api-key-setup",
+  "publishedAt": "2026-09-03",
+  "updatedAt": "2026-09-03",
+  "readingMinutes": 14,
+  "coverImage": {
+    "en": "/images/guides/claude-fable-5-1-api-guide-en.webp",
+    "zh": "/images/guides/claude-fable-5-1-api-guide-zh.webp"
+  },
+  "coverImageAlt": {
+    "en": "Claude Fable 5.1 API guide cover with a layered AI core connected to code, API, pricing, and migration symbols",
+    "zh": "Claude Fable 5.1 API 指南封面：分层智能核心连接代码、API、价格与版本迁移符号"
+  },
+  "pillar": false,
+  "cluster": "claude",
+  "pillarSlug": "claude-api-key-complete-guide",
+  "title": {
+    "en": "Claude Fable 5.1 API Guide: Pricing, Model ID, Benchmarks & Migration",
+    "zh": "Claude Fable 5.1 API 指南：价格、模型 ID、性能与迁移"
+  },
+  "excerpt": {
+    "en": "Use Claude Fable 5.1 through the Anthropic API with the correct model ID. Compare pricing, calculate cache and Batch costs, review official benchmarks, and migrate safely from Fable 5.",
+    "zh": "使用正确的模型 ID 调用 Claude Fable 5.1，了解 API 价格、缓存与 Batch 成本、官方测试成绩，以及从 Fable 5 迁移时需要修改的地方。"
+  },
+  "tags": [
+    "claude fable 5.1",
+    "fable 5.1 api",
+    "fable 5.1 pricing",
+    "fable 5.1 model id",
+    "anthropic api",
+    "claude api key"
+  ],
+  "providerSlugs": ["anthropic"],
+  "primaryCta": {
+    "label": {
+      "en": "Create an Anthropic API key",
+      "zh": "创建 Anthropic API Key"
+    },
+    "href": "https://console.anthropic.com/settings/keys",
+    "note": {
+      "en": "Claude subscriptions and API billing are separate. Keep the full key in a secret manager; it is shown only once.",
+      "zh": "Claude 订阅和 API 账单相互独立。完整密钥只显示一次，请保存到密钥管理工具。"
+    }
+  },
+  "sections": [
+    {
+      "id": "what-is-fable-5-1",
+      "heading": {
+        "en": "What is Claude Fable 5.1?",
+        "zh": "Claude Fable 5.1 是什么？"
+      },
+      "paragraphs": {
+        "en": [
+          "Claude Fable 5.1 is Anthropic's highest-capability public model for long-horizon agents, difficult coding work, research, and document-heavy workflows. It was released on September 1, 2026. Anthropic describes Fable 5.1 and the restricted-access Mythos 5.1 as the same underlying model with different safeguards.",
+          "The API model ID is \"claude-fable-5-1\". It accepts text and images, returns text, supports a 1-million-token context window, and can generate up to 128,000 output tokens. Its training data cutoff is June 2026.",
+          "Fable 5.1 is not the default choice for every application. [[https://platform.claude.com/docs/en/models/fable-5-1/overview|Anthropic recommends starting most workloads with Opus 5]] and moving to Fable 5.1 when difficult reasoning or long-running agent work justifies the higher price and latency."
+        ],
+        "zh": [
+          "Claude Fable 5.1 是 Anthropic 面向长时间运行的 Agent、高难度编程、研究和大型文档工作流推出的公开旗舰模型，发布日期为 2026 年 9 月 1 日。Anthropic 表示，Fable 5.1 与限量开放的 Mythos 5.1 使用同一个底层模型，但安全措施不同。",
+          "它的 API 模型 ID 是 \"claude-fable-5-1\"。模型可接收文本和图片并输出文本，上下文窗口为 100 万 tokens，单次最多输出 12.8 万 tokens，训练数据截止到 2026 年 6 月。",
+          "Fable 5.1 并不适合所有应用。[[https://platform.claude.com/docs/en/models/fable-5-1/overview|Anthropic 建议大多数工作负载先从 Opus 5 开始]]；只有当高难度推理或长任务 Agent 确实需要更强能力时，再承担 Fable 5.1 更高的价格和延迟。"
+        ]
+      },
+      "table": {
+        "caption": {
+          "en": "Claude Fable 5.1 specifications, verified September 3, 2026.",
+          "zh": "Claude Fable 5.1 核心规格，核验于 2026 年 9 月 3 日。"
+        },
+        "headers": {
+          "en": ["Item", "Fable 5.1"],
+          "zh": ["项目", "Fable 5.1"]
+        },
+        "rows": [
+          {
+            "en": ["Model ID", "claude-fable-5-1"],
+            "zh": ["模型 ID", "claude-fable-5-1"]
+          },
+          {
+            "en": ["Context window", "1M tokens"],
+            "zh": ["上下文窗口", "100 万 tokens"]
+          },
+          {
+            "en": ["Maximum output", "128K tokens"],
+            "zh": ["最大输出", "12.8 万 tokens"]
+          },
+          {
+            "en": ["Input / output", "Text and images / text"],
+            "zh": ["输入 / 输出", "文本和图片 / 文本"]
+          },
+          {
+            "en": ["Release date", "September 1, 2026"],
+            "zh": ["发布日期", "2026 年 9 月 1 日"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "access-and-api-key",
+      "heading": {
+        "en": "Where Fable 5.1 is available and how to get an API key",
+        "zh": "Fable 5.1 在哪里可用？如何获取 API Key？"
+      },
+      "paragraphs": {
+        "en": [
+          "Fable 5.1 is generally available through the Claude API, Amazon Bedrock, Google Cloud, Microsoft Foundry, and Claude Platform on AWS. It is also available in eligible Claude Pro, Max, Team, and Enterprise plans, but a Claude subscription does not include API credits.",
+          "For the direct Anthropic API, sign in to the Anthropic Console, add billing if required, open API Keys, and create a key. Copy it immediately and store it as ANTHROPIC_API_KEY in an environment variable or secret manager. Never paste a production key into browser code, a public repository, screenshots, or support messages.",
+          "If you need a more detailed account walkthrough, use the [[guide:how-to-get-claude-api-key|Claude API key setup guide]]. The same Anthropic key can call multiple Claude models when your account has access; there is no separate key format for Fable 5.1."
+        ],
+        "zh": [
+          "Fable 5.1 已通过 Claude API、Amazon Bedrock、Google Cloud、Microsoft Foundry 和 AWS 上的 Claude Platform 提供，也进入了符合条件的 Claude Pro、Max、Team 与 Enterprise 套餐。不过，Claude 订阅不包含 API 额度，两套账单需要分开管理。",
+          "若使用 Anthropic 直连 API，请登录 Anthropic Console，按需添加付款方式，然后进入 API Keys 创建密钥。密钥生成后应立即复制，并以 ANTHROPIC_API_KEY 的形式存入环境变量或密钥管理工具。不要把生产密钥写进浏览器代码、公开仓库、截图或客服消息。",
+          "更完整的账号操作可以参考[[guide:how-to-get-claude-api-key|Claude API Key 获取指南]]。账号获得相应模型权限后，同一个 Anthropic Key 就能调用多个 Claude 模型，不需要为 Fable 5.1 单独申请另一种密钥。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Direct API: console.anthropic.com",
+          "Partner platforms: Amazon Bedrock, Google Cloud, and Microsoft Foundry",
+          "Claude app: eligible Pro, Max, Team, and Enterprise plans",
+          "Billing: Claude app subscriptions and API usage are separate"
+        ],
+        "zh": [
+          "直连 API：console.anthropic.com",
+          "合作平台：Amazon Bedrock、Google Cloud、Microsoft Foundry",
+          "Claude 应用：符合条件的 Pro、Max、Team 和 Enterprise 套餐",
+          "账单：Claude 应用订阅与 API 调用分开计费"
+        ]
+      }
+    },
+    {
+      "id": "pricing",
+      "heading": {
+        "en": "Claude Fable 5.1 API pricing",
+        "zh": "Claude Fable 5.1 API 价格"
+      },
+      "paragraphs": {
+        "en": [
+          "Standard Fable 5.1 pricing is $10 per million input tokens and $50 per million output tokens. A 5-minute cache write costs $12.50 per million tokens, a 1-hour write costs $20, and a cache read costs $0.25. Batch processing reduces standard input and output rates by 50%.",
+          "For example, a request with 1 million uncached input tokens and 100,000 output tokens costs $15 before tool charges: $10 for input plus $5 for output. The same token volume through Batch costs $7.50. Reading a 1-million-token cached prefix costs $0.25, although the original cache write is charged separately.",
+          "These examples are arithmetic based on list prices, not a promise about the cost of a finished task. Adaptive thinking, retries, tools, cache creation, partner-platform fees, and regional routing can change the final bill. US-only inference applies a 1.1× multiplier."
+        ],
+        "zh": [
+          "Fable 5.1 的标准价格为输入 $10/百万 tokens、输出 $50/百万 tokens。5 分钟缓存写入为 $12.50/百万 tokens，1 小时写入为 $20，缓存读取仅为 $0.25。Batch 批处理的标准输入和输出价格均减半。",
+          "举例来说，一次请求如果包含 100 万个未缓存输入 tokens，并生成 10 万个输出 tokens，在不计算工具费用时共需 $15：输入 $10，输出 $5。相同 token 数量使用 Batch 时为 $7.50。读取 100 万个已经缓存的前缀只需 $0.25，但首次写入缓存仍会单独计费。",
+          "这些数字只是按照公开单价计算，并不代表完成一项任务一定花这么多。自适应思考、重试、工具调用、缓存创建、合作平台费用和区域路由都会影响最终账单；仅限美国的推理还会乘以 1.1。"
+        ]
+      },
+      "table": {
+        "caption": {
+          "en": "USD per 1 million tokens on the direct Claude API.",
+          "zh": "Claude 直连 API 每 100 万 tokens 的美元价格。"
+        },
+        "headers": {
+          "en": ["Billing item", "Standard", "Batch"],
+          "zh": ["计费项目", "标准价格", "Batch 价格"]
+        },
+        "rows": [
+          {
+            "en": ["Input", "$10.00", "$5.00"],
+            "zh": ["输入", "$10.00", "$5.00"]
+          },
+          {
+            "en": ["Output", "$50.00", "$25.00"],
+            "zh": ["输出", "$50.00", "$25.00"]
+          },
+          {
+            "en": ["5-minute cache write", "$12.50", "Check current Batch terms"],
+            "zh": ["5 分钟缓存写入", "$12.50", "以当前 Batch 规则为准"]
+          },
+          {
+            "en": ["1-hour cache write", "$20.00", "Check current Batch terms"],
+            "zh": ["1 小时缓存写入", "$20.00", "以当前 Batch 规则为准"]
+          },
+          {
+            "en": ["Cache read", "$0.25", "Check current Batch terms"],
+            "zh": ["缓存读取", "$0.25", "以当前 Batch 规则为准"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-api-call",
+      "heading": {
+        "en": "Make your first Fable 5.1 API call",
+        "zh": "发起第一次 Fable 5.1 API 请求"
+      },
+      "paragraphs": {
+        "en": [
+          "Install Anthropic's official SDK, set ANTHROPIC_API_KEY outside your source code, and use the exact model ID. The minimal examples below leave tool use and advanced output controls out so you can verify account access first.",
+          "Fable 5.1 uses adaptive thinking on every request. Do not copy a manual thinking budget from older examples; requests that try to disable adaptive thinking or set an unsupported manual budget return a 400 error. Start with the default high effort, then test other supported effort settings only when you have measured quality and cost on your own tasks."
+        ],
+        "zh": [
+          "先安装 Anthropic 官方 SDK，把 ANTHROPIC_API_KEY 放在源码之外，再使用准确的模型 ID。下面的最小示例没有加入工具调用和高级输出参数，适合先确认账号权限与基础调用是否正常。",
+          "Fable 5.1 的每次请求都会启用自适应思考。不要照搬旧示例中的手动 thinking budget；尝试关闭自适应思考或传入不支持的手动预算会返回 400。建议先使用默认的 high effort，再根据自己任务的质量和成本测试其他受支持档位。"
+        ]
+      },
+      "codeBlocks": [
+        {
+          "language": "python",
+          "code": "import os\nfrom anthropic import Anthropic\n\nclient = Anthropic(api_key=os.environ[\"ANTHROPIC_API_KEY\"])\n\nmessage = client.messages.create(\n    model=\"claude-fable-5-1\",\n    max_tokens=2048,\n    messages=[\n        {\"role\": \"user\", \"content\": \"Review this migration plan and list the two highest-risk assumptions.\"}\n    ],\n)\n\nprint(message.content[0].text)",
+          "caption": {
+            "en": "Python using the official Anthropic SDK",
+            "zh": "使用 Anthropic 官方 SDK 的 Python 示例"
+          }
+        },
+        {
+          "language": "typescript",
+          "code": "import Anthropic from \"@anthropic-ai/sdk\";\n\nconst client = new Anthropic({\n  apiKey: process.env.ANTHROPIC_API_KEY,\n});\n\nconst message = await client.messages.create({\n  model: \"claude-fable-5-1\",\n  max_tokens: 2048,\n  messages: [\n    { role: \"user\", content: \"Review this migration plan and list the two highest-risk assumptions.\" },\n  ],\n});\n\nconsole.log(message.content);",
+          "caption": {
+            "en": "TypeScript using @anthropic-ai/sdk",
+            "zh": "使用 @anthropic-ai/sdk 的 TypeScript 示例"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fable-5-1-vs-opus-5",
+      "heading": {
+        "en": "Fable 5.1 vs Opus 5",
+        "zh": "Fable 5.1 和 Opus 5 怎么选？"
+      },
+      "paragraphs": {
+        "en": [
+          "Opus 5 costs $5 per million input tokens and $25 per million output tokens, half the standard Fable 5.1 rates. It also has moderate rather than slow relative latency. This makes Opus 5 the practical starting point for most production systems.",
+          "Move to Fable 5.1 when the task is difficult to recover from, requires many coordinated steps, or repeatedly fails with Opus 5 at high effort. Useful candidates include autonomous codebase work, long research runs, large document transformations, and computer-use workflows. Run an evaluation on completed-task quality and total cost instead of comparing one response in isolation.",
+          "For a broader lineup comparison, see [[guide:claude-models-api-pricing|Claude models and API pricing]]."
+        ],
+        "zh": [
+          "Opus 5 的输入价格为 $5/百万 tokens，输出为 $25/百万 tokens，都是 Fable 5.1 标准价的一半；相对延迟也从 slow 降到 moderate。因此，大多数生产系统更适合先用 Opus 5。",
+          "如果任务失败后很难恢复，需要连续协调许多步骤，或 Opus 5 在 high effort 下仍反复失败，再考虑 Fable 5.1。较合适的场景包括自主修改大型代码库、长时间研究、大型文档转换和电脑操作工作流。评测时应比较任务完成率和总成本，不要只看一次回答。",
+          "如需查看完整产品线，请参考[[guide:claude-models-api-pricing|Claude 模型与 API 价格对比]]。"
+        ]
+      },
+      "table": {
+        "headers": {
+          "en": ["Item", "Fable 5.1", "Opus 5"],
+          "zh": ["项目", "Fable 5.1", "Opus 5"]
+        },
+        "rows": [
+          {
+            "en": ["Input / output per MTok", "$10 / $50", "$5 / $25"],
+            "zh": ["每百万 tokens 输入 / 输出", "$10 / $50", "$5 / $25"]
+          },
+          {
+            "en": ["Context / max output", "1M / 128K", "1M / 128K"],
+            "zh": ["上下文 / 最大输出", "100 万 / 12.8 万", "100 万 / 12.8 万"]
+          },
+          {
+            "en": ["Relative latency", "Slow", "Moderate"],
+            "zh": ["相对延迟", "慢", "中等"]
+          },
+          {
+            "en": ["Best starting point", "Hardest long-horizon work", "Most demanding production work"],
+            "zh": ["适合起步的场景", "最困难的长任务", "多数高要求生产任务"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "official-benchmarks",
+      "heading": {
+        "en": "What Anthropic's Fable 5.1 benchmarks show",
+        "zh": "Anthropic 官方测试说明了什么？"
+      },
+      "paragraphs": {
+        "en": [
+          "Anthropic reports 55.8% on Terminal-Bench 4.0, 31.4% on AutomationBench, 73.4% on CursorBench 3.2, and 65.0% on Humanity's Last Exam with tools. On Terminal-Bench-Science 0.1, Fable 5.1 scored 52.6%, compared with 24.7% for Fable 5 and 29.0% for Opus 5 in Anthropic's table.",
+          "Treat these as first-party results, not independent proof that Fable 5.1 is best for every workload. Anthropic notes that production safeguards were enabled and that some interventions produced zero scores or fallback responses. The OSWorld task release also differs from older evaluations, so those results are not directly comparable across every report.",
+          "The useful signal is narrower: Anthropic's tests show a large improvement on long-horizon terminal, automation, and agentic coding tasks. Before switching a production system, test the prompts, tools, failure modes, and budget that matter to your application."
+        ],
+        "zh": [
+          "Anthropic 公布的成绩包括：Terminal-Bench 4.0 为 55.8%，AutomationBench 为 31.4%，CursorBench 3.2 为 73.4%，带工具的 Humanity's Last Exam 为 65.0%。在 Terminal-Bench-Science 0.1 中，Fable 5.1 得分 52.6%，官方表格中的 Fable 5 和 Opus 5 分别为 24.7% 与 29.0%。",
+          "这些是厂商自己的测试，不足以证明 Fable 5.1 适合所有任务。Anthropic 说明测试启用了生产安全措施，部分干预会得到零分或回退响应；OSWorld 使用的任务版本也和一些旧评测不同，不能把所有历史成绩直接横向比较。",
+          "比较稳妥的结论是：在 Anthropic 的测试里，Fable 5.1 对长时间终端操作、自动化和 Agent 编程有明显提升。生产切换前，仍要用自己的提示词、工具、失败场景和预算做评测。"
+        ]
+      }
+    },
+    {
+      "id": "migration-from-fable-5",
+      "heading": {
+        "en": "Migrate from Fable 5 without breaking tool workflows",
+        "zh": "从 Fable 5 迁移时要修改什么？"
+      },
+      "paragraphs": {
+        "en": [
+          "The first code change is simple: replace \"claude-fable-5\" with \"claude-fable-5-1\". Managed Agents generally need only that model-name update. Messages API integrations must also account for stricter conversation-history and tool rules.",
+          "Fable 5.1 does not support forced tool choice with tool_choice set to \"any\" or a named tool; those requests return 400. Use \"auto\" or \"none\", then enforce argument shape with strict tool use or structured outputs where appropriate. Assistant-message prefilling is also unsupported.",
+          "Keep conversation history append-only. Earlier Claude models cannot read Fable 5.1 thinking blocks, and editing or reordering an earlier system message, tool definition, or turn can invalidate saved thinking blocks. Preserve those blocks exactly when continuing a conversation with Fable 5.1."
+        ],
+        "zh": [
+          "第一处代码修改很直接：把 \"claude-fable-5\" 换成 \"claude-fable-5-1\"。Managed Agents 通常只需要改模型名称；Messages API 集成还要适配更严格的对话历史与工具调用规则。",
+          "Fable 5.1 不支持把 tool_choice 强制设为 \"any\" 或指定某个工具，这类请求会返回 400。可改用 \"auto\" 或 \"none\"，再根据需要通过 strict tool use 或结构化输出约束参数。Assistant message prefill 同样不受支持。",
+          "对话历史应只追加，不要回头编辑。较早的 Claude 模型无法读取 Fable 5.1 的 thinking blocks；修改或重排之前的系统消息、工具定义或对话轮次，也可能让已经保存的 thinking blocks 失效。继续同一段 Fable 5.1 对话时，应原样保留这些区块。"
+        ]
+      },
+      "bullets": {
+        "en": [
+          "Update the model ID to claude-fable-5-1",
+          "Remove manual thinking budgets and do not try to disable adaptive thinking",
+          "Replace forced tool choice with auto or none",
+          "Remove assistant-message prefills",
+          "Keep history append-only and preserve thinking blocks unchanged",
+          "Do not hand Fable 5.1 thinking blocks to earlier Claude models"
+        ],
+        "zh": [
+          "将模型 ID 更新为 claude-fable-5-1",
+          "移除手动 thinking budget，也不要尝试关闭自适应思考",
+          "将强制工具选择改为 auto 或 none",
+          "移除 assistant message prefill",
+          "只追加历史记录，并原样保留 thinking blocks",
+          "不要把 Fable 5.1 的 thinking blocks 交给更早的 Claude 模型"
+        ]
+      }
+    },
+    {
+      "id": "new-capabilities",
+      "heading": {
+        "en": "New Fable 5.1 API capabilities",
+        "zh": "Fable 5.1 新增了哪些 API 能力？"
+      },
+      "paragraphs": {
+        "en": [
+          "Fable 5.1 adds beta controls for changing effort per message, applying system instructions to one turn, and showing visible progress updates during long work. These features are useful when one conversation moves between quick routing decisions and expensive analysis, or when users need evidence that a long-running agent is still advancing.",
+          "Anthropic also lists content provenance support. Generated text can carry Anthropic's statistical watermark, while supported files created through the Files API can include C2PA credentials. Check the current beta headers and platform availability before depending on these features in production.",
+          "The tokenizer is unchanged from Fable 5. Compared with models older than Opus 4.7, however, Anthropic says the same text may produce roughly 30% more tokens. Re-run budget and context tests if you are migrating from an older Claude generation."
+        ],
+        "zh": [
+          "Fable 5.1 新增了几项 Beta 控制：可以在同一对话中按消息调整 effort，让系统指令只作用于当前轮次，并在长任务执行期间向用户显示进度。这些能力适合同时包含快速判断与高成本分析的对话，也方便用户确认长任务仍在推进。",
+          "Anthropic 还列出了内容来源标记能力：生成文本可以带有 Anthropic 的统计水印，通过 Files API 创建的受支持文件可以包含 C2PA 凭证。正式依赖这些功能前，应先核对当前 Beta 请求头和所在平台是否支持。",
+          "Fable 5.1 与 Fable 5 使用同一个 tokenizer。但与 Opus 4.7 以前的模型相比，Anthropic 表示同一段文本可能会多产生约 30% tokens。从更早的 Claude 版本迁移时，应重新测试预算和上下文占用。"
+        ]
+      }
+    },
+    {
+      "id": "privacy-and-safeguards",
+      "heading": {
+        "en": "Data retention, safeguards, and fallback behavior",
+        "zh": "数据保留、安全措施和模型回退"
+      },
+      "paragraphs": {
+        "en": [
+          "The direct Claude API retains Fable 5.1 data for 30 days by default. Zero-data-retention terms apply only to organizations that Anthropic has explicitly approved, so do not assume that an enterprise account automatically has ZDR. Partner-cloud storage and processing terms can differ.",
+          "Fable 5.1 is a covered model under Anthropic's commercial terms. Anthropic may route some biology or cybersecurity requests to Opus under its safeguards. When a request is rerouted, customers are not charged Fable 5.1 token prices for the response.",
+          "Mythos 5.1 is not an unrestricted public edition. It is limited to Project Glasswing and selected trusted users, with a different safeguard configuration. Standard developers should build against Fable 5.1 and document the possibility of refusals or fallback for sensitive workloads."
+        ],
+        "zh": [
+          "Claude 直连 API 默认保留 Fable 5.1 数据 30 天。零数据保留只适用于 Anthropic 明确批准的组织，不能因为使用企业账号就默认已经获得 ZDR；合作云平台的存储与处理条款也可能不同。",
+          "Fable 5.1 属于 Anthropic 商业条款覆盖的模型。出于安全考虑，部分生物或网络安全请求可能会被路由给 Opus；发生路由时，响应不会按照 Fable 5.1 的 token 价格收费。",
+          "Mythos 5.1 不是没有限制的公开版本。它只向 Project Glasswing 和部分受信任用户开放，并采用不同的安全配置。普通开发者应以 Fable 5.1 为集成对象，并为敏感工作负载记录可能出现的拒绝或模型回退。"
+        ]
+      }
+    },
+    {
+      "id": "common-errors",
+      "heading": {
+        "en": "Common Fable 5.1 errors",
+        "zh": "Fable 5.1 常见错误"
+      },
+      "paragraphs": {
+        "en": [
+          "A 400 error immediately after changing the model usually points to an incompatible request field, not a bad API key. Check manual thinking configuration, forced tool choice, assistant prefills, and edited conversation history first.",
+          "A 401 error usually means the key is missing, malformed, revoked, or loaded from the wrong environment. A 403 can indicate that the account or selected platform does not have model access. A 429 means you reached an account rate limit; apply exponential backoff and check the current usage tier rather than retrying in a tight loop.",
+          "Log request IDs and the exact API error body, but redact API keys and sensitive prompt content before sharing logs. For general authentication and rate-limit fixes, see the [[guide:claude-api-key-getting-started-2026|Claude setup guide for teams]]."
+        ],
+        "zh": [
+          "更换模型后立刻出现 400，通常是请求字段不兼容，不一定是 API Key 有问题。优先检查手动 thinking 配置、强制工具选择、assistant prefill，以及是否编辑过已有对话历史。",
+          "401 通常表示密钥缺失、格式错误、已撤销，或程序读取了错误环境；403 可能表示账号或当前平台没有模型权限；429 表示触发账号速率限制，应使用指数退避并检查用量等级，不要高频循环重试。",
+          "排查时可以记录 request ID 和完整 API 错误正文，但在分享日志前必须删除 API Key 与敏感提示内容。一般性的认证和限流问题可参考[[guide:claude-api-key-getting-started-2026|团队 Claude API 设置指南]]。"
+        ]
+      }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "en": "What is the Claude Fable 5.1 model ID?",
+        "zh": "Claude Fable 5.1 的模型 ID 是什么？"
+      },
+      "answer": {
+        "en": "Use claude-fable-5-1 in Anthropic Messages API requests. Do not use a display name with spaces or the older claude-fable-5 identifier.",
+        "zh": "在 Anthropic Messages API 请求中使用 claude-fable-5-1。不要填写带空格的展示名称，也不要继续使用旧的 claude-fable-5。"
+      }
+    },
+    {
+      "question": {
+        "en": "How much does Claude Fable 5.1 cost?",
+        "zh": "Claude Fable 5.1 多少钱？"
+      },
+      "answer": {
+        "en": "The direct Claude API list price is $10 per million input tokens and $50 per million output tokens. Batch processing is $5 input and $25 output. Cache reads cost $0.25 per million tokens; cache writes cost more and are billed separately.",
+        "zh": "Claude 直连 API 的标准价为输入 $10/百万 tokens、输出 $50/百万 tokens；Batch 为输入 $5、输出 $25。缓存读取是 $0.25/百万 tokens，缓存写入价格更高并单独计费。"
+      }
+    },
+    {
+      "question": {
+        "en": "Is Claude Fable 5.1 available on AWS and Google Cloud?",
+        "zh": "Claude Fable 5.1 支持 AWS 和 Google Cloud 吗？"
+      },
+      "answer": {
+        "en": "Yes. Anthropic lists Fable 5.1 on Amazon Bedrock, Claude Platform on AWS, Google Cloud, Microsoft Foundry, and the direct Claude API. Model identifiers and regional availability can differ by platform.",
+        "zh": "支持。Anthropic 列出的平台包括 Amazon Bedrock、AWS 上的 Claude Platform、Google Cloud、Microsoft Foundry 和 Claude 直连 API。不同平台的模型标识和可用区域可能不同。"
+      }
+    },
+    {
+      "question": {
+        "en": "Should I use Fable 5.1 or Opus 5?",
+        "zh": "应该用 Fable 5.1 还是 Opus 5？"
+      },
+      "answer": {
+        "en": "Start with Opus 5 for most demanding production workloads because it costs half as much and has lower relative latency. Test Fable 5.1 when Opus 5 at high effort does not reliably finish a difficult long-horizon task.",
+        "zh": "多数高要求生产任务先用 Opus 5，因为它的价格只有 Fable 5.1 的一半，相对延迟也更低。如果 Opus 5 在 high effort 下仍无法稳定完成高难度长任务，再测试 Fable 5.1。"
+      }
+    },
+    {
+      "question": {
+        "en": "Can earlier Claude models continue a Fable 5.1 conversation?",
+        "zh": "更早的 Claude 模型能继续 Fable 5.1 的对话吗？"
+      },
+      "answer": {
+        "en": "Not when the history includes Fable 5.1 thinking blocks. Thinking preservation is one-way: Fable 5.1 can read earlier compatible history, but earlier models cannot read its thinking blocks. Use a clean handoff summary if you must downgrade the model.",
+        "zh": "如果历史记录包含 Fable 5.1 thinking blocks，就不能直接交给更早的模型。思考区块的兼容是单向的；需要降级模型时，应改用不包含这些区块的交接摘要。"
+      }
+    },
+    {
+      "question": {
+        "en": "Does Fable 5.1 have zero data retention by default?",
+        "zh": "Fable 5.1 默认是零数据保留吗？"
+      },
+      "answer": {
+        "en": "No. The direct Claude API uses 30-day retention by default. Zero data retention applies only when Anthropic has explicitly approved it for the organization. Check separate terms when using a partner cloud.",
+        "zh": "不是。Claude 直连 API 默认保留数据 30 天。零数据保留只适用于 Anthropic 明确批准的组织；使用合作云平台时还要核对对应条款。"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "label": "Claude Fable 5.1 model overview",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
+      "site": "Anthropic",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Introducing Claude Fable and Mythos 5.1",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "site": "Anthropic",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "What's new in Fable 5.1",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1",
+      "site": "Anthropic",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Fable 5.1 migration guide",
+      "url": "https://platform.claude.com/docs/en/models/fable-5-1/migration-guide",
+      "site": "Anthropic",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Claude Fable 5.1 on AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/claude-fable-5-1-aws/",
+      "site": "Amazon Web Services",
+      "checkedAt": "2026-09-03"
+    },
+    {
+      "label": "Claude Fable 5.1 on Google Cloud",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/partner-models/claude/fable-5-1",
+      "site": "Google Cloud",
+      "checkedAt": "2026-09-03"
+    }
+  ],
+  "seo": {
+    "title": {
+      "en": "Claude Fable 5.1 API: Pricing, Model ID & Migration (2026) | Get Model Key",
+      "zh": "Claude Fable 5.1 API 指南：价格、模型 ID 与迁移（2026）| Get Model Key"
+    },
+    "description": {
+      "en": "Claude Fable 5.1 API guide with model ID, $10/$50 pricing, 1M context, Python and TypeScript examples, official benchmarks, availability, and Fable 5 migration steps.",
+      "zh": "Claude Fable 5.1 API 完整指南：模型 ID、$10/$50 价格、100 万上下文、Python 与 TypeScript 示例、官方测试、可用平台及 Fable 5 迁移步骤。"
+    }
+  }
+}

@@ -4,25 +4,25 @@
   "categories": ["top-picks", "global"],
   "region": "global",
   "featured": true,
-  "officialKeyUrl": "https://console.anthropic.com/account/keys",
+  "officialKeyUrl": "https://console.anthropic.com/settings/keys",
   "officialSiteUrl": "https://www.anthropic.com/",
-  "officialDocsUrl": "https://platform.claude.com/docs/zh-CN/about-claude/pricing",
+  "officialDocsUrl": "https://platform.claude.com/docs/en/models/fable-5-1/overview",
   "name": { "en": "Anthropic", "zh": "Anthropic" },
   "summary": {
-    "en": "Official Claude API access for Claude Fable 5, Opus 5, Sonnet 5, and Haiku 4.5, spanning frontier agents, coding, balanced production workloads, and high-throughput tasks.",
-    "zh": "Anthropic 官方 Claude API，覆盖 Claude Fable 5、Opus 5、Sonnet 5 与 Haiku 4.5，分别面向前沿 Agent、复杂编程、均衡生产负载和高吞吐任务。"
+    "en": "Official Claude API access for Claude Fable 5.1, Opus 5, Sonnet 5, and Haiku 4.5, spanning long-horizon agents, coding, balanced production workloads, and high-throughput tasks.",
+    "zh": "Anthropic 官方 Claude API，覆盖 Claude Fable 5.1、Opus 5、Sonnet 5 与 Haiku 4.5，分别面向长任务 Agent、复杂编程、均衡生产负载和高吞吐任务。"
   },
   "models": {
-    "en": ["Claude Fable 5", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"],
-    "zh": ["Claude Fable 5", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"]
+    "en": ["Claude Fable 5.1", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"],
+    "zh": ["Claude Fable 5.1", "Claude Opus 5", "Claude Sonnet 5", "Claude Haiku 4.5"]
   },
   "tags": ["reasoning", "coding", "long-context"],
-  "searchAliases": ["claude", "anthropic ai", "claude api"],
-  "lastVerified": "2026-08-10",
+  "searchAliases": ["claude", "anthropic ai", "claude api", "fable 5.1"],
+  "lastVerified": "2026-09-03",
   "seo": {
     "title": {
-      "en": "Anthropic API Key — Claude Fable 5, Opus 5, Sonnet 5 & Haiku 4.5 | Get Model Key",
-      "zh": "Anthropic API Key：Claude Fable 5、Opus 5、Sonnet 5 与 Haiku 4.5 | Get Model Key"
+      "en": "Anthropic API Key — Claude Fable 5.1, Opus 5, Sonnet 5 & Haiku 4.5 | Get Model Key",
+      "zh": "Anthropic API Key：Claude Fable 5.1、Opus 5、Sonnet 5 与 Haiku 4.5 | Get Model Key"
     },
     "description": {
       "en": "Get an Anthropic API key and compare current Claude models, token prices, prompt caching, context windows, and output limits.",
@@ -32,24 +32,24 @@
   "img": "https://img.amz123.com/upload/image_cloud/202407/1721118005719027_Claude.webp",
   "overview": {
     "en": [
-      "Anthropic's current Claude lineup includes Fable 5 for the most demanding agentic work, Opus 5 for frontier coding and reasoning, Sonnet 5 for a balance of intelligence and cost, and Haiku 4.5 for fast, high-volume workloads.",
-      "As verified on August 10, 2026, standard input/output prices per million tokens are $10/$50 for Fable 5, $5/$25 for Opus 5, and $1/$5 for Haiku 4.5. Sonnet 5 is temporarily $2/$10 through August 31, then becomes $3/$15 on September 1."
+      "Anthropic's current Claude lineup includes Fable 5.1 for the most demanding long-horizon agent work, Opus 5 for complex production coding and reasoning, Sonnet 5 for a balance of intelligence and cost, and Haiku 4.5 for fast, high-volume workloads.",
+      "As verified on September 3, 2026, standard input/output prices per million tokens are $10/$50 for Fable 5.1, $5/$25 for Opus 5, $3/$15 for Sonnet 5, and $1/$5 for Haiku 4.5. Fable 5.1 cache reads cost $0.25/MTok."
     ],
     "zh": [
-      "Anthropic 当前 Claude 阵容包括：面向高难度 Agent 任务的 Fable 5、面向前沿编程与推理的 Opus 5、兼顾能力与成本的 Sonnet 5，以及适合快速高吞吐任务的 Haiku 4.5。",
-      "截至 2026 年 8 月 10 日，每百万 Token 的标准输入/输出价分别为：Fable 5 为 $10/$50，Opus 5 为 $5/$25，Haiku 4.5 为 $1/$5。Sonnet 5 在 8 月 31 日前为限时 $2/$10，9 月 1 日起恢复为 $3/$15。"
+      "Anthropic 当前 Claude 阵容包括：面向高难度长任务 Agent 的 Fable 5.1、面向复杂生产编程与推理的 Opus 5、兼顾能力与成本的 Sonnet 5，以及适合快速高吞吐任务的 Haiku 4.5。",
+      "截至 2026 年 9 月 3 日，每百万 Token 的标准输入/输出价分别为：Fable 5.1 为 $10/$50，Opus 5 为 $5/$25，Sonnet 5 为 $3/$15，Haiku 4.5 为 $1/$5。Fable 5.1 的缓存读取价格为 $0.25/MTok。"
     ]
   },
   "howToGetKey": {
     "en": [
       "Sign up or log in at console.anthropic.com.",
-      "Open Account → API Keys and create a key.",
+      "Open Settings → API Keys and create a key.",
       "Copy the secret immediately and store it in a password manager or environment variable.",
       "Call the Messages API with the x-api-key header or an official Anthropic SDK."
     ],
     "zh": [
       "在 console.anthropic.com 注册或登录。",
-      "进入 Account → API Keys 并创建密钥。",
+      "进入 Settings → API Keys 并创建密钥。",
       "立即复制密钥，并保存到密码管理器或环境变量中。",
       "使用 x-api-key 请求头或 Anthropic 官方 SDK 调用 Messages API。"
     ]
@@ -58,22 +58,22 @@
     {
       "question": { "en": "Which current Claude model should I choose?", "zh": "当前应该选择哪款 Claude 模型？" },
       "answer": {
-        "en": "Choose Fable 5 for maximum agent capability, Opus 5 for demanding coding and reasoning, Sonnet 5 for balanced production use, or Haiku 4.5 for latency-sensitive high-volume tasks.",
-        "zh": "追求最强 Agent 能力可选 Fable 5；复杂编程与推理选 Opus 5；常规生产任务选 Sonnet 5；对延迟和吞吐量敏感则选 Haiku 4.5。"
+        "en": "Start most demanding production workloads with Opus 5. Use Fable 5.1 when Opus at high effort falls short on difficult long-horizon work, Sonnet 5 for balanced production use, or Haiku 4.5 for latency-sensitive high-volume tasks.",
+        "zh": "多数高要求生产任务可先用 Opus 5；当 Opus high effort 仍难以完成长任务时再选 Fable 5.1。常规生产任务可用 Sonnet 5，对延迟和吞吐量敏感则选 Haiku 4.5。"
       }
     },
     {
-      "question": { "en": "When does the Claude Sonnet 5 promotional price end?", "zh": "Claude Sonnet 5 的优惠价何时结束？" },
+      "question": { "en": "What is the current Claude Sonnet 5 price?", "zh": "Claude Sonnet 5 当前价格是多少？" },
       "answer": {
-        "en": "The $2 input / $10 output price per million tokens ends August 31, 2026. Standard $3/$15 pricing begins September 1, 2026.",
-        "zh": "每百万 Token 输入 $2、输出 $10 的优惠价于 2026 年 8 月 31 日结束；9 月 1 日起按标准 $3/$15 计费。"
+        "en": "Standard Sonnet 5 pricing is $3 input and $15 output per million tokens. Its $2/$10 introductory price ended August 31, 2026.",
+        "zh": "Sonnet 5 当前标准价为输入 $3、输出 $15/百万 Token。此前的 $2/$10 推广价已于 2026 年 8 月 31 日结束。"
       }
     },
     {
       "question": { "en": "Can prompt caching reduce Claude API costs?", "zh": "Prompt 缓存能降低 Claude API 成本吗？" },
       "answer": {
-        "en": "Yes. A cache hit costs 10% of base input pricing. Five-minute and one-hour cache writes cost 1.25× and 2× the base input price respectively.",
-        "zh": "可以。缓存命中的费用为基础输入价的 10%；5 分钟和 1 小时缓存写入分别按基础输入价的 1.25 倍和 2 倍计费。"
+        "en": "Yes. Fable 5.1 cache reads cost $0.25 per million tokens, while its 5-minute and 1-hour cache writes cost $12.50 and $20. Cache rates differ by model, so check the current pricing table before estimating savings.",
+        "zh": "可以。Fable 5.1 的缓存读取为 $0.25/百万 Token，5 分钟和 1 小时缓存写入分别为 $12.50 和 $20。不同模型的缓存费率并不相同，估算前应查看当前价格表。"
       }
     }
   ]

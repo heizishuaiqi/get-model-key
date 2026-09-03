@@ -6,7 +6,7 @@
   "cluster": "claude",
   "pillarSlug": "claude-api-key-complete-guide",
   "publishedAt": "2026-03-31",
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-09-03",
   "readingMinutes": 8,
   "title": {
     "en": "Claude API Key Setup Guide for New Teams",
@@ -69,11 +69,11 @@
       "paragraphs": {
         "en": [
           "Install Anthropic SDKs in your backend service and load API keys from server environment variables. Avoid direct browser usage in production workflows. The official Python package (anthropic) and Node.js package (@anthropic-ai/sdk) both handle header injection automatically, reducing the risk of malformed requests. For containerized deployments, inject the key via your orchestrator's secret management system rather than baking it into the image.",
-          "Keep environment-level key separation so staging tests cannot drain production quotas. For teams planning to use Anthropic's latest Mythos-class model, the [[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 setup guide]] covers model-specific configuration and adaptive thinking parameters."
+          "Keep environment-level key separation so staging tests cannot drain production quotas. For teams planning to use Anthropic's current flagship, the [[guide:claude-fable-5-1-api-guide|Claude Fable 5.1 API guide]] covers model-specific configuration, pricing, and migration rules."
         ],
         "zh": [
           "在后端服务中安装 Anthropic SDK，并从服务端环境变量读取 Key。生产流程避免浏览器端直接持有密钥。官方 Python 包（anthropic）和 Node.js 包（@anthropic-ai/sdk）都会自动处理请求头注入，降低请求格式错误的风险。容器化部署时，通过编排器的密钥管理系统注入 Key，不要将 Key 硬编码到镜像中。",
-          "建议按环境隔离密钥，避免测试流量误耗生产额度。如果团队计划使用 Anthropic 最新的 Mythos 级模型，[[guide:claude-fable-5-api-key-setup-2026|Claude Fable 5 设置指南]] 涵盖了模型专属配置和自适应思考参数。"
+          "建议按环境隔离密钥，避免测试流量误耗生产额度。如果团队计划使用 Anthropic 当前旗舰模型，[[guide:claude-fable-5-1-api-guide|Claude Fable 5.1 API 指南]]整理了模型配置、价格和迁移规则。"
         ]
       }
     },
